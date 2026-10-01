@@ -151,9 +151,8 @@ URL as today.
 - Pure helpers live in `src/app/model/`: `charts.ts` (treatment per chart, takeaways), `drill.ts` (chart to
   Table links), `filters.ts` (date and amount pills, Popular, chips, sort options) and `smart-filter.ts`. They
   import no DOM or React, and `tests/reader-model.test.ts` runs them in Node for both data apps.
-- The native-control guard (`tests/native-controls.test.ts`) also exempts `src/app/settings/`: the console is
-  out of scope and keeps its plain form controls. Its styles moved to `src/app/settings/settings.css`, which
-  ships only in the console's chunk.
+- The admin console's styles moved to `src/app/settings/settings.css`, which ships only in the console's
+  chunk. The console also uses the kit's `Select` and `DateField`, so the native-control guard covers it too.
 - `tests/contrast.test.ts` reads the token blocks in `src/app/styles.css`. To pass 4.5:1 on every surface,
   light `--muted` is `#6a6d78`, `--warn` `#9a5c00` and `--up` `#057866` (the table above lists the starting
   values). Primary buttons use `--btn` (`#2962ff` in both themes) so white text keeps 4.5:1 in dark.

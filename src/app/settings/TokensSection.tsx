@@ -3,6 +3,7 @@ import { dataApps } from '../../../data-apps/index';
 import type { AdminToken, IssuedToken, RevertReport } from '../../shared/types';
 import { formatCount, formatTime } from '../format';
 import { send, useAdmin } from './adminApi';
+import { DateField, Select } from '../ui';
 import { Action, Badge, Field, Notice, plural, share, When } from './ui';
 
 /** 24 hours ago as a datetime-local value, which is in the browser's own time zone. */
@@ -240,14 +241,12 @@ function Issue({ onIssued }: { onIssued: () => void }) {
         />
       </Field>
       <Field label="Data apps">
-        <select value={apps} onChange={(event) => setApps(event.target.value)}>
-          <option value="*">All data apps</option>
-          {dataApps.map((app) => (
-            <option key={app.slug} value={app.slug}>
-              {app.title}
-            </option>
-          ))}
-        </select>
+        <Select
+          label="Data apps"
+          value={apps}
+          options={[{ value: '*', label: 'All data apps' }, ...dataApps.map((app) => ({ value: app.slug, label: app.title }))]}
+          onChange={setApps}
+        />
       </Field>
       <Field label="Tasks a day">
         <input
@@ -259,7 +258,7 @@ function Issue({ onIssued }: { onIssued: () => void }) {
         />
       </Field>
       <Field label="Expires (optional)">
-        <input type="date" value={expires} onChange={(event) => setExpires(event.target.value)} />
+        <DateField label="Expires (optional)" value={expires} onChange={setExpires} />
       </Field>
       <Action
         label="Issue maintainer token"

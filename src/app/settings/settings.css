@@ -120,8 +120,9 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--grid);
+  margin-bottom: 8px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
 }
 
 .settings-nav {
@@ -131,21 +132,25 @@
 }
 
 .settings-nav a {
-  padding: 6px 12px;
-  border-radius: 8px;
-  color: var(--ink-2);
+  display: inline-flex;
+  align-items: center;
+  height: 34px;
+  padding: 0 14px;
+  border-radius: 17px;
+  color: var(--ink2);
   font-size: 14px;
+  transition: background 120ms, color 120ms;
 }
 
 .settings-nav a:hover {
-  background: var(--wash);
+  color: var(--ink);
   text-decoration: none;
 }
 
 .settings-nav a[aria-current='page'] {
-  background: var(--wash);
+  background: var(--chip);
   color: var(--ink);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .settings-tools {
@@ -155,11 +160,10 @@
 }
 
 .panel {
-  margin: 0 0 16px;
-  padding: 16px 18px;
-  border: 1px solid var(--ring);
+  margin: 0 0 20px;
+  padding: 18px 20px;
   border-radius: var(--radius);
-  background: var(--surface);
+  box-shadow: inset 0 0 0 1px var(--line2);
 }
 
 .panel h3 {
@@ -525,4 +529,88 @@ td > .badge:first-child,
     grid-template-columns: minmax(0, 1fr);
     gap: 0;
   }
+}
+
+
+/* ── breathing room and design-system fields ── */
+
+.settings .section-head {
+  margin: 28px 0 14px;
+}
+
+.settings .section-head h2,
+.settings .section-head h3 {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.settings .table-wrap {
+  margin-bottom: 8px;
+  border: 0;
+  border-radius: var(--radius);
+  box-shadow: inset 0 0 0 1px var(--line2);
+}
+
+.settings .records th,
+.settings .records td {
+  padding: 12px 16px;
+}
+
+.settings .records th {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.settings .inline-form {
+  gap: 14px 16px;
+}
+
+.settings .field {
+  gap: 6px;
+  color: var(--muted);
+  font-size: 12.5px;
+}
+
+.settings input[type='text'],
+.settings input[type='password'],
+.settings input[type='number'],
+.settings input[type='search'],
+.settings textarea {
+  height: 36px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--chip);
+  color: var(--ink);
+  font-size: 14px;
+  caret-color: var(--accent);
+  transition: background 120ms, box-shadow 120ms;
+}
+
+.settings textarea {
+  height: auto;
+  padding: 10px 12px;
+}
+
+.settings input:focus,
+.settings textarea:focus {
+  background: var(--bg);
+  box-shadow: inset 0 0 0 1px var(--accent);
+  outline: none;
+}
+
+.settings input::placeholder,
+.settings textarea::placeholder {
+  color: var(--muted);
+}
+
+.settings .quiet-button {
+  height: 36px;
+  padding: 0 14px;
+}
+
+.settings .date-field {
+  width: 150px;
 }

@@ -1,12 +1,11 @@
 // No browser-default control appears in the reader flow: every select, checkbox, radio,
 // date picker and dialog is our own, from src/app/ui/. This scans the page code for the
-// native ones. The admin console (src/app/settings/) is outside the reader flow and keeps
-// its plain form controls.
+// native ones, in the reader flow and the admin console alike.
 /// <reference types="vite/client" />
 import { describe, expect, it } from 'vitest';
 
 const sources = import.meta.glob<string>('../src/app/**/*.tsx', { query: '?raw', import: 'default', eager: true });
-const EXEMPT = /^\.\.\/src\/app\/(ui|settings)\//;
+const EXEMPT = /^\.\.\/src\/app\/ui\//;
 const NATIVE = [/<select\b/, /<dialog\b/, /type=["']checkbox["']/, /type=["']radio["']/, /type=["']date["']/];
 const scanned = Object.keys(sources).filter((path) => !EXEMPT.test(path));
 
@@ -15,6 +14,7 @@ describe('native controls', () => {
     expect(scanned).toContain('../src/app/pages/TablePage.tsx');
     expect(scanned).toContain('../src/app/components/FilterPanel.tsx');
     expect(Object.keys(sources)).toContain('../src/app/ui/controls.tsx');
+    expect(scanned).toContain('../src/app/settings/TokensSection.tsx');
     expect(scanned.some((path) => EXEMPT.test(path))).toBe(false);
   });
 

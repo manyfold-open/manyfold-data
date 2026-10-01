@@ -10,6 +10,7 @@ import { dataApps } from '../../../data-apps/index';
 import { ApiError } from '../api';
 import NotFound from '../pages/NotFound';
 import { Link, navigate } from '../router';
+import { Select } from '../ui';
 import ActivitySection from './ActivitySection';
 import { admin, storedPassword, storePassword, whenLocked } from './adminApi';
 import NotifySection from './NotifySection';
@@ -138,17 +139,12 @@ export default function SettingsPage({ section, search }: { section: string; sea
         </nav>
         <div className="settings-tools">
           {current.perApp && dataApps.length > 1 ? (
-            <select
-              aria-label="Data app"
+            <Select
+              label="Data app"
               value={slug}
-              onChange={(event) => navigate(`/settings/${current.id}?app=${encodeURIComponent(event.target.value)}`)}
-            >
-              {dataApps.map((config) => (
-                <option key={config.slug} value={config.slug}>
-                  {config.title}
-                </option>
-              ))}
-            </select>
+              options={dataApps.map((config) => ({ value: config.slug, label: config.title }))}
+              onChange={(next) => navigate(`/settings/${current.id}?app=${encodeURIComponent(next)}`)}
+            />
           ) : null}
           <button type="button" className="quiet-button" onClick={lock}>
             Lock
