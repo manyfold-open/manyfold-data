@@ -1,37 +1,68 @@
-import { findDataApp } from '../../../data-apps/index';
-import type { AppsResponse } from '../../shared/types';
+import { dataApps } from '../../../data-apps/index';
+import type { DataAppConfig } from '../../shared/data-app';
+import type { AppSummary, AppsResponse, StatsResponse } from '../../shared/types';
 import { useApi } from '../api';
-import { countOf, formatDate } from '../format';
+import { formatCount, formatDate } from '../format';
 import { Link } from '../router';
+import { Skeleton, usePending } from '../ui';
+
+/** A line through the over-time chart's counts: how the data app has grown lately. */
+function Spark({ values, width = 120, height = 44 }: { values: number[]; width?: number; height?: number }) {
+  if (values.length < 2) return null;
+  const max = Math.max(1, ...values);
+  const d = values
+    .map((value, index) => `${index ? 'L' : 'M'}${((index * width) / (values.length - 1)).toFixed(1)},${(height - 3 - (value / max) * (height - 6)).toFixed(1)}`)
+    .join(' ');
+  return (
+    <svg className="spark" width={width} height={height} viewBox={`0 0 ${width} ${height}`} preserveAspectRatio="none" aria-hidden="true">
+      <path d={d} vectorEffect="non-scaling-stroke" />
+    </svg>
+  );
+}
+
+function Card({ config, summary }: { config: DataAppConfig; summary: AppSummary | undefined }) {
+  const stats = useApi<StatsResponse>(`/api/${config.slug}/stats`);
+  const overTime = stats.data?.charts.find((chart) => chart.kind === 'over-time');
+  return (
+    <li>
+      <Link href={`/${config.slug}`} className="catalog-card">
+        <h2>{config.title}</h2>
+        <p>{config.description}</p>
+        <p className="foot">
+          {summary ? (
+            <>
+              <b>{formatCount(summary.verified)}</b> {summary.verified === 1 ? config.noun.one : config.noun.other}
+              {summary.lastUpdated ? ` · updated ${formatDate(summary.lastUpdated)}` : ''}
+            </>
+          ) : (
+            <Skeleton width="60%" height={14} style={{ marginTop: 3 }} />
+          )}
+        </p>
+        <span className="spark">
+          {overTime?.kind === 'over-time' ? <Spark values={overTime.points.map((point) => point.count)} /> : <span style={{ display: 'block', width: 120, height: 44 }} />}
+        </span>
+      </Link>
+    </li>
+  );
+}
 
 /** The front page: every data app, with how much it holds and when it last changed. */
 export default function CatalogPage() {
   const { data, error } = useApi<AppsResponse>('/api/apps');
+  const pending = usePending(!data && !error);
 
   return (
-    <>
+    <div className={pending.visible ? 'sk-on' : undefined}>
       <section className="page-head">
-        <h1>Manyfold Data</h1>
-        <p className="lead">Open datasets that AI agents collect and check. Every record links to its source.</p>
+        <h1>Data apps</h1>
+        <p className="desc">Open datasets that AI agents collect and people check. Every record links to its source.</p>
       </section>
       {error ? <p className="notice">Could not load the data apps: {error.message}</p> : null}
       <ul className="catalog">
-        {(data?.apps ?? []).map((app) => {
-          const config = findDataApp(app.slug);
-          return (
-            <li key={app.slug}>
-              <Link href={`/${app.slug}`} className="catalog-card">
-                <h2>{app.title}</h2>
-                <p>{app.description}</p>
-                <p className="meta">
-                  {config ? countOf(config, app.verified) : app.verified}
-                  {app.lastUpdated ? ` · Updated ${formatDate(app.lastUpdated)}` : ''}
-                </p>
-              </Link>
-            </li>
-          );
-        })}
+        {dataApps.map((config) => (
+          <Card key={config.slug} config={config} summary={data?.apps.find((app) => app.slug === config.slug)} />
+        ))}
       </ul>
-    </>
+    </div>
   );
 }

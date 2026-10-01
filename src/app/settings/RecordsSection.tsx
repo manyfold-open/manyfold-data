@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { findDataApp } from '../../../data-apps/index';
 import type { RecordData } from '../../shared/data-app';
 import type { AdminRecord, AdminRecordDetail, RecordStatus } from '../../shared/types';
 import { displayUrl, formatValue, safeHref } from '../format';
 import { send, useAdmin } from './adminApi';
+import { Select } from '../ui';
 import { Action, Badge, Field, Notice, plural, When } from './ui';
 
 const STATUSES: RecordStatus[] = ['pending', 'verified', 'rejected', 'merged', 'stale'];
@@ -27,16 +28,25 @@ function Detail({ slug, id, onClose }: { slug: string; id: string; onClose: () =
   const [draft, setDraft] = useState('');
   const [message, setMessage] = useState<string | null>(null);
 
+  const panel = useRef<HTMLElement>(null);
+
   useEffect(() => {
     if (data) setDraft(JSON.stringify(data.record.data, null, 2));
   }, [data]);
+
+  // The record opens above the list: bring it into view, under the sticky top bar.
+  const loaded = data !== null;
+  useEffect(() => {
+    const element = panel.current;
+    if (loaded && element) window.scrollTo({ top: element.getBoundingClientRect().top + window.scrollY - 72 });
+  }, [id, loaded]);
 
   if (!data) return <Notice error={error} />;
   const { record, revisions, tasks, reports } = data;
   const source = safeHref(record.source_url);
 
   return (
-    <section className="panel detail">
+    <section ref={panel} className="panel detail">
       <div className="section-head">
         <h3>
           {record.name} <Badge value={record.status} />
@@ -99,13 +109,12 @@ function Detail({ slug, id, onClose }: { slug: string; id: string; onClose: () =
       <h4>Decide</h4>
       <div className="inline-form">
         <Field label="New status">
-          <select value={status} onChange={(event) => setStatus(event.target.value as RecordStatus)}>
-            {STATUSES.map((value) => (
-              <option key={value} value={value}>
-                {value === 'pending' ? 'pending (back to maintainers)' : value}
-              </option>
-            ))}
-          </select>
+          <Select
+            label="New status"
+            value={status}
+            options={STATUSES.map((value) => ({ value, label: value === 'pending' ? 'pending (back to maintainers)' : value }))}
+            onChange={setStatus}
+          />
         </Field>
         {status === 'merged' ? (
           <Field label="Duplicate of (record id)">
@@ -198,20 +207,15 @@ export default function RecordsSection({
         }}
       >
         <Field label="Status">
-          <select
+          <Select
+            label="Status"
             value={status}
-            onChange={(event) => {
-              setStatus(event.target.value);
+            options={[{ value: '', label: 'Any' }, ...STATUSES.map((value) => ({ value, label: value }))]}
+            onChange={(next) => {
+              setStatus(next);
               setPage(1);
             }}
-          >
-            <option value="">Any</option>
-            {STATUSES.map((value) => (
-              <option key={value} value={value}>
-                {value}
-              </option>
-            ))}
-          </select>
+          />
         </Field>
         <Field label="Search">
           <input type="search" value={q} onChange={(event) => setQ(event.target.value)} placeholder="Name, organizer, URL…" />

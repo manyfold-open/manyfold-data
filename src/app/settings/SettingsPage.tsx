@@ -4,11 +4,13 @@
  * is ?app=<slug>, and an open record is ?record=<id>.
  */
 
-import { useEffect, useState, type FormEvent } from 'react';
+import { useEffect, useRef, useState, type FormEvent } from 'react';
+import './settings.css';
 import { dataApps } from '../../../data-apps/index';
 import { ApiError } from '../api';
 import NotFound from '../pages/NotFound';
 import { Link, navigate } from '../router';
+import { Select } from '../ui';
 import ActivitySection from './ActivitySection';
 import { admin, storedPassword, storePassword, whenLocked } from './adminApi';
 import NotifySection from './NotifySection';
@@ -17,7 +19,7 @@ import RecordsSection from './RecordsSection';
 import ReviewSection from './ReviewSection';
 import SpotCheckSection from './SpotCheckSection';
 import TokensSection from './TokensSection';
-import { Field } from './ui';
+import { Field, useCellLabels } from './ui';
 
 /** `perApp` sections show one data app at a time. */
 const SECTIONS = [
@@ -84,6 +86,15 @@ export default function SettingsPage({ section, search }: { section: string; sea
     return () => whenLocked(null);
   }, []);
 
+  const root = useRef<HTMLDivElement>(null);
+  useCellLabels(root, open);
+  // On a phone the section tabs scroll sideways; keep the current one in view.
+  useEffect(() => {
+    const nav = root.current?.querySelector<HTMLElement>('.settings-nav');
+    const tab = nav?.querySelector<HTMLElement>('[aria-current="page"]');
+    if (nav && tab) nav.scrollLeft = tab.offsetLeft - (nav.clientWidth - tab.offsetWidth) / 2;
+  }, [open, section]);
+
   const current = SECTIONS.find((entry) => entry.id === section);
   if (!current) return <NotFound message="There is no settings section by that name." />;
   if (!open) return <Gate onOpen={() => setOpen(true)} />;
@@ -126,7 +137,7 @@ export default function SettingsPage({ section, search }: { section: string; sea
   }
 
   return (
-    <div className="settings">
+    <div className="settings" ref={root}>
       <div className="settings-bar">
         <nav className="settings-nav" aria-label="Settings">
           {SECTIONS.map((entry) => (
@@ -137,17 +148,12 @@ export default function SettingsPage({ section, search }: { section: string; sea
         </nav>
         <div className="settings-tools">
           {current.perApp && dataApps.length > 1 ? (
-            <select
-              aria-label="Data app"
+            <Select
+              label="Data app"
               value={slug}
-              onChange={(event) => navigate(`/settings/${current.id}?app=${encodeURIComponent(event.target.value)}`)}
-            >
-              {dataApps.map((config) => (
-                <option key={config.slug} value={config.slug}>
-                  {config.title}
-                </option>
-              ))}
-            </select>
+              options={dataApps.map((config) => ({ value: config.slug, label: config.title }))}
+              onChange={(next) => navigate(`/settings/${current.id}?app=${encodeURIComponent(next)}`)}
+            />
           ) : null}
           <button type="button" className="quiet-button" onClick={lock}>
             Lock

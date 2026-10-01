@@ -1,331 +1,275 @@
 /**
- * The Overview's charts, drawn as plain SVG. Every chart here plots one series, so all
- * marks share one color (--series-1) and no legend; the card title names what is
- * plotted. Marks are thin, with a 4px rounded data end and a square baseline. Each mark
- * answers hover and keyboard focus with a tooltip, and every card can switch to a table
- * holding the same numbers.
+ * The Overview's charts, as HTML and CSS rather than SVG: weekly columns, a proportion bar,
+ * ranked bars and histogram columns (src/app/model/charts.ts picks which). Every mark uses
+ * --accent; parts of a whole use the same blue at falling opacity. Every mark is a link
+ * into the Table with that filter, answers hover and focus with a tooltip, and every card
+ * can switch to a table holding the same numbers.
  */
 
-import { useLayoutEffect, useRef, useState, type ReactNode, type RefObject } from 'react';
+import { useEffect, useId, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import { formatCount } from '../format';
+import { prefersReducedMotion } from '../hooks';
+import type { Takeaway } from '../model/charts';
+import { Link } from '../router';
+import { Icon, Segmented, ShowAll } from '../ui';
 
-/** An element's content width, kept current as the layout changes. */
-function useWidth<T extends HTMLElement>(): [RefObject<T | null>, number] {
-  const ref = useRef<T>(null);
-  const [width, setWidth] = useState(0);
-  useLayoutEffect(() => {
-    const element = ref.current;
-    if (!element) return;
-    const observer = new ResizeObserver(([entry]) => {
-      if (entry) setWidth(Math.floor(entry.contentRect.width));
-    });
-    observer.observe(element);
-    setWidth(Math.floor(element.getBoundingClientRect().width));
-    return () => observer.disconnect();
-  }, []);
-  return [ref, width];
+/** Marks grow in the first time a chart is seen in this tab, not on every visit. */
+const seen = new Set<string>();
+
+function useGrowOnce(key: string): boolean {
+  const [grow] = useState(() => !seen.has(key) && !prefersReducedMotion());
+  useEffect(() => {
+    seen.add(key);
+  }, [key]);
+  return grow;
 }
 
-/** Round, whole-number ticks from 0 to at least `max`. */
-export function countTicks(max: number, target = 4): number[] {
-  if (max <= 0) return [0, 1];
-  const raw = max / target;
-  const power = 10 ** Math.floor(Math.log10(raw));
-  const step = Math.max(1, [1, 2, 5, 10].map((m) => m * power).find((candidate) => candidate >= raw) ?? raw);
-  const top = Math.ceil(max / step) * step;
-  return Array.from({ length: Math.round(top / step) + 1 }, (_, i) => i * step);
-}
-
-/** A column with a 4px rounded top and a square base. */
-function columnPath(x: number, y: number, width: number, height: number): string {
-  const r = Math.min(4, width / 2, height);
-  return `M${x},${y + height}V${y + r}Q${x},${y} ${x + r},${y}H${x + width - r}Q${x + width},${y} ${x + width},${y + r}V${y + height}Z`;
-}
-
-/** A bar with a 4px rounded right end and a square left base. */
-function barPath(x: number, y: number, width: number, height: number): string {
-  const r = Math.min(4, height / 2, width);
-  return `M${x},${y}H${x + width - r}Q${x + width},${y} ${x + width},${y + r}V${y + height - r}Q${x + width},${y + height} ${x + width - r},${y + height}H${x}Z`;
-}
-
-interface Tip {
-  x: number;
-  y: number;
-  value: string;
-  label: string;
-}
-
-function Tooltip({ tip }: { tip: Tip | null }) {
-  if (!tip) return null;
+export function TakeawayLine({ parts }: { parts: Takeaway }) {
   return (
-    <div className="tooltip" style={{ left: tip.x, top: tip.y }} role="status">
-      <strong>{tip.value}</strong>
-      <span>{tip.label}</span>
-    </div>
+    <p className="takeaway">
+      {parts.map((part, index) => (part.strong ? <b key={index}>{part.text}</b> : <span key={index}>{part.text}</span>))}
+    </p>
   );
 }
 
-/* ───────── card ───────── */
+/* ───────── frame ───────── */
 
-export interface TableView {
-  columns: [string, string];
-  rows: [string, string][];
+export interface TableRow {
+  label: string;
+  value: number;
+  href?: string;
 }
 
-/** A chart's frame: title, the plot or its table, and an optional note under it. */
-export function ChartCard({
+/** A chart's frame: title, Chart/Table toggle, takeaway, then the plot or its numbers as a table. */
+export function ChartFrame({
+  id,
   title,
-  table,
-  note,
-  wide,
+  takeaway,
+  head,
+  rows,
+  full,
   children,
 }: {
+  /** Stable per chart, so the grow-in plays once. */
+  id: string;
   title: string;
-  table: TableView;
-  note?: ReactNode;
-  wide?: boolean;
-  children: ReactNode;
+  takeaway: Takeaway;
+  head: [string, string];
+  rows: readonly TableRow[];
+  full?: boolean;
+  children: (grow: boolean) => ReactNode;
 }) {
-  const [showTable, setShowTable] = useState(false);
+  const [view, setView] = useState<'chart' | 'table'>('chart');
+  const headingId = useId();
+  const grow = useGrowOnce(id);
   return (
-    <figure className={wide ? 'chart-card wide' : 'chart-card'}>
+    <section className={full ? 'chart full' : 'chart'} aria-labelledby={headingId}>
       <div className="chart-head">
-        <figcaption>{title}</figcaption>
-        <button type="button" className="quiet-button" aria-pressed={showTable} onClick={() => setShowTable(!showTable)}>
-          {showTable ? 'Show chart' : 'Show table'}
-        </button>
+        <h2 id={headingId}>{title}</h2>
+        <Segmented
+          label={`Show ${title} as`}
+          value={view}
+          onChange={setView}
+          choices={[
+            { value: 'chart', label: 'Chart' },
+            { value: 'table', label: 'Table' },
+          ]}
+        />
       </div>
-      {showTable ? (
-        <table className="chart-table">
+      <TakeawayLine parts={takeaway} />
+      {view === 'table' ? (
+        <table className="mini-table">
+          <caption className="visually-hidden">{title}</caption>
           <thead>
             <tr>
-              <th scope="col">{table.columns[0]}</th>
-              <th scope="col" className="num">
-                {table.columns[1]}
-              </th>
+              <th scope="col">{head[0]}</th>
+              <th scope="col">{head[1]}</th>
             </tr>
           </thead>
           <tbody>
-            {table.rows.map(([label, value]) => (
-              <tr key={label}>
-                <td>{label}</td>
-                <td className="num">{value}</td>
+            {rows.map((row) => (
+              <tr key={row.label}>
+                <td>{row.href ? <Link href={row.href}>{row.label}</Link> : row.label}</td>
+                <td>{formatCount(row.value)}</td>
               </tr>
             ))}
           </tbody>
         </table>
       ) : (
-        children
+        <div className={grow ? 'grow-in' : undefined}>{children(grow)}</div>
       )}
-      {note ? <p className="chart-note">{note}</p> : null}
-    </figure>
+    </section>
   );
 }
 
 /* ───────── columns ───────── */
 
-export interface Column {
+export interface ColumnItem {
   key: string;
-  /** Axis label under the column. */
-  tick: string;
-  /** Full name, for the tooltip. */
-  label: string;
   value: number;
-  /** Bold axis label: the week or month that contains today. */
-  current?: boolean;
+  href: string;
+  /** Tooltip and accessible name, e.g. "Week of Sep 14 · 45 rounds". */
+  tip: string;
+  now?: boolean;
+  later?: boolean;
 }
-
-const MARGIN = { top: 22, right: 8, bottom: 30, left: 36 };
 
 /**
- * Vertical columns from one baseline. `labels`: 'all' prints every non-zero value on
- * its column (for a few columns); 'max' prints only the tallest.
+ * Vertical columns from one baseline, with gridlines at 0, half and top. `labels` sit at
+ * fractions of the width (months under weeks); `ticks` sit one under each column (bins).
  */
-export function ColumnChart({
-  columns,
-  describe,
+export function Columns({
+  items,
+  top,
+  todayAt,
   labels,
-  height = 220,
+  ticks,
 }: {
-  columns: Column[];
-  /** Tooltip value, e.g. "3 hackathons". */
-  describe: (value: number) => string;
-  labels: 'all' | 'max';
-  height?: number;
+  items: readonly ColumnItem[];
+  top: number;
+  todayAt?: number | null;
+  labels?: readonly { at: number; text: string }[];
+  ticks?: readonly string[];
 }) {
-  const [ref, width] = useWidth<HTMLDivElement>();
-  const [active, setActive] = useState<number | null>(null);
+  const plot = useRef<HTMLDivElement>(null);
+  const [tip, setTip] = useState<{ x: number; y: number; text: string } | null>(null);
 
-  const plotWidth = Math.max(0, width - MARGIN.left - MARGIN.right);
-  const plotHeight = height - MARGIN.top - MARGIN.bottom;
-  const ticks = countTicks(Math.max(0, ...columns.map((column) => column.value)));
-  const top = ticks.at(-1) ?? 1;
-  const y = (value: number) => MARGIN.top + plotHeight - (value / top) * plotHeight;
-  const band = columns.length > 0 ? plotWidth / columns.length : 0;
-  const barWidth = Math.max(2, Math.min(24, band - 2, band * 0.7));
-  // Thin the axis labels so the widest one never touches its neighbour.
-  const labelWidth = Math.max(0, ...columns.map((column) => column.tick.length)) * 6.6 + 12;
-  const every = Math.max(1, Math.ceil(labelWidth / Math.max(band, 1)));
-  const tallest = columns.reduce((best, column, index) => (column.value > (columns[best]?.value ?? 0) ? index : best), 0);
-  const center = (index: number) => MARGIN.left + band * index + band / 2;
-
-  const tipFor = (index: number): Tip | null => {
-    const column = columns[index];
-    return column ? { x: center(index), y: y(column.value) - 8, value: describe(column.value), label: column.label } : null;
+  const show = (element: HTMLElement, item: ColumnItem) => {
+    const box = plot.current;
+    if (!box) return;
+    const bar = element.firstElementChild as HTMLElement | null;
+    const x = Math.max(60, Math.min(box.clientWidth - 60, element.offsetLeft + element.offsetWidth / 2));
+    setTip({ x, y: box.clientHeight - (bar?.offsetHeight ?? 0) - 6, text: item.tip });
   };
 
   return (
-    <div className="chart-plot" ref={ref}>
-      {width > 0 ? (
-        <svg width={width} height={height} className="chart-svg" role="group">
-          {ticks.map((tick) => (
-            <g key={tick}>
-              <line
-                x1={MARGIN.left}
-                x2={width - MARGIN.right}
-                y1={y(tick)}
-                y2={y(tick)}
-                className={tick === 0 ? 'axis-line' : 'grid-line'}
-              />
-              <text x={MARGIN.left - 8} y={y(tick)} dy="0.32em" textAnchor="end" className="tick-label">
-                {formatCount(tick)}
-              </text>
-            </g>
+    <div className="columns-wrap">
+      <div ref={plot} className={ticks ? 'columns bins' : 'columns'} onPointerLeave={() => setTip(null)}>
+        {[0, top / 2, top].map((value) => (
+          <div key={value} className="gridline" style={{ bottom: `${(value / top) * 100}%` }} aria-hidden="true">
+            <span>{formatCount(value)}</span>
+          </div>
+        ))}
+        {items.map((item, index) => (
+          <Link
+            key={item.key}
+            href={item.href}
+            className={['col', item.value === 0 && 'zero', item.now && 'now', item.later && 'later', tip?.text === item.tip && 'hot']
+              .filter(Boolean)
+              .join(' ')}
+            style={{ ['--i' as string]: index } as CSSProperties}
+            aria-label={`${item.tip}. Show in the table`}
+            onPointerEnter={(event) => show(event.currentTarget, item)}
+            onFocus={(event) => show(event.currentTarget, item)}
+            onBlur={() => setTip(null)}
+          >
+            <i style={{ height: `${Math.max(item.value > 0 ? 2 : 1, (item.value / top) * 100)}%` }} />
+          </Link>
+        ))}
+        {todayAt !== null && todayAt !== undefined ? (
+          <span className="today-line" style={{ left: `${todayAt * 100}%` }} aria-hidden="true">
+            <span>Today</span>
+          </span>
+        ) : null}
+        {tip ? (
+          <div className="chart-tip" style={{ left: tip.x, top: tip.y }} aria-hidden="true">
+            {tip.text}
+          </div>
+        ) : null}
+      </div>
+      {ticks ? (
+        <div className="x-labels even" aria-hidden="true">
+          {ticks.map((tick, index) => (
+            <span key={index}>{tick}</span>
           ))}
-          {columns.map((column, index) => {
-            const showValue = column.value > 0 && (labels === 'all' || index === tallest);
-            return (
-              <g key={column.key}>
-                {column.value > 0 ? (
-                  <path
-                    d={columnPath(center(index) - barWidth / 2, y(column.value), barWidth, y(0) - y(column.value))}
-                    className={active === index ? 'mark active' : 'mark'}
-                  />
-                ) : null}
-                {showValue ? (
-                  <text x={center(index)} y={y(column.value) - 6} textAnchor="middle" className="value-label">
-                    {formatCount(column.value)}
-                  </text>
-                ) : null}
-                {index % every === 0 ? (
-                  <text
-                    x={center(index)}
-                    y={height - 10}
-                    textAnchor="middle"
-                    className={column.current ? 'tick-label current' : 'tick-label'}
-                  >
-                    {column.tick}
-                  </text>
-                ) : null}
-              </g>
-            );
-          })}
-          {columns.map((column, index) => (
-            <rect
-              key={column.key}
-              x={MARGIN.left + band * index}
-              y={MARGIN.top}
-              width={band}
-              height={plotHeight}
-              className="hit"
-              tabIndex={0}
-              aria-label={`${column.label}: ${describe(column.value)}`}
-              onPointerEnter={() => setActive(index)}
-              onPointerLeave={() => setActive(null)}
-              onFocus={() => setActive(index)}
-              onBlur={() => setActive(null)}
-            />
+        </div>
+      ) : (
+        <div className="x-labels" aria-hidden="true">
+          {(labels ?? []).map((label) => (
+            <span key={`${label.at}`} style={{ left: `${label.at * 100}%` }}>
+              {label.text}
+            </span>
           ))}
-        </svg>
-      ) : null}
-      <Tooltip tip={active === null ? null : tipFor(active)} />
+        </div>
+      )}
     </div>
   );
 }
 
-/* ───────── bars ───────── */
+/* ───────── categories ───────── */
 
-export interface Bar {
+export interface CategoryItem {
   key: string;
   label: string;
-  value: number;
+  count: number;
+  /** Share shown on the right, e.g. "23%". */
+  share: string;
+  href: string;
 }
 
-/** Horizontal bars, one per category, each value printed at its tip. */
-export function BarChart({ bars, describe }: { bars: Bar[]; describe: (value: number) => string }) {
-  const [ref, width] = useWidth<HTMLDivElement>();
-  const [active, setActive] = useState<number | null>(null);
+/** The same blue at falling opacity, one step per part of the whole. */
+const SHADES = [1, 0.7, 0.48, 0.3, 0.18];
 
-  const rowHeight = 36;
-  const barHeight = 16;
-  const labelWidth = Math.min(160, Math.max(72, ...bars.map((bar) => bar.label.length * 7.2 + 14)));
-  const valueWidth = 48;
-  const plotWidth = Math.max(0, width - labelWidth - valueWidth);
-  const max = Math.max(1, ...bars.map((bar) => bar.value));
-  const height = bars.length * rowHeight;
-  const length = (value: number) => (value / max) * plotWidth;
-  const middle = (index: number) => index * rowHeight + rowHeight / 2;
-
-  const tipFor = (index: number): Tip | null => {
-    const bar = bars[index];
-    return bar
-      ? { x: labelWidth + length(bar.value) / 2, y: middle(index) - barHeight / 2 - 8, value: describe(bar.value), label: bar.label }
-      : null;
-  };
-
+/** One proportion bar and a legend: for a few categories that make up a whole. */
+export function ShareBar({ items, noun }: { items: readonly CategoryItem[]; noun: (count: number) => string }) {
+  const total = items.reduce((sum, item) => sum + item.count, 0);
   return (
-    <div className="chart-plot" ref={ref}>
-      {width > 0 ? (
-        <svg width={width} height={height} className="chart-svg" role="group">
-          <line x1={labelWidth} x2={labelWidth} y1={4} y2={height - 4} className="axis-line" />
-          {bars.map((bar, index) => (
-            <g key={bar.key}>
-              <text x={labelWidth - 10} y={middle(index)} dy="0.32em" textAnchor="end" className="category-label">
-                {bar.label}
-              </text>
-              {bar.value > 0 ? (
-                <path
-                  d={barPath(labelWidth, middle(index) - barHeight / 2, length(bar.value), barHeight)}
-                  className={active === index ? 'mark active' : 'mark'}
-                />
-              ) : null}
-              <text x={labelWidth + length(bar.value) + 8} y={middle(index)} dy="0.32em" className="value-label">
-                {formatCount(bar.value)}
-              </text>
-            </g>
+    <>
+      <div className="share" aria-hidden="true">
+        {items
+          .filter((item) => item.count > 0)
+          .map((item, index) => (
+            <i key={item.key} style={{ width: `${(item.count / Math.max(1, total)) * 100}%`, opacity: SHADES[Math.min(index, 4)] }} />
           ))}
-          {bars.map((bar, index) => (
-            <rect
-              key={bar.key}
-              x={0}
-              y={index * rowHeight}
-              width={width}
-              height={rowHeight}
-              className="hit"
-              tabIndex={0}
-              aria-label={`${bar.label}: ${describe(bar.value)}`}
-              onPointerEnter={() => setActive(index)}
-              onPointerLeave={() => setActive(null)}
-              onFocus={() => setActive(index)}
-              onBlur={() => setActive(null)}
-            />
-          ))}
-        </svg>
-      ) : null}
-      <Tooltip tip={active === null ? null : tipFor(active)} />
-    </div>
+      </div>
+      {items.map((item, index) => (
+        <Link
+          key={item.key}
+          href={item.href}
+          className={item.count === 0 ? 'legend-row zero' : 'legend-row'}
+          aria-label={`${item.label}: ${noun(item.count)}, ${item.share}. Show in the table`}
+        >
+          <span className="dot" style={{ opacity: item.count > 0 ? SHADES[Math.min(index, 4)] : 0.18 }} aria-hidden="true" />
+          <span>{item.label}</span>
+          <span className="count">{formatCount(item.count)}</span>
+          <span className="pct">{item.share}</span>
+        </Link>
+      ))}
+    </>
   );
 }
 
-/* ───────── figures ───────── */
-
-/** A labelled number. `hero` is the one figure the Overview leads with. */
-export function StatTile({ label, value, note, hero }: { label: string; value: string; note?: string; hero?: boolean }) {
+/** Ranked bars, longest first: the top ones, then "Show all". */
+export function RankedBars({ items, top, noun }: { items: readonly CategoryItem[]; top: number; noun: (count: number) => string }) {
+  const [all, setAll] = useState(false);
+  const max = Math.max(1, ...items.map((item) => item.count));
+  const shown = all ? items : items.slice(0, top);
   return (
-    <div className={hero ? 'tile hero' : 'tile'}>
-      <div className="tile-label">{label}</div>
-      <div className="tile-value">{value}</div>
-      {note ? <div className="tile-note">{note}</div> : null}
+    <>
+      {shown.map((item, index) => (
+        <Link key={item.key} href={item.href} className="bar-row" aria-label={`${item.label}: ${noun(item.count)}, ${item.share}. Show in the table`}>
+          <span className="name">{item.label}</span>
+          <span className="track" aria-hidden="true">
+            <i style={{ width: `${(item.count / max) * 100}%`, ['--i' as string]: index } as CSSProperties} />
+          </span>
+          <span className="count">{formatCount(item.count)}</span>
+          <span className="pct">{item.share}</span>
+        </Link>
+      ))}
+      {items.length > top ? <ShowAll expanded={all} total={items.length} less={`Show top ${top}`} onToggle={() => setAll(!all)} /> : null}
+    </>
+  );
+}
+
+/** The line above a histogram when few records state its value. */
+export function Coverage({ text, share }: { text: string; share: number }) {
+  return (
+    <div className="coverage">
+      <Icon name="warn" size={15} />
+      <span>{text}</span>
+      <span className="track" aria-hidden="true">
+        <i style={{ width: `${share * 100}%` }} />
+      </span>
     </div>
   );
 }
