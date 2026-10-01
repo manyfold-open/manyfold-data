@@ -244,7 +244,11 @@ export default function OverviewPage({ config }: { config: DataAppConfig }) {
         </div>
         {preview.data ? (
           preview.data.records.length > 0 ? (
-            <RecordTable config={config} records={preview.data.records} columns={config.table.columns.slice(0, 5)} />
+            <RecordTable
+              config={config}
+              records={preview.data.records}
+              columns={config.table.previewColumns ?? config.table.columns.slice(0, 5)}
+            />
           ) : (
             <p className="muted">No {config.noun.other} to show yet.</p>
           )

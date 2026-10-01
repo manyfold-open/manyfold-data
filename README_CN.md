@@ -160,7 +160,12 @@ curl -X POST https://data.manyfold.ai/api/admin/tokens \
 
 测试会校验每个配置：slug、字段名、身份字段、表格列、排序、筛选、图表、可接受的取值范围，以及展示给 agent 的示例记录。skill 文本同样由配置生成。
 
-配置里有两点值得知道：日期边界可以是相对的（`{ from: 'today-90', to: 'today' }` 表示最近 90 天）；`url` 字段加上 `homePage: true` 后只保留网站首页，可以用来识别一家公司。
+配置里值得知道的几点：
+
+- 日期边界可以是相对的：`{ from: 'today-90', to: 'today' }` 表示最近 90 天。
+- `url` 字段加上 `homePage: true` 后只保留网站首页，可以用来识别一家公司。
+- `tags` 字段加上 `names: true` 后存放人们书写的名称，例如城市（`["Zürich"]`）：保留大小写和重音，每个名称都是一个筛选项、一根图表柱，也能被搜索到。
+- `table.previewColumns` 指定概览页预览表格的列（默认取表格的前五列）。
 
 ## 部署
 

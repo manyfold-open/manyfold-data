@@ -49,7 +49,13 @@ export interface UrlField extends FieldBase {
 
 export interface TagsField extends FieldBase {
   type: 'tags';
+  /** Most items per record. */
   max: number;
+  /**
+   * Items are names as people write them ("San Francisco", "Zürich") rather than slugs:
+   * case and accents kept, up to NAME_MAX characters each, compared without case.
+   */
+  names?: boolean;
 }
 
 export type FieldDef = TextField | EnumField | DateField | NumberField | UrlField | TagsField;
@@ -100,6 +106,8 @@ export interface DataAppConfig {
     defaultFilter?: Readonly<Record<string, RangeCondition>>;
     /** Heading of the Overview's preview: the first rows of the default Table view. */
     previewTitle: string;
+    /** Columns of that preview; the first five Table columns when left out. */
+    previewColumns?: readonly string[];
   };
   charts: readonly ChartDef[];
   scope: { in: string; out: string };
@@ -162,6 +170,7 @@ export function validateConfig(config: DataAppConfig): string[] {
   if (config.identity.length === 0) fail('identity needs at least one field');
   config.identity.forEach((name) => need(name, 'identity'));
   config.table.columns.forEach((name) => need(name, 'table.columns'));
+  (config.table.previewColumns ?? []).forEach((name) => need(name, 'table.previewColumns'));
   need(config.table.defaultSort.replace(/^-/, ''), 'table.defaultSort', SORTABLE);
   Object.keys(config.table.defaultFilter ?? {}).forEach((name) =>
     need(name, 'table.defaultFilter', ['date', 'number']),
@@ -255,6 +264,16 @@ export function describeDateBound(bound: string): string {
 /** 1 to 32 characters: lowercase letters, digits and inner hyphens. */
 export const TAG = /^[a-z0-9](?:[a-z0-9-]{0,30}[a-z0-9])?$/;
 
+/** Longest item of a `names` tags field. */
+export const NAME_MAX = 60;
+
+/** One item of a `names` tags field, cleaned, or null when it cannot be one. Commas separate items. */
+export function cleanName(value: unknown): string | null {
+  if (typeof value !== 'string') return null;
+  const name = cleanText(value);
+  return name && name.length <= NAME_MAX && !name.includes(',') ? name : null;
+}
+
 /** A value quoted back in an error message, kept short. */
 const show = (value: unknown): string => {
   const text = typeof value === 'string' ? JSON.stringify(value) : String(JSON.stringify(value) ?? value);
@@ -307,6 +326,21 @@ function checkField(def: FieldDef, raw: unknown): Checked {
       return { value: def.homePage ? `${new URL(url).origin}/` : url };
     }
     case 'tags': {
+      if (def.names) {
+        // A single string is read as names separated by commas or semicolons.
+        const items = typeof raw === 'string' ? raw.split(/[,;]/) : raw;
+        if (!Array.isArray(items)) return `must be a list of names; got ${show(raw)}`;
+        const names: string[] = [];
+        for (const item of items) {
+          if (typeof item === 'string' && !cleanText(item)) continue;
+          const name = cleanName(item);
+          if (!name) return `each name must be text of 1 to ${NAME_MAX} characters without commas; got ${show(item)}`;
+          if (!names.some((kept) => kept.toLowerCase() === name.toLowerCase())) names.push(name);
+        }
+        if (names.length === 0) return 'is empty once invisible characters are removed';
+        if (names.length > def.max) return `must have at most ${def.max} names; got ${names.length}`;
+        return { value: names };
+      }
       if (!Array.isArray(raw)) return `must be a list of tags; got ${show(raw)}`;
       if (raw.length > def.max) return `must have at most ${def.max} tags; got ${raw.length}`;
       const tags: string[] = [];

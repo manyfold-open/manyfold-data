@@ -33,6 +33,9 @@ const rangeOrNull = (from?: string, to?: string): RangeFilter | null =>
 
 /* ───────── filters ───────── */
 
+/** Lowercase, accents removed: "Zürich" is found by "zurich". */
+const fold = (text: string): string => text.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
+
 function ChoiceFilter({
   def,
   filter,
@@ -44,11 +47,17 @@ function ChoiceFilter({
   counts: FacetCount[];
   onChange: (filter: FieldFilter | null) => void;
 }) {
+  const [query, setQuery] = useState('');
+  const [expanded, setExpanded] = useState(false);
   const selected = filter?.kind === 'in' ? filter.values : [];
-  const values =
-    def.type === 'enum'
-      ? def.values
-      : [...new Set([...selected, ...counts.map((count) => count.value)])].slice(0, TAGS_SHOWN);
+  // Enums keep their config order. Tags list what is chosen first, then the most common.
+  const all = def.type === 'enum' ? [...def.values] : [...new Set([...selected, ...counts.map((count) => count.value)])];
+  const long = def.type === 'tags' && all.length > TAGS_SHOWN;
+  const values = query
+    ? all.filter((value) => fold(valueLabel(def, value)).includes(fold(query))).slice(0, 50)
+    : long && !expanded
+      ? all.slice(0, Math.max(TAGS_SHOWN, selected.length))
+      : all;
   const toggle = (value: string) => {
     const next = selected.includes(value) ? selected.filter((item) => item !== value) : [...selected, value];
     onChange(next.length > 0 ? { kind: 'in', values: next } : null);
@@ -57,7 +66,18 @@ function ChoiceFilter({
   return (
     <fieldset className="filter">
       <legend>{def.label}</legend>
-      {values.length === 0 ? <p className="muted small">None yet</p> : null}
+      {long ? (
+        <input
+          type="search"
+          className="filter-search"
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+          placeholder={`Find a ${def.label.toLowerCase()}`}
+          aria-label={`Find a ${def.label.toLowerCase()}`}
+        />
+      ) : null}
+      {all.length === 0 ? <p className="muted small">None yet</p> : null}
+      {query && values.length === 0 ? <p className="muted small">No match</p> : null}
       {values.map((value) => {
         const count = counts.find((item) => item.value === value)?.count ?? 0;
         const checked = selected.includes(value);
@@ -69,6 +89,11 @@ function ChoiceFilter({
           </label>
         );
       })}
+      {long && !query ? (
+        <button type="button" className="link-button small" aria-expanded={expanded} onClick={() => setExpanded(!expanded)}>
+          {expanded ? 'Show fewer' : `Show all ${formatCount(all.length)}`}
+        </button>
+      ) : null}
     </fieldset>
   );
 }

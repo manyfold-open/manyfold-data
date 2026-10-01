@@ -616,6 +616,18 @@ textarea {
   font-weight: 600;
 }
 
+.filter-search {
+  width: 100%;
+  margin-bottom: 4px;
+  padding: 5px 9px;
+  font-size: 13px;
+}
+
+.filter .link-button {
+  display: block;
+  margin-top: 4px;
+}
+
 .filter select {
   width: 100%;
 }

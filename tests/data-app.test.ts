@@ -192,6 +192,29 @@ describe('date bounds', () => {
   });
 });
 
+describe('lists of names', () => {
+  it('keep case and accents, read a string as comma-separated names, and drop repeats', () => {
+    const ok = (city: unknown) => {
+      const result = validateRecordData(hackathons, { ...valid, city });
+      return result.ok ? result.value.city : result.errors;
+    };
+    expect(ok(['Zürich', 'San Francisco', 'zürich'])).toEqual(['Zürich', 'San Francisco']);
+    expect(ok('Rome, Milan; Imperia')).toEqual(['Rome', 'Milan', 'Imperia']);
+    expect(ok(['London, UK'])).toEqual([
+      { field: 'city', message: 'each name must be text of 1 to 60 characters without commas; got "London, UK"' },
+    ]);
+    expect(ok(['x'.repeat(61)])).toHaveLength(1);
+    expect(ok(Array.from({ length: 9 }, (_, n) => `City ${n}`))).toEqual([
+      { field: 'city', message: 'must have at most 8 names; got 9' },
+    ]);
+  });
+
+  it('only show preview columns the data app has', () => {
+    const config = { ...hackathons, table: { ...hackathons.table, previewColumns: ['name', 'venue'] } };
+    expect(validateConfig(config)).toEqual(['ai-hackathons: table.previewColumns names unknown field "venue"']);
+  });
+});
+
 describe('home-page urls', () => {
   it('keep only the scheme and host', () => {
     const config: DataAppConfig = {

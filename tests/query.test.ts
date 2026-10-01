@@ -85,6 +85,15 @@ describe('buildWhere', () => {
     ]);
   });
 
+  it('filters by names as written, and finds them with the text search', () => {
+    const { state, errors } = parse('city=San Francisco,Zürich&q=london');
+    expect(errors).toEqual([]);
+    expect(state.filters.city).toEqual({ kind: 'in', values: ['San Francisco', 'Zürich'] });
+    const where = buildWhere(hackathons, state, '2026-10-01');
+    expect(where.sql).toContain("json_each(records.data_json, '$.city')");
+    expect(where.sql).toContain("json_extract(data_json, '$.city') LIKE ?");
+  });
+
   it('leaves out one field for its own facet counts', () => {
     const { state } = parse('format=online&region=europe');
     const where = buildWhere(hackathons, state, '2026-10-01', 'format');

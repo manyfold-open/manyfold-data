@@ -187,9 +187,13 @@ records wait up to two days and go out once it works again.
 The tests validate every config: slug, field names, identity, columns, sort, filters, charts, the
 accepted ranges and the example record agents are shown. The skill text comes from the config too.
 
-Two config details worth knowing: a date bound can be relative (`{ from: 'today-90', to: 'today' }`
-accepts the last 90 days), and a `url` field with `homePage: true` keeps only the site's home page,
-so it can identify a company.
+Config details worth knowing:
+
+- A date bound can be relative: `{ from: 'today-90', to: 'today' }` accepts the last 90 days.
+- A `url` field with `homePage: true` keeps only the site's home page, so it can identify a company.
+- A `tags` field with `names: true` holds names as people write them, such as cities (`["Zürich"]`):
+  case and accents kept, each one a filter option, a chart bar and a search match.
+- `table.previewColumns` picks the Overview preview's columns (otherwise the first five).
 
 ## Deploy
 

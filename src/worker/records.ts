@@ -38,7 +38,11 @@ export function buildWhere(
   const params: (string | number)[] = [config.slug];
 
   if (state.q) {
-    const textFields = Object.keys(config.fields).filter((field) => config.fields[field]?.type === 'text');
+    // Text fields, and lists of names (cities): their JSON text holds every name.
+    const textFields = Object.keys(config.fields).filter((field) => {
+      const def = config.fields[field];
+      return def?.type === 'text' || (def?.type === 'tags' && def.names === true);
+    });
     if (textFields.length > 0) {
       clauses.push(`(${textFields.map((field) => `${fieldSql(field)} LIKE ? ESCAPE '\\'`).join(' OR ')})`);
       const pattern = `%${escapeLike(state.q)}%`;
@@ -94,7 +98,7 @@ function facetStatement(
         `SELECT json_each.value AS value, COUNT(*) AS n
          FROM records, json_each(records.data_json, '$.${field}')
          WHERE ${where.sql}
-         GROUP BY json_each.value ORDER BY n DESC, value LIMIT 30`,
+         GROUP BY json_each.value ORDER BY n DESC, value LIMIT 200`,
       )
       .bind(...where.params);
   }

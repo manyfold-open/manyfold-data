@@ -135,7 +135,7 @@ describe('Discord', () => {
       notify: { line: '{name} · {prize_usd} · deadline {deadline} · {city}' },
     };
     expect(fillLine(config, { name: 'A', prize_usd: 25000, deadline: '2026-11-15' })).toBe('A · $25,000 · deadline 2026-11-15');
-    expect(fillLine(config, { name: 'A', city: 'Paris' })).toBe('A · Paris');
+    expect(fillLine(config, { name: 'A', city: ['Paris', 'Lyon'] })).toBe('A · Paris, Lyon');
   });
 
   it('keeps a public invite link per data app, apart from the webhook, and puts it on the Overview', async () => {

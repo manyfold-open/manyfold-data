@@ -12,7 +12,7 @@
  * at themselves.
  */
 
-import { describeDateBound, type DataAppConfig, type FieldDef } from '../shared/data-app';
+import { describeDateBound, NAME_MAX, type DataAppConfig, type FieldDef } from '../shared/data-app';
 import type { Standing, Work } from '../shared/types';
 import { LEASE_MAX, VERDICTS_MAX } from './maintainer';
 import { BATCH_MAX } from './submit';
@@ -73,7 +73,11 @@ function describeField(name: string, def: FieldDef, config: DataAppConfig): stri
       parts.push(def.homePage ? 'A full https:// URL; only the home page is kept, any path is dropped.' : 'A full https:// URL.');
       break;
     case 'tags':
-      parts.push(`A list of up to ${def.max} tags: lowercase letters, digits and hyphens.`);
+      parts.push(
+        def.names
+          ? `A list of up to ${def.max} names, each up to ${NAME_MAX} characters, e.g. ["London", "Paris"].`
+          : `A list of up to ${def.max} tags: lowercase letters, digits and hyphens.`,
+      );
       break;
   }
   if (def.help) parts.push(def.help.endsWith('.') ? def.help : `${def.help}.`);

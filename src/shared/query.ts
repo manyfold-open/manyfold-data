@@ -12,7 +12,7 @@
  *   ?page=2                   1-based
  */
 
-import { isDateBound, SORTABLE, TAG, type DataAppConfig, type RangeCondition } from './data-app.ts';
+import { cleanName, isDateBound, SORTABLE, TAG, type DataAppConfig, type RangeCondition } from './data-app.ts';
 
 export type FieldFilter =
   | { kind: 'in'; values: string[] }
@@ -73,12 +73,16 @@ export function parseQuery(
       const raw = params.get(field);
       if (!raw) continue;
       const values = [...new Set(raw.split(',').map((value) => value.trim()).filter(Boolean))];
-      const bad = values.filter((value) => (def.type === 'enum' ? !def.values.includes(value) : !TAG.test(value)));
+      const bad = values.filter((value) =>
+        def.type === 'enum' ? !def.values.includes(value) : def.names ? cleanName(value) !== value : !TAG.test(value),
+      );
       if (bad.length > 0) {
         errors.push(
           def.type === 'enum'
             ? `${field} must be one or more of ${def.values.join(', ')}; got ${bad.join(', ')}`
-            : `${field} must list lowercase tags; got ${bad.join(', ')}`,
+            : def.names
+              ? `${field} must list names, separated by commas; got ${bad.join(', ')}`
+              : `${field} must list lowercase tags; got ${bad.join(', ')}`,
         );
         continue;
       }
