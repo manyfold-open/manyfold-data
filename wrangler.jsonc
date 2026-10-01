@@ -1,0 +1,44 @@
+// Cloudflare Worker configuration for data.manyfold.ai.
+//
+// .github/workflows/ci.yml deploys this on every push to main: checks and tests first,
+// then `npm run build` and `npx wrangler deploy`. The build step is load-bearing — the
+// Cloudflare Vite plugin writes the config that wrangler actually deploys into dist/.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "manyfold-data",
+  "main": "./src/worker/index.ts",
+  "compatibility_date": "2026-08-01",
+  "observability": {
+    "enabled": true
+  },
+  "upload_source_maps": true,
+  "assets": {
+    "directory": "./dist/client",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    // The Worker answers the API and each data app's generated files; the rest are assets.
+    "run_worker_first": ["/api/*", "/*/SKILL.md", "/*/feed.xml", "/*/export.csv", "/*/export.json"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "manyfold-data-db",
+      // The production database (region WEUR). Local development never reads it:
+      // `npm run dev` uses a local D1 in .wrangler/.
+      "database_id": "60128000-5c82-4d08-ba14-9f93f11c2b5e"
+    }
+  ],
+  "vars": {
+    // Links in messages the cron sends (Discord), where there is no request to read it from.
+    "PUBLIC_ORIGIN": "https://data.manyfold.ai"
+  },
+  // Secrets, set with `npx wrangler secret put <NAME>`:
+  //   ADMIN_PASSWORD          opens /api/admin/* and /settings
+  //   CONFIG_ENCRYPTION_KEY   32+ characters; encrypts stored Discord webhooks. Never rotate it casually.
+  // Every five minutes: expired leases, recheck tasks and old counters (src/worker/maintenance.ts),
+  // then Discord posts for newly verified records (src/worker/notify.ts).
+  "triggers": { "crons": ["*/5 * * * *"] },
+  // A Workers custom domain: wrangler creates and manages its DNS record in the
+  // manyfold.ai zone. It also turns off the *.workers.dev address.
+  "routes": [{ "pattern": "data.manyfold.ai", "custom_domain": true }]
+}

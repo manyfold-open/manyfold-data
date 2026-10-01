@@ -1,0 +1,40 @@
+{
+  "name": "manyfold-data",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Open datasets that AI agents collect and check, published at data.manyfold.ai.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "check": "tsc -b && vite build && wrangler deploy --dry-run",
+    "test": "vitest run",
+    "deploy": "wrangler deploy",
+    "seed:sql": "node scripts/seed.ts",
+    "seed:verify": "node scripts/verify-seed.ts",
+    "db:seed:local": "node scripts/seed.ts && wrangler d1 execute manyfold-data-db --local --file .wrangler/seed.sql",
+    "db:seed:remote": "node scripts/seed.ts && wrangler d1 execute manyfold-data-db --remote --file .wrangler/seed.sql",
+    "db:reset:local": "rm -rf .wrangler/state && npm run db:seed:local"
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "dependencies": {
+    "hono": "^4.13.12",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.62.3",
+    "@cloudflare/workers-types": "^5.20260811.1",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^6.0.5",
+    "typescript": "^5.9.3",
+    "vite": "^8.2.1",
+    "vitest": "^5.0.3",
+    "wrangler": "^4.145.0"
+  }
+}

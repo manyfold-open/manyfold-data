@@ -1,0 +1,876 @@
+[
+  {
+    "data": {
+      "name": "Rakathon 2026",
+      "organizer": "Insane Business Ideas s.r.o.",
+      "url": "https://www.rakathon.cz/eng",
+      "deadline": "2026-10-01",
+      "starts_on": "2026-10-16",
+      "ends_on": "2026-10-18",
+      "format": "in-person",
+      "city": "Prague",
+      "region": "europe",
+      "tags": [
+        "healthcare",
+        "oncology",
+        "medical-ai"
+      ]
+    },
+    "source_url": "https://www.rakathon.cz/eng",
+    "evidence": "Registration opens on 26 June. Applications will be reviewed based on the information provided in the registration form. The application deadline is 1 October, or earlier if capacity is reached.",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "ExecuTorch Hackathon",
+      "organizer": "HackerSquad with Qualcomm, Meta, GitHub and the PyTorch Foundation",
+      "url": "https://luma.com/executorch-hackathon",
+      "deadline": "2026-10-04",
+      "starts_on": "2026-10-17",
+      "ends_on": "2026-10-18",
+      "format": "in-person",
+      "city": "San Francisco",
+      "region": "americas",
+      "tags": [
+        "on-device",
+        "edge-ai",
+        "open-source",
+        "pytorch",
+        "hardware",
+        "iot",
+        "xr"
+      ]
+    },
+    "source_url": "https://luma.com/executorch-hackathon",
+    "evidence": "To participate, interested teams must select a track, form a team of 3–5, and submit a project proposal by October 4. Selected teams will be announced by October 7.",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "London AI x Science Hackathon",
+      "organizer": "Iterate (with futurebio.xyz)",
+      "url": "https://luma.com/3iipivod",
+      "deadline": "2026-10-04",
+      "starts_on": "2026-10-03",
+      "ends_on": "2026-10-04",
+      "format": "in-person",
+      "city": "London",
+      "region": "europe",
+      "tags": [
+        "ai-for-science",
+        "agents",
+        "biology",
+        "materials",
+        "research"
+      ]
+    },
+    "source_url": "https://luma.com/3iipivod",
+    "evidence": "October 3–4, 2026 · London",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "iFX Hack Hong Kong 2026",
+      "organizer": "iFX EXPO",
+      "url": "https://www.eventbrite.com/e/ifx-hack-2026-trading-fintech-hackathon-powered-by-aws-tickets-2001882586706",
+      "deadline": "2026-10-04",
+      "starts_on": "2026-10-04",
+      "ends_on": "2026-10-04",
+      "format": "in-person",
+      "city": "Hong Kong",
+      "region": "asia-pacific",
+      "tags": [
+        "fintech",
+        "finance",
+        "trading"
+      ]
+    },
+    "source_url": "https://www.eventbrite.com/e/ifx-hack-2026-trading-fintech-hackathon-powered-by-aws-tickets-2001882586706",
+    "evidence": "Date: Sunday, 4 October 2026",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "WeAreDevelopers x BAND present: Dark Factory (hackathon edition)",
+      "organizer": "BAND and WeAreDevelopers, run on lablab.ai",
+      "url": "https://lablab.ai/ai-hackathons/wearedevelopers-hackathon",
+      "deadline": "2026-10-05",
+      "starts_on": "2026-09-26",
+      "ends_on": "2026-10-05",
+      "format": "online",
+      "region": "global",
+      "prize_usd": 6000,
+      "tags": [
+        "agents",
+        "multi-agent",
+        "coding-agents",
+        "llm"
+      ]
+    },
+    "source_url": "https://lablab.ai/ai-hackathons/wearedevelopers-hackathon",
+    "evidence": "Online Build: Sept 26 - Oct 5, 2026",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "Hackathon on AI for agri-food systems",
+      "organizer": "ITU AI for Good / Global Initiative on AI for Agri-Food Systems (GI-AI4AFS)",
+      "url": "https://aiforgood.itu.int/event/hackathon-on-ai-for-agri-food-systems/",
+      "deadline": "2026-10-07",
+      "starts_on": "2026-10-08",
+      "ends_on": "2026-10-09",
+      "format": "in-person",
+      "city": "New Delhi",
+      "region": "asia-pacific",
+      "tags": [
+        "agriculture",
+        "food-systems",
+        "sustainability"
+      ]
+    },
+    "source_url": "https://aiforgood.itu.int/event/hackathon-on-ai-for-agri-food-systems/",
+    "evidence": "Applications open until 07 October 2026",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "AI Engineer New York Hackathon",
+      "organizer": "Major League Hacking (MLH) and AI Engineer",
+      "url": "https://luma.com/AIEngineerNYHackathon",
+      "deadline": "2026-10-11",
+      "starts_on": "2026-10-11",
+      "ends_on": "2026-10-11",
+      "format": "in-person",
+      "city": "New York",
+      "region": "americas",
+      "tags": [
+        "ai-engineering",
+        "llm",
+        "developer-tools",
+        "mlh"
+      ]
+    },
+    "source_url": "https://luma.com/AIEngineerNYHackathon",
+    "evidence": "Join AI Engineer and Major League Hacking (MLH) on Sunday, October 11, for a full day of building, experimenting, and meeting fellow AI engineers.",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "Open Agent Hackathon 2026",
+      "organizer": "GenAI.Works",
+      "url": "https://hackathon.genai.works/event/open-agent-hackathon-2026",
+      "deadline": "2026-10-13",
+      "starts_on": "2026-10-15",
+      "ends_on": "2026-10-20",
+      "format": "online",
+      "region": "global",
+      "prize_usd": 15000,
+      "tags": [
+        "agents",
+        "llm",
+        "data",
+        "reasoning"
+      ]
+    },
+    "source_url": "https://hackathon.genai.works/event/open-agent-hackathon-2026",
+    "evidence": "Fully online. 15-20 October 2026, and a prize pool of up to $20,000.",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "RMIT Hackathon 2026",
+      "organizer": "RMIT University (RMIT RACE)",
+      "url": "https://rmit-hackathon.com/",
+      "deadline": "2026-10-15",
+      "starts_on": "2026-10-22",
+      "ends_on": "2026-10-23",
+      "format": "in-person",
+      "city": "Melbourne",
+      "region": "asia-pacific",
+      "tags": [
+        "generative-ai",
+        "llm",
+        "security",
+        "low-resource-languages",
+        "student"
+      ]
+    },
+    "source_url": "https://rmit-hackathon.com/",
+    "evidence": "Registration closes 15 October",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "Daytona HackSprint w/ Arize AI - NYC, October 2026",
+      "organizer": "Daytona, with Arize AI",
+      "url": "https://daytona-hacksprint-nyc.devpost.com/",
+      "deadline": "2026-10-16",
+      "starts_on": "2026-10-16",
+      "ends_on": "2026-10-16",
+      "format": "in-person",
+      "city": "New York",
+      "region": "americas",
+      "prize_usd": 7000,
+      "tags": [
+        "agents",
+        "llm",
+        "observability",
+        "developer-tools"
+      ]
+    },
+    "source_url": "https://daytona-hacksprint-nyc.devpost.com/",
+    "evidence": "Oct 16, 2026",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "Hack Apertus",
+      "organizer": "aiLights Association",
+      "url": "https://hackapertus.devpost.com/",
+      "deadline": "2026-10-16",
+      "starts_on": "2026-10-01",
+      "ends_on": "2026-10-16",
+      "format": "online",
+      "region": "global",
+      "tags": [
+        "llm",
+        "open-source",
+        "red-teaming",
+        "nlp",
+        "sovereign-ai"
+      ]
+    },
+    "source_url": "https://hackapertus.devpost.com/",
+    "evidence": "Submission deadline: 16 OCT 2026, 12:00 CEST",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "AI Hackathon 2026 by LA Hacks",
+      "organizer": "LA Hacks",
+      "url": "https://ai.lahacks.com/",
+      "deadline": "2026-10-18",
+      "starts_on": "2026-10-17",
+      "ends_on": "2026-10-18",
+      "format": "in-person",
+      "city": "Los Angeles",
+      "region": "americas",
+      "tags": [
+        "student",
+        "university",
+        "machine-learning",
+        "mlh"
+      ]
+    },
+    "source_url": "https://la-ai-hackathon-2026.devpost.com/",
+    "evidence": "Oct 17 – 18, 2026",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "AMD Developer Hackathon: ACT III",
+      "organizer": "AMD and lablab.ai",
+      "url": "https://lablab.ai/ai-hackathons/amd-developer-hackathon-act-iii",
+      "deadline": "2026-10-18",
+      "starts_on": "2026-10-12",
+      "ends_on": "2026-10-18",
+      "format": "hybrid",
+      "city": "Rome, Milan and Imperia",
+      "region": "global",
+      "tags": [
+        "agents",
+        "llm",
+        "gpu",
+        "open-models",
+        "business-automation"
+      ]
+    },
+    "source_url": "https://lablab.ai/ai-hackathons/amd-developer-hackathon-act-iii",
+    "evidence": "Online Build: 12-18 October 2026 | On-site phase: 17-18 October 2026 in Rome, Milan, and Imperia",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "Arm + ExecuTorch: Edge AI Challenge",
+      "organizer": "Arm, with Meta (ExecuTorch) and San Francisco State University",
+      "url": "https://arm-executorch.devpost.com/",
+      "deadline": "2026-10-18",
+      "starts_on": "2026-10-17",
+      "ends_on": "2026-10-18",
+      "format": "in-person",
+      "city": "San Francisco",
+      "region": "americas",
+      "tags": [
+        "edge-ai",
+        "on-device",
+        "generative-ai",
+        "pytorch",
+        "embedded",
+        "hardware"
+      ]
+    },
+    "source_url": "https://arm-executorch.devpost.com/",
+    "evidence": "Oct 17 – 18, 2026",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "Agents for Impact Hackathon – Toronto",
+      "organizer": "Google Cloud",
+      "url": "https://cloud.google.com/events/agents-for-impact-toronto",
+      "deadline": "2026-10-20",
+      "starts_on": "2026-10-20",
+      "ends_on": "2026-10-20",
+      "format": "in-person",
+      "city": "Toronto",
+      "region": "americas",
+      "tags": [
+        "agents",
+        "gemini",
+        "google-cloud",
+        "bigquery",
+        "social-impact"
+      ]
+    },
+    "source_url": "https://cloud.google.com/events/agents-for-impact-toronto",
+    "evidence": "October 20, 2026",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "TechEx Amsterdam Hackathon - AI & Big Data Expo Europe",
+      "organizer": "TechEx Events and lablab.ai",
+      "url": "https://lablab.ai/ai-hackathons/techex-amsterdam-hackathon",
+      "deadline": "2026-10-20",
+      "starts_on": "2026-10-16",
+      "ends_on": "2026-10-20",
+      "format": "hybrid",
+      "city": "Amsterdam",
+      "region": "global",
+      "tags": [
+        "generative-ai",
+        "agents",
+        "enterprise",
+        "physical-ai",
+        "data"
+      ]
+    },
+    "source_url": "https://lablab.ai/ai-hackathons/techex-amsterdam-hackathon",
+    "evidence": "Online Build: October 16–19, 2026",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "AI for Good Lab Hackathon: United Arab Emirates",
+      "organizer": "ITU (AI for Good Lab)",
+      "url": "https://aiforgood.itu.int/event/ai-for-good-sandbox-hackathon-united-arab-emirates/",
+      "deadline": "2026-10-21",
+      "starts_on": "2026-12-08",
+      "ends_on": "2026-12-10",
+      "format": "in-person",
+      "city": "Dubai",
+      "region": "africa-middle-east",
+      "tags": [
+        "agents",
+        "policy",
+        "public-sector",
+        "healthcare",
+        "education",
+        "telecom"
+      ]
+    },
+    "source_url": "https://aiforgood.itu.int/event/ai-for-good-sandbox-hackathon-united-arab-emirates/",
+    "evidence": "Registrations open until 21 October 2026",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "AI On Apple - Sydney Hackathon",
+      "organizer": "The App Blueprint",
+      "url": "https://luma.com/apple-ai-hackathon",
+      "deadline": "2026-10-25",
+      "starts_on": "2026-10-23",
+      "ends_on": "2026-10-25",
+      "format": "in-person",
+      "city": "Sydney",
+      "region": "asia-pacific",
+      "tags": [
+        "on-device-ai",
+        "mobile",
+        "apple",
+        "agents",
+        "llm"
+      ]
+    },
+    "source_url": "https://luma.com/apple-ai-hackathon",
+    "evidence": "23rd–25th October 2026",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "HarborHack 2026 - Agent In The Loop",
+      "organizer": "Charlestonhacks",
+      "url": "https://harborhack-2026.devpost.com/",
+      "deadline": "2026-10-25",
+      "starts_on": "2026-10-23",
+      "ends_on": "2026-10-25",
+      "format": "in-person",
+      "city": "Charleston",
+      "region": "americas",
+      "prize_usd": 1500,
+      "tags": [
+        "agents",
+        "human-ai-collaboration",
+        "beginner-friendly"
+      ]
+    },
+    "source_url": "https://harborhack-2026.devpost.com/",
+    "evidence": "Oct 23 – 25, 2026",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "Junction 2026",
+      "organizer": "Junction",
+      "url": "https://2026.hackjunction.com/",
+      "deadline": "2026-10-25",
+      "starts_on": "2026-11-13",
+      "ends_on": "2026-11-15",
+      "format": "in-person",
+      "city": "Espoo",
+      "region": "europe",
+      "tags": [
+        "agents",
+        "physical-ai",
+        "robotics"
+      ]
+    },
+    "source_url": "https://2026.hackjunction.com/",
+    "evidence": "Applications for Junction 2026 close at Midnight 25.10.2026 GMT +03. The hackathon itself runs 13–15 November 2026 at Hype Areena in Espoo, Finland, with Junction Week pre-events starting 9 November.",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "KI Challenge",
+      "organizer": "Dachverband der Sozialversicherungsträger and Wirtschaftskammer Wien",
+      "url": "https://www.sozialversicherung.at/cdscontent/?contentid=10007.911336&portal=svportal",
+      "deadline": "2026-10-25",
+      "starts_on": "2026-11-05",
+      "ends_on": "2026-11-06",
+      "format": "in-person",
+      "city": "Vienna",
+      "region": "europe",
+      "tags": [
+        "public-sector",
+        "social-insurance",
+        "healthcare",
+        "data"
+      ]
+    },
+    "source_url": "https://www.sozialversicherung.at/cdscontent/?contentid=10007.911336&portal=svportal",
+    "evidence": "Die Anmeldung ist für Einzelpersonen und für Teams mit einer Größe von zwei bis fünf Personen bis einschließlich 25. Oktober 2026 möglich.",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "Seattle | AI Week Claude Impact Lab Hackathon",
+      "organizer": "We Build With AI and Claude Community Events, sponsored by Anthropic",
+      "url": "https://luma.com/claude-impact",
+      "deadline": "2026-10-25",
+      "starts_on": "2026-10-25",
+      "ends_on": "2026-10-25",
+      "format": "in-person",
+      "city": "Seattle",
+      "region": "americas",
+      "tags": [
+        "claude",
+        "small-business",
+        "social-impact",
+        "open-source"
+      ]
+    },
+    "source_url": "https://luma.com/claude-impact",
+    "evidence": "Sunday, October 25",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "Build With AI: Basics",
+      "organizer": "Devpost",
+      "url": "https://learn-ai-basics.devpost.com/",
+      "deadline": "2026-10-26",
+      "starts_on": "2026-09-22",
+      "ends_on": "2026-10-26",
+      "format": "online",
+      "region": "global",
+      "prize_usd": 2500,
+      "tags": [
+        "coding-agents",
+        "llm",
+        "beginner",
+        "education"
+      ]
+    },
+    "source_url": "https://learn-ai-basics.devpost.com/rules",
+    "evidence": "September 22, 2026 (10:00 am Eastern Time) – October 26, 2026 (5:00 pm Eastern Time) (“Registration Period”).",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "OpenCV AI Competition 2026, powered by AWS",
+      "organizer": "OpenCV Foundation (administrator), sponsored by Amazon Web Services",
+      "url": "https://opencv26.devpost.com/",
+      "deadline": "2026-10-26",
+      "starts_on": "2026-08-26",
+      "ends_on": "2026-10-26",
+      "format": "online",
+      "region": "global",
+      "prize_usd": 12000,
+      "tags": [
+        "computer-vision",
+        "physical-ai",
+        "generative-ai",
+        "agents",
+        "cloud"
+      ]
+    },
+    "source_url": "https://opencv26.devpost.com/",
+    "evidence": "Final projects are due October 26, 2026, at 11:59 p.m. Pacific Time.",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "Agents for Impact Hackathon – Atlanta",
+      "organizer": "Google Cloud",
+      "url": "https://cloud.google.com/events/agents-for-impact-atl",
+      "deadline": "2026-10-27",
+      "starts_on": "2026-10-27",
+      "ends_on": "2026-10-27",
+      "format": "in-person",
+      "city": "Atlanta",
+      "region": "americas",
+      "tags": [
+        "agents",
+        "gemini",
+        "google-cloud",
+        "bigquery",
+        "social-impact"
+      ]
+    },
+    "source_url": "https://cloud.google.com/events/agents-for-impact-atl",
+    "evidence": "October 27, 2026",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "Life After Code",
+      "organizer": "GitLab (managed by Devpost)",
+      "url": "https://gitlab-transcend.devpost.com/",
+      "deadline": "2026-10-27",
+      "starts_on": "2026-10-05",
+      "ends_on": "2026-10-27",
+      "format": "online",
+      "region": "global",
+      "prize_usd": 45000,
+      "tags": [
+        "agents",
+        "coding-agents",
+        "devops",
+        "devsecops"
+      ]
+    },
+    "source_url": "https://gitlab-transcend.devpost.com/",
+    "evidence": "When submissions open on October 5th, we will share the full challenge details, including paths, prizes, judges, and resources. You will then have until October 27th at 1:00 PM UTC to create and submit your project.",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "THWS Hackathon InclusivAI",
+      "organizer": "CAIRO.thws (Center for Artificial Intelligence, Technische Hochschule Würzburg-Schweinfurt)",
+      "url": "https://www.thws.de/en/research/institutes/cairothws/hackathon/",
+      "deadline": "2026-10-29",
+      "starts_on": "2026-10-29",
+      "ends_on": "2026-10-29",
+      "format": "in-person",
+      "city": "Würzburg",
+      "region": "europe",
+      "tags": [
+        "accessibility",
+        "inclusion",
+        "social-impact",
+        "student"
+      ]
+    },
+    "source_url": "https://www.thws.de/en/research/institutes/cairothws/hackathon/",
+    "evidence": "Date: 29 October 2026",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "Nebius x NVIDIA Global AI Hackathon",
+      "organizer": "Nebius and NVIDIA (administered by Devpost)",
+      "url": "https://nebiusglobalaihackathon.devpost.com/",
+      "deadline": "2026-10-30",
+      "starts_on": "2026-08-26",
+      "ends_on": "2026-10-30",
+      "format": "online",
+      "region": "global",
+      "prize_usd": 50000,
+      "tags": [
+        "agents",
+        "llm",
+        "coding-agents",
+        "open-source",
+        "physical-ai",
+        "robotics"
+      ]
+    },
+    "source_url": "https://nebiusglobalaihackathon.devpost.com/rules",
+    "evidence": "Wednesday, August 26, 2026 (9:00 am Pacific Time) – Friday, October 30, 2026 (10:00 am Pacific Time) (“Submission Period”).",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "Qloo Agentic Hackathon",
+      "organizer": "Qloo",
+      "url": "https://qloo.devpost.com/",
+      "deadline": "2026-10-30",
+      "starts_on": "2026-09-30",
+      "ends_on": "2026-10-30",
+      "format": "online",
+      "region": "global",
+      "prize_usd": 25000,
+      "tags": [
+        "agents",
+        "llm",
+        "recommendations"
+      ]
+    },
+    "source_url": "https://qloo.devpost.com/rules",
+    "evidence": "September 30, 2026 (9:00 am Eastern Time) – October 30, 2026 (11:45 pm Eastern Time) (“Registration & Submission Period ”).",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "YouCam API Skin AI & eCommerce VTO Hackathon",
+      "organizer": "Perfect Corp. (Perfect Mobile Corp.)",
+      "url": "https://youcam-api-skin-ai-ecommerce.devpost.com/",
+      "deadline": "2026-11-02",
+      "starts_on": "2026-09-29",
+      "ends_on": "2026-11-02",
+      "format": "online",
+      "region": "global",
+      "prize_usd": 6000,
+      "tags": [
+        "computer-vision",
+        "generative-ai",
+        "agents",
+        "e-commerce",
+        "beauty"
+      ]
+    },
+    "source_url": "https://youcam-api-skin-ai-ecommerce.devpost.com/rules",
+    "evidence": "Sep 24, 2026(12:00 pm Eastern Time) – Nov 2, 2026(11:45 am Eastern Time) (“Registration Period”).",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "Since AI Hackathon 2026",
+      "organizer": "Since AI (Since AI ry)",
+      "url": "https://sinceai.ai/hackathon",
+      "deadline": "2026-11-08",
+      "starts_on": "2026-11-06",
+      "ends_on": "2026-11-08",
+      "format": "in-person",
+      "city": "Turku",
+      "region": "europe",
+      "tags": [
+        "generative-ai",
+        "industry-challenges",
+        "mlh"
+      ]
+    },
+    "source_url": "https://sinceai.ai/hackathon",
+    "evidence": "Registration for Since AI Hackathon 2026 (November 6–8, Turku) is now open. €50,000 cash prize pool. Free to enter for all builders worldwide.",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "Vultr: Agent Rush Hackathon",
+      "organizer": "Vultr and lablab.ai",
+      "url": "https://lablab.ai/ai-hackathons/vultr-hackathon",
+      "deadline": "2026-11-08",
+      "starts_on": "2026-11-03",
+      "ends_on": "2026-11-08",
+      "format": "hybrid",
+      "city": "Salt Lake City",
+      "region": "global",
+      "prize_usd": 9000,
+      "tags": [
+        "agents",
+        "browser-agents",
+        "code-execution",
+        "sandboxing",
+        "cloud"
+      ]
+    },
+    "source_url": "https://lablab.ai/ai-hackathons/vultr-hackathon",
+    "evidence": "Online Build: 3-8 November 2026 | On-site phase: 8 November 2026",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "Code for a Billion — Bharat Agentic-AI Hackathon 2026",
+      "organizer": "Code for India",
+      "url": "https://codeforindia.org/hackathon",
+      "deadline": "2026-11-15",
+      "starts_on": "2026-08-15",
+      "ends_on": "2026-11-15",
+      "format": "online",
+      "region": "global",
+      "tags": [
+        "agents",
+        "open-source",
+        "social-good",
+        "healthcare",
+        "public-good"
+      ]
+    },
+    "source_url": "https://codeforindia.org/hackathon",
+    "evidence": "Build open-source digital public goods for India's health. 90 days of building, from 15 August to 15 November 2026.",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "Agents for Impact Hackathon – Sunnyvale",
+      "organizer": "Google Cloud",
+      "url": "https://cloud.google.com/events/agents-for-impact-svl",
+      "deadline": "2026-11-17",
+      "starts_on": "2026-11-17",
+      "ends_on": "2026-11-17",
+      "format": "in-person",
+      "city": "Sunnyvale",
+      "region": "americas",
+      "tags": [
+        "agents",
+        "gemini",
+        "google-cloud",
+        "bigquery",
+        "social-impact"
+      ]
+    },
+    "source_url": "https://cloud.google.com/events/agents-for-impact-svl",
+    "evidence": "November 17, 2026",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "Build with Gemma - Innovate in Windsor",
+      "organizer": "Google Developer Groups Windsor (sponsored by Google)",
+      "url": "https://innovate-in-windsor-hackathon.devpost.com/",
+      "deadline": "2026-11-20",
+      "starts_on": "2026-11-13",
+      "ends_on": "2026-11-20",
+      "format": "hybrid",
+      "city": "Windsor",
+      "region": "americas",
+      "tags": [
+        "gemma",
+        "on-device",
+        "edge-ai",
+        "google",
+        "local-impact"
+      ]
+    },
+    "source_url": "https://innovate-in-windsor-hackathon.devpost.com/",
+    "evidence": "Teams must be able to attend the in-person presentations on November 20th and DevFest on November 21st in Windsor, Ontario.",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "AI Coding Hackathon November 2026",
+      "organizer": "STARTPLATZ",
+      "url": "https://www.startplatz.de/event/ai-coding-hackathon-november-2026-11-20-2026-11-22?lang=de",
+      "deadline": "2026-11-22",
+      "starts_on": "2026-11-20",
+      "ends_on": "2026-11-22",
+      "format": "in-person",
+      "city": "Cologne",
+      "region": "europe",
+      "tags": [
+        "ai-coding",
+        "agents",
+        "vibe-coding",
+        "prototyping"
+      ]
+    },
+    "source_url": "https://www.startplatz.de/event/ai-coding-hackathon-november-2026-11-20-2026-11-22?lang=de",
+    "evidence": "20.–22. November 2026 · STARTPLATZ Köln",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "«Hack Apertus» Zurich",
+      "organizer": "aiLights Association",
+      "url": "https://app.sprintd.org/events/hack-apertus-zurich",
+      "deadline": "2026-11-24",
+      "starts_on": "2026-11-27",
+      "ends_on": "2026-11-28",
+      "format": "in-person",
+      "city": "Zurich",
+      "region": "europe",
+      "tags": [
+        "llm",
+        "open-source",
+        "sovereign-ai"
+      ]
+    },
+    "source_url": "https://app.sprintd.org/events/hack-apertus-zurich",
+    "evidence": "It runs 27-28 November 2026 in Zurich, with 100 hackers in the room, the 8B and 70B Apertus models to work with, and everything you build staying open and reusable.",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "Agents for Impact Hackathon – New York",
+      "organizer": "Google Cloud",
+      "url": "https://cloud.google.com/events/agents-for-impact-nyc",
+      "deadline": "2026-12-08",
+      "starts_on": "2026-12-08",
+      "ends_on": "2026-12-08",
+      "format": "in-person",
+      "city": "New York",
+      "region": "americas",
+      "tags": [
+        "agents",
+        "gemini",
+        "google-cloud",
+        "bigquery",
+        "social-impact"
+      ]
+    },
+    "source_url": "https://cloud.google.com/events/agents-for-impact-nyc",
+    "evidence": "December 8, 2026",
+    "observed_at": "2026-10-01T13:38:23Z"
+  },
+  {
+    "data": {
+      "name": "Agentic AI Hackathon 2.0 - SF",
+      "organizer": "Devnovate",
+      "url": "https://luma.com/12545fxr",
+      "deadline": "2026-12-15",
+      "starts_on": "2026-12-15",
+      "ends_on": "2026-12-15",
+      "format": "in-person",
+      "city": "San Francisco",
+      "region": "americas",
+      "tags": [
+        "agents",
+        "agentic-ai",
+        "aws"
+      ]
+    },
+    "source_url": "https://luma.com/12545fxr",
+    "evidence": "09:30 AM – 7:00 PM, 15th December 2026",
+    "observed_at": "2026-10-01T13:38:23Z"
+  }
+]

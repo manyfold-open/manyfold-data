@@ -1,0 +1,95 @@
+/** How values read on the page. Dates are calendar dates in UTC, never shifted by time zone. */
+
+import { valueLabel, type DataAppConfig, type FieldDef, type FieldValue } from '../shared/data-app';
+
+const dayFormat = new Intl.DateTimeFormat('en-US', {
+  month: 'short',
+  day: 'numeric',
+  year: 'numeric',
+  timeZone: 'UTC',
+});
+const shortDayFormat = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+const monthFormat = new Intl.DateTimeFormat('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+const timeFormat = new Intl.DateTimeFormat('en-US', {
+  month: 'short',
+  day: 'numeric',
+  year: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit',
+  hourCycle: 'h23',
+  timeZone: 'UTC',
+});
+const usd = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+const usdCompact = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  notation: 'compact',
+  maximumFractionDigits: 1,
+});
+const plain = new Intl.NumberFormat('en-US');
+
+const asDate = (value: string) => new Date(value.length === 10 ? `${value}T00:00:00Z` : value);
+
+/** "Nov 15, 2026" */
+export const formatDate = (value: string): string => dayFormat.format(asDate(value));
+/** "Nov 15" */
+export const formatShortDate = (value: string): string => shortDayFormat.format(asDate(value));
+/** "Oct 2026" */
+export const formatMonth = (value: string): string => monthFormat.format(asDate(value));
+/** "Oct 1, 2026, 08:55 UTC" */
+export const formatTime = (value: string): string => `${timeFormat.format(asDate(value))} UTC`;
+export const formatCount = (value: number): string => plain.format(value);
+
+/** The URL when it is https, else null. Records are validated on the way in; this is the second lock. */
+export const safeHref = (value: string): string | null => (/^https:\/\//i.test(value) ? value : null);
+
+/** "example.org/agents-hackathon", for showing a link without its scheme. */
+export function displayUrl(value: string): string {
+  try {
+    const url = new URL(value);
+    const text = `${url.hostname.replace(/^www\./, '')}${url.pathname === '/' ? '' : url.pathname}`;
+    return text.length > 64 ? `${text.slice(0, 61)}...` : text;
+  } catch {
+    return value;
+  }
+}
+
+const LICENSES: Record<string, { name: string; url: string }> = {
+  'CC-BY-4.0': { name: 'CC BY 4.0', url: 'https://creativecommons.org/licenses/by/4.0/' },
+};
+
+/** A data license's short name and deed, from its SPDX identifier. */
+export const licenseOf = (spdx: string): { name: string; url: string | null } =>
+  LICENSES[spdx] ?? { name: spdx, url: null };
+
+export const capitalize = (text: string): string => text.charAt(0).toUpperCase() + text.slice(1);
+
+export function formatNumber(def: FieldDef | undefined, value: number, compact = false): string {
+  if (def?.type === 'number' && def.display === 'usd') return (compact ? usdCompact : usd).format(value);
+  return plain.format(value);
+}
+
+/** "1 hackathon", "32 hackathons" */
+export const countOf = (config: DataAppConfig, count: number): string =>
+  `${formatCount(count)} ${count === 1 ? config.noun.one : config.noun.other}`;
+
+/** A field value as text, for tables and the record page. URLs show as their host. */
+export function formatValue(def: FieldDef | undefined, value: FieldValue | undefined): string {
+  if (value === undefined || value === null || value === '') return '';
+  if (Array.isArray(value)) return value.join(', ');
+  if (typeof value === 'number') return formatNumber(def, value);
+  switch (def?.type) {
+    case 'date':
+      return formatDate(value);
+    case 'enum':
+      return valueLabel(def, value);
+    case 'url':
+      try {
+        return new URL(value).hostname.replace(/^www\./, '');
+      } catch {
+        return value;
+      }
+    default:
+      return value;
+  }
+}
