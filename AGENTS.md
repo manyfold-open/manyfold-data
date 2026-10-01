@@ -55,6 +55,11 @@ Rules for anyone — human or AI agent — changing Manyfold Data. These are the
 `tests/d1.ts` is a D1 double on Node's built-in SQLite, so API tests run the Worker's real SQL. Use it
 (with `app.request`) for any route that touches the database, and stub `fetch` for outside calls.
 
+The reader UI builds its controls from `src/app/ui/`; `tests/native-controls.test.ts` fails on a native
+select, checkbox, radio, date input or dialog anywhere else in the reader flow, and `tests/contrast.test.ts`
+checks the color tokens in `src/app/styles.css`. Chart, filter and smart-filter logic lives in
+`src/app/model/` as plain TypeScript, tested in `tests/reader-model.test.ts`.
+
 ## Checks
 
 ```bash

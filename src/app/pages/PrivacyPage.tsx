@@ -44,7 +44,10 @@ export default function PrivacyPage() {
           To slow down abuse, counts of requests per IP address in short time windows. They are deleted within two
           days.
         </li>
-        <li>In your browser only: your answer to the analytics question below.</li>
+        <li>
+          In your browser only: your answer to the analytics question below, and the light or dark theme if you picked
+          one with the toggle in the top bar.
+        </li>
       </ul>
 
       <h2>Who else sees it</h2>
@@ -52,8 +55,13 @@ export default function PrivacyPage() {
         <li>Cloudflare runs the site and its database, and keeps short-lived request logs.</li>
         <li>
           With your consent, or where none is required, Google Analytics records the pages you view and five actions:
-          copying the agent instruction, opening a data app's skill, downloading its data or feed, opening its Discord
-          invite, and sending a report. The text of a report never goes to Google.
+          copying the agent instruction, opening a data app's skill, downloading its data or feed, opening a Discord
+          invite, and sending a report. The text of a report never goes to Google, and neither does anything you type
+          into search or the smart filter.
+        </li>
+        <li>
+          The smart filter on each table reads your sentence in your browser and turns it into filters there; the
+          sentence itself is never sent anywhere.
         </li>
         <li>The admin console is never measured.</li>
       </ul>
