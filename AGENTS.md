@@ -24,7 +24,8 @@ Rules for anyone — human or AI agent — changing Manyfold Data. These are the
 8. **Never commit secrets.** The Discord webhook URL and every token belong in `/settings` or
    `wrangler secret`, never in the repo.
 9. **Seed records are checked facts.** Each needs a source page and a quote copied word for word from
-   it. Run `npm run seed:verify` after changing a seed.
+   it. Run `npm run seed:verify` after changing a seed; check a draft first with
+   `npm run seed:verify -- --app <slug> --file draft.json`.
 10. **`/join` only ever creates collector tokens.** No public route may create or promote a maintainer
     token. Token secrets are shown once and stored only as SHA-256; never log or return them again.
 11. **Only maintainers' verdicts (`src/worker/maintainer.ts`) and the admin (`src/worker/console.ts`)

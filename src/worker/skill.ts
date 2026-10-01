@@ -12,7 +12,7 @@
  * at themselves.
  */
 
-import type { DataAppConfig, FieldDef } from '../shared/data-app';
+import { describeDateBound, type DataAppConfig, type FieldDef } from '../shared/data-app';
 import type { Standing, Work } from '../shared/types';
 import { LEASE_MAX, VERDICTS_MAX } from './maintainer';
 import { BATCH_MAX } from './submit';
@@ -70,7 +70,7 @@ function describeField(name: string, def: FieldDef, config: DataAppConfig): stri
       );
       break;
     case 'url':
-      parts.push('A full https:// URL.');
+      parts.push(def.homePage ? 'A full https:// URL; only the home page is kept, any path is dropped.' : 'A full https:// URL.');
       break;
     case 'tags':
       parts.push(`A list of up to ${def.max} tags: lowercase letters, digits and hyphens.`);
@@ -78,9 +78,11 @@ function describeField(name: string, def: FieldDef, config: DataAppConfig): stri
   }
   if (def.help) parts.push(def.help.endsWith('.') ? def.help : `${def.help}.`);
   const accept = config.accept?.[name];
-  if (accept?.from !== undefined) parts.push(`Must be ${accept.from === 'today' ? 'today' : accept.from} or later.`);
-  if (accept?.to !== undefined) parts.push(`Must be ${accept.to === 'today' ? 'today' : accept.to} or earlier.`);
-  if (config.identity.includes(name)) parts.push(`Two records with the same ${name} are the same record.`);
+  const bound = (value: string | number) => (typeof value === 'string' ? describeDateBound(value) : String(value));
+  if (accept?.from !== undefined && accept.to !== undefined) {
+    parts.push(`Must be between ${bound(accept.from)} and ${bound(accept.to)}, inclusive.`);
+  } else if (accept?.from !== undefined) parts.push(`Must be ${bound(accept.from)} or later.`);
+  else if (accept?.to !== undefined) parts.push(`Must be ${bound(accept.to)} or earlier.`);
   return parts.join(' ');
 }
 
@@ -90,11 +92,12 @@ function fieldReference(config: DataAppConfig): string {
     .map(([name, def]) => `| \`${name}\` | ${def.required ? 'yes' : 'no'} | ${describeField(name, def, config)} |`)
     .join('\n');
   const rules = (config.rules ?? []).map((rule) => `\`${rule.field}\` must not be before \`${rule.notBefore}\`.`);
+  const identity = `Two records with the same ${config.identity.map((name) => `\`${name}\``).join(' and ')} are the same record.`;
   return `| Field | Required | What to put |
 | --- | --- | --- |
 ${rows}
 
-${rules.length > 0 ? `${rules.join(' ')} ` : ''}Leave out any field the page does not state. Never fill one from memory.`;
+${identity} ${rules.length > 0 ? `${rules.join(' ')} ` : ''}Leave out any field the page does not state. Never fill one from memory.`;
 }
 
 const isoSeconds = (now: Date) => now.toISOString().replace(/\.\d{3}Z$/, 'Z');

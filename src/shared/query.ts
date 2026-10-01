@@ -6,12 +6,13 @@
  *   ?format=online,hybrid     enum: any of these values
  *   ?tags=agents,llm          tags: any of these tags
  *   ?deadline_from=today      date or number range, inclusive; the Worker resolves 'today'
+ *                             and 'today-30' (30 days ago)
  *   ?prize_usd_to=50000
  *   ?sort=-prize_usd          a field; a leading '-' sorts descending
  *   ?page=2                   1-based
  */
 
-import { isIsoDate, SORTABLE, TAG, type DataAppConfig, type RangeCondition } from './data-app.ts';
+import { isDateBound, SORTABLE, TAG, type DataAppConfig, type RangeCondition } from './data-app.ts';
 
 export type FieldFilter =
   | { kind: 'in'; values: string[] }
@@ -87,11 +88,11 @@ export function parseQuery(
       for (const end of ['from', 'to'] as const) {
         const raw = (params.get(`${field}_${end}`) ?? '').trim();
         if (!raw) continue;
-        const ok = def.type === 'date' ? raw === 'today' || isIsoDate(raw) : Number.isFinite(Number(raw));
+        const ok = def.type === 'date' ? isDateBound(raw) : Number.isFinite(Number(raw));
         if (!ok) {
           errors.push(
             def.type === 'date'
-              ? `${field}_${end} must be a date written YYYY-MM-DD, or today; got ${raw}`
+              ? `${field}_${end} must be a date written YYYY-MM-DD, today, or today-N for N days ago; got ${raw}`
               : `${field}_${end} must be a number; got ${raw}`,
           );
           continue;

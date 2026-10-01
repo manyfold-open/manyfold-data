@@ -2,10 +2,14 @@ import { describe, expect, it } from 'vitest';
 import { dataApps } from '../data-apps/index';
 import hackathons from '../data-apps/ai-hackathons/config';
 import {
+  checkAccept,
   cleanText,
+  describeDateBound,
   identityKey,
+  isDateBound,
   isIsoDate,
   normalizeUrl,
+  resolveDateBound,
   validateConfig,
   validateProvenance,
   validateRecordData,
@@ -152,5 +156,50 @@ describe('helpers', () => {
     expect(isIsoDate('2028-02-29')).toBe(true);
     expect(isIsoDate('2026-02-29')).toBe(false);
     expect(isIsoDate('2026-1-05')).toBe(false);
+  });
+});
+
+describe('date bounds', () => {
+  it('reads today and days from today against the UTC date', () => {
+    expect(resolveDateBound('today', '2026-10-01')).toBe('2026-10-01');
+    expect(resolveDateBound('today-90', '2026-10-01')).toBe('2026-07-03');
+    expect(resolveDateBound('today+7', '2026-12-28')).toBe('2027-01-04');
+    expect(resolveDateBound('2026-05-01', '2026-10-01')).toBe('2026-05-01');
+  });
+
+  it('accepts only bounds it can read, and says them in words', () => {
+    for (const bound of ['today', 'today-30', 'today+7', '2026-10-01']) expect(isDateBound(bound)).toBe(true);
+    for (const bound of ['today-', 'yesterday', 'today - 3', '2026-02-30']) expect(isDateBound(bound)).toBe(false);
+    expect(describeDateBound('today-1')).toBe('1 day before today');
+    expect(describeDateBound('today+30')).toBe('30 days after today');
+    expect(describeDateBound('today')).toBe('today');
+  });
+
+  it('checks a moving window at submit time, naming the dates', () => {
+    const config = { ...hackathons, accept: { deadline: { from: 'today-90', to: 'today' } } };
+    expect(checkAccept(config, { deadline: '2026-07-03' }, '2026-10-01')).toEqual([]);
+    expect(checkAccept(config, { deadline: '2026-07-02' }, '2026-10-01')).toEqual([
+      { field: 'deadline', message: 'must be 90 days before today (2026-07-03) or later for this data app; got "2026-07-02"' },
+    ]);
+    expect(checkAccept(config, { deadline: '2026-10-02' }, '2026-10-01')[0]?.message).toContain('today (2026-10-01) or earlier');
+  });
+
+  it('refuses a config bound it cannot read', () => {
+    const config = { ...hackathons, accept: { deadline: { from: 'yesterday' } } };
+    expect(validateConfig(config)).toEqual([
+      'ai-hackathons: accept bound for "deadline" must be YYYY-MM-DD, today or today-N; got yesterday',
+    ]);
+  });
+});
+
+describe('home-page urls', () => {
+  it('keep only the scheme and host', () => {
+    const config: DataAppConfig = {
+      ...hackathons,
+      fields: { ...hackathons.fields, url: { type: 'url', label: 'Website', required: true, homePage: true } },
+    };
+    const result = validateRecordData(config, { ...valid, url: 'https://www.example.org/about?ref=x#team' });
+    expect(result.ok && result.value.url).toBe('https://www.example.org/');
+    expect(identityKey(config, { ...valid, url: 'https://www.example.org/' })).toBe('https://example.org');
   });
 });

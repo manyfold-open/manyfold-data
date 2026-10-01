@@ -110,13 +110,27 @@ export const escapeDiscord = (text: string): string => text.replace(/[\\*_~`|>[\
 
 /** The config's notify line with a record's values; enums by their labels. */
 export function fillLine(config: DataAppConfig, data: RecordData): string {
-  return config.notify.line.replace(/\{(\w+)\}/g, (_, field: string) => {
-    const value = data[field];
-    if (value === undefined) return '';
-    if (Array.isArray(value)) return value.join(', ');
-    if (typeof value === 'number') return value.toLocaleString('en-US');
-    return valueLabel(config.fields[field], value);
-  });
+  return config.notify.line
+    .split(' · ')
+    .map((segment) => {
+      let filled = 0;
+      const text = segment.replace(/\{(\w+)\}/g, (_, field: string) => {
+        const value = data[field];
+        if (value === undefined) return '';
+        filled += 1;
+        if (Array.isArray(value)) return value.join(', ');
+        if (typeof value === 'number') {
+          const def = config.fields[field];
+          const usd = def?.type === 'number' && def.display === 'usd';
+          return `${usd ? '$' : ''}${value.toLocaleString('en-US')}`;
+        }
+        return valueLabel(config.fields[field], value);
+      });
+      // A segment whose fields are all missing ("deadline {deadline}") goes, label and all.
+      return /\{\w+\}/.test(segment) && filled === 0 ? '' : text;
+    })
+    .filter((segment) => segment.trim() !== '')
+    .join(' · ');
 }
 
 /** One post: a count, up to ten lines with links, and how many more wait on the site. */

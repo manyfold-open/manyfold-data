@@ -3,7 +3,7 @@
  * SQL over verified rows, facet counts for the filters, and one record with its history.
  */
 
-import type { DataAppConfig } from '../shared/data-app';
+import { resolveDateBound, type DataAppConfig } from '../shared/data-app';
 import type { QueryState } from '../shared/query';
 import type {
   AppSummary,
@@ -66,7 +66,7 @@ export function buildWhere(
         const raw = filter[end];
         if (raw === undefined) continue;
         clauses.push(`${fieldSql(field)} ${operator} ?`);
-        params.push(def.type === 'number' ? Number(raw) : raw === 'today' ? today : raw);
+        params.push(def.type === 'number' ? Number(raw) : resolveDateBound(raw, today));
       }
     }
   }

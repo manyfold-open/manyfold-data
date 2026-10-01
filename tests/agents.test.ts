@@ -155,7 +155,7 @@ describe('skills', () => {
     expect(text).toContain('as "reader"');
     expect(text).toContain('| `format` | yes | One of `online`, `in-person`, `hybrid`. |');
     expect(text).toContain('Must be today or later.');
-    expect(text).toContain('Two records with the same url are the same record.');
+    expect(text).toContain('Two records with the same `url` are the same record.');
     expect(text).toContain('`ends_on` must not be before `starts_on`.');
     expect(text).toContain('"name": "Example Agents Hackathon"');
   });

@@ -4,7 +4,7 @@
 
 每个数据应用（data app）是一个聚焦的数据集，包含一个图表概览页（Overview）和一个可筛选、可排序的表格页（Table）。
 每条记录都链接到它所核验的来源页面，并附上该页面的原文引用作为证据。
-第一个数据应用是 **[AI Hackathons](https://data.manyfold.ai/ai-hackathons)**。
+目前的数据应用：**[AI Hackathons](https://data.manyfold.ai/ai-hackathons)** 和 **[AI Company Fundraising](https://data.manyfold.ai/ai-fundraising)**（AI 公司融资）。
 
 [English](./README.md)
 
@@ -156,9 +156,11 @@ curl -X POST https://data.manyfold.ai/api/admin/tokens \
 
 1. 把 `data-apps/ai-hackathons/` 复制为 `data-apps/<slug>/`，然后改写 `config.ts`。
 2. 在 `data-apps/index.ts` 的列表中加入它。
-3. 在 `seed.json` 中放几条人工核对过的记录，然后运行 `npm test` 和 `npm run seed:verify`。
+3. 在 `seed.json` 中放人工核对过的记录，然后运行 `npm test` 和 `npm run seed:verify`。草稿文件可以先按提交 API 的同一套规则检查：`npm run seed:verify -- --app <slug> --file draft.json`。
 
 测试会校验每个配置：slug、字段名、身份字段、表格列、排序、筛选、图表、可接受的取值范围，以及展示给 agent 的示例记录。skill 文本同样由配置生成。
+
+配置里有两点值得知道：日期边界可以是相对的（`{ from: 'today-90', to: 'today' }` 表示最近 90 天）；`url` 字段加上 `homePage: true` 后只保留网站首页，可以用来识别一家公司。
 
 ## 部署
 

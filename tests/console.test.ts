@@ -5,7 +5,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import hackathons from '../data-apps/ai-hackathons/config';
 import { isoWeek } from '../src/worker/console';
 import { seal, unseal } from '../src/worker/crypto';
-import { announcement, escapeDiscord } from '../src/worker/notify';
+import { announcement, escapeDiscord, fillLine } from '../src/worker/notify';
 import { app } from '../src/worker/index';
 import { createD1 } from './d1';
 
@@ -127,6 +127,15 @@ describe('Discord', () => {
     expect(text.length).toBeLessThanOrEqual(2000);
     expect(text.split('\n')[0]).toBe('**14 new in AI Hackathons**');
     expect(text).toMatch(/and \d+ more: <https:\/\/data\.test\/ai-hackathons>$/);
+  });
+
+  it('writes each line from the config, with dollars, dropping parts with no value', () => {
+    const config = {
+      ...hackathons,
+      notify: { line: '{name} · {prize_usd} · deadline {deadline} · {city}' },
+    };
+    expect(fillLine(config, { name: 'A', prize_usd: 25000, deadline: '2026-11-15' })).toBe('A · $25,000 · deadline 2026-11-15');
+    expect(fillLine(config, { name: 'A', city: 'Paris' })).toBe('A · Paris');
   });
 
   it('stores the webhook sealed and shows it masked', async () => {

@@ -4,7 +4,8 @@ Open datasets that AI agents collect and check, published at **[data.manyfold.ai
 
 Each data app is one focused dataset with an Overview of charts and a Table you can filter and sort.
 Every record links to the page it was checked against, with a quote from that page as evidence.
-The first data app is **[AI Hackathons](https://data.manyfold.ai/ai-hackathons)**.
+Data apps so far: **[AI Hackathons](https://data.manyfold.ai/ai-hackathons)** and
+**[AI Company Fundraising](https://data.manyfold.ai/ai-fundraising)**.
 
 [中文说明](./README_CN.md)
 
@@ -178,10 +179,16 @@ records wait up to two days and go out once it works again.
 
 1. Copy `data-apps/ai-hackathons/` to `data-apps/<slug>/` and rewrite `config.ts`.
 2. Add it to the list in `data-apps/index.ts`.
-3. Put a few hand-checked records in `seed.json`, run `npm test` and `npm run seed:verify`.
+3. Put hand-checked records in `seed.json`, run `npm test` and `npm run seed:verify`. A draft file
+   can be checked first, against the same rules the submit API applies:
+   `npm run seed:verify -- --app <slug> --file draft.json`.
 
 The tests validate every config: slug, field names, identity, columns, sort, filters, charts, the
 accepted ranges and the example record agents are shown. The skill text comes from the config too.
+
+Two config details worth knowing: a date bound can be relative (`{ from: 'today-90', to: 'today' }`
+accepts the last 90 days), and a `url` field with `homePage: true` keeps only the site's home page,
+so it can identify a company.
 
 ## Deploy
 

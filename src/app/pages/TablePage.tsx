@@ -5,7 +5,7 @@
  */
 
 import { useEffect, useMemo, useState } from 'react';
-import { valueLabel, type DataAppConfig, type FieldDef } from '../../shared/data-app';
+import { resolveDateBound, valueLabel, type DataAppConfig, type FieldDef } from '../../shared/data-app';
 import {
   defaultQuery,
   parseQuery,
@@ -73,12 +73,18 @@ function ChoiceFilter({
   );
 }
 
-type Preset = 'any' | 'upcoming' | 'past' | 'custom';
+type Preset = 'any' | 'upcoming' | 'past' | 'last7' | 'last30' | 'custom';
+
+/** Presets that are one open-ended range: the bound each one writes. */
+const OPEN_FROM: Partial<Record<Preset, string>> = { upcoming: 'today', last7: 'today-7', last30: 'today-30' };
 
 const presetOf = (filter: FieldFilter | undefined): Preset => {
   if (filter?.kind !== 'range') return 'any';
-  if (filter.from === 'today' && filter.to === undefined) return 'upcoming';
   if (filter.to === 'today' && filter.from === undefined) return 'past';
+  if (filter.to === undefined) {
+    const preset = (Object.keys(OPEN_FROM) as Preset[]).find((key) => OPEN_FROM[key] === filter.from);
+    if (preset) return preset;
+  }
   return 'custom';
 };
 
@@ -100,13 +106,14 @@ function DateFilter({
 
   const preset = custom ? 'custom' : presetOf(filter);
   const range = filter?.kind === 'range' ? filter : undefined;
-  const shown = (value?: string) => (value === 'today' ? today : (value ?? ''));
+  const shown = (value?: string) => (value ? resolveDateBound(value, today) : '');
 
   const choose = (next: Preset) => {
     setCustom(next === 'custom');
     if (next === 'any') onChange(null);
-    if (next === 'upcoming') onChange({ kind: 'range', from: 'today' });
     if (next === 'past') onChange({ kind: 'range', to: 'today' });
+    const from = OPEN_FROM[next];
+    if (from) onChange({ kind: 'range', from });
   };
 
   return (
@@ -116,6 +123,8 @@ function DateFilter({
         <option value="any">Any date</option>
         <option value="upcoming">Today or later</option>
         <option value="past">Today or earlier</option>
+        <option value="last7">In the last 7 days</option>
+        <option value="last30">In the last 30 days</option>
         <option value="custom">Between dates</option>
       </select>
       {preset === 'custom' ? (

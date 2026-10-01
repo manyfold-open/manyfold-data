@@ -49,7 +49,7 @@ for (const app of dataApps) {
   const keys = new Map<string, number>();
 
   entries.forEach((entry, index) => {
-    const label = `${app.slug} seed #${index + 1} (${String(entry.data?.name ?? 'no name')})`;
+    const label = `${app.slug} seed #${index + 1} (${String(entry.data?.[app.table.columns[0] ?? 'name'] ?? 'untitled')})`;
     const data = validateRecordData(app, entry.data);
     const provenance = validateProvenance(entry);
     if (!data.ok || !provenance.ok) {

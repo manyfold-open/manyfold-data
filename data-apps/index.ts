@@ -4,9 +4,10 @@
  */
 
 import type { DataAppConfig } from '../src/shared/data-app.ts';
+import aiFundraising from './ai-fundraising/config.ts';
 import aiHackathons from './ai-hackathons/config.ts';
 
-export const dataApps: readonly DataAppConfig[] = [aiHackathons];
+export const dataApps: readonly DataAppConfig[] = [aiHackathons, aiFundraising];
 
 export const findDataApp = (slug: string): DataAppConfig | undefined =>
   dataApps.find((app) => app.slug === slug);

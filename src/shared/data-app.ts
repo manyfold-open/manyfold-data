@@ -43,6 +43,8 @@ export interface NumberField extends FieldBase {
 
 export interface UrlField extends FieldBase {
   type: 'url';
+  /** Keep only the site's home page (scheme and host), so one site is one value. */
+  homePage?: boolean;
 }
 
 export interface TagsField extends FieldBase {
@@ -53,7 +55,10 @@ export interface TagsField extends FieldBase {
 export type FieldDef = TextField | EnumField | DateField | NumberField | UrlField | TagsField;
 export type FieldType = FieldDef['type'];
 
-/** An inclusive range on a date or number field. A date bound may be 'today'. */
+/**
+ * An inclusive range on a date or number field. A date bound is a YYYY-MM-DD date,
+ * 'today', or a number of days from today such as 'today-90' or 'today+7'.
+ */
 export interface RangeCondition {
   from?: string | number;
   to?: string | number;
@@ -166,6 +171,21 @@ export function validateConfig(config: DataAppConfig): string[] {
     need(rule.notBefore, 'rules', ['date', 'number']);
   }
   Object.keys(config.accept ?? {}).forEach((name) => need(name, 'accept', ['date', 'number']));
+  const bounds = (where: string, ranges: Readonly<Record<string, RangeCondition>> | undefined) => {
+    for (const [name, range] of Object.entries(ranges ?? {})) {
+      const type = config.fields[name]?.type;
+      for (const bound of [range.from, range.to]) {
+        if (bound === undefined) continue;
+        if (type === 'date' && !(typeof bound === 'string' && isDateBound(bound))) {
+          fail(`${where} bound for "${name}" must be YYYY-MM-DD, today or today-N; got ${String(bound)}`);
+        }
+        if (type === 'number' && typeof bound !== 'number') fail(`${where} bound for "${name}" must be a number`);
+      }
+    }
+  };
+  bounds('accept', config.accept);
+  bounds('table.defaultFilter', config.table.defaultFilter);
+  for (const chart of config.charts) if (chart.kind === 'count') bounds(`chart "${chart.title}"`, chart.where);
   const example = validateRecordData(config, config.example.data);
   if (!example.ok) {
     fail(`example: ${example.errors.map((error) => `${error.field} ${error.message}`).join('; ')}`);
@@ -208,6 +228,28 @@ export function isIsoDate(value: string): boolean {
   if (!DATE.test(value)) return false;
   const time = Date.parse(`${value}T00:00:00Z`);
   return Number.isFinite(time) && new Date(time).toISOString().slice(0, 10) === value;
+}
+
+const RELATIVE = /^today([+-])(\d{1,4})$/;
+
+/** True for a date bound a config or a Table URL may use: YYYY-MM-DD, today, or today±N. */
+export const isDateBound = (value: string): boolean => value === 'today' || RELATIVE.test(value) || isIsoDate(value);
+
+/** The date a bound stands for, read against `today` (YYYY-MM-DD, UTC). */
+export function resolveDateBound(bound: string, today: string): string {
+  if (bound === 'today') return today;
+  const match = RELATIVE.exec(bound);
+  if (!match) return bound;
+  const days = Number(match[2]) * (match[1] === '-' ? -1 : 1);
+  return new Date(Date.parse(`${today}T00:00:00Z`) + days * 86_400_000).toISOString().slice(0, 10);
+}
+
+/** A bound in words: "today", "90 days before today", or the date itself. */
+export function describeDateBound(bound: string): string {
+  const match = RELATIVE.exec(bound);
+  if (!match) return bound;
+  const days = Number(match[2]);
+  return `${days} day${days === 1 ? '' : 's'} ${match[1] === '-' ? 'before' : 'after'} today`;
 }
 
 /** 1 to 32 characters: lowercase letters, digits and inner hyphens. */
@@ -261,7 +303,8 @@ function checkField(def: FieldDef, raw: unknown): Checked {
       return { value: raw };
     case 'url': {
       const url = typeof raw === 'string' ? parseHttpsUrl(raw) : null;
-      return url ? { value: url } : `must be a full https:// URL; got ${show(raw)}`;
+      if (!url) return `must be a full https:// URL; got ${show(raw)}`;
+      return { value: def.homePage ? `${new URL(url).origin}/` : url };
     }
     case 'tags': {
       if (!Array.isArray(raw)) return `must be a list of tags; got ${show(raw)}`;
@@ -328,8 +371,9 @@ export function checkAccept(config: DataAppConfig, data: RecordData, today: stri
   for (const [field, range] of Object.entries(config.accept ?? {})) {
     const value = data[field];
     if (typeof value !== 'string' && typeof value !== 'number') continue;
-    const name = (bound: string | number) => (bound === 'today' ? `today (${today})` : String(bound));
-    const at = (bound: string | number) => (bound === 'today' ? today : bound);
+    const at = (bound: string | number) => (typeof bound === 'string' ? resolveDateBound(bound, today) : bound);
+    const name = (bound: string | number) =>
+      typeof bound === 'string' && bound.startsWith('today') ? `${describeDateBound(bound)} (${at(bound)})` : String(bound);
     if (range.from !== undefined && value < at(range.from)) {
       errors.push({ field, message: `must be ${name(range.from)} or later for this data app; got ${show(value)}` });
     }
