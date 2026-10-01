@@ -1,228 +1,73 @@
 /**
- * A data app's Table: search, a filter per field, sortable columns and pages. The whole
- * state lives in the query string (src/shared/query.ts), so back/forward and shared
- * links restore exactly what was on screen.
+ * A data app's Table: the filter column, search, removable chips, the records and Load
+ * more. The whole state lives in the query string (src/shared/query.ts), so back/forward
+ * and shared links restore exactly what was on screen; `page` counts the pages loaded.
+ * On a phone the table becomes list rows and the filters and sort move into sheets.
  */
 
-import { useEffect, useMemo, useState } from 'react';
-import { resolveDateBound, valueLabel, type DataAppConfig, type FieldDef } from '../../shared/data-app';
-import {
-  defaultQuery,
-  parseQuery,
-  Q_MAX,
-  serializeQuery,
-  withFilter,
-  type FieldFilter,
-  type QueryState,
-} from '../../shared/query';
-import type { FacetCount, RecordsResponse } from '../../shared/types';
-import { useApi } from '../api';
-import { RecordTable } from '../components/RecordTable';
-import { countOf, formatCount } from '../format';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import type { DataAppConfig } from '../../shared/data-app';
+import { defaultQuery, parseQuery, Q_MAX, serializeQuery, type QueryState } from '../../shared/query';
+import type { PublicRecord, RecordsResponse, StatsResponse } from '../../shared/types';
+import { ApiError, getJson, useApi } from '../api';
+import { FilterPanel, type SmartFilterState } from '../components/FilterPanel';
+import { RecordList, RecordTable } from '../components/RecordTable';
+import { bareLabel, formatCount, nounTitle } from '../format';
+import { useIsPhone } from '../hooks';
+import { rememberTable } from '../memory';
+import { activeCount, chipsOf, popularOf, sortOptions } from '../model/filters';
+import { parseSmartFilter, smartExample, smartHint } from '../model/smart-filter';
 import { navigate } from '../router';
+import { Button, Chip, Icon, Pill, SearchField, Sheet, Skeleton, usePending } from '../ui';
 
 const PAGE_SIZE = 50;
-const TAGS_SHOWN = 12;
 
-type RangeFilter = Extract<FieldFilter, { kind: 'range' }>;
-
-const rangeOrNull = (from?: string, to?: string): RangeFilter | null =>
-  from === undefined && to === undefined
-    ? null
-    : { kind: 'range', ...(from !== undefined ? { from } : {}), ...(to !== undefined ? { to } : {}) };
-
-/* ───────── filters ───────── */
-
-/** Lowercase, accents removed: "Zürich" is found by "zurich". */
-const fold = (text: string): string => text.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
-
-function ChoiceFilter({
-  def,
-  filter,
-  counts,
-  onChange,
-}: {
-  def: FieldDef;
-  filter: FieldFilter | undefined;
-  counts: FacetCount[];
-  onChange: (filter: FieldFilter | null) => void;
-}) {
-  const [query, setQuery] = useState('');
-  const [expanded, setExpanded] = useState(false);
-  const selected = filter?.kind === 'in' ? filter.values : [];
-  // Enums keep their config order. Tags list what is chosen first, then the most common.
-  const all = def.type === 'enum' ? [...def.values] : [...new Set([...selected, ...counts.map((count) => count.value)])];
-  const long = def.type === 'tags' && all.length > TAGS_SHOWN;
-  const values = query
-    ? all.filter((value) => fold(valueLabel(def, value)).includes(fold(query))).slice(0, 50)
-    : long && !expanded
-      ? all.slice(0, Math.max(TAGS_SHOWN, selected.length))
-      : all;
-  const toggle = (value: string) => {
-    const next = selected.includes(value) ? selected.filter((item) => item !== value) : [...selected, value];
-    onChange(next.length > 0 ? { kind: 'in', values: next } : null);
-  };
-
-  return (
-    <fieldset className="filter">
-      <legend>{def.label}</legend>
-      {long ? (
-        <input
-          type="search"
-          className="filter-search"
-          value={query}
-          onChange={(event) => setQuery(event.target.value)}
-          placeholder={`Find a ${def.label.toLowerCase()}`}
-          aria-label={`Find a ${def.label.toLowerCase()}`}
-        />
-      ) : null}
-      {all.length === 0 ? <p className="muted small">None yet</p> : null}
-      {query && values.length === 0 ? <p className="muted small">No match</p> : null}
-      {values.map((value) => {
-        const count = counts.find((item) => item.value === value)?.count ?? 0;
-        const checked = selected.includes(value);
-        return (
-          <label key={value} className={count === 0 && !checked ? 'choice zero' : 'choice'}>
-            <input type="checkbox" checked={checked} onChange={() => toggle(value)} />
-            <span className="choice-name">{valueLabel(def, value)}</span>
-            <span className="choice-count">{formatCount(count)}</span>
-          </label>
-        );
-      })}
-      {long && !query ? (
-        <button type="button" className="link-button small" aria-expanded={expanded} onClick={() => setExpanded(!expanded)}>
-          {expanded ? 'Show fewer' : `Show all ${formatCount(all.length)}`}
-        </button>
-      ) : null}
-    </fieldset>
-  );
+interface Pages {
+  /** Every record of every loaded page, in order. */
+  records: PublicRecord[];
+  first: RecordsResponse | null;
+  /** True while any page for the current filters is out; the old rows stay on screen. */
+  loading: boolean;
+  error: ApiError | null;
 }
 
-type Preset = 'any' | 'upcoming' | 'past' | 'last7' | 'last30' | 'custom';
+/** Pages 1 to `count` of one query, loaded in parallel and kept while more are added. */
+function usePagedRecords(base: string, count: number): Pages {
+  const [store, setStore] = useState<{ base: string; pages: RecordsResponse[] } | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<ApiError | null>(null);
+  const latest = useRef(store);
+  latest.current = store;
 
-/** Presets that are one open-ended range: the bound each one writes. */
-const OPEN_FROM: Partial<Record<Preset, string>> = { upcoming: 'today', last7: 'today-7', last30: 'today-30' };
-
-const presetOf = (filter: FieldFilter | undefined): Preset => {
-  if (filter?.kind !== 'range') return 'any';
-  if (filter.to === 'today' && filter.from === undefined) return 'past';
-  if (filter.to === undefined) {
-    const preset = (Object.keys(OPEN_FROM) as Preset[]).find((key) => OPEN_FROM[key] === filter.from);
-    if (preset) return preset;
-  }
-  return 'custom';
-};
-
-function DateFilter({
-  def,
-  filter,
-  today,
-  onChange,
-}: {
-  def: FieldDef;
-  filter: FieldFilter | undefined;
-  today: string;
-  onChange: (filter: FieldFilter | null) => void;
-}) {
-  const [custom, setCustom] = useState(presetOf(filter) === 'custom');
   useEffect(() => {
-    if (presetOf(filter) === 'custom') setCustom(true);
-  }, [filter]);
+    const have = latest.current?.base === base ? latest.current.pages.length : 0;
+    if (have >= count) {
+      setLoading(false);
+      return;
+    }
+    const controller = new AbortController();
+    setLoading(true);
+    const wanted = Array.from({ length: count - have }, (_, index) => have + index + 1);
+    Promise.all(wanted.map((page) => getJson<RecordsResponse>(`${base}&page=${page}`, controller.signal)))
+      .then((results) => {
+        setStore((previous) => ({ base, pages: [...(previous?.base === base ? previous.pages : []), ...results] }));
+        setError(null);
+        setLoading(false);
+      })
+      .catch((failure: unknown) => {
+        if (controller.signal.aborted) return;
+        setError(failure instanceof ApiError ? failure : new ApiError(0, 'network', 'Could not reach the server.'));
+        setLoading(false);
+      });
+    return () => controller.abort();
+  }, [base, count]);
 
-  const preset = custom ? 'custom' : presetOf(filter);
-  const range = filter?.kind === 'range' ? filter : undefined;
-  const shown = (value?: string) => (value ? resolveDateBound(value, today) : '');
-
-  const choose = (next: Preset) => {
-    setCustom(next === 'custom');
-    if (next === 'any') onChange(null);
-    if (next === 'past') onChange({ kind: 'range', to: 'today' });
-    const from = OPEN_FROM[next];
-    if (from) onChange({ kind: 'range', from });
-  };
-
-  return (
-    <fieldset className="filter">
-      <legend>{def.label}</legend>
-      <select value={preset} onChange={(event) => choose(event.target.value as Preset)} aria-label={`${def.label} dates`}>
-        <option value="any">Any date</option>
-        <option value="upcoming">Today or later</option>
-        <option value="past">Today or earlier</option>
-        <option value="last7">In the last 7 days</option>
-        <option value="last30">In the last 30 days</option>
-        <option value="custom">Between dates</option>
-      </select>
-      {preset === 'custom' ? (
-        <div className="range-inputs">
-          <label>
-            From
-            <input
-              type="date"
-              value={shown(range?.from)}
-              onChange={(event) => onChange(rangeOrNull(event.target.value || undefined, range?.to))}
-            />
-          </label>
-          <label>
-            To
-            <input
-              type="date"
-              value={shown(range?.to)}
-              onChange={(event) => onChange(rangeOrNull(range?.from, event.target.value || undefined))}
-            />
-          </label>
-        </div>
-      ) : null}
-    </fieldset>
-  );
+  const pages = store?.pages.slice(0, store.base === base ? count : undefined) ?? [];
+  return { records: pages.flatMap((page) => page.records), first: pages[0] ?? null, loading, error };
 }
-
-function NumberFilter({
-  def,
-  filter,
-  onChange,
-}: {
-  def: FieldDef;
-  filter: FieldFilter | undefined;
-  onChange: (filter: FieldFilter | null) => void;
-}) {
-  const range = filter?.kind === 'range' ? filter : undefined;
-  const [from, setFrom] = useState(range?.from ?? '');
-  const [to, setTo] = useState(range?.to ?? '');
-  useEffect(() => {
-    setFrom(range?.from ?? '');
-    setTo(range?.to ?? '');
-  }, [range?.from, range?.to]);
-
-  const apply = () => onChange(rangeOrNull(from.trim() || undefined, to.trim() || undefined));
-  const min = def.type === 'number' ? def.min : undefined;
-
-  return (
-    <fieldset className="filter">
-      <legend>{def.label}</legend>
-      <form
-        className="range-inputs"
-        onSubmit={(event) => {
-          event.preventDefault();
-          apply();
-        }}
-      >
-        <label>
-          Min
-          <input type="number" inputMode="numeric" min={min} value={from} onChange={(event) => setFrom(event.target.value)} onBlur={apply} />
-        </label>
-        <label>
-          Max
-          <input type="number" inputMode="numeric" min={min} value={to} onChange={(event) => setTo(event.target.value)} onBlur={apply} />
-        </label>
-      </form>
-    </fieldset>
-  );
-}
-
-/* ───────── search and pages ───────── */
 
 /** Search input that waits for a pause in typing before it changes the URL. */
-function SearchBox({ value, label, onChange }: { value: string; label: string; onChange: (q: string) => void }) {
+function Search({ value, label, onChange }: { value: string; label: string; onChange: (q: string) => void }) {
   const [text, setText] = useState(value);
   useEffect(() => setText(value), [value]);
   useEffect(() => {
@@ -232,158 +77,310 @@ function SearchBox({ value, label, onChange }: { value: string; label: string; o
     // onChange is a fresh closure on every render; restarting the timer for it would
     // never let a pause elapse, so only text and value restart it.
   }, [text, value]);
-
-  return (
-    <input
-      type="search"
-      className="search"
-      placeholder={label}
-      aria-label={label}
-      maxLength={Q_MAX}
-      value={text}
-      onChange={(event) => setText(event.target.value)}
-    />
-  );
+  return <SearchField value={text} label={label} maxLength={Q_MAX} onChange={setText} onSubmit={() => onChange(text.trim())} />;
 }
 
-function Pagination({ page, pages, onPage }: { page: number; pages: number; onPage: (page: number) => void }) {
+function TableSkeleton({ config, phone }: { config: DataAppConfig; phone: boolean }) {
+  if (phone) {
+    return (
+      <div className="list" aria-hidden="true">
+        {Array.from({ length: 8 }, (_, index) => (
+          <div key={index} className="list-row">
+            <Skeleton width={32} height={32} round />
+            <span className="mid">
+              <Skeleton width="60%" height={14} />
+              <Skeleton width="40%" height={10} style={{ marginTop: 6 }} />
+            </span>
+            <Skeleton width={48} height={14} />
+          </div>
+        ))}
+      </div>
+    );
+  }
   return (
-    <nav className="pagination" aria-label="Pages">
-      <button type="button" disabled={page <= 1} onClick={() => onPage(page - 1)}>
-        Previous
-      </button>
-      <span>
-        Page {page} of {pages}
-      </span>
-      <button type="button" disabled={page >= pages} onClick={() => onPage(page + 1)}>
-        Next
-      </button>
-    </nav>
+    <div className="dtable-wrap" aria-hidden="true">
+      <table className="dtable">
+        <thead>
+          <tr>
+            {config.table.columns.map((field) => (
+              <th key={field}>{bareLabel(config.fields[field]?.label ?? field)}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {Array.from({ length: 10 }, (_, row) => (
+            <tr key={row}>
+              {config.table.columns.map((field, index) => (
+                <td key={field}>
+                  {index === 0 ? (
+                    <span className="title-cell">
+                      <Skeleton width={24} height={24} round />
+                      <Skeleton width={120} height={12} />
+                    </span>
+                  ) : (
+                    <Skeleton width={72} height={12} />
+                  )}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
-
-/* ───────── page ───────── */
 
 export default function TablePage({ config, search }: { config: DataAppConfig; search: string }) {
+  const phone = useIsPhone();
+
   // Opened with no parameters: show the default view and write it into the address bar,
   // so the link always names what is on screen.
   useEffect(() => {
     if (!search) navigate(`?${serializeQuery(config, defaultQuery(config))}`, { replace: true });
+    else rememberTable(config.slug, search);
   }, [config, search]);
 
   const state = useMemo(
     () => (search ? parseQuery(config, new URLSearchParams(search)).state : defaultQuery(config)),
     [config, search],
   );
-  const apiParams = serializeQuery(config, state);
-  apiParams.set('limit', String(PAGE_SIZE));
-  const { data, error, loading } = useApi<RecordsResponse>(`/api/${config.slug}/records?${apiParams}`);
+  const baseParams = serializeQuery(config, { ...state, page: 1 });
+  baseParams.delete('page');
+  baseParams.set('limit', String(PAGE_SIZE));
+  const base = `/api/${config.slug}/records?${baseParams}`;
+  const { records, first, loading, error } = usePagedRecords(base, state.page);
+  const stats = useApi<StatsResponse>(`/api/${config.slug}/stats`);
+  const firstPending = usePending(!first && !error);
 
-  const [filtersOpen, setFiltersOpen] = useState(false);
   const go = (next: QueryState, replace = false) => navigate(`?${serializeQuery(config, next)}`, { replace });
-  const setFilter = (field: string, filter: FieldFilter | null) => go(withFilter(state, field, filter));
   const sortBy = (field: string) => {
     const desc = state.sort.field === field ? !state.sort.desc : config.fields[field]?.type === 'number';
     go({ ...state, sort: { field, desc }, page: 1 });
   };
-  const clear = () => go({ ...state, q: '', filters: {}, page: 1 });
+  const reset = (from: QueryState = state): QueryState => ({ ...from, q: '', filters: {}, page: 1 });
 
-  const active = Object.keys(state.filters).length + (state.q ? 1 : 0);
-  const pages = data ? Math.max(1, Math.ceil(data.total / data.limit)) : 1;
-  const today = data?.today ?? new Date().toISOString().slice(0, 10);
+  const today = first?.today ?? new Date().toISOString().slice(0, 10);
+  const total = first?.total ?? 0;
+  const chips = chipsOf(config, state, today);
+  const popular = useMemo(() => popularOf(config, stats.data), [config, stats.data]);
+
+  // Values of each tags field seen so far, so the smart filter can find "San Francisco".
+  const seenTags = useRef<Record<string, Set<string>>>({});
+  for (const [field, counts] of Object.entries(first?.facets ?? {})) {
+    if (config.fields[field]?.type !== 'tags') continue;
+    const set = (seenTags.current[field] ??= new Set());
+    counts.forEach((count) => set.add(count.value));
+  }
+  for (const chart of stats.data?.charts ?? []) {
+    if (chart.kind === 'by-category' && config.fields[chart.field]?.type === 'tags') {
+      const set = (seenTags.current[chart.field] ??= new Set());
+      chart.bars.forEach((bar) => set.add(bar.value));
+    }
+  }
+  const tagValues = () => Object.fromEntries(Object.entries(seenTags.current).map(([field, set]) => [field, [...set]]));
+
+  // The smart filter's sentence stays in this component: never in the URL, never sent.
+  const [smartText, setSmartText] = useState('');
+  const [smartMessage, setSmartMessage] = useState<SmartFilterState['message']>(null);
+  const smartFor = (apply: (next: QueryState) => void, from: QueryState): SmartFilterState => ({
+    text: smartText,
+    setText: (text) => {
+      setSmartText(text);
+      setSmartMessage(null);
+    },
+    message: smartMessage,
+    placeholder: smartExample(config),
+    apply: () => {
+      const result = parseSmartFilter(config, from, smartText, tagValues(), today);
+      if (result.applied.length === 0) setSmartMessage({ text: smartHint(config), miss: true });
+      else {
+        setSmartMessage({ text: `Applied: ${result.applied.join(' · ')}`, miss: false });
+        apply(result.state);
+      }
+    },
+  });
+
+  // Phone sheets. The filter sheet edits a draft and counts it before it is applied.
+  const [sheet, setSheet] = useState<'filters' | 'sort' | null>(null);
+  const [draft, setDraft] = useState<QueryState>(state);
+  const draftParams = serializeQuery(config, { ...draft, page: 1 });
+  draftParams.set('limit', '1');
+  const draftCount = useApi<RecordsResponse>(sheet === 'filters' ? `/api/${config.slug}/records?${draftParams}` : null);
+  const openFilters = () => {
+    setDraft(state);
+    setSmartMessage(null);
+    setSheet('filters');
+  };
+
+  const shownState = sheet === 'filters' ? draft : state;
+  const busy = loading && records.length > 0;
+  const pages = first ? Math.ceil(first.total / PAGE_SIZE) : 1;
+  const count = (
+    <span className="result-count" role="status">
+      {first ? (
+        <>
+          <b>{formatCount(total)}</b> {total === 1 ? 'result' : 'results'}
+        </>
+      ) : null}
+    </span>
+  );
+  const active = activeCount(state);
+  const sortLabel = sortOptions(config).find((option) => option.field === state.sort.field && option.desc === state.sort.desc)?.label;
+
+  const results = (
+    <section className={busy ? 'results busy' : 'results'} aria-busy={loading} aria-label={nounTitle(config)}>
+      {error ? <p className="notice">{error.message}</p> : null}
+      <div className="results-body">
+        {firstPending.pending || !first ? (
+          error ? null : (
+            <div className={firstPending.visible ? 'sk-on' : undefined}>
+              <TableSkeleton config={config} phone={phone} />
+            </div>
+          )
+        ) : records.length > 0 ? (
+          phone ? (
+            <RecordList config={config} records={records} />
+          ) : (
+            <RecordTable config={config} records={records} columns={config.table.columns} sort={state.sort} onSort={sortBy} />
+          )
+        ) : (
+          <div className="empty-state">
+            <b>No {config.noun.other} match</b>
+            <span>Try removing a filter, or search for something else.</span>
+            {active > 0 ? <Button onClick={() => go(reset())}>Reset filters</Button> : null}
+          </div>
+        )}
+      </div>
+      {first && state.page < pages && records.length > 0 ? (
+        <div className="load-more">
+          <Button onClick={() => go({ ...state, page: state.page + 1 }, true)} disabled={loading}>
+            {loading ? 'Loading…' : `Load more · ${formatCount(total - records.length)} left`}
+          </Button>
+        </div>
+      ) : null}
+    </section>
+  );
+
+  const chipRow = (
+    <div className="chips" aria-label="Applied filters">
+      {chips.map((chip) => (
+        <Chip key={chip.key} label={chip.label} onRemove={() => go(chip.without)} />
+      ))}
+      {chips.length > 1 ? (
+        <button type="button" className="chip clear" onClick={() => go(reset())}>
+          Clear all
+        </button>
+      ) : null}
+    </div>
+  );
+
+  const searchBox = <Search value={state.q} label={`Search ${config.noun.other}`} onChange={(q) => go({ ...state, q, page: 1 }, true)} />;
 
   return (
     <>
-      <section className="page-head compact">
-        <h1>{config.title}</h1>
-        <p className="meta" role="status">
-          {data ? `${countOf(config, data.total)} ${data.total === 1 ? 'matches' : 'match'}` : 'Loading'}
-          {active > 0 ? (
-            <>
-              {' · '}
-              <button type="button" className="link-button" onClick={clear}>
-                Clear filters
-              </button>
-            </>
-          ) : null}
-        </p>
+      <section className="page-head">
+        <h1>{nounTitle(config)}</h1>
+        {phone ? null : <p className="desc">{config.title} · every record checked against its source.</p>}
       </section>
 
-      <div className="table-layout">
-        <button
-          type="button"
-          className="quiet-button filters-toggle"
-          aria-expanded={filtersOpen}
-          aria-controls="filters"
-          onClick={() => setFiltersOpen(!filtersOpen)}
-        >
-          {filtersOpen ? 'Hide filters' : 'Filters'}
-          {active > 0 ? ` (${active})` : ''}
-        </button>
-        <aside id="filters" className={filtersOpen ? 'filters open' : 'filters'} aria-label="Filters">
-          {Object.entries(config.fields).map(([field, def]) => {
-            const filter = state.filters[field];
-            const onChange = (next: FieldFilter | null) => setFilter(field, next);
-            if (def.type === 'enum' || def.type === 'tags') {
-              return <ChoiceFilter key={field} def={def} filter={filter} counts={data?.facets[field] ?? []} onChange={onChange} />;
-            }
-            if (def.type === 'date') {
-              return <DateFilter key={field} def={def} filter={filter} today={today} onChange={onChange} />;
-            }
-            if (def.type === 'number') {
-              return <NumberFilter key={field} def={def} filter={filter} onChange={onChange} />;
-            }
-            return null;
-          })}
-        </aside>
+      {phone ? (
+        <>
+          <div style={{ marginTop: 16 }}>{searchBox}</div>
+          <div className="toolbar">
+            <Pill icon="filter" active={active > 0} onClick={openFilters} aria-haspopup="dialog">
+              Filters{active > 0 ? ` · ${active}` : ''}
+            </Pill>
+            <Pill icon="sort" onClick={() => setSheet('sort')} aria-haspopup="dialog">
+              {sortLabel ?? bareLabel(config.fields[state.sort.field]?.label ?? state.sort.field)}
+            </Pill>
+            {count}
+          </div>
+          {chipRow}
+          {results}
 
-        <section className="results" aria-busy={loading}>
-          <div className="results-bar">
-            <SearchBox
-              value={state.q}
-              label={`Search ${config.noun.other}`}
-              onChange={(q) => go({ ...state, q, page: 1 }, true)}
+          <Sheet
+            open={sheet === 'filters'}
+            title="Filters"
+            onClose={() => setSheet(null)}
+            action={
+              <button type="button" className="link-button" onClick={() => setDraft(reset(draft))}>
+                Reset
+              </button>
+            }
+            footer={
+              <Button
+                variant="primary"
+                onClick={() => {
+                  go({ ...draft, q: state.q, page: 1 });
+                  setSheet(null);
+                }}
+              >
+                {draftCount.data
+                  ? `Show ${formatCount(draftCount.data.total)} ${draftCount.data.total === 1 ? 'result' : 'results'}`
+                  : 'Show results'}
+              </Button>
+            }
+          >
+            <FilterPanel
+              inSheet
+              config={config}
+              state={shownState}
+              facets={draftCount.data?.facets ?? first?.facets}
+              popular={popular}
+              smart={smartFor(setDraft, draft)}
+              today={today}
+              onChange={setDraft}
             />
+          </Sheet>
+
+          <Sheet open={sheet === 'sort'} title="Sort by" onClose={() => setSheet(null)}>
+            <div role="radiogroup" aria-label="Sort by">
+              {sortOptions(config).map((option) => {
+                const on = state.sort.field === option.field && state.sort.desc === option.desc;
+                return (
+                  <button
+                    key={`${option.field}:${option.desc}`}
+                    type="button"
+                    role="radio"
+                    aria-checked={on}
+                    className="option"
+                    onClick={() => {
+                      go({ ...state, sort: { field: option.field, desc: option.desc }, page: 1 });
+                      setSheet(null);
+                    }}
+                  >
+                    {option.label}
+                    <Icon name="check" size={18} />
+                  </button>
+                );
+              })}
+            </div>
+          </Sheet>
+        </>
+      ) : (
+        <div className="table-layout">
+          <aside className="filter-column" aria-label="Filters">
+            <FilterPanel
+              config={config}
+              state={state}
+              facets={first?.facets}
+              popular={popular}
+              smart={smartFor((next) => go(next), state)}
+              today={today}
+              onChange={(next) => go(next)}
+              onReset={() => go(reset())}
+            />
+          </aside>
+          <div style={{ minWidth: 0 }}>
+            <div className="toolbar">
+              {searchBox}
+              {count}
+            </div>
+            {chipRow}
+            {results}
           </div>
-
-          {error ? <p className="notice">{error.message}</p> : null}
-
-          <div className={loading && data ? 'dimmed' : undefined}>
-            {data && data.records.length > 0 ? (
-              <RecordTable
-                config={config}
-                records={data.records}
-                columns={config.table.columns}
-                sort={state.sort}
-                onSort={sortBy}
-              />
-            ) : null}
-            {data && data.records.length === 0 ? (
-              <div className="empty-state">
-                {data.total > 0 ? (
-                  <>
-                    <p>Page {state.page} is past the last page.</p>
-                    <button type="button" className="quiet-button" onClick={() => go({ ...state, page: 1 })}>
-                      Go to page 1
-                    </button>
-                  </>
-                ) : (
-                  <>
-                    <p>No {config.noun.other} match these filters.</p>
-                    {active > 0 ? (
-                      <button type="button" className="quiet-button" onClick={clear}>
-                        Clear filters
-                      </button>
-                    ) : null}
-                  </>
-                )}
-              </div>
-            ) : null}
-          </div>
-
-          {data && pages > 1 ? <Pagination page={state.page} pages={pages} onPage={(page) => go({ ...state, page })} /> : null}
-        </section>
-      </div>
+        </div>
+      )}
     </>
   );
 }
