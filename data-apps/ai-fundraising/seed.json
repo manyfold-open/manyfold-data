@@ -1,0 +1,2681 @@
+[
+  {
+    "data": {
+      "company": "Rig Security",
+      "website": "https://www.rig.security/",
+      "focus": "Identity security platform that detects AI agents acting under human and machine identities and enforces policy on them",
+      "sector": "security",
+      "stage": "seed",
+      "announced_on": "2026-09-29",
+      "amount_usd": 12000000,
+      "investors": "Ten Eleven Ventures, Brightmind Partners, CrowdStrike Falcon Fund, Ami Luttwak",
+      "country": "Israel",
+      "region": "africa-middle-east",
+      "city": [
+        "Tel Aviv"
+      ]
+    },
+    "source_url": "https://www.securityweek.com/rig-security-emerges-from-stealth-with-12m-to-tackle-agentic-ai-identity-risks/",
+    "evidence": "Rig Security has emerged from stealth with $12 million in seed funding and an identity protection platform built for the agentic era. The funding round was led by Ten Eleven Ventures and Brightmind Partners with participation from the CrowdStrike Falcon Fund and a range of angel investors.",
+    "observed_at": "2026-10-01T15:48:50Z"
+  },
+  {
+    "data": {
+      "company": "Reverion",
+      "website": "https://reverion.com/",
+      "focus": "Reversible solid oxide fuel cell power plants for on-site power generation, including for data centers",
+      "sector": "infrastructure",
+      "stage": "series-b",
+      "announced_on": "2026-09-29",
+      "amount_usd": 175000000,
+      "investors": "Kembara, Allianz, KfW Capital, Aurum Impact, Carbon Equity, Extantia, Energy Impact Partners, UVC Partners, European Innovation Council Fund (EIC Fund), alfa8, Possible Ventures",
+      "country": "Germany",
+      "region": "europe",
+      "city": [
+        "Eresing"
+      ]
+    },
+    "source_url": "https://reverion.com/en/reverion-raises-175m-series-b-to-scale-production-of-its-dispatchable-carbon-negative-power-plants-tenfold/",
+    "evidence": "Eresing, Germany, September 29, 2026 – As global grids struggle with the intermittency of wind and solar and AI-driven data centers face crippling power shortages, Reverion has closed a Series B funding round of $175 million to scale production of its dispatchable, carbon-negative power plants.",
+    "observed_at": "2026-10-01T15:47:00Z"
+  },
+  {
+    "data": {
+      "company": "Reco",
+      "website": "https://www.reco.ai/",
+      "focus": "Security and governance for AI agents and SaaS applications",
+      "sector": "security",
+      "stage": "other",
+      "announced_on": "2026-09-29",
+      "amount_usd": 55000000,
+      "investors": "AT&T Ventures, Forestay, Quadrille Capital",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "Altamonte Springs"
+      ]
+    },
+    "source_url": "https://www.reco.ai/blog/reco-raises-55-million-in-additional-funding-with-participation-from-at-t-ventures",
+    "evidence": "Reco, the leader in Agentic Security, today announced it has raised an additional $55 million including a strategic investment from AT&T Ventures and support from new investors Forestay and Quadrille Capital.",
+    "observed_at": "2026-10-01T15:49:03Z"
+  },
+  {
+    "data": {
+      "company": "Rayon",
+      "website": "https://www.rayon.design/",
+      "focus": "Browser-based CAD and drawing software with AI tools for interior designers and architects",
+      "sector": "enterprise",
+      "stage": "series-a",
+      "announced_on": "2026-09-29",
+      "amount_stated": "€10 million",
+      "investors": "Partech, Northzone, Foundamental, Seedcamp",
+      "country": "France",
+      "region": "europe",
+      "city": [
+        "Paris"
+      ]
+    },
+    "source_url": "https://partechpartners.com/news/rayon-raises-10m-series-a-to-bring-ai-into-interior-design-software",
+    "evidence": "Rayon, the browser-based drawing software for interior designers, has raised €10 million in Series A funding led by Partech, with continued backing from existing investors Northzone, Foundamental and Seedcamp.",
+    "observed_at": "2026-10-01T16:18:01Z"
+  },
+  {
+    "data": {
+      "company": "Meadow AI",
+      "website": "https://www.meadow.ai/",
+      "focus": "AI co-manager that monitors store operations from video, audio and labor data and coaches staff at retailers and restaurants",
+      "sector": "enterprise",
+      "stage": "seed",
+      "announced_on": "2026-09-29",
+      "amount_usd": 7000000,
+      "investors": "Ulu Ventures, York IE, Flying Fish, TenOneTen Ventures, Leadout Capital, Wedbush Ventures",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "Seattle"
+      ]
+    },
+    "source_url": "https://www.thesaasnews.com/news/meadow-ai-raises-7m-seed/",
+    "evidence": "Seattle-based Meadow AI raises $7M in a seed round led by Ulu Ventures to scale its AI-powered operational software for physical retail and restaurants.",
+    "observed_at": "2026-10-01T15:51:25Z"
+  },
+  {
+    "data": {
+      "company": "KNOWIN (诺因智能)",
+      "website": "https://www.knowinai.com/",
+      "focus": "Foldable dual-arm home robots and the GLOW generative embodied AI model",
+      "sector": "robotics",
+      "stage": "angel",
+      "round": "Angel+++",
+      "announced_on": "2026-09-29",
+      "amount_stated": "several hundred million yuan",
+      "investors": "JD.com-related fund (京东相关基金), Loyal Valley Capital (正心谷资本), 南山战新投, Walden (华登投资)",
+      "country": "China",
+      "region": "asia-pacific",
+      "city": [
+        "Shenzhen"
+      ]
+    },
+    "source_url": "https://finance.sina.com.cn/roll/2026-09-29/doc-initmzhp3103249.shtml",
+    "evidence": "新浪科技讯 9月29日上午消息，消费级具身智能公司诺因智能宣布完成数亿元天使+++轮融资。本轮融资由京东相关基金领投，正心谷资本、南山战新投和华登投资跟投。",
+    "observed_at": "2026-10-01T15:51:17Z"
+  },
+  {
+    "data": {
+      "company": "EliseAI",
+      "website": "https://eliseai.com/",
+      "focus": "AI automation for housing operations (leasing, resident services, maintenance) and healthcare practices",
+      "sector": "enterprise",
+      "stage": "other",
+      "announced_on": "2026-09-29",
+      "amount_usd": 350000000,
+      "valuation_usd": 4000000000,
+      "investors": "Andreessen Horowitz (a16z), Bessemer Venture Partners, Ontario Teachers' Pension Plan, Sapphire Ventures, Navitas Capital",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "New York"
+      ]
+    },
+    "source_url": "https://www.globenewswire.com/news-release/2026/09/29/3370681/0/en/eliseai-raises-350-million-at-4-billion-valuation-to-bring-ai-deeper-into-housing-and-healthcare-operations.html",
+    "evidence": "EliseAI, the AI company automating complex housing and healthcare systems, today announced it has raised $350 million at a $4 billion valuation. The financing was led by Andreessen Horowitz (a16z) and Bessemer Venture Partners",
+    "observed_at": "2026-10-01T16:18:02Z"
+  },
+  {
+    "data": {
+      "company": "Elio Mortgage",
+      "website": "https://elio.mortgage/",
+      "focus": "AI-native mortgage brokerage that runs home-loan origination on its own agentic AI platform",
+      "sector": "finance",
+      "stage": "pre-seed",
+      "announced_on": "2026-09-29",
+      "amount_usd": 5100000,
+      "investors": "Motive Partners, Social Leverage, Jeff Horing",
+      "city": [
+        "New York"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.businesswire.com/news/home/20260929718646/en/Elio-Mortgage-Launches-with-$5.1-Million-in-Pre-Seed-Funding-to-Build-the-Mortgage-Company-for-the-AI-Era",
+    "evidence": "Elio Mortgage, an AI-native mortgage company redesigning how home loans are originated, today emerged from stealth with $5.1 million in pre-seed funding led by Motive Partners and Social Leverage",
+    "observed_at": "2026-10-01T15:51:04Z"
+  },
+  {
+    "data": {
+      "company": "Destro AI",
+      "website": "https://www.destroai.com/",
+      "focus": "Robot-agnostic software that coordinates mixed robot fleets, workers and enterprise systems in warehouses",
+      "sector": "robotics",
+      "stage": "seed",
+      "announced_on": "2026-09-29",
+      "amount_usd": 8000000,
+      "investors": "Base10 Partners, Bonfire Ventures, CoFound Partners",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "New York"
+      ]
+    },
+    "source_url": "https://www.destroai.com/newsroom/destro-raises-8m",
+    "evidence": "Destro AI, the company building the shared intelligence layer for warehouse robotics, today announced it has raised $8 million in seed funding co-led by Base10 Partners and Bonfire Ventures, with participation from CoFound Partners.",
+    "observed_at": "2026-10-01T15:51:38Z"
+  },
+  {
+    "data": {
+      "company": "Blue Fire AI",
+      "website": "https://bluefireai.com/",
+      "focus": "Neuro-symbolic AI decision engine for fundamental equity research and investment management",
+      "sector": "finance",
+      "stage": "other",
+      "announced_on": "2026-09-29",
+      "amount_usd": 9000000,
+      "investors": "Asset Management One",
+      "country": "Singapore",
+      "region": "asia-pacific",
+      "city": [
+        "Singapore"
+      ]
+    },
+    "source_url": "https://www.thesaasnews.com/news/blue-fire-ai-raises-9m-other/",
+    "evidence": "Blue Fire AI, a technology company based in Singapore that specializes in neuro-symbolic AI decision engines for financial markets, has secured $9 million in its latest funding round.",
+    "observed_at": "2026-10-01T15:49:00Z"
+  },
+  {
+    "data": {
+      "company": "Atomic",
+      "website": "https://www.atomic.supply/",
+      "focus": "AI supply chain planning and purchasing automation for physical goods companies",
+      "sector": "enterprise",
+      "stage": "series-a",
+      "announced_on": "2026-09-29",
+      "amount_usd": 12500000,
+      "investors": "Klass Capital, Madrona",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "Boston"
+      ]
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/atomic-raises-12-5m-to-build-the-ai-control-system-for-physical-goods-companies-302892093.html",
+    "evidence": "Atomic, the AI-native supply chain planning platform, today announced a $12.5 million Series A led by Klass Capital and Madrona.",
+    "observed_at": "2026-10-01T15:53:13Z"
+  },
+  {
+    "data": {
+      "company": "ai3Bio",
+      "website": "https://ai3.bio/",
+      "focus": "AI-enabled antibody and lipid nanoparticle therapies that eliminate disease-causing Th17 cells in autoimmune disease",
+      "sector": "health",
+      "stage": "series-a",
+      "announced_on": "2026-09-29",
+      "amount_usd": 48000000,
+      "investors": "UPMC Enterprises, Ziff Capital Partners, Cockrell Interests, Tanis Ventures",
+      "city": [
+        "Watertown"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://ai3.bio/blog/ai3bio-launches-with-48-million-in-series-a-funding-to-reset-the-immune-system-at-its-root/",
+    "evidence": "ai3Bio, a biotechnology company targeting autoimmune disease at its root source, today announced its launch with $48 million in Series A funding.",
+    "observed_at": "2026-10-01T15:51:04Z"
+  },
+  {
+    "data": {
+      "company": "Tachin Technology (途见科技)",
+      "website": "https://www.tachin.com/",
+      "focus": "Stretchable electronic skin tactile sensors and tactile data-collection gloves for robots and embodied AI",
+      "sector": "robotics",
+      "stage": "pre-series-a",
+      "round": "Pre-A++",
+      "announced_on": "2026-09-28",
+      "amount_stated": "100-million-yuan level",
+      "investors": "Beijing AI Industry Investment Fund (北京市人工智能产业投资基金), Beijing New Materials Industry Investment Fund (北京市新材料产业投资基金)",
+      "country": "China",
+      "region": "asia-pacific",
+      "city": [
+        "Beijing"
+      ]
+    },
+    "source_url": "https://fund.eastmoney.com/a/202609283885198411.html",
+    "evidence": "途见科技（北京）有限公司（简称“途见科技”）近日完成亿元级Pre-A++轮融资",
+    "observed_at": "2026-10-01T15:49:52Z"
+  },
+  {
+    "data": {
+      "company": "SiMa.ai",
+      "website": "https://sima.ai/",
+      "focus": "Edge AI chips and software for physical AI in robots, vehicles and drones",
+      "sector": "infrastructure",
+      "stage": "series-c",
+      "announced_on": "2026-09-28",
+      "amount_usd": 150000000,
+      "valuation_usd": 1450000000,
+      "investors": "Fidelity Management & Research Company, Amplify, Alter Venture Partners, Dell Technologies Capital, Maverick Capital, +ND Capital, Point72, StepStone Group, AllianceBernstein, Baron Capital, J.P. Morgan, State of Michigan",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "San Jose"
+      ]
+    },
+    "source_url": "https://sima.ai/press-release/sima-ai-reaches-1-45b-valuation-with-500-million-in-total-funding-to-scale-physical-ai-in-humanoids-automotive-and-drones/",
+    "evidence": "SiMa.ai, a leader in Physical AI, today announced $150 million in Series C financing, bringing the total capital raised to $500 million and valuing the company at $1.45 billion. The round was co-led by Fidelity Management & Research Company and Amplify",
+    "observed_at": "2026-10-01T15:54:40Z"
+  },
+  {
+    "data": {
+      "company": "Quartermaster",
+      "website": "https://www.quartermaster.us/",
+      "focus": "Ship-mounted camera and radio sensors with AI that build a real-time maritime awareness data network",
+      "sector": "defense",
+      "stage": "series-b",
+      "announced_on": "2026-09-28",
+      "amount_usd": 100000000,
+      "investors": "Insight Partners, Overmatch Ventures, First Round Capital, Quiet Capital, Steel Atlas, TMV, BoxGroup, Operator Partners",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "Arlington"
+      ]
+    },
+    "source_url": "https://oceannews.com/news/milestones/quartermaster-secures-series-b-to-expand-smartmast-ocean-data-network",
+    "evidence": "Quartermaster has raised $140 million to build out its distributed data network for the ocean, combining a $100 million Series B led by Insight Partners with a $40 million venture debt facility from Stifel. The Arlington, Virginia-based company announced the financing on September 28, 2026.",
+    "observed_at": "2026-10-01T16:18:02Z"
+  },
+  {
+    "data": {
+      "company": "Presto",
+      "website": "https://presto.com/",
+      "focus": "Voice AI that takes drive-thru orders for quick-service restaurant chains",
+      "sector": "enterprise",
+      "stage": "other",
+      "announced_on": "2026-09-28",
+      "amount_usd": 10000000,
+      "investors": "Remus Capital-affiliated investors, other existing investors",
+      "city": [
+        "San Mateo"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.vcaonline.com/news/2026092802/presto-raises-10-million-to-accelerate-voice-ai-leadership/",
+    "evidence": "SAN MATEO, Calif., September 28, 2026-- Presto Phoenix, Inc. (“Presto”), the leader in enterprise-grade Voice AI for quick-service restaurants (QSRs), today announced it had raised $10 million in funding from Remus Capital-affiliated investors and other existing investors.",
+    "observed_at": "2026-10-01T16:34:58Z"
+  },
+  {
+    "data": {
+      "company": "Outmarket AI",
+      "website": "https://outmarket.ai/",
+      "focus": "AI platform that automates insurance agency and brokerage workflows",
+      "sector": "finance",
+      "stage": "series-b",
+      "announced_on": "2026-09-28",
+      "amount_usd": 34500000,
+      "investors": "SignalFire, Fika Ventures, Permanent Capital Ventures, TTV Capital, Dash Fund",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "San Francisco"
+      ]
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/outmarket-ai-raises-34-5m-series-b-to-solidify-position-as-the-1-ai-platform-for-insurance-302891583.html",
+    "evidence": "Outmarket AI, the leading AI platform purpose-built for insurance, today announced it has raised $34.5 million in Series B funding. The round was led by SignalFire, with participation from Fika Ventures, Permanent Capital Ventures, TTV Capital and Dash Fund.",
+    "observed_at": "2026-10-01T16:05:00Z"
+  },
+  {
+    "data": {
+      "company": "Neowow (智灵新境)",
+      "website": "https://neowow.cn/",
+      "focus": "Infinite-canvas AI creation platform for producing comic dramas, images and short videos",
+      "sector": "consumer",
+      "stage": "angel",
+      "announced_on": "2026-09-28",
+      "amount_stated": "tens of millions of yuan",
+      "investors": "Huace Film & TV (华策影视)",
+      "country": "China",
+      "region": "asia-pacific",
+      "city": [
+        "Shanghai"
+      ]
+    },
+    "source_url": "https://www.36kr.com/p/4001258625994626",
+    "evidence": "36氪获悉，智灵新境近期完成了数千万元人民币天使轮融资，投资方为华策影视。公司下一轮融资也在推进中，预计年内敲定，宸睿资本担任财务顾问。",
+    "observed_at": "2026-10-01T15:56:48Z"
+  },
+  {
+    "data": {
+      "company": "Mona",
+      "website": "https://trymona.com/",
+      "focus": "AI platform that helps small businesses find capital and get financial coaching",
+      "sector": "finance",
+      "stage": "other",
+      "announced_on": "2026-09-28",
+      "amount_usd": 3500000,
+      "investors": "Sandberg Bernthal Venture Partners, Alumni Ventures, Wisdom Ventures, Eric Schmidt",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "San Francisco"
+      ]
+    },
+    "source_url": "https://trymona.com/news/mona-raises-round-to-expand-its-ai-platform-for-small-business-capital-access-and-financial-coaching",
+    "evidence": "Mona today announced an oversubscribed $3.5M round to expand its AI platform for small business capital access and financial coaching. The round was led by Sandberg Bernthal Venture Partners, with participation from Alumni Ventures, Wisdom Ventures, angels including former Google CEO Eric Schmidt",
+    "observed_at": "2026-10-01T16:01:00Z"
+  },
+  {
+    "data": {
+      "company": "Modulate",
+      "website": "https://www.modulate.ai/",
+      "focus": "Audio-native AI models for voice analysis, deepfake detection and voice moderation",
+      "sector": "security",
+      "stage": "other",
+      "announced_on": "2026-09-28",
+      "amount_usd": 25000000,
+      "investors": "Future Ventures, Hyperplane, Lakestar",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "Somerville"
+      ]
+    },
+    "source_url": "https://www.modulate.ai/press-releases/modulate-raises-25m-to-scale-its-lead-in-frontier-audio-native-ai",
+    "evidence": "Modulate, the frontier audio AI company, today announced $25 million in new funding led by Future Ventures, with participation from Hyperplane and Lakestar",
+    "observed_at": "2026-10-01T15:55:44Z"
+  },
+  {
+    "data": {
+      "company": "Menos AI",
+      "website": "https://www.menosai.com/",
+      "focus": "Context layer and AI research agents for institutional investors and asset managers",
+      "sector": "finance",
+      "stage": "pre-series-a",
+      "announced_on": "2026-09-28",
+      "amount_usd": 5100000,
+      "investors": "Copper Sky Capital, Alpha Square Group",
+      "city": [
+        "San Jose"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.vcaonline.com/news/2026092804/menos-ai-surpasses-10-million-in-total-funding-as-copper-sky-capital-doubles-down/",
+    "evidence": "SAN JOSE, Calif.-, September 28, 2026-- Menos AI, an AI-native platform for institutional investors, today announced a new $5.1 million Pre-A financing led by returning investor Copper Sky Capital, with participation from Alpha Square Group.",
+    "observed_at": "2026-10-01T16:19:10Z"
+  },
+  {
+    "data": {
+      "company": "Lead Health (利德健康)",
+      "website": "https://www.leadhealthcare.ai/",
+      "focus": "AI life-science instruments and automated biomanufacturing equipment for single-cell analysis and cell therapy",
+      "sector": "health",
+      "stage": "pre-series-a",
+      "round": "Pre-A++",
+      "announced_on": "2026-09-28",
+      "amount_stated": "tens of millions of yuan",
+      "investors": "Shanghai International Group Investment (上海国际集团投资有限公司)",
+      "city": [
+        "Guangzhou"
+      ],
+      "country": "China",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://news.pedaily.cn/202609/569665.shtml",
+    "evidence": "利德健康（广州）科技于2026年9月完成数千万元Pre-A++轮融资，由上海国际集团投资，凯乘资本任财务顾问，资金将用于多领域布局升级。",
+    "observed_at": "2026-10-01T15:57:50Z"
+  },
+  {
+    "data": {
+      "company": "Instinct",
+      "website": "https://instinct.com/",
+      "focus": "Personal AI agent that handles everyday tasks such as calls, bookings and purchases over text message",
+      "sector": "consumer",
+      "stage": "series-c",
+      "announced_on": "2026-09-28",
+      "amount_usd": 1000000000,
+      "valuation_usd": 10000000000,
+      "investors": "Sequoia Capital, Benchmark Capital, Coatue",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "San Francisco"
+      ]
+    },
+    "source_url": "https://www.financialcontent.com/article/bizwire-2026-9-28-instinct-raises-1-billion-in-series-c-funding-from-sequoia-benchmark-and-coatue-at-10-billion-valuation",
+    "evidence": "Instinct Raises $1 Billion in Series C Funding from Sequoia, Benchmark and Coatue at $10 Billion Valuation",
+    "observed_at": "2026-10-01T15:56:53Z"
+  },
+  {
+    "data": {
+      "company": "Humanos",
+      "website": "https://www.humanos.tech/",
+      "focus": "Live risk scores and risk passports for AI agents, used by insurers, lenders and other financial providers",
+      "sector": "finance",
+      "stage": "seed",
+      "announced_on": "2026-09-28",
+      "amount_usd": 3200000,
+      "investors": "Anthemis, Springbank, Critical Ventures, Start Ventures, Transatlantic Highway Ventures",
+      "country": "Portugal",
+      "region": "europe",
+      "city": [
+        "Lisbon"
+      ]
+    },
+    "source_url": "https://portugalstartupnews.com/2026/09/28/humanos-raises-3-2m-to-build-risk-infrastructure-for-ai-agents/",
+    "evidence": "Lisbon-based startup Humanos has raised $3.2 million in seed funding to develop infrastructure for monitoring and assessing the risks associated with AI agents, Sifted reports. The round was led by Anthemis, with participation from Springbank, Critical Ventures, and Start Ventures.",
+    "observed_at": "2026-10-01T15:58:35Z"
+  },
+  {
+    "data": {
+      "company": "HiringCafe",
+      "website": "https://hiringcafe.com/",
+      "focus": "AI job search engine and AI talent agents that index openings from company career pages",
+      "sector": "consumer",
+      "stage": "pre-seed",
+      "announced_on": "2026-09-28",
+      "amount_usd": 6800000,
+      "investors": "Spark Capital, Nonfiction Capital, Silicon Gardens, Sarah Smith Fund, Night Capital",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "San Francisco"
+      ]
+    },
+    "source_url": "https://www.webwire.com/ViewPressRel.asp?aId=361033",
+    "evidence": "HiringCafe, an agentic job discovery platform, today announced $6.8 million in pre-seed funding led by Spark Capital, along with Nonfiction Capital, Silicon Gardens, Sarah Smith Fund, Night Capital, and angel investors from ZipRecruiter and Indeed.",
+    "observed_at": "2026-10-01T16:03:00Z"
+  },
+  {
+    "data": {
+      "company": "Helix Digital Infrastructure",
+      "website": "https://www.helixdi.com/",
+      "focus": "Hyperscale AI data centers with integrated power generation, transmission and fiber",
+      "sector": "infrastructure",
+      "stage": "strategic",
+      "announced_on": "2026-09-28",
+      "amount_usd": 1000000000,
+      "investors": "Samsung",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "New York"
+      ]
+    },
+    "source_url": "https://www.financialcontent.com/article/bizwire-2026-9-28-samsung-commits-1-billion-to-helix-digital-infrastructure-to-support-global-ai-infrastructure-buildout",
+    "evidence": "Helix Digital Infrastructure (\"Helix\") and KKR today announced that Samsung has committed $1 billion to Helix, an AI infrastructure company formed by KKR to help meet the growing infrastructure needs of hyperscalers, through its long-duration capital fund.",
+    "observed_at": "2026-10-01T16:29:32Z"
+  },
+  {
+    "data": {
+      "company": "Extend Robotics",
+      "website": "https://www.extendrobotics.com/",
+      "focus": "Immersive teleoperation platform for industrial robots, sold as pay-per-result robotic work",
+      "sector": "robotics",
+      "stage": "pre-series-a",
+      "announced_on": "2026-09-28",
+      "amount_stated": "£2.6 million",
+      "investors": "Skyworks Venture Capital Fund, Neo Venture (Europe), Zip Capital",
+      "country": "United Kingdom",
+      "region": "europe",
+      "city": [
+        "Reading"
+      ]
+    },
+    "source_url": "https://www.extendrobotics.com/post/extend-robotics-raises-2-6-million-to-let-manufacturers-hire-robots-by-the-outcome-not-buy-them-by",
+    "evidence": "Extend Robotics, the UK embodied-AI company behind an immersive teleoperation platform for industrial robots, has closed a £2.6 million Pre-A funding round led by Skyworks Venture Capital Fund, with participation from Neo Venture (Europe) and Zip Capital.",
+    "observed_at": "2026-10-01T16:18:03Z"
+  },
+  {
+    "data": {
+      "company": "Blue Worm (蓝虫具身)",
+      "website": "https://www.bluewormrobotics.com/",
+      "focus": "Modular wheeled humanoid robots with in-house embodied AI models, teleoperation and cloud data platform",
+      "sector": "robotics",
+      "stage": "angel",
+      "announced_on": "2026-09-28",
+      "amount_stated": "tens of millions of yuan",
+      "investors": "Xi'an High-Tech Industry Venture Capital (西高投)",
+      "country": "China",
+      "region": "asia-pacific",
+      "city": [
+        "Xi'an"
+      ]
+    },
+    "source_url": "https://finance.sina.com.cn/money/fund/fundzmt/2026-09-28/doc-initkxux9624661.shtml",
+    "evidence": "2026年9月，全栈具身智能企业蓝虫具身完成数千万元天使轮融资。本轮融资由西安高新技术产业风险投资有限责任公司（简称 “西高投”）领投。本轮融资将用于产线建设、产品研发、场景拓展与团队扩建。",
+    "observed_at": "2026-10-01T16:00:02Z"
+  },
+  {
+    "data": {
+      "company": "bilt.me",
+      "website": "https://bilt.me/",
+      "focus": "AI agent that builds and publishes native iOS and Android apps from plain-language prompts",
+      "sector": "developer-tools",
+      "stage": "pre-seed",
+      "announced_on": "2026-09-28",
+      "amount_stated": "€615,000",
+      "investors": "Superhero Capital, Markus Villig, Martin Sokk",
+      "country": "Estonia",
+      "region": "europe",
+      "city": [
+        "Tallinn"
+      ]
+    },
+    "source_url": "https://arcticstartup.com/bilt-me-raises-e615k/",
+    "evidence": "AI startup bilt.me has raised €615,000 in pre-seed funding in a round led by Superhero Capital, with backing from Bolt founder Markus Villig and Lightyear founder Martin Sokk.",
+    "observed_at": "2026-10-01T16:18:02Z"
+  },
+  {
+    "data": {
+      "company": "Nscale",
+      "website": "https://www.nscale.com/",
+      "focus": "AI cloud platform with its own data centers, power and GPU clusters",
+      "sector": "infrastructure",
+      "stage": "other",
+      "round": "Pre-IPO convertible loan notes",
+      "announced_on": "2026-09-25",
+      "amount_usd": 3360000000,
+      "investors": "Third Point, NVIDIA, funds managed by Apollo, Citadel, Hudson Bay Capital, Abu Dhabi Investment Council, 8090 Industries",
+      "country": "United Kingdom",
+      "region": "europe",
+      "city": [
+        "London"
+      ]
+    },
+    "source_url": "https://www.nscale.com/press-releases/pre-ipo-convertible-financing",
+    "evidence": "Nscale Limited, the full-stack AI cloud platform, today announced its $3.36bn raise via convertible loan notes, led by Third Point. The convertible funding round was also supported by new and existing investors including NVIDIA, funds managed by Apollo, Citadel, Hudson Bay Capital",
+    "observed_at": "2026-10-01T15:58:17Z"
+  },
+  {
+    "data": {
+      "company": "Trebellar",
+      "website": "https://trebellar.com/",
+      "focus": "AI platform and agents for corporate real estate portfolio data, planning and decisions",
+      "sector": "enterprise",
+      "stage": "series-a",
+      "announced_on": "2026-09-24",
+      "amount_usd": 18000000,
+      "investors": "Blossom Capital, Haystack, Alt Capital, 1Flourish, Bynd",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "San Francisco"
+      ]
+    },
+    "source_url": "https://www.financialcontent.com/article/bizwire-2026-9-24-trebellar-raises-18m-series-a-to-bring-ai-to-corporate-real-estate-management",
+    "evidence": "Trebellar, a company building AI-native decision making for corporate real estate management, today announced $18 million in Series A funding led by Blossom Capital, with participation from Haystack, Alt Capital, 1Flourish, and Bynd.",
+    "observed_at": "2026-10-01T15:52:46Z"
+  },
+  {
+    "data": {
+      "company": "SOG AI-Technology (索格智算)",
+      "website": "https://www.sog-aitech.com/",
+      "focus": "AI atomic models and simulation software for new materials R&D",
+      "sector": "other",
+      "stage": "angel",
+      "announced_on": "2026-09-24",
+      "amount_stated": "tens of millions of yuan",
+      "investors": "复星创富, 南通产控思源人工智能先导基金, 云启资本, 中赢创投, 紫竹科投",
+      "country": "China",
+      "region": "asia-pacific",
+      "city": [
+        "Shanghai"
+      ]
+    },
+    "source_url": "https://www.36kr.com/p/3996737880559493",
+    "evidence": "硬氪获悉，AI for Materials公司——索格智算（上海）科技有限公司【以下简称“索格智算”】近期已完成数千万元天使轮融资。本轮由复星创富领投，南通产控思源人工智能先导基金、云启资本、中赢创投跟投，紫竹科投等老股东追加投资。",
+    "observed_at": "2026-10-01T16:01:00Z"
+  },
+  {
+    "data": {
+      "company": "PicoJool",
+      "website": "https://www.picojool.com/",
+      "focus": "VCSEL lasers and optical connectivity products for AI data centers",
+      "sector": "infrastructure",
+      "stage": "series-a",
+      "announced_on": "2026-09-24",
+      "amount_usd": 27500000,
+      "investors": "Socratic Partners, Hudson River Trading (HRT)",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "Palo Alto"
+      ]
+    },
+    "source_url": "https://www.picojool.com/news/picojool-raises-27-5-million-series-a-to-scale-optical-connectivity-for-ai-infrastructure",
+    "evidence": "PicoJool, a pioneer in optical connectivity for AI infrastructure, announced it has raised $27.5 million in Series A funding led by Socratic Partners, with participation from Hudson River Trading (HRT).",
+    "observed_at": "2026-10-01T16:18:03Z"
+  },
+  {
+    "data": {
+      "company": "Kontext",
+      "website": "https://kontext.security/",
+      "focus": "Runtime authorization that checks AI agents' tool calls against security policy before they execute",
+      "sector": "security",
+      "stage": "seed",
+      "announced_on": "2026-09-24",
+      "amount_usd": 4000000,
+      "investors": "42CAP, a16z CSX, HTGF",
+      "country": "Germany",
+      "region": "europe",
+      "city": [
+        "Munich"
+      ]
+    },
+    "source_url": "https://www.finsmes.com/2026/09/kontext-raises-4m-in-seed-funding.html",
+    "evidence": "Kontext, a Munich, Germany-based provider of a security platform for AI agents, raised $4M in seed funding. The round was led by 42CAP with participation from a16z CSX and HTGF.",
+    "observed_at": "2026-10-01T16:02:07Z"
+  },
+  {
+    "data": {
+      "company": "Island",
+      "website": "https://www.island.io/",
+      "focus": "Enterprise browser and control plane that secures and audits what employees and AI agents do across apps and data",
+      "sector": "security",
+      "stage": "series-e-plus",
+      "round": "Series F",
+      "announced_on": "2026-09-24",
+      "amount_usd": 400000000,
+      "valuation_usd": 6400000000,
+      "investors": "Evolution Equity Partners, Prysm Capital, Sequoia Capital, Coatue Management, Cyberstarts, Insight Partners, J.P. Morgan Growth Equity Partners, Alta Park Capital, Georgian, G Squared, Squarepoint, Dmitri Alperovitch",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "Dallas"
+      ]
+    },
+    "source_url": "https://www.globenewswire.com/news-release/2026/09/24/3368154/0/en/island-announces-400-million-series-f-bringing-valuation-to-6-4-billion.html",
+    "evidence": "Island, the agentic control plane for enterprises, announced its $400 million Series F financing round which brings the company’s valuation to $6.4 billion, more than doubling since 2024. Evolution Equity Partners led the round, with participation from existing and new investors.",
+    "observed_at": "2026-10-01T16:01:17Z"
+  },
+  {
+    "data": {
+      "company": "Feather Robotics",
+      "website": "https://feather.dev/",
+      "focus": "Modular humanoid robot platform for third-party developers",
+      "sector": "robotics",
+      "stage": "pre-seed",
+      "announced_on": "2026-09-24",
+      "amount_usd": 7600000,
+      "investors": "Gradient Ventures, Builder Capital, Geometry, SEED Innovations, Virgo VC",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "East Palo Alto"
+      ]
+    },
+    "source_url": "https://www.investegate.co.uk/announcement/rns/seed-innovations-limited--seed/investee-company-update-feather-robotics-inc-/9792430",
+    "evidence": "FEATHER ROBOTICS INC. (\"FEATHER\"), a platform for humanoid robots aiming to build an ecosystem akin to Apple's and Nvidia's, today announced $7.6 million in pre-seed funding led by Gradient with participation from Builder Capital, Geometry, SEED Innovations, and Virgo VC.",
+    "observed_at": "2026-10-01T15:56:47Z"
+  },
+  {
+    "data": {
+      "company": "Dextr AI",
+      "website": "https://www.dextr.ai/",
+      "focus": "AI agents for hotels that handle reservations, guest requests, staffing and back-office tasks",
+      "sector": "enterprise",
+      "stage": "seed",
+      "announced_on": "2026-09-24",
+      "amount_usd": 6700000,
+      "investors": "Elevation Capital, Foundation Capital",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.webwire.com/ViewPressRel.asp?aId=360910",
+    "evidence": "Dextr AI, the AI agent platform for hospitality, today announced a $6.7 million seed round led by Elevation Capital, with participation from Foundation Capital.",
+    "observed_at": "2026-10-01T15:59:27Z"
+  },
+  {
+    "data": {
+      "company": "BigHat Biosciences",
+      "website": "https://www.bighatbio.com/",
+      "focus": "AI-designed protein therapeutics, using an automated lab and machine learning platform for protein design",
+      "sector": "health",
+      "stage": "series-c",
+      "announced_on": "2026-09-24",
+      "amount_usd": 75000000,
+      "investors": "DFJ Growth, Premji Invest, Catalio Capital Management, LG Technology Ventures, Sigmas Group, 8VC, Alexandria Venture Investments, Amgen Ventures, Andreessen Horowitz (a16z), Eli Lilly and Company, Merck Global Health Innovation Fund",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "San Mateo"
+      ]
+    },
+    "source_url": "https://www.bighatbio.com/news/bighat-biosciences-announces-75-million-series-c-financing",
+    "evidence": "BigHat Biosciences, a clinical-stage, AI-driven protein therapeutics platform company, today announced the completion of a $75 million Series C financing, bringing its total funding raised to date to $223 million. The round was co-led by DFJ Growth & Premji Invest",
+    "observed_at": "2026-10-01T16:06:00Z"
+  },
+  {
+    "data": {
+      "company": "Axya",
+      "website": "https://www.axya.co/",
+      "focus": "AI procurement software that automates sourcing and purchasing for manufacturers",
+      "sector": "enterprise",
+      "stage": "series-a",
+      "announced_on": "2026-09-24",
+      "amount_stated": "$17 million CAD",
+      "investors": "McRock Capital, Yamaha Motor Ventures, BDC Industrial Innovation Venture Fund, Real Ventures",
+      "country": "Canada",
+      "region": "americas",
+      "city": [
+        "Montreal"
+      ]
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/axya-secures-17-million-cad-in-funding-to-help-manufacturers-modernize-procurement-with-ai-302888441.html",
+    "evidence": "Axya, the AI-powered procurement platform that automates sourcing and purchasing for manufacturers, announced a $17 million CAD Series A funding round",
+    "observed_at": "2026-10-01T15:58:40Z"
+  },
+  {
+    "data": {
+      "company": "Spiich",
+      "website": "https://www.spiich.ai/",
+      "focus": "AI agents that do prospecting, meeting prep, CRM updates and follow-ups for sales teams",
+      "sector": "enterprise",
+      "stage": "seed",
+      "announced_on": "2026-09-23",
+      "amount_stated": "€3 million",
+      "investors": "Ugly Duckling Ventures, Alliance VC, Cherry Ventures, Ampli Ventures",
+      "city": [
+        "Stockholm"
+      ],
+      "country": "Sweden",
+      "region": "europe"
+    },
+    "source_url": "https://www.spiich.ai/articles/spiich-raises-3m-seed-round",
+    "evidence": "STOCKHOLM, 23 SEPTEMBER 2026: Spiich Labs today announced a €3 million seed round led by Copenhagen-based Ugly Duckling Ventures, with Alliance VC and Cherry Ventures joining as new investors and pre-seed lead Ampli Ventures following on.",
+    "observed_at": "2026-10-01T16:03:20Z"
+  },
+  {
+    "data": {
+      "company": "ORCAUBOAT (欧卡智舶)",
+      "website": "https://www.orcauboat.com/",
+      "focus": "Autonomous navigation systems for boats and unmanned surface vessels for water cleaning, inspection and leisure",
+      "sector": "robotics",
+      "stage": "series-c",
+      "announced_on": "2026-09-23",
+      "amount_stated": "several hundred million yuan",
+      "investors": "Xi'an High-Tech Investment (西高投), Yuanhe Puhua (元禾璞华), Sanyuan Capital (三元资本)",
+      "country": "China",
+      "region": "asia-pacific",
+      "city": [
+        "Xi'an"
+      ]
+    },
+    "source_url": "https://finance.eastmoney.com/a/202609233882252873.html",
+    "evidence": "海面具身智能公司欧卡智舶近日完成数亿C轮融资，半年累计规模达3亿元，本轮由西高投领投，元禾璞华、三元资本跟投。",
+    "observed_at": "2026-10-01T16:03:20Z"
+  },
+  {
+    "data": {
+      "company": "Numeral",
+      "website": "https://www.numeral.com/",
+      "focus": "AI-powered sales tax, VAT and GST compliance: nexus monitoring, registrations, filings and remittance",
+      "sector": "finance",
+      "stage": "series-c",
+      "announced_on": "2026-09-23",
+      "amount_usd": 100000000,
+      "investors": "Insight Partners, Salesforce Ventures, Geodesic, Benchmark, Mayfield, FCVC, Y Combinator, Uncork",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "San Francisco"
+      ]
+    },
+    "source_url": "https://www.numeral.com/blog/series-c",
+    "evidence": "Numeral, the AI-powered sales tax compliance platform, today announced a $100 million Series C led by Insight Partners, with participation from Salesforce Ventures, Geodesic, Benchmark, Mayfield, FCVC, Y Combinator and Uncork.",
+    "observed_at": "2026-10-01T16:02:13Z"
+  },
+  {
+    "data": {
+      "company": "mika",
+      "website": "https://getmika.de/",
+      "focus": "AI-native bookkeeping, VAT and tax filing platform for German small businesses",
+      "sector": "finance",
+      "stage": "seed",
+      "announced_on": "2026-09-23",
+      "amount_stated": "€6 million",
+      "investors": "Smedvig Ventures, Wecken & Cie. (Care4 AG), Dennis Bemmann, Michael Brehm, Johannes Ditterich, Martina Pfeifer, Keen Venture Partners, Dutch Founders Fund",
+      "country": "Germany",
+      "region": "europe",
+      "city": [
+        "Berlin"
+      ]
+    },
+    "source_url": "https://tech.eu/2026/09/23/german-ai-startup-mika-raises-eur6m-to-simplify-accounting-and-tax-for-smes",
+    "evidence": "Berlin-based vertical AI startup mika has raised €6 million in a seed round led by pan-European investor Smedvig Ventures.",
+    "observed_at": "2026-10-01T16:18:04Z"
+  },
+  {
+    "data": {
+      "company": "Ema",
+      "website": "https://www.ema.ai/",
+      "focus": "AI agents that run HR, IT and finance workflows for large enterprises",
+      "sector": "enterprise",
+      "stage": "series-b",
+      "announced_on": "2026-09-23",
+      "amount_usd": 77000000,
+      "investors": "Creaegis, Accel, S32, Prosus",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "Mountain View"
+      ]
+    },
+    "source_url": "https://www.ema.ai/blog/funding-announcement/ema-raises-series-b",
+    "evidence": "Today we're announcing our $77 million Series B, led by Creaegis, with Accel, S32, and Prosus all increasing their existing investments in Ema.",
+    "observed_at": "2026-10-01T16:18:04Z"
+  },
+  {
+    "data": {
+      "company": "Brahma AI",
+      "website": "https://www.brahma.io/",
+      "focus": "AI platform for enterprise audiovisual content: archive search, AI video creation, digital humans and voice localisation",
+      "sector": "enterprise",
+      "stage": "other",
+      "announced_on": "2026-09-23",
+      "amount_usd": 150000000,
+      "investors": "Multiples Alternate Asset Management",
+      "city": [
+        "London"
+      ],
+      "country": "United Kingdom",
+      "region": "europe"
+    },
+    "source_url": "https://inc42.com/buzz/multiples-leads-150-mn-funding-round-in-brahma-ai/",
+    "evidence": "Multiples Alternate Asset Management has led a $150 Mn funding round in Prime Focus-backed AI audiovisual content platform Brahma AI, with the investment firm putting in $100 Mn through preferred shares.",
+    "observed_at": "2026-10-01T16:07:37Z"
+  },
+  {
+    "data": {
+      "company": "Basecamp Research",
+      "website": "https://www.basecamp-research.com/",
+      "focus": "AI models (EDEN) trained on proprietary genomic data to design therapeutics, starting with in vivo cell therapy",
+      "sector": "health",
+      "stage": "series-c",
+      "announced_on": "2026-09-23",
+      "amount_usd": 140000000,
+      "investors": "S32, NVIDIA, Menlo Ventures' Anthology Fund, Catalio Capital Management, European Tech Collective, Firebrand River Capital, Inception Fund, King Philanthropies, NATO Innovation Fund, PostScriptum, Redalpine, The Rockefeller Foundation",
+      "country": "United Kingdom",
+      "region": "europe",
+      "city": [
+        "London"
+      ]
+    },
+    "source_url": "https://www.basecamp-research.com/news-research/basecamp-research-raises-140m-to-advance-ai-designed-therapeutics",
+    "evidence": "Basecamp Research, a frontier AI company developing AI-designed medicines, today announced a $140M Series C financing to train a new generation of EDEN models and advance a pipeline of AI-designed therapeutics towards clinical development.",
+    "observed_at": "2026-10-01T16:03:49Z"
+  },
+  {
+    "data": {
+      "company": "Verda",
+      "website": "https://verda.com/",
+      "focus": "Full-stack AI cloud: GPU compute, data centers and inference services",
+      "sector": "infrastructure",
+      "stage": "series-b",
+      "announced_on": "2026-09-22",
+      "amount_usd": 189000000,
+      "investors": "Emergence Capital, MUFG Innovation Partners, Supermicro, Varma Mutual Pension Insurance Company, Lifeline Ventures, ENDUR, 6 Degrees Capital (6DC), byFounders, Tesi (Finnish Industry Investment Ltd), Ola Tørudbakken, Mark Saroufim",
+      "country": "Finland",
+      "region": "europe",
+      "city": [
+        "Helsinki"
+      ]
+    },
+    "source_url": "https://verda.com/blog/verda-raises-189m",
+    "evidence": "Helsinki, Finland — 10am EEST, Tuesday 22nd September | European technology company Verda today announced it has raised $189/€163M million in new funding to scale its full-stack AI cloud. The financing includes an oversubscribed Series B led by Emergence Capital, plus additional investment.",
+    "observed_at": "2026-10-01T16:09:00Z"
+  },
+  {
+    "data": {
+      "company": "Snorkel AI",
+      "website": "https://snorkel.ai/",
+      "focus": "Expert-built training datasets, evaluations and RL environments for frontier AI labs and enterprises",
+      "sector": "developer-tools",
+      "stage": "series-e-plus",
+      "round": "Series E",
+      "announced_on": "2026-09-22",
+      "amount_usd": 350000000,
+      "valuation_usd": 3500000000,
+      "investors": "Insight Partners, S32, Addition, March Capital, Blumberg Capital, Allegis Capital, Frontline, Standard, Third Point Ventures, Greylock, Lightspeed, GV, Factory, Prosperity7, Walden Catalyst, Wells Fargo",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "San Francisco"
+      ]
+    },
+    "source_url": "https://snorkel.ai/press/snorkel-ai-raises-350m-to-scale-the-data-factory-for-frontier-ai/",
+    "evidence": "Series E round led by Insight Partners and S32 as company surpasses $375M in ARRR, up more than 18x in less than a year. September 22, 2026 SAN FRANCISCO, September 22, 2026 - Snorkel AI, the frontier AI data lab, today announced it raised $350 million at a valuation of $3.5B",
+    "observed_at": "2026-10-01T16:02:25Z"
+  },
+  {
+    "data": {
+      "company": "Palma.ai",
+      "website": "https://palma.ai/",
+      "focus": "Governance layer that checks identity, permissions and policy on AI agents' MCP tool calls, with approvals and audit trails",
+      "sector": "security",
+      "stage": "pre-seed",
+      "announced_on": "2026-09-22",
+      "amount_usd": 1800000,
+      "investors": "D11Z, Plug and Play Ventures, Deel, Scale Now Ventures",
+      "country": "Germany",
+      "region": "europe",
+      "city": [
+        "Berlin"
+      ]
+    },
+    "source_url": "https://www.eu.vc/p/palma-ai-raises-1-8m-pre-seed-for-agent-governance",
+    "evidence": "Berlin-based Palma.ai has raised $1.8m in pre-seed funding led by D11Z. Plug and Play Ventures, Deel, Scale Now Ventures and angel investors including executives from Cisco and Deel also participated.",
+    "observed_at": "2026-10-01T15:55:31Z"
+  },
+  {
+    "data": {
+      "company": "Outerlimit",
+      "website": "https://www.outerlimit.com/",
+      "focus": "Decentralized security and authorization layer that controls what AI agents can do",
+      "sector": "security",
+      "stage": "pre-seed",
+      "announced_on": "2026-09-22",
+      "amount_usd": 16000000,
+      "investors": "AlbionVC, Evolution Equity Partners, Crane Venture Partners",
+      "country": "United Kingdom / United States",
+      "region": "europe",
+      "city": [
+        "London",
+        "New York"
+      ]
+    },
+    "source_url": "https://www.globenewswire.com/news-release/2026/09/22/3366243/0/en/outerlimit-emerges-from-stealth-to-extend-zero-trust-to-the-agent-action-layer-by-creating-a-new-paradigm-to-secure-agentic-ai.html",
+    "evidence": "Outerlimit today emerged from stealth as the world's first decentralized security and authorization layer designed specifically for securing agentic AI. Having raised $16 million in pre-seed funding from AlbionVC, Evolution Equity Partners and Crane Venture Partners",
+    "observed_at": "2026-10-01T16:18:05Z"
+  },
+  {
+    "data": {
+      "company": "Midcentury",
+      "website": "https://www.midcentury.xyz/",
+      "focus": "Egocentric human-action datasets and a simulation platform for training and evaluating robot policies",
+      "sector": "robotics",
+      "stage": "seed",
+      "announced_on": "2026-09-22",
+      "amount_usd": 15000000,
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "New York"
+      ]
+    },
+    "source_url": "https://www.tao.media/midcentury-raises-15m-seed-to-build-physical-ai-data-and-simulation-infrastructure/",
+    "evidence": "Midcentury has emerged from stealth with a $15 million Series Seed to build data and simulation infrastructure for physical AI. It is targeting two of robotics' hardest scaling problems: real-world action data and reliable policy evaluation. The company announced the funding and launch on Tuesday",
+    "observed_at": "2026-10-01T16:08:00Z"
+  },
+  {
+    "data": {
+      "company": "Infini",
+      "website": "https://infini.money/",
+      "focus": "Stablecoin-settled accounts, cards and treasury with AI financial agents for bookkeeping, approvals and payments",
+      "sector": "finance",
+      "stage": "seed",
+      "announced_on": "2026-09-22",
+      "amount_usd": 6000000,
+      "investors": "Reforge, Fortwest Capital, Enlight Capital, NextGen Digital Venture, SNZ Capital, Vernal",
+      "country": "Hong Kong",
+      "region": "asia-pacific",
+      "city": [
+        "Hong Kong"
+      ]
+    },
+    "source_url": "https://www.pymnts.com/newswire-announcements/infini-raises-6m-seed-round-to-scale-its-ai-powered-global-financial-platform/",
+    "evidence": "Infini, an AI-powered global financial platform, today announced the close of a $6 million seed funding round. The round included participation from leading venture capital firms, including Reforge, Fortwest Capital, Enlight Capital, NextGen Digital Venture, SNZ Capital, and Vernal.",
+    "observed_at": "2026-10-01T16:04:58Z"
+  },
+  {
+    "data": {
+      "company": "Heidi",
+      "website": "https://www.heidihealth.com/",
+      "focus": "AI care partner for clinicians: ambient clinical documentation, medical evidence search and dictation",
+      "sector": "health",
+      "stage": "series-c",
+      "announced_on": "2026-09-22",
+      "amount_usd": 100000000,
+      "valuation_usd": 900000000,
+      "investors": "Blackbird, Phoenix Court, Point72 Private Investments, Headline",
+      "country": "Australia",
+      "region": "asia-pacific",
+      "city": [
+        "Melbourne"
+      ]
+    },
+    "source_url": "https://www.heidihealth.com/en-gb/blog/heidi-secures-us340m-to-scale-agents-across-health-systems-globally",
+    "evidence": "today announced the close of a US$100 million Series C funding round led by Blackbird, with participation from other existing investors including Phoenix Court (the home of LocalGlobe, Latitude and Solar funds), Point72 Private Investments, and Headline. The round values Heidi at US$900 million.",
+    "observed_at": "2026-10-01T16:06:07Z"
+  },
+  {
+    "data": {
+      "company": "Go.AI",
+      "website": "https://go.ai/",
+      "focus": "On-premises AI hardware appliance and operating system for regulated organizations such as banks and hospitals",
+      "sector": "infrastructure",
+      "stage": "series-a",
+      "announced_on": "2026-09-22",
+      "amount_usd": 85000000,
+      "investors": "Updata Partners, GFT Ventures, LAUNCH",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "Chicago"
+      ]
+    },
+    "source_url": "https://go.ai/company/press/series-a-funding",
+    "evidence": "CHICAGO — September 22, 2026 — Go.AI™, the leading provider of on-premises, examiner-ready AI infrastructure for regulated industries, today announced it has raised $85 million in Series A funding, bringing total funding to date to $90 million. The round was led by Updata Partners",
+    "observed_at": "2026-10-01T16:18:00Z"
+  },
+  {
+    "data": {
+      "company": "Cyera",
+      "website": "https://www.cyera.com/",
+      "focus": "Data security and access governance for people, machines and AI agents",
+      "sector": "security",
+      "stage": "series-e-plus",
+      "round": "Series G extension",
+      "announced_on": "2026-09-22",
+      "amount_usd": 400000000,
+      "investors": "Growth Equity at Goldman Sachs Alternatives",
+      "country": "United States / Israel",
+      "region": "americas",
+      "city": [
+        "New York"
+      ]
+    },
+    "source_url": "https://www.cyera.com/press-releases/cyera-announces-400-million-investment-from-goldman-sachs-to-build-the-trust-layer-for-the-agentic-enterprise",
+    "evidence": "Cyera today announced a $400 million extension from Growth Equity at Goldman Sachs Alternatives to its Series G, led by Evolution Equity, accelerating the company's mission to build a unified platform that governs access for every human, machine, and AI agent across the enterprise.",
+    "observed_at": "2026-10-01T16:03:51Z"
+  },
+  {
+    "data": {
+      "company": "Biolevate",
+      "website": "https://www.biolevate.com/",
+      "focus": "AI agents that automate scientific and regulatory workflows for life sciences companies",
+      "sector": "health",
+      "stage": "series-a",
+      "announced_on": "2026-09-22",
+      "amount_stated": "€30 million",
+      "investors": "RAISE France, Orange Ventures, MSD Global Health Innovation Fund (MGHIF), Station F, EQT Ventures",
+      "country": "France",
+      "region": "europe",
+      "city": [
+        "Sucy-en-Brie"
+      ]
+    },
+    "source_url": "https://tech.eu/2026/09/22/biolevate-lands-eur30m-series-a-to-scale-life-sciences-ai/",
+    "evidence": "Life sciences AI company Biolevate has raised €30 million in Series A funding to expand its platform for automating scientific and regulatory workflows and support its international growth.",
+    "observed_at": "2026-10-01T16:18:05Z"
+  },
+  {
+    "data": {
+      "company": "BCI-Sonics (华超神控)",
+      "website": "https://www.bcisonics.com/",
+      "focus": "Non-invasive brain-computer interface combining focused-ultrasound neuromodulation, brain sensing and AI neural decoding",
+      "sector": "health",
+      "stage": "pre-series-a",
+      "announced_on": "2026-09-22",
+      "amount_stated": "200 million yuan",
+      "investors": "Sequoia China (红杉中国), Yunqi Partners (云启资本), 比邻星投资, Oriza Holdings (元禾控股), 徐汇科创投, 德石投资, Matrix Partners China (经纬创投), Delian Capital (德联资本)",
+      "country": "China",
+      "region": "asia-pacific",
+      "city": [
+        "Shanghai"
+      ]
+    },
+    "source_url": "https://finance.sina.com.cn/tech/roll/2026-09-22/doc-inisscmp5712523.shtml",
+    "evidence": "9月22日讯，近日，非侵入AI脑机接口公司华超神控（BCI-Sonics）宣布完成2亿元人民币Pre-A轮融资。本轮融资由红杉中国与云启资本联合领投，比邻星投资、元禾控股、徐汇科创投、德石投资跟投，老股东经纬创投、德联资本持续加注。",
+    "observed_at": "2026-10-01T16:04:26Z"
+  },
+  {
+    "data": {
+      "company": "Baselayer",
+      "website": "https://baselayer.com/",
+      "focus": "AI-powered identity verification and fraud checks for businesses and the AI agents acting for them",
+      "sector": "security",
+      "stage": "series-a",
+      "announced_on": "2026-09-22",
+      "amount_usd": 35000000,
+      "investors": "M13, Torch Capital, Picus Ventures, Afore Capital, Matt Thompson",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "New York"
+      ]
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/baselayer-raises-35m-series-a-led-by-m13-launches-identity-infrastructure-for-ai-agents-302885670.html",
+    "evidence": "Baselayer, the identity and risk infrastructure company trusted by 1 in 5 financial institutions nationwide, today announced it has raised a $35 million Series A led by M13, with participation from Torch Capital, Picus Ventures, Afore Capital, and Matt Thompson of Socure.",
+    "observed_at": "2026-10-01T16:11:01Z"
+  },
+  {
+    "data": {
+      "company": "Astrus",
+      "website": "https://www.astrus.ai/",
+      "focus": "Reinforcement-learning AI that automates the physical layout of analog integrated circuits",
+      "sector": "infrastructure",
+      "stage": "series-a",
+      "announced_on": "2026-09-22",
+      "amount_usd": 12000000,
+      "investors": "Caffeinated Capital, Khosla Ventures, Garage Capital, MVP Ventures, RiSC Capital",
+      "country": "Canada",
+      "region": "americas",
+      "city": [
+        "Toronto",
+        "Waterloo"
+      ]
+    },
+    "source_url": "https://betakit.com/with-new-funding-astrus-prepares-to-automate-one-of-the-biggest-bottlenecks-in-chip-design/",
+    "evidence": "Kitchener-Waterloo- and Toronto-based Astrus has closed a new, $12-million USD ($16-million CAD) Series A round, co-founder and CEO Brad Moon told BetaKit in an interview.",
+    "observed_at": "2026-10-01T16:05:20Z"
+  },
+  {
+    "data": {
+      "company": "Zhongyi Embodied (中亿具身)",
+      "website": "https://www.zyijqr.com/",
+      "focus": "OS-level infrastructure for coordinating robots from different makers, with a robot leasing and maintenance platform",
+      "sector": "robotics",
+      "stage": "angel",
+      "announced_on": "2026-09-21",
+      "amount_stated": "nearly 100 million yuan",
+      "investors": "Controlling shareholder of 安达智能 (Anda Intelligent), 深港恒添, 北京君格瑞",
+      "country": "China",
+      "region": "asia-pacific",
+      "city": [
+        "Shenzhen"
+      ]
+    },
+    "source_url": "https://www.chinastarmarket.cn/detail/2489391",
+    "evidence": "近日，中亿（深圳）具身智能科技有限公司（下称“中亿具身”）完成近亿元天使轮融资，由安达智能控股股东领投，深港恒添、北京君格瑞跟投。",
+    "observed_at": "2026-10-01T16:07:24Z"
+  },
+  {
+    "data": {
+      "company": "Thri5",
+      "website": "https://www.thri5.com/",
+      "focus": "AI execution layer that helps retailers carry out head-office plans in stores",
+      "sector": "enterprise",
+      "stage": "seed",
+      "announced_on": "2026-09-21",
+      "amount_usd": 5400000,
+      "investors": "Whitecap Venture Partners, Mistral Ventures, MaRS Investment Accelerator Fund, N49P, Amar Varma, Farhan Thawar",
+      "country": "Canada",
+      "region": "americas",
+      "city": [
+        "Toronto"
+      ]
+    },
+    "source_url": "https://betakit.com/thri5-raises-5-4-million-usd-to-expand-ai-platform-for-retail-businesses/",
+    "evidence": "Thri5, which is developing an AI execution layer for retail business, says it has raised $5.4 million USD ($7.5 million CAD) in seed funding, with plans to use the capital to roughly double its 10-person team over the next year, as well as accelerate its go-to-market strategy.",
+    "observed_at": "2026-10-01T16:11:00Z"
+  },
+  {
+    "data": {
+      "company": "Feldera",
+      "website": "https://www.feldera.com/",
+      "focus": "Incremental view maintenance engine that keeps SQL views over large datasets fresh for AI agents and analytics",
+      "sector": "developer-tools",
+      "stage": "series-a",
+      "announced_on": "2026-09-21",
+      "amount_usd": 15400000,
+      "investors": "Inovia Capital, Costanoa Ventures, Battery Ventures",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "San Francisco"
+      ]
+    },
+    "source_url": "https://www.webwire.com/ViewPressRel.asp?aId=360730",
+    "evidence": "Feldera, the incremental view maintenance engine for enterprises, today announced $21.5 million across a $15.4M Series A round led by Inovia Capital, with participation from Costanoa Ventures and Battery Ventures, and a $6.1M Seed round led by Costanoa Ventures",
+    "observed_at": "2026-10-01T16:18:06Z"
+  },
+  {
+    "data": {
+      "company": "Anew Labs (新生实验室)",
+      "website": "https://anewbt.com/",
+      "focus": "AI drug discovery models for protein structure, molecular design and scientific reasoning, plus an in-house drug pipeline",
+      "sector": "health",
+      "stage": "other",
+      "announced_on": "2026-09-21",
+      "amount_usd": 290000000,
+      "valuation_usd": 1500000000,
+      "investors": "HSG, IDG Capital, GL Ventures, 5Y Capital, Gaorong Ventures, Primavera Venture Partners, Boyu Capital, SBP Group, Shanghai Future Industries Fund",
+      "country": "China",
+      "region": "asia-pacific",
+      "city": [
+        "Shanghai"
+      ]
+    },
+    "source_url": "https://www.finsmes.com/2026/09/anew-labs-raises-usd290m-in-funding-at-usd1-5-billion-valuation.html",
+    "evidence": "Anew Labs, a Shanghai, China-based artificial intelligence biotechnology and drug discovery startup, raised USD290m in funding at a USD1.5 billion valuation. The round was co-led by HSG, IDG Capital, GL Ventures, and 5Y Capital with participation from Gaorong Ventures, Primavera Venture Partners",
+    "observed_at": "2026-10-01T16:24:58Z"
+  },
+  {
+    "data": {
+      "company": "GENISOM AI (智身科技)",
+      "website": "https://www.genisomai.com/",
+      "focus": "Quadruped and humanoid robots, joint modules and navigation software for industrial inspection, emergency response and security",
+      "sector": "robotics",
+      "stage": "series-b",
+      "announced_on": "2026-09-20",
+      "amount_stated": "several hundred million yuan",
+      "investors": "Stone Venture (磊石资本), 洪山资本, 粤科金融, 吴中融玥, 吴中金控, 东软集团, 豪鹏科技, 远见资本, 日盈电子",
+      "country": "China",
+      "region": "asia-pacific",
+      "city": [
+        "Beijing"
+      ]
+    },
+    "source_url": "https://finance.sina.com.cn/tech/roll/2026-09-20/doc-inismvpc2593206.shtml",
+    "evidence": "2026年9月，具身智能机器人企业智身科技（GENISOM AI）宣布完成数亿元人民币B轮融资。本轮融资由阿联酋Stone Venture（磊石资本）领投，洪山资本、粤科金融、吴中融玥、吴中金控等投资机构，以及东软集团、豪鹏科技、远见资本、日盈电子等产业投资方共同参与。",
+    "observed_at": "2026-10-01T16:07:11Z"
+  },
+  {
+    "data": {
+      "company": "Synapath AI (枢途科技)",
+      "website": "https://www.synapath.com/",
+      "focus": "Embodied AI data pipeline that turns human video into robot training data (SynaData), plus tactile contact intelligence (SynaTac)",
+      "sector": "robotics",
+      "stage": "pre-series-a",
+      "announced_on": "2026-09-18",
+      "amount_stated": "nearly 100 million yuan",
+      "investors": "CDH Baifu (鼎晖百孚), 鲲鹏基金, 广州产投, 亿合资本, 趋势投资",
+      "country": "China",
+      "region": "asia-pacific",
+      "city": [
+        "Shenzhen"
+      ]
+    },
+    "source_url": "https://www.jiemian.com/article/15110526.html",
+    "evidence": "近日，枢途科技完成近亿元人民币Pre-A轮融资，本轮由鼎晖百孚、鲲鹏基金（大数据方向国家级基金）联合领投，广州产投、亿合资本联合投资，老股东趋势投资超额追投。",
+    "observed_at": "2026-10-01T16:10:05Z"
+  },
+  {
+    "data": {
+      "company": "Naive AI",
+      "website": "https://naive.ai/",
+      "focus": "Open-weight large language models built by further training existing open models",
+      "sector": "foundation-models",
+      "stage": "other",
+      "round": "Third round",
+      "announced_on": "2026-09-18",
+      "amount_usd": 120000000,
+      "valuation_usd": 1420000000,
+      "country": "China",
+      "region": "asia-pacific",
+      "city": [
+        "Beijing"
+      ]
+    },
+    "source_url": "https://finance.sina.com.cn/stock/usstock/c/2026-09-18/doc-inishenx0247774.shtml",
+    "evidence": "据知情人士透露，Naive AI的投资方包括腾讯、IDG资本、经纬创投（MPCi）以及红杉中国。知情人士称，公司首轮融资1亿美元，第二轮融资1.8亿美元，近期完成第三轮融资1.2亿美元，投后估值达14.2亿美元。",
+    "observed_at": "2026-10-01T16:02:13Z"
+  },
+  {
+    "data": {
+      "company": "Watney",
+      "website": "https://watney.com/",
+      "focus": "Dexterous robots that help hyperscalers build out and operate data centers",
+      "sector": "robotics",
+      "stage": "series-a",
+      "announced_on": "2026-09-17",
+      "amount_usd": 80000000,
+      "investors": "Valor Atreides AI Fund, Hummingbird Ventures, Conviction, Abstract, A*, Grant Gordon",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "San Francisco"
+      ]
+    },
+    "source_url": "https://watney.com/media/introducing-watney",
+    "evidence": "Introducing Watney Announcing our Series A Published 9.17.26 We've raised $80 million in Series A funding, co-led by the Valor Atreides AI Fund and Hummingbird Ventures, with continued participation from Conviction, Abstract, A*, and Grant Gordon.",
+    "observed_at": "2026-10-01T16:04:40Z"
+  },
+  {
+    "data": {
+      "company": "Treble Technologies",
+      "website": "https://www.treble.tech/",
+      "focus": "Acoustic simulation and synthetic audio data platform for voice devices and physical AI",
+      "sector": "developer-tools",
+      "stage": "series-a",
+      "round": "Series A-2",
+      "announced_on": "2026-09-17",
+      "amount_usd": 18000000,
+      "investors": "Paladin Capital Group, KOMPAS VC, Frumtak Ventures, European Innovation Council Fund",
+      "country": "Iceland",
+      "region": "europe",
+      "city": [
+        "Reykjavik"
+      ]
+    },
+    "source_url": "https://thenextweb.com/news/treble-18m-series-a2-acoustic-simulation-physical-ai",
+    "evidence": "Treble Technologies has raised $18m in a Series A-2 round led by Paladin Capital Group, taking its total funding to €36m.",
+    "observed_at": "2026-10-01T16:18:06Z"
+  },
+  {
+    "data": {
+      "company": "Raindrop",
+      "website": "https://www.raindrop.ai/",
+      "focus": "Monitoring, anomaly detection and simulation testing for AI agents in production",
+      "sector": "developer-tools",
+      "stage": "series-a",
+      "announced_on": "2026-09-17",
+      "investors": "CRV, Lightspeed Venture Partners, Y Combinator",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.vcaonline.com/news/2026091703/raindrop-announces-series-a-and-50m-in-total-funding-led-by-crv-to-protect-the-world-from-ai-agent-failures/",
+    "evidence": "SAN FRANCISCO, September 17, 2026-- Raindrop, the agent reliability company, raised a Series A led by CRV, bringing total funding to $50 million. Existing investors Lightspeed Venture Partners, Y Combinator participated along with lead researchers from OpenAI, Anthropic, and Thinking Machines.",
+    "observed_at": "2026-10-01T16:18:33Z"
+  },
+  {
+    "data": {
+      "company": "MIND",
+      "website": "https://mind.io/",
+      "focus": "AI-native data loss prevention platform with autonomous DLP agents covering GenAI, agentic AI and IT environments",
+      "sector": "security",
+      "stage": "series-b",
+      "announced_on": "2026-09-17",
+      "amount_usd": 72000000,
+      "investors": "Crosspoint Capital Partners, YL Ventures, Paladin Capital Group",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "Seattle"
+      ]
+    },
+    "source_url": "https://mind.io/newsroom/mind-raises-usd72m-series-b-funding-to-bring-complete-dlp-to-the-ai-era",
+    "evidence": "MIND®, the AI-native data loss prevention (DLP) platform, today announced $72M in Series B funding, just a year after its $30M Series A round, led by Crosspoint Capital Partners with participation from existing investors YL Ventures and Paladin Capital Group.",
+    "observed_at": "2026-10-01T16:11:15Z"
+  },
+  {
+    "data": {
+      "company": "Magentic",
+      "website": "https://www.magentic.com/",
+      "focus": "AI agents that run procurement and supply chain work, from supplier selection to purchase orders, for manufacturers",
+      "sector": "enterprise",
+      "stage": "series-a",
+      "announced_on": "2026-09-17",
+      "amount_usd": 18000000,
+      "investors": "Felicis, Sequoia Capital, The Westly Group",
+      "country": "United Kingdom / United States",
+      "region": "europe",
+      "city": [
+        "London",
+        "New York"
+      ]
+    },
+    "source_url": "https://www.magentic.com/stories/magentic-raises-18m",
+    "evidence": "Magentic, which provides AI digital workers for operations at large industrial companies, today announced an $18 million Series A. The round was raised a year after launch and led by Felicis, alongside existing investors Sequoia Capital and The Westly Group.",
+    "observed_at": "2026-10-01T16:07:34Z"
+  },
+  {
+    "data": {
+      "company": "Luzern Risk",
+      "website": "https://www.luzernrisk.com/",
+      "focus": "AI-native platform and services for forming and managing captive insurance companies",
+      "sector": "finance",
+      "stage": "series-b",
+      "announced_on": "2026-09-17",
+      "amount_usd": 45000000,
+      "investors": "Insight Partners, Trust Ventures, Caffeinated Capital",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "New York"
+      ]
+    },
+    "source_url": "https://www.luzernrisk.com/newsroom",
+    "evidence": "Luzern Risk has raised a $45M Series B led by Insight Partners, with participation from Trust Ventures and existing investor Caffeinated Capital.",
+    "observed_at": "2026-10-01T16:19:00Z"
+  },
+  {
+    "data": {
+      "company": "Euka",
+      "website": "https://euka.ai/",
+      "focus": "AI platform for brands to find, recruit and manage creator affiliates on TikTok Shop and Instagram",
+      "sector": "enterprise",
+      "stage": "seed",
+      "announced_on": "2026-09-17",
+      "amount_usd": 5000000,
+      "investors": "Susa Ventures, Creator Ventures",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "San Francisco"
+      ]
+    },
+    "source_url": "https://thenextweb.com/news/euka-instagram-tiktok-shop-creator-commerce",
+    "evidence": "Alongside the expansion, Euka is disclosing $5 million in previously raised seed funding led by Susa Ventures and Creator Ventures.",
+    "observed_at": "2026-10-01T16:18:06Z"
+  },
+  {
+    "data": {
+      "company": "D-Robotics (地瓜机器人)",
+      "website": "https://d-robotics.cc/",
+      "focus": "Computing chips (Sunrise series) and development platforms for robots",
+      "sector": "infrastructure",
+      "stage": "series-c",
+      "announced_on": "2026-09-17",
+      "amount_usd": 400000000,
+      "investors": "未来资产, 美团, 合肥国投, 南山战新投, 璟泉资本, 凯辉基金, 华美国际投资集团有限公司, 广发信德, 超越摩尔, 启航投资旗下芯创二期基金, 高瓴创投, 五源资本, 线性资本, 黄浦江资本, Vertex Growth, Prosperity7, 云锋基金, 美团龙珠",
+      "country": "China",
+      "region": "asia-pacific",
+      "city": [
+        "Shenzhen"
+      ]
+    },
+    "source_url": "https://www.jiemian.com/article/15106112.html",
+    "evidence": "9月17日，地瓜机器人宣布完成4亿美元C轮融资。本轮融资由未来资产领投，美团战投，合肥国投、南山战新投、璟泉资本等政府投资平台，凯辉基金、华美国际投资集团有限公司、广发信德、超越摩尔、启航投资旗下芯创二期基金等投资机构联合跟投",
+    "observed_at": "2026-10-01T16:14:00Z"
+  },
+  {
+    "data": {
+      "company": "Crusoe",
+      "website": "https://www.crusoe.ai/",
+      "focus": "Vertically integrated AI infrastructure: power generation, AI data centers, modular AI factories and the Crusoe Cloud GPU cloud",
+      "sector": "infrastructure",
+      "stage": "series-e-plus",
+      "round": "Series F",
+      "announced_on": "2026-09-17",
+      "amount_usd": 3900000000,
+      "valuation_usd": 30900000000,
+      "investors": "Atreides Management, Mubadala Capital, Valor Equity Partners, Founders Fund, GIC, NVIDIA, Qatar Investment Authority (QIA), Radical Ventures, TPG",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "Denver"
+      ]
+    },
+    "source_url": "https://www.crusoe.ai/resources/newsroom/crusoe-announces-series-f-funding",
+    "evidence": "DENVER – September 17, 2026 – Crusoe, the industry’s first vertically-integrated AI infrastructure provider, today announced the initial closing of its anticipated $3.9 billion Series F funding round, at a $30.9 billion post-money valuation.",
+    "observed_at": "2026-10-01T16:20:04Z"
+  },
+  {
+    "data": {
+      "company": "Comp AI",
+      "website": "https://www.trycomp.ai/",
+      "focus": "AI agents that automate security compliance (SOC 2 and other frameworks), control monitoring and penetration testing",
+      "sector": "security",
+      "stage": "series-a",
+      "announced_on": "2026-09-17",
+      "amount_usd": 34000000,
+      "investors": "Roo Capital, Grand Ventures",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "Miami"
+      ]
+    },
+    "source_url": "https://www.trycomp.ai/press/series-a",
+    "evidence": "Comp AI, the AI-native compliance and security platform, today announced a $34 million Series A led by Roo Capital and Grand Ventures.",
+    "observed_at": "2026-10-01T16:08:34Z"
+  },
+  {
+    "data": {
+      "company": "Veridion",
+      "website": "https://veridion.com/",
+      "focus": "Continuously updated AI-built graph of around 640 million businesses for procurement, risk and credit decisions",
+      "sector": "enterprise",
+      "stage": "series-a",
+      "announced_on": "2026-09-16",
+      "amount_usd": 20000000,
+      "investors": "Hoxton Ventures, Underline Ventures, OTB Ventures, Gapminder, Day One Capital, LAUNCHub",
+      "country": "Romania",
+      "region": "europe",
+      "city": [
+        "Bucharest"
+      ]
+    },
+    "source_url": "https://www.therecursive.com/veridion-raises-20m-series-a-to-map-the-worlds-businesses-in-real-time/",
+    "evidence": "Romanian-founded Veridion has raised a $20 million Series A led by Hoxton Ventures to expand its real-time \"living digital replica\" of the world's businesses. It is the company's largest round to date, and the latest sign of Hoxton's growing conviction in Romanian enterprise AI.",
+    "observed_at": "2026-10-01T16:12:43Z"
+  },
+  {
+    "data": {
+      "company": "Ridgeline",
+      "website": "https://ridgeline.ai/",
+      "focus": "Investment management platform with agentic AI workflows for trading, portfolio accounting, compliance and reporting",
+      "sector": "finance",
+      "stage": "series-e-plus",
+      "round": "Series E",
+      "announced_on": "2026-09-16",
+      "amount_usd": 250000000,
+      "valuation_usd": 1425000000,
+      "investors": "Dave Duffield, Motley Fool Ventures, associates of Smead Capital Management, Patrick O’Shaughnessy",
+      "city": [
+        "Incline Village"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://ridgeline.ai/company/news/ridgeline-raises-250m-series-e-valuing-ai-native-fintech-at-1-425-billion",
+    "evidence": "Incline Village, NV – September 16, 2026 – Ridgeline, the AI-native investment management platform, today announced it has raised $250 million in a Series E round led by Founder and Chairman Dave Duffield. The invitation-only round valued Ridgeline at $1.425 billion",
+    "observed_at": "2026-10-01T16:20:40Z"
+  },
+  {
+    "data": {
+      "company": "PaXini (帕西尼)",
+      "website": "https://www.paxini.com/",
+      "focus": "Multi-dimensional tactile sensors, dexterous hands and humanoid robots with tactile data for embodied AI",
+      "sector": "robotics",
+      "stage": "series-b",
+      "round": "B++",
+      "announced_on": "2026-09-16",
+      "amount_stated": "several hundred million yuan",
+      "investors": "Guangxin Fund (广新基金), Sichuan Sci-Tech Innovation Investment Group (四川省科创投资集团), 宿迁产发创投, 京铭资本",
+      "country": "China",
+      "region": "asia-pacific",
+      "city": [
+        "Beijing"
+      ]
+    },
+    "source_url": "https://m.stnn.cc/detail/6aaa01f8345621769cd2f42b.html",
+    "evidence": "9月16日，具身智能公司帕西尼宣布再获数亿元B++轮融资，累计融资超40亿元。本轮投资方包括广新基金、四川省科创投资集团、宿迁产发创投等；京铭资本等老股东继续加码。",
+    "observed_at": "2026-10-01T16:10:30Z"
+  },
+  {
+    "data": {
+      "company": "Footprint",
+      "website": "https://onefootprint.com/",
+      "focus": "AI agents for financial crime compliance (KYC, KYB, AML) at banks and fintechs",
+      "sector": "finance",
+      "stage": "series-b",
+      "announced_on": "2026-09-16",
+      "amount_usd": 25000000,
+      "investors": "QED Investors, MUFG, Commerce Ventures, LightBank, Alumni Ventures, Index Ventures, Lerer Hippeau, BoxGroup, Operator Partners, Animal Capital",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "New York"
+      ]
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/footprint-raises-25-million-series-b-to-scale-percy-the-ai-operating-system-for-risk--compliance-302880661.html",
+    "evidence": "Footprint, the AI operating system for risk, today announced it has raised $25 million in Series B funding led by QED Investors, with participation from MUFG, Commerce Ventures, LightBank, and Alumni Ventures",
+    "observed_at": "2026-10-01T16:00:07Z"
+  },
+  {
+    "data": {
+      "company": "Expanse",
+      "website": "https://expanse.sh/",
+      "focus": "Software that predicts what each AI workload needs before it runs to cut wasted GPU capacity",
+      "sector": "infrastructure",
+      "stage": "seed",
+      "announced_on": "2026-09-16",
+      "amount_usd": 5300000,
+      "investors": "Crane Venture Partners, PXN Ventures",
+      "country": "United States / United Kingdom",
+      "region": "americas",
+      "city": [
+        "San Francisco",
+        "London"
+      ]
+    },
+    "source_url": "https://expanse.sh/blog/expanse-raises-5-3m-seed",
+    "evidence": "Today we're announcing a $5.3M seed round for Expanse, led by Crane Venture Partners, with PXN Ventures and angel investors including former DeepMind researchers and leaders from AI infrastructure teams.",
+    "observed_at": "2026-10-01T16:05:38Z"
+  },
+  {
+    "data": {
+      "company": "Arcee AI",
+      "website": "https://www.arcee.ai/",
+      "focus": "Open-weight foundation models (Trinity) and tools for enterprises to customize and deploy them",
+      "sector": "foundation-models",
+      "stage": "series-b",
+      "announced_on": "2026-09-16",
+      "investors": "Vista Equity Partners, Cambium Capital, Emergence Capital, AI10 Ventures, Hitachi, IAG, M12, P7, Wipro",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "San Francisco"
+      ]
+    },
+    "source_url": "https://www.arcee.ai/blog/arcee-ai-raises-series-b-to-build-the-future-of-american-open-models",
+    "evidence": "Today, we're announcing Arcee AI's Series B, led by Vista Equity Partners, Cambium Capital, and Emergence Capital, with participation from AI10 Ventures, Hitachi, IAG, M12, P7, and Wipro. The round values Arcee at more than $1 billion.",
+    "observed_at": "2026-10-01T16:16:32Z"
+  },
+  {
+    "data": {
+      "company": "寅成智能",
+      "website": "https://www.shyincheng.cn/",
+      "focus": "Embodied-AI picking and sorting robots for parcel logistics centers",
+      "sector": "robotics",
+      "stage": "series-a",
+      "announced_on": "2026-09-15",
+      "amount_stated": "nearly 100 million yuan",
+      "investors": "华民投, 上海半导体产投, 德同资本",
+      "country": "China",
+      "region": "asia-pacific",
+      "city": [
+        "Shanghai"
+      ]
+    },
+    "source_url": "https://news.pedaily.cn/202609/568996.shtml",
+    "evidence": "投资界AI获悉，专注于物流垂直领域具身智能研发与应用的寅成智能完成近亿元A轮融资，由华民投与上海半导体产投联合领投，老股东德同资本持续加码，多维资本担任独家财务顾问。",
+    "observed_at": "2026-10-01T16:22:58Z"
+  },
+  {
+    "data": {
+      "company": "Zero",
+      "website": "https://zero.inc/",
+      "focus": "AI-agent sales and customer platform that replaces the CRM, from prospecting to renewals",
+      "sector": "enterprise",
+      "stage": "seed",
+      "announced_on": "2026-09-15",
+      "amount_usd": 10300000,
+      "investors": "Primary Venture Partners, Inception Fund, Defiant, Greens, Fabian Hedin, Ilkka Paananen, Peter Sarlin",
+      "country": "Finland",
+      "region": "europe",
+      "city": [
+        "Helsinki"
+      ]
+    },
+    "source_url": "https://zero.inc/blog/zero-raises-seed-round",
+    "evidence": "Today we're sharing two things: we've raised a $10.3M seed round led by Primary Venture Partners, and you can now try Zero.",
+    "observed_at": "2026-10-01T16:18:07Z"
+  },
+  {
+    "data": {
+      "company": "TypeSafe AI",
+      "website": "https://typesafe.ai/",
+      "focus": "Fast AI models (Jev) that return typed decisions with calibrated probabilities for use inside software",
+      "sector": "foundation-models",
+      "stage": "seed",
+      "announced_on": "2026-09-15",
+      "amount_usd": 40000000,
+      "investors": "DCVC",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "San Francisco"
+      ]
+    },
+    "source_url": "https://www.financialcontent.com/article/bizwire-2026-9-15-typesafe-ai-emerges-from-stealth-with-40m-in-funding-with-new-model-for-composable-ai",
+    "evidence": "TypeSafe AI, a frontier AI lab building machine-native, composable AI, today emerged from stealth with $40 million in seed funding led by DCVC.",
+    "observed_at": "2026-10-01T16:12:44Z"
+  },
+  {
+    "data": {
+      "company": "Jack & Jill",
+      "website": "https://www.jackandjill.ai/",
+      "focus": "AI agents for job seekers (Jack) and for hiring companies (Jill) that introduce matching candidates",
+      "sector": "enterprise",
+      "stage": "series-a",
+      "announced_on": "2026-09-15",
+      "amount_usd": 40000000,
+      "investors": "Air Street Capital, Creandum, Madrona",
+      "country": "United Kingdom",
+      "region": "europe",
+      "city": [
+        "London"
+      ]
+    },
+    "source_url": "https://www.jackandjill.ai/blog/series-a",
+    "evidence": "Today we're announcing our $40M Series A, led by Air Street Capital with participation from Creandum and Madrona, to move faster toward a job market where every person and company has an agent in their corner.",
+    "observed_at": "2026-10-01T16:25:00Z"
+  },
+  {
+    "data": {
+      "company": "Factory",
+      "website": "https://factory.com/",
+      "focus": "AI coding agents (Droids) for enterprise software development",
+      "sector": "developer-tools",
+      "stage": "other",
+      "announced_on": "2026-09-15",
+      "amount_usd": 200000000,
+      "valuation_usd": 5000000000,
+      "investors": "Blackstone, Khosla Ventures, Sequoia Capital, Insight Partners, Evantic Capital, Sound Ventures, NEA, Mantis VC, Clearlake",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "San Francisco"
+      ]
+    },
+    "source_url": "https://factory.com/news/5-billion-valuation",
+    "evidence": "Factory has raised $200M at a $5B valuation to scale self-improving software development in the enterprise. This financing from Blackstone, Khosla Ventures, Sequoia Capital, Insight Partners, Evantic Capital, Sound Ventures, NEA, Mantis VC, and Clearlake",
+    "observed_at": "2026-10-01T16:18:07Z"
+  },
+  {
+    "data": {
+      "company": "Exein",
+      "website": "https://www.exein.io/",
+      "focus": "Embedded and runtime security for IoT devices and physical AI systems such as robots, drones and vehicles",
+      "sector": "security",
+      "stage": "other",
+      "announced_on": "2026-09-15",
+      "amount_usd": 270000000,
+      "valuation_usd": 1700000000,
+      "investors": "Headline, Sofina, Goldman Sachs, European Investment Bank Group, KfW Capital, Balderton, Lakestar",
+      "country": "Italy",
+      "region": "europe",
+      "city": [
+        "Rome"
+      ]
+    },
+    "source_url": "https://www.securityweek.com/exein-secures-270m-at-1-7b-valuation-for-physical-ai-security/",
+    "evidence": "IoT cybersecurity startup Exein today announced raising $270 million in an oversubscribed funding round that brings the total raised to over $600 million and its valuation to $1.7 billion. The investment round was led by Headline",
+    "observed_at": "2026-10-01T16:25:05Z"
+  },
+  {
+    "data": {
+      "company": "Eve Security",
+      "website": "https://eve.security/",
+      "focus": "Runtime security and governance that monitors enterprise AI agents and enforces policies before they act",
+      "sector": "security",
+      "stage": "seed",
+      "round": "Seed extension",
+      "announced_on": "2026-09-15",
+      "amount_usd": 4500000,
+      "investors": "Run Ventures, Dreamit Ventures, Blu Ventures, LiveOak Ventures",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "Austin"
+      ]
+    },
+    "source_url": "https://www.finsmes.com/2026/09/eve-security-raises-4-5m-in-seed-extension-funding.html",
+    "evidence": "Eve Security, an Austin, Texas-based provider of a runtime security and governance platform for enterprise AI agents, raised $4.5M in Seed extension funding. The round was led by Run Ventures with participation from Dreamit Ventures, Blu Ventures, and existing investor LiveOak Ventures.",
+    "observed_at": "2026-10-01T16:13:18Z"
+  },
+  {
+    "data": {
+      "company": "EUCLYD",
+      "website": "https://www.euclyd.ai/",
+      "focus": "Agentic AI inference silicon (craftwerk) and low-power AI datacenter systems for running foundation models",
+      "sector": "infrastructure",
+      "stage": "series-a",
+      "announced_on": "2026-09-15",
+      "amount_stated": "more than €200 million",
+      "investors": "Samsung, Somerset Capital Partners, Scaleup Europe Fund (EQT), Innovation Industries, EIFO, imec.xpand, Brabant Development Agency (BOM), Quadri",
+      "country": "Netherlands",
+      "region": "europe",
+      "city": [
+        "Eindhoven"
+      ]
+    },
+    "source_url": "https://www.euclyd.ai/press-release",
+    "evidence": "EUCLYD has signed a Series A financing round of more than €200 million, the company announced today. The round is co-led by Samsung, Somerset Capital Partners, Scaleup Europe Fund, which is managed by EQT, and Innovation Industries",
+    "observed_at": "2026-10-01T16:17:01Z"
+  },
+  {
+    "data": {
+      "company": "Delos Data",
+      "website": "https://www.delosdata.com/",
+      "focus": "Networking servers, interconnect fabric and data interface for AI inference clusters",
+      "sector": "infrastructure",
+      "stage": "other",
+      "announced_on": "2026-09-15",
+      "amount_stated": "over $100 million",
+      "investors": "Matrix, Playground, Socratic Partners, Capricorn’s Technology Impact Fund, Matter Venture Partners, IAG",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "Palo Alto"
+      ]
+    },
+    "source_url": "https://www.delosdata.com/newsroom/delos-data-closes-over-100-million-to-deliver-delos-nonstop-aitm-for-faster-stronger-more-efficient-ai-capacity",
+    "evidence": "Palo Alto, CALIF, September 15, 2026 - Delos Data today announced it has raised over $100 million from Matrix, Playground, Socratic Partners, Capricorn’s Technology Impact Fund, Matter Venture Partners, IAG, and industry luminaries",
+    "observed_at": "2026-10-01T16:26:00Z"
+  },
+  {
+    "data": {
+      "company": "DeepKernel (深度内核)",
+      "website": "https://www.deepkernel-ai.com/",
+      "focus": "Trusted AI infrastructure that keeps enterprises in control of their data, agent trajectories and learned intelligence",
+      "sector": "infrastructure",
+      "stage": "seed",
+      "announced_on": "2026-09-15",
+      "amount_stated": "tens of millions of yuan",
+      "investors": "Shunwei Capital (顺为资本), L2F (L2F光源创业者基金)",
+      "country": "China",
+      "region": "asia-pacific",
+      "city": [
+        "Beijing"
+      ]
+    },
+    "source_url": "https://www.jiemian.com/article/15098592.html",
+    "evidence": "9月15日，据顺为资本消息，主权AI（Sovereign AI）基础设施头部公司深度内核（DeepKernel）完成数千万人民币种子轮融资。本轮融资由顺为资本领投，L2F光源创业者基金跟投。",
+    "observed_at": "2026-10-01T16:14:37Z"
+  },
+  {
+    "data": {
+      "company": "AIUC",
+      "website": "https://aiuc.com/",
+      "focus": "AIUC-1 security and risk standard, audits and insurance for AI agents",
+      "sector": "security",
+      "stage": "series-a",
+      "announced_on": "2026-09-15",
+      "amount_usd": 40000000,
+      "investors": "Ribbit Capital, First Harmonic, Terrain",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "San Francisco"
+      ]
+    },
+    "source_url": "https://aiuc.com/updates/series-a-announcement",
+    "evidence": "We've raised $40 million Series A led by Ribbit Capital, with participation from First Harmonic and Terrain. Along with our $15 million seed round from NFDG, this brings our total funding to $55 million.",
+    "observed_at": "2026-10-01T16:18:08Z"
+  },
+  {
+    "data": {
+      "company": "Temporal",
+      "website": "https://temporal.io/",
+      "focus": "Open-source durable execution platform for reliable long-running workflows and AI agents",
+      "sector": "developer-tools",
+      "stage": "series-e-plus",
+      "round": "Series E",
+      "announced_on": "2026-09-14",
+      "amount_usd": 550000000,
+      "valuation_usd": 12550000000,
+      "investors": "Lightspeed, Wellington Management, Goldman Sachs Alternatives, Tiger Global, T. Rowe Price, SV Angel, a16z, Sequoia, Index, GIC, Sapphire Ventures, Amplify",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "Bellevue"
+      ]
+    },
+    "source_url": "https://temporal.io/news/temporal-raises-550m-at-a-12-55b-valuation",
+    "evidence": "SAN FRANCISCO, CA — September 14, 2026 — Temporal, the open-source platform which powers the world's most capable AI applications, today announced a $550M Series E raise at a valuation of $12.55B. The round was led by Lightspeed.",
+    "observed_at": "2026-10-01T16:25:38Z"
+  },
+  {
+    "data": {
+      "company": "Tandem Health",
+      "website": "https://tandemhealth.ai/",
+      "focus": "AI medical assistant for clinicians (scribe, coding, decision support) growing into a clinic operating system",
+      "sector": "health",
+      "stage": "series-b",
+      "announced_on": "2026-09-14",
+      "amount_usd": 100000000,
+      "investors": "Scaleup Europe Fund, Kinnevik, Northzone, Amino Collective, Visionaries",
+      "country": "Sweden",
+      "region": "europe",
+      "city": [
+        "Stockholm"
+      ]
+    },
+    "source_url": "https://tech.eu/2026/09/14/swedish-healthtech-tandem-health-scores-100m-series-b-led-by-eus-eur5bn-tech-startup-fund",
+    "evidence": "Swedish healthtech startup Tandem Health has raised $100m in a Series B funding round, which was led by the EU-backed €5bn Scaleup Europe Fund, a new investor.",
+    "observed_at": "2026-10-01T16:14:46Z"
+  },
+  {
+    "data": {
+      "company": "Synapse Analytics",
+      "website": "https://synapse-analytics.io/",
+      "focus": "Agentic decisioning platform for credit, risk and fraud policies at banks and fintechs",
+      "sector": "finance",
+      "stage": "series-a",
+      "announced_on": "2026-09-14",
+      "amount_usd": 13000000,
+      "investors": "Partech, Algebra Ventures, Silicon Badia",
+      "country": "United Arab Emirates / Egypt",
+      "region": "africa-middle-east",
+      "city": [
+        "Abu Dhabi"
+      ]
+    },
+    "source_url": "https://www.globenewswire.com/news-release/2026/09/14/3360726/0/en/synapse-analytics-secures-us-13m-led-by-partech-to-drive-ai-powered-decisioning-for-financial-institutions.html",
+    "evidence": "Synapse Analytics, an AI company that builds agentic decisioning infrastructure for regulated financial institutions putting policy control directly in the hands of credit and risk teams, announced today that it has raised US$13 million in a Series A funding round",
+    "observed_at": "2026-10-01T16:20:00Z"
+  },
+  {
+    "data": {
+      "company": "Robocurve",
+      "website": "https://robocurve.org/",
+      "focus": "Independent evaluations and benchmarks of frontier AI models controlling real robots",
+      "sector": "robotics",
+      "stage": "seed",
+      "announced_on": "2026-09-14",
+      "amount_usd": 10000000,
+      "investors": "Initialized Capital, Notable Capital, Decasonic, Y Combinator, Halcyon Futures",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "San Francisco"
+      ]
+    },
+    "source_url": "https://robocurve.org/blog/seed-raise/",
+    "evidence": "In pursuit of this public benefit mission, Robocurve has raised a $10M seed round led by Initialized Capital, with participation from Notable Capital, Decasonic, Y Combinator, Halcyon Futures, and many others.",
+    "observed_at": "2026-10-01T16:18:07Z"
+  },
+  {
+    "data": {
+      "company": "Rabyte Technology (讯兔科技)",
+      "website": "https://www.rabyte.cn/",
+      "focus": "AlphaPai, an AI investment research assistant and workstation for professional investors",
+      "sector": "finance",
+      "stage": "series-b",
+      "announced_on": "2026-09-14",
+      "amount_stated": "more than 300 million yuan",
+      "investors": "中保投资, 广发信德, 启明创投, 琥珀资本, 嘉程资本, 信宸资本, 钟鼎资本",
+      "country": "China",
+      "region": "asia-pacific",
+      "city": [
+        "Shanghai"
+      ]
+    },
+    "source_url": "https://finance.sina.com.cn/jjxw/2026-09-14/doc-inirutnw7268604.shtml",
+    "evidence": "投资界AI获悉，金融AI领域头部公司讯兔科技近日正式完成超3亿元人民币B轮融资，投资方覆盖险资、券商、公募、产业资本与头部投资机构。",
+    "observed_at": "2026-10-01T16:20:17Z"
+  },
+  {
+    "data": {
+      "company": "Nuance Labs",
+      "website": "https://www.nuancelabs.ai/",
+      "focus": "Real-time multimodal foundation model that sees, listens and responds in face-to-face conversation",
+      "sector": "foundation-models",
+      "stage": "series-a",
+      "announced_on": "2026-09-14",
+      "amount_usd": 50000000,
+      "investors": "Lightspeed Venture Partners, Accel, South Park Commons, NVIDIA, Define Ventures",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "Seattle"
+      ]
+    },
+    "source_url": "https://www.nuancelabs.ai/nuance-labs-series-a-release",
+    "evidence": "Nuance Labs, an AI research lab building the foundation model for human expression, today announced $50 million in Series A funding led by returning investor Lightspeed Venture Partners, with participation from returning investors Accel, South Park Commons, and new investors NVIDIA",
+    "observed_at": "2026-10-01T16:26:00Z"
+  },
+  {
+    "data": {
+      "company": "Flam",
+      "website": "https://flamapp.ai/",
+      "focus": "AI models and formats for interactive video, 3D content and visual agents used by brands",
+      "sector": "enterprise",
+      "stage": "series-b",
+      "announced_on": "2026-09-14",
+      "amount_usd": 40000000,
+      "investors": "QED Investors, Claypond Capital, Martin Chavez, Olivier Pomel, Venky Harinarayan, Shahrukh Khan, RTP Global, Dovetail",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "San Francisco"
+      ]
+    },
+    "source_url": "https://www.financialcontent.com/article/bizwire-2026-9-14-flam-raises-40-million-series-b-to-scale-ai-interactive-content",
+    "evidence": "Flam, an AI interactive content company, has raised $40 million in Series B funding led by QED Investors. Claypond Capital, Martin Chavez, Olivier Pomel, Venky Harinarayan, and Shahrukh Khan joined the round, with existing investors RTP Global and Dovetail doubling down.",
+    "observed_at": "2026-10-01T16:29:37Z"
+  },
+  {
+    "data": {
+      "company": "ENCOS (因克斯)",
+      "website": "https://www.encos.cn/",
+      "focus": "Joint modules, power systems and dexterous hands for humanoid and embodied-AI robots",
+      "sector": "robotics",
+      "stage": "series-b",
+      "announced_on": "2026-09-14",
+      "amount_stated": "more than 300 million yuan",
+      "investors": "CITIC Goldstone (中信金石), Nice Group (纳爱斯), 苏创投, 华睿投资, 南京交控, 华瑞创投, Fosun Capital (复星创富), Shenzhen Capital Group (深创投), 华控基金, 锦秋基金, 普华资本",
+      "country": "China",
+      "region": "asia-pacific",
+      "city": [
+        "Nanjing"
+      ]
+    },
+    "source_url": "https://tech.ifeng.com/c/8wR2GyoEXFP",
+    "evidence": "机器人前瞻9月14日报道，今天，南京具身智能关节模组企业 因克斯智能科技有限公司 （以下简称”因克斯”）宣布已完成 超3亿元人民币B轮融资 。",
+    "observed_at": "2026-10-01T16:18:13Z"
+  },
+  {
+    "data": {
+      "company": "Cornelis Networks",
+      "website": "https://www.cornelis.com/",
+      "focus": "Scale-up and scale-out networking fabric for AI and HPC data centers",
+      "sector": "infrastructure",
+      "stage": "other",
+      "announced_on": "2026-09-14",
+      "amount_usd": 205000000,
+      "investors": "IAG Capital Partners",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "Wayne"
+      ]
+    },
+    "source_url": "https://siliconangle.com/2026/09/14/cornelis-networks-raises-205m-and-scales-up-and-scales-out-with-its-new-active-compute-fabric/",
+    "evidence": "The new fabric was announced alongside a strategy collaboration with Qualcomm Technologies Inc. and a $205 million funding round led by IAG Capital Partners. Cornelis is a developer of specialized and congestion-free data center networking systems for AI and high-performance computing.",
+    "observed_at": "2026-10-01T16:18:08Z"
+  },
+  {
+    "data": {
+      "company": "Fortaegis Technologies",
+      "website": "https://fortaegis.com/",
+      "focus": "Silicon-rooted secure compute platform for AI infrastructure, defense and other critical systems",
+      "sector": "security",
+      "stage": "series-a",
+      "announced_on": "2026-09-13",
+      "amount_usd": 50000000,
+      "investors": "Serendipity Capital, TEL Venture Capital, TNO, Prodrive Technologies, NP-Hard Ventures, NovaCapital, Access Ventures, Coalition Capital",
+      "country": "Netherlands",
+      "region": "europe",
+      "city": [
+        "Amsterdam"
+      ]
+    },
+    "source_url": "https://fortaegis.com/series-a-press-release",
+    "evidence": "Fortaegis Technologies (\"Fortaegis\") has announced an oversubscribed $50 million Series A, led by Serendipity Capital, as the company accelerates its transition from technology validation into commercial production and global deployment of its Secure Compute architecture",
+    "observed_at": "2026-10-01T16:20:59Z"
+  },
+  {
+    "data": {
+      "company": "Kinetix AI (超维动力)",
+      "website": "https://www.kinetixai.tech/",
+      "focus": "Full-stack embodied AI: robot foundation models, human motion data and humanoid robots",
+      "sector": "robotics",
+      "stage": "angel",
+      "round": "Angel+ series",
+      "announced_on": "2026-09-11",
+      "amount_stated": "more than 500 million yuan",
+      "investors": "祥峰资本 (Vertex), 方广资本, 万石资本",
+      "country": "China",
+      "region": "asia-pacific",
+      "city": [
+        "Shenzhen"
+      ]
+    },
+    "source_url": "https://www.news.cn/finance/20260911/4d078d9b78244448916213c1887f0241/c.html",
+    "evidence": "近日，超维动力（Kinetix AI）完成超5亿元人民币天使+轮系列融资，由新加坡淡马锡控股旗下VC机构祥峰资本、方广资本、万石资本等加注。",
+    "observed_at": "2026-10-01T16:26:28Z"
+  },
+  {
+    "data": {
+      "company": "TAR",
+      "website": "https://www.tar.com/",
+      "focus": "Off-grid modular renewable generation and battery storage power systems for gigawatt-scale AI data centers",
+      "sector": "infrastructure",
+      "stage": "series-a",
+      "announced_on": "2026-09-10",
+      "amount_usd": 120000000,
+      "valuation_usd": 1000000000,
+      "investors": "Spark Capital, Buckley Ventures, Align Fund",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "Austin"
+      ]
+    },
+    "source_url": "https://www.finsmes.com/2026/09/tar-raises-120m-in-series-a-funding.html",
+    "evidence": "TAR, an Austin, TX-based provider of off-grid power systems for AI data centers, raised $120M in Series A funding, at $1 Billion valuation. The round was led by Spark Capital with participation from Buckley Ventures, Align Fund, and others.",
+    "observed_at": "2026-10-01T16:18:24Z"
+  },
+  {
+    "data": {
+      "company": "Positron AI",
+      "website": "https://www.positron.ai/",
+      "focus": "AI inference chips and servers built on commodity LPDDR5X memory instead of HBM",
+      "sector": "infrastructure",
+      "stage": "series-c",
+      "round": "Series C and C-1",
+      "announced_on": "2026-09-10",
+      "amount_usd": 875000000,
+      "valuation_usd": 5000000000,
+      "investors": "NEA, Atreides Management, Valor Equity Partners, Andra Capital, SemiAnalysis Capital, Jim Clark, DFJ Growth, Qatar Investment Authority, Hudson River Trading, Cisco Investments, Naver Ventures",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "Reno"
+      ]
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html",
+    "evidence": "Positron AI, the AI inference hardware company built to make serving AI models dramatically cheaper and more energy efficient, today announced an $875 million Series C financing at a $5 billion post-money valuation.",
+    "observed_at": "2026-10-01T16:21:32Z"
+  },
+  {
+    "data": {
+      "company": "IVEX",
+      "website": "https://ivex.ai/",
+      "focus": "AI and computer vision platform that automates analysis of on-road vehicle safety (ADAS and autonomous driving) tests",
+      "sector": "robotics",
+      "stage": "series-a",
+      "announced_on": "2026-09-10",
+      "amount_stated": "€5 million",
+      "investors": "The Faktory, Dedicated.lu",
+      "country": "Belgium",
+      "region": "europe",
+      "city": [
+        "Leuven"
+      ]
+    },
+    "source_url": "https://ivex.ai/news/series-a",
+    "evidence": "IVEX, a deep-tech startup developing technology for automotive safety testing, has raised €5M Series A to accelerate its engineering roadmap and expand its presence in North America and Asia. The round was backed by existing investors The Faktory and Dedicated.lu, alongside private investors.",
+    "observed_at": "2026-10-01T16:18:09Z"
+  },
+  {
+    "data": {
+      "company": "Arlequin AI",
+      "website": "https://arlq.ai/",
+      "focus": "AI built on topological neural networks that analyses relationships across fragmented data for government and enterprise decisions",
+      "sector": "defense",
+      "stage": "series-a",
+      "announced_on": "2026-09-10",
+      "amount_stated": "€28 million",
+      "investors": "redalpine, OTB Ventures, Bpifrance Defence Innovation Fund, Vsquared Ventures, 10x Founders, Xavier Niel, ZEBOX",
+      "country": "France",
+      "region": "europe",
+      "city": [
+        "Paris"
+      ]
+    },
+    "source_url": "https://arlq.ai/news/arlequin-ai-series-a-topological-neural-networks",
+    "evidence": "Paris, September 10, 2026 – Arlequin AI has raised €28 million in Series A funding to accelerate the development of a new AI architecture based on topological neural networks (TNN*) and expand the international deployment of its technology.",
+    "observed_at": "2026-10-01T16:22:28Z"
+  },
+  {
+    "data": {
+      "company": "Savvy Wealth",
+      "website": "https://www.savvywealth.com/",
+      "focus": "AI-native wealth management platform and registered investment advisor for independent financial advisors",
+      "sector": "finance",
+      "stage": "series-c",
+      "announced_on": "2026-09-09",
+      "amount_usd": 100000000,
+      "valuation_usd": 600000000,
+      "investors": "Halo Fund, Thrive Capital, Industry Ventures, Canvas Prime, Index Ventures, House Fund, Euclidean Capital, Alumni Ventures, Vestigo Ventures",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "New York"
+      ]
+    },
+    "source_url": "https://www.wealthmanagement.com/ria-news/savvy-wealth-raises-100m-valuation-hits-600m",
+    "evidence": "Savvy Wealth, an AI-native registered investment advisor managing $9 billion in client assets, has raised $100 million in Series C funding, with its valuation hitting $600 million, a 6.6-fold increase over the past 15 months.",
+    "observed_at": "2026-10-01T16:29:00Z"
+  },
+  {
+    "data": {
+      "company": "Lightfield",
+      "website": "https://lightfield.app/",
+      "focus": "AI-native CRM where AI agents build pipeline, work deals and manage customer records",
+      "sector": "enterprise",
+      "stage": "series-a",
+      "announced_on": "2026-09-09",
+      "amount_usd": 47000000,
+      "investors": "Andreessen Horowitz, Maverick Capital, Coatue, Audacious, Alumni Ventures, Greylock, Lightspeed Venture Partners",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "San Francisco"
+      ]
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/lightfield-raises-47-million-series-a-to-build-the-crm-for-companies-that-run-on-agents-302874024.html",
+    "evidence": "Lightfield today announced a $47 million Series A led by Andreessen Horowitz, including participation from Maverick Capital, Coatue, Audacious, Alumni Ventures, Greylock, and Lightspeed Venture Partners.",
+    "observed_at": "2026-10-01T16:21:52Z"
+  },
+  {
+    "data": {
+      "company": "Leim Technology (镭萌科技)",
+      "website": "https://www.moe-lab.com/",
+      "focus": "bibo, a palm-sized nonverbal emotional AI companion robot sold as an art toy",
+      "sector": "consumer",
+      "stage": "angel",
+      "announced_on": "2026-09-09",
+      "amount_stated": "tens of millions of yuan",
+      "investors": "Trends Media Group (时尚传媒集团), Hongyi Asset Management Group (弘颐资管集团)",
+      "country": "China",
+      "region": "asia-pacific",
+      "city": [
+        "Hangzhou"
+      ]
+    },
+    "source_url": "https://www.36kr.com/p/3975777320284422",
+    "evidence": "36氪获悉，2026年9月9日，AI机器人研发公司杭州镭萌科技在Inclusion外滩大会现场，宣布完成千万级天使轮融资。本轮融资由时尚传媒集团与弘颐资管集团联合领投。",
+    "observed_at": "2026-10-01T16:18:11Z"
+  },
+  {
+    "data": {
+      "company": "Harvey",
+      "website": "https://www.harvey.ai/",
+      "focus": "Generative AI platform and agents for law firms, in-house legal teams and professional services firms",
+      "sector": "enterprise",
+      "stage": "other",
+      "announced_on": "2026-09-09",
+      "amount_usd": 550000000,
+      "valuation_usd": 15500000000,
+      "investors": "Diffusion, Lightspeed Venture Partners, Sequoia, Kleiner Perkins, a16z, Coatue, Conviction, Elad Gil, Evantic, GIC, Goldman Sachs Alternatives, Verified Capital, WNDR, Sapphire Ventures, Whale Rock",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.harvey.ai/blog/harvey-raises-dollar550m-at-a-dollar155b-valuation-to-help-legal-teams-own-their-intelligence",
+    "evidence": "Today, Harvey announced a $550M funding round at a $15.5B valuation, co-led by Diffusion and Lightspeed Venture Partners.",
+    "observed_at": "2026-10-01T16:28:23Z"
+  },
+  {
+    "data": {
+      "company": "BitInf (比特无限)",
+      "website": "https://sparkoh.ai/",
+      "focus": "Arko foundation models that generate editable, manufacturable CAD and 3D-printable models from text, images and sketches",
+      "sector": "foundation-models",
+      "stage": "pre-series-a",
+      "announced_on": "2026-09-09",
+      "amount_stated": "tens of millions of yuan",
+      "investors": "跃迁资本",
+      "country": "China",
+      "region": "asia-pacific",
+      "city": [
+        "Shanghai"
+      ]
+    },
+    "source_url": "https://news.pedaily.cn/202609/568727.shtml",
+    "evidence": "投资界获悉，比特无限已完成数千万元Pre-A轮融资，由产业投资方跃迁资本、上市公司CVC及老股东超额追投",
+    "observed_at": "2026-10-01T16:29:15Z"
+  },
+  {
+    "data": {
+      "company": "Beep",
+      "website": "https://ridebeep.com/",
+      "focus": "Autonomous shuttle and microtransit networks managed through its AutonomOS platform for orchestrating autonomous vehicles",
+      "sector": "robotics",
+      "stage": "series-b",
+      "announced_on": "2026-09-09",
+      "investors": "Mobileye",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "Orlando"
+      ]
+    },
+    "source_url": "https://ridebeep.com/press-releases/beep-closes-series-b-to-accelerate-commercial-deployment-of-autonomous-mobility-networks",
+    "evidence": "Beep, Inc., a leading U.S. provider of autonomous mobility solutions, today announced the close of a Series B funding round, bringing its total capital raised to approximately $130 million. The round was led by Mobileye, a global leader in autonomous vehicle technology",
+    "observed_at": "2026-10-01T16:21:25Z"
+  },
+  {
+    "data": {
+      "company": "Mistral AI",
+      "website": "https://mistral.ai/",
+      "focus": "Open-weight frontier AI models, AI products and sovereign compute infrastructure",
+      "sector": "foundation-models",
+      "stage": "series-d",
+      "announced_on": "2026-09-08",
+      "amount_stated": "€3 billion",
+      "investors": "Samsung Electronics, Scaleup Europe Fund (managed by EQT), PSG Equity, Advent, funds and accounts managed by BlackRock, Grand Duchy of Luxembourg, a16z, ASML, Bpifrance, General Catalyst, Lightspeed, NVIDIA",
+      "country": "France",
+      "region": "europe",
+      "city": [
+        "Paris"
+      ]
+    },
+    "source_url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
+    "evidence": "Mistral today announced that it has raised €3 billion in a Series D funding round at a post-money valuation of more than €21 billion, the largest equity fundraising round ever completed by a European technology company",
+    "observed_at": "2026-10-01T16:22:43Z"
+  },
+  {
+    "data": {
+      "company": "GenHealth.ai",
+      "website": "https://genhealth.ai/",
+      "focus": "AI agents for medical back-office work: intake, eligibility, prior authorization, billing and denials",
+      "sector": "health",
+      "stage": "series-a",
+      "announced_on": "2026-09-08",
+      "amount_usd": 16500000,
+      "investors": "Flare Capital Partners, Craft Ventures, Obvious Ventures, Eniac Ventures, InHealth Ventures, Epsilon Health Investors, ARTIS",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "Boston"
+      ]
+    },
+    "source_url": "https://genhealth.ai/blog/genhealth-series-a-fundraise",
+    "evidence": "We are excited to announce our $16.5 million Series A for GenHealth.ai, which brings our total funding to $30M. Thanks to Vic Lanio and the team at Flare Capital Partners for leading our Series A",
+    "observed_at": "2026-10-01T16:18:11Z"
+  },
+  {
+    "data": {
+      "company": "Cylake",
+      "website": "https://cylake.com/",
+      "focus": "AI-native cybersecurity platform that runs fully on-premises for governments and regulated enterprises",
+      "sector": "security",
+      "stage": "other",
+      "round": "Convertible note",
+      "announced_on": "2026-09-08",
+      "amount_usd": 245000000,
+      "investors": "Lightspeed Venture Partners, Picture Capital, Redpoint Ventures",
+      "city": [
+        "Sunnyvale"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.globenewswire.com/news-release/2026/09/08/3357819/0/en/cylake-closes-245-million-funding-round-ahead-of-beta-release-for-next-generation-cybersecurity-product.html",
+    "evidence": "SUNNYVALE, Calif., Sept. 08, 2026 (GLOBE NEWSWIRE) -- Cylake, the complete cybersecurity platform for operational sovereignty, announced today it has raised $245 million through a convertible note, with participation from Lightspeed Venture Partners, Picture Capital, and Redpoint Ventures.",
+    "observed_at": "2026-10-01T16:29:59Z"
+  },
+  {
+    "data": {
+      "company": "Cognition",
+      "website": "https://cognition.com/",
+      "focus": "Autonomous AI software engineering agent (Devin) for enterprise engineering teams",
+      "sector": "developer-tools",
+      "stage": "series-e-plus",
+      "round": "Series E",
+      "announced_on": "2026-09-08",
+      "amount_stated": "over $2B",
+      "valuation_usd": 48000000000,
+      "investors": "Andreessen Horowitz, Accel, Founders Fund, General Catalyst, Avenir, Benchmark, Bessemer, Kleiner Perkins, Greylock, Lightspeed, Altimeter, Bond Capital, Meritech, Atreides, Valor, T. Rowe Price, Lux, 8VC, D1, 137 Ventures, DST",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "San Francisco"
+      ]
+    },
+    "source_url": "https://cognition.com/blog/series-e",
+    "evidence": "Cognition has raised over $2B at a $48B valuation. The round was led by new investors Andreessen Horowitz and Accel, alongside existing investors Founders Fund, General Catalyst, and Avenir.",
+    "observed_at": "2026-10-01T16:18:56Z"
+  },
+  {
+    "data": {
+      "company": "MemTensor (记忆张量)",
+      "website": "https://www.memtensor.cn/",
+      "focus": "Memory-native foundation model (Metis) and MemOS, a memory operating system for LLMs and AI agents",
+      "sector": "foundation-models",
+      "stage": "pre-series-a",
+      "round": "Pre-A+",
+      "announced_on": "2026-09-04",
+      "investors": "东方富海, 上国投孚腾资本, 要弘创投, 无锡新尚资本",
+      "country": "China",
+      "region": "asia-pacific",
+      "city": [
+        "Shanghai"
+      ]
+    },
+    "source_url": "https://news.sina.com.cn/sx/2026-09-04/detail-iniqsenu6080900.shtml",
+    "evidence": "近日,记忆张量(MemTensor)完成Pre-A+轮融资,由东方富海领投,上国投孚腾资本追加投资,要弘创投、无锡新尚资本跟投。",
+    "observed_at": "2026-10-01T16:23:35Z"
+  },
+  {
+    "data": {
+      "company": "Gimlet Labs",
+      "website": "https://gimletlabs.ai/",
+      "focus": "Multi-silicon AI inference cloud that splits workloads across GPUs, CPUs and accelerators",
+      "sector": "infrastructure",
+      "stage": "series-b",
+      "announced_on": "2026-09-04",
+      "amount_usd": 300000000,
+      "valuation_usd": 3000000000,
+      "investors": "Andreessen Horowitz, Sapphire Ventures, M12, Arm, Menlo Ventures, Factory",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "San Francisco"
+      ]
+    },
+    "source_url": "https://www.globenewswire.com/news-release/2026/09/04/3356707/0/en/now-valued-at-3-billion-gimlet-labs-raises-300-million-in-series-b-led-by-andreessen-horowitz-for-industry-s-first-multi-silicon-inference-cloud-for-agentic-ai.html",
+    "evidence": "Gimlet Labs, the Applied AI research and product company, today announced that it has raised $300 million in Series B funding, bringing its current valuation to $3 billion and the total funding raised to $392 million.",
+    "observed_at": "2026-10-01T16:18:11Z"
+  },
+  {
+    "data": {
+      "company": "AI Score",
+      "website": "https://aiscore.ai/",
+      "focus": "Governance platform for monitoring and controlling how enterprises deploy AI and AI agents",
+      "sector": "security",
+      "stage": "seed",
+      "announced_on": "2026-09-03",
+      "amount_usd": 5400000,
+      "investors": "Fuel Ventures, GALLOS Technologies, Alan Morgan, Mo El Husseiny",
+      "city": [
+        "London"
+      ],
+      "country": "United Kingdom",
+      "region": "europe"
+    },
+    "source_url": "https://aiscore.ai/funding-annoucement/",
+    "evidence": "London, 3 September 2026 — AI Score, the intelligence-led AI governance platform, has raised $5.4 million in seed funding, led by Fuel Ventures, with further backing from founding investor GALLOS Technologies",
+    "observed_at": "2026-10-01T16:30:34Z"
+  },
+  {
+    "data": {
+      "company": "Wonderful",
+      "website": "https://www.wonderful.ai/",
+      "focus": "Enterprise AI operating system that coordinates AI agents, workflows and AI-native applications across an organization",
+      "sector": "enterprise",
+      "stage": "series-c",
+      "announced_on": "2026-09-02",
+      "amount_usd": 550000000,
+      "valuation_usd": 5000000000,
+      "investors": "Insight Partners, Salesforce, Index Ventures, IVP, Vine Ventures, 9Yards, Bessemer Venture Partners",
+      "country": "Netherlands",
+      "region": "europe",
+      "city": [
+        "Amsterdam"
+      ]
+    },
+    "source_url": "https://www.wonderful.ai/blog-articles/wonderful-raises-550m-series-c",
+    "evidence": "Wonderful, the AI OS for the enterprise, today announced the closing of a $550 million Series C funding round at a $5B valuation. The round was led by Insight Partners, with participation from Salesforce and existing investors Index Ventures, IVP, Vine Ventures, 9Yards, and Bessemer Venture Partners",
+    "observed_at": "2026-10-01T16:20:53Z"
+  },
+  {
+    "data": {
+      "company": "Konko AI",
+      "website": "https://konko.ai/",
+      "focus": "AI assistant (Kora) that handles patient messaging and appointment booking for clinics in Latin America",
+      "sector": "health",
+      "stage": "other",
+      "announced_on": "2026-09-02",
+      "amount_usd": 6000000,
+      "investors": "Hi Ventures, LifeX Ventures, SquareOne Capital, GroundUp Ventures, Phoenix Fund",
+      "country": "United States / Costa Rica",
+      "region": "americas",
+      "city": [
+        "New York"
+      ]
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/konko-ai-secures-6-million-to-scale-interoperable-ai-platform-that-gives-doctors-more-time-for-patient-care-302866518.html",
+    "evidence": "Konko AI, LatAm's leading AI platform to manage patient journeys for healthcare clinics and hospitals, today announced $6 million in funding led by Hi Ventures, with participation from LifeX Ventures, SquareOne Capital, GroundUp Ventures, Phoenix Fund and angels from Harvard, MIT, Google and Tesla.",
+    "observed_at": "2026-10-01T16:30:00Z"
+  },
+  {
+    "data": {
+      "company": "iPronics",
+      "website": "https://ipronics.com/",
+      "focus": "Silicon photonics optical circuit switches for AI data center networks",
+      "sector": "infrastructure",
+      "stage": "series-b",
+      "announced_on": "2026-09-02",
+      "amount_usd": 125000000,
+      "investors": "Maverick Silicon, Light Street Capital, NVIDIA, Triatomic Capital, Bosch Ventures, Catalight Capital, European Innovation Council Fund, The Tate Family Trust, Fine Structure Ventures, Amadeus Capital Partners, Build Collective",
+      "country": "Spain / United States",
+      "region": "europe",
+      "city": [
+        "Valencia"
+      ]
+    },
+    "source_url": "https://ipronics.com/ipronics-raises-125-million-to-scale-programmable-optical-networking-for-ai-data-centers/",
+    "evidence": "iPronics, a pioneer in silicon photonics-based optical circuit switching for AI infrastructure, has announced $125 million in Series B funding co-led by Maverick Silicon and Light Street Capital.",
+    "observed_at": "2026-10-01T16:19:24Z"
+  },
+  {
+    "data": {
+      "company": "HiddenLayer",
+      "website": "https://www.hiddenlayer.com/",
+      "focus": "Security platform for AI models and agents: discovery, attack simulation, supply chain and runtime protection",
+      "sector": "security",
+      "stage": "series-b",
+      "announced_on": "2026-09-02",
+      "amount_usd": 100000000,
+      "investors": "Delta-v Capital, Ten Eleven Ventures, Morgan Stanley, M12, Booz Allen Ventures",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "Austin"
+      ]
+    },
+    "source_url": "https://www.hiddenlayer.com/news/hiddenlayer-100m-series-b-ai-security",
+    "evidence": "HiddenLayer, the leading AI security company that secures agentic, generative, and predictive AI applications, today announced a $100 million Series B funding round led by Delta-v Capital, with participation from Ten Eleven Ventures, Morgan Stanley, M12, Microsoft's Venture Fund",
+    "observed_at": "2026-10-01T16:23:56Z"
+  },
+  {
+    "data": {
+      "company": "Aslan",
+      "website": "https://aslanprotects.com/",
+      "focus": "Human-supervised autonomous AI operatives that infiltrate criminal online forums and gather digital evidence for national security agencies",
+      "sector": "defense",
+      "stage": "seed",
+      "announced_on": "2026-09-02",
+      "amount_usd": 20800000,
+      "investors": "Khosla Ventures, XYZ Venture Capital, BoxGroup, 2048 Ventures, Liquid 2 Ventures, Alumni Ventures",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "Washington D.C."
+      ]
+    },
+    "source_url": "https://www.finsmes.com/2026/09/aslan-protects-raises-20-8m-in-seed-funding.html",
+    "evidence": "Aslan Protects, a Washington, D.C.-based defense technology and cyber intelligence startup, raised $20.8m in seed funding. The round was co-led by Khosla Ventures and XYZ Venture Capital, with participation from BoxGroup, 2048 Ventures, Liquid 2 Ventures, Alumni Ventures",
+    "observed_at": "2026-10-01T16:20:17Z"
+  },
+  {
+    "data": {
+      "company": "Aitan",
+      "website": "https://aitansystems.com/",
+      "focus": "Edge-AI robotic weapon systems and multi-robot command and control for allied militaries",
+      "sector": "defense",
+      "stage": "other",
+      "announced_on": "2026-09-02",
+      "amount_usd": 41000000,
+      "investors": "Deep33, Dell Technologies Capital, Gokul Rajaram, Benjamin Ling (Bling Capital), Kevin Weil (Scribble Ventures)",
+      "country": "United States / Israel",
+      "region": "americas",
+      "city": [
+        "New York"
+      ]
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/aitan-emerges-from-stealth-defines-new-defense-category-of-robotic-sovereignty-as-a-service--closes-41-million-funding-round-to-scale-its-battle-proven-technology-globally-302867620.html",
+    "evidence": "Aitan, a defense technology company helping allied nations build sovereign robotic defense capabilities, today emerged from stealth, defining a new category of Robotic Sovereignty-as-a-Service, and announces the company has closed a $41 million financing round co-led by Deep33",
+    "observed_at": "2026-10-01T16:18:12Z"
+  },
+  {
+    "data": {
+      "company": "VAST (三启万物)",
+      "website": "https://www.tripo3d.com/",
+      "focus": "3D foundation models (Tripo) that generate 3D assets from text and images, and world models for simulation",
+      "sector": "foundation-models",
+      "stage": "series-b",
+      "round": "Series B and B+",
+      "announced_on": "2026-09-01",
+      "amount_stated": "about 3 billion yuan (Series B and B+ combined)",
+      "investors": "经纬创投, 完美世界, 蓝色光标, 芯动能投资, 延趣游戏, 中科创达, 广电投资, 三七互娱, 鼎晖VGC, 中金资本, CMC资本",
+      "city": [
+        "Beijing"
+      ],
+      "country": "China",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://news.pedaily.cn/202609/568395.shtml",
+    "evidence": "9月1日消息，VAST完成B轮和B+轮融资约30亿人民币，发布Tripo P2.0，其技术在多行业落地，相关工作台和项目惠及众多创作者与高校师生。",
+    "observed_at": "2026-10-01T16:32:50Z"
+  },
+  {
+    "data": {
+      "company": "Norbert Health",
+      "website": "https://www.norberthealth.com/",
+      "focus": "Physical AI system that turns partner robots into autonomous nursing assistants for vitals, rounds and EHR notes",
+      "sector": "health",
+      "stage": "series-a",
+      "announced_on": "2026-09-01",
+      "amount_usd": 14000000,
+      "investors": "William A. Marino (Cardinal Group), Exor Seeds, CareIT, Alexis Le-Quoc, Olivier Pomel, Saeju Jeong, Thomas Clozel",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "New York"
+      ]
+    },
+    "source_url": "https://www.finsmes.com/2026/09/norbert-health-raises-14m-in-series-a-funding.html",
+    "evidence": "Norbert Health, a NYC-based provider of a physical AI control system for robotic care platforms, raised $14M in Series A funding. The round was supported by William A. Marino with Cardinal Group",
+    "observed_at": "2026-10-01T16:19:51Z"
+  },
+  {
+    "data": {
+      "company": "Aranya",
+      "website": "https://aranya.tech/",
+      "focus": "Operating system that turns bare-metal servers into managed GPU clusters for AI inference and training",
+      "sector": "infrastructure",
+      "stage": "seed",
+      "round": "Seed + Pre-Seed",
+      "announced_on": "2026-09-01",
+      "amount_usd": 11000000,
+      "investors": "First Round Capital, Asylum Ventures, Box Group, Vermilion Cliffs, Founder Collective, Parable VC, Uncommon Ventures",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "San Francisco"
+      ]
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/aranya-secures-11m-to-convert-bare-metal-into-custom-production-ready-clusters-in-48-hours-with-full-visibility-into-inference-and-training-management-302865915.html",
+    "evidence": "Today, the company announces $11M in funding, including a $9M seed round led by First Round Capital with participation from Box Group, Vermilion Cliffs, and Asylum Ventures and a $2M pre-seed round led by Asylum Ventures, with participation from Founder Collective, Parable VC, and Uncommon Ventures.",
+    "observed_at": "2026-10-01T16:30:00Z"
+  },
+  {
+    "data": {
+      "company": "AIR",
+      "website": "https://www.air.security/",
+      "focus": "Inline firewall that protects AI agents from malicious instructions, untrusted tools and compromised add-ons",
+      "sector": "security",
+      "stage": "other",
+      "announced_on": "2026-09-01",
+      "amount_usd": 50000000,
+      "investors": "Sequoia Capital, Greenoaks Capital Partners, Swish Ventures, Netz Capital",
+      "country": "United States",
+      "region": "americas",
+      "city": [
+        "New York"
+      ]
+    },
+    "source_url": "https://siliconangle.com/2026/09/01/air-security-launches-with-50m-to-build-a-firewall-for-ai-agents/",
+    "evidence": "Artificial intelligence agent security startup AIR Security Inc. formally launched today with $50 million in funding to build what it calls an inline firewall for AI agents.",
+    "observed_at": "2026-10-01T16:26:11Z"
+  },
+  {
+    "data": {
+      "company": "RobotPlusPlus (史河机器人)",
+      "website": "https://www.robotplusplus.com/",
+      "focus": "Climbing robots for hazardous work at height, such as ship hull rust removal and storage tank maintenance",
+      "sector": "robotics",
+      "stage": "series-c",
+      "announced_on": "2026-07-21",
+      "amount_stated": "several hundred million yuan",
+      "investors": "强港资本, 中际旭创, 广投资本, 国海证券, 君桐资本, 复星锐正",
+      "country": "China",
+      "region": "asia-pacific",
+      "city": [
+        "Zhoushan"
+      ]
+    },
+    "source_url": "https://m.21jingji.com/article/20260721/herald/9fb1c1e9fc9225657d9e1639082e9794.html",
+    "evidence": "智能高空机器人公司史河机器人完成C轮数亿元融资，由强港资本与中际旭创联合领投，已服务众多客户，产品出货量居全球前列，还在布局产业级具身智能。",
+    "observed_at": "2026-10-01T16:17:25Z"
+  }
+]

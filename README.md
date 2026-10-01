@@ -193,7 +193,9 @@ Config details worth knowing:
 - A `url` field with `homePage: true` keeps only the site's home page, so it can identify a company.
 - A `tags` field with `names: true` holds names as people write them, such as cities (`["Zürich"]`):
   case and accents kept, each one a filter option, a chart bar and a search match.
-- `table.previewColumns` picks the Overview preview's columns (otherwise the first five).
+- `table.previewColumns` picks the Overview preview's columns (otherwise the first five), and
+  `table.fallback` shows another field when a column's own value is missing (`amount_usd` →
+  `amount_stated`, so a round in euros still shows its amount).
 
 ## Deploy
 

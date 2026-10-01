@@ -63,12 +63,19 @@ export function RecordTable({
               {columns.map((field, index) => {
                 const def = config.fields[field];
                 const text = formatValue(def, record.data[field]);
+                // Missing, but the config names another field to show: e.g. "€20 million".
+                const other = config.table.fallback?.[field];
+                const stand = !text && other ? formatValue(config.fields[other], record.data[other]) : '';
                 return (
                   <td key={field} className={cellClass(def)}>
                     {index === 0 ? (
                       <Link href={`/${config.slug}/r/${record.id}`}>{text}</Link>
                     ) : text ? (
                       text
+                    ) : stand ? (
+                      <span className="fallback" title={config.fields[other!]?.label}>
+                        {stand}
+                      </span>
                     ) : (
                       <span className="empty" aria-label="Not stated">
                         –

@@ -212,6 +212,8 @@ describe('lists of names', () => {
   it('only show preview columns the data app has', () => {
     const config = { ...hackathons, table: { ...hackathons.table, previewColumns: ['name', 'venue'] } };
     expect(validateConfig(config)).toEqual(['ai-hackathons: table.previewColumns names unknown field "venue"']);
+    const fallback = { ...hackathons, table: { ...hackathons.table, fallback: { prize_usd: 'prize_text' } } };
+    expect(validateConfig(fallback)).toEqual(['ai-hackathons: table.fallback names unknown field "prize_text"']);
   });
 });
 

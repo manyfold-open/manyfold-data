@@ -108,6 +108,8 @@ export interface DataAppConfig {
     previewTitle: string;
     /** Columns of that preview; the first five Table columns when left out. */
     previewColumns?: readonly string[];
+    /** A column shows another field's value when its own is missing, e.g. amount_usd → amount_stated. */
+    fallback?: Readonly<Record<string, string>>;
   };
   charts: readonly ChartDef[];
   scope: { in: string; out: string };
@@ -171,6 +173,10 @@ export function validateConfig(config: DataAppConfig): string[] {
   config.identity.forEach((name) => need(name, 'identity'));
   config.table.columns.forEach((name) => need(name, 'table.columns'));
   (config.table.previewColumns ?? []).forEach((name) => need(name, 'table.previewColumns'));
+  for (const [column, other] of Object.entries(config.table.fallback ?? {})) {
+    need(column, 'table.fallback');
+    need(other, 'table.fallback');
+  }
   need(config.table.defaultSort.replace(/^-/, ''), 'table.defaultSort', SORTABLE);
   Object.keys(config.table.defaultFilter ?? {}).forEach((name) =>
     need(name, 'table.defaultFilter', ['date', 'number']),

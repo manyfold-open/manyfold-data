@@ -584,6 +584,13 @@ textarea {
   color: var(--ink);
 }
 
+/* Another field's value standing in for a missing one, e.g. an amount in euros. */
+.fallback {
+  color: var(--ink-2);
+  font-variant-numeric: normal;
+  white-space: normal;
+}
+
 .empty {
   color: var(--muted);
 }

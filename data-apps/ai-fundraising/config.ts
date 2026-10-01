@@ -127,9 +127,17 @@ export default defineDataApp({
       max: 240,
       help: 'As the source names them, lead investors first, separated by commas.',
     },
+    city: {
+      type: 'tags',
+      names: true,
+      label: 'City',
+      required: true,
+      max: 3,
+      help: 'The city the company is headquartered in, in English, e.g. ["San Francisco"]; two when it names two headquarters, e.g. ["New York", "Tel Aviv"].',
+    },
     country: {
       type: 'text',
-      label: 'Headquarters',
+      label: 'Country',
       required: true,
       max: 60,
       help: 'The country the company is based in, e.g. United States; two separated by a slash when the source names both.',
@@ -159,6 +167,7 @@ export default defineDataApp({
       announced_on: '2026-09-15',
       amount_usd: 25000000,
       investors: 'Example Ventures, Sample Capital',
+      city: ['San Francisco'],
       country: 'United States',
       region: 'americas',
     },
@@ -167,9 +176,11 @@ export default defineDataApp({
       'Example Robotics today announced it has raised $25 million in Series A funding led by Example Ventures, with participation from Sample Capital.',
   },
   table: {
-    columns: ['company', 'focus', 'stage', 'amount_usd', 'announced_on', 'investors', 'country'],
+    columns: ['company', 'focus', 'stage', 'amount_usd', 'announced_on', 'investors', 'city', 'country'],
     defaultSort: '-announced_on',
     previewTitle: 'Latest rounds',
+    previewColumns: ['company', 'focus', 'stage', 'amount_usd', 'announced_on', 'city'],
+    fallback: { amount_usd: 'amount_stated' },
   },
   charts: [
     { kind: 'count', title: 'Rounds in the last 30 days', where: { announced_on: { from: 'today-30' } } },
@@ -177,6 +188,7 @@ export default defineDataApp({
     { kind: 'by-category', title: 'By round', field: 'stage' },
     { kind: 'by-category', title: 'By sector', field: 'sector' },
     { kind: 'by-category', title: 'By region', field: 'region' },
+    { kind: 'by-category', title: 'Top cities', field: 'city' },
     {
       kind: 'histogram',
       title: 'Round size (USD)',
@@ -195,5 +207,5 @@ export default defineDataApp({
     'Business and tech press such as Reuters, TechCrunch and 36Kr',
   ],
   recheckAfterDays: 90,
-  notify: { line: '{company} · {stage} · {amount_usd} · {sector}' },
+  notify: { line: '{company} · {stage} · {amount_usd} · {city} · {sector}' },
 });
