@@ -132,8 +132,9 @@ than half of them rejected, is suspended automatically.
 - **Review:** what waits for a person — unsure verdicts, records flagged at submit, reader reports.
 - **Records:** any record in any status, with its source, tasks, reports and full history; decide its
   status or edit its fields.
-- **Tokens:** issue a maintainer token (shown once, with a message to send its owner); suspend,
-  revoke or ban; set a collector's cap; queue rechecks; **undo everything a token did since a time**.
+- **Tokens:** issue a maintainer token (shown once, with a message to send its owner); rename,
+  suspend, revoke or ban; set a collector's cap or a maintainer's verdicts a day; queue rechecks;
+  **undo everything a token did since a time**.
 - **Activity:** the latest changes, filtered to one contributor with a click.
 - **Spot-check:** this week's sample of 50 verified records to check against their sources; the share
   marked correct is the accuracy figure.

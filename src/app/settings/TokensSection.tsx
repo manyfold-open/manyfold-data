@@ -133,6 +133,16 @@ function StatusActions({ token, onDone }: { token: AdminToken; onDone: (message:
   );
 }
 
+/** A whole number typed into a settings field, or an error the Action shows. */
+function wholeNumber(text: string, max: number): number {
+  const value = Number(text);
+  if (text.trim() === '' || !Number.isInteger(value) || value < 0 || value > max) {
+    throw new Error(`Enter a whole number from 0 to ${max.toLocaleString('en-US')}.`);
+  }
+  return value;
+}
+
+/** How many records a collector may have waiting for review at once. */
 function Cap({ token, onDone }: { token: AdminToken; onDone: (message: string) => void }) {
   const [cap, setCap] = useState(String(token.pending_cap ?? ''));
   return (
@@ -140,6 +150,7 @@ function Cap({ token, onDone }: { token: AdminToken; onDone: (message: string) =
       <input
         type="number"
         min={0}
+        max={1000}
         value={cap}
         onChange={(event) => setCap(event.target.value)}
         aria-label={`Pending cap for ${token.label}`}
@@ -147,8 +158,31 @@ function Cap({ token, onDone }: { token: AdminToken; onDone: (message: string) =
       />
       <Action
         label="Set cap"
-        run={() => send('PATCH', `/tokens/${token.id}`, { pending_cap: Number(cap) })}
+        run={() => send('PATCH', `/tokens/${token.id}`, { pending_cap: wholeNumber(cap, 1000) })}
         onDone={() => onDone(`Cap for ${token.label} set to ${cap}.`)}
+      />
+    </span>
+  );
+}
+
+/** How many verdicts a maintainer may send a day (UTC). It applies from its next lease. */
+function DailyLimit({ token, onDone }: { token: AdminToken; onDone: (message: string) => void }) {
+  const [limit, setLimit] = useState(String(token.daily_task_limit ?? 100));
+  return (
+    <span className="undo">
+      <input
+        type="number"
+        min={0}
+        max={10000}
+        value={limit}
+        onChange={(event) => setLimit(event.target.value)}
+        aria-label={`Verdicts a day for ${token.label}`}
+        className="narrow"
+      />
+      <Action
+        label="Set daily limit"
+        run={() => send('PATCH', `/tokens/${token.id}`, { daily_task_limit: wholeNumber(limit, 10000) })}
+        onDone={() => onDone(`${token.label} may now send ${plural(Number(limit), 'verdict')} a day.`)}
       />
     </span>
   );
@@ -306,6 +340,7 @@ export default function TokensSection() {
                   <td colSpan={6}>
                     <div className="row-actions">
                       <StatusActions token={token} onDone={done} />
+                      {token.status === 'revoked' ? null : <DailyLimit token={token} onDone={done} />}
                       <Undo token={token} onDone={done} />
                     </div>
                   </td>
@@ -366,7 +401,7 @@ export default function TokensSection() {
                   <td colSpan={7}>
                     <div className="row-actions">
                       <StatusActions token={token} onDone={done} />
-                      <Cap token={token} onDone={done} />
+                      {token.status === 'revoked' ? null : <Cap token={token} onDone={done} />}
                       <Undo token={token} onDone={done} />
                     </div>
                   </td>

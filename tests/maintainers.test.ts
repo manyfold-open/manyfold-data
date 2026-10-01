@@ -151,6 +151,18 @@ describe('leases', () => {
     expect((await lease(token)).tasks).toHaveLength(1);
   });
 
+  it('follow a daily limit the admin changes, from the next lease on', async () => {
+    await submit(await collector(), 1, 2, 3, 4);
+    const { token, id } = await maintainer({ daily_task_limit: 1 });
+    expect((await lease(token)).tasks).toHaveLength(1);
+    const raise = (value: unknown) => asAdmin(`/api/admin/tokens/${id}`, json('PATCH', { daily_task_limit: value }));
+    for (const bad of [-1, 10_001, 2.5, '3']) expect((await raise(bad)).status).toBe(422);
+    expect((await body(await raise(3))).daily_task_limit).toBe(3);
+    const after = await lease(token);
+    expect(after.tasks).toHaveLength(3);
+    expect(after.daily_task_limit).toBe(3);
+  });
+
   it('go to someone else once they run out', async () => {
     await submit(await collector(), 1);
     const first = await maintainer({ label: 'first' });
