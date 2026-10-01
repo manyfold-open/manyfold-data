@@ -6,6 +6,7 @@ export type Route =
   | { name: 'table'; slug: string }
   | { name: 'record'; slug: string; id: string }
   | { name: 'settings'; section: string }
+  | { name: 'privacy' }
   | { name: 'not-found' };
 
 export function matchRoute(pathname: string): Route {
@@ -18,6 +19,7 @@ export function matchRoute(pathname: string): Route {
   if (parts.length === 0) return { name: 'catalog' };
   const [slug, page, id] = parts as [string, string?, string?];
   if (slug === 'settings' && parts.length <= 2) return { name: 'settings', section: page ?? 'overview' };
+  if (slug === 'privacy' && parts.length === 1) return { name: 'privacy' };
   if (parts.length === 1) return { name: 'overview', slug };
   if (parts.length === 2 && page === 'table') return { name: 'table', slug };
   if (parts.length === 3 && page === 'r' && id) return { name: 'record', slug, id };

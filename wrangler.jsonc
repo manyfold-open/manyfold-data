@@ -16,8 +16,9 @@
     "directory": "./dist/client",
     "binding": "ASSETS",
     "not_found_handling": "single-page-application",
-    // The Worker answers the API and each data app's generated files; the rest are assets.
-    "run_worker_first": ["/api/*", "/*/SKILL.md", "/*/feed.xml", "/*/export.csv", "/*/export.json"]
+    // Every request but static files reaches the Worker first: the API, each data app's
+    // generated files, and the pages, which get the Google tag (src/worker/analytics.ts).
+    "run_worker_first": ["/*", "!/assets/*", "!/favicon.svg", "!/robots.txt"]
   },
   "d1_databases": [
     {
@@ -30,7 +31,11 @@
   ],
   "vars": {
     // Links in messages the cron sends (Discord), where there is no request to read it from.
-    "PUBLIC_ORIGIN": "https://data.manyfold.ai"
+    // Pages are only measured when served on this host.
+    "PUBLIC_ORIGIN": "https://data.manyfold.ai",
+    // GA4 measurement id (stream "Manyfold Data"). Empty serves no analytics at all; a
+    // deployment of your own should put its own id here or leave it empty.
+    "GA_MEASUREMENT_ID": "G-EP3B87GSTL"
   },
   // Secrets, set with `npx wrangler secret put <NAME>`:
   //   ADMIN_PASSWORD          opens /api/admin/* and /settings

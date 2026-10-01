@@ -52,6 +52,7 @@ import { parseQuery } from '../shared/query';
 import type { IssuedToken, JoinResponse, MeResponse } from '../shared/types';
 import { HttpError, type Env } from './types';
 import { requireAdmin } from './admin';
+import { consentRequiredFor, freshRequest, measurementIdFor, wantsTag, withAnalytics, type InjectionContext } from './analytics';
 import {
   activity,
   banCollector,
@@ -166,6 +167,16 @@ async function agentToken(c: AppContext): Promise<Token> {
 app.get('/api/health', (c) => c.json({ status: 'ok', service: SERVICE, time: new Date().toISOString() }));
 
 app.get('/api/apps', async (c) => c.json({ apps: await appSummaries(c.env.DB, dataApps) }));
+
+// Whether this visitor is asked about analytics before anything is stored: only when the
+// site measures at all, and only where consent is owed (src/worker/analytics.ts).
+app.get('/api/consent', (c) =>
+  c.json(
+    { required: measurementIdFor(c.env) !== null && consentRequiredFor(c.req.header('cf-ipcountry')) },
+    200,
+    { 'cache-control': 'no-store' },
+  ),
+);
 
 app.get('/api/:slug/records', async (c) => {
   const config = dataAppFor(c.req.param('slug'));
@@ -455,8 +466,18 @@ app.get('/:slug/export.json', async (c) => {
   });
 });
 
-// Anything else is a static asset, or the single-page app for any other path.
-app.all('*', (c) => c.env.ASSETS.fetch(c.req.raw));
+// Anything else is a page of the single-page app, or a static file. Pages get the Google
+// tag on the way out (src/worker/analytics.ts); hashed bundles never reach the Worker.
+app.all('*', async (c) => {
+  const context: InjectionContext = {
+    measurementId: measurementIdFor(c.env),
+    method: c.req.method,
+    url: new URL(c.req.url),
+    publicOrigin: c.env.PUBLIC_ORIGIN,
+  };
+  const response = await c.env.ASSETS.fetch(wantsTag(context) ? freshRequest(c.req.raw) : c.req.raw);
+  return withAnalytics(response, context);
+});
 
 export { app };
 

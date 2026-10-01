@@ -119,6 +119,7 @@ export const RESERVED_SLUGS: readonly string[] = [
   'new',
   'login',
   'invite',
+  'privacy',
 ];
 
 /** Field names that would collide with query parameters (src/shared/query.ts). */

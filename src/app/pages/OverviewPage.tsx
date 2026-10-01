@@ -8,6 +8,7 @@ import { valueLabel, type DataAppConfig } from '../../shared/data-app';
 import { monthStart, weekStart } from '../../shared/dates';
 import { defaultQuery, serializeQuery } from '../../shared/query';
 import type { ChartResult, RecordsResponse, StatsResponse } from '../../shared/types';
+import { track } from '../analytics';
 import { useApi } from '../api';
 import { BarChart, ChartCard, ColumnChart, StatTile } from '../components/charts';
 import { RecordTable } from '../components/RecordTable';
@@ -34,6 +35,7 @@ function Contribute({ config }: { config: DataAppConfig }) {
   const copy = async () => {
     try {
       await navigator.clipboard.writeText(instruction);
+      track('agent_instruction_copied', { data_app: config.slug });
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
@@ -52,7 +54,10 @@ function Contribute({ config }: { config: DataAppConfig }) {
         </button>
       </div>
       <p className="muted small">
-        New records stay private until a maintainer checks them against their source. <a href={skillUrl}>Read the skill</a>
+        New records stay private until a maintainer checks them against their source.{' '}
+        <a href={skillUrl} onClick={() => track('skill_opened', { data_app: config.slug })}>
+          Read the skill
+        </a>
       </p>
     </section>
   );
@@ -162,13 +167,17 @@ export default function OverviewPage({ config }: { config: DataAppConfig }) {
             license.name
           )}
           {' · '}
-          <a href={`/${config.slug}/export.csv`} download>
+          <a href={`/${config.slug}/export.csv`} download onClick={() => track('data_exported', { data_app: config.slug, format: 'csv' })}>
             CSV
           </a>
           {' · '}
-          <a href={`/${config.slug}/export.json`}>JSON</a>
+          <a href={`/${config.slug}/export.json`} onClick={() => track('data_exported', { data_app: config.slug, format: 'json' })}>
+            JSON
+          </a>
           {' · '}
-          <a href={`/${config.slug}/feed.xml`}>RSS</a>
+          <a href={`/${config.slug}/feed.xml`} onClick={() => track('data_exported', { data_app: config.slug, format: 'rss' })}>
+            RSS
+          </a>
         </p>
       </section>
 

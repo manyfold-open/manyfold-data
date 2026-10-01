@@ -5,9 +5,11 @@
 
 import { lazy, Suspense, useEffect } from 'react';
 import { findDataApp } from '../../data-apps/index';
+import Consent from './components/Consent';
 import CatalogPage from './pages/CatalogPage';
 import NotFound from './pages/NotFound';
 import OverviewPage from './pages/OverviewPage';
+import PrivacyPage from './pages/PrivacyPage';
 import RecordPage from './pages/RecordPage';
 import TablePage from './pages/TablePage';
 import { Link, matchRoute, useLocation } from './router';
@@ -21,10 +23,14 @@ export default function App() {
   const { pathname, search } = useLocation();
   const route = matchRoute(pathname);
   const config = 'slug' in route ? findDataApp(route.slug) : undefined;
-  const known = route.name === 'catalog' || route.name === 'settings' || (route.name !== 'not-found' && config !== undefined);
+  const known =
+    route.name === 'catalog' ||
+    route.name === 'settings' ||
+    route.name === 'privacy' ||
+    (route.name !== 'not-found' && config !== undefined);
 
   useEffect(() => {
-    if (route.name === 'record') return; // the record page names itself once loaded
+    if (route.name === 'record' || route.name === 'privacy') return; // these pages name themselves
     document.title =
       route.name === 'catalog'
         ? SITE
@@ -39,6 +45,7 @@ export default function App() {
 
   let page;
   if (route.name === 'catalog') page = <CatalogPage />;
+  else if (route.name === 'privacy') page = <PrivacyPage />;
   else if (route.name === 'settings') {
     page = (
       <Suspense fallback={<p className="muted">Loading</p>}>
@@ -79,9 +86,10 @@ export default function App() {
           <a href="https://manyfold.ai" target="_blank" rel="noopener noreferrer">
             Manyfold
           </a>
-          .
+          . <Link href="/privacy">Privacy</Link>
         </p>
       </footer>
+      {route.name === 'settings' ? null : <Consent />}
     </div>
   );
 }

@@ -18,4 +18,9 @@ describe('matchRoute', () => {
     expect(matchRoute('/settings/tokens')).toEqual({ name: 'settings', section: 'tokens' });
     expect(matchRoute('/settings/tokens/extra')).toEqual({ name: 'not-found' });
   });
+
+  it('has a privacy page, which no data app can take over', () => {
+    expect(matchRoute('/privacy')).toEqual({ name: 'privacy' });
+    expect(matchRoute('/privacy/more')).toEqual({ name: 'not-found' });
+  });
 });

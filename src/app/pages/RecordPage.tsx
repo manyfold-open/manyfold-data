@@ -6,6 +6,7 @@
 import { useEffect, useState, type FormEvent } from 'react';
 import type { DataAppConfig } from '../../shared/data-app';
 import type { MergedResponse, RecordResponse } from '../../shared/types';
+import { track } from '../analytics';
 import { postJson, useApi } from '../api';
 import { displayUrl, formatDate, formatTime, formatValue, safeHref } from '../format';
 import { Link, navigate } from '../router';
@@ -38,6 +39,7 @@ function Report({ config, id }: { config: DataAppConfig; id: string }) {
     setError('');
     try {
       await postJson(`/api/${config.slug}/records/${encodeURIComponent(id)}/report`, { reason: reason.trim() });
+      track('record_reported', { data_app: config.slug });
       setState('sent');
     } catch (failure) {
       setError(failure instanceof Error ? failure.message : 'Could not send the report.');

@@ -194,10 +194,27 @@ Pushes to `main` deploy through `.github/workflows/ci.yml` after checks and test
    Never rotate the encryption key: stored webhooks could no longer be opened.
 4. After the first deploy, load the seed once: `npm run db:seed:remote`.
 5. Open `/settings`, then **Discord**, and paste each data app's webhook URL.
+6. Set `GA_MEASUREMENT_ID` in `wrangler.jsonc` to your own GA4 id, or empty it to serve no analytics.
 
 A cron trigger runs the housekeeping every five minutes once deployed.
 
 The schema applies itself on the first request. The seed is insert-if-absent, so loading it again changes nothing.
+
+## Analytics
+
+The Worker writes the Google tag (GA4, `GA_MEASUREMENT_ID` in `wrangler.jsonc`) into each public
+page as it serves it. It never tags `/settings`, the API, or any host other than `PUBLIC_ORIGIN`'s,
+so `npm run dev` measures nothing.
+
+- **Consent first.** Google Consent Mode v2 starts with everything denied in the EEA, the UK and
+  Switzerland, before the tag loads, and granted elsewhere. Visitors there see a banner, and anyone
+  can change their answer at [`/privacy`](https://data.manyfold.ai/privacy).
+- **Page views** come from the tag itself and from GA4's history-change page views as the app moves
+  between pages, so keep "Page changes based on browser history events" on in the stream's enhanced
+  measurement settings.
+- **Four events**, each with the data app's slug as `data_app` and nothing a visitor typed:
+  `agent_instruction_copied`, `skill_opened`, `data_exported` (with `format`: csv, json or rss) and
+  `record_reported`. Register `data_app` and `format` as event-scoped custom dimensions to report on them.
 
 ## License
 

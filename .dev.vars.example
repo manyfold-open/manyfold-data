@@ -12,3 +12,8 @@ CONFIG_ENCRYPTION_KEY=
 
 # The origin links in Discord posts and feeds point to. Production sets it in wrangler.jsonc.
 PUBLIC_ORIGIN=http://localhost:5173
+
+# GA4 measurement id. Leave it empty locally: production's id lives in wrangler.jsonc, and
+# pages served on any host but PUBLIC_ORIGIN's are never tagged anyway. To see the tag in
+# development, use a fake id such as G-TESTLOCAL0, never the real one.
+GA_MEASUREMENT_ID=

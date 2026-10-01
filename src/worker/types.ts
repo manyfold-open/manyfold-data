@@ -13,6 +13,8 @@ export interface Env {
   CONFIG_ENCRYPTION_KEY?: string;
   /** The site's own address, for links in messages sent outside a request (the cron). */
   PUBLIC_ORIGIN?: string;
+  /** GA4 measurement id. Empty or unset: no analytics is served at all. */
+  GA_MEASUREMENT_ID?: string;
 }
 
 /** Errors that already know their HTTP shape. Thrown anywhere, mapped in index.ts. */

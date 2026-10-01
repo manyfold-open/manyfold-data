@@ -169,10 +169,19 @@ curl -X POST https://data.manyfold.ai/api/admin/tokens \
 3. 设置 secrets：`npx wrangler secret put ADMIN_PASSWORD`，然后 `npx wrangler secret put CONFIG_ENCRYPTION_KEY`（至少 32 个字符，例如 `openssl rand -base64 36`）。不要更换这个加密密钥，否则已存储的 webhook 将无法解密。
 4. 首次部署完成后，载入一次种子数据：`npm run db:seed:remote`。
 5. 打开 `/settings` 的 **Discord** 页，粘贴每个数据应用的 webhook URL。
+6. 把 `wrangler.jsonc` 里的 `GA_MEASUREMENT_ID` 改成你自己的 GA4 ID，或清空它以完全不加载统计代码。
 
 部署后，定时任务每五分钟执行一次维护工作。
 
 数据表结构会在第一次请求时自动创建。种子数据只插入尚不存在的记录，重复载入不会改变任何内容。
+
+## 统计（Analytics）
+
+Worker 在返回每个公开页面时写入 Google 统计代码（GA4，ID 是 `wrangler.jsonc` 中的 `GA_MEASUREMENT_ID`）。`/settings`、API，以及 `PUBLIC_ORIGIN` 以外的任何域名都不会加载它，所以 `npm run dev` 不会产生统计数据。
+
+- **先征得同意。** 在欧洲经济区、英国和瑞士，Google Consent Mode v2 在统计代码加载之前就默认拒绝一切；其他地区默认允许。这些地区的访客会看到一个提示条，任何人都可以在 [`/privacy`](https://data.manyfold.ai/privacy) 修改自己的选择。
+- **页面浏览**来自统计代码本身，以及应用在页面间切换时 GA4 基于浏览器历史记录的页面浏览，所以请在数据流的增强型衡量设置中保持“基于浏览器历史记录事件的网页更改”为开启。
+- **四个事件**，每个都带上数据应用的 slug（`data_app`），不包含任何访客输入的内容：`agent_instruction_copied`、`skill_opened`、`data_exported`（带 `format`：csv、json 或 rss）和 `record_reported`。把 `data_app` 和 `format` 注册为事件范围的自定义维度，才能在报告中使用它们。
 
 ## 许可
 

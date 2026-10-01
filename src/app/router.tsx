@@ -1,8 +1,9 @@
 /**
- * A small router over the History API — five routes do not need a dependency.
+ * A small router over the History API — six routes do not need a dependency.
  *
  *   /                    catalog of data apps
  *   /settings[/:section] the admin console ('settings' is a reserved slug)
+ *   /privacy             what the site keeps, and the analytics choice
  *   /:slug               Overview
  *   /:slug/table         Table (its state lives in the query string)
  *   /:slug/r/:id         one record
