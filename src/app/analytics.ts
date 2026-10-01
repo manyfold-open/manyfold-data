@@ -4,12 +4,14 @@
  * (src/worker/analytics.ts), so everything here does nothing when `gtag` is absent — the
  * normal state of `npm run dev`, of /settings, and of every test.
  *
- * Events carry the data app's slug and nothing a visitor typed:
+ * Events carry the data app's slug ('site' outside any data app) and fixed values, never
+ * anything a visitor typed:
  *
  *   agent_instruction_copied   an owner copied the sentence that sets their agent to work
  *   skill_opened               someone opened a data app's SKILL.md
  *   data_exported              CSV, JSON or the RSS feed (format)
- *   discord_joined             someone opened the data app's Discord invite
+ *   discord_joined             someone opened a Discord invite: the site's, from the top bar
+ *                              (placement 'header'), or a data app's channel (placement 'follow')
  *   record_reported            a reader sent a report (never its text)
  *
  * Page views need no code: the tag's first page_view, then GA4's history-change page views
@@ -67,6 +69,9 @@ export type AnalyticsEvent =
   | 'record_reported';
 
 /** One named moment. Silent when nothing is measuring. */
-export const track = (event: AnalyticsEvent, params: { data_app: string; format?: 'csv' | 'json' | 'rss' }): void => {
+export const track = (
+  event: AnalyticsEvent,
+  params: { data_app: string; format?: 'csv' | 'json' | 'rss'; placement?: 'header' | 'follow' },
+): void => {
   gtag('event', event, params);
 };

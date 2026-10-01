@@ -1,17 +1,52 @@
 /**
- * Records as table rows. The first column links to the record page. Given `onSort`,
- * headers of sortable fields become buttons and the sorted one carries aria-sort.
+ * Records as a data table (desktop) or as list rows (phone). Columns come from the config;
+ * each field type has one way to print. Given `onSort`, headers of sortable fields become
+ * buttons and the sorted one carries aria-sort.
  */
 
-import { SORTABLE, type DataAppConfig, type FieldDef } from '../../shared/data-app';
+import { SORTABLE, valueLabel, type DataAppConfig, type FieldDef } from '../../shared/data-app';
 import type { QueryState } from '../../shared/query';
 import type { PublicRecord } from '../../shared/types';
-import { formatValue } from '../format';
+import { bareLabel, formatShortDate, formatValue } from '../format';
+import { shortLabel } from '../model/charts';
+import { dateDirection, dateFieldOf } from '../model/filters';
 import { Link } from '../router';
+import { Amount, Avatar, DataTable, ListRow, Tag, type DataColumn } from '../ui';
 
-const isNumeric = (def: FieldDef | undefined) => def?.type === 'number';
-/** Number columns align right; text columns may wrap; the rest stay on one line. */
-const cellClass = (def: FieldDef | undefined) => (isNumeric(def) ? 'num' : def?.type === 'text' ? 'wrap' : undefined);
+export const recordHref = (config: DataAppConfig, record: PublicRecord): string => `/${config.slug}/r/${record.id}`;
+
+export const titleOf = (config: DataAppConfig, record: PublicRecord): string =>
+  String(record.data[config.table.columns[0] ?? ''] ?? 'Untitled');
+
+const None = () => (
+  <span className="none" aria-label="Not stated">
+    —
+  </span>
+);
+
+/** One field of a record, the way tables print it. */
+export function Cell({ config, field, record }: { config: DataAppConfig; field: string; record: PublicRecord }) {
+  const def = config.fields[field];
+  const value = record.data[field];
+  if (value === undefined || value === '' || (Array.isArray(value) && value.length === 0)) {
+    // Missing, but the config names another field to show: e.g. "€20 million".
+    const other = config.table.fallback?.[field];
+    const stand = other ? formatValue(config.fields[other], record.data[other]) : '';
+    return stand ? (
+      <span className="fallback" title={config.fields[other!]?.label}>
+        {stand}
+      </span>
+    ) : (
+      <None />
+    );
+  }
+  if (typeof value === 'number') return <Amount def={def} value={value} />;
+  if (def?.type === 'enum' && typeof value === 'string') return <Tag>{shortLabel(valueLabel(def, value))}</Tag>;
+  return <>{formatValue(def, value)}</>;
+}
+
+const cellClass = (def: FieldDef | undefined, index: number): string | undefined =>
+  def?.type === 'date' ? 'date' : def?.type === 'text' || def?.type === 'tags' || def?.type === 'url' ? (index > 1 ? 'text later' : 'text') : undefined;
 
 export function RecordTable({
   config,
@@ -21,73 +56,97 @@ export function RecordTable({
   onSort,
 }: {
   config: DataAppConfig;
-  records: PublicRecord[];
+  records: readonly PublicRecord[];
   columns: readonly string[];
   sort?: QueryState['sort'];
   onSort?: (field: string) => void;
 }) {
+  const table: DataColumn<PublicRecord>[] = columns.map((field, index) => {
+    const def = config.fields[field];
+    const sortable = onSort && def && SORTABLE.includes(def.type);
+    const header = bareLabel(def?.label ?? field);
+    if (index === 0) {
+      return {
+        key: field,
+        header,
+        sorted: sortable ? (sort?.field === field ? (sort.desc ? 'descending' : 'ascending') : null) : undefined,
+        onSort: sortable ? () => onSort(field) : undefined,
+        render: (record) => {
+          const title = titleOf(config, record);
+          return (
+            <Link href={recordHref(config, record)} className="title-cell" title={title}>
+              <Avatar name={title} />
+              <span>{title}</span>
+            </Link>
+          );
+        },
+      };
+    }
+    return {
+      key: field,
+      header,
+      numeric: def?.type === 'number',
+      className: cellClass(def, index),
+      sorted: sortable ? (sort?.field === field ? (sort.desc ? 'descending' : 'ascending') : null) : undefined,
+      onSort: sortable ? () => onSort(field) : undefined,
+      title: (record) => {
+        const value = record.data[field];
+        return def?.type === 'text' || def?.type === 'tags' ? (Array.isArray(value) ? value.join(', ') : (value as string | undefined)) : undefined;
+      },
+      render: (record) => <Cell config={config} field={field} record={record} />,
+    };
+  });
+
   return (
-    <div className="table-wrap">
-      <table className="records">
-        <thead>
-          <tr>
-            {columns.map((field) => {
-              const def = config.fields[field];
-              const active = sort?.field === field;
-              const label = def?.label ?? field;
-              return (
-                <th
-                  key={field}
-                  scope="col"
-                  className={isNumeric(def) ? 'num' : undefined}
-                  aria-sort={active ? (sort?.desc ? 'descending' : 'ascending') : undefined}
-                >
-                  {onSort && def && SORTABLE.includes(def.type) ? (
-                    <button type="button" className="sort-button" onClick={() => onSort(field)}>
-                      {label}
-                      <span className="sort-mark" aria-hidden="true">
-                        {active ? (sort?.desc ? '↓' : '↑') : ''}
-                      </span>
-                    </button>
-                  ) : (
-                    label
-                  )}
-                </th>
-              );
-            })}
-          </tr>
-        </thead>
-        <tbody>
-          {records.map((record) => (
-            <tr key={record.id}>
-              {columns.map((field, index) => {
-                const def = config.fields[field];
-                const text = formatValue(def, record.data[field]);
-                // Missing, but the config names another field to show: e.g. "€20 million".
-                const other = config.table.fallback?.[field];
-                const stand = !text && other ? formatValue(config.fields[other], record.data[other]) : '';
-                return (
-                  <td key={field} className={cellClass(def)}>
-                    {index === 0 ? (
-                      <Link href={`/${config.slug}/r/${record.id}`}>{text}</Link>
-                    ) : text ? (
-                      text
-                    ) : stand ? (
-                      <span className="fallback" title={config.fields[other!]?.label}>
-                        {stand}
-                      </span>
-                    ) : (
-                      <span className="empty" aria-label="Not stated">
-                        –
-                      </span>
-                    )}
-                  </td>
-                );
-              })}
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <DataTable
+      label={config.title}
+      columns={table}
+      rows={records}
+      rowKey={(record) => record.id}
+      rowHref={(record) => recordHref(config, record)}
+    />
+  );
+}
+
+/** Phone rows: title, the first enum value and city under it, the figure and the date on the right. */
+export function RecordList({ config, records }: { config: DataAppConfig; records: readonly PublicRecord[] }) {
+  const columns = config.table.columns;
+  const enumField = columns.find((field) => config.fields[field]?.type === 'enum');
+  const tagsField = columns.find((field) => config.fields[field]?.type === 'tags');
+  const numberField = columns.find((field) => config.fields[field]?.type === 'number');
+  const dateField = dateFieldOf(config);
+  const forward = dateField !== null && dateDirection(config, dateField) === 'future';
+
+  return (
+    <div className="list">
+      {records.map((record) => {
+        const enumDef = enumField ? config.fields[enumField] : undefined;
+        const enumValue = enumField ? record.data[enumField] : undefined;
+        const tags = tagsField ? record.data[tagsField] : undefined;
+        const meta = [
+          typeof enumValue === 'string' ? shortLabel(valueLabel(enumDef, enumValue)) : '',
+          Array.isArray(tags) ? (tags[0] ?? '') : '',
+        ]
+          .filter(Boolean)
+          .join(' · ');
+        const date = dateField ? record.data[dateField] : undefined;
+        return (
+          <ListRow
+            key={record.id}
+            href={recordHref(config, record)}
+            title={titleOf(config, record)}
+            meta={meta || undefined}
+            value={numberField ? <Cell config={config} field={numberField} record={record} /> : undefined}
+            sub={
+              typeof date === 'string'
+                ? forward
+                  ? `${config.fields[dateField!]?.label} ${formatShortDate(date)}`
+                  : formatShortDate(date)
+                : undefined
+            }
+          />
+        );
+      })}
     </div>
   );
 }

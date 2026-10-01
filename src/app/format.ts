@@ -93,3 +93,49 @@ export function formatValue(def: FieldDef | undefined, value: FieldValue | undef
       return value;
   }
 }
+
+/** A number with up to `digits` decimals, trailing zeros dropped: 9.50 → "9.5". */
+const trim = (value: number, digits: number): string =>
+  value.toFixed(digits).replace(/\.0+$/, '').replace(/(\.\d*?)0+$/, '$1');
+
+/**
+ * An amount as a number and a small unit, the way pages print money: 9 500 000 → "9.5" and
+ * "M USD". Numbers that are not money print in full with no unit.
+ */
+export function amountParts(def: FieldDef | undefined, value: number): { number: string; unit: string } {
+  if (!(def?.type === 'number' && def.display === 'usd')) return { number: plain.format(value), unit: '' };
+  const size = Math.abs(value);
+  if (size >= 1e9) return { number: trim(value / 1e9, 2), unit: 'B USD' };
+  if (size >= 1e6) return { number: trim(value / 1e6, 1), unit: 'M USD' };
+  if (size >= 1e3) return { number: trim(value / 1e3, 1), unit: 'K USD' };
+  return { number: plain.format(value), unit: 'USD' };
+}
+
+/** A short amount for labels and chips: "$9.5M", "$25K", "$1B". Plain numbers stay plain. */
+export function shortAmount(def: FieldDef | undefined, value: number): string {
+  if (!(def?.type === 'number' && def.display === 'usd')) return plain.format(value);
+  const size = Math.abs(value);
+  if (size >= 1e9) return `$${trim(value / 1e9, 2)}B`;
+  if (size >= 1e6) return `$${trim(value / 1e6, 1)}M`;
+  if (size >= 1e3) return `$${trim(value / 1e3, 1)}K`;
+  return `$${plain.format(value)}`;
+}
+
+/** A field label without its unit, for headings: "Amount (USD)" → "Amount". */
+export const bareLabel = (label: string): string => label.replace(/\s*\([^)]*\)\s*$/, '');
+
+/** Up to two initials for an avatar: "Zhipu AI (智谱)" → "ZA". */
+export function initials(name: string): string {
+  const words = name.replace(/[^\p{L}\p{N} ]/gu, ' ').trim().split(/\s+/).filter(Boolean);
+  return ((words[0]?.[0] ?? '?') + (words[1]?.[0] ?? '')).toUpperCase();
+}
+
+/** A stable hue for a name, so its avatar has the same color on every page. */
+export function hueOf(name: string): number {
+  let hue = 0;
+  for (let index = 0; index < name.length; index += 1) hue = (hue * 31 + name.charCodeAt(index)) % 360;
+  return hue;
+}
+
+/** "Hackathons" from the config's noun. */
+export const nounTitle = (config: DataAppConfig): string => capitalize(config.noun.other);
