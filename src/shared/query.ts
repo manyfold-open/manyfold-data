@@ -28,6 +28,19 @@ export interface QueryState {
 
 export const Q_MAX = 100;
 
+/**
+ * Parameters that hold text a reader typed. They stay in the address bar, so a shared link
+ * finds the same rows, but are removed from every URL analytics sees (AGENTS.md invariant 17).
+ */
+export const TYPED_PARAMS: readonly string[] = ['q'];
+
+/** A URL as analytics may see it: the same address without the typed parameters. */
+export function measuredUrl(href: string): string {
+  const url = new URL(href);
+  for (const name of TYPED_PARAMS) url.searchParams.delete(name);
+  return url.toString();
+}
+
 const parseSort = (value: string) => ({ field: value.replace(/^-/, ''), desc: value.startsWith('-') });
 
 /** Range conditions written in a config, as query filters. */

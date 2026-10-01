@@ -10,10 +10,15 @@
  */
 
 import { useEffect, useState, type AnchorHTMLAttributes, type MouseEvent } from 'react';
+import { notePage } from './analytics';
 
 export { matchRoute, type Route } from './routes';
 
 const CHANGE = 'manyfold:navigate';
+
+// Back and forward: give the tag the new page before its own history listener reads it.
+// This module loads before gtag.js (which is async), so this listener runs first.
+if (typeof window !== 'undefined') window.addEventListener('popstate', () => notePage(location.href));
 
 const current = () => ({ pathname: location.pathname, search: location.search });
 
@@ -37,6 +42,7 @@ export function navigate(href: string, options: { replace?: boolean } = {}): voi
   const target = new URL(href, location.href);
   if (target.pathname === location.pathname && target.search === location.search) return;
   const samePath = target.pathname === location.pathname;
+  notePage(target.href);
   history[options.replace ? 'replaceState' : 'pushState'](null, '', target.pathname + target.search);
   window.dispatchEvent(new Event(CHANGE));
   if (!samePath) window.scrollTo(0, 0);

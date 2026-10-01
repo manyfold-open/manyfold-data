@@ -14,9 +14,12 @@
  *                              (placement 'header'), or a data app's channel (placement 'follow')
  *   record_reported            a reader sent a report (never its text)
  *
- * Page views need no code: the tag's first page_view, then GA4's history-change page views
- * as the router moves between pages.
+ * Page views are the tag's first page_view, then GA4's history-change page views as the
+ * router moves between pages. Each carries page_location without the Table's search text:
+ * the Worker sets it for the first, notePage for every navigation after.
  */
+
+import { measuredUrl } from '../shared/query';
 
 export const CONSENT_KEY = 'manyfold-data.consent';
 
@@ -67,6 +70,14 @@ export type AnalyticsEvent =
   | 'data_exported'
   | 'discord_joined'
   | 'record_reported';
+
+/**
+ * Tells the tag which page comes next, with the reader's search removed. Call it before the
+ * address changes: GA4 counts a page view on each history change and reads this value then.
+ */
+export const notePage = (href: string): void => {
+  gtag('set', { page_location: measuredUrl(href) });
+};
 
 /** One named moment. Silent when nothing is measuring. */
 export const track = (

@@ -10,6 +10,9 @@
  *   consent state never depends on a geo lookup being right. A choice the visitor already
  *   made is replayed before the first hit.
  * - **The id is validated before it is interpolated.** It lands inside a `<script>`.
+ * - **Nothing a reader typed reaches Google.** Page views carry `page_location` with the
+ *   Table's search (`?q=`) removed, here for the first hit and in src/app/router.tsx for the
+ *   rest.
  * - **The admin console is never measured**, and neither is any host but the public one:
  *   `npm run dev` on localhost serves no tag even with the real id configured.
  *
@@ -17,6 +20,8 @@
  * GET /api/consent (see consentRequiredFor). A wrong guess there shows or hides a banner,
  * it does not store a cookie.
  */
+
+import { TYPED_PARAMS } from '../shared/query';
 
 /**
  * Where a visitor has to opt in before anything is stored: the EEA (EU 27 plus Iceland,
@@ -83,6 +88,9 @@ export function analyticsHead(measurementId: string): string {
     // sends the first page_view.
     `try{var c=localStorage.getItem('${CONSENT_KEY}');if(c==='granted')gtag('consent','update',${GRANTED});else if(c==='denied')gtag('consent','update',${DENIED});}catch(e){}`,
     "gtag('js',new Date());",
+    // The page's address without what the reader typed (TYPED_PARAMS: the Table's search).
+    // `set` holds for every later hit; the router sets it again on each navigation.
+    `try{var u=new URL(location.href);${JSON.stringify(TYPED_PARAMS)}.forEach(function(p){u.searchParams.delete(p)});gtag('set',{'page_location':u.toString()});}catch(e){}`,
     `gtag('config','${id}');`,
   ].join('\n');
   return (

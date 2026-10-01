@@ -47,7 +47,7 @@ Rules for anyone — human or AI agent — changing Manyfold Data. These are the
 17. **Analytics is consent-first and stays out of the console.** Only `src/worker/analytics.ts` writes
     the Google tag, consent defaults before the library; never tag `/settings`, the API, or a host other
     than `PUBLIC_ORIGIN`'s. Events (`src/app/analytics.ts`) carry the data app's slug and fixed values,
-    never text a person typed. Tests use made-up ids like `G-TESTID0000`, never the real one, and
+    never text a person typed; page views carry `page_location` without `TYPED_PARAMS` (the search). Tests use made-up ids like `G-TESTID0000`, never the real one, and
     `/privacy` must keep describing what the code does.
 
 ## Tests

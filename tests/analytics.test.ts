@@ -14,6 +14,7 @@ import {
   shouldInject,
   type InjectionContext,
 } from '../src/worker/analytics';
+import { measuredUrl, TYPED_PARAMS } from '../src/shared/query';
 import { app } from '../src/worker/index';
 import { createD1 } from './d1';
 
@@ -83,6 +84,18 @@ describe('the tag itself', () => {
   it('replays a stored answer ahead of the first hit', () => {
     expect(head.indexOf(CONSENT_KEY)).toBeGreaterThan(-1);
     expect(head.indexOf(CONSENT_KEY)).toBeLessThan(head.indexOf("gtag('config'"));
+  });
+
+  it('leaves the reader\'s search out of the page address, before the first hit', () => {
+    const set = head.indexOf("gtag('set',{'page_location'");
+    expect(set).toBeGreaterThan(-1);
+    expect(set).toBeLessThan(head.indexOf("gtag('config'"));
+    expect(head).toContain('["q"].forEach');
+    // The inline code does what measuredUrl does.
+    const strip = new Function('location', 'gtag', head.slice(head.indexOf('try{var u='), head.indexOf("gtag('config'")));
+    const sent: unknown[] = [];
+    strip({ href: `${ORIGIN}/ai-hackathons/table?q=jane+doe&format=online&sort=deadline` }, (...args: unknown[]) => sent.push(args));
+    expect(sent).toEqual([['set', { page_location: `${ORIGIN}/ai-hackathons/table?format=online&sort=deadline` }]]);
   });
 
   it('carries the id in both places', () => {
@@ -202,5 +215,16 @@ describe('the Worker', () => {
     expect(await ask({})).toBe(true);
     env.GA_MEASUREMENT_ID = '';
     expect(await ask({ 'cf-ipcountry': 'DE' })).toBe(false);
+  });
+});
+
+describe('the address analytics sees', () => {
+  it('drops the search text and keeps every filter', () => {
+    expect(TYPED_PARAMS).toEqual(['q']);
+    expect(measuredUrl(`${ORIGIN}/ai-fundraising/table?q=openai&stage=seed&sort=-announced_on`)).toBe(
+      `${ORIGIN}/ai-fundraising/table?stage=seed&sort=-announced_on`,
+    );
+    expect(measuredUrl(`${ORIGIN}/ai-fundraising/table?q=a%20b`)).toBe(`${ORIGIN}/ai-fundraising/table`);
+    expect(measuredUrl(`${ORIGIN}/ai-hackathons`)).toBe(`${ORIGIN}/ai-hackathons`);
   });
 });
