@@ -4,7 +4,7 @@
  * is ?app=<slug>, and an open record is ?record=<id>.
  */
 
-import { useEffect, useState, type FormEvent } from 'react';
+import { useEffect, useRef, useState, type FormEvent } from 'react';
 import './settings.css';
 import { dataApps } from '../../../data-apps/index';
 import { ApiError } from '../api';
@@ -19,7 +19,7 @@ import RecordsSection from './RecordsSection';
 import ReviewSection from './ReviewSection';
 import SpotCheckSection from './SpotCheckSection';
 import TokensSection from './TokensSection';
-import { Field } from './ui';
+import { Field, useCellLabels } from './ui';
 
 /** `perApp` sections show one data app at a time. */
 const SECTIONS = [
@@ -86,6 +86,15 @@ export default function SettingsPage({ section, search }: { section: string; sea
     return () => whenLocked(null);
   }, []);
 
+  const root = useRef<HTMLDivElement>(null);
+  useCellLabels(root, open);
+  // On a phone the section tabs scroll sideways; keep the current one in view.
+  useEffect(() => {
+    const nav = root.current?.querySelector<HTMLElement>('.settings-nav');
+    const tab = nav?.querySelector<HTMLElement>('[aria-current="page"]');
+    if (nav && tab) nav.scrollLeft = tab.offsetLeft - (nav.clientWidth - tab.offsetWidth) / 2;
+  }, [open, section]);
+
   const current = SECTIONS.find((entry) => entry.id === section);
   if (!current) return <NotFound message="There is no settings section by that name." />;
   if (!open) return <Gate onOpen={() => setOpen(true)} />;
@@ -128,7 +137,7 @@ export default function SettingsPage({ section, search }: { section: string; sea
   }
 
   return (
-    <div className="settings">
+    <div className="settings" ref={root}>
       <div className="settings-bar">
         <nav className="settings-nav" aria-label="Settings">
           {SECTIONS.map((entry) => (

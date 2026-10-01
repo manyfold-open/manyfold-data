@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { findDataApp } from '../../../data-apps/index';
 import type { RecordData } from '../../shared/data-app';
 import type { AdminRecord, AdminRecordDetail, RecordStatus } from '../../shared/types';
@@ -28,16 +28,25 @@ function Detail({ slug, id, onClose }: { slug: string; id: string; onClose: () =
   const [draft, setDraft] = useState('');
   const [message, setMessage] = useState<string | null>(null);
 
+  const panel = useRef<HTMLElement>(null);
+
   useEffect(() => {
     if (data) setDraft(JSON.stringify(data.record.data, null, 2));
   }, [data]);
+
+  // The record opens above the list: bring it into view, under the sticky top bar.
+  const loaded = data !== null;
+  useEffect(() => {
+    const element = panel.current;
+    if (loaded && element) window.scrollTo({ top: element.getBoundingClientRect().top + window.scrollY - 72 });
+  }, [id, loaded]);
 
   if (!data) return <Notice error={error} />;
   const { record, revisions, tasks, reports } = data;
   const source = safeHref(record.source_url);
 
   return (
-    <section className="panel detail">
+    <section ref={panel} className="panel detail">
       <div className="section-head">
         <h3>
           {record.name} <Badge value={record.status} />

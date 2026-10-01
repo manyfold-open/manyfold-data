@@ -6,7 +6,12 @@ import { describe, expect, it } from 'vitest';
 
 const sources = import.meta.glob<string>('../src/app/**/*.tsx', { query: '?raw', import: 'default', eager: true });
 const EXEMPT = /^\.\.\/src\/app\/ui\//;
-const NATIVE = [/<select\b/, /<dialog\b/, /type=["']checkbox["']/, /type=["']radio["']/, /type=["']date["']/];
+// Every native picker counts, not only date: datetime-local, time, month, week, color, range.
+const NATIVE = [
+  /<select\b/,
+  /<dialog\b/,
+  /type=["'](checkbox|radio|date|datetime-local|time|month|week|color|range)["']/,
+];
 const scanned = Object.keys(sources).filter((path) => !EXEMPT.test(path));
 
 describe('native controls', () => {

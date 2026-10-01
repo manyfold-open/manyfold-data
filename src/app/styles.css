@@ -356,6 +356,7 @@ textarea {
 .site-main {
   flex: 1;
   width: 100%;
+  min-width: 0;
   max-width: 1264px;
   margin: 0 auto;
   padding: 24px 32px 56px;
@@ -1111,8 +1112,7 @@ textarea {
 }
 
 .select-list {
-  right: 0;
-  left: auto;
+  left: 0;
   min-width: 100%;
   white-space: nowrap;
   max-height: 320px;

@@ -6,13 +6,6 @@ import { send, useAdmin } from './adminApi';
 import { DateField, Select } from '../ui';
 import { Action, Badge, Field, Notice, plural, share, When } from './ui';
 
-/** 24 hours ago as a datetime-local value, which is in the browser's own time zone. */
-function dayAgo(): string {
-  const at = new Date(Date.now() - 24 * 60 * 60 * 1000);
-  at.setMinutes(at.getMinutes() - at.getTimezoneOffset());
-  return at.toISOString().slice(0, 16);
-}
-
 /** The token's name, with an inline rename: the new name shows in every history at once. */
 function Name({ token, onDone }: { token: AdminToken; onDone: (message: string) => void }) {
   const [editing, setEditing] = useState(false);
@@ -60,26 +53,25 @@ function Name({ token, onDone }: { token: AdminToken; onDone: (message: string) 
   );
 }
 
-/** Undo a token's changes since a moment the admin picks (default: 24 hours ago). */
+const UNDO_WINDOWS = [
+  { value: '1', label: 'Last hour' },
+  { value: '24', label: 'Last 24 hours' },
+  { value: '168', label: 'Last 7 days' },
+  { value: '720', label: 'Last 30 days' },
+] as const;
+
+/** Undo a token's changes over a window the admin picks (default: the last 24 hours). */
 function Undo({ token, onDone }: { token: AdminToken; onDone: (message: string) => void }) {
-  const [since, setSince] = useState(dayAgo);
+  const [hours, setHours] = useState<(typeof UNDO_WINDOWS)[number]['value']>('24');
+  const since = () => new Date(Date.now() - Number(hours) * 3_600_000).toISOString();
   return (
     <span className="undo">
-      <input
-        type="datetime-local"
-        value={since}
-        onChange={(event) => setSince(event.target.value)}
-        aria-label={`Undo ${token.label} since`}
-      />
+      <Select label={`Undo ${token.label}'s changes from`} value={hours} options={UNDO_WINDOWS} onChange={setHours} />
       <Action
-        label="Undo since"
+        label="Undo"
         tone="danger"
-        confirm={`Undo every change ${token.label} made since ${formatTime(new Date(since).toISOString())}?`}
-        run={() =>
-          send<RevertReport>('POST', `/tokens/${token.id}/revert`, {
-            since: new Date(since).toISOString(),
-          })
-        }
+        confirm={`Undo every change ${token.label} made since ${formatTime(since())}?`}
+        run={() => send<RevertReport>('POST', `/tokens/${token.id}/revert`, { since: since() })}
         onDone={(result) => {
           const report = result as RevertReport;
           onDone(

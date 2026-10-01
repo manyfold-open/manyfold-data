@@ -1,6 +1,6 @@
 /** Small pieces the /settings sections share. */
 
-import { useState, type ReactNode } from 'react';
+import { useEffect, useState, type ReactNode, type RefObject } from 'react';
 import { ApiError } from '../api';
 import { formatCount, formatTime } from '../format';
 
@@ -73,3 +73,30 @@ export const plural = (count: number, one: string, other = `${one}s`): string =>
 
 /** "75%" of a part of a whole, or a dash when there is no whole yet. */
 export const share = (part: number, whole: number): string => (whole > 0 ? `${Math.round((part / whole) * 100)}%` : '–');
+
+/**
+ * Gives every cell of the console's tables its column's name as data-label, so on a phone
+ * (settings.css) each row can stack into a card that still says what every number is.
+ */
+export function useCellLabels(root: RefObject<HTMLElement | null>, mounted: boolean): void {
+  useEffect(() => {
+    const element = root.current;
+    if (!element) return;
+    const label = () => {
+      for (const table of element.querySelectorAll('table.records')) {
+        const heads = [...table.querySelectorAll('thead th')].map((th) => th.textContent?.trim() ?? '');
+        for (const row of table.querySelectorAll('tbody tr')) {
+          const cells = [...row.children] as HTMLElement[];
+          if (cells.length !== heads.length) continue; // e.g. a row of actions spanning the table
+          cells.forEach((cell, index) => {
+            if (cell.dataset.label !== heads[index]) cell.dataset.label = heads[index];
+          });
+        }
+      }
+    };
+    label();
+    const observer = new MutationObserver(label);
+    observer.observe(element, { childList: true, subtree: true });
+    return () => observer.disconnect();
+  }, [root, mounted]);
+}
