@@ -5,7 +5,7 @@ export type { Choice } from './controls';
 export { DataTable, type DataColumn } from './DataTable';
 export { Icon, type IconName } from './Icon';
 export { ListRow } from './ListRow';
-export { Logo, LogoMark } from './Logo';
+export { Logo, LogoMark, ManyfoldMark } from './Logo';
 export { Menu, type MenuItem } from './Menu';
 export { Sheet } from './Sheet';
 export { Skeleton, usePending } from './Skeleton';

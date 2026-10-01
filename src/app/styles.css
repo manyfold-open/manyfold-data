@@ -386,9 +386,56 @@ textarea {
   font-size: 13px;
 }
 
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+}
+
 .site-footer a {
   color: var(--ink2);
   font-weight: 500;
+}
+
+.footer-end {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.built-on {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.site-footer .built-on {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.built-on b {
+  color: var(--ink2);
+  font-weight: 600;
+}
+
+.built-on:hover {
+  text-decoration: none;
+}
+
+.built-on:hover b {
+  color: var(--ink);
+}
+
+.manyfold-mark .k {
+  fill: var(--ink);
+}
+
+.manyfold-mark .m {
+  fill: var(--muted);
 }
 
 /* Phone: tab bar or record actions pinned to the bottom. */

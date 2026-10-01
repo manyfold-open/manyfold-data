@@ -19,7 +19,7 @@ import RecordPage from './pages/RecordPage';
 import TablePage from './pages/TablePage';
 import { Link, matchRoute, useLocation } from './router';
 import { SITE } from './site';
-import { ToastProvider } from './ui';
+import { ManyfoldMark, ToastProvider } from './ui';
 
 // The admin console is its own chunk, so readers never download it.
 const SettingsPage = lazy(() => import('./settings/SettingsPage'));
@@ -80,12 +80,15 @@ export default function App() {
           </div>
         </main>
         <footer className="site-footer">
-          <p>
-            Data is CC BY 4.0, code is MIT. Every record links to the page it was checked against. Built on{' '}
-            <a href="https://manyfold.ai" target="_blank" rel="noopener noreferrer">
-              Manyfold
+          <p>Data is CC BY 4.0, code is MIT. Every record links to the page it was checked against.</p>
+          <p className="footer-end">
+            <a className="built-on" href="https://manyfold.ai" target="_blank" rel="noopener noreferrer">
+              Built on
+              <ManyfoldMark />
+              <b>Manyfold</b>
             </a>
-            . <Link href="/privacy">Privacy</Link>
+            <span aria-hidden="true">·</span>
+            <Link href="/privacy">Privacy</Link>
           </p>
         </footer>
         {tabBar ? <TabBar config={app} route={route} onContribute={() => setContributing(true)} /> : null}
