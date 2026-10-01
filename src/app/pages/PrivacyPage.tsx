@@ -51,9 +51,9 @@ export default function PrivacyPage() {
       <ul>
         <li>Cloudflare runs the site and its database, and keeps short-lived request logs.</li>
         <li>
-          With your consent, or where none is required, Google Analytics records the pages you view and four actions:
-          copying the agent instruction, opening a data app's skill, downloading its data or feed, and sending a
-          report. The text of a report never goes to Google.
+          With your consent, or where none is required, Google Analytics records the pages you view and five actions:
+          copying the agent instruction, opening a data app's skill, downloading its data or feed, opening its Discord
+          invite, and sending a report. The text of a report never goes to Google.
         </li>
         <li>The admin console is never measured.</li>
       </ul>

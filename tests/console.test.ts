@@ -138,6 +138,17 @@ describe('Discord', () => {
     expect(fillLine(config, { name: 'A', city: 'Paris' })).toBe('A · Paris');
   });
 
+  it('keeps a public invite link per data app, apart from the webhook, and puts it on the Overview', async () => {
+    const patch = (payload: unknown) => asAdmin('/api/admin/notify/ai-hackathons', json('PATCH', payload));
+    expect((await patch({ invite_url: WEBHOOK })).status).toBe(422);
+    expect((await patch({})).status).toBe(422);
+    const reply = await body(await patch({ invite_url: 'https://discord.com/invite/AbC123' }));
+    expect(reply.apps[0]).toMatchObject({ slug: 'ai-hackathons', invite_url: 'https://discord.gg/AbC123', configured: false });
+    expect((await body(await call('/api/ai-hackathons/stats'))).discordInvite).toBe('https://discord.gg/AbC123');
+    await patch({ invite_url: null });
+    expect((await body(await call('/api/ai-hackathons/stats'))).discordInvite).toBeNull();
+  });
+
   it('stores the webhook sealed and shows it masked', async () => {
     expect((await setWebhook('https://example.com/hook')).status).toBe(422);
     const reply = await body(await setWebhook());

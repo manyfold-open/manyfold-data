@@ -34,6 +34,7 @@
  *   POST  /api/admin/reports/:id/resolve
  *   GET   /api/admin/activity        the latest revisions, by data app or actor
  *   GET|PUT|PATCH|DELETE /api/admin/notify[/:slug], POST /api/admin/notify/:slug/test
+ *                                    (PATCH sets the delivery state and the public invite link)
  *   GET   /api/admin/:slug/spot-check, POST .../spot-check/:recordId   the weekly accuracy check
  *   POST  /api/admin/maintenance     run the cron now: housekeeping, then the Discord outbox
  *
@@ -70,7 +71,7 @@ import {
   spotCheck,
 } from './console';
 import { csv, json as jsonExport, rss, verifiedRecords } from './feeds';
-import { clearWebhook, flushOutbox, notifyStatus, sendTest, setDeliveryState, setWebhook } from './notify';
+import { clearWebhook, flushOutbox, notifyStatus, sendTest, setDeliveryState, setInvite, setWebhook } from './notify';
 import { ensureSchema } from './db';
 import { maintain } from './maintenance';
 import { applyVerdicts, LEASE_MAX, leaseTasks, workOf } from './maintainer';
@@ -373,8 +374,13 @@ app.put('/api/admin/notify/:slug', async (c) => {
 
 app.patch('/api/admin/notify/:slug', async (c) => {
   const config = dataAppFor(c.req.param('slug'));
-  const body = ((await readJson(c)) ?? {}) as { state?: unknown };
-  await setDeliveryState(c.env.DB, config.slug, body.state, new Date());
+  const body = ((await readJson(c)) ?? {}) as { state?: unknown; invite_url?: unknown };
+  if (!('state' in body) && !('invite_url' in body)) {
+    throw new HttpError(422, 'invalid_body', 'Send state (active or paused), invite_url (a Discord invite link or null), or both.');
+  }
+  const now = new Date();
+  if ('invite_url' in body) await setInvite(c.env.DB, config.slug, body.invite_url, now);
+  if ('state' in body) await setDeliveryState(c.env.DB, config.slug, body.state, now);
   return c.json({ apps: await notifyStatus(c.env.DB, dataApps) });
 });
 

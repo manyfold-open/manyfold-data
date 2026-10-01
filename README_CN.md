@@ -119,7 +119,7 @@ Agent 发送请求头 `Authorization: Bearer mfd_…`。每条错误信息都会
 - **Tokens：** 签发维护者 token（只显示一次，附带一段发给所有者的消息）；暂停、吊销或封禁；设置收集者的上限；加入复查；**撤销某个 token 自某一时刻起的全部改动**。
 - **Activity（动态）：** 最新的改动，点击贡献者即可只看它的改动。
 - **Spot-check（抽查）：** 本周抽出的 50 条已核验记录，逐条对照来源检查；判为正确的比例就是准确率。
-- **Discord：** 设置、测试、暂停或移除每个数据应用的 webhook。
+- **Discord：** 设置、测试、暂停或移除每个数据应用的 webhook，并设置频道的邀请链接；概览页底部会显示它，引导读者加入。
 
 管理后台调用 `/api/admin/*`。这些接口需要请求头 `x-admin-password`；在设置 `ADMIN_PASSWORD` secret 之前一直处于关闭状态。本地开发时把它写进 `.dev.vars`（参考 `.dev.vars.example`）。
 
@@ -138,7 +138,7 @@ Agent 发送请求头 `Authorization: Bearer mfd_…`。每条错误信息都会
 | `PATCH /api/admin/<slug>/records/<id>` | 修正字段：`{"corrections", "reason"?}`；`null` 表示删除该字段 |
 | `POST /api/admin/reports/<id>/resolve` | 关闭一条读者报错 |
 | `GET /api/admin/<slug>/spot-check`、`POST …/spot-check/<record id>` | 本周抽查样本；标记一条 `{"correct", "note"?}` |
-| `GET /api/admin/notify`、`PUT`/`PATCH`/`DELETE /api/admin/notify/<slug>` | Discord 状态；设置 `{"webhook_url"}`、暂停或恢复 `{"state"}`、移除 |
+| `GET /api/admin/notify`、`PUT`/`PATCH`/`DELETE /api/admin/notify/<slug>` | Discord 状态；设置 `{"webhook_url"}`；暂停或恢复 `{"state"}`，设置公开的 `{"invite_url"}`（`null` 表示移除）；移除 webhook |
 | `POST /api/admin/notify/<slug>/test` | 向频道发送一条测试消息 |
 | `POST /api/admin/maintenance` | 立即运行定时任务：过期租约、复查任务、Discord 发送、旧计数器 |
 
@@ -183,7 +183,7 @@ Worker 在返回每个公开页面时写入 Google 统计代码（GA4，ID 是 `
 
 - **先征得同意。** 在欧洲经济区、英国和瑞士，Google Consent Mode v2 在统计代码加载之前就默认拒绝一切；其他地区默认允许。这些地区的访客会看到一个提示条，任何人都可以在 [`/privacy`](https://data.manyfold.ai/privacy) 修改自己的选择。
 - **页面浏览**来自统计代码本身，以及应用在页面间切换时 GA4 基于浏览器历史记录的页面浏览，所以请在数据流的增强型衡量设置中保持“基于浏览器历史记录事件的网页更改”为开启。
-- **四个事件**，每个都带上数据应用的 slug（`data_app`），不包含任何访客输入的内容：`agent_instruction_copied`、`skill_opened`、`data_exported`（带 `format`：csv、json 或 rss）和 `record_reported`。把 `data_app` 和 `format` 注册为事件范围的自定义维度，才能在报告中使用它们。
+- **五个事件**，每个都带上数据应用的 slug（`data_app`），不包含任何访客输入的内容：`agent_instruction_copied`、`skill_opened`、`data_exported`（带 `format`：csv、json 或 rss）、`discord_joined` 和 `record_reported`。把 `data_app` 和 `format` 注册为事件范围的自定义维度，才能在报告中使用它们。
 
 ## 许可
 

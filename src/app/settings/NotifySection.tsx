@@ -5,6 +5,7 @@ import { Action, Badge, Field, Notice, When } from './ui';
 
 function App({ status, onChange }: { status: NotifyStatus; onChange: (message: string) => void }) {
   const [url, setUrl] = useState('');
+  const [invite, setInvite] = useState(status.invite_url ?? '');
   const path = `/notify/${status.slug}`;
   return (
     <section className="panel">
@@ -54,6 +55,21 @@ function App({ status, onChange }: { status: NotifyStatus; onChange: (message: s
             onChange('Webhook saved, sealed with the encryption key.');
           }}
         />
+      </form>
+      <form className="inline-form" onSubmit={(event) => event.preventDefault()}>
+        <Field label="Invite link, shown at the bottom of the Overview">
+          <input type="url" value={invite} onChange={(event) => setInvite(event.target.value)} placeholder="https://discord.gg/…" />
+        </Field>
+        <Action
+          label="Save invite"
+          run={() => send('PATCH', path, { invite_url: invite.trim() || null })}
+          onDone={() => onChange(invite.trim() ? 'Invite saved: the Overview now asks readers to join.' : 'Invite removed.')}
+        />
+        {status.invite_url ? (
+          <a href={status.invite_url} target="_blank" rel="noopener noreferrer" className="small">
+            Open the current invite ↗
+          </a>
+        ) : null}
       </form>
       {status.configured ? (
         <div className="inline-form">

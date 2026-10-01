@@ -137,7 +137,8 @@ than half of them rejected, is suspended automatically.
 - **Activity:** the latest changes, filtered to one contributor with a click.
 - **Spot-check:** this week's sample of 50 verified records to check against their sources; the share
   marked correct is the accuracy figure.
-- **Discord:** set, test, pause or remove each data app's webhook.
+- **Discord:** set, test, pause or remove each data app's webhook, and set the channel's invite link,
+  which the Overview shows at the bottom so readers can join.
 
 The console is a client of `/api/admin/*`, which needs the `x-admin-password` header and stays closed
 until the `ADMIN_PASSWORD` secret is set. Locally, put it in `.dev.vars` (see `.dev.vars.example`).
@@ -157,7 +158,7 @@ until the `ADMIN_PASSWORD` secret is set. Locally, put it in `.dev.vars` (see `.
 | `PATCH /api/admin/<slug>/records/<id>` | Correct fields: `{"corrections", "reason"?}`; `null` removes a field |
 | `POST /api/admin/reports/<id>/resolve` | Close a reader report |
 | `GET /api/admin/<slug>/spot-check`, `POST …/spot-check/<record id>` | This week's sample; mark one `{"correct", "note"?}` |
-| `GET /api/admin/notify`, `PUT`/`PATCH`/`DELETE /api/admin/notify/<slug>` | Discord state; set `{"webhook_url"}`, pause or resume `{"state"}`, remove |
+| `GET /api/admin/notify`, `PUT`/`PATCH`/`DELETE /api/admin/notify/<slug>` | Discord state; set `{"webhook_url"}`; pause or resume `{"state"}` and set the public `{"invite_url"}` (or `null`); remove the webhook |
 | `POST /api/admin/notify/<slug>/test` | Post a test message to the channel |
 | `POST /api/admin/maintenance` | Run the cron now: expired leases, recheck tasks, Discord posts, old counters |
 
@@ -219,9 +220,9 @@ so `npm run dev` measures nothing.
 - **Page views** come from the tag itself and from GA4's history-change page views as the app moves
   between pages, so keep "Page changes based on browser history events" on in the stream's enhanced
   measurement settings.
-- **Four events**, each with the data app's slug as `data_app` and nothing a visitor typed:
-  `agent_instruction_copied`, `skill_opened`, `data_exported` (with `format`: csv, json or rss) and
-  `record_reported`. Register `data_app` and `format` as event-scoped custom dimensions to report on them.
+- **Five events**, each with the data app's slug as `data_app` and nothing a visitor typed:
+  `agent_instruction_copied`, `skill_opened`, `data_exported` (with `format`: csv, json or rss),
+  `discord_joined` and `record_reported`. Register `data_app` and `format` as event-scoped custom dimensions to report on them.
 
 ## License
 

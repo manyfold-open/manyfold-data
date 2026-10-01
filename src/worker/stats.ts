@@ -9,6 +9,7 @@ import { monthStart, nextBucket, weekStart } from '../shared/dates';
 import { rangeFilters, type QueryState } from '../shared/query';
 import type { ChartResult, FacetCount, StatsResponse } from '../shared/types';
 import { fieldSql } from './db';
+import { inviteOf } from './notify';
 import { buildWhere } from './records';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
@@ -127,6 +128,7 @@ export async function computeStats(
   const tileRow = tiles?.results[0] as { n: number; recent: number; last: string | null } | undefined;
   return {
     today,
+    discordInvite: await inviteOf(db, config.slug),
     tiles: {
       verified: tileRow?.n ?? 0,
       addedLast7Days: tileRow?.recent ?? 0,

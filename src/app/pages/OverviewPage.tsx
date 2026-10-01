@@ -63,6 +63,35 @@ function Contribute({ config }: { config: DataAppConfig }) {
   );
 }
 
+/** Where readers get each new record as it is verified: the Discord channel, or the feed. */
+function Follow({ config, invite }: { config: DataAppConfig; invite: string }) {
+  return (
+    <section className="contribute follow" aria-labelledby="follow-heading">
+      <h2 id="follow-heading">Get new {config.noun.other} as they are verified</h2>
+      <p>
+        Every {config.noun.one} a maintainer verifies is posted to the {config.title} channel on Discord within minutes.
+      </p>
+      <p className="follow-actions">
+        <a
+          className="primary-link"
+          href={invite}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => track('discord_joined', { data_app: config.slug })}
+        >
+          Join the Discord channel
+        </a>
+        <span className="muted small">
+          or follow the{' '}
+          <a href={`/${config.slug}/feed.xml`} onClick={() => track('data_exported', { data_app: config.slug, format: 'rss' })}>
+            RSS feed
+          </a>
+        </span>
+      </p>
+    </section>
+  );
+}
+
 function Chart({ config, chart, today }: { config: DataAppConfig; chart: ChartResult; today: string }) {
   const describe = (count: number) => countOf(config, count);
   const nounHeader = capitalize(config.noun.other);
@@ -223,6 +252,7 @@ export default function OverviewPage({ config }: { config: DataAppConfig }) {
       </section>
 
       <Contribute config={config} />
+      {data?.discordInvite ? <Follow config={config} invite={data.discordInvite} /> : null}
     </>
   );
 }

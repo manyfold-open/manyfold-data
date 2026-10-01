@@ -214,6 +214,8 @@ export interface StatsResponse {
   };
   /** One result per chart in the config, in the same order. */
   charts: ChartResult[];
+  /** An invite to the Discord channel where new records are announced, if the admin set one. */
+  discordInvite: string | null;
 }
 
 /* ───────── admin console ───────── */
@@ -237,6 +239,8 @@ export interface NotifyStatus {
   last_error: string | null;
   /** Verified records waiting to be announced. */
   waiting: number;
+  /** The channel's public invite link, shown on the Overview; null when none is set. */
+  invite_url: string | null;
 }
 
 export interface AppOverview {

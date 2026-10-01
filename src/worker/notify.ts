@@ -15,6 +15,8 @@ import { seal, unseal, type Sealed } from './crypto';
 import { HttpError, type Env } from './types';
 
 const WEBHOOK = /^https:\/\/(?:(?:canary|ptb)\.)?discord(?:app)?\.com\/api\/webhooks\/(\d+)\/([\w-]+)$/;
+/** A public invite to the channel, shown to readers on the Overview. Never the webhook. */
+const INVITE = /^https:\/\/(?:discord\.gg|(?:www\.)?discord(?:app)?\.com\/invite)\/([A-Za-z0-9-]{2,32})\/?$/;
 const FAILING_AFTER = 5;
 const LINES_MAX = 10;
 const CONTENT_MAX = 2000;
@@ -47,6 +49,9 @@ async function delivery(db: D1Database, slug: string): Promise<Delivery> {
   return raw ? { ...FRESH, ...(JSON.parse(raw) as Partial<Delivery>) } : FRESH;
 }
 
+/** The channel's public invite link, or null when none is set. */
+export const inviteOf = (db: D1Database, slug: string): Promise<string | null> => readSetting(db, slug, 'discord_invite');
+
 async function webhookOf(db: D1Database, env: Env, slug: string): Promise<string | null> {
   const raw = await readSetting(db, slug, 'discord_webhook');
   return raw ? unseal(env, JSON.parse(raw) as Sealed) : null;
@@ -72,6 +77,7 @@ export async function notifyStatus(db: D1Database, apps: readonly DataAppConfig[
         masked,
         ...(masked ? await delivery(db, config.slug) : { ...FRESH, state: 'off' as const }),
         waiting: waiting ?? 0,
+        invite_url: await inviteOf(db, config.slug),
       };
     }),
   );
@@ -95,6 +101,19 @@ export async function clearWebhook(db: D1Database, slug: string): Promise<void> 
     .prepare("DELETE FROM app_settings WHERE app_slug = ? AND key IN ('discord_webhook', 'discord_masked', 'discord_state')")
     .bind(slug)
     .run();
+}
+
+/** Sets the invite link readers see (stored as https://discord.gg/<code>), or removes it with null. */
+export async function setInvite(db: D1Database, slug: string, url: unknown, now: Date): Promise<void> {
+  if (url === null || url === '') {
+    await db.prepare("DELETE FROM app_settings WHERE app_slug = ? AND key = 'discord_invite'").bind(slug).run();
+    return;
+  }
+  const match = typeof url === 'string' ? INVITE.exec(url.trim()) : null;
+  if (!match) {
+    throw new HttpError(422, 'invalid_invite', 'invite_url must be a Discord invite link, such as https://discord.gg/abc123, or null to remove it.');
+  }
+  await writeSetting(db, slug, 'discord_invite', `https://discord.gg/${match[1]}`, now).run();
 }
 
 export async function setDeliveryState(db: D1Database, slug: string, state: unknown, now: Date): Promise<void> {
