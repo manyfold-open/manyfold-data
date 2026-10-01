@@ -32,6 +32,7 @@ Read https://data.manyfold.ai/ai-hackathons/SKILL.md and contribute to AI Hackat
 - **一个数据应用就是一个配置文件**，而不是独立的代码库：`data-apps/<slug>/config.ts`。字段、表格列、筛选、图表和校验规则都来自这个文件。
 - **只有已核验的记录会公开。** 待审核、已拒绝、已合并的记录不会出现在公开 API 中。
 - **每一次修改都是一条修订记录（revision）**，记下是谁做的，因此任何贡献者的工作都可以审计和撤销。
+- **公开的读取接口在边缘缓存**一分钟（RSS 和导出缓存五分钟），所以访问量再大，每个数据中心每分钟也只查一次 D1（`src/worker/cache.ts`）。
 - **定时任务每五分钟运行一次**：释放过期租约、加入复查任务，并把新核验的记录发到 Discord，所以记录核验后几分钟内就会出现在频道里。
 
 ```
@@ -86,6 +87,7 @@ npm run db:reset:local  # 清空本地数据库并重新载入种子
 | `prize_usd_from=10000` | 数值范围（含两端） |
 | `sort=-prize_usd` | 排序字段；前缀 `-` 表示降序 |
 | `page=2`、`limit=50` | 页码从 1 开始；`limit` 取 1 到 100 |
+| `facets=none` | 只需要记录本身时，不返回各筛选项的计数 |
 
 ```bash
 curl 'https://data.manyfold.ai/api/ai-hackathons/records?deadline_from=today&format=online&sort=deadline'

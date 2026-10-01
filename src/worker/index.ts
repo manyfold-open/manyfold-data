@@ -53,6 +53,7 @@ import { parseQuery } from '../shared/query';
 import type { IssuedToken, JoinResponse, MeResponse } from '../shared/types';
 import { HttpError, type Env } from './types';
 import { requireAdmin } from './admin';
+import { cachedFor, isDailyLimit, secondsToMidnightUtc } from './cache';
 import { consentRequiredFor, freshRequest, measurementIdFor, wantsTag, withAnalytics, type InjectionContext } from './analytics';
 import {
   activity,
@@ -115,6 +116,14 @@ app.onError((error, c) => {
   if (error instanceof HttpError) {
     return c.json({ error: { code: error.code, message: error.message } }, error.status as 400, error.headers);
   }
+  if (isDailyLimit(error)) {
+    console.error('d1 daily limit', error);
+    return c.json(
+      { error: { code: 'over_daily_limit', message: 'The data is resting until 00:00 UTC: the database has used its reads for today.' } },
+      503,
+      { 'retry-after': String(secondsToMidnightUtc()) },
+    );
+  }
   console.error('unhandled', error);
   return c.json({ error: { code: 'internal', message: 'Something went wrong.' } }, 500);
 });
@@ -167,7 +176,12 @@ async function agentToken(c: AppContext): Promise<Token> {
 
 app.get('/api/health', (c) => c.json({ status: 'ok', service: SERVICE, time: new Date().toISOString() }));
 
-app.get('/api/apps', async (c) => c.json({ apps: await appSummaries(c.env.DB, dataApps) }));
+// Public reads: cached at the edge for a minute (src/worker/cache.ts), so a busy page costs
+// D1 one query run a minute per data center, not one per view.
+const API_CACHE = cachedFor(60);
+const FILE_CACHE = cachedFor(300);
+
+app.get('/api/apps', API_CACHE, async (c) => c.json({ apps: await appSummaries(c.env.DB, dataApps) }));
 
 // Whether this visitor is asked about analytics before anything is stored: only when the
 // site measures at all, and only where consent is owed (src/worker/analytics.ts).
@@ -179,23 +193,25 @@ app.get('/api/consent', (c) =>
   ),
 );
 
-app.get('/api/:slug/records', async (c) => {
+app.get('/api/:slug/records', API_CACHE, async (c) => {
   const config = dataAppFor(c.req.param('slug'));
   const params = new URL(c.req.url).searchParams;
   const { state, errors } = parseQuery(config, params);
   if (errors.length > 0) throw new HttpError(422, 'invalid_query', errors.join('; '));
   const limit = parseLimit(params.get('limit'));
-  return c.json(await listRecords(c.env.DB, config, state, limit, todayUtc()));
+  // facets=none skips the per-filter counts, for callers that only show rows.
+  const facets = params.get('facets') !== 'none';
+  return c.json(await listRecords(c.env.DB, config, state, limit, todayUtc(), { facets }));
 });
 
-app.get('/api/:slug/records/:id', async (c) => {
+app.get('/api/:slug/records/:id', API_CACHE, async (c) => {
   const config = dataAppFor(c.req.param('slug'));
   const found = await getRecord(c.env.DB, config, c.req.param('id'));
   if (!found) throw new HttpError(404, 'not_found', 'No public record has that id.');
   return c.json(found);
 });
 
-app.get('/api/:slug/stats', async (c) =>
+app.get('/api/:slug/stats', API_CACHE, async (c) =>
   c.json(await computeStats(c.env.DB, dataAppFor(c.req.param('slug')), new Date())),
 );
 
@@ -446,7 +462,7 @@ app.all('/api/*', () => {
 
 app.get('/:slug/SKILL.md', (c) => markdown(c, publicSkill(dataAppFor(c.req.param('slug')), originOf(c))));
 
-app.get('/:slug/feed.xml', async (c) => {
+app.get('/:slug/feed.xml', FILE_CACHE, async (c) => {
   const config = dataAppFor(c.req.param('slug'));
   await ensureSchema(c.env.DB);
   return c.body(rss(config, await verifiedRecords(c.env.DB, config, 50), originOf(c), new Date()), 200, {
@@ -455,7 +471,7 @@ app.get('/:slug/feed.xml', async (c) => {
   });
 });
 
-app.get('/:slug/export.csv', async (c) => {
+app.get('/:slug/export.csv', FILE_CACHE, async (c) => {
   const config = dataAppFor(c.req.param('slug'));
   await ensureSchema(c.env.DB);
   return c.body(csv(config, await verifiedRecords(c.env.DB, config), originOf(c)), 200, {
@@ -464,7 +480,7 @@ app.get('/:slug/export.csv', async (c) => {
   });
 });
 
-app.get('/:slug/export.json', async (c) => {
+app.get('/:slug/export.json', FILE_CACHE, async (c) => {
   const config = dataAppFor(c.req.param('slug'));
   await ensureSchema(c.env.DB);
   return c.json(jsonExport(config, await verifiedRecords(c.env.DB, config), originOf(c), new Date()), 200, {

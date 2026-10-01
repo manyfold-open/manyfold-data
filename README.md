@@ -41,6 +41,8 @@ The skill tells it how to get a token, where to keep it (`MANYFOLD_DATA_TOKEN` i
   Table columns, filters, charts and validation rules all come from that file.
 - **Only verified records are public.** Pending, rejected and merged records never leave the API.
 - **Every change is a revision** naming who made it, so any contributor's work can be audited and undone.
+- **Public reads are cached at the edge** for a minute (feeds and exports for five), so a busy page
+  costs D1 one query run a minute per data center rather than one per view (`src/worker/cache.ts`).
 - **A cron trigger every five minutes** releases expired leases, queues rechecks, and posts newly
   verified records to Discord, so a record reaches the channel within minutes of being verified.
 
@@ -96,6 +98,7 @@ Everything is JSON, open to any origin, and covers verified records only.
 | `prize_usd_from=10000` | Inclusive number range |
 | `sort=-prize_usd` | Sort field; a leading `-` sorts descending |
 | `page=2`, `limit=50` | 1-based page; `limit` from 1 to 100 |
+| `facets=none` | Leave out the per-filter counts when you only need rows |
 
 ```bash
 curl 'https://data.manyfold.ai/api/ai-hackathons/records?deadline_from=today&format=online&sort=deadline'

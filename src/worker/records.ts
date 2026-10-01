@@ -143,12 +143,17 @@ export async function listRecords(
   state: QueryState,
   limit: number,
   today: string,
+  options: { facets?: boolean } = {},
 ): Promise<RecordsResponse> {
   const where = buildWhere(config, state, today);
-  const facetFields = Object.keys(config.fields).filter((field) => {
-    const type = config.fields[field]?.type;
-    return type === 'enum' || type === 'tags';
-  });
+  // Each facet scans the data app's records once more; callers that only show rows skip them.
+  const facetFields =
+    options.facets === false
+      ? []
+      : Object.keys(config.fields).filter((field) => {
+          const type = config.fields[field]?.type;
+          return type === 'enum' || type === 'tags';
+        });
 
   const [count, page, ...facets] = await db.batch<unknown>([
     db.prepare(`SELECT COUNT(*) AS n FROM records WHERE ${where.sql}`).bind(...where.params),

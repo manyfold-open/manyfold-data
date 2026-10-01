@@ -204,6 +204,7 @@ export default function OverviewPage({ config }: { config: DataAppConfig }) {
   const stats = useApi<StatsResponse>(`/api/${config.slug}/stats`);
   const previewParams = serializeQuery(config, defaultQuery(config));
   previewParams.set('limit', String(PREVIEW_ROWS));
+  previewParams.set('facets', 'none'); // the preview shows rows only
   const preview = useApi<RecordsResponse>(`/api/${config.slug}/records?${previewParams}`);
   const statsPending = usePending(!stats.data && !stats.error);
   const previewPending = usePending(!preview.data && !preview.error);

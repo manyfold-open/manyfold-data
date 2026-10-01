@@ -49,6 +49,9 @@ Rules for anyone — human or AI agent — changing Manyfold Data. These are the
     than `PUBLIC_ORIGIN`'s. Events (`src/app/analytics.ts`) carry the data app's slug and fixed values,
     never text a person typed; page views carry `page_location` without `TYPED_PARAMS` (the search). Tests use made-up ids like `G-TESTID0000`, never the real one, and
     `/privacy` must keep describing what the code does.
+18. **Public reads go through `cachedFor` (src/worker/cache.ts)**, and nothing else does: never cache
+    a route that reads a token, the admin password or a visitor's country. D1's free tier has a daily
+    read limit, and an uncached facet-heavy page can spend it in an evening.
 
 ## Tests
 
