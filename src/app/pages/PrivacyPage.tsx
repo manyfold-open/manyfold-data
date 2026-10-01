@@ -78,6 +78,12 @@ export default function PrivacyPage() {
           </button>
         </div>
       </section>
+
+      <h2>Contact</h2>
+      <p>
+        Questions about privacy, or a request to correct or remove something: email{' '}
+        <a href="mailto:hi@manyfold.ai">hi@manyfold.ai</a>.
+      </p>
     </article>
   );
 }
