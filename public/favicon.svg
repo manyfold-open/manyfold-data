@@ -1,6 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="7" fill="#1f2a44"/>
-  <rect x="7" y="17" width="4" height="8" rx="1" fill="#7aa2ff"/>
-  <rect x="14" y="11" width="4" height="14" rx="1" fill="#9dffb0"/>
-  <rect x="21" y="7" width="4" height="18" rx="1" fill="#ffd27a"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 26.2 26.2">
+  <style>
+    .k { fill: #0f0f0f } .a { fill: #2962ff } .e { fill: #e0e3eb }
+    @media (prefers-color-scheme: dark) { .k { fill: #ededed } .a { fill: #3a7bff } .e { fill: #2e2e2e } }
+  </style>
+  <!-- A 5 × 5 grid of data cells: the filled cells spell M and the center cell is blue. -->
+  <rect class="k" x="0" y="0" width="3.8" height="3.8" rx="1"/><rect class="e" x="4.6" y="0" width="3.8" height="3.8" rx="1"/><rect class="e" x="9.2" y="0" width="3.8" height="3.8" rx="1"/><rect class="e" x="13.8" y="0" width="3.8" height="3.8" rx="1"/><rect class="k" x="18.4" y="0" width="3.8" height="3.8" rx="1"/>
+  <rect class="k" x="0" y="4.6" width="3.8" height="3.8" rx="1"/><rect class="k" x="4.6" y="4.6" width="3.8" height="3.8" rx="1"/><rect class="e" x="9.2" y="4.6" width="3.8" height="3.8" rx="1"/><rect class="k" x="13.8" y="4.6" width="3.8" height="3.8" rx="1"/><rect class="k" x="18.4" y="4.6" width="3.8" height="3.8" rx="1"/>
+  <rect class="k" x="0" y="9.2" width="3.8" height="3.8" rx="1"/><rect class="e" x="4.6" y="9.2" width="3.8" height="3.8" rx="1"/><rect class="a" x="9.2" y="9.2" width="3.8" height="3.8" rx="1"/><rect class="e" x="13.8" y="9.2" width="3.8" height="3.8" rx="1"/><rect class="k" x="18.4" y="9.2" width="3.8" height="3.8" rx="1"/>
+  <rect class="k" x="0" y="13.8" width="3.8" height="3.8" rx="1"/><rect class="e" x="4.6" y="13.8" width="3.8" height="3.8" rx="1"/><rect class="e" x="9.2" y="13.8" width="3.8" height="3.8" rx="1"/><rect class="e" x="13.8" y="13.8" width="3.8" height="3.8" rx="1"/><rect class="k" x="18.4" y="13.8" width="3.8" height="3.8" rx="1"/>
+  <rect class="k" x="0" y="18.4" width="3.8" height="3.8" rx="1"/><rect class="e" x="4.6" y="18.4" width="3.8" height="3.8" rx="1"/><rect class="e" x="9.2" y="18.4" width="3.8" height="3.8" rx="1"/><rect class="e" x="13.8" y="18.4" width="3.8" height="3.8" rx="1"/><rect class="k" x="18.4" y="18.4" width="3.8" height="3.8" rx="1"/>
 </svg>

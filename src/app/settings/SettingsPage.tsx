@@ -5,6 +5,7 @@
  */
 
 import { useEffect, useState, type FormEvent } from 'react';
+import './settings.css';
 import { dataApps } from '../../../data-apps/index';
 import { ApiError } from '../api';
 import NotFound from '../pages/NotFound';

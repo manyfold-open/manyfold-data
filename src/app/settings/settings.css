@@ -1,0 +1,528 @@
+/* The admin console's own styles. Imported by SettingsPage, so they ship in the console's chunk and
+   readers never download them. Colors come from the tokens in ../styles.css. */
+
+/* ── records table ── */
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--ring);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.records {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.records th,
+.records td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--grid);
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.records td.wrap {
+  min-width: 160px;
+  max-width: 260px;
+  white-space: normal;
+}
+
+.records td:first-child {
+  min-width: 240px;
+  white-space: normal;
+}
+
+.records tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.records tbody tr:hover {
+  background: var(--wash);
+}
+
+.records th {
+  color: var(--ink-2);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.sort-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+}
+
+.sort-button:hover {
+  color: var(--ink);
+}
+
+.sort-mark {
+  display: inline-block;
+  width: 1ch;
+  color: var(--ink);
+}
+
+/* Another field's value standing in for a missing one, e.g. an amount in euros. */
+.fallback {
+  color: var(--ink-2);
+  font-variant-numeric: normal;
+  white-space: normal;
+}
+
+.empty {
+  color: var(--muted);
+}
+
+.facts {
+  margin: 0;
+  border: 1px solid var(--ring);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.fact {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 12px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--grid);
+}
+
+.fact:last-child {
+  border-bottom: 0;
+}
+
+.fact dt {
+  color: var(--ink-2);
+  font-size: 14px;
+}
+
+.fact dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+/* ── settings ── */
+
+.settings-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--grid);
+}
+
+.settings-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.settings-nav a {
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: var(--ink-2);
+  font-size: 14px;
+}
+
+.settings-nav a:hover {
+  background: var(--wash);
+  text-decoration: none;
+}
+
+.settings-nav a[aria-current='page'] {
+  background: var(--wash);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.settings-tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.panel {
+  margin: 0 0 16px;
+  padding: 16px 18px;
+  border: 1px solid var(--ring);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.panel h3 {
+  margin: 0 0 10px;
+  font-size: 17px;
+}
+
+.panel h4 {
+  margin: 18px 0 8px;
+  font-size: 14px;
+}
+
+.gate {
+  display: grid;
+  gap: 14px;
+  max-width: 420px;
+  margin: 40px auto;
+}
+
+.gate h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.gate p {
+  margin: 0;
+}
+
+.gate .quiet-button {
+  justify-self: start;
+}
+
+.notice.good {
+  border-left-color: var(--good);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 6px;
+  padding: 1px 8px;
+  border: 1px solid var(--ring);
+  border-radius: 999px;
+  color: var(--ink-2);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  white-space: nowrap;
+  vertical-align: 1px;
+}
+
+td > .badge:first-child,
+.review-head .badge:first-child {
+  margin-left: 0;
+}
+
+/* The dot carries the colour; the word always carries the meaning. */
+.badge::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--muted);
+}
+
+.badge-verified::before,
+.badge-active::before,
+.badge-resolved::before,
+.badge-done::before {
+  background: var(--good);
+}
+
+.badge-pending::before,
+.badge-stale::before,
+.badge-suspended::before,
+.badge-paused::before,
+.badge-flagged::before,
+.badge-open::before,
+.badge-review::before,
+.badge-leased::before {
+  background: var(--warning);
+}
+
+.badge-rejected::before,
+.badge-revoked::before,
+.badge-failing::before {
+  background: var(--critical);
+}
+
+.badge-kind::before {
+  display: none;
+}
+
+.stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 32px;
+  margin: 0 0 8px;
+}
+
+.stat-row dt {
+  color: var(--ink-2);
+  font-size: 13px;
+}
+
+.stat-row dd {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-row dd.small {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.inline-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.field {
+  display: grid;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--ink-2);
+}
+
+.field input,
+.field select {
+  height: 36px;
+}
+
+.field input[type='text'],
+.field input[type='password'],
+.field input[type='search'] {
+  min-width: 240px;
+}
+
+.narrow {
+  width: 84px;
+}
+
+.action {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.action-error {
+  color: var(--critical);
+  font-size: 13px;
+}
+
+.quiet-button.danger {
+  color: var(--critical);
+}
+
+.quiet-button:disabled {
+  color: var(--muted);
+  cursor: default;
+}
+
+.rename {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.rename input {
+  min-width: 180px;
+  padding: 4px 8px;
+  font-size: 13px;
+}
+
+/* Each token's actions sit on their own line under its row, so they never scroll out of view. */
+/* Cells may wrap, so the table fits its box and every row's actions stay in view. */
+.token-table th,
+.token-table td {
+  padding-left: 12px;
+  padding-right: 12px;
+  white-space: normal;
+}
+
+.token-table td.num {
+  white-space: nowrap;
+}
+
+.token-table tr.has-actions td {
+  border-bottom: 0;
+  padding-bottom: 4px;
+}
+
+.token-table tr.actions-row td {
+  padding-top: 4px;
+  white-space: normal;
+}
+
+.token-table tbody tr:hover {
+  background: none;
+}
+
+.row-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 8px;
+}
+
+.undo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.undo input {
+  padding: 4px 8px;
+  font-size: 13px;
+}
+
+.secret-message {
+  margin: 0 0 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--grid);
+  border-radius: 8px;
+  background: var(--page);
+  font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.review-list,
+.spot-list,
+.plain {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.review-item,
+.spot-item {
+  margin-bottom: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--ring);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.review-head,
+.spot-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.review-reason {
+  margin: 8px 0;
+}
+
+.review-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.review-actions input {
+  flex: 1;
+  min-width: 220px;
+}
+
+.spot-item.right {
+  border-left: 3px solid var(--good);
+}
+
+.spot-item.wrong {
+  border-left: 3px solid var(--critical);
+}
+
+.spot-item p {
+  margin: 6px 0;
+}
+
+.spot-item blockquote,
+.detail blockquote {
+  margin: 8px 0;
+  padding: 2px 0 2px 12px;
+  border-left: 3px solid var(--axis);
+}
+
+.detail {
+  margin-top: 20px;
+}
+
+.detail .section-head {
+  margin-top: 0;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.detail-grid h4:first-child {
+  margin-top: 0;
+}
+
+.facts.compact .fact {
+  grid-template-columns: 140px minmax(0, 1fr);
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.json-editor {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+  resize: vertical;
+}
+
+.history-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--grid);
+}
+
+.history-list li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2px 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--grid);
+  font-size: 14px;
+}
+
+.history-list time {
+  color: var(--ink-2);
+  font-size: 13px;
+}
+
+
+@media (max-width: 900px) {
+  .detail-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .fact {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+}
