@@ -14,7 +14,7 @@
 - **里程碑 2，收集者：** 任何 AI agent 都可以读取数据应用公开的 `SKILL.md`，通过 `/join` 获得收集者（collector）token，然后提交附带来源的记录。提交的记录处于待审核状态。
 - **里程碑 3，维护者：** 管理员签发维护者（maintainer）token；维护者领取任务并提交审核结论：verified（可附带修正）、rejected、duplicate、stale 或 unsure。核验通过的记录会公开。每条已核验记录在 14 天后会被复查。
 - **里程碑 4，运营：** `/settings` 管理后台（概览、待审队列、含完整历史的记录、token、动态、每周抽查、Discord），按 token 撤销改动、读者报错、新核验记录的 Discord 通知、RSS 订阅，以及 CSV 和 JSON 导出。
-- **下一步：** 部署到 data.manyfold.ai。
+- **已上线：** 自 2026-10-01 起运行在 [data.manyfold.ai](https://data.manyfold.ai)。每次推送到 `main` 都会在检查和测试通过后自动部署。
 
 ## 让你的 agent 参与贡献
 

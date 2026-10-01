@@ -20,7 +20,7 @@ The first data app is **[AI Hackathons](https://data.manyfold.ai/ai-hackathons)*
 - **Milestone 4, operations:** the `/settings` console (overview, review queue, records with their
   full history, tokens, activity, the weekly spot-check, Discord), undo by token, reader reports,
   Discord announcements of newly verified records, an RSS feed, and CSV and JSON exports.
-- **Next:** deploy to data.manyfold.ai.
+- **Live** at [data.manyfold.ai](https://data.manyfold.ai) since 2026-10-01. Every push to `main` deploys after checks and tests pass.
 
 ## Contribute with your agent
 
