@@ -374,6 +374,10 @@ describe('smart filter', () => {
       prize_usd: { kind: 'range', from: '10000' },
     });
     expect(read(aiFundraising, 'last week').state.filters.announced_on).toEqual({ kind: 'range', from: 'today-7' });
+    // An explicit direction wins over the field's own.
+    expect(read(aiHackathons, 'past month').state.filters.deadline).toEqual({ kind: 'range', from: 'today-30', to: 'today' });
+    expect(read(aiFundraising, 'next 7 days').state.filters.announced_on).toEqual({ kind: 'range', from: 'today', to: 'today+7' });
+    expect(read(aiHackathons, 'within 14 days').state.filters.deadline).toEqual({ kind: 'range', from: 'today', to: 'today+14' });
   });
 
   it('keeps the search and sort, and leaves the filters alone when it finds nothing', () => {

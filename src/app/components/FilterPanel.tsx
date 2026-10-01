@@ -24,7 +24,8 @@ import {
 import { Button, CheckRow, Icon, RadioPills, ShowAll, Textarea } from '../ui';
 
 const SHOWN = 6;
-const TAGS_MAX = 60;
+/** As many tag values as the records response lists. */
+const TAGS_MAX = 200;
 
 /** Lowercase, accents removed: "Zürich" is found by "zurich". */
 const fold = (text: string): string => text.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();

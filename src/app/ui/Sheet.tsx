@@ -75,7 +75,12 @@ export function Sheet({
     if (items.length === 0) return;
     const first = items[0]!;
     const last = items.at(-1)!;
-    if (event.shiftKey && document.activeElement === first) {
+    const inside = items.includes(document.activeElement as HTMLElement);
+    if (!inside) {
+      // Focus sits on the sheet itself, e.g. after a click on plain text: start from an end.
+      event.preventDefault();
+      (event.shiftKey ? last : first).focus();
+    } else if (event.shiftKey && document.activeElement === first) {
       event.preventDefault();
       last.focus();
     } else if (!event.shiftKey && document.activeElement === last) {

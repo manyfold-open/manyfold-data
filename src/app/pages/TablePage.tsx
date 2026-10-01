@@ -21,6 +21,8 @@ import { navigate } from '../router';
 import { Button, Chip, Icon, Pill, SearchField, Sheet, Skeleton, usePending } from '../ui';
 
 const PAGE_SIZE = 50;
+/** Most pages a link may ask for at once, so a stray ?page=400 cannot fire 400 requests. */
+const MAX_PAGES = 20;
 
 interface Pages {
   /** Every record of every loaded page, in order. */
@@ -29,6 +31,8 @@ interface Pages {
   /** True while any page for the current filters is out; the old rows stay on screen. */
   loading: boolean;
   error: ApiError | null;
+  /** Asks again for whatever failed. */
+  retry: () => void;
 }
 
 /** Pages 1 to `count` of one query, loaded in parallel and kept while more are added. */
@@ -36,6 +40,7 @@ function usePagedRecords(base: string, count: number): Pages {
   const [store, setStore] = useState<{ base: string; pages: RecordsResponse[] } | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<ApiError | null>(null);
+  const [attempt, setAttempt] = useState(0);
   const latest = useRef(store);
   latest.current = store;
 
@@ -43,6 +48,7 @@ function usePagedRecords(base: string, count: number): Pages {
     const have = latest.current?.base === base ? latest.current.pages.length : 0;
     if (have >= count) {
       setLoading(false);
+      setError(null);
       return;
     }
     const controller = new AbortController();
@@ -60,22 +66,27 @@ function usePagedRecords(base: string, count: number): Pages {
         setLoading(false);
       });
     return () => controller.abort();
-  }, [base, count]);
+  }, [base, count, attempt]);
 
   const pages = store?.pages.slice(0, store.base === base ? count : undefined) ?? [];
-  return { records: pages.flatMap((page) => page.records), first: pages[0] ?? null, loading, error };
+  // Offset pages read at different times can overlap when a record is verified in between.
+  const seen = new Set<string>();
+  const records = pages.flatMap((page) => page.records).filter((record) => !seen.has(record.id) && Boolean(seen.add(record.id)));
+  return { records, first: pages[0] ?? null, loading, error, retry: () => setAttempt((value) => value + 1) };
 }
 
 /** Search input that waits for a pause in typing before it changes the URL. */
 function Search({ value, label, onChange }: { value: string; label: string; onChange: (q: string) => void }) {
   const [text, setText] = useState(value);
-  useEffect(() => setText(value), [value]);
+  // The latest onChange carries the latest filters, so a filter clicked mid-typing is kept.
+  const change = useRef(onChange);
+  change.current = onChange;
+  // Back/forward or a removed chip changes the search; a trimmed echo of what is typed does not.
+  useEffect(() => setText((current) => (current.trim() === value ? current : value)), [value]);
   useEffect(() => {
     if (text.trim() === value) return;
-    const timer = setTimeout(() => onChange(text.trim()), 300);
+    const timer = setTimeout(() => change.current(text.trim()), 300);
     return () => clearTimeout(timer);
-    // onChange is a fresh closure on every render; restarting the timer for it would
-    // never let a pause elapse, so only text and value restart it.
   }, [text, value]);
   return <SearchField value={text} label={label} maxLength={Q_MAX} onChange={setText} onSubmit={() => onChange(text.trim())} />;
 }
@@ -148,7 +159,15 @@ export default function TablePage({ config, search }: { config: DataAppConfig; s
   baseParams.delete('page');
   baseParams.set('limit', String(PAGE_SIZE));
   const base = `/api/${config.slug}/records?${baseParams}`;
-  const { records, first, loading, error } = usePagedRecords(base, state.page);
+  const [lastPage, setLastPage] = useState<{ base: string; pages: number } | null>(null);
+  const { records, first, loading, error, retry } = usePagedRecords(
+    base,
+    Math.max(1, Math.min(state.page, MAX_PAGES, lastPage?.base === base ? lastPage.pages : MAX_PAGES)),
+  );
+  useEffect(() => {
+    if (first) setLastPage({ base, pages: Math.max(1, Math.ceil(first.total / PAGE_SIZE)) });
+    // `first` belongs to the base it was read for only once that base's page 1 is in.
+  }, [first]);
   const stats = useApi<StatsResponse>(`/api/${config.slug}/stats`);
   const firstPending = usePending(!first && !error);
 
@@ -251,11 +270,15 @@ export default function TablePage({ config, search }: { config: DataAppConfig; s
           </div>
         )}
       </div>
-      {first && state.page < pages && records.length > 0 ? (
+      {first && records.length > 0 && (error || (records.length < total && state.page < Math.min(pages, MAX_PAGES))) ? (
         <div className="load-more">
-          <Button onClick={() => go({ ...state, page: state.page + 1 }, true)} disabled={loading}>
-            {loading ? 'Loading…' : `Load more · ${formatCount(total - records.length)} left`}
-          </Button>
+          {error && !loading ? (
+            <Button onClick={retry}>Try again</Button>
+          ) : (
+            <Button onClick={() => go({ ...state, page: state.page + 1 }, true)} disabled={loading}>
+              {loading ? 'Loading…' : `Load more · ${formatCount(total - records.length)} left`}
+            </Button>
+          )}
         </div>
       ) : null}
     </section>
@@ -315,7 +338,7 @@ export default function TablePage({ config, search }: { config: DataAppConfig; s
                   setSheet(null);
                 }}
               >
-                {draftCount.data
+                {draftCount.data && !draftCount.loading
                   ? `Show ${formatCount(draftCount.data.total)} ${draftCount.data.total === 1 ? 'result' : 'results'}`
                   : 'Show results'}
               </Button>

@@ -19,8 +19,9 @@ export const titleOf = (config: DataAppConfig, record: PublicRecord): string =>
   String(record.data[config.table.columns[0] ?? ''] ?? 'Untitled');
 
 const None = () => (
-  <span className="none" aria-label="Not stated">
-    —
+  <span className="none">
+    <span aria-hidden="true">—</span>
+    <span className="visually-hidden">Not stated</span>
   </span>
 );
 

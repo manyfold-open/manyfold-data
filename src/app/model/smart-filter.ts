@@ -150,10 +150,14 @@ export function parseSmartFilter(
     const span = / (?:in the |within the |within )?(next|coming|last|past|previous|within) (?:(\d+|[a-z]+) )?(day|week|month)s? /.exec(text);
     const named = / (today|this week|this month|closing soon|soon|upcoming|open now|still open|recently|recent) /.exec(text);
     let days: number | null = null;
+    let ahead = future;
     if (span) {
       const count = span[2] ? Number(span[2]) || NUMBER_WORDS[span[2]] || 0 : 1;
       if (count > 0) {
         days = count * unitDays[span[3] as keyof typeof unitDays];
+        // "next" and "last" say which way to look; "within" follows the field.
+        if (span[1] === 'next' || span[1] === 'coming') ahead = true;
+        else if (span[1] !== 'within') ahead = false;
         take(span[0]);
       }
     } else if (named) {
@@ -169,9 +173,13 @@ export function parseSmartFilter(
       }
     }
     if (days !== null) {
-      filters[dateField] = future
+      filters[dateField] = ahead
         ? { kind: 'range', from: 'today', to: `today+${days}` }
-        : { kind: 'range', from: days === 0 ? 'today' : `today-${days}` };
+        : days === 0
+          ? { kind: 'range', from: 'today' }
+          : future
+            ? { kind: 'range', from: `today-${days}`, to: 'today' }
+            : { kind: 'range', from: `today-${days}` };
     }
   }
 

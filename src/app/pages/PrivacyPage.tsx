@@ -56,8 +56,8 @@ export default function PrivacyPage() {
         <li>
           With your consent, or where none is required, Google Analytics records the pages you view and five actions:
           copying the agent instruction, opening a data app's skill, downloading its data or feed, opening a Discord
-          invite, and sending a report. The text of a report never goes to Google, and neither does anything you type
-          into search or the smart filter.
+          invite, and sending a report. The text of a report never goes to Google, and neither does the sentence you
+          type into the smart filter.
         </li>
         <li>
           The smart filter on each table reads your sentence in your browser and turns it into filters there; the
