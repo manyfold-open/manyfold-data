@@ -1110,6 +1110,19 @@ td > .badge:first-child,
   cursor: default;
 }
 
+.rename {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.rename input {
+  min-width: 180px;
+  padding: 4px 8px;
+  font-size: 13px;
+}
+
 /* Each token's actions sit on their own line under its row, so they never scroll out of view. */
 /* Cells may wrap, so the table fits its box and every row's actions stay in view. */
 .token-table th,

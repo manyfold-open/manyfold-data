@@ -320,6 +320,20 @@ describe('overview and activity', () => {
     const { items } = await body(await asAdmin('/api/admin/activity?app=ai-hackathons'));
     expect(items.map((item: any) => `${item.actor.label}:${item.action}`)).toEqual(['Admin:verify', 'scout:submit', 'scout:submit']);
   });
+
+  it('rename a token everywhere at once: the token list, the activity log and public histories', async () => {
+    const scout = await collector('scout');
+    const [first] = await submit(scout.token, record(1));
+    await asAdmin(`/api/admin/ai-hackathons/records/${first}/decide`, json('POST', { status: 'verified' }));
+    const rename = (label: unknown) => asAdmin(`/api/admin/tokens/${scout.id}`, json('PATCH', { label }));
+    expect((await rename('  ')).status).toBe(422);
+    expect((await rename('x'.repeat(81))).status).toBe(422);
+    expect((await body(await rename('  Scout   by Ada '))).label).toBe('Scout by Ada');
+    const { items } = await body(await asAdmin('/api/admin/activity?app=ai-hackathons'));
+    expect(items.at(-1).actor.label).toBe('Scout by Ada');
+    const page = await body(await call(`/api/ai-hackathons/records/${first}`));
+    expect(page.revisions.map((revision: any) => revision.actor)).toContain('Scout by Ada');
+  });
 });
 
 describe('spot-check', () => {

@@ -127,7 +127,7 @@ Agent 发送请求头 `Authorization: Bearer mfd_…`。每条错误信息都会
 | --- | --- |
 | `POST /api/admin/tokens` | 签发维护者 token，只显示一次：`{"label", "apps"?, "daily_task_limit"?, "expires_at"?}` |
 | `GET /api/admin/tokens?role=` | 列出所有 token 及其记录和审核数量；从不返回 secret |
-| `PATCH /api/admin/tokens/<id>` | 修改 `status`（active、suspended、revoked）、`pending_cap`、`daily_task_limit`、`expires_at` |
+| `PATCH /api/admin/tokens/<id>` | 修改 `label`（名字，各处同时更新）、`status`（active、suspended、revoked）、`pending_cap`、`daily_task_limit`、`expires_at` |
 | `POST /api/admin/tokens/<id>/revert` | 撤销该 token 自 `{"since"}` 起的改动；之后被别人改过的记录只列出、不动 |
 | `POST /api/admin/tokens/<id>/ban` | 吊销收集者，并拒绝它所有待审核的记录 |
 | `POST /api/admin/tokens/<id>/recheck` | 为该 token 提交的每条已核验记录加入复查 |

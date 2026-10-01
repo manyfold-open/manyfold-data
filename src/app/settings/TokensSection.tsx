@@ -12,6 +12,53 @@ function dayAgo(): string {
   return at.toISOString().slice(0, 16);
 }
 
+/** The token's name, with an inline rename: the new name shows in every history at once. */
+function Name({ token, onDone }: { token: AdminToken; onDone: (message: string) => void }) {
+  const [editing, setEditing] = useState(false);
+  const [label, setLabel] = useState(token.label);
+  if (!editing) {
+    return (
+      <span className="name-cell">
+        {token.label}{' '}
+        <button type="button" className="link-button small" onClick={() => setEditing(true)} aria-label={`Rename ${token.label}`}>
+          Rename
+        </button>
+      </span>
+    );
+  }
+  return (
+    <form className="rename" onSubmit={(event) => event.preventDefault()}>
+      <input
+        type="text"
+        value={label}
+        onChange={(event) => setLabel(event.target.value)}
+        onFocus={(event) => event.target.select()}
+        maxLength={80}
+        aria-label="New name"
+        autoFocus
+      />
+      <Action
+        label="Save"
+        run={() => send('PATCH', `/tokens/${token.id}`, { label })}
+        onDone={() => {
+          setEditing(false);
+          onDone(`Renamed ${token.label} to ${label.trim()}.`);
+        }}
+      />
+      <button
+        type="button"
+        className="quiet-button"
+        onClick={() => {
+          setLabel(token.label);
+          setEditing(false);
+        }}
+      >
+        Cancel
+      </button>
+    </form>
+  );
+}
+
 /** Undo a token's changes since a moment the admin picks (default: 24 hours ago). */
 function Undo({ token, onDone }: { token: AdminToken; onDone: (message: string) => void }) {
   const [since, setSince] = useState(dayAgo);
@@ -240,7 +287,7 @@ export default function TokensSection() {
               <Fragment key={token.id}>
                 <tr className="has-actions">
                   <td className="wrap">
-                    {token.label}
+                    <Name token={token} onDone={done} />
                     <div className="muted small">{token.apps.join(', ')}</div>
                   </td>
                   <td>
@@ -299,7 +346,7 @@ export default function TokensSection() {
               <Fragment key={token.id}>
                 <tr className="has-actions">
                   <td className="wrap">
-                    {token.label}
+                    <Name token={token} onDone={done} />
                     <div className="muted small">{token.id}</div>
                   </td>
                   <td>

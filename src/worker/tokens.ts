@@ -319,13 +319,22 @@ export async function adminTokens(
 export async function updateToken(
   db: D1Database,
   id: string,
-  patch: { status?: unknown; pending_cap?: unknown; daily_task_limit?: unknown; expires_at?: unknown },
+  patch: { label?: unknown; status?: unknown; pending_cap?: unknown; daily_task_limit?: unknown; expires_at?: unknown },
   now: Date,
 ): Promise<AdminToken> {
   const [current] = await adminTokens(db, now, { id });
   if (!current) throw new HttpError(404, 'not_found', 'No token has that id.');
   const sets: string[] = [];
   const values: (string | number | null)[] = [];
+  // A new name shows everywhere at once: histories and the activity log read it from here.
+  if (patch.label !== undefined) {
+    const label = typeof patch.label === 'string' ? cleanText(patch.label) : '';
+    if (!label || label.length > LABEL_MAX) {
+      throw new HttpError(422, 'invalid_body', `label must be a name of 1 to ${LABEL_MAX} characters.`);
+    }
+    sets.push('label = ?');
+    values.push(label);
+  }
   if (patch.status !== undefined) {
     if (patch.status !== 'active' && patch.status !== 'suspended' && patch.status !== 'revoked') {
       throw new HttpError(422, 'invalid_body', 'status must be active, suspended or revoked.');
@@ -346,7 +355,7 @@ export async function updateToken(
     values.push(expiry(patch.expires_at, now));
   }
   if (sets.length === 0) {
-    throw new HttpError(422, 'invalid_body', 'Send at least one of status, pending_cap, daily_task_limit or expires_at.');
+    throw new HttpError(422, 'invalid_body', 'Send at least one of label, status, pending_cap, daily_task_limit or expires_at.');
   }
   const statements = [db.prepare(`UPDATE tokens SET ${sets.join(', ')} WHERE id = ?`).bind(...values, id)];
   if (patch.status === 'suspended' || patch.status === 'revoked') {

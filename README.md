@@ -147,7 +147,7 @@ until the `ADMIN_PASSWORD` secret is set. Locally, put it in `.dev.vars` (see `.
 | --- | --- |
 | `POST /api/admin/tokens` | Issue a maintainer token, shown once: `{"label", "apps"?, "daily_task_limit"?, "expires_at"?}` |
 | `GET /api/admin/tokens?role=` | Every token with its records and verdicts; never secrets |
-| `PATCH /api/admin/tokens/<id>` | Change `status` (active, suspended, revoked), `pending_cap`, `daily_task_limit`, `expires_at` |
+| `PATCH /api/admin/tokens/<id>` | Change `label` (its name everywhere), `status` (active, suspended, revoked), `pending_cap`, `daily_task_limit`, `expires_at` |
 | `POST /api/admin/tokens/<id>/revert` | Undo what the token changed since `{"since"}`; records others changed since are listed, not touched |
 | `POST /api/admin/tokens/<id>/ban` | Revoke a collector and reject its records waiting for review |
 | `POST /api/admin/tokens/<id>/recheck` | Queue a recheck of every verified record the token submitted |
