@@ -2298,9 +2298,7 @@ th[aria-sort='ascending'] .sort-button svg {
 }
 
 .filter-group {
-  margin: 0;
   padding: 14px 0 12px;
-  border: 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -2308,8 +2306,7 @@ th[aria-sort='ascending'] .sort-button svg {
   border-bottom: 0;
 }
 
-.filter-group h3,
-.filter-group legend {
+.filter-group h3 {
   display: flex;
   align-items: center;
   gap: 6px;

@@ -5,7 +5,7 @@
  * the URL at once) and the phone sheet (which keeps a draft) share it.
  */
 
-import { useState } from 'react';
+import { useId, useState } from 'react';
 import { valueLabel, type DataAppConfig, type FieldDef } from '../../shared/data-app';
 import { withFilter, type QueryState } from '../../shared/query';
 import type { FacetCount } from '../../shared/types';
@@ -45,6 +45,7 @@ function ValueGroup({
 }) {
   const [expanded, setExpanded] = useState(false);
   const [find, setFind] = useState('');
+  const headingId = useId();
   const filter = state.filters[field];
   const selected = filter?.kind === 'in' ? filter.values : [];
   // Enums keep their config order; tags list what is chosen first, then the most common.
@@ -61,8 +62,9 @@ function ValueGroup({
   };
 
   return (
-    <fieldset className="filter-group">
-      <legend>{def.label}</legend>
+    // A group with a heading rather than fieldset/legend, whose built-in layout pushes the first row down.
+    <div className="filter-group" role="group" aria-labelledby={headingId}>
+      <h3 id={headingId}>{def.label}</h3>
       {expanded && all.length > 12 ? (
         <input
           type="text"
@@ -89,7 +91,7 @@ function ValueGroup({
           }}
         />
       ) : null}
-    </fieldset>
+    </div>
   );
 }
 
@@ -166,6 +168,7 @@ export function FilterPanel({
   const amount = amountOf(config);
   const smartId = inSheet ? 'smart-filter-sheet' : 'smart-filter';
   const active = Object.keys(state.filters).length > 0;
+  const popularId = useId();
 
   return (
     <>
@@ -215,8 +218,8 @@ export function FilterPanel({
       </div>
 
       {popular.length > 0 ? (
-        <fieldset className="filter-group">
-          <legend>Popular</legend>
+        <div className="filter-group" role="group" aria-labelledby={popularId}>
+          <h3 id={popularId}>Popular</h3>
           {popular.map((item) => {
             const { on, next } = popularToggle(state, item);
             const count = item.kind === 'value' ? (facets?.[item.field]?.find((facet) => facet.value === item.value)?.count ?? 0) : null;
@@ -231,7 +234,7 @@ export function FilterPanel({
               />
             );
           })}
-        </fieldset>
+        </div>
       ) : null}
 
       {Object.entries(config.fields).map(([field, def]) =>
