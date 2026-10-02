@@ -15,12 +15,13 @@ const STATUSES: [RecordStatus, string][] = [
 interface CronReport {
   released: number;
   rechecks: number;
+  datasets: number;
   discord: { sent: number; failed: number };
 }
 
 const describe = (report: CronReport) =>
   `Released ${plural(report.released, 'expired lease')}, queued ${plural(report.rechecks, 'recheck')}, ` +
-  `sent ${plural(report.discord.sent, 'Discord post')}` +
+  `rebuilt ${plural(report.datasets, 'dataset')}, sent ${plural(report.discord.sent, 'Discord post')}` +
   (report.discord.failed ? `; ${plural(report.discord.failed, 'post')} failed.` : '.');
 
 /** Each data app at a glance: records by status, work waiting, Discord's state. */

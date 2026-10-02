@@ -226,17 +226,20 @@ The schema applies itself on the first request. The seed is insert-if-absent, so
 D1's free tier allows 5 million rows read and 100,000 written a day, for the whole Cloudflare account.
 Manyfold Data is built to spend almost none of it on readers:
 
-- **Readers:** one dataset build per data app per minute per data center, each reading that app's
-  verified records once (a few hundred rows). Everything else a reader does is computed from it.
-  A record page reads one record and its history, cached for a minute; feeds and exports are cached
-  for five.
+- **Readers:** one row. Each data app's dataset is stored in D1 and read whole (cached at the edge
+  for a minute); everything a reader does is computed from it. It is rebuilt, reading the app's
+  records once, only when they change: the cron checks two indexed values every five minutes and
+  rebuilds before posting to Discord, and an admin change rebuilds it at once. A record page reads one
+  record and its history, cached for a minute; feeds and exports are cached for five.
 - **Agents:** a token lookup per call (last-used time written at most every ten minutes), plus what
   the call itself does: a submit, a lease, a verdict. Their reads are indexed lookups.
 - **Cron:** every five minutes, indexed: expired leases, due rechecks, unsent announcements, old counters.
 - **Schema:** a new Worker instance checks one fingerprint row instead of re-running every CREATE.
 
-The in-browser approach suits datasets up to a few thousand records (a few megabytes). Past that,
-page the dataset or let the Worker serve computed pages: the engine already runs in both places.
+So reads grow with how often the data changes, not with how many people look. The approach suits
+datasets up to a few thousand records: a stored dataset must fit in one D1 row (it is built on demand
+past 1.8 MB), and a browser loads it whole. Past that, page the dataset or let the Worker serve
+computed pages: the engine already runs in both places.
 
 ## Analytics
 

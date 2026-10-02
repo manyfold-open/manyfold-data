@@ -49,11 +49,14 @@ Rules for anyone — human or AI agent — changing Manyfold Data. These are the
     than `PUBLIC_ORIGIN`'s. Events (`src/app/analytics.ts`) carry the data app's slug and fixed values,
     never text a person typed; page views carry `page_location` without `TYPED_PARAMS` (the search). Tests use made-up ids like `G-TESTID0000`, never the real one, and
     `/privacy` must keep describing what the code does.
-18. **Readers' pages cost the database one read per dataset, not one per view.** The only public read
-    that scans a data app's records is `loadDataset()` (src/worker/records.ts); the Table, the Overview
-    and the /records and /stats routes are computed from that dataset by `src/shared/engine.ts`, in the
-    browser and in the Worker alike. A new public view is computed from the dataset, never from new SQL
-    over records. Public reads are cached with `cachedFor`/`cachedJson` (src/worker/cache.ts), and
+18. **Readers cost the database one row, not a scan.** Each data app's public dataset is stored in the
+    `datasets` table and read as one row (`datasetJson`, src/worker/records.ts); only `buildDataset`
+    scans records, when `refreshDataset` sees the records or the invite change (the cron, before
+    Discord posts) or an admin change drops it (`refreshesDatasets` in src/worker/index.ts). The Table,
+    the Overview and the /records and /stats routes are computed from the dataset by
+    `src/shared/engine.ts`, in the browser and the Worker alike. A new public view is computed from the
+    dataset, never from new SQL over records; a new write path keeps moving `records.updated_at`, which
+    is the dataset's version. Public reads are cached with `cachedFor`/`cachedJson` (src/worker/cache.ts), and
     nothing else is: never cache a route that reads a token, the admin password or a visitor's
     country. D1's free tier caps reads a day for the whole account; see "Database budget" in the README.
 

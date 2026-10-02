@@ -34,6 +34,8 @@ CREATE TABLE IF NOT EXISTS records (
 CREATE UNIQUE INDEX IF NOT EXISTS records_identity ON records (app_slug, identity_key)
   WHERE status IN ('pending', 'verified');
 CREATE INDEX IF NOT EXISTS records_listing ON records (app_slug, status, verified_at);
+-- The last change to a data app's records, the dataset's version: one row through this index.
+CREATE INDEX IF NOT EXISTS records_changed ON records (app_slug, updated_at);
 CREATE INDEX IF NOT EXISTS records_submitter ON records (submitted_by, status);
 
 -- Every change to a record. Reverting a token replays its rows newest first.
@@ -85,6 +87,15 @@ CREATE TABLE IF NOT EXISTS tasks (
 CREATE INDEX IF NOT EXISTS tasks_queue ON tasks (app_slug, status, created_at);
 -- The leases the cron releases, found by expiry instead of a scan of every task.
 CREATE INDEX IF NOT EXISTS tasks_leased ON tasks (lease_expires_at) WHERE status = 'leased';
+
+-- Each data app's public dataset, built from its records when they change (src/worker/records.ts).
+-- Readers' pages are computed from it, so a reader costs one row here, not a scan of records.
+CREATE TABLE IF NOT EXISTS datasets (
+  app_slug TEXT PRIMARY KEY,
+  version  TEXT NOT NULL,
+  json     TEXT NOT NULL,
+  built_at TEXT NOT NULL
+);
 
 -- Verified records waiting to be announced.
 CREATE TABLE IF NOT EXISTS outbox (

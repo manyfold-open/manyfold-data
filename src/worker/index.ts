@@ -45,7 +45,7 @@
  * then sends each data app's newly verified records to Discord.
  */
 
-import { Hono, type Context } from 'hono';
+import { Hono, type Context, type MiddlewareHandler } from 'hono';
 import { cors } from 'hono/cors';
 import { dataApps, findDataApp } from '../../data-apps/index';
 import type { DataAppConfig } from '../shared/data-app';
@@ -78,7 +78,7 @@ import { ensureSchema } from './db';
 import { maintain } from './maintenance';
 import { applyVerdicts, LEASE_MAX, leaseTasks, workOf } from './maintainer';
 import { enforce, HOUR, RULES, sweep } from './ratelimit';
-import { appSummaries, getRecord, loadDataset } from './records';
+import { appSummaries, datasetJson, forgetDataset, getRecord, refreshDataset } from './records';
 import { collectorSkill, maintainerSkill, publicSkill } from './skill';
 import { idempotencyKey, recall, remember, sourceExists, submitRecords } from './submit';
 import {
@@ -199,12 +199,15 @@ app.get('/api/consent', (c) =>
  * The Table's pages and the Overview's stats are computed from it (src/shared/engine.ts).
  */
 const datasetOf = (c: AppContext, config: DataAppConfig): Promise<DatasetResponse> =>
-  cachedJson(c, `${new URL(c.req.url).origin}/api/${config.slug}/dataset`, 60, () =>
-    loadDataset(c.env.DB, config, new Date()),
+  cachedJson(c, `${new URL(c.req.url).origin}/api/${config.slug}/dataset`, 60, async () =>
+    JSON.parse(await datasetJson(c.env.DB, config, new Date())) as DatasetResponse,
   );
 
+// The stored JSON goes out as it is: no parse, no stringify.
 app.get('/api/:slug/dataset', API_CACHE, async (c) =>
-  c.json(await loadDataset(c.env.DB, dataAppFor(c.req.param('slug')), new Date())),
+  c.body(await datasetJson(c.env.DB, dataAppFor(c.req.param('slug')), new Date()), 200, {
+    'content-type': 'application/json; charset=utf-8',
+  }),
 );
 
 app.get('/api/:slug/records', API_CACHE, async (c) => {
@@ -344,6 +347,16 @@ app.use('/api/admin/*', async (c, next) => {
   await next();
 });
 
+/**
+ * Admin changes readers should see now rather than at the next cron run: once one succeeds, the
+ * stored dataset of its data app (or of every app, for a token's work) is dropped and rebuilt on
+ * the next read. Maintainers' verdicts wait for the cron, which rebuilds before announcing.
+ */
+const refreshesDatasets: MiddlewareHandler<{ Bindings: Env }> = async (c, next) => {
+  await next();
+  if (c.res.ok) await forgetDataset(c.env.DB, c.req.param('slug'));
+};
+
 app.post('/api/admin/tokens', async (c) => {
   const body = ((await readJson(c)) ?? {}) as Record<string, unknown>;
   if (body.role !== undefined && body.role !== 'maintainer') {
@@ -372,12 +385,12 @@ app.patch('/api/admin/tokens/:id', async (c) =>
   c.json(await updateToken(c.env.DB, c.req.param('id'), ((await readJson(c)) ?? {}) as Record<string, unknown>, new Date())),
 );
 
-app.post('/api/admin/tokens/:id/revert', async (c) => {
+app.post('/api/admin/tokens/:id/revert', refreshesDatasets, async (c) => {
   const body = ((await readJson(c)) ?? {}) as { since?: unknown };
   return c.json(await revertToken(c.env.DB, dataApps, c.req.param('id'), body.since, new Date()));
 });
 
-app.post('/api/admin/tokens/:id/ban', async (c) => c.json(await banCollector(c.env.DB, c.req.param('id'), new Date())));
+app.post('/api/admin/tokens/:id/ban', refreshesDatasets, async (c) => c.json(await banCollector(c.env.DB, c.req.param('id'), new Date())));
 
 app.post('/api/admin/tokens/:id/recheck', async (c) => c.json(await recheckToken(c.env.DB, c.req.param('id'), new Date())));
 
@@ -403,7 +416,7 @@ app.put('/api/admin/notify/:slug', async (c) => {
   return c.json({ apps: await notifyStatus(c.env.DB, dataApps) });
 });
 
-app.patch('/api/admin/notify/:slug', async (c) => {
+app.patch('/api/admin/notify/:slug', refreshesDatasets, async (c) => {
   const config = dataAppFor(c.req.param('slug'));
   const body = ((await readJson(c)) ?? {}) as { state?: unknown; invite_url?: unknown };
   if (!('state' in body) && !('invite_url' in body)) {
@@ -440,13 +453,13 @@ app.get('/api/admin/:slug/records/:id', async (c) =>
   c.json(await recordDetail(c.env.DB, dataAppFor(c.req.param('slug')), c.req.param('id'))),
 );
 
-app.post('/api/admin/:slug/records/:id/decide', async (c) =>
+app.post('/api/admin/:slug/records/:id/decide', refreshesDatasets, async (c) =>
   c.json(
     await decide(c.env.DB, dataAppFor(c.req.param('slug')), c.req.param('id'), ((await readJson(c)) ?? {}) as Record<string, unknown>, new Date()),
   ),
 );
 
-app.patch('/api/admin/:slug/records/:id', async (c) =>
+app.patch('/api/admin/:slug/records/:id', refreshesDatasets, async (c) =>
   c.json(
     await editRecord(c.env.DB, dataAppFor(c.req.param('slug')), c.req.param('id'), ((await readJson(c)) ?? {}) as Record<string, unknown>, new Date()),
   ),
@@ -463,8 +476,11 @@ app.post('/api/admin/:slug/spot-check/:recordId', async (c) =>
 /** The cron's work, also run from POST /api/admin/maintenance. */
 async function runCron(env: Env, origin: string, now: Date) {
   const housekeeping = await maintain(env.DB, dataApps, now);
+  // Rebuild changed datasets before announcing, so a record in Discord is already in the Table.
+  let datasets = 0;
+  for (const config of dataApps) if (await refreshDataset(env.DB, config, now)) datasets += 1;
   const discord = await flushOutbox(env.DB, env, dataApps, origin, now);
-  return { ...housekeeping, discord };
+  return { ...housekeeping, datasets, discord };
 }
 
 app.post('/api/admin/maintenance', async (c) => c.json(await runCron(c.env, c.env.PUBLIC_ORIGIN ?? originOf(c), new Date())));
