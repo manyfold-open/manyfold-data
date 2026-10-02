@@ -79,12 +79,14 @@ VALUES (${[id, app.slug, key, 'verified', dataJson, source_url, evidence, observ
       ['submit', JSON.stringify({ status: 'pending', data: data.value }), null],
       ['verify', JSON.stringify({ status: 'verified' }), 'Seed record, checked against its source page before launch.'],
     ];
+    // INDEXED BY: left alone, SQLite looks the check up by actor and reads every seed
+    // revision for each one (612,168 rows on 2026-10-02 for 552 records), not the two it needs.
     for (const [action, after, reason] of history) {
       statements.push(
         `INSERT INTO revisions (record_id, app_slug, actor, action, before_json, after_json, reason, source_url,
   evidence, created_at)
 SELECT ${[id, app.slug, 'seed', action].map(text).join(', ')}, NULL, ${[after, reason, source_url, evidence, observed_at].map(text).join(', ')}
-WHERE NOT EXISTS (SELECT 1 FROM revisions WHERE record_id = ${text(id)} AND actor = 'seed' AND action = ${text(action)})`,
+WHERE NOT EXISTS (SELECT 1 FROM revisions INDEXED BY revisions_record WHERE record_id = ${text(id)} AND actor = 'seed' AND action = ${text(action)})`,
       );
     }
     count += 1;
