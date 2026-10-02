@@ -432,6 +432,15 @@ export interface Provenance {
 
 export const EVIDENCE_MAX = 300;
 
+/**
+ * Quotes a maintainer cannot find on the page. "..." joins pieces from different places, so
+ * the quote is no longer word for word; a tag means it was copied from the HTML, across
+ * elements. In production both left records waiting for review after the maintainer
+ * found no match, so both are refused at the door.
+ */
+const ELIDED = /\.\.\.|…/;
+const MARKUP = /<\/?[a-z][a-z0-9-]*(?:\s[^<>]*)?\/?>|<[a-z][a-z0-9-]*\s+[a-z-]+=|\/>/i;
+
 /** How far ahead of the server clock an observed_at may be before it counts as the future. */
 const CLOCK_SKEW_MS = 10 * 60 * 1000;
 
@@ -458,6 +467,13 @@ export function validateProvenance(
     errors.push({ field: 'evidence', message: 'must quote the source page word for word' });
   } else if (evidence.length > EVIDENCE_MAX) {
     errors.push({ field: 'evidence', message: `must be at most ${EVIDENCE_MAX} characters; got ${evidence.length}` });
+  } else if (ELIDED.test(evidence)) {
+    errors.push({
+      field: 'evidence',
+      message: 'must be one passage copied as it stands, without "..." to skip words; quote a shorter passage instead',
+    });
+  } else if (MARKUP.test(evidence)) {
+    errors.push({ field: 'evidence', message: "must be the page's text, not its HTML: leave out tags such as <meta>" });
   }
 
   const observed =

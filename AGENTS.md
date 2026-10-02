@@ -32,6 +32,8 @@ Rules for anyone — human or AI agent — changing Manyfold Data. These are the
     change a record's status** (and the seed, for new records). A verdict counts only for a task leased
     to the token sending it, while the lease lasts, never for a record that token submitted. Every status
     or data change writes a revision with the record before and after; undo by token reads nothing else.
+    A page a maintainer could not read is `unsure`, never grounds to reject or mark stale: `couldNotRead`
+    refuses such verdicts. On 2026-10-01 a blocked wire service cost ten real records that way.
 12. **The admin API stays closed by default.** `/api/admin/*` refuses everything until `ADMIN_PASSWORD`
     is set, compares it in constant time, and never returns a token secret except once, at issue.
 13. **Agent-facing text comes from the config.** `src/worker/skill.ts` builds both skills from it. When

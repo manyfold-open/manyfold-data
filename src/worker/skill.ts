@@ -140,7 +140,7 @@ ${fieldReference(config)}
 ## Evidence
 Every record also carries:
 - \`source_url\`: the https page where you read the facts.
-- \`evidence\`: a passage copied word for word from that page, at most 300 characters: one to three sentences, or the line that states the date when the page has no sentence for it. Quote the part that states the dates or deadline. If your web tool summarizes pages, fetch the raw page (for example with curl) and copy from that.
+- \`evidence\`: one passage copied word for word from that page, at most 300 characters: one to three sentences, or the line that states the date when the page has no sentence for it. Quote the part that states the dates or deadline. Copy it as it stands: never join separate parts with "...", reword or summarize, and leave out HTML tags. If your web tool summarizes pages, fetch the raw page (for example with curl) and copy the text from that.
 - \`observed_at\`: when you read the page, as ISO 8601 UTC, for example ${example.observed_at}.
 
 ## Before you submit
@@ -200,22 +200,27 @@ Check what collectors submitted against its sources, and recheck verified ${conf
 
 ## Each run
 1. Lease tasks: \`GET ${api}/tasks?limit=${LEASE_MAX}\` with the header \`Authorization: Bearer $MANYFOLD_DATA_TOKEN\`. If \`tasks\` is empty, there is nothing to do: stop.
-2. For each task, open the record's \`source_url\` yourself, and its official page if that is different. Find every fact on the page; never trust the submitted \`evidence\`.
+2. For each task, open the record's \`source_url\` yourself, and its official page if that is different. Find every fact on the page; never trust the submitted \`evidence\`. It only points you to the facts and need not match the page word for word: when the facts hold, verify with a quote of your own.
 3. Send verdicts for the batch: \`POST ${api}/verdicts\`.
 4. Lease again, up to 3 batches in one run, then stop.
 
 A lease lasts 30 minutes; tasks you have not answered by then go back to the queue. \`GET /tasks\` also returns the tasks you already hold, so after an interruption you carry on where you were.
 
+## Reading pages
+- If a page will not load (a timeout, HTTP status 0, 403, 429 or 5xx, a bot check), try again with a browser User-Agent header. If it still will not load, send \`unsure\`: a page you cannot read is never a reason to reject a record or mark it stale.
+- Compare text, not markup: ignore line breaks, spacing, invisible characters, HTML tags and entities, and curly or straight quotes when you look for a fact or a quote.
+- Your own \`evidence\` is one passage from the page as it stands, without "..." joining parts and without HTML tags.
+
 ## Verdicts
 | verdict | When | Must include |
 | --- | --- | --- |
 | \`verified\` | Every field matches the page, after any corrections | \`source_url\` and \`evidence\` (copied word for word from the page, at most 300 characters); \`corrections\` if a value was wrong or missing |
-| \`rejected\` | Verify tasks: the page does not support the record, it is out of scope, or it is not a real ${config.noun.one} | \`reason\` |
+| \`rejected\` | Verify tasks: you read the page and it does not support the record, it is out of scope, or it is not a real ${config.noun.one} | \`reason\` |
 | \`duplicate\` | Verify tasks: the same ${config.noun.one} is already in the dataset | \`duplicate_of\`: the id of that verified record |
-| \`stale\` | Recheck tasks: the page no longer supports the record — cancelled, moved or gone | \`reason\` |
-| \`unsure\` | You cannot decide: the page needs a login, will not load, or contradicts itself | \`reason\` |
+| \`stale\` | Recheck tasks: you read the page and it no longer supports the record — cancelled or moved — or the page is gone (404 or 410) | \`reason\` |
+| \`unsure\` | You cannot decide: the page will not load for you, needs a login, or contradicts itself | \`reason\` |
 
-Use \`unsure\` rather than guessing; an unsure task goes to the Manyfold team. To look for duplicates, \`GET ${api}/records?q=<words from the name>\` searches the verified records.
+Use \`unsure\` rather than guessing; an unsure task goes to the Manyfold team. A \`rejected\` or \`stale\` verdict whose reason says the page would not load is refused. To look for duplicates, \`GET ${api}/records?q=<words from the name>\` searches the verified records.
 
 ## Corrections
 To fix values while verifying, or add one the page states but the record left out, send \`corrections\` with only those fields, for example \`{"prize_usd": 30000}\`. Send \`null\` to remove a value the page does not state. The corrected record must still follow the field rules:

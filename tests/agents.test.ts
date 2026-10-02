@@ -158,6 +158,7 @@ describe('skills', () => {
     expect(text).toContain('Two records with the same `url` are the same record.');
     expect(text).toContain('`ends_on` must not be before `starts_on`.');
     expect(text).toContain('"name": "Example Agents Hackathon"');
+    expect(text).toContain('never join separate parts with "...", reword or summarize');
   });
 });
 

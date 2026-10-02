@@ -11,6 +11,9 @@
  *   recheck  verified stale                 verified -> verified (again) | stale
  *   either   unsure                         unchanged; the task waits for the admin
  *
+ * A page the maintainer could not read is unsure, never grounds to reject or mark stale:
+ * such verdicts are refused with an error that says so.
+ *
  * Collectors whose records fail review often are suspended: 10 or more reviewed records
  * with more than half rejected.
  */
@@ -162,6 +165,29 @@ function corrected(data: RecordData, corrections: Record<string, unknown>): Reco
 const reasonOf = (value: unknown): string => (typeof value === 'string' ? cleanText(value) : '');
 
 /**
+ * Reasons that say the maintainer could not read the page, rather than that the page
+ * contradicts the record: a timeout, a refused or blocked request, a login or paywall.
+ * A page that will not load for one agent says nothing about the facts, so such a task is
+ * unsure, for a person to check. On 2026-10-01 ten real rounds were rejected because
+ * GlobeNewswire refused a maintainer's requests. A page that is gone (404, 410) is another
+ * matter: that can make a record stale.
+ */
+const COULD_NOT_READ: readonly RegExp[] = [
+  /\bunreachable\b/i,
+  /\b(?:could ?n[o']t|cannot|can ?not|unable to|failed to|fails to)\s+(?:be\s+)?(?:load|reach|fetch|access|open|retrieve|connect)/i,
+  /\b(?:did ?n[o']t|does ?n[o']t|will not|won't|would ?n[o']t)\s+load\b/i,
+  /\btim(?:ed|es|ing)?[ -]?out\b|\btimeouts?\b/i,
+  /\b(?:HTTP|status|code|error)\s*(?:status\s*)?(?:code\s*)?:?\s*(?:0|403|429|5\d\d)\b/i,
+  /\breturned\s+(?:an?\s+)?(?:HTTP\s+)?(?:403|429|5\d\d)\b/i,
+  /\b(?:forbidden|access denied|captcha|rate[ -]limit(?:ed)?|too many requests|bot (?:check|protection|challenge|detection))\b/i,
+  /\b(?:connection (?:refused|reset|error|failed)|network error|fetch failed|ssl error|certificate error)\b/i,
+  /\bblock(?:s|ed|ing)?\b[^.]{0,40}\b(?:requests?|crawlers?|bots?|automated|fetch)\b/i,
+  /\b(?:requires?|needs?)\s+(?:a\s+)?(?:log ?in|sign[ -]?in)\b|\b(?:login|sign[ -]?in)\s+(?:wall|required)\b|\bpaywall/i,
+];
+
+export const couldNotRead = (reason: string): boolean => COULD_NOT_READ.some((pattern) => pattern.test(reason));
+
+/**
  * Checks one verdict and, when it holds, the statements that apply it. Errors name the
  * field and what to change, like submit errors do.
  */
@@ -298,6 +324,17 @@ async function prepareVerdict(
       verdict,
       recordStatus: task.status,
       statements: [revision('unsure', { status: task.status }, { reason }), closeTask('review')],
+    };
+  }
+  if (couldNotRead(reason)) {
+    return {
+      errors: [
+        {
+          field: 'verdict',
+          message:
+            'the reason says you could not read the page, which says nothing about the record; send verdict unsure with this reason, and a person will check the page',
+        },
+      ],
     };
   }
   const status = verdict === 'rejected' ? 'rejected' : 'stale';

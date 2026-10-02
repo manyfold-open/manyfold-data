@@ -205,6 +205,7 @@ export default defineDataApp({
     "Lead investors' announcements",
     'Wire services such as Business Wire and PR Newswire',
     'Business and tech press such as Reuters, TechCrunch and 36Kr',
+    'Not GlobeNewswire when the release is also elsewhere: it often refuses automated requests, so maintainers cannot check it',
   ],
   recheckAfterDays: 90,
   notify: { line: '{company} · {stage} · {amount_usd} · {city} · {sector}' },

@@ -124,6 +124,21 @@ describe('validateProvenance', () => {
       },
     });
   });
+
+  it('wants one passage of page text: no "..." joining parts, no HTML', () => {
+    const quote = (evidence: string) => {
+      const result = validateProvenance({ source_url: 'https://example.org', evidence, observed_at: '2026-10-01T08:55:00Z' });
+      return result.ok ? 'ok' : result.errors.map((error) => error.message).join('; ');
+    };
+    // Shapes maintainers could not find on the page in production.
+    expect(quote('Build for Canada: An AI Hackathon Oct 3, 2026 ... A one-day hackathon for people')).toMatch(/without "\.\.\."/);
+    expect(quote('LONDON · 2 NOV – 21 NOV · £10,000+ PRIZE POOL … Freeze 18 Nov, 6pm.')).toMatch(/without "\.\.\."/);
+    expect(quote('backed by $8 million in funding led by Framework Ventures"/> <meta name="description')).toMatch(/not its HTML/);
+    expect(quote('Applications close <b>15 November 2026</b>.')).toMatch(/not its HTML/);
+    // Ordinary text, figures and a page's own structured data pass.
+    expect(quote('Teams of 2 < 5 people; prizes > $10,000. Registration closes on November 15, 2026.')).toBe('ok');
+    expect(quote('"startDate":"2026-10-21T17:30:00.000-03:00","endDate":"2026-10-21T21:30:00.000-03:00"')).toBe('ok');
+  });
 });
 
 describe('identity', () => {
