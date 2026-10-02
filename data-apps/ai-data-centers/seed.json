@@ -1,0 +1,2205 @@
+[
+  {
+    "data": {
+      "name": "Compute Nordic Mikkeli",
+      "developer": [
+        "Compute Nordic Finland"
+      ],
+      "tenant": [
+        "Cerebras"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 165,
+      "investment_stated": "indicative investment of €1.0–1.7 billion",
+      "announced_on": "2026-09-01",
+      "city": [
+        "Mikkeli"
+      ],
+      "country": [
+        "Finland"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://investors.cerebras.ai/news-releases/news-release-details/cerebras-and-compute-nordic-finland-announce-new-165-mw-ai-data",
+    "evidence": "Cerebras Systems (NASDAQ: CBRS) today announced a new AI data centre in Mikkeli, Finland, developed in partnership with Compute Nordic Finland. The facility will scale in phases to 165 MW of contracted IT capacity to deliver high-density AI compute",
+    "observed_at": "2026-10-02T10:46:17Z"
+  },
+  {
+    "data": {
+      "name": "Schwarz Digits Dummerstorf",
+      "developer": [
+        "Schwarz Digits"
+      ],
+      "stage": "announced",
+      "capacity_mw": 240,
+      "investment_stated": "around 5.6 billion euros",
+      "announced_on": "2026-08-27",
+      "city": [
+        "Dummerstorf"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.heise.de/en/news/Schwarz-Digits-is-building-a-large-AI-data-center-in-Mecklenburg-Vorpommern-11431448.html",
+    "evidence": "one of the largest German data centers to date is to be built in Dummerstorf near Rostock. Schwarz Digits, the IT division of the Schwarz Group (Lidl, Kaufland, StackIT), plans a capacity of 240 megawatts (MW) there.",
+    "observed_at": "2026-10-02T11:06:21Z"
+  },
+  {
+    "data": {
+      "name": "Crusoe Childress",
+      "developer": [
+        "Crusoe",
+        "Lancium"
+      ],
+      "stage": "announced",
+      "capacity_mw": 1000,
+      "announced_on": "2026-07-15",
+      "city": [
+        "Childress"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.crusoe.ai/resources/newsroom/crusoe-and-lancium-announce-1-gigawatt-ai-data-center-campus-in-childress-texas",
+    "evidence": "Crusoe, the industry's first vertically integrated AI infrastructure provider, and Lancium, an energy technology and infrastructure company, today announced a 1.0 gigawatt (GW) AI data center campus in Childress, Texas.",
+    "observed_at": "2026-10-02T10:26:00Z"
+  },
+  {
+    "data": {
+      "name": "Pure DC Seinäjoki SJK01",
+      "developer": [
+        "Pure DC",
+        "SDC Ventures"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 550,
+      "investment_stated": "over €7.5 billion",
+      "announced_on": "2026-07-14",
+      "city": [
+        "Seinäjoki"
+      ],
+      "country": [
+        "Finland"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://puredc.com/finland",
+    "evidence": "A 550MW+ AI campus in western Finland Seinäjoki is home to Pure DC’s largest campus project. Set across 370 acres, SJK01 has the potential to scale beyond 550MW.",
+    "observed_at": "2026-10-02T10:53:53Z"
+  },
+  {
+    "data": {
+      "name": "Meta Sturgeon County",
+      "developer": [
+        "Meta"
+      ],
+      "stage": "announced",
+      "capacity_mw": 1000,
+      "investment_stated": "more than CA$13 billion",
+      "announced_on": "2026-07-08",
+      "city": [
+        "Sturgeon County"
+      ],
+      "country": [
+        "Canada"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://datacenters.atmeta.com/2026/07/hello-sturgeon-county/",
+    "evidence": "We are proud to announce that Sturgeon County, Alberta, will be home to our newest 1GW data centre, which will be part of our highly advanced infrastructure that helps connect billions of people around the world.",
+    "observed_at": "2026-10-02T10:56:45Z"
+  },
+  {
+    "data": {
+      "name": "Firmus Batam",
+      "developer": [
+        "Firmus Technologies",
+        "DayOne"
+      ],
+      "stage": "announced",
+      "capacity_mw": 360,
+      "announced_on": "2026-06-28",
+      "city": [
+        "Batam"
+      ],
+      "country": [
+        "Indonesia"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://firmus.co/newsroom/firmus-to-build-170-000-gpu-ai-factor-y-campus-with-nvidia-for-global-ai-natives",
+    "evidence": "Firmus Technologies today announced a strategic compute partnership with NVIDIA running through 2034, anchored by a dedicated 360 MW NVIDIA DSX AI Factory campus in Batam, Indonesia.",
+    "observed_at": "2026-10-02T11:03:30Z"
+  },
+  {
+    "data": {
+      "name": "Microsoft Pecos",
+      "developer": [
+        "Microsoft"
+      ],
+      "stage": "announced",
+      "capacity_mw": 2000,
+      "announced_on": "2026-06-22",
+      "city": [
+        "Pecos"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://blogs.microsoft.com/blog/2026/06/22/powering-the-next-wave-of-ai-expanding-capacity-with-our-new-datacenter-in-pecos/",
+    "evidence": "In Pecos, Texas, we will build a new datacenter campus, expanding our global datacenter capacity by approximately 2 gigawatts (GW) to meet strong and sustained customer demand for AI and cloud services across industries and regions.",
+    "observed_at": "2026-10-02T10:54:00Z"
+  },
+  {
+    "data": {
+      "name": "NAVER GAK Sejong AI Factory",
+      "developer": [
+        "NAVER",
+        "Brookfield"
+      ],
+      "stage": "announced",
+      "capacity_mw": 1000,
+      "investment_usd": 9000000000,
+      "announced_on": "2026-06-08",
+      "city": [
+        "Sejong"
+      ],
+      "country": [
+        "South Korea"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.navercorp.com/en/story/storyDetail?seq=10034603",
+    "evidence": "Centered on its hyperscale data center “GAK Sejong,” NAVER plans to begin operations at 55MW in the first half of 2027, expand to 200MW by 2028, and ultimately scale the AI factory up to the gigawatt level over the long term.",
+    "observed_at": "2026-10-02T11:06:29Z"
+  },
+  {
+    "data": {
+      "name": "SoftBank Bosquel",
+      "developer": [
+        "SoftBank Group",
+        "Sesterce"
+      ],
+      "stage": "announced",
+      "capacity_mw": 1000,
+      "announced_on": "2026-05-30",
+      "city": [
+        "Le Bosquel"
+      ],
+      "country": [
+        "France"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://group.softbank/en/news/press/20260531",
+    "evidence": "formed with Sesterce today announced that it has been selected to develop and operate a 1 GW AI data center campus in Bosquel, France.",
+    "observed_at": "2026-10-02T11:06:20Z"
+  },
+  {
+    "data": {
+      "name": "SoftBank Bouchain",
+      "developer": [
+        "SoftBank Group"
+      ],
+      "stage": "announced",
+      "capacity_mw": 400,
+      "announced_on": "2026-05-30",
+      "city": [
+        "Bouchain"
+      ],
+      "country": [
+        "France"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.edf.fr/en/the-edf-group/dedicated-sections/journalists/all-press-releases/edf-selects-softbank-group-as-preferred-bidder-for-the-development-of-a-large-scale-data-center-at-its-bouchain-site",
+    "evidence": "regarding the former Bouchain thermal power plant site in France, EDF today announces that it has selected SoftBank Group as its preferred bidder (“Preferred Bidder No. 1”) for the design, construction and operation of a large-scale 400 MW data center",
+    "observed_at": "2026-10-02T11:06:20Z"
+  },
+  {
+    "data": {
+      "name": "Hut 8 Beacon Point",
+      "developer": [
+        "Hut 8"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 1000,
+      "announced_on": "2026-05-06",
+      "city": [
+        "Nueces County"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://hut8.com/news-insights/press-releases/hut-8-fully-commercializes-1-gw-beacon-point-ai-data-center-campus-with-second-352-mw-it-lease",
+    "evidence": "today announced the commercialization of the second phase of its one-gigawatt Beacon Point data center campus in Nueces County, Texas through a second 15-year, $9.8 billion lease",
+    "observed_at": "2026-10-02T11:24:07Z"
+  },
+  {
+    "data": {
+      "name": "HUMAIN Al Saad AI Campus",
+      "developer": [
+        "HUMAIN"
+      ],
+      "stage": "announced",
+      "capacity_mw": 6000,
+      "announced_on": "2026-05-04",
+      "city": [
+        "Riyadh"
+      ],
+      "country": [
+        "Saudi Arabia"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://enterpriseam.com/ksa/2026/09/27/al-yamama-takes-the-infrastructure-contract-for-humains-6-gw-riyadh-ai-campus/",
+    "evidence": "Humain is running the job on an early contractor involvement basis, where shortlisted teams pitch designs and methodologies before one is chosen to build. The campus will sit on a 24-sq-km site in east Riyadh's Al Saad area, built in two phases on six plots, each at 1 GW.",
+    "observed_at": "2026-10-02T11:14:03Z"
+  },
+  {
+    "data": {
+      "name": "Pantheon AI Topusko",
+      "developer": [
+        "Pantheon Atlas LLC"
+      ],
+      "stage": "announced",
+      "capacity_mw": 1000,
+      "investment_stated": "expected to exceed €50 billion",
+      "announced_on": "2026-04-28",
+      "city": [
+        "Topusko"
+      ],
+      "country": [
+        "Croatia"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://capacityglobal.com/news/pantheon-ai-croatia-data-centre-campus/",
+    "evidence": "The campus will be built in Topusko, 45 minutes from Zagreb, on a 310-acre site expandable to 450 acres. It is designed to deliver 1GW of total capacity and 800MW of usable IT load, built in accordance with Nvidia GW-Scale AI Factory standards.",
+    "observed_at": "2026-10-02T11:18:13Z"
+  },
+  {
+    "data": {
+      "name": "VOLT UAE Dubai Silicon Oasis",
+      "developer": [
+        "Dubai Integrated Economic Zones Authority",
+        "VOLT UAE"
+      ],
+      "stage": "announced",
+      "capacity_mw": 129,
+      "announced_on": "2026-04-23",
+      "city": [
+        "Dubai"
+      ],
+      "country": [
+        "United Arab Emirates"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.zawya.com/en/business/technology-telecom/volt-in-deal-to-develop-ai-ready-data-centres-in-dubai-silicon-oasis-347108",
+    "evidence": "Dubai Silicon Oasis, supporting the growth of the data centre sector and addressing increasing demand for advanced computing solutions. Spanning up to 60,000 sq m, the development will be implemented in two phases: an initial 29 MW readily available capacity, followed by an additional 100 MW",
+    "observed_at": "2026-10-02T11:14:03Z"
+  },
+  {
+    "data": {
+      "name": "Meta Tulsa",
+      "developer": [
+        "Meta"
+      ],
+      "stage": "under-construction",
+      "investment_usd": 1000000000,
+      "announced_on": "2026-04-21",
+      "city": [
+        "Tulsa"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://about.fb.com/news/2026/04/breaking-ground-new-ai-optimized-data-center-tulsa-oklahoma/",
+    "evidence": "We're breaking ground on our newest AI-optimized data center in Tulsa, Oklahoma - our first data center in the state, our 28th in the US, and our 32nd globally.",
+    "observed_at": "2026-10-02T11:02:00Z"
+  },
+  {
+    "data": {
+      "name": "Nebius Lappeenranta",
+      "developer": [
+        "Nebius",
+        "Polarnode"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 310,
+      "investment_stated": "more than $10 billion",
+      "announced_on": "2026-03-31",
+      "city": [
+        "Lappeenranta"
+      ],
+      "country": [
+        "Finland"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.fairedih.fi/en/2026/04/14/nebius-plans-e8-5-billion-data-centre-in-lappeenranta-cementing-finland-as-its-european-base/",
+    "evidence": "AI infrastructure company Nebius Group announced on 31 March a 310-megawatt data centre in Lappeenranta, southeastern Finland, valued at more than $10 billion, which would rank among the largest AI facilities in Europe.",
+    "observed_at": "2026-10-02T10:46:49Z"
+  },
+  {
+    "data": {
+      "name": "Crusoe Abilene Microsoft Campus",
+      "developer": [
+        "Crusoe"
+      ],
+      "tenant": [
+        "Microsoft"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 900,
+      "announced_on": "2026-03-27",
+      "city": [
+        "Abilene"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.crusoe.ai/resources/newsroom/crusoes-contracted-ai-infrastructure-capacity-approaches-5-gigawatts-across-data-centers-and-cloud",
+    "evidence": "Crusoe recently broke ground on a second 900 MW campus in Abilene for Microsoft.",
+    "observed_at": "2026-10-02T10:24:00Z"
+  },
+  {
+    "data": {
+      "name": "PORTS-Pike Technology Campus",
+      "developer": [
+        "SB Energy"
+      ],
+      "tenant": [
+        "OpenAI",
+        "NVIDIA"
+      ],
+      "stage": "announced",
+      "capacity_mw": 10000,
+      "announced_on": "2026-03-20",
+      "city": [
+        "Pike County"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://sbenergy.com/nvidia-ai-compute-ports-pike-ohio/",
+    "evidence": "NVIDIA announced that it has secured land, power and shell (LPS) capacity through a partnership with SB Energy at the PORTS-Pike Technology Campus in Pike County, Ohio, to host NVIDIA compute.",
+    "observed_at": "2026-10-02T10:44:00Z"
+  },
+  {
+    "data": {
+      "name": "Monarch Compute Campus",
+      "developer": [
+        "Nscale"
+      ],
+      "stage": "announced",
+      "capacity_mw": 1350,
+      "announced_on": "2026-03-16",
+      "city": [
+        "Mason County"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.nscale.com/ai-infrastructure",
+    "evidence": "The Monarch Compute Campus in West Virginia, is the first-ever state-certified Artificial Intelligence (AI) Microgrid in the United States. Phase 1 is engineered to host 1.35GW of AI computing capacity, with delivery targeted by early 2028.",
+    "observed_at": "2026-10-02T11:26:51Z"
+  },
+  {
+    "data": {
+      "name": "Bell AI Fabric Sherwood",
+      "developer": [
+        "Bell Canada"
+      ],
+      "tenant": [
+        "Cerebras",
+        "CoreWeave"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 300,
+      "investment_stated": "approximately $1.7 billion",
+      "announced_on": "2026-03-16",
+      "city": [
+        "Rural Municipality of Sherwood"
+      ],
+      "country": [
+        "Canada"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.saskatchewan.ca/government/news-and-media/2026/october/01/bell-ai-fabric",
+    "evidence": "Today, Bell Canada and the Government of Saskatchewan marked major construction milestones at the 300-megawatt Bell AI Fabric data centre campus in the Rural Municipality of Sherwood, where structural steel is rising",
+    "observed_at": "2026-10-02T10:58:16Z"
+  },
+  {
+    "data": {
+      "name": "Polarise Amberg AI Factory",
+      "developer": [
+        "Polarise"
+      ],
+      "stage": "announced",
+      "capacity_mw": 120,
+      "announced_on": "2026-03-10",
+      "city": [
+        "Amberg (Unterallgäu)"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://polarise.eu/newsroom/polarise-builds-ai-data-center-amberg-unterallgaeu-march-2026",
+    "evidence": "is to be built in the Amberg municipality (Unterallgäu) within the greater Augsburg area. It will have an initial capacity of 30 megawatts (MW), which is twice that of the recently completed Polarise project in Munich. Launch is planned for mid-2027, with scalability up to 120 megawatts.",
+    "observed_at": "2026-10-02T11:06:56Z"
+  },
+  {
+    "data": {
+      "name": "Nebius Independence",
+      "developer": [
+        "Nebius"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 1200,
+      "announced_on": "2026-03-03",
+      "city": [
+        "Independence"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://nebius.com/newsroom/nebius-breaks-ground-on-gigawatt-scale-ai-factory-in-independence-missouri",
+    "evidence": "Nebius (Nasdaq: NBIS), the AI cloud company, today broke ground on its flagship AI factory campus in Independence, Missouri",
+    "observed_at": "2026-10-02T11:24:07Z"
+  },
+  {
+    "data": {
+      "name": "Hyundai Motor Group Saemangeum AI Data Center",
+      "developer": [
+        "Hyundai Motor Group"
+      ],
+      "stage": "announced",
+      "investment_stated": "KRW 5.8 trillion",
+      "announced_on": "2026-02-27",
+      "city": [
+        "Gunsan"
+      ],
+      "country": [
+        "South Korea"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.hyundai.com/worldwide/en/newsroom/detail/0000001132",
+    "evidence": "invest nearly KRW 9 trillion in Saemangeum area of Gunsan City, starting 2026 Advancing Korea’s transition to robotics, AI-driven and energy-centric future through transformative projects: AI Data Center: Processing and storing critical data for physical AI implementation",
+    "observed_at": "2026-10-02T11:09:41Z"
+  },
+  {
+    "data": {
+      "name": "Meta Lebanon",
+      "developer": [
+        "Meta"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 1000,
+      "investment_usd": 10000000000,
+      "announced_on": "2026-02-11",
+      "city": [
+        "Lebanon"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://about.fb.com/news/2026/02/metas-new-data-center-lebanon-indiana-marks-milestone-ai-investment/",
+    "evidence": "Today, we're breaking ground on our newest data center: a state-of-the-art 1GW campus in Lebanon, Indiana. This facility represents an investment of over $10 billion in data center infrastructure and the surrounding community",
+    "observed_at": "2026-10-02T11:02:00Z"
+  },
+  {
+    "data": {
+      "name": "Justified Data Campus",
+      "developer": [
+        "TeraWulf"
+      ],
+      "tenant": [
+        "Anthropic"
+      ],
+      "stage": "announced",
+      "capacity_mw": 480,
+      "announced_on": "2026-02-02",
+      "city": [
+        "Hawesville"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://investors.terawulf.com/news-events/press-releases/detail/142/terawulf-announces-anthropic-lease-at-justified-data-campus-and-sale-of-majority-interest-in-abernathy-joint-venture-to-fluidstack",
+    "evidence": "a 20-year lease agreement with Anthropic for a purpose-built AI infrastructure campus at the Justified Data site in Hawesville, Kentucky. The campus will accommodate approximately 401 MW of critical IT load and will be developed in multiple phases.",
+    "observed_at": "2026-10-02T11:24:07Z"
+  },
+  {
+    "data": {
+      "name": "Chesapeake Data Campus",
+      "developer": [
+        "TeraWulf"
+      ],
+      "stage": "announced",
+      "capacity_mw": 1000,
+      "announced_on": "2026-02-02",
+      "city": [
+        "Morgantown"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://investors.terawulf.com/news-events/press-releases/detail/144/terawulf-reports-second-quarter-2026-results",
+    "evidence": "Received FERC authorization for the proposed acquisition of the Morgantown generating station, clearing a significant regulatory condition toward closing and development of the up to 1 GW Chesapeake Data Campus.",
+    "observed_at": "2026-10-02T11:24:07Z"
+  },
+  {
+    "data": {
+      "name": "Lanarkshire AI Growth Zone",
+      "developer": [
+        "DataVita"
+      ],
+      "tenant": [
+        "CoreWeave"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 500,
+      "announced_on": "2026-01-29",
+      "city": [
+        "Airdrie"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.theregister.com/on-prem/2026/08/19/scotlands-ai-growth-zone-gets-a-wee-300m-power-up/5289042",
+    "evidence": "Datacenter operator DataVita has secured £300 million ($406 million) to expand its campus in Scotland's Lanarkshire AI Growth Zone, while Dell is moving into the area",
+    "observed_at": "2026-10-02T10:51:14Z"
+  },
+  {
+    "data": {
+      "name": "Delta Forge 1",
+      "developer": [
+        "Applied Digital"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 430,
+      "announced_on": "2026-01-22",
+      "city": [
+        "Boyce"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://ir.applieddigital.com/news-events/press-releases/detail/159/applied-digital-reports-fiscal-fourth-quarter-and-full-year",
+    "evidence": "Signed a 15-year take-or-pay lease with a new U.S. based, high investment-grade hyperscaler for 300 megawatts (\"MW\") of critical IT load at Delta Forge 1, a new AI Factory campus in Boyce, Louisiana.",
+    "observed_at": "2026-10-02T11:24:07Z"
+  },
+  {
+    "data": {
+      "name": "MACROHARDRR",
+      "developer": [
+        "xAI"
+      ],
+      "stage": "under-construction",
+      "investment_usd": 20000000000,
+      "announced_on": "2026-01-08",
+      "city": [
+        "Southaven"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://governorreeves.ms.gov/tech-leader-xai-investing-more-than-20-billion-in-southaven/",
+    "evidence": "xAI, the American artificial intelligence company founded by Elon Musk, is locating a data center in Southaven. The project will represent a corporate investment exceeding $20 billion and will create hundreds of permanent jobs throughout DeSoto County.",
+    "observed_at": "2026-10-02T10:57:00Z"
+  },
+  {
+    "data": {
+      "name": "HUMAIN-MIS Riyadh AI Data Centre",
+      "developer": [
+        "HUMAIN",
+        "Al Moammar Information Systems"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 250,
+      "investment_stated": "c. SAR 8.76 bn",
+      "announced_on": "2025-12-24",
+      "city": [
+        "Riyadh"
+      ],
+      "country": [
+        "Saudi Arabia"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://enterpriseam.com/ksa/2026/09/27/al-yamama-takes-the-infrastructure-contract-for-humains-6-gw-riyadh-ai-campus/",
+    "evidence": "A build with AMD and Cisco is scaling toward 1 GW by 2030, and a separate Riyadh project it awarded to contractor MIS is growing to 250 MW.",
+    "observed_at": "2026-10-02T11:14:03Z"
+  },
+  {
+    "data": {
+      "name": "Hut 8 River Bend",
+      "developer": [
+        "Hut 8"
+      ],
+      "tenant": [
+        "Fluidstack",
+        "Anthropic"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 330,
+      "announced_on": "2025-12-17",
+      "city": [
+        "West Feliciana Parish"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://hut8.com/news-insights/press-releases/hut-8-reports-second-quarter-2026-results",
+    "evidence": "Facilities representing 1,330 MW of utility capacity in active construction across River Bend and Beacon Point, targeted for initial data hall delivery in Q2 2027 and Q3 2027, respectively.",
+    "observed_at": "2026-10-02T11:24:07Z"
+  },
+  {
+    "data": {
+      "name": "Khazna Dammam",
+      "developer": [
+        "Khazna Data Centers"
+      ],
+      "stage": "announced",
+      "capacity_mw": 200,
+      "announced_on": "2025-12-09",
+      "city": [
+        "Dammam"
+      ],
+      "country": [
+        "Saudi Arabia"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://khaznadatacenters.com/press-release/khazna-data-centers-names-new-country-head-and-advances-expansion-plans-in-saudi-arabia-in-support-of-vision-2030/",
+    "evidence": "At Khazna, Bin Hassan will oversee the launch of the company's new site in Dammam, where Khazna will develop up to 200 MW of AI-ready capacity, while more broadly leading and accelerating Khazna's expansion in Saudi Arabia.",
+    "observed_at": "2026-10-02T11:14:04Z"
+  },
+  {
+    "data": {
+      "name": "NEXTDC S7 Sydney",
+      "developer": [
+        "NEXTDC"
+      ],
+      "tenant": [
+        "OpenAI"
+      ],
+      "stage": "announced",
+      "capacity_mw": 550,
+      "announced_on": "2025-12-05",
+      "city": [
+        "Sydney"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.nextdc.com/news/building-the-next-generation-of-sovereign-ai-infrastructure-in-australia",
+    "evidence": "Through the MoU, OpenAI and NEXTDC will collaborate on the planning, development and operation of a next-generation hyperscale AI campus and large-scale GPU supercluster at NEXTDC’s S7 site in Eastern Creek, Sydney.",
+    "observed_at": "2026-10-02T11:02:28Z"
+  },
+  {
+    "data": {
+      "name": "AWS Vicksburg",
+      "developer": [
+        "Amazon Web Services"
+      ],
+      "stage": "announced",
+      "investment_usd": 3000000000,
+      "announced_on": "2025-11-20",
+      "city": [
+        "Vicksburg"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.aboutamazon.com/news/company-news/amazon-3-billion-mississippi-data-center-investment",
+    "evidence": "Amazon today announced plans to invest at least $3 billion in Warren County, Mississippi, to build a new data center campus to support artificial intelligence (AI) and cloud computing technologies.",
+    "observed_at": "2026-10-02T11:07:53Z"
+  },
+  {
+    "data": {
+      "name": "OpCore Montereau",
+      "developer": [
+        "OpCore"
+      ],
+      "stage": "announced",
+      "capacity_mw": 400,
+      "investment_stated": "approximately 4 billion euros",
+      "announced_on": "2025-11-17",
+      "city": [
+        "Vernou-La-Celle-sur-Seine",
+        "La Grande-Paroisse"
+      ],
+      "country": [
+        "France"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.thelocal.fr/20261001/opposition-grows-as-france-plans-wave-of-giant-data-centres",
+    "evidence": "Montereau (Seine-et-Marne), where OpCore plans a 400-megawatt AI site",
+    "observed_at": "2026-10-02T11:06:20Z"
+  },
+  {
+    "data": {
+      "name": "Google Armstrong County",
+      "developer": [
+        "Crusoe"
+      ],
+      "tenant": [
+        "Google"
+      ],
+      "stage": "under-construction",
+      "announced_on": "2025-11-14",
+      "city": [
+        "Claude"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.crusoe.ai/resources/newsroom/crusoe-developing-data-center-campus-in-armstrong-county-texas",
+    "evidence": "Crusoe, the AI factory company, today announced it is the developer of Google's data center campus under construction in Armstrong County outside of Amarillo. The campus is engineered to provide capacity to power advanced AI.",
+    "observed_at": "2026-10-02T10:26:00Z"
+  },
+  {
+    "data": {
+      "name": "Meta Beaver Dam",
+      "developer": [
+        "Meta"
+      ],
+      "stage": "under-construction",
+      "investment_usd": 1000000000,
+      "announced_on": "2025-11-12",
+      "city": [
+        "Beaver Dam"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://about.fb.com/news/2025/11/metas-30th-data-center-delivering-ai-supporting-wetlands-restoration/",
+    "evidence": "We're breaking ground on our 30th data center in Beaver Dam, Wisconsin, designed to enable ambitious AI workloads.",
+    "observed_at": "2026-10-02T11:02:00Z"
+  },
+  {
+    "data": {
+      "name": "Fairwater Atlanta",
+      "developer": [
+        "Microsoft"
+      ],
+      "stage": "operational",
+      "announced_on": "2025-11-12",
+      "city": [
+        "Fayetteville"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://epoch.ai/data/ai-data-centers/directory/microsoft-fairwater-atlanta",
+    "evidence": "Microsoft Fairwater Atlanta Fayetteville, Georgia, United States Microsoft Fairwater Atlanta is an operational AI data center with AI chips owned by Microsoft and likely used by OpenAI and Microsoft.",
+    "observed_at": "2026-10-02T10:55:00Z"
+  },
+  {
+    "data": {
+      "name": "Industrial AI Cloud Munich",
+      "developer": [
+        "Deutsche Telekom",
+        "NVIDIA",
+        "Polarise"
+      ],
+      "stage": "operational",
+      "investment_stated": "€1 billion",
+      "announced_on": "2025-11-04",
+      "city": [
+        "Munich"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.telekom.com/en/newsroom/latest-updates/media-information/2026/2/germany-s-first-ai-factory-for-industry",
+    "evidence": "Deutsche Telekom is thus providing companies, research institutions and the public sector in Germany and Europe with high-performance, sovereign computing power for artificial intelligence (AI). With the establishment of the AI factory in Munich’s Tucherpark a new AI hub arises in Germany.",
+    "observed_at": "2026-10-02T11:06:21Z"
+  },
+  {
+    "data": {
+      "name": "Stargate Michigan",
+      "developer": [
+        "Related Digital"
+      ],
+      "tenant": [
+        "Oracle",
+        "OpenAI"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 1383,
+      "investment_usd": 16000000000,
+      "announced_on": "2025-10-30",
+      "city": [
+        "Saline Township"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.cnbc.com/2026/06/01/stargate-project-michigan-live-updates.html",
+    "evidence": "OpenAI and Oracle held an official groundbreaking for the $16 billion Stargate campus in Saline Township, Michigan, on Monday.",
+    "observed_at": "2026-10-02T10:31:00Z"
+  },
+  {
+    "data": {
+      "name": "TeraWulf-Fluidstack Abernathy",
+      "developer": [
+        "Fluidstack",
+        "TeraWulf"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 168,
+      "announced_on": "2025-10-28",
+      "city": [
+        "Abernathy"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://investors.terawulf.com/news-events/press-releases/detail/140/terawulf-reports-first-quarter-2026-results",
+    "evidence": "With regard to the Abernathy joint venture, which is designed to support 168 critical IT MW under a 25-year lease with annual escalators, construction is progressing with delivery targeted for the fourth quarter of 2026.",
+    "observed_at": "2026-10-02T11:24:07Z"
+  },
+  {
+    "data": {
+      "name": "AirTrunk HUMAIN Riyadh",
+      "developer": [
+        "AirTrunk",
+        "HUMAIN"
+      ],
+      "stage": "announced",
+      "capacity_mw": 250,
+      "investment_usd": 3000000000,
+      "announced_on": "2025-10-28",
+      "city": [
+        "Riyadh"
+      ],
+      "country": [
+        "Saudi Arabia"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://constructionreviewonline.com/blackstone-backed-airtrunk-and-humain-partner-to-invest-us3-billion-in-saudi-data-center-campus/",
+    "evidence": "Co-developed by Public Investment Fund-backed HUMAIN and Blackstone-owned AirTrunk, the $3 billion hyperscale AI data center project in Riyadh is progressing rapidly, with major international and regional contractors competing for construction packages.",
+    "observed_at": "2026-10-02T11:14:03Z"
+  },
+  {
+    "data": {
+      "name": "Nscale Korgen",
+      "developer": [
+        "Nscale"
+      ],
+      "stage": "announced",
+      "capacity_mw": 250,
+      "investment_usd": 5400000000,
+      "announced_on": "2025-10-24",
+      "city": [
+        "Korgen"
+      ],
+      "country": [
+        "Norway"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://thetechcapital.com/nscale-expands-ai-infrastructure-with-new-250-mw-data-centre-project-in-norway/",
+    "evidence": "The neocloud group, in partnership with Aker ASA, is preparing a US$5.4 bn AI data centre project in Korgen, Northern Norway, building on its earlier agreement with Microsoft for the Stargate Norway facility near Narvik.",
+    "observed_at": "2026-10-02T10:44:49Z"
+  },
+  {
+    "data": {
+      "name": "Vantage Lighthouse",
+      "developer": [
+        "Vantage Data Centers"
+      ],
+      "tenant": [
+        "Oracle",
+        "OpenAI"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 902,
+      "investment_usd": 15000000000,
+      "announced_on": "2025-10-22",
+      "city": [
+        "Port Washington"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://epoch.ai/data/ai-data-centers/directory/openai-stargate-wisconsin",
+    "evidence": "OpenAI Stargate Wisconsin Port Washington, Wisconsin, United States OpenAI Stargate Wisconsin is an AI data center under construction with AI chips owned by Oracle and used by OpenAI.",
+    "observed_at": "2026-10-02T10:52:00Z"
+  },
+  {
+    "data": {
+      "name": "Meta El Paso",
+      "developer": [
+        "Meta",
+        "BlackRock"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 1000,
+      "investment_usd": 10000000000,
+      "announced_on": "2025-10-15",
+      "city": [
+        "El Paso"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://about.fb.com/news/2026/07/meta-announces-new-venture-with-blackrock-to-develop-data-center-in-el-paso/",
+    "evidence": "The state-of-the-art data center campus, currently under construction in El Paso, Texas, will have 1 gigawatt of compute capacity and will play an essential role in bringing Meta's AI technologies to life",
+    "observed_at": "2026-10-02T11:02:00Z"
+  },
+  {
+    "data": {
+      "name": "Project Horizon",
+      "developer": [
+        "Poolside"
+      ],
+      "tenant": [
+        "CoreWeave"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 2000,
+      "announced_on": "2025-10-15",
+      "city": [
+        "Pecos County"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://en.wikipedia.org/wiki/Poolside_AI",
+    "evidence": "The first phase of Poolside's Project Horizon, a 2-gigawatt artificial intelligence campus located in Pecos County, Texas, started in October 2025.",
+    "observed_at": "2026-10-02T11:24:07Z"
+  },
+  {
+    "data": {
+      "name": "Google Visakhapatnam",
+      "developer": [
+        "Google",
+        "AdaniConneX",
+        "Nxtra by Airtel"
+      ],
+      "stage": "under-construction",
+      "investment_usd": 15000000000,
+      "announced_on": "2025-10-14",
+      "city": [
+        "Visakhapatnam"
+      ],
+      "country": [
+        "India"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://blog.google/intl/en-in/google-ai-hub-scaling-indias-ai-infrastructure-and-community-impact/",
+    "evidence": "Google broke ground on our AI hub in Visakhapatnam (Vizag), Andhra Pradesh — a project we first announced last October. This marks the construction phase of a $15 billion investment",
+    "observed_at": "2026-10-02T10:36:49Z"
+  },
+  {
+    "data": {
+      "name": "du AI Park Warsan",
+      "developer": [
+        "du"
+      ],
+      "stage": "announced",
+      "capacity_mw": 1000,
+      "announced_on": "2025-10-13",
+      "city": [
+        "Dubai"
+      ],
+      "country": [
+        "United Arab Emirates"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.zawya.com/en/press-release/companies-news/du-concludes-gitex-global-2025-as-the-uaes-ai-strategic-partner-396058",
+    "evidence": "the unveiling of its visionary AI Park in Dubai – a 440 thousands square meter development in Warsan that will establish one of the Middle East's most advanced AI ecosystems. The AI Park will feature multiple liquid-cooled hyperscale data centers delivering up to 1 GW of capacity",
+    "observed_at": "2026-10-02T11:14:02Z"
+  },
+  {
+    "data": {
+      "name": "Stargate Argentina",
+      "developer": [
+        "Sur Energy"
+      ],
+      "tenant": [
+        "OpenAI"
+      ],
+      "stage": "announced",
+      "capacity_mw": 500,
+      "investment_stated": "up to US$25 billion",
+      "announced_on": "2025-10-10",
+      "city": [
+        "Patagonia"
+      ],
+      "country": [
+        "Argentina"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.batimes.com.ar/news/economy/chau-gpt-no-trace-of-mega-billion-dollar-ai-project-announced-before-elections.phtml",
+    "evidence": "In October 2025, a fortnight before Argentina's midterm elections, US tech company OpenAI, the creator of ChatGPT, signed a letter of intent to build a massive artificial intelligence data centre in Argentina’s Patagonia region.",
+    "observed_at": "2026-10-02T10:41:07Z"
+  },
+  {
+    "data": {
+      "name": "Related Digital Cheyenne",
+      "developer": [
+        "Related Digital"
+      ],
+      "tenant": [
+        "CoreWeave"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 420,
+      "investment_usd": 1200000000,
+      "announced_on": "2025-10-07",
+      "city": [
+        "Cheyenne"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.related-digital.com/wyoming",
+    "evidence": "Related Digital is developing a 115-acre data center campus in Cheyenne, Wyoming, that will deliver up to 420 MW of capacity. The first phase, currently under construction, includes a 184,000 SF building that will deliver 88 MW of critical IT capacity for CoreWeave.",
+    "observed_at": "2026-10-02T11:24:07Z"
+  },
+  {
+    "data": {
+      "name": "Google West Memphis",
+      "developer": [
+        "Google"
+      ],
+      "stage": "announced",
+      "investment_usd": 4000000000,
+      "announced_on": "2025-10-02",
+      "city": [
+        "West Memphis"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://blog.google/company-news/inside-google/company-announcements/google-american-innovation-arkansas/",
+    "evidence": "Google is announcing a new $4 billion investment in Arkansas through 2027, which will include Google's first data center in the state - located in West Memphis - along with cloud and AI infrastructure",
+    "observed_at": "2026-10-02T10:50:00Z"
+  },
+  {
+    "data": {
+      "name": "Barber Lake",
+      "developer": [
+        "Cipher Digital"
+      ],
+      "tenant": [
+        "Fluidstack",
+        "Anthropic"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 300,
+      "announced_on": "2025-09-25",
+      "city": [
+        "Colorado City"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://investors.cipherdigital.com/news-releases/news-release-details/cipher-digital-expands-barber-lake-lease-term-20-years",
+    "evidence": "today announced a series of agreements that extend the contracted lease duration of its Barber Lake data center in Colorado City, Texas from 10 years to 20 years and increase total contracted revenue at the facility from $3.8 billion to over $9 billion.",
+    "observed_at": "2026-10-02T11:24:07Z"
+  },
+  {
+    "data": {
+      "name": "Stargate Milam County",
+      "developer": [
+        "SB Energy"
+      ],
+      "tenant": [
+        "OpenAI"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 750,
+      "announced_on": "2025-09-23",
+      "city": [
+        "Milam County"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://sbenergy.com/digital-infrastructure/",
+    "evidence": "Milam Data Center Total Capacity Site of ~750MW Under Construction",
+    "observed_at": "2026-10-02T10:46:00Z"
+  },
+  {
+    "data": {
+      "name": "Project Jupiter",
+      "developer": [
+        "BorderPlex Digital Assets",
+        "STACK Infrastructure"
+      ],
+      "tenant": [
+        "Oracle",
+        "OpenAI"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 2450,
+      "announced_on": "2025-09-23",
+      "city": [
+        "Santa Teresa"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://epoch.ai/data/ai-data-centers/directory/openai-stargate-new-mexico",
+    "evidence": "OpenAI Stargate New Mexico Santa Teresa, New Mexico, United States OpenAI Stargate New Mexico is an AI data center under construction with AI chips owned by Oracle and used by OpenAI.",
+    "observed_at": "2026-10-02T10:52:00Z"
+  },
+  {
+    "data": {
+      "name": "Vantage Frontier",
+      "developer": [
+        "Vantage Data Centers"
+      ],
+      "tenant": [
+        "Oracle",
+        "OpenAI"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 1400,
+      "investment_usd": 25000000000,
+      "announced_on": "2025-08-19",
+      "city": [
+        "Shackelford County"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://vantage-dc.com/news/vantage-data-centers-unveils-plans-for-frontier-a-25b-mega-campus-in-texas-to-meet-unprecedented-ai-demand/",
+    "evidence": "today announced its largest investment to date of over $25 billion to develop a mega-scale 1.4GW data center campus in Shackelford County, Texas.",
+    "observed_at": "2026-10-02T10:37:00Z"
+  },
+  {
+    "data": {
+      "name": "Polaris Forge 2",
+      "developer": [
+        "Applied Digital"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 280,
+      "investment_usd": 3000000000,
+      "announced_on": "2025-08-18",
+      "city": [
+        "Harwood"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://ir.applieddigital.com/news-events/press-releases/detail/159/applied-digital-reports-fiscal-fourth-quarter-and-full-year",
+    "evidence": "Proceeds will fund development of 200 MW of critical IT load at Polaris Forge 2 in Harwood, North Dakota.",
+    "observed_at": "2026-10-02T11:24:07Z"
+  },
+  {
+    "data": {
+      "name": "Lake Hawkeye",
+      "developer": [
+        "TeraWulf"
+      ],
+      "stage": "announced",
+      "capacity_mw": 300,
+      "announced_on": "2025-08-14",
+      "city": [
+        "Lansing"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://investors.terawulf.com/news-events/press-releases/detail/140/terawulf-reports-first-quarter-2026-results",
+    "evidence": "Lake Hawkeye (Lansing, New York) Redevelopment of a 183-acre leased area on a legacy industrial site Phase I includes approximately 150 MW of power availability, expanding to 300 MW in Phase II Currently in site plan review",
+    "observed_at": "2026-10-02T11:24:07Z"
+  },
+  {
+    "data": {
+      "name": "Nscale Narvik (formerly Stargate Norway)",
+      "developer": [
+        "Nscale"
+      ],
+      "tenant": [
+        "Microsoft"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 230,
+      "announced_on": "2025-07-31",
+      "city": [
+        "Narvik"
+      ],
+      "country": [
+        "Norway"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://theenergymag.com/news/2026-07-06/nscale-nordkraft-form-venture-narvik-ai-data-center",
+    "evidence": "In April, the company said it expanded an agreement with Microsoft to deliver additional high-performance AI compute capacity in Norway in 2027, adding more than 30,000 Nvidia Rubin GPUs to its 230-megawatt Narvik campus.",
+    "observed_at": "2026-10-02T10:43:53Z"
+  },
+  {
+    "data": {
+      "name": "Project Jade",
+      "developer": [
+        "Crusoe",
+        "Tallgrass"
+      ],
+      "stage": "announced",
+      "capacity_mw": 1800,
+      "announced_on": "2025-07-24",
+      "city": [
+        "Cheyenne"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.powermag.com/wyoming-approves-data-center-campus-that-includes-2-7-gw-of-new-natural-gas-fired-generation/",
+    "evidence": "Officials in Laramie County, which includes Cheyenne, the county seat and the state capital, in a unanimous vote on January 5 approved Project Jade, an artificial intelligence data center campus proposed by Denver, Colorado-based Crusoe Energy Systems.",
+    "observed_at": "2026-10-02T10:33:00Z"
+  },
+  {
+    "data": {
+      "name": "CoreWeave Lancaster",
+      "developer": [
+        "CoreWeave"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 300,
+      "investment_usd": 6000000000,
+      "announced_on": "2025-07-15",
+      "city": [
+        "Lancaster"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://epoch.ai/data/ai-data-centers/directory/coreweave-lancaster-greenfield-site",
+    "evidence": "CoreWeave Lancaster Greenfield site Lancaster, Pennsylvania, United States CoreWeave Lancaster Greenfield site is an AI data center under construction with AI chips owned by CoreWeave and possibly used by OpenAI.",
+    "observed_at": "2026-10-02T11:24:07Z"
+  },
+  {
+    "data": {
+      "name": "Vantage NV1",
+      "developer": [
+        "Vantage Data Centers"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 224,
+      "investment_usd": 3000000000,
+      "announced_on": "2025-07-15",
+      "city": [
+        "Reno"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://vantage-dc.com/news/vantage-data-centers-invests-3-billion-to-deliver-ai-campus-in-growing-nevada-market/",
+    "evidence": "today announced its entry into the Nevada market with a 224MW campus ( NV1) in Storey County just outside of Reno. Nearly $3 billion will be invested in the project",
+    "observed_at": "2026-10-02T11:26:51Z"
+  },
+  {
+    "data": {
+      "name": "Prometheus",
+      "developer": [
+        "Meta"
+      ],
+      "stage": "partly-operational",
+      "capacity_mw": 1000,
+      "announced_on": "2025-07-14",
+      "city": [
+        "New Albany"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://epoch.ai/data/ai-data-centers/directory/meta-prometheus",
+    "evidence": "Meta Prometheus New Albany, Ohio, United States Meta Prometheus is an operational AI data center with AI chips owned and used by Meta. It hosts an estimated 600k H100-equivalents of AI compute, supported by 496 MW of IT power",
+    "observed_at": "2026-10-02T10:50:00Z"
+  },
+  {
+    "data": {
+      "name": "Project Matador",
+      "developer": [
+        "Fermi America"
+      ],
+      "tenant": [
+        "TensorWave"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 17000,
+      "announced_on": "2025-06-26",
+      "city": [
+        "Amarillo"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.fermiamerica.com/",
+    "evidence": "Fermi's Project Matador will be a 17GW private power and AI campus in the Texas Panhandle.",
+    "observed_at": "2026-10-02T11:24:07Z"
+  },
+  {
+    "data": {
+      "name": "SK Ulsan AI Data Center",
+      "developer": [
+        "SK Telecom",
+        "SK Group"
+      ],
+      "tenant": [
+        "Amazon Web Services"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 1000,
+      "announced_on": "2025-06-20",
+      "city": [
+        "Ulsan"
+      ],
+      "country": [
+        "South Korea"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://news.sktelecom.com/en/3155",
+    "evidence": "He also presented a longer-term blueprint for expanding cooperation with global big tech companies and scaling up the Ulsan AI Data Center to a total of over 1GW.",
+    "observed_at": "2026-10-02T10:43:45Z"
+  },
+  {
+    "data": {
+      "name": "NEXTDC M4 Melbourne",
+      "developer": [
+        "NEXTDC"
+      ],
+      "stage": "announced",
+      "capacity_mw": 162,
+      "investment_stated": "$2 billion (AUD)",
+      "announced_on": "2025-06-12",
+      "city": [
+        "Melbourne"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.nextdc.com/news/m4-technology-campus-approved",
+    "evidence": "NEXTDC has secured Development Approval from the Victorian Government for its #M4 technology campus at the Fishermans Bend Innovation Precinct in Port Melbourne, marking a significant milestone in the project’s delivery.",
+    "observed_at": "2026-10-02T11:02:56Z"
+  },
+  {
+    "data": {
+      "name": "AWS Richmond County",
+      "developer": [
+        "Amazon Web Services"
+      ],
+      "stage": "announced",
+      "investment_usd": 10000000000,
+      "announced_on": "2025-06-04",
+      "city": [
+        "Richmond County"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.aboutamazon.com/news/aws/aws-investment-north-carolina-ai-cloud-infrastructure",
+    "evidence": "Amazon plans to invest $10 billion in North Carolina to expand cloud computing infrastructure and advance AI innovation Planned investment in Richmond County will create hundreds of jobs",
+    "observed_at": "2026-10-02T11:03:00Z"
+  },
+  {
+    "data": {
+      "name": "Brookfield Strängnäs AI Center",
+      "developer": [
+        "Brookfield Asset Management"
+      ],
+      "stage": "announced",
+      "capacity_mw": 750,
+      "investment_usd": 10000000000,
+      "investment_stated": "up to SEK 95 billion ($10 billion)",
+      "announced_on": "2025-06-04",
+      "city": [
+        "Strängnäs"
+      ],
+      "country": [
+        "Sweden"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://bam.brookfield.com/press-releases/brookfield-advance-ai-infrastructure-sweden-through-sek-95-billion-investment",
+    "evidence": "AI center in Strängnäs, Sweden, creating a strategic infrastructure asset to support the country’s national AI strategy. Brookfield will sign a land allocation agreement for c.350,000 sqm of additional land, enabling the data center site to more than double its capacity from 300MW to 750MW.",
+    "observed_at": "2026-10-02T10:47:26Z"
+  },
+  {
+    "data": {
+      "name": "Elsham Tech Park",
+      "developer": [
+        "Greystoke"
+      ],
+      "stage": "announced",
+      "capacity_mw": 1000,
+      "investment_stated": "more than £10 billion",
+      "announced_on": "2025-05-27",
+      "city": [
+        "Elsham"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://constructionwave.co.uk/2026/07/09/10-uk-data-centre-construction-projects-to-watch/",
+    "evidence": "Elsham Tech Park A new AI data centre campus in Elsham, North Lincolnshire, will begin construction in 2027, with the first phase of development opening in 2029.",
+    "observed_at": "2026-10-02T10:41:42Z"
+  },
+  {
+    "data": {
+      "name": "Stargate UAE",
+      "developer": [
+        "G42",
+        "Khazna Data Centers"
+      ],
+      "tenant": [
+        "OpenAI",
+        "Oracle"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 1000,
+      "investment_usd": 30000000000,
+      "announced_on": "2025-05-22",
+      "city": [
+        "Abu Dhabi"
+      ],
+      "country": [
+        "United Arab Emirates"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.zawya.com/en/projects/industry/uae-revises-5gw-ai-data-centre-plans-amid-infrastructure-resilience-push-reuters-559821",
+    "evidence": "Construction is already underway on the project's first phase, Stargate UAE, a $30 billion, 1GW AI compute cluster, with the first 200 megawatts (MW) of capacity scheduled to come online this year.",
+    "observed_at": "2026-10-02T11:14:01Z"
+  },
+  {
+    "data": {
+      "name": "Data4 E-Valley Cambrai",
+      "developer": [
+        "Data4",
+        "Brookfield"
+      ],
+      "stage": "announced",
+      "capacity_mw": 1000,
+      "investment_stated": "over €10 billion",
+      "announced_on": "2025-05-19",
+      "city": [
+        "Cambrai"
+      ],
+      "country": [
+        "France"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.thelocal.fr/20261001/opposition-grows-as-france-plans-wave-of-giant-data-centres",
+    "evidence": "In Hauts-de-France: Cambrai (Nord), where Data4 plans a 1-gigawatt site on a former airbase, and Escaudain (Nord), where it plans a 700-megawatt campus on a former industrial site.",
+    "observed_at": "2026-10-02T11:06:20Z"
+  },
+  {
+    "data": {
+      "name": "Rio AI City",
+      "developer": [
+        "Elea Data Centers"
+      ],
+      "stage": "announced",
+      "capacity_mw": 3200,
+      "announced_on": "2025-05-08",
+      "city": [
+        "Rio de Janeiro"
+      ],
+      "country": [
+        "Brazil"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/elea-announces-rio-ai-city-a-landmark-brazilian-data-center-project-with-capacity-up-to-3-2-gw-of-renewable-energy-supporting-ai-growth-302449289.html",
+    "evidence": "announces a historic project of up to 3.2GW of energy capacity in the country to support the accelerated growth of Artificial Intelligence (AI) and cloud computing applications. The project gives rise to Rio AI City, an ecosystem of data centers in the Olympic Park region of Rio de Janeiro",
+    "observed_at": "2026-10-02T11:12:46Z"
+  },
+  {
+    "data": {
+      "name": "Homer City Energy Campus",
+      "developer": [
+        "Homer City Redevelopment"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 4400,
+      "announced_on": "2025-04-02",
+      "city": [
+        "Homer City"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.homercityredevelopment.com/post/homer-city-energy-campus-workforce-grows-to-more-than-1-800-workers-including-members-of-9-building",
+    "evidence": "Homer City Generation, L.P., today announced that the workforce building the Homer City Energy Campus has surpassed 1,800 direct-hire tradespeople and skilled contractors active on the project site",
+    "observed_at": "2026-10-02T11:24:07Z"
+  },
+  {
+    "data": {
+      "name": "Galaxy Helios",
+      "developer": [
+        "Galaxy"
+      ],
+      "tenant": [
+        "CoreWeave"
+      ],
+      "stage": "partly-operational",
+      "capacity_mw": 1600,
+      "announced_on": "2025-03-28",
+      "city": [
+        "Dickens County"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://investor.galaxy.com/news-releases/news-release-details/galaxy-completes-phase-i-its-helios-data-center-campus",
+    "evidence": "today announced that it has completed delivery of the first phase of power at its Helios data center campus (\"Helios\") in West Texas, delivering approximately 200 megawatts (\"MW\") of gross power - 133 MW of critical IT load - to CoreWeave",
+    "observed_at": "2026-10-02T11:24:07Z"
+  },
+  {
+    "data": {
+      "name": "IREN Sweetwater",
+      "developer": [
+        "IREN"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 2000,
+      "announced_on": "2025-03-17",
+      "city": [
+        "Sweetwater"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.globenewswire.com/news-release/2026/09/08/3357498/0/en/iren-s-2gw-sweetwater-hub-included-as-base-load-in-ercot-batch-zero.html",
+    "evidence": "At Sweetwater 1, IREN's high-voltage substation was energized earlier this year, and construction of 300MW (gross) of data center capacity continues with delivery targeted for Q4 2027.",
+    "observed_at": "2026-10-02T11:24:07Z"
+  },
+  {
+    "data": {
+      "name": "Colossus 2",
+      "developer": [
+        "xAI"
+      ],
+      "tenant": [
+        "Anthropic",
+        "Cursor"
+      ],
+      "stage": "partly-operational",
+      "announced_on": "2025-03-07",
+      "city": [
+        "Memphis"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://epoch.ai/data/ai-data-centers/directory/colossus-2",
+    "evidence": "Colossus 2 Memphis, Tennessee, United States Colossus 2 is an operational AI data center with AI chips owned by SpaceXAI and used by Anthropic, Cursor, and SpaceXAI.",
+    "observed_at": "2026-10-02T10:56:00Z"
+  },
+  {
+    "data": {
+      "name": "Nebius Vineland",
+      "developer": [
+        "DataOne"
+      ],
+      "tenant": [
+        "Nebius"
+      ],
+      "stage": "partly-operational",
+      "capacity_mw": 300,
+      "announced_on": "2025-03-05",
+      "city": [
+        "Vineland"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://epoch.ai/data/ai-data-centers/directory/microsoft-nebius-new-jersey",
+    "evidence": "Microsoft-Nebius New Jersey Vineland, New Jersey, United States Microsoft-Nebius New Jersey is an operational AI data center with AI chips owned by Nebius and likely used by Microsoft.",
+    "observed_at": "2026-10-02T11:24:07Z"
+  },
+  {
+    "data": {
+      "name": "Eni Khazna AI Data Center Campus Ferrera Erbognone",
+      "developer": [
+        "Eni",
+        "Khazna Data Centers"
+      ],
+      "stage": "announced",
+      "capacity_mw": 500,
+      "announced_on": "2025-02-24",
+      "city": [
+        "Ferrera Erbognone"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.eni.com/en-IT/media/press-release/2025/07/pr-khazna-data-centers-eni-partner-develop-i-data-center-campus.html",
+    "evidence": "have signed Heads of Terms (“HoT”) to set up a Joint Venture aimed at the development of an “AI Data Center Campus” with a total IT capacity of 500 MW in Ferrera Erbognone, Lombardy.",
+    "observed_at": "2026-10-02T11:06:22Z"
+  },
+  {
+    "data": {
+      "name": "DataVolt Oxagon",
+      "developer": [
+        "DataVolt",
+        "HUMAIN"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 1500,
+      "investment_usd": 5000000000,
+      "announced_on": "2025-02-10",
+      "city": [
+        "Oxagon"
+      ],
+      "country": [
+        "Saudi Arabia"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.neom.com/en-us/newsroom/HUMAIN-and-DataVolt-to-develop-AI-data-center-in-NEOM",
+    "evidence": "For DataVolt, the groundbreaking marks the start of construction on the 360MW first phase of its wider planned 1.5GW Oxagon campus.",
+    "observed_at": "2026-10-02T11:14:03Z"
+  },
+  {
+    "data": {
+      "name": "Campus AI Fouju",
+      "developer": [
+        "MGX",
+        "Bpifrance",
+        "Mistral AI",
+        "NVIDIA"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 1400,
+      "investment_stated": "€50 billion",
+      "announced_on": "2025-02-06",
+      "city": [
+        "Fouju"
+      ],
+      "country": [
+        "France"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.thelocal.fr/20261001/opposition-grows-as-france-plans-wave-of-giant-data-centres",
+    "evidence": "The €50 billion project, backed by MGX (an Emirati investment fund), Bpifrance (France's public investment bank), Mistral AI and Nvidia, is planned for the small village of Fouju - population 600 - located in the middle of an agricultural area in the Seine-et-Marne département.",
+    "observed_at": "2026-10-02T11:06:20Z"
+  },
+  {
+    "data": {
+      "name": "AWS Fayette County",
+      "developer": [
+        "Amazon Web Services"
+      ],
+      "stage": "announced",
+      "investment_usd": 5000000000,
+      "announced_on": "2024-12-24",
+      "city": [
+        "Fayette County"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.aboutamazon.com/news/aws/aws-continues-to-invest-in-ohio",
+    "evidence": "The first of the new sites is located in Fayette County, where AWS plans to invest an estimated $5 billion to establish new data centers.",
+    "observed_at": "2026-10-02T11:03:00Z"
+  },
+  {
+    "data": {
+      "name": "Schwarz Digits Datacenter Lübbenau",
+      "developer": [
+        "Schwarz Digits"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 200,
+      "investment_stated": "around 11 billion euros",
+      "announced_on": "2024-12-20",
+      "city": [
+        "Lübbenau"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.heise.de/en/news/Schwarz-Digits-is-building-a-large-AI-data-center-in-Mecklenburg-Vorpommern-11431448.html",
+    "evidence": "Schwarz Digits is currently also building a 200 MW data center for around 11 billion euros in Lübbenau, Brandenburg.",
+    "observed_at": "2026-10-02T11:06:21Z"
+  },
+  {
+    "data": {
+      "name": "Wonder Valley",
+      "developer": [
+        "O'Leary Ventures"
+      ],
+      "stage": "announced",
+      "capacity_mw": 7500,
+      "investment_stated": "over $70 billion",
+      "announced_on": "2024-12-09",
+      "city": [
+        "Grande Prairie"
+      ],
+      "country": [
+        "Canada"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://mdgreenview.ab.ca/media-release-worlds-largest-ai-data-centre-industrial-park-wonder-valley-coming-to-the-greenview-industrial-gateway/",
+    "evidence": "Kevin O’Leary in cooperation with the Municipal District of Greenview to develop world’s largest AI Data Centre Industrial Park ‘Wonder Valley’ in the Greenview Industrial Gateway (“GIG”) near Grande Prairie in North West Alberta, Canada",
+    "observed_at": "2026-10-02T10:51:43Z"
+  },
+  {
+    "data": {
+      "name": "Hyperion",
+      "developer": [
+        "Meta",
+        "Blue Owl Capital"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 5000,
+      "investment_usd": 50000000000,
+      "announced_on": "2024-12-04",
+      "city": [
+        "Richland Parish"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://datacenters.atmeta.com/2026/07/deepening-our-investment-in-richland-parish-louisiana/",
+    "evidence": "We're expanding our AI-optimized data center in Richland Parish, Louisiana to 5 GW in compute capacity - the largest in Meta's fleet - supporting over 7,500 jobs at peak construction and 1,000 roles once operational.",
+    "observed_at": "2026-10-02T11:00:00Z"
+  },
+  {
+    "data": {
+      "name": "Core Scientific Muskogee",
+      "developer": [
+        "Core Scientific"
+      ],
+      "tenant": [
+        "CoreWeave"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 1500,
+      "announced_on": "2024-11-18",
+      "city": [
+        "Muskogee"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://investors.corescientific.com/news-events/press-releases/detail/135/core-scientific-plans-expansion-to-1-5-gigawatts-of-gross-power-at-muskogee-oklahoma-campus",
+    "evidence": "today announced a multi-tiered strategy to scale its Muskogee, Oklahoma campus to approximately 1.5 gigawatt (\"GW\") of gross power, or approximately 1.0 GW of leasable power.",
+    "observed_at": "2026-10-02T11:24:07Z"
+  },
+  {
+    "data": {
+      "name": "Khazna QAJ1 Ajman",
+      "developer": [
+        "Khazna Data Centers"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 100,
+      "investment_stated": "multi-billion-dirham investment",
+      "announced_on": "2024-10-15",
+      "city": [
+        "Ajman"
+      ],
+      "country": [
+        "United Arab Emirates"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://khaznadatacenters.com/press-release/khazna-awarded-tier-iii-certification-of-design-documents-for-ajman-uae-facility/",
+    "evidence": "Located in Ajman, United Arab Emirates, the new facility has been designed with advanced liquid-cooling systems to support the high rack densities and thermal loads required by large-scale AI training and inference applications",
+    "observed_at": "2026-10-02T11:14:01Z"
+  },
+  {
+    "data": {
+      "name": "Lake Mariner",
+      "developer": [
+        "TeraWulf"
+      ],
+      "tenant": [
+        "Fluidstack"
+      ],
+      "stage": "partly-operational",
+      "announced_on": "2024-10-03",
+      "city": [
+        "Barker"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://investors.terawulf.com/news-events/press-releases/detail/144/terawulf-reports-second-quarter-2026-results",
+    "evidence": "102 MW of revenue-generating critical IT capacity online at Lake Mariner, with an additional 336 MW under construction and delivery expected within cost and schedule guidance",
+    "observed_at": "2026-10-02T11:24:07Z"
+  },
+  {
+    "data": {
+      "name": "Scala AI City",
+      "developer": [
+        "Scala Data Centers"
+      ],
+      "stage": "announced",
+      "capacity_mw": 4750,
+      "investment_stated": "could reach BRL 500 billion",
+      "announced_on": "2024-09-11",
+      "city": [
+        "Eldorado do Sul"
+      ],
+      "country": [
+        "Brazil"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/scala-ai-city-brazils-ministry-of-mines-and-energy-approves-5-gw-power-connection-for-data-center-city-in-rio-grande-do-sul-302455610.html",
+    "evidence": "Scala AI City: Brazil's Ministry of Mines and Energy Approves 5 GW Power Connection for Data-Center City in Rio Grande do Sul",
+    "observed_at": "2026-10-02T11:12:29Z"
+  },
+  {
+    "data": {
+      "name": "EcoDataCenter 2 Borlänge",
+      "developer": [
+        "EcoDataCenter"
+      ],
+      "tenant": [
+        "Mistral AI"
+      ],
+      "stage": "under-construction",
+      "capacity_mw": 600,
+      "investment_stated": "€1.2 billion",
+      "announced_on": "2024-09-06",
+      "city": [
+        "Borlänge"
+      ],
+      "country": [
+        "Sweden"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://ecodatacenter.tech/data-center/ecodatacenter2",
+    "evidence": "EcoDataCenter 2 A strategically located, scalable data center site in Dalarna close to EcoDataCenter 1, designed for high-performance computing and AI-driven infrastructure. Renewable electricity on-site 100 % Total available power up to 600 MW",
+    "observed_at": "2026-10-02T10:48:14Z"
+  },
+  {
+    "data": {
+      "name": "Reliance Jamnagar",
+      "developer": [
+        "Reliance Intelligence"
+      ],
+      "stage": "under-construction",
+      "announced_on": "2024-08-29",
+      "city": [
+        "Jamnagar"
+      ],
+      "country": [
+        "India"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.business-standard.com/companies/news/reliance-intelligence-bets-big-on-ai-with-jamnagar-compute-platform-126061901060_1.html",
+    "evidence": "Reliance Intelligence will commission the first 120 megawatts (Mw) of its AI infrastructure in Jamnagar by the end of 2026.",
+    "observed_at": "2026-10-02T10:38:56Z"
+  },
+  {
+    "data": {
+      "name": "Stargate Abilene",
+      "developer": [
+        "Crusoe",
+        "Lancium",
+        "Blue Owl Capital",
+        "Primary Digital Infrastructure"
+      ],
+      "tenant": [
+        "Oracle",
+        "OpenAI"
+      ],
+      "stage": "partly-operational",
+      "capacity_mw": 1200,
+      "announced_on": "2024-07-18",
+      "city": [
+        "Abilene"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.crusoe.ai/resources/newsroom/crusoes-contracted-ai-infrastructure-capacity-approaches-5-gigawatts-across-data-centers-and-cloud",
+    "evidence": "At its flagship 1.2 GW Abilene, Texas campus - purpose built for Oracle - the first two buildings are operational and an additional six buildings are under construction.",
+    "observed_at": "2026-10-02T10:24:00Z"
+  },
+  {
+    "data": {
+      "name": "SoftBank Sakai",
+      "developer": [
+        "SoftBank Corp."
+      ],
+      "stage": "announced",
+      "capacity_mw": 250,
+      "announced_on": "2024-06-07",
+      "city": [
+        "Sakai"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.softbank.jp/corp/news/press/sbkk/2025/20250314_01/",
+    "evidence": "ソフトバンクは、シャープ堺工場の約45万平方メートルの土地と延べ床面積約84万平方メートルの建物などを活用して、受電容量が約150メガワット規模のAIデータセンターを構築し、2026年中の稼働開始を目指します。将来的には、受電容量を250メガワット超の規模まで拡大させる見込みです。",
+    "observed_at": "2026-10-02T10:46:25Z"
+  },
+  {
+    "data": {
+      "name": "Colossus 1",
+      "developer": [
+        "xAI"
+      ],
+      "tenant": [
+        "Anthropic"
+      ],
+      "stage": "operational",
+      "announced_on": "2024-06-05",
+      "city": [
+        "Memphis"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://epoch.ai/data/ai-data-centers/directory/colossus-1",
+    "evidence": "Colossus 1 Memphis, Tennessee, United States Colossus 1 is an operational AI data center with AI chips owned by SpaceXAI and used by Anthropic.",
+    "observed_at": "2026-10-02T10:56:00Z"
+  },
+  {
+    "data": {
+      "name": "Microsoft-G42 Olkaria Data Center",
+      "developer": [
+        "G42",
+        "Microsoft"
+      ],
+      "stage": "paused",
+      "investment_usd": 1000000000,
+      "announced_on": "2024-05-22",
+      "city": [
+        "Naivasha"
+      ],
+      "country": [
+        "Kenya"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://constructionreviewonline.com/600-million-kenyas-first-geothermal-energy-powered-data-center-breaks-ground-in-olkaria/",
+    "evidence": "The $1 billion Microsoft-G42 data centre planned for Olkaria has stalled. The facility initially targeted 100MW before potentially scaling towards 1GW.",
+    "observed_at": "2026-10-02T11:14:04Z"
+  },
+  {
+    "data": {
+      "name": "Fairwater Wisconsin",
+      "developer": [
+        "Microsoft"
+      ],
+      "stage": "partly-operational",
+      "investment_usd": 7000000000,
+      "announced_on": "2024-05-08",
+      "city": [
+        "Mount Pleasant"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://news.microsoft.com/source/2026/06/23/microsoft-completes-construction-on-first-datacenter-facility-in-mount-pleasant-wisconsin/",
+    "evidence": "Microsoft Corp. on Tuesday announced that it has completed construction of its first datacenter facility in the Village of Mount Pleasant, after bringing equipment online and conducting startup activities in April. The facility is now fully operational",
+    "observed_at": "2026-10-02T10:54:00Z"
+  },
+  {
+    "data": {
+      "name": "Meta Montgomery",
+      "developer": [
+        "Meta"
+      ],
+      "stage": "under-construction",
+      "investment_usd": 1500000000,
+      "announced_on": "2024-05-02",
+      "city": [
+        "Montgomery"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://datacenters.atmeta.com/2025/09/montgomery-were-growing/",
+    "evidence": "Meta is excited to announce that the Montgomery Data Center campus is expanding with two new buildings, bringing the campus footprint to nearly 1.3 million square feet. This expansion almost doubles our investment for this campus, increasing it to more than $1.5 billion.",
+    "observed_at": "2026-10-02T10:58:00Z"
+  },
+  {
+    "data": {
+      "name": "Project Rainier New Carlisle",
+      "developer": [
+        "Amazon Web Services"
+      ],
+      "tenant": [
+        "Anthropic"
+      ],
+      "stage": "partly-operational",
+      "investment_usd": 11000000000,
+      "announced_on": "2024-04-25",
+      "city": [
+        "New Carlisle"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://epoch.ai/data/ai-data-centers/directory/anthropic-amazon-new-carlisle",
+    "evidence": "Anthropic-Amazon New Carlisle New Carlisle, Indiana, United States Anthropic-Amazon New Carlisle is an operational AI data center with AI chips owned by Amazon and used by Anthropic.",
+    "observed_at": "2026-10-02T11:01:00Z"
+  },
+  {
+    "data": {
+      "name": "QTS Cambois Data Centre Campus",
+      "developer": [
+        "QTS",
+        "Blackstone"
+      ],
+      "stage": "under-construction",
+      "investment_stated": "£10 billion",
+      "announced_on": "2024-04-15",
+      "city": [
+        "Cambois"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://constructionwave.co.uk/2026/07/09/10-uk-data-centre-construction-projects-to-watch/",
+    "evidence": "Last December, Northumberland County Council green-lit a £10 billion “state-of-the-art” data centre , beginning the first phase of development at Cambois , south-east of the county.",
+    "observed_at": "2026-10-02T10:41:42Z"
+  }
+]

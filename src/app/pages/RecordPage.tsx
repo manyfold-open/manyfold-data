@@ -46,7 +46,9 @@ const ORDER: Record<FieldDef['type'], number> = { number: 0, date: 1, enum: 2, t
 function Detail({ field, def, value }: { field: string; def: FieldDef; value: RecordResponse['record']['data'][string] | undefined }) {
   const long = (def.type === 'text' && String(value ?? '').length > 40) || (def.type === 'tags' && Array.isArray(value) && value.length > 2);
   let content;
-  if (value === undefined || value === '' || (Array.isArray(value) && value.length === 0)) content = <span className="none">Not stated</span>;
+  if (value === undefined || value === '' || (Array.isArray(value) && value.length === 0)) {
+    content = formatValue(def, undefined) || <span className="none">Not stated</span>;
+  }
   else if (typeof value === 'number') content = <Amount def={def} value={value} />;
   else if (Array.isArray(value)) {
     content = (

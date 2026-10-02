@@ -31,6 +31,12 @@ export interface EnumField extends FieldBase {
 
 export interface DateField extends FieldBase {
   type: 'date';
+  /**
+   * The word pages show for a record without this date, which then has no end: a program
+   * taking applications on a rolling basis has no deadline. Such a record passes a lower
+   * bound ("deadline from today" keeps it) and fails an upper one. The field cannot be required.
+   */
+  openEnded?: string;
 }
 
 export interface NumberField extends FieldBase {
@@ -39,6 +45,8 @@ export interface NumberField extends FieldBase {
   max?: number;
   /** How pages print the value. */
   display?: 'usd' | 'plain';
+  /** A unit printed after a plain number, e.g. 'MW' ("1,200 MW") or '%' ("7%"). */
+  unit?: string;
 }
 
 export interface UrlField extends FieldBase {
@@ -159,6 +167,14 @@ export function validateConfig(config: DataAppConfig): string[] {
     if (RESERVED_FIELDS.includes(name)) fail(`field "${name}" is a reserved name`);
     if (/_(from|to)$/.test(name)) fail(`field "${name}" must not end in _from or _to`);
     if (def.type === 'enum' && def.values.length === 0) fail(`enum field "${name}" needs values`);
+    if (def.type === 'date' && def.openEnded !== undefined) {
+      if (!def.openEnded.trim() || def.openEnded.length > 24) fail(`field "${name}": openEnded must be 1 to 24 characters`);
+      if (def.required) fail(`field "${name}" cannot be both required and openEnded`);
+    }
+    if (def.type === 'number' && def.unit !== undefined) {
+      if (!def.unit.trim() || def.unit.length > 8) fail(`field "${name}": unit must be 1 to 8 characters`);
+      if (def.display === 'usd') fail(`field "${name}": a usd amount takes no unit`);
+    }
   }
 
   const need = (name: string, where: string, types?: readonly FieldType[]) => {
@@ -546,6 +562,17 @@ export function identityKey(config: DataAppConfig, data: RecordData): string {
 /** A field value's display name: the enum's label when it has one. */
 export const valueLabel = (def: FieldDef | undefined, value: string): string =>
   (def?.type === 'enum' ? def.valueLabels?.[value] : undefined) ?? value;
+
+/** A printed plain number with its field's unit: "1,200" → "1,200 MW", "7" → "7%". */
+export function withUnit(def: FieldDef | undefined, number: string): string {
+  const unit = def?.type === 'number' ? def.unit : undefined;
+  if (!unit) return number;
+  return unit === '%' ? `${number}%` : `${number} ${unit}`;
+}
+
+/** The word shown for a missing open-ended date ("Rolling"), or null for any other field. */
+export const openEndedLabel = (def: FieldDef | undefined): string | null =>
+  def?.type === 'date' && def.openEnded ? def.openEnded : null;
 
 /** Today's date in UTC, the clock every 'today' in configs and URLs is read against. */
 export const todayUtc = (now: Date = new Date()): string => now.toISOString().slice(0, 10);

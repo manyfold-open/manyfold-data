@@ -86,6 +86,13 @@ function amountAt(match: RegExpExecArray, at: number, scaleFrom?: string): numbe
   return Math.round(Number(digits) * (scale ? SCALE[scale]! : 1));
 }
 
+/** The amount field, when it holds money: "$50M" means nothing to a capacity in MW. */
+function moneyOf(config: DataAppConfig): ReturnType<typeof amountOf> {
+  const amount = amountOf(config);
+  const def = amount ? config.fields[amount.field] : undefined;
+  return def?.type === 'number' && def.display === 'usd' ? amount : null;
+}
+
 /** The first match of a whole-word pattern whose amount reads as money. */
 function firstAmount(pattern: string, text: string): { match: RegExpExecArray; value: number } | null {
   for (const match of text.matchAll(new RegExp(`(?<= )${pattern}(?= )`, 'g'))) {
@@ -184,7 +191,7 @@ export function parseSmartFilter(
   }
 
   // Amounts: a range, a ceiling or a floor; a bare amount means "at least".
-  const amount = amountOf(config);
+  const amount = moneyOf(config);
   if (amount) {
     const between = new RegExp(`(?<= )(?:between |from )?${AMOUNT} (?:to|and) ${AMOUNT}(?= )`).exec(text);
     // "$1 to 5m": a scale written once applies to both ends.
@@ -236,7 +243,7 @@ export function smartHint(config: DataAppConfig): string {
     .map((def) => def.label.toLowerCase())
     .slice(0, 3);
   const parts = [names.length > 1 ? `${names.slice(0, -1).join(', ')} or ${names.at(-1)}` : names[0]];
-  if (amountOf(config)) parts.push('an amount');
+  if (moneyOf(config)) parts.push('an amount');
   if (dateFieldOf(config)) parts.push('a time range');
   const named = parts.filter(Boolean) as string[];
   const list = named.length > 1 ? `${named.slice(0, -1).join(', ')} or ${named.at(-1)}` : (named[0] ?? 'value');
@@ -252,7 +259,7 @@ export function smartExample(config: DataAppConfig): string {
   if (words.length > 0) words[0] = words[0]!.charAt(0).toUpperCase() + words[0]!.slice(1);
   const dateField = dateFieldOf(config);
   if (dateField) words.push(dateDirection(config, dateField) === 'future' ? 'in the next 30 days' : 'in the last 30 days');
-  const amount = amountOf(config);
+  const amount = moneyOf(config);
   const edge = amount?.edges.filter((value) => value > 0)[2];
   if (amount && edge) words.push(`over ${shortAmount(config.fields[amount.field], edge)}`);
   return words.join(' ');

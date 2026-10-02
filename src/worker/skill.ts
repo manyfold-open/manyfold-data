@@ -62,11 +62,15 @@ function describeField(name: string, def: FieldDef, config: DataAppConfig): stri
       parts.push(`One of ${def.values.map((value) => `\`${value}\``).join(', ')}.`);
       break;
     case 'date':
-      parts.push('A date, YYYY-MM-DD.');
+      parts.push(
+        def.openEnded
+          ? `A date, YYYY-MM-DD. A record without one has no end; pages show "${def.openEnded}".`
+          : 'A date, YYYY-MM-DD.',
+      );
       break;
     case 'number':
       parts.push(
-        `A number${def.min !== undefined ? `, ${def.min} or more` : ''}${def.max !== undefined ? `, at most ${def.max}` : ''}.`,
+        `A number${def.min !== undefined ? `, ${def.min} or more` : ''}${def.max !== undefined ? `, at most ${def.max}` : ''}${def.unit ? `, in ${def.unit === '%' ? 'percent' : def.unit}` : ''}.`,
       );
       break;
     case 'url':

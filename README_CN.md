@@ -4,7 +4,7 @@
 
 每个数据应用（data app）是一个聚焦的数据集，包含一个图表概览页（Overview）和一个可筛选、可排序的表格页（Table）。
 每条记录都链接到它所核验的来源页面，并附上该页面的原文引用作为证据。
-目前的数据应用：**[AI Hackathons](https://data.manyfold.ai/ai-hackathons)** 和 **[AI Company Fundraising](https://data.manyfold.ai/ai-fundraising)**（AI 公司融资）。
+目前的数据应用：**[AI Hackathons](https://data.manyfold.ai/ai-hackathons)**、**[AI Accelerators & Grants](https://data.manyfold.ai/ai-accelerators)**（AI 加速器、资助与算力额度）、**[AI Company Fundraising](https://data.manyfold.ai/ai-fundraising)**（AI 公司融资）和 **[AI Data Centers](https://data.manyfold.ai/ai-data-centers)**（AI 数据中心）。
 
 [English](./README.md)
 
@@ -168,6 +168,8 @@ curl -X POST https://data.manyfold.ai/api/admin/tokens \
 - 日期边界可以是相对的：`{ from: 'today-90', to: 'today' }` 表示最近 90 天。
 - `url` 字段加上 `homePage: true` 后只保留网站首页，可以用来识别一家公司。
 - `tags` 字段加上 `names: true` 后存放人们书写的名称，例如城市（`["Zürich"]`）：保留大小写和重音，每个名称都是一个筛选项、一根图表柱，也能被搜索到。
+- `date` 字段加上 `openEnded: 'Rolling'` 后，没有这个日期的记录视为没有截止：它能通过下限（`deadline_from=today` 会保留滚动申请的项目），通不过上限，排序时排在最后，页面上在日期的位置显示这个词。这样的字段不能设为必填。
+- 普通的 `number` 字段可以带 `unit`（`'MW'`、`'%'`），表格、筛选、图表和 Discord 推送里都会把单位印在数字后面。
 - `table.previewColumns` 指定概览页预览表格的列（默认取表格的前五列）；`table.fallback` 在某列没有值时改显示另一个字段（`amount_usd` → `amount_stated`，这样以欧元计价的融资也能显示金额）。
 
 ## 部署

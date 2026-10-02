@@ -1,0 +1,1472 @@
+[
+  {
+    "data": {
+      "name": "AI Ökosysteme (Hybrid AI & Green AI)",
+      "organizer": "FFG (Austrian Research Promotion Agency)",
+      "kind": "grant",
+      "url": "https://www.ffg.at/ai-oekosysteme-2026",
+      "cohort": "2026",
+      "deadline": "2026-10-06",
+      "audience": "startups",
+      "funding_stated": "min. 100.000 bis max. 1 Mio. EUR",
+      "region": "europe"
+    },
+    "source_url": "https://www.ffg.at/ai-oekosysteme-2026",
+    "evidence": "Geöffnet Einreichzeitraum 18.05.2026 - 06.10.2026, 12:00 Uhr Max. Förderung 1.000.000 Einreichung Bis zum Ende des Einreichzeitraums",
+    "observed_at": "2026-10-02T10:54:08Z"
+  },
+  {
+    "data": {
+      "name": "E3 Accelerator",
+      "organizer": "E3.Ventures",
+      "kind": "accelerator",
+      "url": "https://e3.ventures/programs/e3-accelerator/",
+      "cohort": "Cycle 6",
+      "deadline": "2026-10-07",
+      "audience": "startups",
+      "format": "hybrid",
+      "city": [
+        "Riyadh"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://e3.ventures/programs/e3-accelerator/",
+    "evidence": "Apply to Cycle 6 Status Open Location Riyadh, KSA (Hybrid - Virtual + Onsite) Application Open 01 August 2026 Application Close 7 October 2026",
+    "observed_at": "2026-10-02T11:03:14Z"
+  },
+  {
+    "data": {
+      "name": "K-NIC海外展開ディープテックアクセラレーションプログラム",
+      "organizer": "K-NIC (NEDO, City of Kawasaki and Kawasaki City Industrial Promotion Foundation)",
+      "kind": "accelerator",
+      "url": "https://www.k-nic.jp/program/14023/",
+      "deadline": "2026-10-09",
+      "audience": "startups",
+      "format": "remote",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.k-nic.jp/program/14023/",
+    "evidence": "エントリー方法 エントリーフォームに必要事項を入力し、ご応募ください。 【応募締切】10月9日（金）23時59分まで",
+    "observed_at": "2026-10-02T10:58:30Z"
+  },
+  {
+    "data": {
+      "name": "NAVER D2SF @강남",
+      "organizer": "NAVER D2SF",
+      "kind": "residency",
+      "url": "https://d2sf.naver.com/ko/apply",
+      "deadline": "2026-10-11",
+      "audience": "startups",
+      "format": "in-person",
+      "city": [
+        "Seoul"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://d2sf.naver.com/ko/apply",
+    "evidence": "D2SF @강남 입주 ~10/11(일)까지 초기 기술 스타트업의 성장에 최적화한 전용 업무 공간을 최대 1년간 무상 제공합니다.",
+    "observed_at": "2026-10-02T10:58:30Z"
+  },
+  {
+    "data": {
+      "name": "TIBフィジカルAIスタートアップ強化チーム",
+      "organizer": "Tokyo Innovation Base (Tokyo Metropolitan Government)",
+      "kind": "accelerator",
+      "url": "https://tib.metro.tokyo.lg.jp/posts/%e3%80%8ctib%e3%83%95%e3%82%a3%e3%82%b8%e3%82%ab%e3%83%abai%e3%82%b9%e3%82%bf%e3%83%bc%e3%83%88%e3%82%a2%e3%83%83%e3%83%97%e5%bc%b7%e5%8c%96%e3%83%81%e3%83%bc%e3%83%a0%e3%80%8d%e5%8f%82%e5%8a%a0",
+      "deadline": "2026-10-12",
+      "audience": "startups",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://tib.metro.tokyo.lg.jp/posts/%e3%80%8ctib%e3%83%95%e3%82%a3%e3%82%b8%e3%82%ab%e3%83%abai%e3%82%b9%e3%82%bf%e3%83%bc%e3%83%88%e3%82%a2%e3%83%83%e3%83%97%e5%bc%b7%e5%8c%96%e3%83%81%e3%83%bc%e3%83%a0%e3%80%8d%e5%8f%82%e5%8a%a0",
+    "evidence": "■実施スケジュール 公募開始：令和8年9月30日（水） 質問受付期限：令和8年10月6日（火） 17:00まで 応募締切：令和8年10月12日（月） 23:59まで",
+    "observed_at": "2026-10-02T10:58:31Z"
+  },
+  {
+    "data": {
+      "name": "Large Scale Access to AI Factories",
+      "organizer": "EuroHPC Joint Undertaking",
+      "kind": "credits",
+      "url": "https://www.eurohpc-ju.europa.eu/large-scale-access-ai-factories_en",
+      "deadline": "2026-10-15",
+      "audience": "startups",
+      "region": "europe"
+    },
+    "source_url": "https://www.eurohpc-ju.europa.eu/large-scale-access-ai-factories_en",
+    "evidence": "15 Oct 2026, 10:00 / 30 Oct 2026, 10:00 / 13 Nov 2026, 10:00 / 30 Nov 2026, 10:00 / 15 Dec 2026, 10:00 / 4 Jan 2027, 10:00 (CET) Description This access call is intended: For Industry users For More than 50,000 GPU hours To provide Approval within 10 working days",
+    "observed_at": "2026-10-02T10:54:08Z"
+  },
+  {
+    "data": {
+      "name": "Anthropic Fellows Program",
+      "organizer": "Anthropic",
+      "kind": "fellowship",
+      "url": "https://alignment.anthropic.com/2025/anthropic-fellows-program-2026/",
+      "cohort": "January cohort",
+      "deadline": "2026-10-18",
+      "audience": "individuals",
+      "funding_stated": "3,850 USD / 2,310 GBP / 4,300 CAD per week",
+      "region": "global"
+    },
+    "source_url": "https://alignment.anthropic.com/2025/anthropic-fellows-program-2026/",
+    "evidence": "Applications are rolling, apply by October 18 to be considered for our January cohort. You can apply here.",
+    "observed_at": "2026-10-02T10:46:20Z"
+  },
+  {
+    "data": {
+      "name": "AI Safety Camp",
+      "organizer": "AI Safety Camp",
+      "kind": "fellowship",
+      "url": "https://www.aisafety.camp/",
+      "cohort": "Virtual Edition, 2027",
+      "deadline": "2026-10-18",
+      "audience": "researchers",
+      "format": "remote",
+      "region": "global"
+    },
+    "source_url": "https://www.aisafety.camp/",
+    "evidence": "Timeline Project Lead applications October 18 (Sunday) : Application deadline for Project Leads. November 1 (Sunday) : Deadline for refined proposals.",
+    "observed_at": "2026-10-02T10:48:01Z"
+  },
+  {
+    "data": {
+      "name": "Finspire",
+      "organizer": "Dhahran Techno Valley (DTV) with Saudi National Bank (SNB)",
+      "kind": "accelerator",
+      "url": "https://finspire.dtv.sa/",
+      "cohort": "Cohort 1",
+      "deadline": "2026-10-18",
+      "audience": "startups",
+      "funding_stated": "Development funding, up to SAR 100,000",
+      "equity_pct": 5,
+      "format": "hybrid",
+      "city": [
+        "Dhahran"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://finspire.dtv.sa/",
+    "evidence": "October 18th Applications close November 1st 30 shortlisted",
+    "observed_at": "2026-10-02T11:03:14Z"
+  },
+  {
+    "data": {
+      "name": "Next generation artificial intelligence (AI): explainable AI",
+      "organizer": "UKRI (EPSRC)",
+      "kind": "grant",
+      "url": "https://www.ukri.org/opportunity/next-generation-artificial-intelligence-ai-explainable-ai/",
+      "deadline": "2026-10-20",
+      "audience": "researchers",
+      "funding_stated": "up to £602,500 FEC; UKRI funds 80% (£482,000)",
+      "region": "europe"
+    },
+    "source_url": "https://www.ukri.org/opportunity/next-generation-artificial-intelligence-ai-explainable-ai/",
+    "evidence": "Deadline UKRI must receive your application by 20 October 2026 at 4:00pm UK time. You will not be able to apply after this time.",
+    "observed_at": "2026-10-02T10:58:02Z"
+  },
+  {
+    "data": {
+      "name": "EIC Pathfinder Challenge: DeepRAP – Deep Reasoning, Abstraction & Planning towards trustworthy Cognitive AI Systems",
+      "organizer": "European Innovation Council (EISMEA)",
+      "kind": "grant",
+      "url": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-pathfinder/eic-pathfinder-challenges-2026_en",
+      "deadline": "2026-10-28",
+      "audience": "researchers",
+      "funding_stated": "up to EUR 4 million",
+      "region": "europe"
+    },
+    "source_url": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-pathfinder_en",
+    "evidence": "You must submit your proposal via the Funding and Tender Opportunities Portal before the given deadline. Deadline for submitting your proposal: EIC Pathfinder Open : 12 May 2026 EIC Pathfinder Challenges: 28 October 2026",
+    "observed_at": "2026-10-02T10:54:08Z"
+  },
+  {
+    "data": {
+      "name": "K-NIC Startup Hands on Program",
+      "organizer": "K-NIC (NEDO, City of Kawasaki and Kawasaki City Industrial Promotion Foundation)",
+      "kind": "accelerator",
+      "url": "https://www.k-nic.jp/program/12097/",
+      "cohort": "2026年度下期",
+      "deadline": "2026-10-28",
+      "audience": "startups",
+      "format": "hybrid",
+      "city": [
+        "Kawasaki"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.k-nic.jp/program/12097/",
+    "evidence": "2026年下期スケジュール【応募から決定まで】 【応募から決定まで】 募集開始 10月1日（木） 参加 応募締切（手順1） 10月28日（水）23時59分",
+    "observed_at": "2026-10-02T10:58:31Z"
+  },
+  {
+    "data": {
+      "name": "NVIDIA Graduate Fellowship Program",
+      "organizer": "NVIDIA",
+      "kind": "fellowship",
+      "url": "https://research.nvidia.com/graduate-fellowships",
+      "cohort": "2027–2028 Fellowship",
+      "deadline": "2026-10-30",
+      "audience": "students",
+      "funding_usd": 60000,
+      "region": "global"
+    },
+    "source_url": "https://research.nvidia.com/graduate-fellowships",
+    "evidence": "Meet the Fellows 2027–2028 applications open September 30, 2026. Apply by October 30, 2026. Research funding of up to $60,000 Per award, administered through your university for stipend, tuition, and mandatory fees.",
+    "observed_at": "2026-10-02T10:45:45Z"
+  },
+  {
+    "data": {
+      "name": "AI for Science and Collaborative EU Projects Access",
+      "organizer": "EuroHPC Joint Undertaking",
+      "kind": "credits",
+      "url": "https://www.eurohpc-ju.europa.eu/eurohpc-ju-call-proposals-ai-science-and-collaborative-eu-projects_en",
+      "deadline": "2026-10-30",
+      "audience": "researchers",
+      "region": "europe"
+    },
+    "source_url": "https://www.eurohpc-ju.europa.eu/eurohpc-ju-call-proposals-ai-science-and-collaborative-eu-projects_en",
+    "evidence": "1 Sep 2026, 10:00 / 30 Oct 2026, 10:00 / 11 Dec 2026, 10:00 (CET) Description The EuroHPC JU AI for Science and Collaborative EU Projects Access will support AI applications for science, with a focus on ethical Artificial Intelligence, Machine Learning, and cutting-edge foundation Models",
+    "observed_at": "2026-10-02T10:54:08Z"
+  },
+  {
+    "data": {
+      "name": "MATS Residency",
+      "organizer": "MATS",
+      "kind": "residency",
+      "url": "https://www.matsprogram.org/residency",
+      "cohort": "2027 Winter intake",
+      "deadline": "2026-10-31",
+      "audience": "researchers",
+      "funding_stated": "$155,000 to $285,000 per year",
+      "format": "hybrid",
+      "city": [
+        "London",
+        "Berkeley",
+        "Washington DC"
+      ],
+      "region": "global"
+    },
+    "source_url": "https://www.matsprogram.org/residency",
+    "evidence": "Three intake windows per year, with rolling start dates. The 2027 Winter intake window opens 25 August 2026 and closes 31 October 2026 (AoE, Anywhere on Earth).",
+    "observed_at": "2026-10-02T10:45:20Z"
+  },
+  {
+    "data": {
+      "name": "AI for Science & Safety Nodes",
+      "organizer": "Foresight Institute",
+      "kind": "grant",
+      "url": "https://foresight.org/grants/ai-science-safety-nodes-rfp/",
+      "deadline": "2026-10-31",
+      "audience": "researchers",
+      "funding_usd": 100000,
+      "region": "global"
+    },
+    "source_url": "https://foresight.org/grants/ai-science-safety-nodes-rfp/",
+    "evidence": "AI for Science & Safety Nodes Physical hubs in San Francisco and Berlin, with a new xNode in Cape Town. Application deadline 31st October 2026 Request for Proposals We offer grant funding, office space, community, and compute for open AI for science and safety projects.",
+    "observed_at": "2026-10-02T10:50:23Z"
+  },
+  {
+    "data": {
+      "name": "Safeguarded AI: Cybersecurity",
+      "organizer": "ARIA (Advanced Research + Invention Agency)",
+      "kind": "grant",
+      "url": "https://aria.org.uk/opportunity-spaces/trust-everything-everywhere/safeguarded-ai/funding",
+      "deadline": "2026-10-31",
+      "audience": "researchers",
+      "funding_stated": "approx. £2.5–3.5m per team",
+      "region": "europe"
+    },
+    "source_url": "https://aria.org.uk/opportunity-spaces/trust-everything-everywhere/safeguarded-ai/funding",
+    "evidence": "Funding: Safeguarded AI – Cybersecurity Applications are open on a rolling basis and reviewed in quarterly batches. The next proposal cut-off is 31 October 2026 (14:00 GMT).",
+    "observed_at": "2026-10-02T10:54:08Z"
+  },
+  {
+    "data": {
+      "name": "Scaling Trust (Tracks 2 & 3)",
+      "organizer": "ARIA (Advanced Research + Invention Agency)",
+      "kind": "grant",
+      "url": "https://aria.org.uk/opportunity-spaces/trust-everything-everywhere/scaling-trust/funding",
+      "deadline": "2026-10-31",
+      "audience": "researchers",
+      "funding_stated": "£200k–£2m (Track 2) or £100k–£3m (Track 3) per team",
+      "region": "europe"
+    },
+    "source_url": "https://aria.org.uk/opportunity-spaces/trust-everything-everywhere/scaling-trust/funding",
+    "evidence": "seeks to create the capability for AI agents to securely coordinate, negotiate, and verify with one another on our behalf. Funding: Tracks 2 & 3 Applications are open on a rolling basis and reviewed in quarterly batches. The next proposal cut-off is 31 October 2026 (14:00 GMT).",
+    "observed_at": "2026-10-02T10:54:08Z"
+  },
+  {
+    "data": {
+      "name": "Leitprojekte für die Nutzung von KI in Wertschöpfungsketten: Industrielle, domänenspezifische KI",
+      "organizer": "BMFTR (German Federal Ministry of Research, Technology and Space)",
+      "kind": "grant",
+      "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/07/2026-07-31-bekanntmachung-ki-wertschoepfungsketten.html",
+      "deadline": "2026-11-01",
+      "audience": "startups",
+      "region": "europe"
+    },
+    "source_url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/07/2026-07-31-bekanntmachung-ki-wertschoepfungsketten.html",
+    "evidence": "In der ersten Verfahrensstufe sind dem beauftragten Projektträger bis spätestens 1. November 2026 zunächst Projektskizzen in elektronischer Form vorzulegen.",
+    "observed_at": "2026-10-02T10:54:08Z"
+  },
+  {
+    "data": {
+      "name": "BioLeap",
+      "organizer": "Puerto Rico Science, Technology and Research Trust (PRSTRT), managed by parallel18",
+      "kind": "accelerator",
+      "url": "https://parallel18.com/bioleap/",
+      "cohort": "Gen4",
+      "deadline": "2026-11-01",
+      "audience": "startups",
+      "format": "hybrid",
+      "region": "americas"
+    },
+    "source_url": "https://apply.younoodle.com/showcase/competition/bioleap_2026",
+    "evidence": "Deadline Nov 1, 2026, 11:59 PM GMT-3 Apply now share article Program details BioLeap is a Life Sciences innovation incubator program led by the Puerto Rico Science, Technology, and Research Trust (PRSTRT) and managed by parallel18",
+    "observed_at": "2026-10-02T10:48:54Z"
+  },
+  {
+    "data": {
+      "name": "Y Combinator",
+      "organizer": "Y Combinator",
+      "kind": "accelerator",
+      "url": "https://www.ycombinator.com/apply",
+      "cohort": "Winter 2027 Batch",
+      "deadline": "2026-11-02",
+      "audience": "startups",
+      "funding_usd": 500000,
+      "equity_pct": 7,
+      "format": "in-person",
+      "city": [
+        "San Francisco"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ycombinator.com/apply",
+    "evidence": "The deadline to apply on-time is November 2 at 8pm PT; if you apply before the deadline, you will get a decision by December 11.",
+    "observed_at": "2026-10-02T10:29:12Z"
+  },
+  {
+    "data": {
+      "name": "Startup Wise Guys Flagship Accelerator",
+      "organizer": "Startup Wise Guys",
+      "kind": "accelerator",
+      "url": "https://startupwiseguys.com/growing/flagship-accelerator/",
+      "deadline": "2026-11-02",
+      "audience": "startups",
+      "funding_stated": "up to €100,000 (with a program cost of €35,000)",
+      "format": "hybrid",
+      "city": [
+        "Tallinn"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://startupwiseguys.com/all-programs/",
+    "evidence": "Flagship Accelerator Level up your startup with our signature Flagship Acceleration and start an intense journey. Get investment, mentorship from industry experts, and refine your product-market fit. Read more Read more Application deadline: November 2nd, 2026",
+    "observed_at": "2026-10-02T10:34:49Z"
+  },
+  {
+    "data": {
+      "name": "Amazon Research Awards",
+      "organizer": "Amazon",
+      "kind": "grant",
+      "url": "https://www.amazon.science/research-awards/call-for-proposals",
+      "cohort": "Fall 2026",
+      "deadline": "2026-11-04",
+      "audience": "researchers",
+      "region": "global"
+    },
+    "source_url": "https://www.amazon.science/research-awards/call-for-proposals",
+    "evidence": "Recipients are assigned an Amazon research contact who offers consultation and advice along with opportunities to participate in Amazon events and training sessions. Fall 2026: Open Now The submission period will close on November 4. Agentic AI Advancing the frontiers of AI agents",
+    "observed_at": "2026-10-02T10:52:34Z"
+  },
+  {
+    "data": {
+      "name": "NSF SBIR/STTR: Artificial Intelligence",
+      "organizer": "U.S. National Science Foundation (America's Seed Fund)",
+      "kind": "grant",
+      "url": "https://seedfund.nsf.gov/topics/artificial-intelligence/",
+      "deadline": "2026-11-04",
+      "audience": "startups",
+      "equity_pct": 0,
+      "region": "americas"
+    },
+    "source_url": "https://seedfund.nsf.gov/apply/full-proposal/",
+    "evidence": "Full Proposal Submission Deadlines: July 27 2026 First Wednesday in July, annually thereafter November 4 2026 First Wednesday in November, annually thereafter March 4 2027 First Thursday in March, annually thereafter",
+    "observed_at": "2026-10-02T10:54:16Z"
+  },
+  {
+    "data": {
+      "name": "Alpha Startups Pre-Accelerator",
+      "organizer": "1337 Ventures",
+      "kind": "accelerator",
+      "url": "https://1337.ventures/alpha-startups-pre-accelerator/",
+      "cohort": "Cohort 68",
+      "deadline": "2026-11-08",
+      "audience": "startups",
+      "format": "hybrid",
+      "city": [
+        "Kuala Lumpur"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://1337.ventures/alpha-startups-pre-accelerator/",
+    "evidence": "If you're building in AI, fintech, industrial tech, healthtech, agritech, climate or semiconductors, this is for you. Registration closes: 8 Nov 2026 Programme starts: 18 Nov 2026 Format: Hybrid (virtual + in-person sessions in Kuala Lumpur, Malaysia)",
+    "observed_at": "2026-10-02T10:58:30Z"
+  },
+  {
+    "data": {
+      "name": "Transformative sustainable AI technologies",
+      "organizer": "UKRI",
+      "kind": "grant",
+      "url": "https://www.ukri.org/opportunity/transformative-sustainable-ai-technologies/",
+      "deadline": "2026-11-10",
+      "audience": "researchers",
+      "funding_stated": "up to £602,500 FEC; UKRI funds 80%",
+      "region": "europe"
+    },
+    "source_url": "https://www.ukri.org/opportunity/transformative-sustainable-ai-technologies/",
+    "evidence": "Closing date: 10 November 2026 4:00pm UK time Start application Apply for funding for projects focused on speculative and high-risk research with the potential to deliver high rewards and a step change in the sustainability of future AI systems.",
+    "observed_at": "2026-10-02T10:54:08Z"
+  },
+  {
+    "data": {
+      "name": "Frontier AI: SME Champions, Phase 1",
+      "organizer": "Innovate UK (UKRI)",
+      "kind": "grant",
+      "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2584/overview/4c7afb5d-4572-4ef2-9507-73ef2dec8ec8",
+      "deadline": "2026-11-11",
+      "audience": "startups",
+      "funding_stated": "eligible project costs £150,000 to £250,000",
+      "region": "europe"
+    },
+    "source_url": "https://apply-for-innovation-funding.service.gov.uk/competition/2584/overview/4c7afb5d-4572-4ef2-9507-73ef2dec8ec8",
+    "evidence": "apply for a share of up to £3.1 million to deliver feasibility studies for frontier artificial intelligence (AI), and machine learning (ML) technologies with a clear route to defensible scale-up. Competition opens: Thursday 1 October 2026 Competition closes: Wednesday 11 November 2026 11:00am",
+    "observed_at": "2026-10-02T10:54:08Z"
+  },
+  {
+    "data": {
+      "name": "Efficient, Structured and Controllable AI Systems",
+      "organizer": "Innovate UK (UKRI)",
+      "kind": "grant",
+      "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2582/overview/9fdb47a5-011c-4c47-ac5e-c426e295fe89",
+      "deadline": "2026-11-18",
+      "audience": "startups",
+      "funding_stated": "eligible project costs £50,000 to £150,000",
+      "region": "europe"
+    },
+    "source_url": "https://apply-for-innovation-funding.service.gov.uk/competition/2582/overview/9fdb47a5-011c-4c47-ac5e-c426e295fe89",
+    "evidence": "apply for a share of up to £1.66 million to deliver experimental validation of prototype AI systems for novel reusable components of efficient, structured and controllable learning systems. Competition opens: Monday 12 October 2026 Competition closes: Wednesday 18 November 2026 11:00am",
+    "observed_at": "2026-10-02T10:54:08Z"
+  },
+  {
+    "data": {
+      "name": "Techstars AI Health Baltimore",
+      "organizer": "Techstars",
+      "kind": "accelerator",
+      "url": "https://www.techstars.com/accelerators/baltimore-ai-health",
+      "deadline": "2026-11-18",
+      "audience": "startups",
+      "funding_usd": 220000,
+      "equity_pct": 5,
+      "city": [
+        "Baltimore"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.techstars.com/accelerators/baltimore-ai-health",
+    "evidence": "Aug 24 2026 Applications Open Nov 18 2026 Final Deadline Mar 08 2027 Accelerator Starts Jun 03 2027 Demo Day The Techstars AI Health Baltimore Community",
+    "observed_at": "2026-10-02T10:37:20Z"
+  },
+  {
+    "data": {
+      "name": "Techstars Boston Accelerator",
+      "organizer": "Techstars",
+      "kind": "accelerator",
+      "url": "https://www.techstars.com/accelerators/boston",
+      "deadline": "2026-11-18",
+      "audience": "startups",
+      "funding_usd": 220000,
+      "equity_pct": 5,
+      "city": [
+        "Boston"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.techstars.com/accelerators/boston",
+    "evidence": "Aug 24 2026 Applications Open Nov 18 2026 Final Deadline Mar 08 2027 Accelerator Starts Jun 03 2027 Demo Day The Techstars Boston Accelerator Community",
+    "observed_at": "2026-10-02T10:37:20Z"
+  },
+  {
+    "data": {
+      "name": "Techstars New York City Accelerator",
+      "organizer": "Techstars",
+      "kind": "accelerator",
+      "url": "https://www.techstars.com/accelerators/nyc",
+      "deadline": "2026-11-18",
+      "audience": "startups",
+      "funding_usd": 220000,
+      "equity_pct": 5,
+      "format": "hybrid",
+      "city": [
+        "New York City"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.techstars.com/accelerators/nyc",
+    "evidence": "Aug 24 2026 Applications Open Nov 18 2026 Final Deadline Mar 08 2027 Accelerator Starts Jun 03 2027 Demo Day The Techstars New York City Accelerator Community",
+    "observed_at": "2026-10-02T10:37:20Z"
+  },
+  {
+    "data": {
+      "name": "Techstars Anywhere Accelerator",
+      "organizer": "Techstars",
+      "kind": "accelerator",
+      "url": "https://www.techstars.com/accelerators/anywhere",
+      "deadline": "2026-11-18",
+      "audience": "startups",
+      "funding_usd": 220000,
+      "equity_pct": 5,
+      "format": "remote",
+      "region": "americas"
+    },
+    "source_url": "https://www.techstars.com/accelerators/anywhere",
+    "evidence": "Aug 24 2026 Applications Open Nov 18 2026 Final Deadline Mar 08 2027 Accelerator Starts Jun 03 2027 Demo Day The Techstars Anywhere Accelerator Community",
+    "observed_at": "2026-10-02T10:37:20Z"
+  },
+  {
+    "data": {
+      "name": "Northwestern Medicine & Techstars Healthcare Accelerator",
+      "organizer": "Techstars",
+      "kind": "accelerator",
+      "url": "https://www.techstars.com/accelerators/northwestern-medicine-healthcare",
+      "deadline": "2026-11-18",
+      "audience": "startups",
+      "funding_usd": 220000,
+      "equity_pct": 5,
+      "region": "americas"
+    },
+    "source_url": "https://www.techstars.com/accelerators/northwestern-medicine-healthcare",
+    "evidence": "Aug 24 2026 Applications Open Nov 18 2026 Final Deadline Mar 08 2027 Accelerator Starts Jun 03 2027 Demo Day The Northwestern Medicine & Techstars Healthcare Accelerator Community",
+    "observed_at": "2026-10-02T10:37:20Z"
+  },
+  {
+    "data": {
+      "name": "ML Exploration",
+      "organizer": "Alberta Machine Intelligence Institute (Amii)",
+      "kind": "accelerator",
+      "url": "https://www.amii.ca/courses/ml-exploration",
+      "cohort": "Winter 2027",
+      "deadline": "2026-11-22",
+      "audience": "startups",
+      "format": "remote",
+      "region": "americas"
+    },
+    "source_url": "https://www.amii.ca/courses/ml-exploration",
+    "evidence": "Applications are open now for our Winter 2027 cohort. Deadline to Apply: November 22nd by 11:59 PM MST Application Status Announcement: December 7th, 2026 Program Start Date: January 5th, 2027",
+    "observed_at": "2026-10-02T10:41:13Z"
+  },
+  {
+    "data": {
+      "name": "Generative Künstliche Intelligenz als Untersuchungsgegenstand der Geistes- und Sozialwissenschaften",
+      "organizer": "BMFTR (German Federal Ministry of Research, Technology and Space)",
+      "kind": "grant",
+      "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/08/2026-08-25-bekanntmachung-ki-gsw.html",
+      "deadline": "2026-11-30",
+      "audience": "researchers",
+      "region": "europe"
+    },
+    "source_url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/08/2026-08-25-bekanntmachung-ki-gsw.html",
+    "evidence": "In der ersten Verfahrensstufe sind dem DLR Projektträger bis 30. November 2026 beziehungsweise 31. Mai 2028 zunächst Projektskizzen in schriftlicher und/oder elektronischer Form vorzulegen.",
+    "observed_at": "2026-10-02T10:54:08Z"
+  },
+  {
+    "data": {
+      "name": "EU-LAC Digital Accelerator",
+      "organizer": "EU-LAC Digital Accelerator (financed by the European Union)",
+      "kind": "accelerator",
+      "url": "https://eulacdigitalaccelerator.com/open-call/",
+      "cohort": "Open call #6",
+      "deadline": "2026-11-30",
+      "audience": "startups",
+      "funding_stated": "Up to €10,500 for your PoC",
+      "region": "americas"
+    },
+    "source_url": "https://eulacdigitalaccelerator.com/open-call/",
+    "evidence": "We guide your corporate-startup solution closer to market readiness *From Europe, Latin America and the Caribbean Deadline to apply: 30 November 2026 Apply now €10,500 in grants available for startups to execute their PoC with the corporate partner",
+    "observed_at": "2026-10-02T10:41:30Z"
+  },
+  {
+    "data": {
+      "name": "Enabling AI adoption across science and engineering",
+      "organizer": "UKRI",
+      "kind": "grant",
+      "url": "https://www.ukri.org/opportunity/ukri-enabling-ai-adoption-across-science-and-engineering/",
+      "deadline": "2026-12-01",
+      "audience": "researchers",
+      "funding_stated": "up to £250,000 FEC; UKRI funds 80%",
+      "region": "europe"
+    },
+    "source_url": "https://www.ukri.org/opportunity/ukri-enabling-ai-adoption-across-science-and-engineering/",
+    "evidence": "Closing date: 1 December 2026 4:00pm UK time Start application Apply for funding for ambitious and exploratory projects bringing together AI and domain expertise.",
+    "observed_at": "2026-10-02T10:54:08Z"
+  },
+  {
+    "data": {
+      "name": "Microsoft GenAI Studio",
+      "organizer": "Microsoft",
+      "kind": "accelerator",
+      "url": "https://nextaihub-microsoft.agorize.com/fr/challenges/promotion-2027",
+      "deadline": "2026-12-01",
+      "audience": "startups",
+      "credits_usd": 350000,
+      "city": [
+        "Paris"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://nextaihub-microsoft.agorize.com/fr/challenges/promotion-2027",
+    "evidence": "Au programme: 5 mois d'accélération à STATION F, des ateliers IA animés par les meilleurs experts, des crédits Cloud et l'accès aux tous derniers modèles d'IA. Candidatez ici jusqu'au 1er décembre!",
+    "observed_at": "2026-10-02T10:39:59Z"
+  },
+  {
+    "data": {
+      "name": "Venture Scientist 100",
+      "organizer": "Conception X",
+      "kind": "fellowship",
+      "url": "https://www.conceptionx.org/venture-scientist-100",
+      "cohort": "Spring 2027",
+      "deadline": "2026-12-06",
+      "audience": "researchers",
+      "equity_pct": 0,
+      "format": "hybrid",
+      "region": "europe"
+    },
+    "source_url": "https://www.conceptionx.org/venture-scientist-100",
+    "evidence": "Applications for Venture Scientist 100 are open. Apply by 6 December 2026 or join our next discovery session if you have more questions. Next cohort starts Spring 2027.",
+    "observed_at": "2026-10-02T10:36:22Z"
+  },
+  {
+    "data": {
+      "name": "NEXT AI",
+      "organizer": "NEXT Canada",
+      "kind": "accelerator",
+      "url": "https://www.nextcanada.com/next-ai/",
+      "deadline": "2026-12-09",
+      "audience": "startups",
+      "equity_pct": 0,
+      "format": "hybrid",
+      "city": [
+        "Toronto",
+        "Montreal"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.nextcanada.com/next-ai/",
+    "evidence": "Applications Open October 15, 2026 Deadline To Apply December 9, 2026 Program Runs March - August (Toronto) March -September (Montreal/Virtual) 2027",
+    "observed_at": "2026-10-02T10:35:25Z"
+  },
+  {
+    "data": {
+      "name": "Industrial AI Upper Austria",
+      "organizer": "FFG for the State of Upper Austria (Land Oberösterreich)",
+      "kind": "grant",
+      "url": "https://www.ffg.at/IndustrialAI-UpperAustria",
+      "deadline": "2026-12-10",
+      "audience": "startups",
+      "funding_stated": "mindestens 100.000,- bis maximal 600.000,- EUR pro Vorhaben",
+      "region": "europe"
+    },
+    "source_url": "https://www.ffg.at/IndustrialAI-UpperAustria",
+    "evidence": "Geöffnet Einreichzeitraum 16.09.2026 - 10.12.2026, 12:00 Uhr Max. Förderung 600.000 Einreichung Bis zum Ende des Einreichzeitraums",
+    "observed_at": "2026-10-02T10:54:08Z"
+  },
+  {
+    "data": {
+      "name": "MiraclePlus Accelerator",
+      "organizer": "MiraclePlus (奇绩创坛)",
+      "kind": "accelerator",
+      "url": "https://www.miracleplus.com/apply/",
+      "cohort": "2027 Spring Accelerator",
+      "deadline": "2026-12-12",
+      "audience": "startups",
+      "format": "in-person",
+      "city": [
+        "Beijing"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.miracleplus.com/apply/",
+    "evidence": "The application for the 2027 Spring Accelerator will be closed at 8 pm on December 12, 2026. MiraclePlus Accelerator applications are open year-round, and early submissions allow for quicker feedback.",
+    "observed_at": "2026-10-02T10:58:29Z"
+  },
+  {
+    "data": {
+      "name": "The Omantel Accelerator",
+      "organizer": "Omantel Innovation Labs",
+      "kind": "accelerator",
+      "url": "https://www.omantel.om/en/innovation-labs/accelerator",
+      "cohort": "Cohort 9",
+      "deadline": "2027-01-09",
+      "audience": "startups",
+      "format": "in-person",
+      "city": [
+        "Muscat"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.omantel.om/en/innovation-labs/accelerator",
+    "evidence": "Applications Open 27/09/2026 Applications Close 09/01/2027 Accelerator Start 10/02/2027 Accelerator Ends 12/08/2027 27/09/2026 Omantel Accelerator Cohort 9 Application will be closed on 09/01/2027",
+    "observed_at": "2026-10-02T11:03:16Z"
+  },
+  {
+    "data": {
+      "name": "Cybersecurity, AI and resilience",
+      "organizer": "Vinnova (Sweden's Innovation Agency)",
+      "kind": "grant",
+      "url": "https://www.vinnova.se/en/calls-for-proposals/advanced-digitalization-industrial-2024-04161/cybersecurity-ai-and-resilience/",
+      "deadline": "2027-01-19",
+      "audience": "startups",
+      "funding_stated": "1-10 MSEK per project",
+      "region": "europe"
+    },
+    "source_url": "https://www.vinnova.se/en/calls-for-proposals/advanced-digitalization-industrial-2024-04161/cybersecurity-ai-and-resilience/",
+    "evidence": "1-10 MSEK in funding per project. The grant may correspond to a maximum of 50 percent of the project´s eligible costs. The projects must last between 12 and 24 months. Important dates 13 Oct 2026 Opens to proposal 23 Oct 2026 at 10:00 Information meeting 19 Jan 2027 at 14:00 Last application date",
+    "observed_at": "2026-10-02T10:54:08Z"
+  },
+  {
+    "data": {
+      "name": "Tech Nation DeepTech",
+      "organizer": "Tech Nation",
+      "kind": "accelerator",
+      "url": "https://technation.io/programmes/deeptech/",
+      "cohort": "Cohort 2 - 2027",
+      "deadline": "2027-01-31",
+      "audience": "startups",
+      "equity_pct": 0,
+      "region": "europe"
+    },
+    "source_url": "https://technation.io/programmes/deeptech/",
+    "evidence": "Cohort 2 - 2027 Applications Open December 2026 → January 31, 2027 Applications Close & Judging Period January 31, 2027 → February 14, 2027 Programme Launch March 2027",
+    "observed_at": "2026-10-02T10:51:32Z"
+  },
+  {
+    "data": {
+      "name": "AWS Activate",
+      "organizer": "Amazon Web Services",
+      "kind": "credits",
+      "url": "https://aws.amazon.com/startups/credits",
+      "audience": "startups",
+      "credits_usd": 200000,
+      "region": "global"
+    },
+    "source_url": "https://aws.amazon.com/startups/credits",
+    "evidence": "Move from prototype to production faster. Apply for up to $200,000 in AWS Activate Credits, with additional credits available for AI startups ready to scale.",
+    "observed_at": "2026-10-02T10:35:46Z"
+  },
+  {
+    "data": {
+      "name": "Google for Startups Cloud Program: AI",
+      "organizer": "Google Cloud",
+      "kind": "credits",
+      "url": "https://cloud.google.com/startup/ai",
+      "audience": "startups",
+      "credits_usd": 350000,
+      "region": "global"
+    },
+    "source_url": "https://cloud.google.com/startup/ai",
+    "evidence": "Our AI program is built to accelerate AI Startups Receive up to $350,000 in Cloud credits, resources to accelerate your startup journey, dedicated support and enablement, and the best of Google's open AI ecosystem. Apply now for the AI program",
+    "observed_at": "2026-10-02T10:35:46Z"
+  },
+  {
+    "data": {
+      "name": "Microsoft for Startups",
+      "organizer": "Microsoft",
+      "kind": "credits",
+      "url": "https://www.microsoft.com/en-us/startups",
+      "audience": "startups",
+      "credits_usd": 150000,
+      "region": "global"
+    },
+    "source_url": "https://www.microsoft.com/en-us/startups",
+    "evidence": "Access cutting-edge AI models, developer tools, and up to $150,000 in credits, backed by Microsoft’s global customer network, enterprise-grade security, and privacy you can trust.",
+    "observed_at": "2026-10-02T10:36:02Z"
+  },
+  {
+    "data": {
+      "name": "NVIDIA Inception",
+      "organizer": "NVIDIA",
+      "kind": "credits",
+      "url": "https://www.nvidia.com/en-us/startups/",
+      "audience": "startups",
+      "region": "global"
+    },
+    "source_url": "https://www.nvidia.com/en-us/startups/",
+    "evidence": "You can apply to the NVIDIA Inception program regardless of your company’s current funding stage. There are no application fees, deadlines, or cohorts.",
+    "observed_at": "2026-10-02T10:36:02Z"
+  },
+  {
+    "data": {
+      "name": "Cloudflare for Startups",
+      "organizer": "Cloudflare",
+      "kind": "credits",
+      "url": "https://www.cloudflare.com/startups/",
+      "audience": "startups",
+      "credits_usd": 350000,
+      "region": "global"
+    },
+    "source_url": "https://www.cloudflare.com/startups/",
+    "evidence": "Cloudflare for Startups gives early-stage companies up to $350k in credits to build the next big idea. Startups get access to our developer platform and global network to build fast, secure, and scalable applications. Apply now!",
+    "observed_at": "2026-10-02T10:43:07Z"
+  },
+  {
+    "data": {
+      "name": "Claude Startups Program",
+      "organizer": "Anthropic",
+      "kind": "credits",
+      "url": "https://claude.com/programs/startups",
+      "audience": "startups",
+      "region": "global"
+    },
+    "source_url": "https://claude.com/programs/startups",
+    "evidence": "Who can apply? Any early-stage founder or startup building with Claude can join the Startups program. To qualify for Claude credits and extras, your company must have received equity funding from institutional investor, been founded within the last four years",
+    "observed_at": "2026-10-02T10:36:02Z"
+  },
+  {
+    "data": {
+      "name": "Modal for Startups",
+      "organizer": "Modal",
+      "kind": "credits",
+      "url": "https://modal.com/startups",
+      "audience": "startups",
+      "region": "global"
+    },
+    "source_url": "https://modal.com/startups",
+    "evidence": "Modal for Startups The fastest-moving startups rely on Modal to build, ship and scale their AI workloads. Apply to get free credits, technical support, and join a growing community.",
+    "observed_at": "2026-10-02T10:36:24Z"
+  },
+  {
+    "data": {
+      "name": "Together AI Startup Accelerator",
+      "organizer": "Together AI",
+      "kind": "credits",
+      "url": "https://www.together.ai/startup-accelerator",
+      "audience": "startups",
+      "credits_usd": 50000,
+      "region": "global"
+    },
+    "source_url": "https://www.together.ai/startup-accelerator",
+    "evidence": "Grow Eligibility criteria Over $10M raised Benefits Up to $50K in free platform credits* 10 hours of free forward-deployed engineering time * Credits do not apply to Reserved GPU Clusters Submit your application",
+    "observed_at": "2026-10-02T10:37:33Z"
+  },
+  {
+    "data": {
+      "name": "Fireworks for Startups Program",
+      "organizer": "Fireworks AI",
+      "kind": "credits",
+      "url": "https://fireworks.ai/startups",
+      "audience": "startups",
+      "region": "global"
+    },
+    "source_url": "https://fireworks.ai/startups",
+    "evidence": "Do you offer credits? Yes! Eligible startups can get access to credits (expire after 1-year) to help you prototype and scale without worrying about upfront costs",
+    "observed_at": "2026-10-02T10:37:33Z"
+  },
+  {
+    "data": {
+      "name": "ElevenLabs Grants",
+      "organizer": "ElevenLabs",
+      "kind": "credits",
+      "url": "https://elevenlabs.io/startup-grants",
+      "audience": "startups",
+      "region": "global"
+    },
+    "source_url": "https://elevenlabs.io/startup-grants",
+    "evidence": "Existing enterprise customers are not eligible for grants. Is there any specific deadline to apply? No, applications are considered on a rolling basis. What happens after the 12 months duration of my grant?",
+    "observed_at": "2026-10-02T10:43:07Z"
+  },
+  {
+    "data": {
+      "name": "Deepgram for Startups",
+      "organizer": "Deepgram",
+      "kind": "credits",
+      "url": "https://deepgram.com/startup-program",
+      "audience": "startups",
+      "credits_usd": 100000,
+      "region": "global"
+    },
+    "source_url": "https://deepgram.com/startup-program",
+    "evidence": "Deepgram for Startups Build your voice AI product on the platform startups trust. Get the accuracy, speed, and reliability your product demands on a single voice AI platform. Apply to Deepgram for Startups and get up to $100,000 in credits over 12 months.",
+    "observed_at": "2026-10-02T10:39:49Z"
+  },
+  {
+    "data": {
+      "name": "AssemblyAI Startup Program",
+      "organizer": "AssemblyAI",
+      "kind": "credits",
+      "url": "https://www.assemblyai.com/contact/startup-program",
+      "audience": "startups",
+      "region": "global"
+    },
+    "source_url": "https://www.assemblyai.com/contact/startup-program",
+    "evidence": "Early stage, pre-seed to Series A Bootstrapped teams welcome too Building with voice or audio Any product with speech at its core Launching within 6 months In production or shipping soon Credits that work on core voice AI infrastructure 12 months of recurring free credits",
+    "observed_at": "2026-10-02T10:39:49Z"
+  },
+  {
+    "data": {
+      "name": "Alibaba Cloud AI Catalyst Program",
+      "organizer": "Alibaba Cloud",
+      "kind": "credits",
+      "url": "https://www.alibabacloud.com/en/startup/ai",
+      "audience": "startups",
+      "credits_usd": 120000,
+      "region": "global"
+    },
+    "source_url": "https://www.alibabacloud.com/en/startup/ai",
+    "evidence": "Program Benefits Credits & Support Up to 2B free Model Studio tokens. Up to $120k cloud credits support. POC coupons. Technical Expertise 1:1 Office Hours with our AI experts, covering products, solutions, and infrastructure.",
+    "observed_at": "2026-10-02T10:43:07Z"
+  },
+  {
+    "data": {
+      "name": "DigitalOcean Startups",
+      "organizer": "DigitalOcean",
+      "kind": "credits",
+      "url": "https://www.digitalocean.com/startups",
+      "audience": "startups",
+      "region": "global"
+    },
+    "source_url": "https://www.digitalocean.com/startups",
+    "evidence": "DigitalOcean Startups empowers you to scale your AI ambitions, not just your expenses. AI Platform, Powered by DigitalOcean credits Use your credits for seamless API integration, custom AI agents, and robust security.",
+    "observed_at": "2026-10-02T10:42:21Z"
+  },
+  {
+    "data": {
+      "name": "Pinecone for Startups",
+      "organizer": "Pinecone",
+      "kind": "credits",
+      "url": "https://www.pinecone.io/startup-program/",
+      "audience": "startups",
+      "region": "global"
+    },
+    "source_url": "https://www.pinecone.io/startup-program/",
+    "evidence": "Startups in the program also receive usage credits and discounts. Your startup is eligible if: You have fewer than 100 employees You're Series A or earlier",
+    "observed_at": "2026-10-02T10:41:28Z"
+  },
+  {
+    "data": {
+      "name": "Cartesia Startups Grant",
+      "organizer": "Cartesia",
+      "kind": "credits",
+      "url": "https://www.cartesia.ai/startups",
+      "audience": "startups",
+      "region": "global"
+    },
+    "source_url": "https://www.cartesia.ai/startups",
+    "evidence": "What does the Cartesia Startups Grant include? Accepted startups receive 12 months on Scale, with 8 million shared Sonic and Ink credits each month, plus $299 per month in Managed Agents credits.",
+    "observed_at": "2026-10-02T10:41:12Z"
+  },
+  {
+    "data": {
+      "name": "Lambda Research Grant",
+      "organizer": "Lambda",
+      "kind": "credits",
+      "url": "https://lambda.ai/research",
+      "audience": "researchers",
+      "credits_usd": 5000,
+      "region": "global"
+    },
+    "source_url": "https://lambda.ai/research",
+    "evidence": "We're committed to supporting groundbreaking research by offering qualifying researchers up to $5,000 in cloud credits to develop and showcase their work using Lambda's Instances, with select research to be featured on our website. Apply now",
+    "observed_at": "2026-10-02T10:38:46Z"
+  },
+  {
+    "data": {
+      "name": "Cohere Labs Catalyst Grants",
+      "organizer": "Cohere Labs",
+      "kind": "credits",
+      "url": "https://cohere.com/research/grants",
+      "audience": "researchers",
+      "region": "global"
+    },
+    "source_url": "https://cohere.com/research/grants",
+    "evidence": "Cohere Labs’ Catalyst Grants enable academic partners, civic and public impact organizations to access Cohere's models through the Cohere API. Apply now STATUS: Open NEXT DEADLINE: Applications are considered on a rolling basis",
+    "observed_at": "2026-10-02T10:42:21Z"
+  },
+  {
+    "data": {
+      "name": "AI for Science Program",
+      "organizer": "Anthropic",
+      "kind": "credits",
+      "url": "https://www.anthropic.com/news/ai-for-science-program",
+      "audience": "researchers",
+      "region": "global"
+    },
+    "source_url": "https://claude.com/programs/team-plan-for-scientists",
+    "evidence": "AI for Science is Anthropic's grant program for ambitious research projects that need more credits than a seat provides. Groups on this plan can apply for extra usage or API credits to support months of sustained work. It's application-based and reviewed on merit.",
+    "observed_at": "2026-10-02T10:41:58Z"
+  },
+  {
+    "data": {
+      "name": "TPU Research Cloud",
+      "organizer": "Google Research",
+      "kind": "credits",
+      "url": "https://sites.research.google/trc/about/",
+      "audience": "researchers",
+      "region": "global"
+    },
+    "source_url": "https://sites.research.google/trc/about/",
+    "evidence": "TPU Research Cloud Accelerate your cutting-edge machine learning research with free Cloud TPUs. Learn more about the TRC program TRC enables researchers to access a cluster of more than 1,000 Cloud TPU devices.",
+    "observed_at": "2026-10-02T10:40:40Z"
+  },
+  {
+    "data": {
+      "name": "NAIRR Pilot Resource Requests to Advance AI Research",
+      "organizer": "U.S. National Science Foundation (NAIRR Pilot)",
+      "kind": "credits",
+      "url": "https://nairrpilot.org/opportunities/allocations",
+      "audience": "researchers",
+      "region": "americas"
+    },
+    "source_url": "https://nairrpilot.org/opportunities/allocations",
+    "evidence": "request access to a set of computing, model, platform and educational resources for projects related to advancing AI research. This call for proposals will be open from May 6, 2024, until the end of the NAIRR Pilot program or until all resources have been committed to projects.",
+    "observed_at": "2026-10-02T10:54:38Z"
+  },
+  {
+    "data": {
+      "name": "Transformative AI Fund",
+      "organizer": "EA Funds (Centre for Effective Altruism)",
+      "kind": "grant",
+      "url": "https://funds.effectivealtruism.org/funds/transformative-ai",
+      "audience": "individuals",
+      "funding_usd": 150000,
+      "region": "global"
+    },
+    "source_url": "https://funds.effectivealtruism.org/funds/transformative-ai",
+    "evidence": "Grants are typically in the $10k-$150k range and rarely exceed $300k. We are always open to applications. The fund is run by a full-time team at EA Funds.",
+    "observed_at": "2026-10-02T10:50:23Z"
+  },
+  {
+    "data": {
+      "name": "AI for Math Fund Seed Grants",
+      "organizer": "Renaissance Philanthropy (founding donor: XTX Markets)",
+      "kind": "grant",
+      "url": "https://www.renaissancephilanthropy.org/ai-for-math-fund",
+      "audience": "researchers",
+      "funding_usd": 100000,
+      "region": "global"
+    },
+    "source_url": "https://www.renaissancephilanthropy.org/ai-for-math-fund",
+    "evidence": "Field-building resources and events , including conferences, workshops, tutorials, or educational materials that expand participation in AI for Math. How to Apply Submit an application here . Applications will be reviewed on a rolling basis.",
+    "observed_at": "2026-10-02T10:50:46Z"
+  },
+  {
+    "data": {
+      "name": "Anthropic Economic Futures Research Fund",
+      "organizer": "Anthropic",
+      "kind": "grant",
+      "url": "https://www.anthropic.com/news/economic-futures-research-fund-agenda",
+      "audience": "researchers",
+      "region": "global"
+    },
+    "source_url": "https://www.anthropic.com/news/economic-futures-research-fund-agenda",
+    "evidence": "We’re more likely to fund projects that fit one of our research priorities, but we welcome ambitious proposals outside them, as long as they’re calibrated to the scale of the problem and opportunity. See our request for proposals and apply here.",
+    "observed_at": "2026-10-02T10:51:45Z"
+  },
+  {
+    "data": {
+      "name": "100 Experiments (100E)",
+      "organizer": "AI Singapore",
+      "kind": "grant",
+      "url": "https://aisingapore.org/innovation/100e/",
+      "audience": "startups",
+      "funding_stated": "co-funding of up to SGD$150,000 per project",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://aisingapore.org/innovation/100e/",
+    "evidence": "For comprehensive AI challenges, our flagship 100 Experiments (100E) programme provides co-funding of up to SGD$150,000 per project.",
+    "observed_at": "2026-10-02T10:54:58Z"
+  },
+  {
+    "data": {
+      "name": "Isambard-AI and Dawn AIRR supercomputers: Rapid Access route",
+      "organizer": "UKRI and DSIT (AI Research Resource)",
+      "kind": "credits",
+      "url": "https://www.ukri.org/opportunity/isambard-ai-and-dawn-airr-supercomputers-rapid-access-route/",
+      "audience": "startups",
+      "region": "europe"
+    },
+    "source_url": "https://www.ukri.org/opportunity/isambard-ai-and-dawn-airr-supercomputers-rapid-access-route/",
+    "evidence": "Closing date: Open - no closing date Last updated: 23 September 2025 - see all updates Start application Open to researchers at UK-registered micro, small and medium businesses, this access route supports early-stage development of artificial intelligence (AI) products prior to market launch.",
+    "observed_at": "2026-10-02T10:54:08Z"
+  },
+  {
+    "data": {
+      "name": "Isambard-AI and Dawn AIRR supercomputers: Gateway route",
+      "organizer": "UKRI and DSIT (AI Research Resource)",
+      "kind": "credits",
+      "url": "https://www.ukri.org/opportunity/access-to-isambard-ai-and-dawn-airr-supercomputers-gateway-route/",
+      "audience": "researchers",
+      "region": "europe"
+    },
+    "source_url": "https://www.ukri.org/opportunity/access-to-isambard-ai-and-dawn-airr-supercomputers-gateway-route/",
+    "evidence": "Closing date: Open - no closing date Last updated: 26 February 2026 - see all updates Start application This access route is open to UK-based researchers from academia, industry, and other organisations. It offers flexible computational support for artificial intelligence (AI) related research",
+    "observed_at": "2026-10-02T10:54:08Z"
+  },
+  {
+    "data": {
+      "name": "Playground Access to AI Factories",
+      "organizer": "EuroHPC Joint Undertaking",
+      "kind": "credits",
+      "url": "https://www.eurohpc-ju.europa.eu/playground-access-ai-factories_en",
+      "audience": "startups",
+      "region": "europe"
+    },
+    "source_url": "https://www.eurohpc-ju.europa.eu/playground-access-ai-factories_en",
+    "evidence": "Playground provides quick access to European SMEs and startups. This access mode is ideal for new users or those with smaller computational needs. Guidance is provided by the hosting AI Factory (AIF). Users can apply any time.",
+    "observed_at": "2026-10-02T10:54:08Z"
+  },
+  {
+    "data": {
+      "name": "Fast Lane Access to AI Factories",
+      "organizer": "EuroHPC Joint Undertaking",
+      "kind": "credits",
+      "url": "https://www.eurohpc-ju.europa.eu/fast-lane-access-ai-factories_en",
+      "audience": "startups",
+      "region": "europe"
+    },
+    "source_url": "https://www.eurohpc-ju.europa.eu/fast-lane-access-ai-factories_en",
+    "evidence": "Deadline model Permanent Description This access call is intended: For Industry users For Users familiar with HPC To provide Access within 4 working days This type of access is intended for applicants who are more familiar with HPC and requiring up to 50,000 GPU hours for a maximum of 3 months.",
+    "observed_at": "2026-10-02T10:54:08Z"
+  },
+  {
+    "data": {
+      "name": "KI4Energy – Künstliche Intelligenz und Data Science als Schlüsseltechnologien für die Energie- und Wasserstoffforschung",
+      "organizer": "BMFTR (German Federal Ministry of Research, Technology and Space)",
+      "kind": "grant",
+      "url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/07/2026-07-23-foerderaufruf-ki4energy.html",
+      "audience": "researchers",
+      "region": "europe"
+    },
+    "source_url": "https://www.bmftr.bund.de/SharedDocs/Bekanntmachungen/DE/2026/07/2026-07-23-foerderaufruf-ki4energy.html",
+    "evidence": "Projektskizzen können kontinuierlich in elektronischer Form eingereicht werden unter: https://foerderportal.bund.de/easyonline/reflink.jsf?m=GLF_ENERGIE&b=KI4ENERGY",
+    "observed_at": "2026-10-02T10:54:08Z"
+  },
+  {
+    "data": {
+      "name": "Antler in the US",
+      "organizer": "Antler",
+      "kind": "residency",
+      "url": "https://www.antler.co/location/us",
+      "audience": "startups",
+      "funding_usd": 1000000,
+      "credits_usd": 650000,
+      "format": "in-person",
+      "city": [
+        "New York City",
+        "San Francisco",
+        "Austin"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.antler.co/location/us",
+    "evidence": "Antler is one of the most selective founder residency programs in the world and we review applications year-round.",
+    "observed_at": "2026-10-02T10:40:42Z"
+  },
+  {
+    "data": {
+      "name": "Antler ONE Residency",
+      "organizer": "Antler",
+      "kind": "residency",
+      "url": "https://www.antler.co/continental-europe",
+      "audience": "startups",
+      "funding_stated": "up to €500K",
+      "format": "in-person",
+      "city": [
+        "Berlin",
+        "Amsterdam"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.antler.co/continental-europe",
+    "evidence": "The Antler ONE Residency Currently accepting applications 2x year, starting March & September (we accept applications all year round)",
+    "observed_at": "2026-10-02T10:40:42Z"
+  },
+  {
+    "data": {
+      "name": "Antler in the Nordics",
+      "organizer": "Antler",
+      "kind": "residency",
+      "url": "https://www.antler.co/nordics",
+      "audience": "startups",
+      "funding_stated": "€500K - €1M",
+      "city": [
+        "Stockholm",
+        "Oslo",
+        "Copenhagen",
+        "Helsinki"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.antler.co/cohort-start-dates",
+    "evidence": "Denmark Finland Sweden Norway Rolling intake* Copenhagen Helsinki Stockholm Oslo",
+    "observed_at": "2026-10-02T10:40:30Z"
+  },
+  {
+    "data": {
+      "name": "Antler Canada",
+      "organizer": "Antler",
+      "kind": "residency",
+      "url": "https://www.antler.co/location/canada",
+      "audience": "startups",
+      "funding_usd": 250000,
+      "credits_usd": 350000,
+      "city": [
+        "Toronto"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.antler.co/cohort-start-dates",
+    "evidence": "Canada Rolling intake* Toronto US Rolling intake* San Francisco Austin New York City",
+    "observed_at": "2026-10-02T10:40:30Z"
+  },
+  {
+    "data": {
+      "name": "Conviction Embed",
+      "organizer": "Conviction",
+      "kind": "accelerator",
+      "url": "https://embed.conviction.com/",
+      "cohort": "7th cohort",
+      "audience": "startups",
+      "funding_usd": 250000,
+      "format": "hybrid",
+      "city": [
+        "San Francisco"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://embed.conviction.com/",
+    "evidence": "Embed A Catalyst for AI-Native Startups Apply early to the 7th cohort of Embed here!",
+    "observed_at": "2026-10-02T10:41:41Z"
+  },
+  {
+    "data": {
+      "name": "Accel Atoms AI",
+      "organizer": "Accel",
+      "kind": "accelerator",
+      "url": "https://atoms.accel.com/",
+      "audience": "startups",
+      "funding_usd": 2000000,
+      "region": "asia-pacific"
+    },
+    "source_url": "https://atoms.accel.com/faqs",
+    "evidence": "You can apply to the AI Cohort through the application form on our website. Since applications are accepted on a rolling basis, you can apply whenever you're ready.",
+    "observed_at": "2026-10-02T10:42:02Z"
+  },
+  {
+    "data": {
+      "name": "AI House Incubator",
+      "organizer": "AI House",
+      "kind": "accelerator",
+      "url": "https://aihouse.vc/incubator",
+      "audience": "startups",
+      "funding_usd": 600000,
+      "equity_pct": 7,
+      "credits_usd": 1500000,
+      "format": "hybrid",
+      "city": [
+        "Seattle"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://aihouse.vc/faqs",
+    "evidence": "When can I apply? Applications are rolling. You do not need to wait for a batch or cohort date. Apply when you are ready to build.",
+    "observed_at": "2026-10-02T10:43:18Z"
+  },
+  {
+    "data": {
+      "name": "Antler Korea",
+      "organizer": "Antler",
+      "kind": "residency",
+      "url": "https://www.antler.co/location/korea",
+      "audience": "startups",
+      "funding_usd": 260000,
+      "city": [
+        "Seoul"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.antler.co/location/korea",
+    "evidence": "Applications for the Antler residency are accepted year-round, with the program running twice a year.",
+    "observed_at": "2026-10-02T10:40:42Z"
+  },
+  {
+    "data": {
+      "name": "Antler in Vietnam",
+      "organizer": "Antler",
+      "kind": "residency",
+      "url": "https://www.antler.co/location/vietnam",
+      "audience": "startups",
+      "format": "in-person",
+      "city": [
+        "Ho Chi Minh City"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.antler.co/location/vietnam",
+    "evidence": "Differing from other Antler locations, we are accepting teams on a rolling basis to the residency in Vietnam. This means teams are welcomed to join us in Ho Chi Minh city anytime throughout the year",
+    "observed_at": "2026-10-02T10:40:42Z"
+  },
+  {
+    "data": {
+      "name": "Sting Core",
+      "organizer": "Sting (Stockholm Innovation & Growth)",
+      "kind": "accelerator",
+      "url": "https://www.sting.co/sting-core",
+      "audience": "startups",
+      "funding_stated": "SEK 600,000",
+      "format": "hybrid",
+      "city": [
+        "Stockholm"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.sting.co/faq",
+    "evidence": "Sting's Core program starts twice every year, in October and March. The application deadlines are generally in mid-August and late January. We evaluate applications continuously, and in certain cases, we may accept companies between the application periods.",
+    "observed_at": "2026-10-02T10:40:55Z"
+  },
+  {
+    "data": {
+      "name": "Hexa Sprint",
+      "organizer": "Hexa",
+      "kind": "accelerator",
+      "url": "https://www.hexa.com/sprint",
+      "audience": "startups",
+      "funding_stated": "€500k",
+      "format": "hybrid",
+      "city": [
+        "Paris"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.hexa.com/sprint",
+    "evidence": "When can I apply? Applications are rolling. We run cohorts throughout the year, with each cohort focused on a specific theme. You can apply at any time through our online form.",
+    "observed_at": "2026-10-02T10:46:07Z"
+  },
+  {
+    "data": {
+      "name": "AIスタートアップ支援プログラム by KDDI & Google AI Futures Fund",
+      "organizer": "KDDI Open Innovation Fund and Google AI Futures Fund",
+      "kind": "accelerator",
+      "url": "https://www.kddi.com/open-innovation-program/koif/aistartup/",
+      "audience": "startups",
+      "funding_stated": "最大200万ドル",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.kddi.com/open-innovation-program/koif/aistartup/",
+    "evidence": "Q 募集の締め切りはいつですか？ アコーディオン開閉 A 現在募集中で、締め切りは設けていません。いつでもご応募いただけます。",
+    "observed_at": "2026-10-02T10:58:31Z"
+  },
+  {
+    "data": {
+      "name": "Nasscom Deeptech Club Launchpad",
+      "organizer": "Nasscom",
+      "kind": "accelerator",
+      "url": "https://nasscom.in/deeptech/deeptechclub/launchpad.php",
+      "audience": "startups",
+      "format": "remote",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://nasscom.in/deeptech/deeptechclub/launchpad.php",
+    "evidence": "Startups that are not selected can reapply in future cycles after refining their submissions. *Startups can apply anytime; applications are accepted throughout the month on a rolling basis.",
+    "observed_at": "2026-10-02T10:58:30Z"
+  },
+  {
+    "data": {
+      "name": "JioGenNext Market Access Program (MAP)",
+      "organizer": "JioGenNext (Reliance Industries)",
+      "kind": "accelerator",
+      "url": "https://www.jiogennext.com/",
+      "audience": "startups",
+      "equity_pct": 0,
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.jiogennext.com/faq",
+    "evidence": "Fill out our application form. The form captures essential details needed to evaluate your startup and communicate with you. Applications are reviewed by the JioGenNext team on a rolling basis.",
+    "observed_at": "2026-10-02T10:58:30Z"
+  },
+  {
+    "data": {
+      "name": "SparkLabs Taiwan Accelerator Program",
+      "organizer": "SparkLabs Taiwan",
+      "kind": "accelerator",
+      "url": "https://www.sparklabstaiwan.com/accelerator/program",
+      "cohort": "Batch 11",
+      "audience": "startups",
+      "funding_stated": "at least US$ 100K",
+      "equity_pct": 7,
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.sparklabstaiwan.com/accelerator/program",
+    "evidence": "Batch 11 Application is open Application Deadline Applications are accepted on a rolling basis Program Kickoff Upon acceptance into the program",
+    "observed_at": "2026-10-02T11:01:54Z"
+  },
+  {
+    "data": {
+      "name": "HKSTP Incubation Programme",
+      "organizer": "Hong Kong Science and Technology Parks Corporation (HKSTP)",
+      "kind": "accelerator",
+      "url": "https://www.hkstp.org/en/programmes/incubation/incubation-programme",
+      "audience": "startups",
+      "funding_stated": "up to HK$1.29 million",
+      "format": "in-person",
+      "city": [
+        "Hong Kong"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.hkstp.org/en/programmes/incubation/incubation-programme",
+    "evidence": "Q2. Any specific deadline for the Incubation application? The best time to apply was yesterday, and you have just missed it. But, whenever you are ready, we are too.",
+    "observed_at": "2026-10-02T11:01:56Z"
+  },
+  {
+    "data": {
+      "name": "Volta AI Residency",
+      "organizer": "Volta",
+      "kind": "residency",
+      "url": "https://voltaeffect.com/ai-residency",
+      "audience": "startups",
+      "city": [
+        "Halifax"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://voltaeffect.com/ai-residency",
+    "evidence": "Applications are open year-round. Create an account and submit through the ImpactOS Founder portal (linked from the residency page). There is no cohort deadline; applications are reviewed as they come in.",
+    "observed_at": "2026-10-02T10:36:13Z"
+  },
+  {
+    "data": {
+      "name": "Beeloud Accelerator",
+      "organizer": "Beeloud",
+      "kind": "accelerator",
+      "url": "https://www.beeloud.xyz/accelerator",
+      "audience": "startups",
+      "region": "americas"
+    },
+    "source_url": "https://www.beeloud.xyz/accelerator",
+    "evidence": "Program Duration Our program runs for 12 weeks, with intensive support and mentorship throughout. Ready to Apply? Applications are open year-round. We review submissions monthly.",
+    "observed_at": "2026-10-02T10:54:29Z"
+  },
+  {
+    "data": {
+      "name": "DSN AI Startup Lab",
+      "organizer": "Data Science Nigeria",
+      "kind": "accelerator",
+      "url": "https://datasciencenigeria.org/ai-startup/",
+      "audience": "startups",
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://datasciencenigeria.org/ai-startup/",
+    "evidence": "DSN AI Startup Lab accepts applications on a rolling basis - Application is always open and selection is done per cohort from the pool of applications received.",
+    "observed_at": "2026-10-02T11:03:14Z"
+  }
+]

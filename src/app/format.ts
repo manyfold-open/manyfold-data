@@ -1,6 +1,6 @@
 /** How values read on the page. Dates are calendar dates in UTC, never shifted by time zone. */
 
-import { valueLabel, type DataAppConfig, type FieldDef, type FieldValue } from '../shared/data-app';
+import { openEndedLabel, valueLabel, withUnit, type DataAppConfig, type FieldDef, type FieldValue } from '../shared/data-app';
 
 const dayFormat = new Intl.DateTimeFormat('en-US', {
   month: 'short',
@@ -66,16 +66,19 @@ export const capitalize = (text: string): string => text.charAt(0).toUpperCase()
 
 export function formatNumber(def: FieldDef | undefined, value: number, compact = false): string {
   if (def?.type === 'number' && def.display === 'usd') return (compact ? usdCompact : usd).format(value);
-  return plain.format(value);
+  return withUnit(def, plain.format(value));
 }
 
 /** "1 hackathon", "32 hackathons" */
 export const countOf = (config: DataAppConfig, count: number): string =>
   `${formatCount(count)} ${count === 1 ? config.noun.one : config.noun.other}`;
 
-/** A field value as text, for tables and the record page. URLs show as their host. */
+/**
+ * A field value as text, for tables and the record page. URLs show as their host; a missing
+ * open-ended date shows its word ("Rolling"), any other missing value as ''.
+ */
 export function formatValue(def: FieldDef | undefined, value: FieldValue | undefined): string {
-  if (value === undefined || value === null || value === '') return '';
+  if (value === undefined || value === null || value === '') return openEndedLabel(def) ?? '';
   if (Array.isArray(value)) return value.join(', ');
   if (typeof value === 'number') return formatNumber(def, value);
   switch (def?.type) {
@@ -100,10 +103,14 @@ const trim = (value: number, digits: number): string =>
 
 /**
  * An amount as a number and a small unit, the way pages print money: 9 500 000 → "9.5" and
- * "M USD". Numbers that are not money print in full with no unit.
+ * "M USD". Numbers that are not money print in full, with their field's unit if it has one.
  */
 export function amountParts(def: FieldDef | undefined, value: number): { number: string; unit: string } {
-  if (!(def?.type === 'number' && def.display === 'usd')) return { number: plain.format(value), unit: '' };
+  if (!(def?.type === 'number' && def.display === 'usd')) {
+    const unit = def?.type === 'number' ? (def.unit ?? '') : '';
+    // A percent sign sits on the number: "7%", not "7 %".
+    return unit === '%' ? { number: withUnit(def, plain.format(value)), unit: '' } : { number: plain.format(value), unit };
+  }
   const size = Math.abs(value);
   if (size >= 1e9) return { number: trim(value / 1e9, 2), unit: 'B USD' };
   if (size >= 1e6) return { number: trim(value / 1e6, 1), unit: 'M USD' };
@@ -111,9 +118,9 @@ export function amountParts(def: FieldDef | undefined, value: number): { number:
   return { number: plain.format(value), unit: 'USD' };
 }
 
-/** A short amount for labels and chips: "$9.5M", "$25K", "$1B". Plain numbers stay plain. */
+/** A short amount for labels and chips: "$9.5M", "$25K", "$1B". Plain numbers stay plain: "500 MW". */
 export function shortAmount(def: FieldDef | undefined, value: number): string {
-  if (!(def?.type === 'number' && def.display === 'usd')) return plain.format(value);
+  if (!(def?.type === 'number' && def.display === 'usd')) return withUnit(def, plain.format(value));
   const size = Math.abs(value);
   if (size >= 1e9) return `$${trim(value / 1e9, 2)}B`;
   if (size >= 1e6) return `$${trim(value / 1e6, 1)}M`;

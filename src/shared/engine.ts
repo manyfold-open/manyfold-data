@@ -10,7 +10,8 @@
  *
  * Semantics match what the SQL used to do: verified records only; the text search matches text
  * fields and lists of names, without case; filters on enum and tags fields keep a record that has
- * any of the chosen values; ranges are inclusive and skip records without a value; sorting puts
+ * any of the chosen values; ranges are inclusive and skip records without a value, except that
+ * an open-ended date without one passes a lower bound (a rolling program is still open); sorting puts
  * missing values last either way and compares text without case, then by id; facet counts for a
  * field apply every other active filter.
  *
@@ -71,7 +72,11 @@ export function matches(
     for (const end of ['from', 'to'] as const) {
       const raw = filter[end];
       if (raw === undefined) continue;
-      if (missing(value) || Array.isArray(value)) return false;
+      if (missing(value) || Array.isArray(value)) {
+        // An open-ended date has no end: it is on or after any day, and on or before none.
+        if (end === 'from' && def.type === 'date' && def.openEnded && missing(value)) continue;
+        return false;
+      }
       const bound = def.type === 'number' ? Number(raw) : resolveDateBound(raw, today);
       if (end === 'from' ? (value as string | number) < bound : (value as string | number) > bound) return false;
     }

@@ -4,7 +4,7 @@
  * buttons and the sorted one carries aria-sort.
  */
 
-import { SORTABLE, valueLabel, type DataAppConfig, type FieldDef } from '../../shared/data-app';
+import { openEndedLabel, SORTABLE, valueLabel, type DataAppConfig, type FieldDef } from '../../shared/data-app';
 import type { QueryState } from '../../shared/query';
 import type { PublicRecord } from '../../shared/types';
 import { bareLabel, formatShortDate, formatValue } from '../format';
@@ -30,6 +30,9 @@ export function Cell({ config, field, record }: { config: DataAppConfig; field: 
   const def = config.fields[field];
   const value = record.data[field];
   if (value === undefined || value === '' || (Array.isArray(value) && value.length === 0)) {
+    // A date with no end, e.g. a deadline for rolling applications.
+    const open = openEndedLabel(def);
+    if (open) return <span className="open-ended">{open}</span>;
     // Missing, but the config names another field to show: e.g. "€20 million".
     const other = config.table.fallback?.[field];
     const stand = other ? formatValue(config.fields[other], record.data[other]) : '';
@@ -109,12 +112,20 @@ export function RecordTable({
   );
 }
 
-/** Phone rows: title, the first enum value and city under it, the figure and the date on the right. */
+/**
+ * Phone rows: title, the first enum value and city under it, the figure and the date on the
+ * right. The figure is the first number column the record states (a credits program states
+ * credits, not funding).
+ */
 export function RecordList({ config, records }: { config: DataAppConfig; records: readonly PublicRecord[] }) {
   const columns = config.table.columns;
   const enumField = columns.find((field) => config.fields[field]?.type === 'enum');
   const tagsField = columns.find((field) => config.fields[field]?.type === 'tags');
-  const numberField = columns.find((field) => config.fields[field]?.type === 'number');
+  const numberFields = columns.filter((field) => config.fields[field]?.type === 'number');
+  const states = (record: PublicRecord, field: string) => {
+    const other = config.table.fallback?.[field];
+    return record.data[field] !== undefined || (other !== undefined && record.data[other] !== undefined);
+  };
   const dateField = dateFieldOf(config);
   const forward = dateField !== null && dateDirection(config, dateField) === 'future';
 
@@ -130,7 +141,9 @@ export function RecordList({ config, records }: { config: DataAppConfig; records
         ]
           .filter(Boolean)
           .join(' · ');
+        const numberField = numberFields.find((field) => states(record, field)) ?? numberFields[0];
         const date = dateField ? record.data[dateField] : undefined;
+        const open = dateField ? openEndedLabel(config.fields[dateField]) : null;
         return (
           <ListRow
             key={record.id}
@@ -143,7 +156,7 @@ export function RecordList({ config, records }: { config: DataAppConfig; records
                 ? forward
                   ? `${config.fields[dateField!]?.label} ${formatShortDate(date)}`
                   : formatShortDate(date)
-                : undefined
+                : (open ?? undefined)
             }
           />
         );

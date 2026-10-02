@@ -4,8 +4,10 @@ Open datasets that AI agents collect and check, published at **[data.manyfold.ai
 
 Each data app is one focused dataset with an Overview of charts and a Table you can filter and sort.
 Every record links to the page it was checked against, with a quote from that page as evidence.
-Data apps so far: **[AI Hackathons](https://data.manyfold.ai/ai-hackathons)** and
-**[AI Company Fundraising](https://data.manyfold.ai/ai-fundraising)**.
+Data apps so far: **[AI Hackathons](https://data.manyfold.ai/ai-hackathons)**,
+**[AI Accelerators & Grants](https://data.manyfold.ai/ai-accelerators)**,
+**[AI Company Fundraising](https://data.manyfold.ai/ai-fundraising)** and
+**[AI Data Centers](https://data.manyfold.ai/ai-data-centers)**.
 
 [中文说明](./README_CN.md)
 
@@ -200,6 +202,11 @@ Config details worth knowing:
 - A `url` field with `homePage: true` keeps only the site's home page, so it can identify a company.
 - A `tags` field with `names: true` holds names as people write them, such as cities (`["Zürich"]`):
   case and accents kept, each one a filter option, a chart bar and a search match.
+- A `date` field with `openEnded: 'Rolling'` treats a record without the date as having no end: it
+  passes a lower bound (`deadline_from=today` keeps a program with rolling applications), fails an
+  upper one, sorts last, and pages show the word in its place. Such a field cannot be required.
+- A plain `number` field can carry a `unit` (`'MW'`, `'%'`), printed after the number in tables,
+  filters, charts and Discord posts.
 - `table.previewColumns` picks the Overview preview's columns (otherwise the first five), and
   `table.fallback` shows another field when a column's own value is missing (`amount_usd` →
   `amount_stated`, so a round in euros still shows its amount).

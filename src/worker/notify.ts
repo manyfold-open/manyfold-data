@@ -9,7 +9,7 @@
  * webhook is still tried each run, so a channel that comes back recovers by itself.
  */
 
-import { valueLabel, type DataAppConfig, type RecordData } from '../shared/data-app';
+import { valueLabel, withUnit, type DataAppConfig, type RecordData } from '../shared/data-app';
 import type { NotifyStatus } from '../shared/types';
 import { seal, unseal, type Sealed } from './crypto';
 import { HttpError, type Env } from './types';
@@ -141,7 +141,7 @@ export function fillLine(config: DataAppConfig, data: RecordData): string {
         if (typeof value === 'number') {
           const def = config.fields[field];
           const usd = def?.type === 'number' && def.display === 'usd';
-          return `${usd ? '$' : ''}${value.toLocaleString('en-US')}`;
+          return usd ? `$${value.toLocaleString('en-US')}` : withUnit(def, value.toLocaleString('en-US'));
         }
         return valueLabel(config.fields[field], value);
       });

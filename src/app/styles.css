@@ -1486,6 +1486,12 @@ th[aria-sort='ascending'] .sort-button svg {
   color: var(--muted);
 }
 
+/* A date with no end, e.g. a deadline for rolling applications: "Rolling". */
+.open-ended {
+  font-size: 12.5px;
+  font-weight: 500;
+}
+
 /* Phone list rows. */
 .list {
   display: grid;
