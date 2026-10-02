@@ -55,6 +55,7 @@ describe('the edge cache', () => {
     const second = await get('/api/ai-hackathons/stats');
     expect(second.status).toBe(200);
     expect(second.headers.get('x-cache')).toBe('hit');
+    expect(second.headers.get('cache-control')).toBe('public, max-age=60');
     expect(await second.json()).toEqual(await first.json());
     expect(queries).toBe(before);
   });

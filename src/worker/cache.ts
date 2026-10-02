@@ -28,6 +28,9 @@ export function cachedFor(seconds: number): MiddlewareHandler<{ Bindings: Env }>
     const hit = await cache.match(key);
     if (hit) {
       const answer = new Response(hit.body, hit);
+      // A copy served from the cache comes back with the zone's Browser Cache TTL (4 hours on
+      // manyfold.ai) in place of ours; browsers must keep it no longer than the edge does.
+      answer.headers.set('cache-control', `public, max-age=${seconds}`);
       answer.headers.set('x-cache', 'hit');
       return answer;
     }
