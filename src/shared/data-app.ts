@@ -501,13 +501,21 @@ export function validateProvenance(
 const TRACKING = /^(utm_[a-z_]+|fbclid|gclid|dclid|msclkid|mc_cid|mc_eid|igshid|ref|ref_src|si)$/i;
 
 /**
- * The form two URLs are compared in: https, lowercase host without "www.", no port,
- * credentials, fragment or tracking parameters, sorted query, no trailing slash.
+ * Hosts that serve the same pages under another name. Luma moved from lu.ma to luma.com and
+ * answers on both, so one event came in twice: eleven pairs were public on 2026-10-02.
+ */
+const HOST_ALIASES: Readonly<Record<string, string>> = { 'lu.ma': 'luma.com' };
+
+/**
+ * The form two URLs are compared in: https, lowercase host without "www." (and under its
+ * canonical name), no port, credentials, fragment or tracking parameters, sorted query, no
+ * trailing slash.
  */
 export function normalizeUrl(raw: string): string {
   const url = new URL(raw.trim());
   url.protocol = 'https:';
-  url.hostname = url.hostname.toLowerCase().replace(/^www\./, '');
+  const host = url.hostname.toLowerCase().replace(/^www\./, '');
+  url.hostname = HOST_ALIASES[host] ?? host;
   url.port = '';
   url.username = '';
   url.password = '';

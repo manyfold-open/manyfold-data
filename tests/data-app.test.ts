@@ -151,6 +151,15 @@ describe('identity', () => {
     expect(new Set(variants.map(normalizeUrl))).toEqual(new Set(['https://example.org/hack']));
   });
 
+  it('treats a site that answers under two names as one', () => {
+    // Luma serves every event at lu.ma/<code> and luma.com/<code>.
+    const variants = ['https://lu.ma/emilftsx', 'https://www.lu.ma/emilftsx/', 'https://luma.com/emilftsx', 'https://www.luma.com/emilftsx'];
+    expect(new Set(variants.map(normalizeUrl))).toEqual(new Set(['https://luma.com/emilftsx']));
+    expect(identityKey(hackathons, { ...valid, url: 'https://lu.ma/emilftsx' })).toBe(
+      identityKey(hackathons, { ...valid, url: 'https://luma.com/emilftsx' }),
+    );
+  });
+
   it('keeps meaningful query parameters, sorted', () => {
     expect(normalizeUrl('https://example.org/e?b=2&a=1&fbclid=z')).toBe('https://example.org/e?a=1&b=2');
   });
