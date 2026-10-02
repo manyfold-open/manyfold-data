@@ -33,9 +33,10 @@ export default function Consent() {
   };
 
   return (
-    <aside className="consent" aria-label="Analytics">
+    <aside className="consent" aria-label="Analytics and ad measurement">
       <p>
-        May we use Google Analytics to see which pages people use? Nothing is stored for it until you choose.{' '}
+        May we use Google Analytics to see which pages people use, and which of our Google ads brought them? Nothing
+        is stored for either until you choose.{' '}
         <Link href="/privacy">Privacy</Link>
       </p>
       <div className="consent-answer">

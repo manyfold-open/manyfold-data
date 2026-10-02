@@ -275,14 +275,20 @@ so `npm run dev` measures nothing.
 
 - **Consent first.** Google Consent Mode v2 starts with everything denied in the EEA, the UK and
   Switzerland, before the tag loads, and granted elsewhere. Visitors there see a banner, and anyone
-  can change their answer at [`/privacy`](https://data.manyfold.ai/privacy).
+  can change their answer at [`/privacy`](https://data.manyfold.ai/privacy). One answer covers
+  analytics and ad measurement (`analytics_storage`, `ad_storage`, `ad_user_data`);
+  `ad_personalization` stays denied everywhere, whatever the answer.
+- **Google Ads.** data.manyfold.ai's property is linked to Google Ads with ads personalization off.
+  `data_requested` and `discord_joined` are key events imported as primary conversions, and
+  `data_exported` as a secondary one; `/privacy` says so. If you link your own property, keep
+  personalization off, or change the tag and `/privacy` together.
 - **Page views** come from the tag itself and from GA4's history-change page views as the app moves
   between pages, so keep "Page changes based on browser history events" on in the stream's enhanced
   measurement settings.
 - **Six events**, each with the data app's slug as `data_app` (`site` outside any data app) and
   nothing a visitor typed: `agent_instruction_copied`, `skill_opened`, `data_exported` (with `format`:
   csv, json or rss), `discord_joined` (with `placement`: header, follow or request),
-  `record_reported` and `data_requested`. Register `data_app` and `format` as event-scoped custom dimensions to report on them.
+  `record_reported` and `data_requested`. Register `data_app`, `format` and `placement` as event-scoped custom dimensions to report on them.
 
 ## License
 

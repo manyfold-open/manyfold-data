@@ -21,6 +21,7 @@
  * the Worker sets it for the first, notePage for every navigation after.
  */
 
+import { consentState } from '../shared/consent';
 import { measuredUrl } from '../shared/query';
 
 export const CONSENT_KEY = 'manyfold-data.consent';
@@ -51,14 +52,12 @@ export function storedConsent(): Consent | null {
   }
 }
 
-/** Records an answer and tells the tag at once, even if the browser refuses to store it. */
+/**
+ * Records an answer and tells the tag at once, even if the browser refuses to store it. The
+ * answer covers analytics and ad measurement; ad personalization stays denied either way.
+ */
 export function setConsent(choice: Consent): void {
-  gtag('consent', 'update', {
-    ad_storage: choice,
-    ad_user_data: choice,
-    ad_personalization: choice,
-    analytics_storage: choice,
-  });
+  gtag('consent', 'update', consentState(choice));
   try {
     localStorage.setItem(CONSENT_KEY, choice);
   } catch {

@@ -9,6 +9,10 @@
  *   `region` parameter makes that split, so the HTML is the same for every visitor and the
  *   consent state never depends on a geo lookup being right. A choice the visitor already
  *   made is replayed before the first hit.
+ * - **Ads are measured, never personalized.** The GA4 property is linked to Google Ads, which
+ *   counts the key events that follow an ad click. One answer covers analytics and that
+ *   measurement (`analytics_storage`, `ad_storage`, `ad_user_data`); `ad_personalization`
+ *   stays denied for everyone, whatever they answer.
  * - **The id is validated before it is interpolated.** It lands inside a `<script>`.
  * - **Nothing a reader typed reaches Google.** Page views carry `page_location` with the
  *   Table's search (`?q=`) removed, here for the first hit and in src/app/router.tsx for the
@@ -21,6 +25,7 @@
  * it does not store a cookie.
  */
 
+import { consentState } from '../shared/consent';
 import { TYPED_PARAMS } from '../shared/query';
 
 /**
@@ -66,8 +71,8 @@ export const consentRequiredFor = (country: string | null | undefined): boolean 
 export const isMeasuredPath = (pathname: string): boolean =>
   !/^\/(settings|api)(\/|$)/.test(pathname);
 
-const GRANTED = "{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted'}";
-const DENIED = "{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied'}";
+const GRANTED = JSON.stringify(consentState('granted'));
+const DENIED = JSON.stringify(consentState('denied'));
 
 /**
  * The two script tags that go into `<head>`, in this order: an inline block (consent
@@ -83,7 +88,7 @@ export function analyticsHead(measurementId: string): string {
     'function gtag(){dataLayer.push(arguments);}',
     // Google resolves the region-specific default over the catch-all, whatever the order.
     `gtag('consent','default',{'ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','analytics_storage':'denied','functionality_storage':'granted','security_storage':'granted','wait_for_update':500,'region':[${regions}]});`,
-    "gtag('consent','default',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'granted','analytics_storage':'granted','functionality_storage':'granted','security_storage':'granted'});",
+    "gtag('consent','default',{'ad_storage':'granted','ad_user_data':'granted','ad_personalization':'denied','analytics_storage':'granted','functionality_storage':'granted','security_storage':'granted'});",
     // A choice already made outranks both defaults, and must be in place before `config`
     // sends the first page_view.
     `try{var c=localStorage.getItem('${CONSENT_KEY}');if(c==='granted')gtag('consent','update',${GRANTED});else if(c==='denied')gtag('consent','update',${DENIED});}catch(e){}`,
