@@ -5,11 +5,12 @@
 
 import type { DataAppConfig } from '../src/shared/data-app.ts';
 import aiAccelerators from './ai-accelerators/config.ts';
+import aiAcquisitions from './ai-acquisitions/config.ts';
 import aiDataCenters from './ai-data-centers/config.ts';
 import aiFundraising from './ai-fundraising/config.ts';
 import aiHackathons from './ai-hackathons/config.ts';
 
-export const dataApps: readonly DataAppConfig[] = [aiHackathons, aiAccelerators, aiFundraising, aiDataCenters];
+export const dataApps: readonly DataAppConfig[] = [aiHackathons, aiAccelerators, aiFundraising, aiAcquisitions, aiDataCenters];
 
 export const findDataApp = (slug: string): DataAppConfig | undefined =>
   dataApps.find((app) => app.slug === slug);

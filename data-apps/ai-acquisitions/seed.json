@@ -1,0 +1,3857 @@
+[
+  {
+    "data": {
+      "company": "StudyStash",
+      "website": "https://studystash.com/",
+      "acquirer": [
+        "Kortext"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Adaptive AI study platform that turns course content into personalised flashcards, tests and podcasts",
+      "sector": "other",
+      "announced_on": "2026-10-02",
+      "city": [
+        "Bristol"
+      ],
+      "country": "United Kingdom",
+      "region": "europe"
+    },
+    "source_url": "https://tech.eu/2026/10/02/ai-study-platform-studystash-acquired-by-kortext-after-rapid-global-expansion/",
+    "evidence": "Adaptive AI study platform StudyStash has been acquired by edtech company Kortext, a year after its founders graduated from the University of Birmingham.",
+    "observed_at": "2026-10-02T11:05:52Z"
+  },
+  {
+    "data": {
+      "company": "Inferize",
+      "website": "https://inferize.ai/",
+      "acquirer": [
+        "Nebius"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Elastic, GPU-efficient AI inference that cuts idle GPU capacity when models launch or demand shifts",
+      "sector": "infrastructure",
+      "announced_on": "2026-10-01",
+      "price_stated": "$100-150 million",
+      "city": [
+        "Tel Aviv"
+      ],
+      "country": "Israel",
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.calcalistech.com/ctechnews/article/byzggtiqgx",
+    "evidence": "Nebius acquires 10-month-old stealth AI startup Inferize in $100-150 million deal The Israeli startup, which was founded by former Granulate executives and employs 17 people, built technology designed to reduce idle GPU capacity when AI demand changes.",
+    "observed_at": "2026-10-02T11:05:52Z"
+  },
+  {
+    "data": {
+      "company": "Vigil Guard",
+      "website": "https://www.vigilguard.ai/",
+      "acquirer": [
+        "Xopero Software"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI detection and response platform that blocks prompt injection and data leaks in AI interactions",
+      "sector": "security",
+      "announced_on": "2026-10-01",
+      "city": [
+        "Warsaw"
+      ],
+      "country": "Poland",
+      "region": "europe"
+    },
+    "source_url": "https://www.vigilguard.ai/news/vigil-guard-joins-xopero-software/",
+    "evidence": "Xopero Software S.A. is acquiring Vigil Guard PSA. Our team will work alongside Xopero's team as part of the same corporate group.",
+    "observed_at": "2026-10-02T11:09:50Z"
+  },
+  {
+    "data": {
+      "company": "First Five Partners",
+      "website": "https://www.firstfive.partners/",
+      "acquirer": [
+        "Miivo AI"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Sports advisory, commercial strategy and digital transformation for sports organizations",
+      "sector": "other",
+      "announced_on": "2026-10-01",
+      "price_stated": "CHF 288,000",
+      "country": "Switzerland",
+      "region": "europe"
+    },
+    "source_url": "https://www.proactiveinvestors.com/companies/news/1099457/miivo-ai-to-buy-swiss-sports-advisory-firm-first-five-partners-1099457.html",
+    "evidence": "Miivo AI (TSX-V:MIVO) said it will acquire First Five Partners Sàrl, a Switzerland-based sports advisory and digital transformation business, as it expands into the European sports technology market.",
+    "observed_at": "2026-10-02T12:23:43Z"
+  },
+  {
+    "data": {
+      "company": "ConnectLah",
+      "website": "https://www.connectlah.app/",
+      "acquirer": [
+        "Zeya Health"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI WhatsApp assistant that automates patient communication, booking and reminders for clinics",
+      "sector": "health",
+      "announced_on": "2026-10-01"
+    },
+    "source_url": "https://www.dealstreetasia.com/stories/asia-digest-zeya-health-acquires-connectlah-asian-investors-back-gmi-clouds-668m-funding-496808",
+    "evidence": "Zeya Health, a Singapore-headquartered healthtech startup, has announced that it has acquired ConnectLah, a clinic automation firm, for an undisclosed amount.",
+    "observed_at": "2026-10-02T12:23:44Z"
+  },
+  {
+    "data": {
+      "company": "Botdesigner",
+      "website": "https://botdesigner.io/",
+      "acquirer": [
+        "Selbetti"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI chatbots that automate patient scheduling, confirmations and follow-up for healthcare providers",
+      "sector": "health",
+      "announced_on": "2026-09-30",
+      "city": [
+        "Florianópolis"
+      ],
+      "country": "Brazil",
+      "region": "americas"
+    },
+    "source_url": "https://exame.com/negocios/aos-49-anos-empresa-de-tecnologia-compra-plataforma-de-ia-e-pavimenta-caminho-para-o-r-1-bilhao/",
+    "evidence": "A Selbetti Tecnologia comprou a Botdesigner, empresa de Florianópolis especializada em automação da jornada do paciente, em um movimento que reforça o plano de expansão da companhia no mercado de inteligência artificial e saúde.",
+    "observed_at": "2026-10-02T11:05:52Z"
+  },
+  {
+    "data": {
+      "company": "DoubleO.ai",
+      "website": "https://www.doubleo.ai/",
+      "acquirer": [
+        "ZoomInfo"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Agentic orchestration platform for reliable multi-agent go-to-market automation",
+      "sector": "enterprise",
+      "announced_on": "2026-09-30",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://siliconflorist.com/2026/10/01/vancouvers-zoominfo-acquires-ai-agent-startup-doubleo-ai/",
+    "evidence": "ZoomInfo announced that it has acquired DoubleO.ai, a San Francisco startup that builds agentic orchestration.",
+    "observed_at": "2026-10-02T11:10:01Z"
+  },
+  {
+    "data": {
+      "company": "Flamel.ai",
+      "website": "https://www.flamel.ai/",
+      "acquirer": [
+        "Yext"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI marketing platform for franchise and multi-location brands",
+      "sector": "enterprise",
+      "announced_on": "2026-09-30",
+      "city": [
+        "Covington"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://markets.financialcontent.com/prnews/article/bizwire-2026-9-30-yext-signs-definitive-agreement-to-acquire-flamelai-extending-its-agentic-marketing-platform-into-local-paid-media",
+    "evidence": "Yext Signs Definitive Agreement to Acquire Flamel.ai, Extending Its Agentic Marketing Platform Into Local Paid Media",
+    "observed_at": "2026-10-02T11:10:01Z"
+  },
+  {
+    "data": {
+      "company": "Ultravox",
+      "website": "https://www.ultravox.ai/",
+      "acquirer": [
+        "Inworld"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Platform and speech models for building real-time voice AI agents",
+      "sector": "developer-tools",
+      "announced_on": "2026-09-30",
+      "city": [
+        "Seattle"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://inworld.ai/blog/inworld-acquires-ultravox",
+    "evidence": "Inworld has acquired Ultravox, the platform developers use to build real-time voice agents. Ultravox team members who have joined Inworld will continue developing the platform.",
+    "observed_at": "2026-10-02T11:10:01Z"
+  },
+  {
+    "data": {
+      "company": "Wanderlust",
+      "website": "https://wander-lust.io/",
+      "acquirer": [
+        "AI inside"
+      ],
+      "deal_type": "majority-stake",
+      "focus": "Generative AI and LLM development consulting (RAG, evaluation, deployment) for enterprises",
+      "sector": "enterprise",
+      "announced_on": "2026-09-30",
+      "price_stated": "7億5000万円",
+      "city": [
+        "Tokyo"
+      ],
+      "country": "Japan",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://ma.kotora.jp/archives/ma-news/ma-news-6054",
+    "evidence": "AI insideは、AI開発コンサルティングを手がけるWanderlust（東京都千代田区）を子会社化する。取得予定は2026年10月中で、取得価額は7億5000万円。Wanderlustの株式70％を取得する。",
+    "observed_at": "2026-10-02T11:12:00Z"
+  },
+  {
+    "data": {
+      "company": "Learned Hand",
+      "website": "https://www.learned-hand.ai/",
+      "acquirer": [
+        "Clio"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI tools built for judges, law clerks and courts",
+      "sector": "defense",
+      "announced_on": "2026-09-30"
+    },
+    "source_url": "https://www.newswire.ca/news-releases/clio-acquires-learned-hand-860724194.html",
+    "evidence": "Clio, the global leader in legal AI, today announced the acquisition of Learned Hand, an AI company building technology specifically for judges and courts.",
+    "observed_at": "2026-10-02T12:23:34Z"
+  },
+  {
+    "data": {
+      "company": "Workera",
+      "website": "https://www.workera.ai/",
+      "acquirer": [
+        "Pearson"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI-native skills intelligence platform that verifies workforce skills through adaptive assessment",
+      "sector": "enterprise",
+      "announced_on": "2026-09-29",
+      "city": [
+        "Palo Alto"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/pearson-acquires-workera-a-pioneer-in-ai-native-enterprise-assessment-and-skills-verification-302891779.html",
+    "evidence": "Pearson (FTSE: PSON.L), the world's lifelong learning company, today announced it has agreed to acquire Workera, the AI-native skills intelligence platform used by leading enterprises to verify what their workforce can actually do.",
+    "observed_at": "2026-10-02T10:31:33Z"
+  },
+  {
+    "data": {
+      "company": "CloudMoyo",
+      "website": "https://www.cloudmoyo.com/",
+      "acquirer": [
+        "HumanTronik"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Microsoft-focused digital engineering, data and AI services and Icertis contract-intelligence delivery",
+      "sector": "other",
+      "announced_on": "2026-09-29",
+      "city": [
+        "Bellevue"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/humantronik-acquires-cloudmoyo-to-combine-global-enterprise-delivery-with-deep-frontier-ai-expertise-for-joint-customers-302892524.html",
+    "evidence": "HumanTronik today announced that it has acquired CloudMoyo, bringing together HumanTronik's enterprise AI platform with CloudMoyo's Microsoft engineering depth, Icertis Contract Intelligence expertise, and experience taking enterprise technology into production. Financial terms were not disclosed.",
+    "observed_at": "2026-10-02T10:35:46Z"
+  },
+  {
+    "data": {
+      "company": "Listen Labs",
+      "website": "https://listenlabs.ai/",
+      "acquirer": [
+        "Salesforce"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI-powered customer research and human simulation platform",
+      "sector": "enterprise",
+      "announced_on": "2026-09-29",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.salesforce.com/news/stories/salesforce-signs-definitive-agreement-to-acquire-listen-labs/",
+    "evidence": "Salesforce, the #1 AI CRM, today announced it has signed a definitive agreement to acquire Listen Labs, an AI-powered customer research and human simulation platform.",
+    "observed_at": "2026-10-02T11:05:25Z"
+  },
+  {
+    "data": {
+      "company": "Dokai",
+      "website": "https://dokai.ai/",
+      "acquirer": [
+        "Bolt.new"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Autonomous AI agents for B2B go-to-market research, prospect scoring and CRM work",
+      "sector": "enterprise",
+      "announced_on": "2026-09-29",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://pulse2.com/bolt-new-acquires-dokai-in-first-deal-to-expand-enterprise-ai-agents/",
+    "evidence": "Bolt.new has completed its first acquisition, buying San Francisco-based AI startup Dokai as the StackBlitz-owned software development platform expands its enterprise business and strengthens its capabilities around autonomous AI agents.",
+    "observed_at": "2026-10-02T11:11:57Z"
+  },
+  {
+    "data": {
+      "company": "Shipyard",
+      "website": "https://shipyard.build/",
+      "acquirer": [
+        "StackGen"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Ephemeral full-stack environments per pull request for developers and coding agents",
+      "sector": "developer-tools",
+      "announced_on": "2026-09-29",
+      "city": [
+        "New York"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/shipyard-joins-stackgen-adding-ephemeral-environments-to-the-autonomous-operations-factory-302892641.html",
+    "evidence": "StackGen, the autonomous operations company, today announced it has acquired Shipyard, the ephemeral environments platform used by engineering teams at fast growing startups like Rippit and major enterprises like PepsiCo.",
+    "observed_at": "2026-10-02T11:11:58Z"
+  },
+  {
+    "data": {
+      "company": "World Labs",
+      "website": "https://www.worldlabs.ai/",
+      "acquirer": [
+        "AMD"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Spatial-intelligence world models that generate and simulate interactive 3D environments",
+      "sector": "foundation-models",
+      "announced_on": "2026-09-28",
+      "price_usd": 8200000000,
+      "price_stated": "approximately $8.2 billion, all-stock",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://newsroom.amd.com/news/amd-acquire-world-labs/",
+    "evidence": "the World Labs team will continue to focus on advancing AI model research, and Dr. Fei-Fei Li will join AMD as executive vice president and chief scientist, reporting to Dr. Lisa Su. The all-stock transaction is valued at approximately $8.2 billion",
+    "observed_at": "2026-10-02T10:43:06Z"
+  },
+  {
+    "data": {
+      "company": "Soul Machines",
+      "website": "https://www.soulmachines.com/",
+      "acquirer": [
+        "AppDirect"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI avatars and human-centered digital experiences",
+      "sector": "enterprise",
+      "announced_on": "2026-09-28",
+      "city": [
+        "Auckland"
+      ],
+      "country": "New Zealand",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://markets.financialcontent.com/prnews.pre/article/bizwire-2026-9-28-appdirect-acquires-soul-machines-to-expand-enterprise-ai-experiences-for-advisors-and-businesses",
+    "evidence": "AppDirect, the world’s leading B2B subscription commerce platform, today announced it has acquired Soul Machines, a pioneer in AI avatars and human-centered digital experiences.",
+    "observed_at": "2026-10-02T11:05:45Z"
+  },
+  {
+    "data": {
+      "company": "BotDojo",
+      "website": "https://www.botdojo.com/",
+      "acquirer": [
+        "Mitratech"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Platform for orchestrating AI agents that carry out complex business tasks alongside teams",
+      "sector": "enterprise",
+      "announced_on": "2026-09-28"
+    },
+    "source_url": "https://www.globenewswire.com/news-release/2026/09/28/3369945/0/en/mitratech-fast-tracks-autonomous-legal-execution-with-new-ai-acquisition.html",
+    "evidence": "Mitratech Legal, a trusted technology partner with more than 12,000 legal team relationships worldwide, today announced the acquisition of AI-native startup BotDojo",
+    "observed_at": "2026-10-02T12:23:35Z"
+  },
+  {
+    "data": {
+      "company": "PEAK:AIO",
+      "website": "https://www.peakaio.com/",
+      "acquirer": [
+        "NetApp"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Scale-out metadata and parallel NFS storage software for large GPU and AI clusters",
+      "sector": "infrastructure",
+      "announced_on": "2026-09-25",
+      "city": [
+        "Manchester"
+      ],
+      "country": "United Kingdom",
+      "region": "europe"
+    },
+    "source_url": "https://www.storagereview.com/news/netapp-to-acquire-peakaio-bringing-its-scale-out-pnfs-metadata-work-to-ontap",
+    "evidence": "NetApp has agreed to acquire PEAK:AIO, the Manchester, UK software company whose metadata and parallel NFS work NetApp says will accelerate its AI infrastructure roadmap.",
+    "observed_at": "2026-10-02T11:08:37Z"
+  },
+  {
+    "data": {
+      "company": "Atta",
+      "website": "https://atta.app/",
+      "acquirer": [
+        "Replit"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI workspace for business data analysis and charting on an infinite canvas",
+      "sector": "developer-tools",
+      "announced_on": "2026-09-25"
+    },
+    "source_url": "https://waya.media/replit-acquires-atta-to-bring-ai-business-analysis-into-its-platform/",
+    "evidence": "Replit announced the acquisition of Atta, an AI-powered business analysis workspace, on September 25, bringing Atta’s business analysis and charting technology into its platform.",
+    "observed_at": "2026-10-02T12:23:33Z"
+  },
+  {
+    "data": {
+      "company": "Daybreak",
+      "website": "https://daybreak-llc.com/",
+      "acquirer": [
+        "Statecraft"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Applied AI, geospatial analytics and computer vision for federal national-security agencies",
+      "sector": "defense",
+      "announced_on": "2026-09-24",
+      "city": [
+        "McLean"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/statecraft-acquires-daybreak-to-accelerate-efficiency-in-federal-services-302889581.html",
+    "evidence": "Statecraft, an AI-native federal technology startup, today announced its acquisition of Daybreak LLC, an applied AI and data analytics firm with years of experience building and operating AI systems for federal agencies.",
+    "observed_at": "2026-10-02T11:08:50Z"
+  },
+  {
+    "data": {
+      "company": "Loophole Labs",
+      "website": "https://loopholelabs.io/",
+      "acquirer": [
+        "LiveKit"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Virtualization infrastructure for fast startup and live migration of AI agent workloads",
+      "sector": "infrastructure",
+      "announced_on": "2026-09-24",
+      "city": [
+        "New York"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://fortune.com/press-releases/livekit-acquires-loophole-labs-ai-agent-infrastructure-2026-09-24/",
+    "evidence": "LiveKit, the platform for building voice, video, and physical AI agents, today announced the acquisition of Loophole Labs, an infrastructure company whose technology will help LiveKit start agents faster and better handle bursts of demand.",
+    "observed_at": "2026-10-02T11:11:58Z"
+  },
+  {
+    "data": {
+      "company": "Noxtua",
+      "website": "https://www.noxtua.com/",
+      "acquirer": [
+        "C.H.BECK"
+      ],
+      "deal_type": "majority-stake",
+      "focus": "Sovereign legal AI platform built on curated content from European legal publishers",
+      "sector": "enterprise",
+      "announced_on": "2026-09-23",
+      "city": [
+        "Berlin"
+      ],
+      "country": "Germany",
+      "region": "europe"
+    },
+    "source_url": "https://www.lawfuel.com/legal-ais-new-battle-is-over-who-owns-the-law/",
+    "evidence": "German legal publishing giant C.H.BECK has become the majority shareholder in Berlin-based Noxtua, following a Series C round exceeding €100 million.",
+    "observed_at": "2026-10-02T11:05:52Z"
+  },
+  {
+    "data": {
+      "company": "PickNik",
+      "website": "https://picknik.ai/",
+      "acquirer": [
+        "Qualcomm"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Robot-arm motion planning and manipulation software; steward of open-source MoveIt",
+      "sector": "robotics",
+      "announced_on": "2026-09-23",
+      "city": [
+        "Boulder"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.roboticstomorrow.com/news/2026/09/23/qualcomm-to-acquire-picknik-to-advance-the-future-of-open-robotics-and-physical-ai/27140/",
+    "evidence": "Qualcomm Technologies, Inc. today announced its agreement to acquire PickNik Inc., an industry recognized robotics software company and longtime steward of MoveIt, one of the world's most widely adopted open-source robotics manipulation frameworks.",
+    "observed_at": "2026-10-02T11:05:30Z"
+  },
+  {
+    "data": {
+      "company": "Insignito",
+      "website": "https://www.insignito.com/",
+      "acquirer": [
+        "Ondas"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI-enabled passive acoustic drone detection for counter-UAS",
+      "sector": "defense",
+      "announced_on": "2026-09-23",
+      "city": [
+        "Tel Aviv"
+      ],
+      "country": "Israel",
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://pulse2.com/ondas-acquires-three-defense-technology-companies-for-56-million-with-up-to-32-million-in-earnouts/",
+    "evidence": "Ondas, a provider of autonomous systems and defense technologies, has acquired Insignito, Ottopia Defense, and Caribou Labs for an aggregate purchase price of $56 million, payable in cash or Ondas common stock.",
+    "observed_at": "2026-10-02T11:08:51Z"
+  },
+  {
+    "data": {
+      "company": "Trigify",
+      "website": "https://www.trigify.io/",
+      "acquirer": [
+        "HubSpot"
+      ],
+      "deal_type": "acqui-hire",
+      "focus": "Go-to-market signal platform that turns unstructured data into information revenue teams can act on",
+      "sector": "enterprise",
+      "announced_on": "2026-09-23"
+    },
+    "source_url": "https://www.trigify.io/",
+    "evidence": "Today, we're excited to announce that the Trigify team is joining HubSpot (NYSE: HUBS). Trigify began three years ago with a belief that go-to-market teams could make better decisions if they had better signals and better context.",
+    "observed_at": "2026-10-02T12:23:36Z"
+  },
+  {
+    "data": {
+      "company": "RealSense",
+      "website": "https://www.realsenseai.com/",
+      "acquirer": [
+        "Cognex"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Depth-sensing cameras and vision technology for robotic perception and physical AI",
+      "sector": "robotics",
+      "announced_on": "2026-09-22",
+      "price_usd": 500000000,
+      "price_stated": "approximately $500 million in cash",
+      "city": [
+        "Cupertino"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/cognex-to-acquire-realsense-expanding-machine-vision-leadership-into-high-growth-robotic-perception-market-302885738.html",
+    "evidence": "Under the terms of the agreement, Cognex will acquire RealSense for approximately $500 million, financed entirely from existing cash and investments on its balance sheet.",
+    "observed_at": "2026-10-02T10:33:57Z"
+  },
+  {
+    "data": {
+      "company": "Ryax Technologies",
+      "website": "https://ryax.tech/",
+      "acquirer": [
+        "Nutanix"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI-driven compute orchestration with GPU utilization and smart scheduling for AI workloads",
+      "sector": "infrastructure",
+      "announced_on": "2026-09-22",
+      "city": [
+        "Lyon"
+      ],
+      "country": "France",
+      "region": "europe"
+    },
+    "source_url": "https://www.nutanix.com/press-releases/2026/nutanix-acquires-ryax-technologies-to-help-customers-accelerate-agentic-ai-initiatives",
+    "evidence": "Nutanix (NASDAQ: NTNX), a hybrid cloud leader and AI platform company, today announced its acquisition of Ryax Technologies (Ryax), an AI-driven compute orchestration and management platform company based in France.",
+    "observed_at": "2026-10-02T11:09:51Z"
+  },
+  {
+    "data": {
+      "company": "Zuma",
+      "website": "https://www.getzuma.com/",
+      "acquirer": [
+        "Venn"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Agentic AI for multifamily leasing, renewals and collections",
+      "sector": "enterprise",
+      "announced_on": "2026-09-22",
+      "price_usd": 50000000,
+      "city": [
+        "Santa Monica"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://commercialobserver.com/2026/09/venn-zuma-proptech/",
+    "evidence": "Multifamily operating platform Venn acquired Zuma, a leasing company that uses agentic artificial intelligence, for $50 million.",
+    "observed_at": "2026-10-02T11:10:01Z"
+  },
+  {
+    "data": {
+      "company": "Onyx",
+      "website": "https://onyx.app/",
+      "acquirer": [
+        "Zoom"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Open-source enterprise AI search and knowledge platform for employees and agents",
+      "sector": "enterprise",
+      "announced_on": "2026-09-22",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.globalsecuritymag.fr/zoom-acquiert-onyx-pour-accelerer-son-virage-vers-l-ia-agentique.html",
+    "evidence": "Zoom a annoncé l’acquisition d’Onyx, une startup basée à San Francisco dont la plateforme d’IA open source permet aux collaborateurs et aux agents IA d’accéder aux connaissances dispersées dans les différents outils de l’entreprise et de les exploiter.",
+    "observed_at": "2026-10-02T11:10:01Z"
+  },
+  {
+    "data": {
+      "company": "Hangout",
+      "website": "https://hangout.fm/",
+      "acquirer": [
+        "GRAI"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Social music listening platform from the creators of Turntable.fm",
+      "sector": "consumer",
+      "announced_on": "2026-09-22"
+    },
+    "source_url": "https://www.musicweek.com/digital/read/ai-music-company-grai-acquires-social-listening-platform-hangout/095034",
+    "evidence": "AI music company GRAI has acquired Hangout, the social listening platform developed by the creators of Turntable.fm.",
+    "observed_at": "2026-10-02T12:23:34Z"
+  },
+  {
+    "data": {
+      "company": "Paperbox",
+      "website": "https://www.paperbox.ai/",
+      "acquirer": [
+        "Adlib"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Agentic AI intake and orchestration for inbound insurance communications",
+      "sector": "finance",
+      "announced_on": "2026-09-21",
+      "city": [
+        "Ghent"
+      ],
+      "country": "Belgium",
+      "region": "europe"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/adlib-acquires-paperbox-combining-agentic-intake--orchestration-with-a-data-foundation-regulators-trust-302884706.html",
+    "evidence": "Adlib Software today announced an agreement to acquire Paperbox, pairing agentic AI intake for inbound insurance communications with the data foundation that records where every value came from and proves it holds up.",
+    "observed_at": "2026-10-02T10:33:57Z"
+  },
+  {
+    "data": {
+      "company": "Pimento",
+      "website": "https://www.pimento.design/",
+      "acquirer": [
+        "Mistral AI"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Generative AI platform that turns briefs and brand guidelines into ad creatives",
+      "sector": "enterprise",
+      "announced_on": "2026-09-21",
+      "price_stated": "several million euros",
+      "city": [
+        "Paris"
+      ],
+      "country": "France",
+      "region": "europe"
+    },
+    "source_url": "https://thenextweb.com/news/mistral-acquires-pimento-ai-advertising",
+    "evidence": "Mistral AI has acquired Pimento, a Paris-based generative AI company that creates advertising content, as part of its third acquisition this year. The acquisition was first mentioned on Monday by L’Informé, and Mistral confirmed it to AFP the same day, citing a price of “several million euros”.",
+    "observed_at": "2026-10-02T11:11:55Z"
+  },
+  {
+    "data": {
+      "company": "Mila Health",
+      "website": "https://www.milahealth.com/",
+      "acquirer": [
+        "DexCare"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI agents that call, text and chat with patients for scheduling and care coordination",
+      "sector": "health",
+      "announced_on": "2026-09-21",
+      "city": [
+        "Seattle"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://markets.financialcontent.com/prnews/article/bizwire-2026-9-21-dexcare-acquires-mila-health-extending-ai-agents-from-scheduling-to-care-coordination",
+    "evidence": "DexCare, Inc. today announced the acquisition of Mila Health (Mila), an AI care coordination company whose agents call, text and chat with patients to get them scheduled, prepared and seen.",
+    "observed_at": "2026-10-02T11:10:01Z"
+  },
+  {
+    "data": {
+      "company": "Meridian",
+      "website": "https://trymeridian.com/",
+      "acquirer": [
+        "Searchable"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI search visibility (answer engine optimization) platform tracking brands in AI answers",
+      "sector": "enterprise",
+      "announced_on": "2026-09-21",
+      "price_stated": "seven-figure deal",
+      "city": [
+        "New York"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.unite.ai/searchable-acquires-meridian-in-seven-figure-deal-months-after-14m-seed-round/",
+    "evidence": "AI visibility platform Searchable is accelerating its U.S. expansion with the acquisition of New York-based Meridian Tech in a seven-figure deal, bringing together two startups built specifically for the rapidly emerging world of answer engine optimization.",
+    "observed_at": "2026-10-02T11:10:01Z"
+  },
+  {
+    "data": {
+      "company": "Sutro",
+      "website": "https://withsutro.com/",
+      "acquirer": [
+        "Lovable"
+      ],
+      "deal_type": "acquisition",
+      "focus": "SLang programming language, compiler and backend platform that makes application behavior and rules explicit",
+      "sector": "developer-tools",
+      "announced_on": "2026-09-18"
+    },
+    "source_url": "https://lovable.dev/blog/lovable-acquires-sutro-to-make-software-easier-to-explain-and-easier-to-trust",
+    "evidence": "That's why we're excited to announce that Lovable has acquired Sutro. For five years, the Sutro team built a language, compiler, and backend platform that made application behavior and rules explicit",
+    "observed_at": "2026-10-02T12:23:32Z"
+  },
+  {
+    "data": {
+      "company": "collabit (コラビット)",
+      "website": "https://collab-it.net/",
+      "acquirer": [
+        "Facilo"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI real estate price valuation (HowMa) and AI appraisal tools for property brokers",
+      "sector": "enterprise",
+      "announced_on": "2026-09-17",
+      "city": [
+        "Tokyo"
+      ],
+      "country": "Japan",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://japan.cnet.com/release/31208093/",
+    "evidence": "Facilo、シリーズBラウンドで総額64億円の資金調達を実施 株式会社Facilo 2026年09月17日 09時00分 From PR TIMES AIスタートアップ「コラビット」のグループ会社化",
+    "observed_at": "2026-10-02T11:05:52Z"
+  },
+  {
+    "data": {
+      "company": "Haize Labs",
+      "website": "https://www.haizelabs.com/",
+      "acquirer": [
+        "Beacon"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Red teaming, guardrails and evaluation tools that stress-test and safeguard AI agents",
+      "sector": "security",
+      "announced_on": "2026-09-17",
+      "city": [
+        "New York"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://betakit.com/beacon-buys-new-yorks-haize-labs-to-boost-ai-reliability-across-its-portfolio/",
+    "evidence": "Beacon, which typically buys niche software businesses and equips them with AI, announced on Thursday that it has purchased New York City-based Haize Labs, a young AI reliability startup that helps other firms stress test their AI agents for real-world deployment.",
+    "observed_at": "2026-10-02T11:09:51Z"
+  },
+  {
+    "data": {
+      "company": "TeachFX",
+      "website": "https://teachfx.com/",
+      "acquirer": [
+        "McGraw Hill"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI instructional coaching that analyzes classroom audio",
+      "sector": "other",
+      "announced_on": "2026-09-17",
+      "city": [
+        "Redwood City"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://markets.financialcontent.com/prnews/article/bizwire-2026-9-17-mcgraw-hill-acquires-teachfx-expanding-commitment-to-great-teaching-with-ai-coaching-tool-designed-by-educators",
+    "evidence": "a leading global provider of education solutions for preK-12, higher education and professional learning, today announced the acquisition of TeachFX, an AI-native instructional coaching platform that expands McGraw Hill’s professional learning capabilities",
+    "observed_at": "2026-10-02T11:09:43Z"
+  },
+  {
+    "data": {
+      "company": "Quantuma",
+      "website": "https://quantuma.io/",
+      "acquirer": [
+        "StrategyCorps"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI agents that surface commercial and business banking opportunities for bank relationship managers",
+      "sector": "finance",
+      "announced_on": "2026-09-17"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/strategycorps-acquires-quantuma-an-ai-native-relationship-solution-for-commercial-banking-302880988.html",
+    "evidence": "StrategyCorps today announced its acquisition of Quantuma, an AI-native relationship solution for commercial and business banking.",
+    "observed_at": "2026-10-02T12:23:34Z"
+  },
+  {
+    "data": {
+      "company": "PerspectAI",
+      "website": "https://perspect.ai/",
+      "acquirer": [
+        "Unstop"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Game-based, AI-powered talent assessments for hiring and employability",
+      "sector": "enterprise",
+      "announced_on": "2026-09-17"
+    },
+    "source_url": "https://hr.economictimes.indiatimes.com/news/industry/unstop-acquires-perspectai-in-all-equity-deal/134309429",
+    "evidence": "Unstop has acquired 100 percent of PerspectAI, and the deal covers the full business, its technology platform, intellectual property, data, client relationships and revenue, transferring to Unstop.",
+    "observed_at": "2026-10-02T12:23:37Z"
+  },
+  {
+    "data": {
+      "company": "Outarc (アウターク)",
+      "website": "https://outarc.co.jp/",
+      "acquirer": [
+        "Change Holdings"
+      ],
+      "deal_type": "majority-stake",
+      "focus": "AI systems that capture expert know-how and automate work for manufacturing and legacy industries",
+      "sector": "enterprise",
+      "announced_on": "2026-09-16",
+      "city": [
+        "Tokyo"
+      ],
+      "country": "Japan",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://prtimes.jp/main/html/rd/p/000000127.000084434.html",
+    "evidence": "株式会社チェンジホールディングス（本社：東京都港区、代表取締役兼執行役員社長：福留大士、以下「チェンジHD」）は、AIを活用したシステム開発および業務変革支援を行う株式会社アウターク（本社：東京都千代田区、代表取締役CEO：西山瑞生、以下「アウターク」）の株式を取得し、同社をチェンジHDのグループ会社としましたのでお知らせします。",
+    "observed_at": "2026-10-02T11:05:52Z"
+  },
+  {
+    "data": {
+      "company": "EasyMile",
+      "website": "https://easymile.com/",
+      "acquirer": [
+        "ALVEST"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Autonomous driving software and driverless vehicles for airports and industrial sites",
+      "sector": "robotics",
+      "announced_on": "2026-09-16",
+      "city": [
+        "Toulouse"
+      ],
+      "country": "France",
+      "region": "europe"
+    },
+    "source_url": "https://easymile.com/en/news-insights/tld-robotics-launched-as-alvest-group-acquires-easymile-and-tracteasy",
+    "evidence": "TLD Robotics, an ALVEST company dedicated to autonomous ground operations, today announced its launch. Comprising EasyMile, TractEasy and TLD's driverless activities, the company marks a strategic milestone following ALVEST’s acquisition of technology leader EasyMile.",
+    "observed_at": "2026-10-02T11:05:52Z"
+  },
+  {
+    "data": {
+      "company": "Headspace",
+      "website": "https://www.headspace.com/",
+      "acquirer": [
+        "Sword Health"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Mindfulness, sleep and mental health support app",
+      "sector": "health",
+      "announced_on": "2026-09-16",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.globenewswire.com/news-release/2026/09/16/3363038/0/en/sword-to-acquire-headspace-bringing-ai-care-to-the-world-s-most-trusted-mental-health-brand.html",
+    "evidence": "Sword, the world’s leading AI health company, today announced it has signed an agreement to acquire Headspace in a deal that marks a significant expansion of Sword’s footprint in mental health.",
+    "observed_at": "2026-10-02T11:09:43Z"
+  },
+  {
+    "data": {
+      "company": "CoVet",
+      "website": "https://co.vet/",
+      "acquirer": [
+        "IDEXX Laboratories"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI-native ambient listening and clinical workflow software for veterinary practices",
+      "sector": "health",
+      "announced_on": "2026-09-16",
+      "city": [
+        "Hamilton"
+      ],
+      "country": "Canada",
+      "region": "americas"
+    },
+    "source_url": "https://ir.idexx.com/news-events/press-releases/detail/417/idexx-laboratories-acquires-covetai-to-advance-veterinary-workflow-intelligence",
+    "evidence": "IDEXX Laboratories, Inc. (Nasdaq: IDXX), a global leader in pet healthcare innovation, today announced the acquisition of CoVetAI Inc. (CoVet), a leading and rapidly growing provider of AI-native ambient listening and clinical workflow software for veterinary practices.",
+    "observed_at": "2026-10-02T11:05:32Z"
+  },
+  {
+    "data": {
+      "company": "Planlabs",
+      "website": "https://www.planlabs.com/",
+      "acquirer": [
+        "Endra"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI generative design engine that automates building-technology (MEP) engineering",
+      "sector": "enterprise",
+      "announced_on": "2026-09-16",
+      "city": [
+        "Aarau"
+      ],
+      "country": "Switzerland",
+      "region": "europe"
+    },
+    "source_url": "https://www.prnewswire.co.uk/news-releases/endra-unveils-power-studio-the-first-ai-platform-purpose-built-for-electrical-engineering-acquires-planlabs-to-build-out-the-mechanical-discipline-302881013.html",
+    "evidence": "Alongside it, Endra announced the acquisition of Planlabs, a Swiss AI lab building an AI for mechanical engineering.",
+    "observed_at": "2026-10-02T11:11:56Z"
+  },
+  {
+    "data": {
+      "company": "Diaphora",
+      "website": "https://diaphora.ai/",
+      "acquirer": [
+        "Barndoor AI"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Frags, an open-source runtime and modeling language for reliable, governed AI workflows",
+      "sector": "developer-tools",
+      "announced_on": "2026-09-16"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/barndoor-acquires-diaphora-to-bring-governed-ai-automation-to-enterprise-workflows-302879999.html",
+    "evidence": "Barndoor AI, the AI Gateway for enterprises, has acquired Diaphora, the startup behind Frags, the open-source engine for building AI workflows.",
+    "observed_at": "2026-10-02T12:23:34Z"
+  },
+  {
+    "data": {
+      "company": "Looppanel",
+      "website": "https://www.looppanel.com/",
+      "acquirer": [
+        "Cyces"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI-powered analysis and repository for qualitative user research by UX and product teams",
+      "sector": "enterprise",
+      "announced_on": "2026-09-16"
+    },
+    "source_url": "https://www.theglobeandmail.com/investing/markets/markets-news/ACN/4638320/cyces-acquires-ai-powered-user-research-platform-looppanel/",
+    "evidence": "Cyces Inc. and Obtain Technologies Inc. announced today that Cyces has acquired Looppanel, an AI-powered qualitative research platform used by UX and product teams globally.",
+    "observed_at": "2026-10-02T12:23:39Z"
+  },
+  {
+    "data": {
+      "company": "Truelist",
+      "website": "https://truelist.com/",
+      "acquirer": [
+        "Mainstay"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI-powered listing platform that prepares seller updates and listing workflows for real estate brokers and agents",
+      "sector": "enterprise",
+      "announced_on": "2026-09-16"
+    },
+    "source_url": "https://www.globenewswire.com/news-release/2026/09/16/3363326/0/en/mainstay-raises-18m-and-acquires-truelist-to-expand-ai-infrastructure-across-residential-real-estate.html",
+    "evidence": "Mainstay, the intelligent system of record for residential real estate, today announced it raised more than $18 million in growth capital and acquired Truelist, an AI-powered listing platform for brokers and agents.",
+    "observed_at": "2026-10-02T12:23:43Z"
+  },
+  {
+    "data": {
+      "company": "Converse Health",
+      "website": "https://www.converse.health/",
+      "acquirer": [
+        "Hello Patient"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI workflow automation for the referral, document and chart work of outpatient medical practices",
+      "sector": "health",
+      "announced_on": "2026-09-15"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/hello-patient-acquires-converse-health-to-expand-ai-agents-across-the-full-patient-conversation-from-first-call-to-follow-up-302878654.html",
+    "evidence": "Hello Patient, the agentic AI company reinventing patient communications from the front office to the back office, today announced it has acquired Converse Health, an AI workflow automation company built for outpatient medical practices.",
+    "observed_at": "2026-10-02T12:23:34Z"
+  },
+  {
+    "data": {
+      "company": "Paradino",
+      "website": "https://paradino.ai/",
+      "acquirer": [
+        "Netwealth"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI automation platform for financial advisers' file notes, statements of advice and advice workflows",
+      "sector": "finance",
+      "announced_on": "2026-09-15",
+      "price_stated": "$20 million upfront, plus up to $9 million in earn-out and retention payments",
+      "country": "Australia",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.fool.com.au/2026/09/15/netwealth-to-acquire-ai-platform-paradino-boosting-adviser-automation/",
+    "evidence": "Netwealth is acquiring AI platform Paradino for $20 million to boost adviser automation and expand its wealth management technology capabilities.",
+    "observed_at": "2026-10-02T12:23:38Z"
+  },
+  {
+    "data": {
+      "company": "Fathom",
+      "website": "https://www.fathom.ai/",
+      "acquirer": [
+        "Superhuman"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI meeting notetaker and meeting intelligence",
+      "sector": "enterprise",
+      "announced_on": "2026-09-14",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://markets.financialcontent.com/prnews/article/bizwire-2026-9-14-superhuman-acquires-fathom-ai-notetaker",
+    "evidence": "Superhuman, the AI productivity platform bringing AI to wherever people work, announced today that it has acquired Fathom, an AI meeting partner trusted by hundreds of thousands of companies to capture, search, and act on what happens in meetings.",
+    "observed_at": "2026-10-02T11:09:43Z"
+  },
+  {
+    "data": {
+      "company": "Glass Imaging",
+      "website": "https://www.glass-imaging.com/",
+      "acquirer": [
+        "OpenAI"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI computational photography for smartphone cameras",
+      "sector": "consumer",
+      "announced_on": "2026-09-14",
+      "price_stated": "over $300 million",
+      "city": [
+        "Los Altos"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://techcrunch.com/2026/09/14/openai-buys-smartphone-camera-maker-glass-imaging-for-300-million-report-says/",
+    "evidence": "OpenAI has bought smartphone camera maker Glass Imaging in a deal worth over $300 million, according to a report from The Wall Street Journal.",
+    "observed_at": "2026-10-02T11:09:43Z"
+  },
+  {
+    "data": {
+      "company": "BitSink",
+      "website": "https://bitsink.io/",
+      "acquirer": [
+        "AirJoule Technologies"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Liquid cooling, electrical switchgear and racking infrastructure for AI and HPC data centers",
+      "sector": "infrastructure",
+      "announced_on": "2026-09-14",
+      "price_stated": "$18 million cash and $9 million stock upfront, plus up to $40 million",
+      "city": [
+        "Chesnee"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.globenewswire.com/news-release/2026/09/14/3360921/0/en/airjoule-technologies-acquires-bitsink-adding-profitable-ai-hpc-infrastructure-cooling-business.html",
+    "evidence": "AirJoule Technologies acquired 100% of BitSink for upfront consideration of $18 million in cash and $9 million in AIRJ common stock.",
+    "observed_at": "2026-10-02T11:08:49Z"
+  },
+  {
+    "data": {
+      "company": "Lucent",
+      "website": "https://uselucent.com/",
+      "acquirer": [
+        "fal"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Agentic creative AI platform that makes ad images and videos for marketers and creators",
+      "sector": "enterprise",
+      "announced_on": "2026-09-14",
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/fal-acquires-lucent-welcomes-co-founders-dimi-panagiotopoulos-and-alex-koumpas-to-the-team-302877934.html",
+    "evidence": "fal has acquired Lucent, an AI agent-based platform for creative media, bringing its two founders in-house as the company invests in the exceptional builders shaping the future of generative media.",
+    "observed_at": "2026-10-02T12:23:33Z"
+  },
+  {
+    "data": {
+      "company": "WonderTwin AI",
+      "website": "https://wondertwin.ai/",
+      "acquirer": [
+        "LocalStack"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Local emulators of third-party SaaS apps and APIs for testing integrations by developers and AI agents",
+      "sector": "developer-tools",
+      "announced_on": "2026-09-14"
+    },
+    "source_url": "https://www.globenewswire.com/news-release/2026/09/14/3361421/0/en/localstack-acquires-wondertwin-ai-to-let-developers-and-ai-agents-build-integrations-locally.html",
+    "evidence": "LocalStack, the market leader in local cloud development, today announced that it has acquired WonderTwin AI, a provider of local application emulators for AI-native software development workflows",
+    "observed_at": "2026-10-02T12:23:36Z"
+  },
+  {
+    "data": {
+      "company": "Mechanize",
+      "website": "https://www.mechanize.work/",
+      "acquirer": [
+        "Google"
+      ],
+      "deal_type": "license-and-hire",
+      "focus": "Technology that helps AI models improve at coding",
+      "sector": "developer-tools",
+      "announced_on": "2026-09-11",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.businessinsider.com/google-completes-deal-for-ai-agents-startup-mechanize-2026-9",
+    "evidence": "Google has some fresh talent in the AI race. The tech giant has completed its talent deal with San Francisco startup Mechanize Inc, public postings show.",
+    "observed_at": "2026-10-02T11:05:26Z"
+  },
+  {
+    "data": {
+      "company": "Blaxel",
+      "website": "https://blaxel.ai/",
+      "acquirer": [
+        "Baseten"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Secure, persistent sandbox execution environments for AI agents",
+      "sector": "infrastructure",
+      "announced_on": "2026-09-10",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://blaxel.ai/blog/blaxel-is-joining-baseten-to-build-the-future-of-agentic-infrastructure",
+    "evidence": "Today we’re announcing that Blaxel has been acquired by Baseten. The TL;DR: the Blaxel platform keeps running.",
+    "observed_at": "2026-10-02T11:09:51Z"
+  },
+  {
+    "data": {
+      "company": "Dioxus Labs",
+      "website": "https://dioxuslabs.com/",
+      "acquirer": [
+        "Cognition"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Dioxus, the open-source Rust framework for fullstack web, desktop and mobile apps",
+      "sector": "developer-tools",
+      "announced_on": "2026-09-10"
+    },
+    "source_url": "https://dioxuslabs.com/blog/joining-cognition",
+    "evidence": "Dioxus Labs is joining Cognition September 10, 2026 - Jonathan Kelley The Dioxus team is joining Cognition to accelerate Devin, and will keep building Dioxus, Blitz, Taffy, and Subsecond.",
+    "observed_at": "2026-10-02T12:23:33Z"
+  },
+  {
+    "data": {
+      "company": "Ratel Robotics",
+      "website": "https://robots.com.ua/",
+      "acquirer": [
+        "Swarmer"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Modular unmanned ground vehicles for battlefield logistics, casualty evacuation, reconnaissance and demining",
+      "sector": "defense",
+      "announced_on": "2026-09-10",
+      "price_stated": "up to $224 million in cash and stock if all earnout milestones are met",
+      "country": "Ukraine",
+      "region": "europe"
+    },
+    "source_url": "https://www.globenewswire.com/news-release/2026/09/10/3359272/0/en/swarmer-enters-into-definitive-agreement-to-acquire-ratel-robotics-a-leading-ukrainian-unmanned-ground-vehicle-manufacturer-for-up-to-224-million.html",
+    "evidence": "Swarmer Enters Into Definitive Agreement to Acquire Ratel Robotics, a Leading Ukrainian Unmanned Ground Vehicle Manufacturer, for Up to $224 Million",
+    "observed_at": "2026-10-02T12:23:39Z"
+  },
+  {
+    "data": {
+      "company": "Tropicalia",
+      "website": "https://www.tropicalia.dev/",
+      "acquirer": [
+        "Strattum"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI context-engineering platform that connects AI agents to the right company data",
+      "sector": "developer-tools",
+      "announced_on": "2026-09-10"
+    },
+    "source_url": "https://www.infomoney.com.br/colunistas/terapia-de-ideias/tropicalia-como-um-professor-e-seu-melhor-aluno-venderam-uma-startup-em-pouco-mais-de-um-ano/",
+    "evidence": "A startup se chama Tropicalia e acaba de ser comprada pela Strattum, empresa de infraestrutura de dados liderada por Kadu Monguilhott.",
+    "observed_at": "2026-10-02T12:23:43Z"
+  },
+  {
+    "data": {
+      "company": "Alif Semiconductor",
+      "website": "https://alifsemi.com/",
+      "acquirer": [
+        "Analog Devices"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Edge AI microcontrollers and fusion processors with integrated neural processing units",
+      "sector": "infrastructure",
+      "announced_on": "2026-09-09",
+      "price_usd": 1350000000,
+      "city": [
+        "Pleasanton"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/analog-devices-to-acquire-alif-semiconductor-adding-an-ai-native-processing-platform-to-advance-physical-intelligence-for-the-next-generation-of-real-world-systems-302873715.html",
+    "evidence": "Analog Devices, Inc. (NASDAQ: ADI) and Alif Semiconductor today announced that they have entered into a definitive agreement under which ADI will acquire Alif in an all-cash transaction for $1.35 billion.",
+    "observed_at": "2026-10-02T10:35:11Z"
+  },
+  {
+    "data": {
+      "company": "Marr Labs",
+      "website": "https://www.marrlabs.com/",
+      "acquirer": [
+        "PayNearMe"
+      ],
+      "deal_type": "acqui-hire",
+      "focus": "Enterprise AI agents that automate voice, messaging and workflows in regulated industries",
+      "sector": "enterprise",
+      "announced_on": "2026-09-09",
+      "city": [
+        "Lafayette"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/paynearme-acquires-marr-labs-to-accelerate-ai-innovation-across-the-end-to-end-payment-experience-302872925.html",
+    "evidence": "today announced that it has acquired the technology assets and hired the key employees of Marr Labs, an AI company that develops agentic solutions to automate voice, messaging and workflows in complex, regulated environments.",
+    "observed_at": "2026-10-02T10:35:11Z"
+  },
+  {
+    "data": {
+      "company": "Stilla",
+      "website": "https://stilla.ai/",
+      "acquirer": [
+        "Meta"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Multiplayer AI agent platform for teams with shared company context and permissions",
+      "sector": "enterprise",
+      "announced_on": "2026-09-09",
+      "city": [
+        "Stockholm"
+      ],
+      "country": "Sweden",
+      "region": "europe"
+    },
+    "source_url": "https://www.mediapost.com/publications/article/417764/meta-acquires-swedish-ai-startup-to-boost-automate.html",
+    "evidence": "Meta has acquired Swedish AI startup Stilla.ai, with plans to integrate the company",
+    "observed_at": "2026-10-02T11:05:52Z"
+  },
+  {
+    "data": {
+      "company": "Guardrails AI",
+      "website": "https://guardrailsai.com/",
+      "acquirer": [
+        "Harvey"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Open-source AI guardrails framework and agent simulation for testing and controlling AI agent behavior",
+      "sector": "security",
+      "announced_on": "2026-09-09",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.harvey.ai/blog/guardrails-ai-joins-harvey",
+    "evidence": "Harvey today announced its acquisition of San Francisco-based Guardrails AI, an AI security platform for agents.",
+    "observed_at": "2026-10-02T11:09:50Z"
+  },
+  {
+    "data": {
+      "company": "DeepSource",
+      "website": "https://deepsource.com/",
+      "acquirer": [
+        "Harness"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI code review platform with agentic code review and code security",
+      "sector": "developer-tools",
+      "announced_on": "2026-09-09",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://deepsource.com/blog/deepsource-joins-harness",
+    "evidence": "We’re excited to announce that Harness has acquired DeepSource. We’re joining Harness to bring our agentic code review and code security capabilities into Harness’s Autonomous SDLC Platform",
+    "observed_at": "2026-10-02T11:09:51Z"
+  },
+  {
+    "data": {
+      "company": "DeepNeuronic",
+      "website": "https://www.deepneuronic.com/",
+      "acquirer": [
+        "Motorola Solutions"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI video analytics that flag incidents on live security camera feeds",
+      "sector": "security",
+      "announced_on": "2026-09-08",
+      "city": [
+        "Covilhã"
+      ],
+      "country": "Portugal",
+      "region": "europe"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/young-america-capital-advises-deepneuronic-on-sale-to-motorola-solutions-302893125.html",
+    "evidence": "it advised DeepNeuronic, a Portuguese developer of AI video analytics, on its sale to Motorola Solutions, Inc. (NYSE: MSI). Motorola Solutions acquired 100% of DeepNeuronic's share capital, including its Brazilian subsidiary. Terms were not disclosed.",
+    "observed_at": "2026-10-02T10:33:55Z"
+  },
+  {
+    "data": {
+      "company": "Query Juriste",
+      "website": "https://www.query-juriste.com/",
+      "acquirer": [
+        "Lexroom"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Agentic legal research AI connected to official French and EU legal sources",
+      "sector": "enterprise",
+      "announced_on": "2026-09-08",
+      "city": [
+        "Paris"
+      ],
+      "country": "France",
+      "region": "europe"
+    },
+    "source_url": "https://pulse2.com/lexroom-acquires-query-juriste-and-praven-intelekt-expanding-into-france-and-bulgaria/",
+    "evidence": "Lexroom has acquired 100% of French legal AI company Query Juriste and Bulgarian legal technology company Praven Intelekt, completing its first M&A transactions and expanding its European footprint to five markets.",
+    "observed_at": "2026-10-02T11:05:52Z"
+  },
+  {
+    "data": {
+      "company": "Praven Intelekt",
+      "website": "https://www.pravenintelekt.com/",
+      "acquirer": [
+        "Lexroom"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI legal assistant for Bulgarian law covering research, document analysis and drafting",
+      "sector": "enterprise",
+      "announced_on": "2026-09-08",
+      "city": [
+        "Sofia"
+      ],
+      "country": "Bulgaria",
+      "region": "europe"
+    },
+    "source_url": "https://pulse2.com/lexroom-acquires-query-juriste-and-praven-intelekt-expanding-into-france-and-bulgaria/",
+    "evidence": "Lexroom has acquired 100% of French legal AI company Query Juriste and Bulgarian legal technology company Praven Intelekt, completing its first M&A transactions and expanding its European footprint to five markets.",
+    "observed_at": "2026-10-02T11:05:52Z"
+  },
+  {
+    "data": {
+      "company": "Kinetix",
+      "website": "https://kinetix.tech/",
+      "acquirer": [
+        "Runway"
+      ],
+      "deal_type": "acqui-hire",
+      "focus": "Generative models for 3D human motion and physically grounded video generation",
+      "sector": "foundation-models",
+      "announced_on": "2026-09-08",
+      "city": [
+        "Paris"
+      ],
+      "country": "France",
+      "region": "europe"
+    },
+    "source_url": "https://runway.com/news/company-news/kinetix-joins-runway",
+    "evidence": "Today we're announcing that the team from Kinetix, a Paris-based AI research lab, is joining Runway.",
+    "observed_at": "2026-10-02T11:05:52Z"
+  },
+  {
+    "data": {
+      "company": "Bonfy.AI",
+      "website": "https://www.bonfy.ai/",
+      "acquirer": [
+        "Kiteworks"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI-native data security platform classifying and enforcing policy on sensitive data across AI agents and human workflows",
+      "sector": "security",
+      "announced_on": "2026-09-08",
+      "city": [
+        "Los Altos"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.kiteworks.com/company/press-releases/kiteworks-acquires-bonfy-ai/",
+    "evidence": "Kiteworks, which empowers organizations to effectively manage risk in every send, share, receive, and use of private data, today announced it has acquired Bonfy.AI, an AI data security company",
+    "observed_at": "2026-10-02T11:09:48Z"
+  },
+  {
+    "data": {
+      "company": "Overlayy",
+      "website": "https://overlayy.com/",
+      "acquirer": [
+        "Monaco"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Agentic AI copilot for B2B sales reps that analyses sales conversations",
+      "sector": "enterprise",
+      "announced_on": "2026-09-04",
+      "city": [
+        "Bengaluru"
+      ],
+      "country": "India",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://markets.businessinsider.com/news/currencies/bengaluru-based-sales-intelligence-startup-overlayy-becomes-a-part-of-benchmark-backed-monaco-1036523860",
+    "evidence": "Sam Blond’s SF-based AI-native revenue platform Monaco today announced that it has acquired Overlayy, a Bengaluru-based B2B sales intelligence startup.",
+    "observed_at": "2026-10-02T11:05:52Z"
+  },
+  {
+    "data": {
+      "company": "Hugging Face",
+      "website": "https://huggingface.co/",
+      "acquirer": [
+        "NVIDIA"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Open platform where developers share and deploy AI models, datasets and apps",
+      "sector": "developer-tools",
+      "announced_on": "2026-09-03",
+      "price_usd": 12930300000,
+      "city": [
+        "New York"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/",
+    "evidence": "I’m excited to announce that NVIDIA has agreed to acquire Hugging Face for $12,930,300,000. Together, we will scale Hugging Face’s platform, strengthen its infrastructure and expand access to AI for developers and institutions worldwide.",
+    "observed_at": "2026-10-02T10:43:05Z"
+  },
+  {
+    "data": {
+      "company": "EPC Power",
+      "website": "https://www.epcpower.com/",
+      "acquirer": [
+        "Flex"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Intelligent power conversion systems for AI data centers and grid applications",
+      "sector": "infrastructure",
+      "announced_on": "2026-09-03",
+      "price_usd": 4400000000,
+      "city": [
+        "Poway"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/flex-to-acquire-epc-power-adding-leading-power-conversion-capabilities-for-ai-data-centers-and-grid-applications-302869402.html",
+    "evidence": "Flex (NASDAQ: FLEX) today announced that it has entered into a definitive agreement to acquire EPC Power at a value of $4.4 billion, subject to customary adjustments.",
+    "observed_at": "2026-10-02T10:36:31Z"
+  },
+  {
+    "data": {
+      "company": "Empion",
+      "website": "https://www.empion.io/",
+      "acquirer": [
+        "Factorial"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI-powered talent assessment and culture-fit recruiting platform",
+      "sector": "enterprise",
+      "announced_on": "2026-09-03",
+      "city": [
+        "Berlin"
+      ],
+      "country": "Germany",
+      "region": "europe"
+    },
+    "source_url": "https://www.trendingtopics.eu/factorial-from-spain-acquires-berlin-ai-startup-empion/",
+    "evidence": "Spanish scale-up Factorial is acquiring Berlin-based AI startup Empion. The deal hands a German specialist in AI-powered talent assessments to a company that recently joined the ranks of Europe’s most valuable AI scale-ups at a valuation of 2.5 billion dollars.",
+    "observed_at": "2026-10-02T11:05:52Z"
+  },
+  {
+    "data": {
+      "company": "Sweep",
+      "website": "https://www.sweep.io/",
+      "acquirer": [
+        "ServiceNow"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Agentic metadata layer for go-to-market and CRM systems",
+      "sector": "enterprise",
+      "announced_on": "2026-09-03",
+      "price_stated": "in the hundreds of millions of dollars",
+      "city": [
+        "Tel Aviv",
+        "New York"
+      ],
+      "country": "Israel / United States",
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://salesforcedevops.net/index.php/2026/09/08/the-400-million-admin-tool/",
+    "evidence": "On Thursday, September 3, Calcalist’s CTech reported that ServiceNow is acquiring Sweep, the Tel Aviv and New York company that builds an agentic metadata layer for go-to-market systems, for a sum in the hundreds of millions of dollars.",
+    "observed_at": "2026-10-02T11:05:28Z"
+  },
+  {
+    "data": {
+      "company": "Brightray Science",
+      "website": "https://www.brightraydc.com/",
+      "acquirer": [
+        "BUUU Group"
+      ],
+      "deal_type": "majority-stake",
+      "focus": "Prefabricated, modular AI data center design, manufacturing and delivery",
+      "sector": "infrastructure",
+      "announced_on": "2026-09-03"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/buuu-group-limited-signs-definitive-agreement-to-acquire-majority-stake-in-brightray-science-inc-and-over-us60-million-of-private-placements-making-industrialized-ai-data-center-delivery-its-core-growth-business-302868989.html",
+    "evidence": "BUUU Group Limited (Nasdaq: BUUU) (\"BUUU\" or the \"Company\") today announced that it has entered into a definitive agreement to acquire a 60% equity interest in Brightray Science Inc. (\"Brightray\"), a provider of fully integrated, prefabricated modular data center solutions.",
+    "observed_at": "2026-10-02T12:23:39Z"
+  },
+  {
+    "data": {
+      "company": "UtilityInnovation Group",
+      "website": "https://uig.com/",
+      "acquirer": [
+        "Vertiv"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Microgrid controls, onsite power orchestration and behind-the-meter power architecture for AI data centers",
+      "sector": "infrastructure",
+      "announced_on": "2026-09-02",
+      "price_usd": 1450000000,
+      "price_stated": "approximately $1.45 billion plus up to $1.15 billion earnout",
+      "city": [
+        "Raleigh"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/vertiv-announces-agreement-to-acquire-utilityinnovation-group-to-accelerate-time-to-power-for-ai-data-centers-302867612.html",
+    "evidence": "Vertiv Announces Agreement to Acquire UtilityInnovation Group to Accelerate Time to Power for AI Data Centers At the approximately $1.45 billion purchase price, the acquisition represents approximately 13x expected UIG 2027 EBITDA.",
+    "observed_at": "2026-10-02T11:08:36Z"
+  },
+  {
+    "data": {
+      "company": "Rilo",
+      "website": "https://rilo.ai/",
+      "acquirer": [
+        "Adobe"
+      ],
+      "deal_type": "acqui-hire",
+      "focus": "AI agents that build multi-step marketing and go-to-market workflows from plain-English instructions",
+      "sector": "enterprise",
+      "announced_on": "2026-09-02",
+      "city": [
+        "Bengaluru"
+      ],
+      "country": "India",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.cxodigitalpulse.com/adobe-acquires-bengaluru-ai-startup-rilo-to-expand-agentic-marketing-workflows/",
+    "evidence": "Adobe has acquired Bengaluru-based Rilo, an AI automation startup founded less than a year ago, through a transaction covering intellectual-property licensing and the transfer of its team.",
+    "observed_at": "2026-10-02T11:05:29Z"
+  },
+  {
+    "data": {
+      "company": "Teachally",
+      "website": "https://teachally.com/",
+      "acquirer": [
+        "McGraw Hill"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI platform for creating and customizing K-12 curriculum and lessons",
+      "sector": "other",
+      "announced_on": "2026-09-02",
+      "city": [
+        "Bothell"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://markets.financialcontent.com/prnews.pre/article/bizwire-2026-9-2-mcgraw-hill-acquires-teachally-to-accelerate-k-12-curriculum-development-and-expand-ai-tools-for-educators",
+    "evidence": "McGraw Hill has acquired Teachally, enabling the company to bring high-quality K-12 curriculum products to market faster and offering new AI-powered tools that help teachers save time and customize curriculum to their classroom needs.",
+    "observed_at": "2026-10-02T11:05:31Z"
+  },
+  {
+    "data": {
+      "company": "Console",
+      "website": "https://www.console.com/",
+      "acquirer": [
+        "Palo Alto Networks"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI-native IT service management whose agents automate help desk requests, access governance and asset management",
+      "sector": "enterprise",
+      "announced_on": "2026-09-01",
+      "price_usd": 500000000,
+      "price_stated": "reportedly $500 million in cash and stock",
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://techcrunch.com/2026/09/02/palo-alto-networks-paid-500m-for-thrive-backed-console-sources-say/",
+    "evidence": "Palo Alto Networks paid $500 million in cash and stock to acquire Console, a two-year-old startup that uses AI agents to automate routine IT help desk tasks, according to two people with knowledge of the deal.",
+    "observed_at": "2026-10-02T12:23:44Z"
+  },
+  {
+    "data": {
+      "company": "Plangrep",
+      "website": "https://plangrep.com/",
+      "acquirer": [
+        "Buildcheck"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI that reads construction drawings and extracts structured data",
+      "sector": "enterprise",
+      "announced_on": "2026-08-31",
+      "city": [
+        "Minneapolis"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://contechroundup.substack.com/p/last-week-in-contech-14-september",
+    "evidence": "Last week, Buildcheck announced they acquired Plangrep, a Minneapolis startup that is building a construction intelligence platform that can read construction drawings and extract structured data.",
+    "observed_at": "2026-10-02T11:09:43Z"
+  },
+  {
+    "data": {
+      "company": "Feenyx",
+      "website": "https://www.feenyx.ai/",
+      "acquirer": [
+        "Recruiter.com"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI hiring platform for skills assessments, interview intelligence, candidate verification and fraud detection",
+      "sector": "enterprise",
+      "announced_on": "2026-08-31"
+    },
+    "source_url": "https://www.citybiz.co/article/896094/recruiter-com-acquires-feenyx-to-expand-ai-powered-candidate-assessment/",
+    "evidence": "Recruiter.com has acquired Feenyx, an AI-powered hiring technology company that has supported more than 600,000 hours of candidate evaluations",
+    "observed_at": "2026-10-02T12:23:41Z"
+  },
+  {
+    "data": {
+      "company": "Fravity",
+      "website": "https://fravity.ai/",
+      "acquirer": [
+        "Socure"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Agentic AI platform automating fraud, risk and compliance investigations",
+      "sector": "finance",
+      "announced_on": "2026-08-27",
+      "city": [
+        "Austin"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.techtimes.com/articles/325817/20260827/socure-raises-156m-buys-fravity-deploy-ai-agents-against-8000-fraud-surge.htm",
+    "evidence": "Socure Raises $156M, Buys Fravity to Deploy AI Agents Against 8,000% Fraud Surge",
+    "observed_at": "2026-10-02T11:09:43Z"
+  },
+  {
+    "data": {
+      "company": "FullyRamped",
+      "website": "https://fullyramped.com/",
+      "acquirer": [
+        "Nooks"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI roleplay and coaching voice agents for sales training",
+      "sector": "enterprise",
+      "announced_on": "2026-08-26"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/nooks-acquires-fullyramped-founder-aaron-marks-joins-nooks-to-advance-revenue-agent-platform-302860798.html",
+    "evidence": "Nooks, the Revenue Agent Platform built to power the next generation of revenue teams, today announced it has acquired FullyRamped, an AI-native sales coaching platform known for its realistic AI roleplay agents.",
+    "observed_at": "2026-10-02T12:23:34Z"
+  },
+  {
+    "data": {
+      "company": "SocketTime",
+      "website": "https://www.sockettime.com/",
+      "acquirer": [
+        "Numa"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Fixed-operations software for dealership service scheduling, dispatch, technician capacity and inspections",
+      "sector": "enterprise",
+      "announced_on": "2026-08-26",
+      "city": [
+        "Kansas City"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/numa-acquires-sockettime-to-deepen-its-ai-operating-system-in-dealership-fixed-operations-and-shop-302860244.html",
+    "evidence": "Numa, the AI operating system for modern dealership operations, today announced the acquisition of SocketTime, a fixed-ops software company that helps dealerships run service scheduling",
+    "observed_at": "2026-10-02T12:23:34Z"
+  },
+  {
+    "data": {
+      "company": "AskTuring",
+      "website": "https://www.askturing.ai/",
+      "acquirer": [
+        "VRC"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI that lets organizations securely search and use the information in their document repositories",
+      "sector": "enterprise",
+      "announced_on": "2026-08-25",
+      "city": [
+        "La Jolla"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/vrc-acquires-askturing-to-enhance-technology-stack-302859453.html",
+    "evidence": "Vital Records Control (VRC Companies, LLC), a leading provider of information governance services, announced its acquisition of the AI platform company, AskTuring.",
+    "observed_at": "2026-10-02T10:36:16Z"
+  },
+  {
+    "data": {
+      "company": "Lica",
+      "website": "https://lica.world/",
+      "acquirer": [
+        "Gamma"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI design platform that generates on-brand images and marketing videos",
+      "sector": "enterprise",
+      "announced_on": "2026-08-25"
+    },
+    "source_url": "https://techcrunch.com/2026/08/25/gamma-acquires-accel-backed-design-startup-lica/",
+    "evidence": "Presentation startup Gamma has acquired Accel-backed design startup Lica in a bid to build out its own design research lab, TechCrunch has learned exclusively.",
+    "observed_at": "2026-10-02T12:23:33Z"
+  },
+  {
+    "data": {
+      "company": "DeLorean AI",
+      "website": "https://deloreanai.com/",
+      "acquirer": [
+        "WellStack"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Healthcare AI for predictive analytics, risk stratification and action-oriented decision support",
+      "sector": "health",
+      "announced_on": "2026-08-25"
+    },
+    "source_url": "https://markets.financialcontent.com/stocks/article/bizwire-2026-8-25-wellstack-acquires-delorean-ai-to-advance-healthcare-decision-intelligence",
+    "evidence": "WellStack today announced the acquisition of DeLorean AI, a healthcare-focused artificial intelligence company specializing in predictive analytics, risk stratification, and action-oriented decision support.",
+    "observed_at": "2026-10-02T12:23:40Z"
+  },
+  {
+    "data": {
+      "company": "ADLATUS Robotics",
+      "website": "https://www.adlatus.eu/",
+      "acquirer": [
+        "NEURA Robotics"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Autonomous cleaning and sweeping robots for professional cleaning",
+      "sector": "robotics",
+      "announced_on": "2026-08-24",
+      "city": [
+        "Ulm"
+      ],
+      "country": "Germany",
+      "region": "europe"
+    },
+    "source_url": "https://neura-robotics.com/neura-acquires-adlatus-robotics/",
+    "evidence": "NEURA Mobile Robots GmbH is acquiring 100 percent of the shares in ADLATUS Robotics GmbH of Ulm, an established provider of autonomous cleaning robotics.",
+    "observed_at": "2026-10-02T11:08:50Z"
+  },
+  {
+    "data": {
+      "company": "C2i Semiconductors",
+      "website": "https://c2isemi.com/",
+      "acquirer": [
+        "Infineon"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Software-defined multiphase controllers and smart power stages for AI data center power delivery",
+      "sector": "infrastructure",
+      "announced_on": "2026-08-24",
+      "city": [
+        "Bengaluru"
+      ],
+      "country": "India",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.infineon.com/press-release/2026/infpr202608-129",
+    "evidence": "Infineon Technologies AG (FSE: IFX / OTCQX: IFNNY) today announced the acquisition of C2i Semiconductors, a Bangalore-based technology company specializing in software-defined multiphase controllers and smart power stages for AI data center applications.",
+    "observed_at": "2026-10-02T11:07:27Z"
+  },
+  {
+    "data": {
+      "company": "Claros",
+      "website": "https://claros.tech/",
+      "acquirer": [
+        "Navitas Semiconductor"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Vertical power delivery and integrated voltage regulators for AI processors in data centers",
+      "sector": "infrastructure",
+      "announced_on": "2026-08-24",
+      "price_stated": "up to approximately $232.8 million",
+      "city": [
+        "McLean"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.globenewswire.com/news-release/2026/08/25/3350179/0/en/navitas-to-acquire-claros-advancing-ai-infrastructure-with-vpd-ivr-technology-for-grid-to-xpu.html",
+    "evidence": "Under the terms of the definitive merger agreement, Navitas will acquire Claros in a transaction valued up to approximately $232.8 million, comprised of approximately $216.0 million to be paid at closing in a combination of cash and shares",
+    "observed_at": "2026-10-02T11:08:36Z"
+  },
+  {
+    "data": {
+      "company": "Poolside",
+      "website": "https://poolside.ai/",
+      "acquirer": [
+        "NVIDIA"
+      ],
+      "deal_type": "license-and-hire",
+      "focus": "AI models for software development and the model-factory software used to build and train them",
+      "sector": "foundation-models",
+      "announced_on": "2026-08-20",
+      "price_usd": 6000000000,
+      "price_stated": "$6bn to license its model factory, plus a $1bn investment"
+    },
+    "source_url": "https://thenextweb.com/news/nvidia-poolside-6bn-model-factory-licence",
+    "evidence": "Nvidia has agreed to pay Poolside $6bn to license the software the startup used to build AI models, and to offer jobs to 109 of its staff.",
+    "observed_at": "2026-10-02T12:23:32Z"
+  },
+  {
+    "data": {
+      "company": "Casper Studios",
+      "website": "https://casperstudios.com/",
+      "acquirer": [
+        "Ode with Anthropic"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI services firm that builds skills, connectors and context to put Claude to work in companies' existing systems",
+      "sector": "enterprise",
+      "announced_on": "2026-08-20"
+    },
+    "source_url": "https://www.ode.com/press/ode-with-anthropic-acquires-casper-studios",
+    "evidence": "Today, Ode with Anthropic, an enterprise AI transformation company, announced it has acquired Casper Studios (Casper). Casper is an AI services firm that helps companies put Claude to work inside the systems their teams already use.",
+    "observed_at": "2026-10-02T12:23:40Z"
+  },
+  {
+    "data": {
+      "company": "OpenRouter",
+      "website": "https://openrouter.ai/",
+      "acquirer": [
+        "Stripe"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI model gateway that routes requests and token spend across hundreds of models and providers",
+      "sector": "developer-tools",
+      "announced_on": "2026-08-19",
+      "price_stated": "reported $7.5 billion (NYT) or more than $8 billion (Axios)",
+      "city": [
+        "New York"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://thenextweb.com/news/stripe-openrouter-acquisition-confirmed",
+    "evidence": "Stripe has confirmed it is buying OpenRouter, the gateway that routes company spending across hundreds of AI models. Neither side disclosed a price; the New York Times reports $7.5bn, Axios more than $8bn.",
+    "observed_at": "2026-10-02T11:33:43Z"
+  },
+  {
+    "data": {
+      "company": "Graphwise",
+      "website": "https://graphwise.ai/",
+      "acquirer": [
+        "Oakley Capital"
+      ],
+      "deal_type": "majority-stake",
+      "focus": "Knowledge-graph and semantic-layer platform that grounds enterprise AI in trusted data",
+      "sector": "developer-tools",
+      "announced_on": "2026-08-19",
+      "city": [
+        "Sofia"
+      ],
+      "country": "Bulgaria",
+      "region": "europe"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/oakley-capital-invests-in-graphwise-to-help-enterprises-ground-ai-in-trusted-knowledge-302853264.html",
+    "evidence": "Graphwise, the leading Graph AI provider, today announced that Oakley Capital (\"Oakley\"), a leading European mid-market private equity investor, has acquired a majority stake in the company",
+    "observed_at": "2026-10-02T10:36:16Z"
+  },
+  {
+    "data": {
+      "company": "Instant",
+      "website": "https://www.instantdb.com/",
+      "acquirer": [
+        "OpenAI"
+      ],
+      "deal_type": "acqui-hire",
+      "focus": "Real-time database and backend for AI-coded apps",
+      "sector": "developer-tools",
+      "announced_on": "2026-08-19"
+    },
+    "source_url": "https://www.instantdb.com/essays/instant_team_joins_openai",
+    "evidence": "We have a big announcement to make today: the Instant team is joining OpenAI.",
+    "observed_at": "2026-10-02T12:23:32Z"
+  },
+  {
+    "data": {
+      "company": "Lupl",
+      "website": "https://www.lupl.com/",
+      "acquirer": [
+        "Elevate"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI-native legal project management and workflow platform that runs inside Claude, Harvey and Copilot",
+      "sector": "enterprise",
+      "announced_on": "2026-08-19"
+    },
+    "source_url": "https://markets.financialcontent.com/prnews/article/accwirecq-2026-8-19-elevate-acquires-lupl",
+    "evidence": "Elevate, the expert-led, AI-powered law company, today announced the acquisition of Lupl, the AI-native legal project management and workflow automation platform",
+    "observed_at": "2026-10-02T12:23:42Z"
+  },
+  {
+    "data": {
+      "company": "Humata Health",
+      "website": "https://www.humatahealth.com/",
+      "acquirer": [
+        "R1"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI-powered touchless prior authorization platform for providers and payers",
+      "sector": "health",
+      "announced_on": "2026-08-18",
+      "city": [
+        "Winter Park"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.humatahealth.com/newsroom/r1-to-acquire-humata-health",
+    "evidence": "R1, an industry leader in healthcare revenue management, today announced that it has entered into an agreement to acquire Humata Health, a leader in AI-powered, touchless prior authorizations.",
+    "observed_at": "2026-10-02T11:09:43Z"
+  },
+  {
+    "data": {
+      "company": "Relay.app",
+      "website": "https://relay.app/",
+      "acquirer": [
+        "Google"
+      ],
+      "deal_type": "acqui-hire",
+      "focus": "AI workflow automation platform for businesses",
+      "sector": "enterprise",
+      "announced_on": "2026-08-17",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://techcrunch.com/2026/08/17/ai-automation-startup-relay-shuts-down-staff-joins-googles-chrome-team/",
+    "evidence": "Relay, an AI-powered workflow automation tool that was launched in 2021 with the goal of becoming the new Zapier, is shutting down, and some of its staff — including its top executive — are joining Google’s Chrome team.",
+    "observed_at": "2026-10-02T11:59:24Z"
+  },
+  {
+    "data": {
+      "company": "Virtue AI",
+      "website": "https://www.virtueai.com/",
+      "acquirer": [
+        "Fortinet"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI runtime protection, automated red-teaming and guardrails for AI models and autonomous agents",
+      "sector": "security",
+      "announced_on": "2026-08-17",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.fortinet.com/corporate/about-us/newsroom/press-releases/2026/fortinet-advances-continuous-ai-protection-with-the-acquisition-of-virtue-ai",
+    "evidence": "Fortinet ® (NASDAQ: FTNT), the global cybersecurity leader driving the convergence of networking and security, today announced it has acquired Virtue AI, an innovator in AI runtime protection, automated AI validation, and security for autonomous AI systems.",
+    "observed_at": "2026-10-02T11:55:49Z"
+  },
+  {
+    "data": {
+      "company": "Arize AI",
+      "website": "https://arize.com/",
+      "acquirer": [
+        "Dynatrace"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI and agent observability, evaluation and tracing platform",
+      "sector": "developer-tools",
+      "announced_on": "2026-08-13",
+      "price_usd": 915000000,
+      "city": [
+        "Berkeley"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.techtarget.com/it-strategy/news/366648773/Dynatrace-acquires-Arize-for-AI-agent-development",
+    "evidence": "Dynatrace is betting that demand for custom AI agent development will, too, and is anticipating that demand with a $915 million deal to acquire a venture-backed startup. The cash-and-stock deal for Arize AI, a 200-employee company based in Berkeley, Calif. and founded in 2020",
+    "observed_at": "2026-10-02T10:54:10Z"
+  },
+  {
+    "data": {
+      "company": "Firetiger",
+      "website": "https://www.firetiger.com/",
+      "acquirer": [
+        "Cursor"
+      ],
+      "deal_type": "acqui-hire",
+      "focus": "Agents that monitor deployments, catch regressions and investigate production incidents",
+      "sector": "developer-tools",
+      "announced_on": "2026-08-13",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://cursor.com/blog/firetiger",
+    "evidence": "I'm excited to announce that the Firetiger team is joining Cursor. Firetiger builds agents that work on software once it reaches production.",
+    "observed_at": "2026-10-02T11:34:31Z"
+  },
+  {
+    "data": {
+      "company": "Tryolabs",
+      "website": "https://tryolabs.com/",
+      "acquirer": [
+        "Qubika"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI and machine learning engineering firm building production AI systems for enterprises",
+      "sector": "enterprise",
+      "announced_on": "2026-08-12",
+      "city": [
+        "Montevideo"
+      ],
+      "country": "Uruguay",
+      "region": "americas"
+    },
+    "source_url": "https://tryolabs.com/newsroom/qubika-acquires-tryolabs",
+    "evidence": "Qubika, a leading provider of enterprise data and AI services, today announced the acquisition of Tryolabs, to expand its enterprise AI capabilities.",
+    "observed_at": "2026-10-02T11:19:38Z"
+  },
+  {
+    "data": {
+      "company": "omni:us",
+      "website": "https://omnius.com/",
+      "acquirer": [
+        "adesso"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI agents for automated insurance claims processing",
+      "sector": "finance",
+      "announced_on": "2026-08-12",
+      "city": [
+        "Berlin"
+      ],
+      "country": "Germany",
+      "region": "europe"
+    },
+    "source_url": "https://dealroom.co/news/144627-adesso-buys-ai-startup-omnius-to-automate-insurance-claims/",
+    "evidence": "Adesso buys AI startup Omnius to automate insurance claims",
+    "observed_at": "2026-10-02T11:39:55Z"
+  },
+  {
+    "data": {
+      "company": "Limbik",
+      "website": "https://limbik.com/",
+      "acquirer": [
+        "Burson"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Cognitive AI for predictive audience modeling and synthetic audience simulation",
+      "sector": "enterprise",
+      "announced_on": "2026-08-12"
+    },
+    "source_url": "https://www.bursonglobal.com/newsroom/global/burson-acquires-cognitive-ai-company-limbik",
+    "evidence": "Burson, the global communications agency purpose-built to create value for its clients through reputation, today announced it has acquired Limbik Inc., the cognitive-AI company behind Decipher, Burson's predictive intelligence platform",
+    "observed_at": "2026-10-02T12:14:18Z"
+  },
+  {
+    "data": {
+      "company": "Electric",
+      "website": "https://electric.ax/",
+      "acquirer": [
+        "Databricks"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Postgres sync engine and embeddable WASM Postgres (PGlite) for apps and AI agents",
+      "sector": "developer-tools",
+      "announced_on": "2026-08-11",
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.infoworld.com/article/4209184/databricks-acquires-electric-to-bring-local-postgres-databases-to-agentic-apps.html",
+    "evidence": "Databricks is acquiring Electric, a startup that brings WebAssembly-based Postgres databases into application environments, for an undisclosed sum",
+    "observed_at": "2026-10-02T12:01:42Z"
+  },
+  {
+    "data": {
+      "company": "Reval",
+      "website": "https://www.reval.site/",
+      "acquirer": [
+        "Metaview"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI-native recruiting firm whose AI agents source, screen and submit candidates",
+      "sector": "enterprise",
+      "announced_on": "2026-08-11",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.metaview.ai/resources/blog/metaview-has-acquired-reval-to-accelerate-fillmore",
+    "evidence": "Today, we're excited to share that Metaview has acquired Reval, the AI-native recruiting company founded by Seth Tilliss and Aditya Gupta.",
+    "observed_at": "2026-10-02T11:56:31Z"
+  },
+  {
+    "data": {
+      "company": "Chengdu Meenyi Electronic Technology",
+      "website": "https://www.meenyi.com/",
+      "acquirer": [
+        "PATEO CONNECT Technology"
+      ],
+      "deal_type": "majority-stake",
+      "focus": "High-speed optical communication and analog chips used in AI data centers",
+      "sector": "infrastructure",
+      "announced_on": "2026-08-08",
+      "price_stated": "up to US$192.5 million in cash for about 70%",
+      "city": [
+        "Chengdu"
+      ],
+      "country": "China",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://dealroom.co/news/143887-pateo-to-buy-70-of-chipmaker-chengdu-meenyi-for-up-to-rmb1-4b-in-ai-push/",
+    "evidence": "PATEO to buy 70% of chipmaker Chengdu Meenyi for up to US$192.5M in AI push",
+    "observed_at": "2026-10-02T11:40:13Z"
+  },
+  {
+    "data": {
+      "company": "NextSlide",
+      "website": "https://nextslide.ai/",
+      "acquirer": [
+        "OpenAI"
+      ],
+      "deal_type": "acqui-hire",
+      "focus": "AI tool that turns prompts, notes and documents into editable presentations",
+      "sector": "enterprise",
+      "announced_on": "2026-08-07",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.pymnts.com/news/artificial-intelligence/2026/openai-picks-up-ai-presentation-creator-nextslide/",
+    "evidence": "OpenAI has acquired NextSlide, a startup that uses artificial intelligence to help workers develop presentations.",
+    "observed_at": "2026-10-02T11:57:06Z"
+  },
+  {
+    "data": {
+      "company": "Taalas",
+      "website": "https://taalas.com/",
+      "acquirer": [
+        "AMD"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Model-specific AI inference chips with weights etched into silicon",
+      "sector": "infrastructure",
+      "announced_on": "2026-08-06",
+      "city": [
+        "Toronto"
+      ],
+      "country": "Canada",
+      "region": "americas"
+    },
+    "source_url": "https://newsroom.amd.com/news/amd-acquires-taalas-ai-inference/",
+    "evidence": "AMD (NASDAQ: AMD) today announced it has reached a definitive agreement to acquire Taalas, a pioneer in specialized AI inference silicon.",
+    "observed_at": "2026-10-02T10:54:09Z"
+  },
+  {
+    "data": {
+      "company": "Valos",
+      "website": "https://valos.ai/",
+      "acquirer": [
+        "Altus Group"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI platform automating UK commercial property valuation and lending workflows",
+      "sector": "enterprise",
+      "announced_on": "2026-08-06",
+      "city": [
+        "London"
+      ],
+      "country": "United Kingdom",
+      "region": "europe"
+    },
+    "source_url": "https://www.theglobeandmail.com/investing/markets/stocks/AIF-T/pressreleases/36872626/altus-group-acquires-valos-an-ai-powered-platform-that-connects-uks-valuers-and-lenders-in-the-property-valuation-workflow/",
+    "evidence": "Altus Group Limited (“Altus” or “the Company”) (TSX: AIF), a leading provider of commercial real estate (“CRE”) intelligence, announced today it acquired Valos (U.K.) Limited, an AI-powered platform automating the property valuation and lending workflow.",
+    "observed_at": "2026-10-02T11:10:02Z"
+  },
+  {
+    "data": {
+      "company": "Glue",
+      "website": "https://gluestudio.com/",
+      "acquirer": [
+        "Emerson"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI-enabled test planning and validation software for hardware engineering (Glue Studio)",
+      "sector": "developer-tools",
+      "announced_on": "2026-08-06",
+      "city": [
+        "Seattle"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/emerson-acquires-glue-inc-to-accelerate-ai-driven-test--measurement-innovation-302844219.html",
+    "evidence": "Global automation leader Emerson (NYSE: EMR) today announced it has acquired Glue Inc., an innovator in advancing intelligent validation and test through its AI-enabled software product Glue Studio.",
+    "observed_at": "2026-10-02T12:14:17Z"
+  },
+  {
+    "data": {
+      "company": "Agency",
+      "website": "https://www.agency.inc/",
+      "acquirer": [
+        "Klaviyo"
+      ],
+      "deal_type": "acqui-hire",
+      "focus": "AI agents for customer success teams",
+      "sector": "enterprise",
+      "announced_on": "2026-08-05",
+      "city": [
+        "Boston"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.cmswire.com/the-wire/klaviyo-strengthens-ai-capabilities-with-strategic-acquisition-of-agency-team-and-technology/",
+    "evidence": "Under the terms of the deal, Klaviyo will acquire Agency’s proprietary software and related intellectual property, and Torres and other members of the Agency team are expected to join Klaviyo following closing.",
+    "observed_at": "2026-10-02T11:00:23Z"
+  },
+  {
+    "data": {
+      "company": "Smithery",
+      "website": "https://smithery.ai/",
+      "acquirer": [
+        "Arcade.dev"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Public registry and hosting platform for MCP servers",
+      "sector": "developer-tools",
+      "announced_on": "2026-08-05"
+    },
+    "source_url": "https://www.arcade.dev/blog/smithery-joins-arcade",
+    "evidence": "Today I’m sharing that Arcade.dev has acquired Smithery. I’m also thrilled that Anirudh Kamath, Smithery’s co-founder, is joining the Arcade team.",
+    "observed_at": "2026-10-02T12:08:09Z"
+  },
+  {
+    "data": {
+      "company": "Enkrypt AI",
+      "website": "https://www.enkryptai.com/",
+      "acquirer": [
+        "Anaconda"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI security platform for red teaming, guardrails and governance of models, agents and MCP servers",
+      "sector": "security",
+      "announced_on": "2026-08-04",
+      "city": [
+        "Boston"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.securityinfowatch.com/industry-news/news/55395829/anaconda-acquires-enkrypt-ai-to-expand-ai-security-and-governance-platform",
+    "evidence": "Anaconda Inc. has acquired Enkrypt AI , adding AI security, governance and compliance capabilities to its platform as the company looks to provide enterprises with a unified foundation for building, orchestrating and securing AI-native applications.",
+    "observed_at": "2026-10-02T11:12:58Z"
+  },
+  {
+    "data": {
+      "company": "Ayora",
+      "website": "https://www.ayora.ai/",
+      "acquirer": [
+        "BigHand"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI-powered data intelligence and agents for law firm pricing and revenue",
+      "sector": "enterprise",
+      "announced_on": "2026-08-04",
+      "city": [
+        "London"
+      ],
+      "country": "United Kingdom",
+      "region": "europe"
+    },
+    "source_url": "https://www.law.com/legaltechnews/2026/08/04/bighand-acquires-data-intelligence-platform-ayora/",
+    "evidence": "London-based data and insights technology provider BigHand announced Tuesday its acquisition of London-based data intelligence platform Ayora.",
+    "observed_at": "2026-10-02T11:16:08Z"
+  },
+  {
+    "data": {
+      "company": "Artium",
+      "website": "https://artium.ai/",
+      "acquirer": [
+        "AlixPartners"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Agentic AI consultancy building custom enterprise-grade AI agents",
+      "sector": "enterprise",
+      "announced_on": "2026-08-04",
+      "city": [
+        "Santa Monica"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.alixpartners.com/newsroom/alixpartners-acquires-leading-agentic-ai-consulting-firm-artium/",
+    "evidence": "NEW YORK (August 4 2026) - AlixPartners, the global consulting firm, today announced the acquisition of Artium, a leading agentic AI software consulting firm specializing in building and launching enterprise-grade agents",
+    "observed_at": "2026-10-02T12:00:55Z"
+  },
+  {
+    "data": {
+      "company": "Clarity",
+      "website": "https://www.getclarity.ai/",
+      "acquirer": [
+        "Deel"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Real-time deepfake detection and identity verification for hiring and workforce security",
+      "sector": "security",
+      "announced_on": "2026-08-03",
+      "price_stated": "reportedly $45 million to $50 million in cash and shares",
+      "city": [
+        "Tel Aviv"
+      ],
+      "country": "Israel",
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://thenextweb.com/news/deel-acquires-clarity-deepfake-detection",
+    "evidence": "Deel, the global HR and payroll platform, has acquired Clarity, a Tel Aviv-based AI cybersecurity startup that detects deepfakes and verifies identities in real time. The deal, reportedly worth between $45 million and $50 million in a mix of cash and shares",
+    "observed_at": "2026-10-02T10:59:16Z"
+  },
+  {
+    "data": {
+      "company": "Wallaroo.AI",
+      "website": "https://wallaroo.ai/",
+      "acquirer": [
+        "d-Matrix"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI inference deployment and orchestration platform for any model on any hardware",
+      "sector": "developer-tools",
+      "announced_on": "2026-08-03",
+      "city": [
+        "New York"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://pulse2.com/d-matrix-acquires-wallaroo-ai-to-expand-ai-inference-deployment-and-orchestration-platform/",
+    "evidence": "d-Matrix has acquired Wallaroo.ai, adding AI inference deployment and orchestration software to its data center inference platform.",
+    "observed_at": "2026-10-02T11:13:33Z"
+  },
+  {
+    "data": {
+      "company": "Layla",
+      "website": "https://layla.ai/",
+      "acquirer": [
+        "Expedia Group"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Conversational AI travel agent for trip planning and booking",
+      "sector": "consumer",
+      "announced_on": "2026-07-31",
+      "city": [
+        "Berlin"
+      ],
+      "country": "Germany",
+      "region": "europe"
+    },
+    "source_url": "https://www.travolution.com/news/travel-sectors/technology/expedia-group-acquires-layla-to-accelerate-ai-trip-planning",
+    "evidence": "Layla, the AI-native trip planning and booking platform that helps travellers move from inspiration to itinerary across flights, accommodation, activities, dining and transport, is now part of Expedia Group.",
+    "observed_at": "2026-10-02T11:24:36Z"
+  },
+  {
+    "data": {
+      "company": "Anyscale",
+      "website": "https://www.anyscale.com/",
+      "acquirer": [
+        "Nscale"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Managed Ray platform for scaling AI training, inference and data processing across GPUs",
+      "sector": "developer-tools",
+      "announced_on": "2026-07-30",
+      "price_usd": 1650000000,
+      "price_stated": "reported $1.65 billion (Bloomberg source); terms not disclosed",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://siliconangle.com/2026/07/30/nscale-buys-ai-infrastructure-optimization-startup-anyscale-reported-1-65b/",
+    "evidence": "Data center builder Nscale Global Holdings Ltd. today announced plans to acquire Anyscale Inc., a venture-backed provider of artificial intelligence software. The terms of the deal were not disclosed. Bloomberg cited a source as saying that Nscale is paying $1.65 billion.",
+    "observed_at": "2026-10-02T10:51:09Z"
+  },
+  {
+    "data": {
+      "company": "AiDASH",
+      "website": "https://www.aidash.com/",
+      "acquirer": [
+        "Schneider Electric"
+      ],
+      "deal_type": "majority-stake",
+      "focus": "Satellite imagery and AI for utility vegetation, wildfire and storm risk management",
+      "sector": "enterprise",
+      "announced_on": "2026-07-30",
+      "price_stated": "about 90% of shares, valuing the company at $350 million",
+      "city": [
+        "Palo Alto"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://techfundingnews.com/schneider-electric-acquires-aidash-350m-climate-adaptation/",
+    "evidence": "Schneider Electric , the Paris-headquartered energy management and automation company with revenues of €38 billion in 2025, has agreed to buy about 90% of AiDASH’s shares in an all-cash deal, valuing the company at $350 million, according to its half-year results .",
+    "observed_at": "2026-10-02T10:51:37Z"
+  },
+  {
+    "data": {
+      "company": "Permiso",
+      "website": "https://permiso.io/",
+      "acquirer": [
+        "Okta"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Identity threat detection and response for human, machine and AI identities",
+      "sector": "security",
+      "announced_on": "2026-07-30",
+      "price_usd": 200000000,
+      "price_stated": "reportedly roughly $200 million",
+      "city": [
+        "Palo Alto"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.securityweek.com/cybersecurity-ma-roundup-21-deals-announced-in-july-2026/",
+    "evidence": "Okta signed an agreement to acquire Palo Alto-based Permiso Security, reportedly for roughly $200 million.",
+    "observed_at": "2026-10-02T10:52:53Z"
+  },
+  {
+    "data": {
+      "company": "Simon AI",
+      "website": "https://www.simon.ai/",
+      "acquirer": [
+        "Monetate"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Agentic marketing platform built on an AI-first composable customer data platform",
+      "sector": "enterprise",
+      "announced_on": "2026-07-30",
+      "city": [
+        "New York"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.cmswire.com/the-wire/monetate-acquires-simon-ai-uniting-the-leader-in-aipowered-experience-optimization-with-the-a-01/",
+    "evidence": "Monetate , the leader in AI-powered digital and omnichannel personalization, experimentation, and experience optimization, today announced it has acquired Simon AI , the agentic platform built on the AI-first composable customer data platform (CDP).",
+    "observed_at": "2026-10-02T11:11:30Z"
+  },
+  {
+    "data": {
+      "company": "Algonomy",
+      "website": "https://algonomy.com/",
+      "acquirer": [
+        "ADA"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI decisioning for retail personalization, merchandising and supply chain",
+      "sector": "enterprise",
+      "announced_on": "2026-07-30",
+      "city": [
+        "Bengaluru"
+      ],
+      "country": "India",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.prnewswire.co.uk/news-releases/ada-acquires-algonomy-strengthening-its-intelligent-growth-platform-for-a-fully-agentic-experience-302837975.html",
+    "evidence": "ADA, The Data and AI Experience Company, today announced it has completed acquisition of Algonomy, a leader in agentic decisioning for retail.",
+    "observed_at": "2026-10-02T11:16:46Z"
+  },
+  {
+    "data": {
+      "company": "Camion",
+      "website": "https://www.camion.energy/",
+      "acquirer": [
+        "Deepki"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Agentic AI for real estate electrification: solar, storage and EV charging investment planning",
+      "sector": "enterprise",
+      "announced_on": "2026-07-30",
+      "city": [
+        "London"
+      ],
+      "country": "United Kingdom",
+      "region": "europe"
+    },
+    "source_url": "https://www.esgtoday.com/deepki-acquires-real-estate-electrification-ai-startup-camion/",
+    "evidence": "Real estate sustainability data solutions provider Deepki announced today the acquisition of real estate electrification-focused agentic AI technology startup Camion.",
+    "observed_at": "2026-10-02T12:08:09Z"
+  },
+  {
+    "data": {
+      "company": "Tabnine",
+      "website": "https://www.tabnine.com/",
+      "acquirer": [
+        "Tricentis"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Enterprise AI coding platform with an Enterprise Context Engine",
+      "sector": "developer-tools",
+      "announced_on": "2026-07-30",
+      "price_stated": "deal estimated at tens of millions of dollars",
+      "country": "Israel",
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.aol.com/articles/tricentis-acquires-tabnine-further-scale-150000000.html",
+    "evidence": "Tricentis, the global leader in agentic quality engineering, today announced the acquisition of Tabnine, the AI-coding platform purpose-built for secure, context-aware enterprise software development.",
+    "observed_at": "2026-10-02T12:03:52Z"
+  },
+  {
+    "data": {
+      "company": "Wexler",
+      "website": "https://www.wexler.ai/",
+      "acquirer": [
+        "Legora"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Fact intelligence platform that extracts and verifies facts from large litigation document sets",
+      "sector": "enterprise",
+      "announced_on": "2026-07-29",
+      "city": [
+        "London"
+      ],
+      "country": "United Kingdom",
+      "region": "europe"
+    },
+    "source_url": "https://legora.com/newsroom/legora-is-acquiring-wexler",
+    "evidence": "Legora today announced that it is acquiring London-based Wexler, the fact intelligence platform that extracts, verifies, and reasons over the factual record from large and unstructured document sets",
+    "observed_at": "2026-10-02T10:58:26Z"
+  },
+  {
+    "data": {
+      "company": "KAIKAKU",
+      "website": "https://www.kaikaku.ai/",
+      "acquirer": [
+        "REEF"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Autonomous food-assembly robots for restaurant chains",
+      "sector": "robotics",
+      "announced_on": "2026-07-29",
+      "city": [
+        "London"
+      ],
+      "country": "United Kingdom",
+      "region": "europe"
+    },
+    "source_url": "https://dealroom.co/news/141804-kaikaku-joins-reef-bringing-food-robotics-to-a-1-5b-backed-platform/",
+    "evidence": "KAIKAKU joins REEF, bringing food robotics to US$970.6M-backed platform",
+    "observed_at": "2026-10-02T11:38:03Z"
+  },
+  {
+    "data": {
+      "company": "AI Builders",
+      "website": "https://aibuilders.ai/",
+      "acquirer": [
+        "Wavestone"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI and data strategy consulting for large organizations",
+      "sector": "enterprise",
+      "announced_on": "2026-07-29",
+      "price_stated": "€19.3 million enterprise value",
+      "country": "France",
+      "region": "europe"
+    },
+    "source_url": "https://www.actusnews.com/en/wavestone/pr/2026/07/29/q1-2026-27-revenue-down-2-per-cent-annual-targets-adjusted-ai-builders-targeted-acquisition-of-a-french-ai-and-data-player",
+    "evidence": "Wavestone has completed the acquisition of AI Builders, a leading French AI & data strategy consulting firm, on July 29, 2026.",
+    "observed_at": "2026-10-02T11:56:25Z"
+  },
+  {
+    "data": {
+      "company": "Canoe Intelligence",
+      "website": "https://canoeintelligence.com/",
+      "acquirer": [
+        "Bloomberg"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI-powered data management platform automating private markets data collection and delivery",
+      "sector": "finance",
+      "announced_on": "2026-07-29",
+      "city": [
+        "New York"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/bloomberg-to-acquire-canoe-intelligence-taking-a-defining-step-in-its-mission-to-transform-private-markets-investing-302837466.html",
+    "evidence": "Bloomberg today announced it has entered into a definitive agreement to acquire Canoe Intelligence (\"Canoe\"), a leading AI-powered data management and intelligence platform for automating private markets data collection and delivery.",
+    "observed_at": "2026-10-02T11:55:36Z"
+  },
+  {
+    "data": {
+      "company": "Summer Health",
+      "website": "https://www.summerhealth.com/",
+      "acquirer": [
+        "Doctronic"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Text-based virtual pediatric care for parents",
+      "sector": "health",
+      "announced_on": "2026-07-29"
+    },
+    "source_url": "https://www.aol.com/articles/doctronic-expands-pediatrics-accelerating-vision-120000000.html",
+    "evidence": "Doctronic today announced its expansion into pediatric primary care, marking the next step in its mission to build a comprehensive AI-native primary care platform. To accelerate that vision, the company has acquired Summer Health, the leading platform for virtual, text-based pediatric care.",
+    "observed_at": "2026-10-02T12:08:10Z"
+  },
+  {
+    "data": {
+      "company": "Oasis Security",
+      "website": "https://www.oasis.security/",
+      "acquirer": [
+        "Cyera"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Access management and governance for non-human identities and AI agents",
+      "sector": "security",
+      "announced_on": "2026-07-28",
+      "price_usd": 1000000000,
+      "city": [
+        "New York"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://markets.financialcontent.com/prnews.pressre/article/bizwire-2026-9-3-cyera-completes-acquisition-of-oasis-security",
+    "evidence": "Cyera today announced the completion of its acquisition of Oasis Security, the leading access management platform for the agentic enterprise. The acquisition, valued at $1 billion, unites Cyera's AI and Data Security Platform with Oasis's non-human identity (NHI) management capabilities",
+    "observed_at": "2026-10-02T10:49:29Z"
+  },
+  {
+    "data": {
+      "company": "Raft",
+      "website": "https://teamraft.com/",
+      "acquirer": [
+        "Leonardo DRS"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Open-architecture mission software for multi-domain data fusion and AI",
+      "sector": "defense",
+      "announced_on": "2026-07-28",
+      "price_usd": 450000000,
+      "city": [
+        "McLean"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.taiwannews.com.tw/news/6410013",
+    "evidence": "Leonardo DRS, Inc. (Nasdaq: DRS) today announced that it has entered into a definitive agreement to acquire Raft LLC (“Raft”) in an all-cash transaction valued at $450 million.",
+    "observed_at": "2026-10-02T10:51:08Z"
+  },
+  {
+    "data": {
+      "company": "Morpheo AI",
+      "website": "https://www.morpheo.ai/",
+      "acquirer": [
+        "Vena Solutions"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Agentic data platform that prepares and structures enterprise data for reporting and AI",
+      "sector": "developer-tools",
+      "announced_on": "2026-07-28",
+      "city": [
+        "Toronto"
+      ],
+      "country": "Canada",
+      "region": "americas"
+    },
+    "source_url": "https://www.canadianlawyermag.com/cl-plus/deals/4276",
+    "evidence": "The transaction, first announced on July 28, 2026 when Vena entered into a definitive agreement subject to customary closing conditions, brings Morpheo AI's team and technology into Vena.",
+    "observed_at": "2026-10-02T11:07:18Z"
+  },
+  {
+    "data": {
+      "company": "Nalvin",
+      "website": "https://nalvin.com/",
+      "acquirer": [
+        "Lovable"
+      ],
+      "deal_type": "acqui-hire",
+      "focus": "Agent development platform helping companies put AI to work in their business",
+      "sector": "enterprise",
+      "announced_on": "2026-07-28",
+      "city": [
+        "Stockholm"
+      ],
+      "country": "Sweden",
+      "region": "europe"
+    },
+    "source_url": "https://www.curiosityvc.com/post/nalvin-joins-lovable",
+    "evidence": "Stockholm, 28 July 2026. The Nalvin founding team, consisting of Pontus Gifvas, Fredrik Stockman and Pascal Chatterjee, announced today they are joining Lovable to continue their work to help businesses enter the AI era.",
+    "observed_at": "2026-10-02T12:04:36Z"
+  },
+  {
+    "data": {
+      "company": "Speculo",
+      "website": "https://www.speculo.ai/",
+      "acquirer": [
+        "LPT Aperture Holdings"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI teammate (Remi) for real estate database engagement and intent detection",
+      "sector": "enterprise",
+      "announced_on": "2026-07-28",
+      "city": [
+        "Columbus"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.aol.com/articles/lpt-aperture-holdings-acquires-speculo-120000000.html",
+    "evidence": "LPT Holdings (d/b/a LPT Aperture Holdings or “LPTA”), parent company of LPT Realty and Aperture Global Real Estate, today announced its acquisition of Speculo, the AI-powered database engagement company behind Remi.",
+    "observed_at": "2026-10-02T12:08:08Z"
+  },
+  {
+    "data": {
+      "company": "ThinkHive",
+      "website": "https://thinkhive.ai/",
+      "acquirer": [
+        "Rootly"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Reliability platform tracing and evaluating production AI agents for hallucination and drift",
+      "sector": "developer-tools",
+      "announced_on": "2026-07-28"
+    },
+    "source_url": "https://www.aol.com/articles/rootly-acquires-thinkhive-bring-reliability-140000000.html",
+    "evidence": "Rootly, the AI-native on-call and incident management platform trusted by companies including NVIDIA, Replit, and Canva, today announced it has acquired ThinkHive, an AI agent reliability platform.",
+    "observed_at": "2026-10-02T12:08:11Z"
+  },
+  {
+    "data": {
+      "company": "Cofide",
+      "website": "https://www.cofide.io/",
+      "acquirer": [
+        "Keyfactor"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Open-standards workload identity platform for cloud workloads and AI agents",
+      "sector": "security",
+      "announced_on": "2026-07-27",
+      "city": [
+        "London"
+      ],
+      "country": "United Kingdom",
+      "region": "europe"
+    },
+    "source_url": "https://www.keyfactor.com/blog/beyond-static-secrets-building-trust-for-the-next-generation-of-workloads-and-ai-agents/",
+    "evidence": "Today, Keyfactor officially closed its acquisition of Cofide. We’re excited to welcome Matt Bates and the Cofide team to Keyfactor",
+    "observed_at": "2026-10-02T12:06:09Z"
+  },
+  {
+    "data": {
+      "company": "Replify",
+      "website": "https://www.replify.ai/",
+      "acquirer": [
+        "ABC Fitness"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI receptionist and sales agents for gyms and fitness businesses",
+      "sector": "enterprise",
+      "announced_on": "2026-07-27",
+      "city": [
+        "Seattle"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://abcfitness.com/press-release/abc-fitness-acquires-replify-agentic-ai/",
+    "evidence": "ABC Fitness, the leading technology provider for fitness businesses everywhere, today announced it has acquired Replify, an agentic AI platform built to help fitness operators automate member and prospect communications through virtual AI agents.",
+    "observed_at": "2026-10-02T12:08:01Z"
+  },
+  {
+    "data": {
+      "company": "Hailo",
+      "website": "https://hailo.ai/",
+      "acquirer": [
+        "Microchip Technology"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Edge AI accelerators and vision processors for on-device inference",
+      "sector": "infrastructure",
+      "announced_on": "2026-07-24",
+      "city": [
+        "Tel Aviv"
+      ],
+      "country": "Israel",
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://ir.microchip.com/news-events/press-releases/detail/1406/microchip-technology-signs-definitive-agreement-to-acquire-hailo",
+    "evidence": "Microchip Technology Incorporated, a leading provider of smart, connected, and secure embedded control solutions, today announced that it has signed a definitive agreement to acquire Hailo, a provider of accelerated edge AI processors",
+    "observed_at": "2026-10-02T10:54:08Z"
+  },
+  {
+    "data": {
+      "company": "ZeroEntropy",
+      "website": "https://www.zeroentropy.dev/",
+      "acquirer": [
+        "Notion"
+      ],
+      "deal_type": "acqui-hire",
+      "focus": "Rerankers and embedding models for AI search and retrieval-augmented generation",
+      "sector": "developer-tools",
+      "announced_on": "2026-07-24",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://dealroom.co/news/142411-notion-acquires-ai-retrieval-startup-zeroentropy/",
+    "evidence": "Notion acquires AI-retrieval startup ZeroEntropy What's the deal? Notion has acquired ZeroEntropy",
+    "observed_at": "2026-10-02T10:58:18Z"
+  },
+  {
+    "data": {
+      "company": "The Interaction Company of California",
+      "website": "https://interaction.co/",
+      "acquirer": [
+        "Cognition"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Poke, a proactive personal AI agent that works over iMessage, SMS, WhatsApp and Telegram",
+      "sector": "consumer",
+      "announced_on": "2026-07-23",
+      "price_stated": "valuing the startup in the low nine figures",
+      "city": [
+        "Palo Alto"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://techcrunch.com/2026/07/24/why-cognition-bought-poke-ai-personality-is-becoming-a-competitive-advantage/",
+    "evidence": "The company behind the assistant, The Interaction Company of California , has been acquired by AI coding startup Cognition in a deal valuing the startup in the “low nine figures.”",
+    "observed_at": "2026-10-02T10:56:45Z"
+  },
+  {
+    "data": {
+      "company": "Agilytic",
+      "website": "https://www.agilytic.com/",
+      "acquirer": [
+        "Artefact"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Data and AI consulting boutique: analytics, data engineering, AI and data governance",
+      "sector": "enterprise",
+      "announced_on": "2026-07-23",
+      "country": "Belgium",
+      "region": "europe"
+    },
+    "source_url": "https://www.artefact.com/news/artefact-acquires-agilytic-to-strengthen-its-data-ai-leadership-in-belgium-and-accelerate-its-momentum-in-europe/",
+    "evidence": "Artefact, the leading global consulting firm for data and AI transformation, today announced the acquisition of Agilytic, a well-established Belgian data and AI consulting boutique.",
+    "observed_at": "2026-10-02T12:00:53Z"
+  },
+  {
+    "data": {
+      "company": "Co–Star",
+      "website": "https://www.costarastrology.com/",
+      "acquirer": [
+        "Midjourney"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Social astrology app with AI- and human-written horoscopes",
+      "sector": "consumer",
+      "announced_on": "2026-07-23",
+      "city": [
+        "New York"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://techcrunch.com/2026/07/24/midjourney-acquired-the-astrology-app-co-star/",
+    "evidence": "Midjourney, an AI lab best known for its LLM-powered image and video generators, has acquired the social astrology app Co-Star, according to Bloomberg.",
+    "observed_at": "2026-10-02T11:54:01Z"
+  },
+  {
+    "data": {
+      "company": "Flow AI",
+      "website": "https://flow-ai.com/",
+      "acquirer": [
+        "Aiven"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Runtime, data layer and evaluation tooling for production analytical AI agents",
+      "sector": "developer-tools",
+      "announced_on": "2026-07-23",
+      "city": [
+        "Helsinki"
+      ],
+      "country": "Finland",
+      "region": "europe"
+    },
+    "source_url": "https://aiven.io/blog/aiven-acquires-flow-ai",
+    "evidence": "Aiven has acquired Flow AI, a company building infrastructure for production-grade analytical AI agents. The integration of Flow AI technology will accelerate Aiven's product roadmap",
+    "observed_at": "2026-10-02T12:09:53Z"
+  },
+  {
+    "data": {
+      "company": "Takeoff",
+      "website": "https://www.hiretakeoff.com/",
+      "acquirer": [
+        "Sierra"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Long-horizon AI agent runtime for lending and healthcare workflows",
+      "sector": "enterprise",
+      "announced_on": "2026-07-23",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://sierra.ai/blog/sierra-acquires-takeoff",
+    "evidence": "We’re excited to share that Sierra is acquiring Takeoff",
+    "observed_at": "2026-10-02T12:02:16Z"
+  },
+  {
+    "data": {
+      "company": "Dondy",
+      "website": "https://www.dondy.net/",
+      "acquirer": [
+        "Circeus"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI agents for WhatsApp marketing, sales and support for e-commerce merchants",
+      "sector": "enterprise",
+      "announced_on": "2026-07-22",
+      "price_stated": "estimated at several million dollars",
+      "country": "Israel",
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://pulse2.com/circeus-acquires-dondy-and-adds-whatsapp-commerce-platform-to-shop-circle/",
+    "evidence": "Circeus, an AI-native holding company, announced it has acquired Dondy, a conversational commerce platform ranked the number one WhatsApp app on the Shopify App Store.",
+    "observed_at": "2026-10-02T12:14:31Z"
+  },
+  {
+    "data": {
+      "company": "Technology Labs",
+      "website": "https://www.coinresearch.ai/",
+      "acquirer": [
+        "Hilton Finance"
+      ],
+      "deal_type": "majority-stake",
+      "focus": "AI investment research platforms for crypto and stocks (CoinResearch, StockResearch)",
+      "sector": "finance",
+      "announced_on": "2026-07-22",
+      "city": [
+        "Overland Park"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.einpresswire.com/article/928358084/hilton-family-office-acquires-controlling-interest-in-technology-labs-to-advance-ai-powered-investment-intelligence",
+    "evidence": "Hilton Finance, LLC, an affiliate of Hilton Family Office, today announced the acquisition of a controlling interest in Technology Labs, LLC, an artificial intelligence software company focused on investment research, financial intelligence, and market analysis.",
+    "observed_at": "2026-10-02T11:56:06Z"
+  },
+  {
+    "data": {
+      "company": "Moonnox",
+      "website": "https://www.moonnox.com/",
+      "acquirer": [
+        "Certinia"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI-native services delivery platform for professional services firms",
+      "sector": "enterprise",
+      "announced_on": "2026-07-21",
+      "city": [
+        "Chicago"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.cpapracticeadvisor.com/2026/07/21/certinia-buys-moonnox/187058/",
+    "evidence": "Professional services automation platform Certinia said Tuesday that it has acquired Moonnox, a Chicago-based AI-native services delivery platform for the professional services sector.",
+    "observed_at": "2026-10-02T11:05:29Z"
+  },
+  {
+    "data": {
+      "company": "Seam AI",
+      "website": "https://seam.ai/",
+      "acquirer": [
+        "Clarify"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI that monitors buying signals across the web for sales teams",
+      "sector": "enterprise",
+      "announced_on": "2026-07-21",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://dealroom.co/news/140153-clarify-buys-seam-ai-to-add-sales-signals-to-its-salesforce-challenger/",
+    "evidence": "Clarify buys Seam AI to add sales signals to its Salesforce challenger",
+    "observed_at": "2026-10-02T11:36:06Z"
+  },
+  {
+    "data": {
+      "company": "Cervo AI",
+      "website": "https://usecervo.com/",
+      "acquirer": [
+        "Altana"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Agentic AI that writes submission-ready customs entries for customs brokers",
+      "sector": "enterprise",
+      "announced_on": "2026-07-21",
+      "price_stated": "cash and equity, could top $100 million with performance milestones",
+      "city": [
+        "New York"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://dealroom.co/news/140201-altana-buys-ai-startup-cervo-in-first-acquisition-deal-could-top-100m/",
+    "evidence": "Altana buys AI startup Cervo in first acquisition, deal could top $100M",
+    "observed_at": "2026-10-02T11:36:06Z"
+  },
+  {
+    "data": {
+      "company": "FRDM",
+      "website": "https://www.frdm.ai/",
+      "acquirer": [
+        "WiseTech Global"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI-powered supply chain risk and compliance intelligence platform",
+      "sector": "enterprise",
+      "announced_on": "2026-07-21",
+      "price_stated": "US$10 million upfront plus up to US$14.31 million in earn-outs",
+      "city": [
+        "Lafayette"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.wisetechglobal.com/news/wisetech-global-to-acquire-frdmai-supply-chain-risk-and-compliance-intelligence-to-accelerate-development-of-verifywise/",
+    "evidence": "WiseTech Global Limited (ASX:WTC) (WiseTech), leading developer of logistics execution software and supply chain technology, today announces it has entered into a binding agreement to acquire FRDM.ai, developer of AI-powered supply chain risk and compliance intelligence technology",
+    "observed_at": "2026-10-02T11:58:13Z"
+  },
+  {
+    "data": {
+      "company": "SceniX",
+      "website": "https://scenix.ai/",
+      "acquirer": [
+        "World Labs"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Hybrid real-to-sim simulation platform for training and evaluating robots",
+      "sector": "robotics",
+      "announced_on": "2026-07-21",
+      "city": [
+        "New York"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.worldlabs.ai/blog/scenix",
+    "evidence": "World Labs Acquires SceniX Today, we're excited to announce that SceniX, a robotics company, is joining World Labs.",
+    "observed_at": "2026-10-02T12:02:56Z"
+  },
+  {
+    "data": {
+      "company": "Personalis",
+      "website": "https://www.personalis.com/",
+      "acquirer": [
+        "Tempus AI"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Tumor-informed MRD liquid biopsy and whole-genome cancer testing",
+      "sector": "health",
+      "announced_on": "2026-07-20",
+      "price_usd": 1500000000,
+      "city": [
+        "Fremont"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://hitconsultant.net/2026/07/20/tempus-ai-acquires-personalis-1-5-billion-precision-oncology-mrd/",
+    "evidence": "Tempus AI, Inc. has entered into a definitive agreement to acquire Personalis, Inc . for $16.25 per share, valuing the company at $1.5 billion net of Tempus’ existing ownership stake.",
+    "observed_at": "2026-10-02T10:51:07Z"
+  },
+  {
+    "data": {
+      "company": "Hall",
+      "website": "https://usehall.com/",
+      "acquirer": [
+        "Tracksuit"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI visibility tracking that measures how brands appear in AI assistant answers",
+      "sector": "enterprise",
+      "announced_on": "2026-07-20",
+      "city": [
+        "Sydney"
+      ],
+      "country": "Australia",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.bandt.com.au/tracksuit-acquires-ai-brand-monitoring-startup-hall/",
+    "evidence": "Brand tracking startup Tracksuit has acquired Sydney-based startup, Hall, which measures how brands appear in responses from AI assistants.",
+    "observed_at": "2026-10-02T11:05:52Z"
+  },
+  {
+    "data": {
+      "company": "DecaSIM",
+      "website": "https://decasim.ai/",
+      "acquirer": [
+        "SmartProperty"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Custom AI systems that turn large unstructured data into decision-ready intelligence",
+      "sector": "enterprise",
+      "announced_on": "2026-07-20",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://dealroom.co/news/139863-smartproperty-buys-ai-firm-decasim-to-sharpen-reserve-study-data/",
+    "evidence": "SmartProperty buys AI firm DecaSIM to sharpen reserve study data",
+    "observed_at": "2026-10-02T11:32:03Z"
+  },
+  {
+    "data": {
+      "company": "Altrina",
+      "website": "https://www.altrina.com/",
+      "acquirer": [
+        "Abridge"
+      ],
+      "deal_type": "acqui-hire",
+      "focus": "Browser and computer-use AI agents that automate business SOPs and workflows",
+      "sector": "enterprise",
+      "announced_on": "2026-07-20",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.abridge.com/blog/abridge-welcomes-altrina",
+    "evidence": "Today, we're excited to welcome the team behind Altrina to Abridge. This is the latest investment in the people and expertise that will shape our next chapter.",
+    "observed_at": "2026-10-02T12:08:01Z"
+  },
+  {
+    "data": {
+      "company": "TierZero",
+      "website": "https://www.tierzero.ai/",
+      "acquirer": [
+        "Cognition"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI production agents that handle incidents, alerts and engineering operations",
+      "sector": "developer-tools",
+      "announced_on": "2026-07-20",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://cognition.com/blog/welcoming-tierzero",
+    "evidence": "Welcoming TierZero to Cognition By Walden Yan 07.20.26 We are so excited to welcome Anhang, Yun, and the TierZero team to Cognition.",
+    "observed_at": "2026-10-02T11:58:11Z"
+  },
+  {
+    "data": {
+      "company": "minds.ai",
+      "website": "https://minds.ai/",
+      "acquirer": [
+        "Applied Materials"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI and reinforcement learning software that optimizes semiconductor fab operations and planning",
+      "sector": "enterprise",
+      "announced_on": "2026-07-17",
+      "city": [
+        "Santa Cruz"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://momenta.vc/insights/minds.ai-acquired",
+    "evidence": "We are pleased to share that Minds.ai has been acquired by Applied Materials, marking an important milestone for founders Sumit Sanyal and Tijmen Tieleman, CEO Itzik Gilboa and the entire Minds.ai team.",
+    "observed_at": "2026-10-02T12:14:52Z"
+  },
+  {
+    "data": {
+      "company": "DataPelago",
+      "website": "https://www.datapelago.ai/",
+      "acquirer": [
+        "NetApp"
+      ],
+      "deal_type": "acquisition",
+      "focus": "GPU-accelerated data processing engine for AI and analytics workloads",
+      "sector": "developer-tools",
+      "announced_on": "2026-07-16",
+      "city": [
+        "Mountain View"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.netapp.com/newsroom/press-releases/news-rel-20260716-210092/",
+    "evidence": "NetApp ® (NASDAQ: NTAP), the Intelligent Data Infrastructure company, today announced it has acquired DataPelago, a California-based AI data infrastructure company recognized for its innovative approach to eliminating data processing bottlenecks for AI and analytics workloads.",
+    "observed_at": "2026-10-02T10:59:17Z"
+  },
+  {
+    "data": {
+      "company": "Arpalus",
+      "website": "https://www.arpalus.com/",
+      "acquirer": [
+        "Instacart"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Computer vision shelf intelligence that scans grocery store shelves with a smartphone",
+      "sector": "enterprise",
+      "announced_on": "2026-07-16",
+      "city": [
+        "Tenafly",
+        "Netanya"
+      ],
+      "country": "United States / Israel",
+      "region": "americas"
+    },
+    "source_url": "https://www.supermarketnews.com/grocery-technology/instacart-acquires-computer-vision-company-arpalus",
+    "evidence": "Instacart announced Thursday its acquisition of computer vision company Arpalus, which has developed shelf intelligence technology purpose-built for grocery retail.",
+    "observed_at": "2026-10-02T11:03:39Z"
+  },
+  {
+    "data": {
+      "company": "AdSkate",
+      "website": "https://www.adskate.com/",
+      "acquirer": [
+        "Brunner"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI creative analytics that predicts ad performance before launch",
+      "sector": "enterprise",
+      "announced_on": "2026-07-16",
+      "city": [
+        "Pittsburgh"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.mediapost.com/publications/article/416584/agency-brunner-acquires-creative-analytics-platfor.html",
+    "evidence": "Pittsburgh-based ad agency Brunner has acquired AdSkate, an AI-powered creative analytics and predictive platform.",
+    "observed_at": "2026-10-02T11:03:39Z"
+  },
+  {
+    "data": {
+      "company": "Benchmark",
+      "website": "https://withbenchmark.com/",
+      "acquirer": [
+        "Harvey"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Decision infrastructure that captures institutional knowledge for asset managers across the deal lifecycle",
+      "sector": "finance",
+      "announced_on": "2026-07-16",
+      "city": [
+        "New York"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.lawyersweekly.com.au/sme-law/44687-harvey-extends-across-full-deal-process-with-benchmark-acquisition",
+    "evidence": "Benchmark, the New York-based decision infrastructure platform for asset management, has been acquired by legal technology provider Harvey.",
+    "observed_at": "2026-10-02T11:04:39Z"
+  },
+  {
+    "data": {
+      "company": "Lumitics",
+      "website": "https://lumitics.com/",
+      "acquirer": [
+        "Winnow"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Computer vision and machine learning that track food waste in commercial kitchens",
+      "sector": "enterprise",
+      "announced_on": "2026-07-16",
+      "city": [
+        "Singapore"
+      ],
+      "country": "Singapore",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://dealroom.co/news/139272-winnow-buys-singapores-lumitics-to-expand-across-asia-pacific/",
+    "evidence": "Winnow buys Singapore's Lumitics to expand across Asia-Pacific",
+    "observed_at": "2026-10-02T11:32:02Z"
+  },
+  {
+    "data": {
+      "company": "Shaped",
+      "website": "https://www.shaped.ai/",
+      "acquirer": [
+        "Whatnot"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Real-time AI recommendation and search infrastructure",
+      "sector": "developer-tools",
+      "announced_on": "2026-07-15",
+      "city": [
+        "New York"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://techcrunch.com/2026/07/15/whatnot-acquires-shaped-to-power-real-time-live-shopping-recommendations/",
+    "evidence": "Livestream shopping app Whatnot announced Wednesday that it has acquired Shaped , a machine learning company that specializes in real-time recommendation and search systems.",
+    "observed_at": "2026-10-02T11:00:59Z"
+  },
+  {
+    "data": {
+      "company": "Kilo Code",
+      "website": "https://kilo.ai/",
+      "acquirer": [
+        "Anaconda"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Open-source, model-agnostic AI coding agent for VS Code, JetBrains, CLI and cloud",
+      "sector": "developer-tools",
+      "announced_on": "2026-07-15",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://sdtimes.com/agentic-engineering/anaconda-acquires-kilo-code-to-power-the-trillion-token-enterprise/",
+    "evidence": "Anaconda Inc. , the trusted foundation for AI-native development, today announced it has acquired Kilo Code (aka “Kilo”), the open source, model-agnostic agentic engineering platform used by more than 3 million developers across VS Code, JetBrains, web, and CLI.",
+    "observed_at": "2026-10-02T11:02:30Z"
+  },
+  {
+    "data": {
+      "company": "Spike Technologies",
+      "website": "https://www.spikecare.com/",
+      "acquirer": [
+        "Raintree"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Agentic voice AI for healthcare revenue cycle and patient coordination",
+      "sector": "health",
+      "announced_on": "2026-07-15",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/raintree-acquires-spike-technologies-bringing-genuinely-agentic-ai-voice-to-revenue-cycle-and-patient-engagement-302826388.html",
+    "evidence": "Raintree, the leading electronic health record (EHR) and practice management platform for rehabilitation and physical therapy organizations, today announced it has acquired Spike Technologies, a developer of genuinely agentic AI voice technology for healthcare.",
+    "observed_at": "2026-10-02T11:22:38Z"
+  },
+  {
+    "data": {
+      "company": "Aiir Innovations",
+      "website": "https://aiir.nl/",
+      "acquirer": [
+        "Pratt & Whitney"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI-assisted borescope software for aircraft engine inspection",
+      "sector": "other",
+      "announced_on": "2026-07-15",
+      "city": [
+        "Amsterdam"
+      ],
+      "country": "Netherlands",
+      "region": "europe"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/rtxs-pratt--whitney-advances-engine-inspections-with-ai-powered-technology-302825824.html",
+    "evidence": "Pratt & Whitney, an RTX (NYSE: RTX ) business, is expanding its engine inspection capabilities with AI-assisted borescope software through the acquisition and integration of Amsterdam-based Aiir Innovations.",
+    "observed_at": "2026-10-02T11:27:21Z"
+  },
+  {
+    "data": {
+      "company": "Solver",
+      "website": "https://iasolver.es/",
+      "acquirer": [
+        "Var Group"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI, machine learning and analytics for business process optimisation",
+      "sector": "enterprise",
+      "announced_on": "2026-07-15",
+      "city": [
+        "Valencia"
+      ],
+      "country": "Spain",
+      "region": "europe"
+    },
+    "source_url": "https://dealroom.co/news/139189-var-group-buys-valencias-solver-to-build-european-ai-hub/",
+    "evidence": "Var Group buys Valencia's Solver to build European AI hub",
+    "observed_at": "2026-10-02T11:30:25Z"
+  },
+  {
+    "data": {
+      "company": "Aiode",
+      "website": "https://aiode.com/",
+      "acquirer": [
+        "BandLab Technologies"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI music studio built on fully licensed audio-to-audio models",
+      "sector": "consumer",
+      "announced_on": "2026-07-15",
+      "price_stated": "estimated to be in the tens of millions of dollars",
+      "country": "Israel",
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.billboard.com/pro/bandlab-acquires-ai-digital-music-studio-aiode/",
+    "evidence": "BandLab Technologies has acquired AI-powered digital audio workstation Aiode, adding to its suite of products which includes BandLab, Cakewalk, ReverbNation and Airbit.",
+    "observed_at": "2026-10-02T12:08:01Z"
+  },
+  {
+    "data": {
+      "company": "Stakpak",
+      "website": "https://stakpak.dev/",
+      "acquirer": [
+        "Vercel"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Open-source autonomous DevOps agent for self-driving infrastructure",
+      "sector": "developer-tools",
+      "announced_on": "2026-07-15",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://launchbaseafrica.com/2026/07/16/vercel-extends-acquisition-spree-with-egypts-stakpak-deal/",
+    "evidence": "Vercel, the American cloud platform valued at $9.3bn, has acquired Stakpak, an Egyptian-founded start-up that built one of the first open-source autonomous DevOps agents, as it accelerates a push to become the infrastructure layer for AI-powered software.",
+    "observed_at": "2026-10-02T12:14:30Z"
+  },
+  {
+    "data": {
+      "company": "CardinalOps",
+      "website": "https://cardinalops.com/",
+      "acquirer": [
+        "Cribl"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI-powered agentic detection engineering for security operations",
+      "sector": "security",
+      "announced_on": "2026-07-14",
+      "price_stated": "estimated at approximately $100 million (undisclosed)",
+      "city": [
+        "Tel Aviv"
+      ],
+      "country": "Israel",
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.calcalistech.com/ctechnews/article/rk71zhxeml",
+    "evidence": "Cribl acquires Israeli cyber startup CardinalOps for around $100 million",
+    "observed_at": "2026-10-02T10:52:51Z"
+  },
+  {
+    "data": {
+      "company": "LabibAI",
+      "website": "https://labibai.ae/",
+      "acquirer": [
+        "9Yards X"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI solutions spun out of MBZUAI: computer vision, LLMs, healthcare and smart-city AI",
+      "sector": "enterprise",
+      "announced_on": "2026-07-13",
+      "city": [
+        "Abu Dhabi"
+      ],
+      "country": "United Arab Emirates",
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.zawya.com/en/business/ma/9yards-x-announces-acquisition-of-labib-ai-400118",
+    "evidence": "The acquisition of Labib AI by 9Yards X represents a strategic investment in the future of technology developed in the UAE.",
+    "observed_at": "2026-10-02T12:14:18Z"
+  },
+  {
+    "data": {
+      "company": "Mastertech.ai",
+      "website": "https://www.mastertech.ai/",
+      "acquirer": [
+        "AutoVitals"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI diagnostic and service intelligence platform for auto repair shops",
+      "sector": "enterprise",
+      "announced_on": "2026-07-10",
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.citybiz.co/article/872682/autovitals-acquires-mastertech-ai-to-expand-ai-tools-for-independent-repair-shops/",
+    "evidence": "AutoVitals, a provider of digital workflow and customer engagement software for independent automotive repair shops, has acquired Mastertech.ai, an AI-powered diagnostic and service intelligence platform.",
+    "observed_at": "2026-10-02T12:22:22Z"
+  },
+  {
+    "data": {
+      "company": "Deeptune",
+      "website": "https://deeptune.com/",
+      "acquirer": [
+        "Mercor"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Simulated software environments (RL training gyms) for training AI agents",
+      "sector": "developer-tools",
+      "announced_on": "2026-07-09",
+      "city": [
+        "New York"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://siliconangle.com/2026/07/09/mercor-buys-deeptune-build-training-environments-ai-agents/",
+    "evidence": "Artificial intelligence training data company Mercor.io Corp. announced today that it has acquired Deeptune Inc. , a startup that builds simulated software environments used to train AI agents.",
+    "observed_at": "2026-10-02T11:12:01Z"
+  },
+  {
+    "data": {
+      "company": "Aprecomm",
+      "website": "https://aprecomm.ai/",
+      "acquirer": [
+        "Airties"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI-driven broadband and Wi-Fi experience management for internet service providers",
+      "sector": "enterprise",
+      "announced_on": "2026-07-09",
+      "city": [
+        "Bengaluru"
+      ],
+      "country": "India",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.siliconindia.com/news/startups/airties-to-acquire-aprecomm-expand-ai-connectivity-solutions-nid-241437-cid-19.html",
+    "evidence": "Global connectivity software company Airties has announced a definitive agreement to acquire Bengaluru-based broadband intelligence startup Aprecomm , marking a significant step in its strategy to expand its global footprint and strengthen its artificial intelligence capabilities",
+    "observed_at": "2026-10-02T11:18:33Z"
+  },
+  {
+    "data": {
+      "company": "Aidora",
+      "website": "https://getaidora.com/",
+      "acquirer": [
+        "Paylocity"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI-native leave management and compliance software for HR teams",
+      "sector": "enterprise",
+      "announced_on": "2026-07-09",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.manilatimes.net/2026/07/09/tmt-newswire/globenewswire/paylocity-acquires-ai-native-aidora-to-simplify-leave-management/2381653",
+    "evidence": "SCHAUMBURG, Ill., July 09, 2026 (GLOBE NEWSWIRE) -- Paylocity (NASDAQ: PCTY), a leading provider of HCM, Finance, and IT solutions, today announced the acquisition of Aidora, an AI-native leave management compliance software company",
+    "observed_at": "2026-10-02T12:08:49Z"
+  },
+  {
+    "data": {
+      "company": "Verloop.io",
+      "website": "https://verloop.io/",
+      "acquirer": [
+        "Nurix AI"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Conversational AI platform automating customer support via chat and voice agents",
+      "sector": "enterprise",
+      "announced_on": "2026-07-09",
+      "city": [
+        "Bengaluru"
+      ],
+      "country": "India",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://cxotoday.com/media-coverage/nurix-ai-to-acquire-verloop-io-expanding-conversational-ai-platform-across-voice-and-chat/",
+    "evidence": "Nurix AI today announced the acquisition of Verloop.io, one of India's leading enterprise conversational AI companies, expanding its conversational AI capabilities across voice and chat for businesses in India and the Middle East.",
+    "observed_at": "2026-10-02T12:00:31Z"
+  },
+  {
+    "data": {
+      "company": "Northslope",
+      "website": "https://www.northslope.com/",
+      "acquirer": [
+        "OpenAI"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Forward-deployed engineers building AI applications for enterprises on Palantir AIP",
+      "sector": "enterprise",
+      "announced_on": "2026-07-08",
+      "city": [
+        "Denver"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://thenextweb.com/news/openai-northslope-acquisition-enterprise-ai-deployment",
+    "evidence": "OpenAI's deployment arm is buying applied-AI firm Northslope, its second acquisition since May.",
+    "observed_at": "2026-10-02T11:12:07Z"
+  },
+  {
+    "data": {
+      "company": "Pragmatyc",
+      "website": "https://pragmatyc.com/",
+      "acquirer": [
+        "Saicon Consultants"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Enterprise AI, AIoT, intelligent automation and digital engineering services",
+      "sector": "enterprise",
+      "announced_on": "2026-07-08",
+      "city": [
+        "Nagpur"
+      ],
+      "country": "India",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://cxotoday.com/media-coverage/saicon-consultants-acquires-nagpur-based-pragmatyc-to-strengthen-enterprise-ai-and-aiot-capabilities/",
+    "evidence": "Saicon Consultants, Inc. has acquired Pragmatyc Group Private Limited, a Nagpur-based company specialising in Artificial Intelligence (AI), AIoT, intelligent automation, and digital engineering solutions.",
+    "observed_at": "2026-10-02T11:15:59Z"
+  },
+  {
+    "data": {
+      "company": "Wikit",
+      "website": "https://www.wikit.ai/",
+      "acquirer": [
+        "Nexpublica"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Agentic AI platform for French public bodies and local authorities",
+      "sector": "defense",
+      "announced_on": "2026-07-08",
+      "city": [
+        "Lyon"
+      ],
+      "country": "France",
+      "region": "europe"
+    },
+    "source_url": "https://dealroom.co/news/137348-nexpublica-buys-lyons-wikit-to-scale-agentic-ai-across-french-public-sec/",
+    "evidence": "Nexpublica buys Lyon's Wikit to scale agentic AI across French public sector",
+    "observed_at": "2026-10-02T11:26:31Z"
+  },
+  {
+    "data": {
+      "company": "Ciro",
+      "website": "https://ciro.io/",
+      "acquirer": [
+        "Reevo"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI prospecting agent that finds, qualifies, enriches and drafts outreach to B2B sales contacts",
+      "sector": "enterprise",
+      "announced_on": "2026-07-08",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.manilatimes.net/2026/07/09/tmt-newswire/globenewswire/reevo-strengthens-its-ai-powered-prospecting-and-outreach-with-acquisition-of-ciro/2381237",
+    "evidence": "Reevo, the AI-native Revenue Operating System backed by Khosla Ventures and Kleiner Perkins, today announced it has acquired Ciro, a B2B prospecting agent that finds, qualifies, enriches, and drafts outreach to sales contacts at scale.",
+    "observed_at": "2026-10-02T12:14:31Z"
+  },
+  {
+    "data": {
+      "company": "Send",
+      "website": "https://www.send.technology/",
+      "acquirer": [
+        "Duck Creek Technologies"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI-native underwriting orchestration for commercial, specialty and London Market insurers",
+      "sector": "finance",
+      "announced_on": "2026-07-07",
+      "city": [
+        "London",
+        "New York"
+      ],
+      "country": "United Kingdom / United States",
+      "region": "europe"
+    },
+    "source_url": "https://www.prnewswire.co.uk/news-releases/duck-creek-acquires-send-creating-the-industrys-only-agentic-underwriting-to-core-platform-302819403.html",
+    "evidence": "Duck Creek Technologies , the intelligent core of insurance, today announced it has acquired Send Technology Solutions Ltd , a leading AI-native underwriting orchestration engine serving commercial, specialty, and complex risk markets with leading insurance customers across the globe.",
+    "observed_at": "2026-10-02T11:08:53Z"
+  },
+  {
+    "data": {
+      "company": "Cloudsweep",
+      "website": "https://cloudsweep.ai/",
+      "acquirer": [
+        "Tekever"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI applied to software development (AI-native engineering)",
+      "sector": "developer-tools",
+      "announced_on": "2026-07-07",
+      "country": "Portugal",
+      "region": "europe"
+    },
+    "source_url": "https://econews.pt/2026/07/07/tekever-buys-portuguese-ai-startup-cloudsweep/",
+    "evidence": "Tekever has acquired Portuguese startup Cloudsweep, deepening its AI push as the defence technology group expands software and autonomous systems capabilities.",
+    "observed_at": "2026-10-02T12:14:17Z"
+  },
+  {
+    "data": {
+      "company": "Skycatch",
+      "website": "https://www.skycatch.com/",
+      "acquirer": [
+        "Caterpillar"
+      ],
+      "deal_type": "acquisition",
+      "focus": "Spatial data capture, processing and AI analytics for mining sites",
+      "sector": "enterprise",
+      "announced_on": "2026-07-07",
+      "city": [
+        "San Francisco"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/caterpillar-expands-mining-technology-capabilities-with-skycatch-acquisition-302818907.html",
+    "evidence": "Caterpillar Inc. (NYSE: CAT) has acquired Skycatch, Inc. (Skycatch), a leading provider of spatial data capture, processing and analysis solutions for the mining industry",
+    "observed_at": "2026-10-02T11:59:04Z"
+  },
+  {
+    "data": {
+      "company": "ParaScript",
+      "website": "https://www.parascript.com/",
+      "acquirer": [
+        "Stakk"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI document recognition and check-fraud detection software",
+      "sector": "finance",
+      "announced_on": "2026-07-06",
+      "price_usd": 63000000,
+      "city": [
+        "Boulder"
+      ],
+      "country": "United States",
+      "region": "americas"
+    },
+    "source_url": "https://bizwest.com/2026/09/24/doc-processing-platform-parascript-acquired-for-63m/",
+    "evidence": "Parascript LLC, a Boulder-based check-fraud and document-automation software company, was recently acquired by Stakk Ltd. for $63 million.",
+    "observed_at": "2026-10-02T11:12:58Z"
+  },
+  {
+    "data": {
+      "company": "Superclaims",
+      "website": "https://superclaims.ai/",
+      "acquirer": [
+        "ekincare"
+      ],
+      "deal_type": "acquisition",
+      "focus": "AI claims adjudication SaaS for health insurers and TPAs",
+      "sector": "finance",
+      "announced_on": "2026-07-06",
+      "city": [
+        "Hyderabad"
+      ],
+      "country": "India",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.thehindubusinessline.com/info-tech/ekincare-acquires-ai-based-claims-platform-superclaims/article71189907.ece",
+    "evidence": "Digital health platform ekincare has acquired Superclaims, an AI-based claims adjudication SaaS platform that automates health insurance claim assessments",
+    "observed_at": "2026-10-02T12:00:02Z"
+  }
+]
