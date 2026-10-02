@@ -135,7 +135,7 @@ export default defineDataApp({
   ],
   scope: {
     in: 'Conferences, summits and symposia about AI or machine learning, research or industry, in any country or online, that end on or after today, with their calls for papers or talks when they have one.',
-    out: 'Hackathons (they belong in AI Hackathons); meetups, webinars and talks shorter than a day; one company’s product launches; trade shows without an AI focus; workshops held inside a bigger conference (list the main conference); paid courses.',
+    out: 'Hackathons (they belong in AI Hackathons); meetups, webinars and talks shorter than a day; one company’s product launches; trade shows without an AI focus; workshops held inside a bigger conference (list the main conference); paid courses; generic “international conferences” from commercial organizers that run many such events, unless a recognized society or publisher (ACM, IEEE, AAAI, ACL, CVF, PMLR, Springer and the like) publishes the proceedings.',
   },
   sourceHints: [
     'Official conference websites and their call-for-papers pages',
