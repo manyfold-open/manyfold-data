@@ -61,6 +61,12 @@ Rules for anyone — human or AI agent — changing Manyfold Data. These are the
     is the dataset's version. Public reads are cached with `cachedFor`/`cachedJson` (src/worker/cache.ts), and
     nothing else is: never cache a route that reads a token, the admin password or a visitor's
     country. D1's free tier caps reads a day for the whole account; see "Database budget" in the README.
+19. **Data requests come from this site only, and reach people only through the cron.**
+    `POST /api/requests` refuses a browser `Origin` other than its own: CORS alone does not stop a
+    cross-site POST, and every visitor of such a page would bring a new IP. It counts the site's daily
+    bound only after the per-IP limit and the check pass, so one address cannot close the form for
+    everyone. The cron posts requests (`src/worker/requests.ts`) escaped, each line starting with our
+    own text, and marks only what Discord accepted as sent.
 
 ## Tests
 

@@ -11,8 +11,10 @@
  *   skill_opened               someone opened a data app's SKILL.md
  *   data_exported              CSV, JSON or the RSS feed (format)
  *   discord_joined             someone opened a Discord invite: the site's, from the top bar
- *                              (placement 'header'), or a data app's channel (placement 'follow')
+ *                              (placement 'header') or after sending a data request ('request'),
+ *                              or a data app's channel (placement 'follow')
  *   record_reported            a reader sent a report (never its text)
+ *   data_requested             a reader sent a data request from the front page (never its text)
  *
  * Page views are the tag's first page_view, then GA4's history-change page views as the
  * router moves between pages. Each carries page_location without the Table's search text:
@@ -69,7 +71,8 @@ export type AnalyticsEvent =
   | 'skill_opened'
   | 'data_exported'
   | 'discord_joined'
-  | 'record_reported';
+  | 'record_reported'
+  | 'data_requested';
 
 /**
  * Tells the tag which page comes next, with the reader's search removed. Call it before the
@@ -82,7 +85,7 @@ export const notePage = (href: string): void => {
 /** One named moment. Silent when nothing is measuring. */
 export const track = (
   event: AnalyticsEvent,
-  params: { data_app: string; format?: 'csv' | 'json' | 'rss'; placement?: 'header' | 'follow' },
+  params: { data_app: string; format?: 'csv' | 'json' | 'rss'; placement?: 'header' | 'follow' | 'request' },
 ): void => {
   gtag('event', event, params);
 };

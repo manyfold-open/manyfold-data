@@ -241,9 +241,8 @@ export interface Actor {
   label: string;
 }
 
-export interface NotifyStatus {
-  slug: string;
-  title: string;
+/** A Discord channel the site posts to through a webhook, as the admin sees it. */
+export interface DiscordChannel {
   configured: boolean;
   /** The webhook with its secret part hidden. */
   masked: string | null;
@@ -251,10 +250,34 @@ export interface NotifyStatus {
   failures: number;
   last_sent_at: string | null;
   last_error: string | null;
-  /** Verified records waiting to be announced. */
+  /** What waits for the next post: verified records, or readers' data requests. */
   waiting: number;
+}
+
+/** A data app's announcement channel. */
+export interface NotifyStatus extends DiscordChannel {
+  slug: string;
+  title: string;
   /** The channel's public invite link, shown on the Overview; null when none is set. */
   invite_url: string | null;
+}
+
+/** A reader's request for data to track, from the front page. */
+export interface DataRequest {
+  id: number;
+  topic: string;
+  details: string | null;
+  /** An email or Discord name the reader left for a reply. */
+  contact: string | null;
+  created_at: string;
+  /** When it was posted to the requests channel; null while it waits. */
+  sent_at: string | null;
+}
+
+/** GET /api/admin/requests: the site's requests channel and the latest requests. */
+export interface DataRequestsAdmin {
+  channel: DiscordChannel;
+  items: DataRequest[];
 }
 
 export interface AppOverview {

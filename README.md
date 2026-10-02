@@ -52,6 +52,9 @@ The skill tells it how to get a token, where to keep it (`MANYFOLD_DATA_TOKEN` i
   `/records` and `/stats` from the same dataset with the same code (`src/shared/engine.ts`).
 - **A cron trigger every five minutes** releases expired leases, queues rechecks, and posts newly
   verified records to Discord, so a record reaches the channel within minutes of being verified.
+- **Readers ask for the data they want.** The front page's "Request a data app" card takes what a
+  reader would like tracked, with an email or Discord name if they want a reply; the cron posts it to
+  the team's requests channel on Discord.
 
 ```
 data-apps/              one folder per data app: config.ts, seed.json
@@ -82,7 +85,8 @@ npm run db:reset:local  # wipe the local database and seed it again
 
 ## Read API
 
-Everything is JSON, open to any origin, and covers verified records only.
+Everything is JSON and covers verified records only. Reads are open to any origin; a data request is
+taken from this site only.
 
 | Route | Returns |
 | --- | --- |
@@ -95,6 +99,7 @@ Everything is JSON, open to any origin, and covers verified records only.
 | `GET /<slug>/export.csv`, `/<slug>/export.json` | Every verified record with its source and evidence |
 | `GET /<slug>/feed.xml` | RSS: the 50 most recently verified records |
 | `POST /api/<slug>/records/<id>/report` | A reader says what is wrong: `{"reason"}`, 10 per IP per hour; it goes to the admin |
+| `POST /api/requests` | A reader asks for data to be tracked: `{"topic", "details"?, "contact"?}`. A browser `Origin` other than the site's gets 403; 5 per IP per hour and 100 a day in all. The cron posts it to the requests channel on Discord |
 
 `/records` takes the same parameters the Table writes into its address bar:
 
@@ -150,7 +155,8 @@ than half of them rejected, is suspended automatically.
 - **Spot-check:** this week's sample of 50 verified records to check against their sources; the share
   marked correct is the accuracy figure.
 - **Discord:** set, test, pause or remove each data app's webhook, and set the channel's invite link,
-  which the Overview shows at the bottom so readers can join.
+  which the Overview shows at the bottom so readers can join. The same for the site's requests
+  channel, with the latest data requests readers sent from the front page; delete one there.
 
 The console is a client of `/api/admin/*`, which needs the `x-admin-password` header and stays closed
 until the `ADMIN_PASSWORD` secret is set. Locally, put it in `.dev.vars` (see `.dev.vars.example`).
@@ -172,6 +178,9 @@ until the `ADMIN_PASSWORD` secret is set. Locally, put it in `.dev.vars` (see `.
 | `GET /api/admin/<slug>/spot-check`, `POST …/spot-check/<record id>` | This week's sample; mark one `{"correct", "note"?}` |
 | `GET /api/admin/notify`, `PUT`/`PATCH`/`DELETE /api/admin/notify/<slug>` | Discord state; set `{"webhook_url"}`; pause or resume `{"state"}` and set the public `{"invite_url"}` (or `null`); remove the webhook |
 | `POST /api/admin/notify/<slug>/test` | Post a test message to the channel |
+| `GET /api/admin/requests` | The requests channel's state and the latest 50 data requests |
+| `PUT`/`PATCH`/`DELETE /api/admin/requests/discord`, `POST …/discord/test` | The requests channel: set `{"webhook_url"}`, pause or resume `{"state"}`, remove the webhook, post a test message |
+| `DELETE /api/admin/requests/<id>` | Delete a data request; a post already sent stays in Discord |
 | `POST /api/admin/maintenance` | Run the cron now: expired leases, recheck tasks, Discord posts, old counters |
 
 ```bash
@@ -187,6 +196,11 @@ in its workspace `.env` and follows the same `SKILL.md`; the token makes it a ma
 cron run, with link previews and pings off. The webhook URL is sealed with `CONFIG_ENCRYPTION_KEY`
 before it is stored and is only ever shown masked. Five failed posts in a row mark it failing; unsent
 records wait up to two days and go out once it works again.
+
+Readers' data requests go to one more channel, the site's own, set and sealed the same way: at most one
+post per cron run with the waiting requests, oldest first. Requests do not expire: they wait until a
+webhook is set, or works again. A request can carry the reader's email, so point that webhook at a
+private channel.
 
 ## Add a data app
 
@@ -224,7 +238,8 @@ Pushes to `main` deploy through `.github/workflows/ci.yml` after checks and test
    `npx wrangler secret put CONFIG_ENCRYPTION_KEY` (32 characters or more, e.g. `openssl rand -base64 36`).
    Never rotate the encryption key: stored webhooks could no longer be opened.
 4. After the first deploy, load the seed once: `npm run db:seed:remote`.
-5. Open `/settings`, then **Discord**, and paste each data app's webhook URL.
+5. Open `/settings`, then **Discord**, and paste each data app's webhook URL, and the requests
+   channel's (a private channel: requests can carry a reader's email).
 6. Set `GA_MEASUREMENT_ID` in `wrangler.jsonc` to your own GA4 id, or empty it to serve no analytics.
 
 A cron trigger runs the housekeeping every five minutes once deployed.
@@ -243,7 +258,8 @@ Manyfold Data is built to spend almost none of it on readers:
   record and its history, cached for a minute; feeds and exports are cached for five.
 - **Agents:** a token lookup per call (last-used time written at most every ten minutes), plus what
   the call itself does: a submit, a lease, a verdict. Their reads are indexed lookups.
-- **Cron:** every five minutes, indexed: expired leases, due rechecks, unsent announcements, old counters.
+- **Cron:** every five minutes, indexed: expired leases, due rechecks, unsent announcements and data
+  requests, old counters.
 - **Schema:** a new Worker instance checks one fingerprint row instead of re-running every CREATE.
 
 So reads grow with how often the data changes, not with how many people look. The approach suits
@@ -263,9 +279,10 @@ so `npm run dev` measures nothing.
 - **Page views** come from the tag itself and from GA4's history-change page views as the app moves
   between pages, so keep "Page changes based on browser history events" on in the stream's enhanced
   measurement settings.
-- **Five events**, each with the data app's slug as `data_app` and nothing a visitor typed:
-  `agent_instruction_copied`, `skill_opened`, `data_exported` (with `format`: csv, json or rss),
-  `discord_joined` and `record_reported`. Register `data_app` and `format` as event-scoped custom dimensions to report on them.
+- **Six events**, each with the data app's slug as `data_app` (`site` outside any data app) and
+  nothing a visitor typed: `agent_instruction_copied`, `skill_opened`, `data_exported` (with `format`:
+  csv, json or rss), `discord_joined` (with `placement`: header, follow or request),
+  `record_reported` and `data_requested`. Register `data_app` and `format` as event-scoped custom dimensions to report on them.
 
 ## License
 

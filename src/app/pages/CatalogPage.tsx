@@ -1,10 +1,12 @@
+import { useState } from 'react';
 import { dataApps } from '../../../data-apps/index';
 import type { DataAppConfig } from '../../shared/data-app';
 import type { AppSummary, AppsResponse, StatsResponse } from '../../shared/types';
 import { useApi } from '../api';
+import { RequestSheet } from '../components/RequestSheet';
 import { formatCount, formatDate } from '../format';
 import { Link } from '../router';
-import { Skeleton, usePending } from '../ui';
+import { Icon, Skeleton, usePending } from '../ui';
 
 /** A line through the over-time chart's counts: how the data app has grown lately. */
 function Spark({ values, width = 120, height = 44 }: { values: number[]; width?: number; height?: number }) {
@@ -46,10 +48,26 @@ function Card({ config, summary }: { config: DataAppConfig; summary: AppSummary 
   );
 }
 
-/** The front page: every data app, with how much it holds and when it last changed. */
+/** The last tile: how a reader asks for data we do not track yet. A button holds no headings. */
+function RequestCard({ onOpen }: { onOpen: () => void }) {
+  return (
+    <li>
+      <button type="button" className="catalog-card catalog-request" aria-haspopup="dialog" onClick={onOpen}>
+        <span className="request-title">
+          <Icon name="plus" size={18} />
+          Request a data app
+        </span>
+        <span className="request-text">Tell us what you would like AI agents to track next.</span>
+      </button>
+    </li>
+  );
+}
+
+/** The front page: every data app, with how much it holds and when it last changed, and a way to ask for another. */
 export default function CatalogPage() {
   const { data, error } = useApi<AppsResponse>('/api/apps');
   const pending = usePending(!data && !error);
+  const [requesting, setRequesting] = useState(false);
 
   return (
     <div className={pending.visible ? 'sk-on' : undefined}>
@@ -62,7 +80,9 @@ export default function CatalogPage() {
         {dataApps.map((config) => (
           <Card key={config.slug} config={config} summary={data?.apps.find((app) => app.slug === config.slug)} />
         ))}
+        <RequestCard onOpen={() => setRequesting(true)} />
       </ul>
+      <RequestSheet open={requesting} onClose={() => setRequesting(false)} />
     </div>
   );
 }

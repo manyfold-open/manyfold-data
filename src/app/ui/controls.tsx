@@ -11,6 +11,7 @@ import {
   useRef,
   type AnchorHTMLAttributes,
   type ButtonHTMLAttributes,
+  type InputHTMLAttributes,
   type KeyboardEvent,
   type ReactNode,
   type TextareaHTMLAttributes,
@@ -356,6 +357,14 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaHTMLAttributes<H
   ref,
 ) {
   return <textarea ref={ref} className={cx('textarea', className)} {...rest} />;
+});
+
+/** One line of text, styled as the Textarea. Only the plain text types: pickers have their own controls. */
+export const TextField = forwardRef<
+  HTMLInputElement,
+  Omit<InputHTMLAttributes<HTMLInputElement>, 'type'> & { type?: 'text' | 'email' | 'url' }
+>(function TextField({ className, type = 'text', ...rest }, ref) {
+  return <input ref={ref} type={type} className={cx('text-field', className)} {...rest} />;
 });
 
 /* ───────── labels ───────── */

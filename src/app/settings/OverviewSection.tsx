@@ -17,12 +17,20 @@ interface CronReport {
   rechecks: number;
   datasets: number;
   discord: { sent: number; failed: number };
+  /** The requests channel's post: readers' data requests. */
+  requests: { sent: number; failed: number };
 }
 
-const describe = (report: CronReport) =>
-  `Released ${plural(report.released, 'expired lease')}, queued ${plural(report.rechecks, 'recheck')}, ` +
-  `rebuilt ${plural(report.datasets, 'dataset')}, sent ${plural(report.discord.sent, 'Discord post')}` +
-  (report.discord.failed ? `; ${plural(report.discord.failed, 'post')} failed.` : '.');
+const describe = (report: CronReport) => {
+  const sent = report.discord.sent + report.requests.sent;
+  const failed = report.discord.failed + report.requests.failed;
+  return (
+    `Released ${plural(report.released, 'expired lease')}, queued ${plural(report.rechecks, 'recheck')}, ` +
+    `rebuilt ${plural(report.datasets, 'dataset')}, sent ${plural(sent, 'Discord post')}` +
+    (report.requests.sent ? ', including data requests' : '') +
+    (failed ? `; ${plural(failed, 'post')} failed.` : '.')
+  );
+};
 
 /** Each data app at a glance: records by status, work waiting, Discord's state. */
 export default function OverviewSection() {

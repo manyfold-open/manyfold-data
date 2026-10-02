@@ -1,31 +1,47 @@
 /**
- * Discord announcements. A verdict that makes a record public adds it to the outbox; each
- * cron run sends a data app's waiting records as one message, so a busy hour is one post,
- * not a flood. Record text comes from strangers, so it is escaped and pings are switched
- * off (`allowed_mentions`).
+ * Discord. The site posts to two kinds of channel, each through a webhook stored sealed:
  *
- * Per data app, app_settings holds the sealed webhook, a masked copy for display, and the
+ *   - each data app's announcements: a verdict that makes a record public adds it to the
+ *     outbox, and each cron run sends a data app's waiting records as one message, so a busy
+ *     hour is one post, not a flood;
+ *   - the site's requests channel (SITE_CHANNEL), where readers' data requests from the front
+ *     page go (src/worker/requests.ts), also at most one post per cron run.
+ *
+ * Text from strangers is escaped and pings are switched off (`allowed_mentions`).
+ *
+ * Per channel, app_settings holds the sealed webhook, a masked copy for display, and the
  * delivery state: active, paused, or failing after 5 failed sends in a row. A failing
  * webhook is still tried each run, so a channel that comes back recovers by itself.
  */
 
 import { valueLabel, withUnit, type DataAppConfig, type RecordData } from '../shared/data-app';
-import type { NotifyStatus } from '../shared/types';
+import type { DiscordChannel, NotifyStatus } from '../shared/types';
 import { seal, unseal, type Sealed } from './crypto';
 import { HttpError, type Env } from './types';
+
+/** The requests channel's app_slug: the site's own settings, where db.ts keeps the schema fingerprint. */
+export const SITE_CHANNEL = '*';
 
 const WEBHOOK = /^https:\/\/(?:(?:canary|ptb)\.)?discord(?:app)?\.com\/api\/webhooks\/(\d+)\/([\w-]+)$/;
 /** A public invite to the channel, shown to readers on the Overview. Never the webhook. */
 const INVITE = /^https:\/\/(?:discord\.gg|(?:www\.)?discord(?:app)?\.com\/invite)\/([A-Za-z0-9-]{2,32})\/?$/;
 const FAILING_AFTER = 5;
 const LINES_MAX = 10;
-const CONTENT_MAX = 2000;
+/** Discord's limit on a message's content. */
+export const CONTENT_MAX = 2000;
 const LINE_MAX = 180;
 /** Message flag SUPPRESS_EMBEDS: one link preview per record would bury the list. */
 const SUPPRESS_EMBEDS = 4;
 
-type Delivery = Pick<NotifyStatus, 'state' | 'failures' | 'last_sent_at' | 'last_error'>;
+type Delivery = Pick<DiscordChannel, 'state' | 'failures' | 'last_sent_at' | 'last_error'>;
 const FRESH: Delivery = { state: 'active', failures: 0, last_sent_at: null, last_error: null };
+
+/** A channel ready to post to: not paused, and its webhook opens. */
+export interface Channel {
+  slug: string;
+  webhook: string;
+  state: Delivery;
+}
 
 /* ───────── settings ───────── */
 
@@ -57,12 +73,30 @@ async function webhookOf(db: D1Database, env: Env, slug: string): Promise<string
   return raw ? unseal(env, JSON.parse(raw) as Sealed) : null;
 }
 
+/** The channel ready to post to, or null when it is paused, has no webhook, or the webhook cannot be opened. */
+export async function openChannel(db: D1Database, env: Env, slug: string): Promise<Channel | null> {
+  const state = await delivery(db, slug);
+  if (state.state === 'paused') return null;
+  const webhook = await webhookOf(db, env, slug).catch(() => null);
+  return webhook ? { slug, webhook, state } : null;
+}
+
 /* ───────── admin ───────── */
+
+/** A channel as the admin sees it; `waiting` is what the caller counted for its next post. */
+export async function channelStatus(db: D1Database, slug: string, waiting: number): Promise<DiscordChannel> {
+  const masked = await readSetting(db, slug, 'discord_masked');
+  return {
+    configured: masked !== null,
+    masked,
+    ...(masked ? await delivery(db, slug) : { ...FRESH, state: 'off' as const }),
+    waiting,
+  };
+}
 
 export async function notifyStatus(db: D1Database, apps: readonly DataAppConfig[]): Promise<NotifyStatus[]> {
   return Promise.all(
     apps.map(async (config) => {
-      const masked = await readSetting(db, config.slug, 'discord_masked');
       const waiting = await db
         .prepare(
           `SELECT COUNT(*) AS n FROM outbox o JOIN records r ON r.id = o.record_id
@@ -73,10 +107,7 @@ export async function notifyStatus(db: D1Database, apps: readonly DataAppConfig[
       return {
         slug: config.slug,
         title: config.title,
-        configured: masked !== null,
-        masked,
-        ...(masked ? await delivery(db, config.slug) : { ...FRESH, state: 'off' as const }),
-        waiting: waiting ?? 0,
+        ...(await channelStatus(db, config.slug, waiting ?? 0)),
         invite_url: await inviteOf(db, config.slug),
       };
     }),
@@ -187,16 +218,60 @@ async function post(webhook: string, content: string, fetcher: typeof fetch): Pr
   }
 }
 
+/**
+ * Posts one message to a channel and keeps its delivery state. When Discord accepts it,
+ * `onSent` (marking what the message carried as sent) commits in one batch with the state,
+ * so nothing is marked sent that was not posted. True when the post went out.
+ */
+export async function deliver(
+  db: D1Database,
+  channel: Channel,
+  content: string,
+  onSent: D1PreparedStatement[],
+  now: Date,
+  fetcher: typeof fetch = fetch,
+): Promise<boolean> {
+  const outcome = await post(channel.webhook, content, fetcher);
+  const at = now.toISOString();
+  if (outcome.ok) {
+    await db.batch([
+      ...onSent,
+      writeSetting(db, channel.slug, 'discord_state', JSON.stringify({ state: 'active', failures: 0, last_sent_at: at, last_error: null }), now),
+    ]);
+    return true;
+  }
+  // A 429 is Discord asking to wait, not a broken webhook.
+  const failures = outcome.status === 429 ? channel.state.failures : channel.state.failures + 1;
+  await writeSetting(
+    db,
+    channel.slug,
+    'discord_state',
+    JSON.stringify({
+      ...channel.state,
+      failures,
+      state: failures >= FAILING_AFTER ? 'failing' : channel.state.state,
+      last_error: `${at}: ${outcome.status ? `HTTP ${outcome.status}` : 'no response'}`,
+    }),
+    now,
+  ).run();
+  return false;
+}
+
+/** A data app channel's test message. */
+export const testMessage = (config: DataAppConfig, origin: string): string =>
+  `Test message from Manyfold Data. Newly verified ${config.noun.other} will appear here: <${origin}/${config.slug}>`;
+
+/** Posts `content` to a channel now, paused or not; the delivery state is left as it is. */
 export async function sendTest(
   db: D1Database,
   env: Env,
-  config: DataAppConfig,
-  origin: string,
+  slug: string,
+  content: string,
   fetcher: typeof fetch = fetch,
 ): Promise<{ ok: boolean; status: number }> {
-  const webhook = await webhookOf(db, env, config.slug);
+  const webhook = await webhookOf(db, env, slug);
   if (!webhook) throw new HttpError(409, 'not_configured', 'Set a webhook first.');
-  return post(webhook, `Test message from Manyfold Data. Newly verified ${config.noun.other} will appear here: <${origin}/${config.slug}>`, fetcher);
+  return post(webhook, content, fetcher);
 }
 
 /**
@@ -214,10 +289,8 @@ export async function flushOutbox(
   let sent = 0;
   let failed = 0;
   for (const config of apps) {
-    const state = await delivery(db, config.slug);
-    if (state.state === 'paused') continue;
-    const webhook = await webhookOf(db, env, config.slug).catch(() => null);
-    if (!webhook) continue;
+    const channel = await openChannel(db, env, config.slug);
+    if (!channel) continue;
 
     const { results } = await db
       .prepare(
@@ -234,32 +307,12 @@ export async function flushOutbox(
       results.length,
       origin,
     );
-    const outcome = await post(webhook, content, fetcher);
-    const at = now.toISOString();
-    if (outcome.ok) {
-      const last = results.at(-1)!.outbox_id;
-      await db.batch([
-        db.prepare('UPDATE outbox SET sent_at = ? WHERE app_slug = ? AND sent_at IS NULL AND id <= ?').bind(at, config.slug, last),
-        writeSetting(db, config.slug, 'discord_state', JSON.stringify({ state: 'active', failures: 0, last_sent_at: at, last_error: null }), now),
-      ]);
-      sent += 1;
-    } else {
-      // A 429 is Discord asking to wait, not a broken webhook.
-      const failures = outcome.status === 429 ? state.failures : state.failures + 1;
-      await writeSetting(
-        db,
-        config.slug,
-        'discord_state',
-        JSON.stringify({
-          ...state,
-          failures,
-          state: failures >= FAILING_AFTER ? 'failing' : state.state,
-          last_error: `${at}: ${outcome.status ? `HTTP ${outcome.status}` : 'no response'}`,
-        }),
-        now,
-      ).run();
-      failed += 1;
-    }
+    const last = results.at(-1)!.outbox_id;
+    const markSent = db
+      .prepare('UPDATE outbox SET sent_at = ? WHERE app_slug = ? AND sent_at IS NULL AND id <= ?')
+      .bind(now.toISOString(), config.slug, last);
+    if (await deliver(db, channel, content, [markSent], now, fetcher)) sent += 1;
+    else failed += 1;
   }
   return { sent, failed };
 }

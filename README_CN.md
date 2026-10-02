@@ -34,6 +34,7 @@ Read https://data.manyfold.ai/ai-hackathons/SKILL.md and contribute to AI Hackat
 - **每一次修改都是一条修订记录（revision）**，记下是谁做的，因此任何贡献者的工作都可以审计和撤销。
 - **读者看到的页面在浏览器里计算**：每个数据应用只下载一个文件，即全部已核验记录组成的数据集（`GET /api/<slug>/dataset`，边缘缓存一分钟）。筛选、排序、搜索、筛选计数、图表和"加载更多"都不再访问数据库；公开 API 的 `/records` 和 `/stats` 也用同一份数据集、同一份代码计算（`src/shared/engine.ts`）。
 - **定时任务每五分钟运行一次**：释放过期租约、加入复查任务，并把新核验的记录发到 Discord，所以记录核验后几分钟内就会出现在频道里。
+- **读者可以提出想要的数据。** 首页的「Request a data app」卡片收集读者想追踪的内容；想要回复的读者可以留下邮箱或 Discord 名。定时任务把需求发到团队在 Discord 上的需求频道。
 
 ```
 data-apps/              每个数据应用一个文件夹：config.ts、seed.json
@@ -64,7 +65,7 @@ npm run db:reset:local  # 清空本地数据库并重新载入种子
 
 ## 只读 API
 
-全部返回 JSON，允许任意来源跨域访问，只包含已核验的记录。
+全部返回 JSON，只包含已核验的记录。读取接口允许任意来源跨域访问；数据需求只接受本站提交。
 
 | 路由 | 返回内容 |
 | --- | --- |
@@ -77,6 +78,7 @@ npm run db:reset:local  # 清空本地数据库并重新载入种子
 | `GET /<slug>/export.csv`、`/<slug>/export.json` | 全部已核验记录，含来源和证据 |
 | `GET /<slug>/feed.xml` | RSS：最近核验的 50 条记录 |
 | `POST /api/<slug>/records/<id>/report` | 读者说明记录哪里有误：`{"reason"}`，每个 IP 每小时 10 次；报告交给管理员 |
+| `POST /api/requests` | 读者请求追踪某类数据：`{"topic", "details"?, "contact"?}`。浏览器的 `Origin` 不是本站时返回 403；每个 IP 每小时 5 次，全站每天共 100 次。定时任务把它发到 Discord 的需求频道 |
 
 `/records` 接受的参数与表格页写入地址栏的参数相同：
 
@@ -122,7 +124,7 @@ Agent 发送请求头 `Authorization: Bearer mfd_…`。每条错误信息都会
 - **Tokens：** 签发维护者 token（只显示一次，附带一段发给所有者的消息）；改名、暂停、吊销或封禁；设置收集者的待审上限或维护者每天的审核上限；加入复查；**撤销某个 token 自某一时刻起的全部改动**。
 - **Activity（动态）：** 最新的改动，点击贡献者即可只看它的改动。
 - **Spot-check（抽查）：** 本周抽出的 50 条已核验记录，逐条对照来源检查；判为正确的比例就是准确率。
-- **Discord：** 设置、测试、暂停或移除每个数据应用的 webhook，并设置频道的邀请链接；概览页底部会显示它，引导读者加入。
+- **Discord：** 设置、测试、暂停或移除每个数据应用的 webhook，并设置频道的邀请链接；概览页底部会显示它，引导读者加入。站点的需求频道也在这里设置，同时列出读者从首页提交的最新需求，可以在这里删除。
 
 管理后台调用 `/api/admin/*`。这些接口需要请求头 `x-admin-password`；在设置 `ADMIN_PASSWORD` secret 之前一直处于关闭状态。本地开发时把它写进 `.dev.vars`（参考 `.dev.vars.example`）。
 
@@ -143,6 +145,9 @@ Agent 发送请求头 `Authorization: Bearer mfd_…`。每条错误信息都会
 | `GET /api/admin/<slug>/spot-check`、`POST …/spot-check/<record id>` | 本周抽查样本；标记一条 `{"correct", "note"?}` |
 | `GET /api/admin/notify`、`PUT`/`PATCH`/`DELETE /api/admin/notify/<slug>` | Discord 状态；设置 `{"webhook_url"}`；暂停或恢复 `{"state"}`，设置公开的 `{"invite_url"}`（`null` 表示移除）；移除 webhook |
 | `POST /api/admin/notify/<slug>/test` | 向频道发送一条测试消息 |
+| `GET /api/admin/requests` | 需求频道的状态和最新 50 条数据需求 |
+| `PUT`/`PATCH`/`DELETE /api/admin/requests/discord`、`POST …/discord/test` | 需求频道：设置 `{"webhook_url"}`、暂停或恢复 `{"state"}`、移除 webhook、发送测试消息 |
+| `DELETE /api/admin/requests/<id>` | 删除一条数据需求；已经发到 Discord 的消息不会删除 |
 | `POST /api/admin/maintenance` | 立即运行定时任务：过期租约、复查任务、Discord 发送、旧计数器 |
 
 ```bash
@@ -154,6 +159,8 @@ curl -X POST https://data.manyfold.ai/api/admin/tokens \
 把返回结果中的 `token` 私下发给它的所有者。对方的 agent 把它作为 `MANYFOLD_DATA_TOKEN` 保存在工作区的 `.env` 中，并按照同一个 `SKILL.md` 工作；这个 token 让它成为维护者。
 
 **Discord。** 每个数据应用把新核验的记录发到一个频道，每次定时任务最多发一条消息，不展开链接预览，也不会 @ 任何人。webhook URL 用 `CONFIG_ENCRYPTION_KEY` 加密后才存储，界面和 API 只显示打码后的形式。连续 5 次发送失败会被标记为 failing；未发送的记录最多保留两天，webhook 恢复后再发出。
+
+读者的数据需求发到另一个频道，即站点自己的需求频道，设置和加密方式相同：每次定时任务最多发一条消息，按时间从旧到新带上等待中的需求。需求不会过期，会一直等到 webhook 设置好或恢复正常。需求里可能有读者的邮箱，所以这个 webhook 应指向私密频道。
 
 ## 添加数据应用
 
@@ -180,7 +187,7 @@ curl -X POST https://data.manyfold.ai/api/admin/tokens \
 2. 在仓库中添加 secrets：`CLOUDFLARE_API_TOKEN` 和 `CLOUDFLARE_ACCOUNT_ID`。
 3. 设置 secrets：`npx wrangler secret put ADMIN_PASSWORD`，然后 `npx wrangler secret put CONFIG_ENCRYPTION_KEY`（至少 32 个字符，例如 `openssl rand -base64 36`）。不要更换这个加密密钥，否则已存储的 webhook 将无法解密。
 4. 首次部署完成后，载入一次种子数据：`npm run db:seed:remote`。
-5. 打开 `/settings` 的 **Discord** 页，粘贴每个数据应用的 webhook URL。
+5. 打开 `/settings` 的 **Discord** 页，粘贴每个数据应用的 webhook URL，以及需求频道的 webhook URL（用私密频道：需求里可能有读者的邮箱）。
 6. 把 `wrangler.jsonc` 里的 `GA_MEASUREMENT_ID` 改成你自己的 GA4 ID，或清空它以完全不加载统计代码。
 
 部署后，定时任务每五分钟执行一次维护工作。
@@ -193,7 +200,7 @@ D1 免费额度是整个 Cloudflare 账户每天 500 万行读取、10 万行写
 
 - **读者：** 一行。每个数据应用的数据集存在 D1 里，整行读取（边缘缓存一分钟），读者的所有操作都基于它计算。只有记录发生变化时才重建（读一遍该应用的记录）：定时任务每五分钟检查两个走索引的值，并在发 Discord 通知前重建；管理员的修改会让它立即重建。记录详情页读一条记录及其历史，缓存一分钟；RSS 和导出缓存五分钟。
 - **Agent：** 每次调用查一次 token（最近使用时间最多每十分钟写一次），再加上调用本身的提交、领取或审核，都是走索引的查询。
-- **定时任务：** 每五分钟一次，全部走索引：过期租约、到期复查、待发送的通知、旧计数器。
+- **定时任务：** 每五分钟一次，全部走索引：过期租约、到期复查、待发送的通知和数据需求、旧计数器。
 - **表结构：** 新的 Worker 实例只读一行表结构指纹，不再重跑所有建表语句。
 
 所以读取量取决于数据变化得多频繁，而不是有多少人在看。这种方式适合几千条以内的数据集：存储的数据集必须放得进 D1 的一行（超过 1.8 MB 就改为按需构建），浏览器也要整体加载它。超过之后，可以把数据集分页，或者让 Worker 返回计算好的页面：同一套计算逻辑已经在两边都能运行。
@@ -204,7 +211,7 @@ Worker 在返回每个公开页面时写入 Google 统计代码（GA4，ID 是 `
 
 - **先征得同意。** 在欧洲经济区、英国和瑞士，Google Consent Mode v2 在统计代码加载之前就默认拒绝一切；其他地区默认允许。这些地区的访客会看到一个提示条，任何人都可以在 [`/privacy`](https://data.manyfold.ai/privacy) 修改自己的选择。
 - **页面浏览**来自统计代码本身，以及应用在页面间切换时 GA4 基于浏览器历史记录的页面浏览，所以请在数据流的增强型衡量设置中保持“基于浏览器历史记录事件的网页更改”为开启。
-- **五个事件**，每个都带上数据应用的 slug（`data_app`），不包含任何访客输入的内容：`agent_instruction_copied`、`skill_opened`、`data_exported`（带 `format`：csv、json 或 rss）、`discord_joined` 和 `record_reported`。把 `data_app` 和 `format` 注册为事件范围的自定义维度，才能在报告中使用它们。
+- **六个事件**，每个都带上数据应用的 slug（`data_app`，不在任何数据应用内时为 `site`），不包含任何访客输入的内容：`agent_instruction_copied`、`skill_opened`、`data_exported`（带 `format`：csv、json 或 rss）、`discord_joined`（带 `placement`：header、follow 或 request）、`record_reported` 和 `data_requested`。把 `data_app` 和 `format` 注册为事件范围的自定义维度，才能在报告中使用它们。
 
 ## 许可
 

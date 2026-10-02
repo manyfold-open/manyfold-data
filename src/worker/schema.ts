@@ -128,7 +128,21 @@ CREATE TABLE IF NOT EXISTS reports (
 );
 CREATE INDEX IF NOT EXISTS reports_open ON reports (status, record_id);
 
--- Settings made in /settings, such as the sealed Discord webhook URL.
+-- Readers' requests for data to track, from the front page (src/worker/requests.ts). The cron
+-- posts the unsent ones to the site's requests channel on Discord and stamps sent_at. Kept
+-- until the admin deletes one. No IP address or country is stored with them.
+CREATE TABLE IF NOT EXISTS data_requests (
+  id         INTEGER PRIMARY KEY AUTOINCREMENT,
+  topic      TEXT NOT NULL,
+  details    TEXT,
+  contact    TEXT,
+  created_at TEXT NOT NULL,
+  sent_at    TEXT
+);
+CREATE INDEX IF NOT EXISTS data_requests_unsent ON data_requests (id) WHERE sent_at IS NULL;
+
+-- Settings made in /settings, such as the sealed Discord webhook URL. Rows under app_slug '*'
+-- belong to the whole site: the schema fingerprint and the requests channel.
 CREATE TABLE IF NOT EXISTS app_settings (
   app_slug   TEXT NOT NULL,
   key        TEXT NOT NULL,

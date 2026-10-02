@@ -1,6 +1,6 @@
 /** The reader's component kit. Pages build from these and never from native form controls. */
 
-export { Amount, Avatar, Button, ButtonLink, CheckRow, Chip, IconButton, Pill, RadioPills, Segmented, SearchField, ShowAll, Tag, Textarea, Tooltip } from './controls';
+export { Amount, Avatar, Button, ButtonLink, CheckRow, Chip, IconButton, Pill, RadioPills, Segmented, SearchField, ShowAll, Tag, Textarea, TextField, Tooltip } from './controls';
 export type { Choice } from './controls';
 export { DataTable, type DataColumn } from './DataTable';
 export { Icon, type IconName } from './Icon';

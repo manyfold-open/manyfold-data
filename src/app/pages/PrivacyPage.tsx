@@ -29,8 +29,8 @@ export default function PrivacyPage() {
     <article className="prose">
       <h1>Privacy</h1>
       <p className="lead">
-        Manyfold Data has no reader accounts and asks you for nothing. This page says what the site keeps and who else
-        sees it.
+        Manyfold Data has no reader accounts. The only thing it ever asks you for is optional: a way to reply, if you
+        request a dataset. This page says what the site keeps and who else sees it.
       </p>
 
       <h2>What the site keeps</h2>
@@ -40,6 +40,10 @@ export default function PrivacyPage() {
           with tokens, and every change keeps its author so it can be reviewed and undone.
         </li>
         <li>If you report a problem with a record, the text you wrote and when, for the admin to review.</li>
+        <li>
+          If you request a dataset from the front page, what you wrote, when, and the email or Discord name you left, if
+          you left one. Requests are kept until we delete them; ask us to at the address below.
+        </li>
         <li>
           To slow down abuse, counts of requests per IP address in short time windows. They are deleted within two
           days.
@@ -54,11 +58,15 @@ export default function PrivacyPage() {
       <ul>
         <li>Cloudflare runs the site and its database, and keeps short-lived request logs.</li>
         <li>
-          With your consent, or where none is required, Google Analytics records the pages you view and five actions:
+          Discord, where each data request is posted to our team's channel, with the email or Discord name you left, if
+          any.
+        </li>
+        <li>
+          With your consent, or where none is required, Google Analytics records the pages you view and six actions:
           copying the agent instruction, opening a data app's skill, downloading its data or feed, opening a Discord
-          invite, and sending a report. Nothing you type goes to Google: not the text of a report, not the sentence you
-          type into the smart filter, and not your search, which is removed from the page address before Google
-          sees it.
+          invite, sending a report, and sending a data request. Nothing you type goes to Google: not the text of a
+          report or a request, not the sentence you type into the smart filter, and not your search, which is removed
+          from the page address before Google sees it.
         </li>
         <li>
           The smart filter on each table reads your sentence in your browser and turns it into filters there; the

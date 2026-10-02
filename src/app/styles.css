@@ -946,7 +946,8 @@ textarea {
   pointer-events: none;
 }
 
-.textarea {
+.textarea,
+.text-field {
   width: 100%;
   min-height: 76px;
   padding: 10px 12px;
@@ -963,16 +964,26 @@ textarea {
     box-shadow 120ms;
 }
 
-.textarea:focus {
+/* One line: the Textarea's look at a field's height. */
+.text-field {
+  min-height: 0;
+  height: 40px;
+  padding: 0 12px;
+}
+
+.textarea:focus,
+.text-field:focus {
   background: var(--bg);
   box-shadow: inset 0 0 0 1px var(--accent);
 }
 
-.textarea:focus-visible {
+.textarea:focus-visible,
+.text-field:focus-visible {
   outline: none;
 }
 
-.textarea::placeholder {
+.textarea::placeholder,
+.text-field::placeholder {
   color: var(--muted);
 }
 
@@ -1223,6 +1234,59 @@ textarea {
   height: 46px;
   border-radius: 10px;
   font-size: 15px;
+}
+
+/* From tablet width up, a sheet is a centered dialog: the same focus and close rules, no
+   drag. Centered by the layer's flexbox, not a transform, which the open state resets. */
+@media (min-width: 768px) {
+  .sheet-layer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+
+  .sheet {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: min(520px, 100%);
+    max-height: min(720px, 100%);
+    padding-bottom: 0;
+    border-radius: 16px;
+    box-shadow: var(--pop);
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+    transition:
+      opacity 200ms var(--ease),
+      transform 200ms var(--ease);
+  }
+
+  .sheet-layer.open .sheet {
+    opacity: 1;
+  }
+
+  .sheet-grab {
+    display: none;
+  }
+
+  .sheet-head {
+    padding: 16px 20px 12px;
+  }
+
+  .sheet-body {
+    padding: 16px 20px;
+  }
+
+  .sheet-foot {
+    padding: 12px 20px 16px;
+  }
+
+  .sheet-foot .btn {
+    height: 40px;
+    font-size: 14px;
+  }
 }
 
 .option {
@@ -1759,6 +1823,45 @@ th[aria-sort='ascending'] .sort-button svg {
   grid-row: 1 / span 3;
   grid-column: 2;
   align-self: center;
+}
+
+/* The last tile: a reader asks for data we do not track yet. A button, so the selectors
+   carry .catalog-card to beat its phone layout and restate its hover. */
+.catalog-card.catalog-request {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  min-height: 96px;
+  border: 1px dashed var(--line2);
+  background: none;
+  box-shadow: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.catalog-card.catalog-request:hover {
+  background: var(--hover);
+}
+
+.catalog-request .request-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.catalog-request .request-title svg {
+  color: var(--accent);
+}
+
+.catalog-request .request-text {
+  color: var(--muted);
+  font-size: 13px;
 }
 
 .spark path {
@@ -2589,6 +2692,54 @@ th[aria-sort='ascending'] .sort-button svg {
   font-weight: 500;
 }
 
+/* The front page's data request form, in its sheet. */
+.request-form {
+  display: grid;
+  gap: 16px;
+}
+
+.request-form .intro,
+.request-sent p {
+  color: var(--ink2);
+}
+
+.request-field {
+  display: grid;
+  gap: 6px;
+}
+
+.request-field label {
+  color: var(--ink2);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.request-field label span,
+.request-field .hint {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.request-field .hint {
+  font-size: 12.5px;
+}
+
+.request-sent {
+  display: grid;
+  gap: 10px;
+  padding: 4px 0 8px;
+}
+
+/* Focused only to keep focus inside the sheet once the form is gone: not a control. */
+.request-sent:focus-visible {
+  outline: none;
+}
+
+.request-sent .report-sent {
+  margin-top: 0;
+  font-size: 15px;
+}
+
 .history {
   margin: 0;
   padding: 0;
@@ -2831,7 +2982,9 @@ th[aria-sort='ascending'] .sort-button svg {
     display: none;
   }
 
-  .textarea {
+  /* 16px keeps iOS from zooming into a field on focus. */
+  .textarea,
+  .text-field {
     font-size: 16px;
   }
 

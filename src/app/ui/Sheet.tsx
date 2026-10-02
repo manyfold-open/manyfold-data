@@ -1,12 +1,14 @@
 /**
- * A bottom sheet for phones: filters, sort, contribute. It is a modal dialog without
- * <dialog>: focus moves in and stays in, Escape or the scrim closes it, and dragging the
- * handle down past 90px closes it too. Focus returns to whatever opened it.
+ * A bottom sheet on phones (filters, sort, contribute) and a centered dialog on wider screens
+ * (the front page's data request form). It is a modal dialog without <dialog>: focus moves in
+ * and stays in, Escape or the scrim closes it, and on a phone dragging the handle down past
+ * 90px closes it too. Focus starts on the field marked data-autofocus, if there is one, and
+ * returns to whatever opened the sheet.
  */
 
 import { useEffect, useId, useRef, useState, type PointerEvent, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
-import { prefersReducedMotion } from '../hooks';
+import { PHONE, prefersReducedMotion } from '../hooks';
 
 const FOCUSABLE = 'a[href], button:not([disabled]), input, textarea, [tabindex]:not([tabindex="-1"])';
 const CLOSE_MS = 300;
@@ -59,7 +61,9 @@ export function Sheet({
   }, [mounted]);
 
   useEffect(() => {
-    if (shown) (sheet.current?.querySelector<HTMLElement>(FOCUSABLE) ?? sheet.current)?.focus({ preventScroll: true });
+    if (!shown) return;
+    const first = sheet.current?.querySelector<HTMLElement>('[data-autofocus]') ?? sheet.current?.querySelector<HTMLElement>(FOCUSABLE);
+    (first ?? sheet.current)?.focus({ preventScroll: true });
   }, [shown]);
 
   if (!mounted) return null;
@@ -90,6 +94,8 @@ export function Sheet({
   };
 
   const startDrag = (event: PointerEvent<HTMLDivElement>) => {
+    // Only a bottom sheet is dragged away; a centered dialog would jump with the pointer.
+    if (!window.matchMedia(PHONE).matches) return;
     if ((event.target as HTMLElement).closest('button, a')) return;
     drag.current = { y: event.clientY, dy: 0 };
     sheet.current?.classList.add('dragging');

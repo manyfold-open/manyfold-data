@@ -6,6 +6,8 @@ import hackathons from '../data-apps/ai-hackathons/config';
 import { isoWeek } from '../src/worker/console';
 import { seal, unseal } from '../src/worker/crypto';
 import { announcement, escapeDiscord, fillLine } from '../src/worker/notify';
+import { RULES } from '../src/worker/ratelimit';
+import { requestLine, requestsPost } from '../src/worker/requests';
 import { app } from '../src/worker/index';
 import { createD1 } from './d1';
 
@@ -200,6 +202,209 @@ describe('Discord', () => {
 
     expect(await body(await asAdmin('/api/admin/notify/ai-hackathons/test', { method: 'POST' }))).toEqual({ ok: true, status: 200 });
     expect(discord[0]!.body.content).toMatch(/^Test message from Manyfold Data/);
+  });
+});
+
+describe('data requests', () => {
+  const REQ = 'https://discord.com/api/webhooks/777/requests-secret';
+  const MORE = 'More requests wait for the next post.';
+  const ask = (payload: unknown, ip: string, headers: Record<string, string> = {}) =>
+    call('/api/requests', json('POST', payload, { 'cf-connecting-ip': ip, ...headers }));
+  const setRequestsWebhook = (url = REQ) => asAdmin('/api/admin/requests/discord', json('PUT', { webhook_url: url }));
+  const setRequestsState = (state: unknown) => asAdmin('/api/admin/requests/discord', json('PATCH', { state }));
+  const status = async () => body(await asAdmin('/api/admin/requests'));
+  const rows = async () => (await sql('SELECT topic, details, contact, sent_at FROM data_requests ORDER BY id').all()).results;
+
+  it('pack a post within Discord’s limit, oldest first, escaping what readers wrote', () => {
+    const worst = { topic: '*'.repeat(120), details: '<'.repeat(1000), contact: '_'.repeat(100) };
+    const items = [1, 2, 3].map((id) => ({ id, ...worst }));
+    const post = requestsPost(items);
+    expect(post.content.length).toBeLessThanOrEqual(2000);
+    expect(post.count).toBeGreaterThanOrEqual(1);
+    expect(post.count).toBeLessThan(items.length);
+    expect(post.last).toBe(items[post.count - 1]!.id);
+    expect(post.content).toContain('…');
+    expect(post.content.endsWith(`\n${MORE}`)).toBe(true);
+
+    expect(requestsPost([{ id: 7, topic: 'GPU prices', details: null, contact: null }])).toEqual({
+      content: '**1 new data request**\n• **GPU prices**',
+      count: 1,
+      last: 7,
+    });
+    expect(requestLine({ topic: 'Model *releases*', details: 'From [x](https://evil.test)\n<@1>', contact: 'ada_l@example.org' })).toBe(
+      '• **Model \\*releases\\*** — From \\[x\\]\\(https://evil.test\\) \\<@1\\> · contact: ada\\_l@example.org',
+    );
+  });
+
+  it('keep a valid request, cleaned, and refuse the rest with a reason', async () => {
+    const refused = [
+      {},
+      { topic: 'ab' },
+      { topic: 'x'.repeat(121) },
+      { topic: 'GPU prices', details: 'x'.repeat(1001) },
+      { topic: 'GPU prices', contact: 'x'.repeat(101) },
+      { topic: 'GPU prices', details: 5 },
+    ];
+    for (const [n, payload] of refused.entries()) {
+      const response = await ask(payload, `198.51.100.${n}`);
+      expect(response.status).toBe(422);
+      expect((await body(response)).error.code).toBe('invalid_body');
+    }
+    expect((await body(await ask({}, '198.51.100.20'))).error.message).toBe("Say what you'd like tracked, in 3 to 120 characters.");
+    expect((await call('/api/requests', { method: 'POST', body: 'not json', headers: { 'cf-connecting-ip': '198.51.100.21' } })).status).toBe(400);
+
+    const kept = await ask({ topic: '  GPU\u200B prices\n by  region ', details: '', contact: '   ' }, '198.51.100.22');
+    expect(kept.status).toBe(201);
+    expect(await body(kept)).toEqual({ ok: true });
+    expect(await rows()).toEqual([{ topic: 'GPU prices by region', details: null, contact: null, sent_at: null }]);
+  });
+
+  it('come from this site only', async () => {
+    expect((await ask({ topic: 'GPU prices' }, '198.51.100.1', { origin: 'https://evil.test' })).status).toBe(403);
+    expect(await rows()).toEqual([]);
+    expect((await ask({ topic: 'GPU prices' }, '198.51.100.1', { origin: 'https://data.test' })).status).toBe(201);
+  });
+
+  it('are limited per address, and only the ones kept count against the daily bound', async () => {
+    vi.useFakeTimers({ toFake: ['Date'] });
+    vi.setSystemTime(new Date('2026-10-02T12:30:00Z')); // mid-hour, mid-day: no window ends during the test
+    try {
+      for (let n = 0; n < RULES.requestPerHour.limit; n += 1) expect((await ask({ topic: `Topic ${n}` }, '198.51.100.1')).status).toBe(201);
+      const limited = await ask({ topic: 'One too many' }, '198.51.100.1');
+      expect(limited.status).toBe(429);
+      expect(limited.headers.get('retry-after')).toMatch(/^\d+$/);
+      expect((await ask({ topic: 'Another address' }, '198.51.100.2')).status).toBe(201);
+
+      // Neither refusals nor invalid requests use up the site's bound.
+      for (let n = 0; n < 3; n += 1) expect((await ask({ topic: 'Still too many' }, '198.51.100.1')).status).toBe(429);
+      expect((await ask({ topic: 'ab' }, '198.51.100.3')).status).toBe(422);
+      for (let n = RULES.requestPerHour.limit + 1; n < RULES.requestsPerDay.limit; n += 1) {
+        expect((await ask({ topic: `Topic ${n}` }, `10.0.0.${n}`)).status).toBe(201);
+      }
+      expect((await ask({ topic: 'Over the bound' }, '10.0.1.1')).status).toBe(429);
+      expect(await sql('SELECT COUNT(*) AS n FROM data_requests').first('n')).toBe(RULES.requestsPerDay.limit);
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it('go to the requests channel once, escaped, with pings and previews off', async () => {
+    await setWebhook();
+    await setRequestsWebhook();
+    await ask({ topic: '@everyone *free* <@1>', details: '[x](https://evil.test)', contact: 'ada@example.org' }, '198.51.100.1');
+    await ask({ topic: 'EU AI Act enforcement' }, '198.51.100.2');
+
+    const report = await body(await cron());
+    expect(report.requests).toEqual({ sent: 1, failed: 0 });
+    expect(report.discord).toEqual({ sent: 0, failed: 0 });
+    expect(discord).toHaveLength(1);
+    expect(discord[0]!.url).toBe(`${REQ}?wait=true`);
+    expect(discord[0]!.body.allowed_mentions).toEqual({ parse: [] });
+    expect(discord[0]!.body.flags).toBe(4);
+    const content: string = discord[0]!.body.content;
+    expect(content.split('\n')[0]).toBe('**2 new data requests**');
+    expect(content).toContain('@everyone \\*free\\* \\<@1\\>');
+    expect(content).toContain('\\[x\\]\\(https://evil.test\\)');
+    expect(content).toContain(' · contact: ada@example.org');
+    expect(content.split('\n')[2]).toBe('• **EU AI Act enforcement**');
+    expect((await rows()).every((row) => row.sent_at !== null)).toBe(true);
+
+    expect((await body(await cron())).requests).toEqual({ sent: 0, failed: 0 });
+    expect(discord).toHaveLength(1);
+  });
+
+  it('wait for a channel of their own, then go out', async () => {
+    await setWebhook();
+    await ask({ topic: 'GPU prices' }, '198.51.100.1');
+    await cron();
+    expect(discord).toHaveLength(0);
+    expect((await status()).channel).toEqual({
+      configured: false,
+      masked: null,
+      state: 'off',
+      failures: 0,
+      last_sent_at: null,
+      last_error: null,
+      waiting: 1,
+    });
+
+    await setRequestsWebhook();
+    expect((await body(await cron())).requests).toEqual({ sent: 1, failed: 0 });
+    expect(discord.map((post) => post.url)).toEqual([`${REQ}?wait=true`]);
+    expect((await status()).channel).toMatchObject({ state: 'active', waiting: 0 });
+  });
+
+  it('stay after a failed post, ignore 429, and wait while the channel is paused', async () => {
+    await setRequestsWebhook();
+    await ask({ topic: 'GPU prices' }, '198.51.100.1');
+    discordStatus = 500;
+    expect((await body(await cron())).requests).toEqual({ sent: 0, failed: 1 });
+    const failed = (await status()).channel;
+    expect(failed).toMatchObject({ failures: 1, waiting: 1 });
+    expect(failed.last_error).toMatch(/HTTP 500$/);
+    discordStatus = 429;
+    await cron();
+    expect((await status()).channel.failures).toBe(1);
+
+    discordStatus = 200;
+    await setRequestsState('paused');
+    const posts = discord.length;
+    await cron();
+    expect(discord).toHaveLength(posts);
+    expect((await status()).channel).toMatchObject({ state: 'paused', waiting: 1 });
+
+    await setRequestsState('active');
+    expect((await body(await cron())).requests).toEqual({ sent: 1, failed: 0 });
+    expect((await status()).channel).toMatchObject({ state: 'active', failures: 0, waiting: 0 });
+  });
+
+  it('spread over several posts when they do not fit in one, each request once', async () => {
+    await setRequestsWebhook();
+    for (let n = 1; n <= 12; n += 1) await ask({ topic: `Request ${n}`, details: 'd'.repeat(250) }, `198.51.100.${n}`);
+    await cron();
+    await cron();
+    expect(discord).toHaveLength(2);
+    const contents = discord.map((post) => post.body.content as string);
+    expect(contents[0]!.endsWith(`\n${MORE}`)).toBe(true);
+    expect(contents[1]!.endsWith(MORE)).toBe(false);
+    for (let n = 1; n <= 12; n += 1) expect(contents.join('\n').match(new RegExp(`\\*\\*Request ${n}\\*\\*`, 'g'))).toHaveLength(1);
+    expect((await status()).channel.waiting).toBe(0);
+  });
+
+  it('keep the channel’s webhook sealed, test it, and remove it alone', async () => {
+    expect(await status()).toEqual({
+      channel: { configured: false, masked: null, state: 'off', failures: 0, last_sent_at: null, last_error: null, waiting: 0 },
+      items: [],
+    });
+    expect((await asAdmin('/api/admin/requests/discord/test', { method: 'POST' })).status).toBe(409);
+    expect((await setRequestsState('paused')).status).toBe(409);
+    expect((await setRequestsState('x')).status).toBe(422);
+    expect((await setRequestsWebhook('https://example.com/hook')).status).toBe(422);
+
+    await setWebhook();
+    const reply = await body(await setRequestsWebhook());
+    expect(reply.channel).toMatchObject({ configured: true, masked: 'https://discord.com/api/webhooks/777/…', state: 'active' });
+    expect(JSON.stringify((await sql('SELECT value FROM app_settings').all()).results)).not.toContain('requests-secret');
+
+    expect(await body(await asAdmin('/api/admin/requests/discord/test', { method: 'POST' }))).toEqual({ ok: true, status: 200 });
+    expect(discord[0]!.url).toBe(`${REQ}?wait=true`);
+    expect(discord[0]!.body.content).toMatch(/^Test message from Manyfold Data\. /);
+
+    expect((await body(await asAdmin('/api/admin/requests/discord', { method: 'DELETE' }))).channel.configured).toBe(false);
+    expect(await sql("SELECT value FROM app_settings WHERE app_slug = '*' AND key = 'schema'").first('value')).toBeTruthy();
+    expect((await body(await asAdmin('/api/admin/notify'))).apps[0]).toMatchObject({ slug: 'ai-hackathons', configured: true });
+  });
+
+  it('can be deleted by the admin, and only by the admin', async () => {
+    await ask({ topic: 'GPU prices', contact: 'ada@example.org' }, '198.51.100.1');
+    const { items } = await status();
+    expect(items).toEqual([expect.objectContaining({ topic: 'GPU prices', details: null, contact: 'ada@example.org', sent_at: null })]);
+    const path = `/api/admin/requests/${items[0].id}`;
+    expect((await call(path, { method: 'DELETE' })).status).toBe(401);
+    expect((await call('/api/admin/requests', { headers: { origin: 'https://evil.test' } })).headers.get('access-control-allow-origin')).toBeNull();
+    expect((await body(await asAdmin(path, { method: 'DELETE' }))).items).toEqual([]);
+    expect((await asAdmin(path, { method: 'DELETE' })).status).toBe(404);
+    expect((await call('/api/requests')).status).toBe(404);
   });
 });
 

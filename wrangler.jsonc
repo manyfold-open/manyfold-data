@@ -41,7 +41,8 @@
   //   ADMIN_PASSWORD          opens /api/admin/* and /settings
   //   CONFIG_ENCRYPTION_KEY   32+ characters; encrypts stored Discord webhooks. Never rotate it casually.
   // Every five minutes: expired leases, recheck tasks and old counters (src/worker/maintenance.ts),
-  // then Discord posts for newly verified records (src/worker/notify.ts).
+  // then Discord posts for newly verified records (src/worker/notify.ts) and for readers' data
+  // requests (src/worker/requests.ts).
   "triggers": { "crons": ["*/5 * * * *"] },
   // A Workers custom domain: wrangler creates and manages its DNS record in the
   // manyfold.ai zone. It also turns off the *.workers.dev address.

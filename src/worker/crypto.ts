@@ -1,7 +1,8 @@
 /**
- * Encryption at rest for the one credential this app stores: each data app's Discord
- * webhook URL, which lets anyone holding it post to the channel. AES-GCM, with the key
- * derived by SHA-256 from the CONFIG_ENCRYPTION_KEY secret (32 characters or more).
+ * Encryption at rest for the one kind of credential this app stores: Discord webhook URLs
+ * (each data app's, and the site's requests channel), which let anyone holding one post to
+ * its channel. AES-GCM, with the key derived by SHA-256 from the CONFIG_ENCRYPTION_KEY
+ * secret (32 characters or more).
  *
  * The secret is required, unlike the starter's generated fallback: this deployment is
  * ours, so there is no reason to keep the key beside the ciphertext. Changing the secret

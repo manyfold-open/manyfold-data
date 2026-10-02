@@ -12,6 +12,8 @@
  *   GET  /:slug/feed.xml             RSS: the newest verified records
  *   GET  /:slug/export.csv|json      every verified record
  *   POST /api/:slug/records/:id/report   a reader's report on a public record, limited per IP
+ *   POST /api/requests               a reader's request for data to track, from this site only,
+ *                                    limited per IP and per day; the cron posts it to Discord
  *
  * Agents (Authorization: Bearer mfd_...):
  *   POST /api/:slug/join             a collector token; no token needed, limited per IP
@@ -35,20 +37,26 @@
  *   GET   /api/admin/activity        the latest revisions, by data app or actor
  *   GET|PUT|PATCH|DELETE /api/admin/notify[/:slug], POST /api/admin/notify/:slug/test
  *                                    (PATCH sets the delivery state and the public invite link)
+ *   GET   /api/admin/requests        readers' data requests, and the requests channel's state
+ *   PUT|PATCH|DELETE /api/admin/requests/discord, POST /api/admin/requests/discord/test
+ *                                    the requests channel: webhook, pause or resume, remove, test
+ *   DELETE /api/admin/requests/:id   delete one data request
  *   GET   /api/admin/:slug/spot-check, POST .../spot-check/:recordId   the weekly accuracy check
- *   POST  /api/admin/maintenance     run the cron now: housekeeping, then the Discord outbox
+ *   POST  /api/admin/maintenance     run the cron now: housekeeping, then the Discord posts
  *
  * Read routes answer any origin: the data is CC BY 4.0 and meant to be reused. Agents
- * call from servers, and the admin from this site, so neither needs CORS.
+ * call from servers, and the admin from this site, so neither needs CORS. POST /api/requests
+ * refuses other origins outright (sameOriginOnly).
  *
  * A cron trigger runs the housekeeping in src/worker/maintenance.ts every five minutes,
- * then sends each data app's newly verified records to Discord.
+ * then posts each data app's newly verified records, and readers' data requests, to Discord.
  */
 
 import { Hono, type Context, type MiddlewareHandler } from 'hono';
 import { cors } from 'hono/cors';
 import { dataApps, findDataApp } from '../../data-apps/index';
 import type { DataAppConfig } from '../shared/data-app';
+import { checkDataRequest } from '../shared/data-request';
 import { parseQuery } from '../shared/query';
 import type { DatasetResponse, IssuedToken, JoinResponse, MeResponse } from '../shared/types';
 import { HttpError, type Env } from './types';
@@ -73,12 +81,23 @@ import {
   spotCheck,
 } from './console';
 import { csv, json as jsonExport, rss, verifiedRecords } from './feeds';
-import { clearWebhook, flushOutbox, notifyStatus, sendTest, setDeliveryState, setInvite, setWebhook } from './notify';
+import {
+  clearWebhook,
+  flushOutbox,
+  notifyStatus,
+  sendTest,
+  setDeliveryState,
+  setInvite,
+  setWebhook,
+  SITE_CHANNEL,
+  testMessage,
+} from './notify';
 import { ensureSchema } from './db';
 import { maintain } from './maintenance';
 import { applyVerdicts, LEASE_MAX, leaseTasks, workOf } from './maintainer';
 import { enforce, HOUR, RULES, sweep } from './ratelimit';
 import { appSummaries, datasetJson, forgetDataset, getRecord, refreshDataset } from './records';
+import { createRequest, deleteRequest, flushRequests, requestsAdmin, requestsTestMessage } from './requests';
 import { collectorSkill, maintainerSkill, publicSkill } from './skill';
 import { idempotencyKey, recall, remember, sourceExists, submitRecords } from './submit';
 import {
@@ -156,6 +175,20 @@ async function readJson(c: AppContext): Promise<unknown> {
     return JSON.parse(text);
   } catch {
     throw new HttpError(400, 'bad_json', 'The request body must be JSON.');
+  }
+}
+
+/**
+ * For a form whose posts reach people (the requests channel). CORS does not keep other sites
+ * out of a POST: it is a safelisted method, the preflight echoes any requested header, and a
+ * text/plain body skips the preflight entirely. So any page could make its visitors' browsers
+ * send requests, each from a new address the per-IP limit never sees. Browsers always say where
+ * a cross-origin POST comes from; clients that send no Origin (scripts) meet the limits instead.
+ */
+function sameOriginOnly(c: AppContext): void {
+  const origin = c.req.header('origin');
+  if (origin !== undefined && origin !== originOf(c)) {
+    throw new HttpError(403, 'cross_origin', 'Send data requests from the Manyfold Data site itself.');
   }
 }
 
@@ -237,6 +270,18 @@ app.post('/api/:slug/records/:id/report', async (c) => {
   const config = dataAppFor(c.req.param('slug'));
   await enforce(c.env.DB, [{ scope: 'report', subject: c.req.header('cf-connecting-ip') ?? 'unknown', rule: REPORTS_PER_HOUR }]);
   await createReport(c.env.DB, config, c.req.param('id'), ((await readJson(c)) ?? {}) as { reason?: unknown }, new Date());
+  return c.json({ ok: true }, 201);
+});
+
+// The site's daily bound is counted last, apart: a request refused by the IP limit or the
+// check never uses it up, so one address cannot close the form for everyone.
+app.post('/api/requests', async (c) => {
+  sameOriginOnly(c);
+  await enforce(c.env.DB, [{ scope: 'request', subject: c.req.header('cf-connecting-ip') ?? 'unknown', rule: RULES.requestPerHour }]);
+  const checked = checkDataRequest(await readJson(c));
+  if (!checked.ok) throw new HttpError(422, 'invalid_body', checked.errors.map((error) => error.message).join(' '));
+  await enforce(c.env.DB, [{ scope: 'requests-day', subject: 'site', rule: RULES.requestsPerDay }]);
+  await createRequest(c.env.DB, checked.value, new Date());
   return c.json({ ok: true }, 201);
 });
 
@@ -433,9 +478,39 @@ app.delete('/api/admin/notify/:slug', async (c) => {
   return c.json({ apps: await notifyStatus(c.env.DB, dataApps) });
 });
 
-app.post('/api/admin/notify/:slug/test', async (c) =>
-  c.json(await sendTest(c.env.DB, c.env, dataAppFor(c.req.param('slug')), c.env.PUBLIC_ORIGIN ?? originOf(c))),
+app.post('/api/admin/notify/:slug/test', async (c) => {
+  const config = dataAppFor(c.req.param('slug'));
+  return c.json(await sendTest(c.env.DB, c.env, config.slug, testMessage(config, c.env.PUBLIC_ORIGIN ?? originOf(c))));
+});
+
+// The site's requests channel lives under SITE_CHANNEL in the same settings as a data app's.
+app.get('/api/admin/requests', async (c) => c.json(await requestsAdmin(c.env.DB)));
+
+app.put('/api/admin/requests/discord', async (c) => {
+  const body = ((await readJson(c)) ?? {}) as { webhook_url?: unknown };
+  await setWebhook(c.env.DB, c.env, SITE_CHANNEL, body.webhook_url, new Date());
+  return c.json(await requestsAdmin(c.env.DB));
+});
+
+app.patch('/api/admin/requests/discord', async (c) => {
+  const body = ((await readJson(c)) ?? {}) as { state?: unknown };
+  await setDeliveryState(c.env.DB, SITE_CHANNEL, body.state, new Date());
+  return c.json(await requestsAdmin(c.env.DB));
+});
+
+app.delete('/api/admin/requests/discord', async (c) => {
+  await clearWebhook(c.env.DB, SITE_CHANNEL);
+  return c.json(await requestsAdmin(c.env.DB));
+});
+
+app.post('/api/admin/requests/discord/test', async (c) =>
+  c.json(await sendTest(c.env.DB, c.env, SITE_CHANNEL, requestsTestMessage(c.env.PUBLIC_ORIGIN ?? originOf(c)))),
 );
+
+app.delete('/api/admin/requests/:id{[0-9]+}', async (c) => {
+  await deleteRequest(c.env.DB, Number(c.req.param('id')));
+  return c.json(await requestsAdmin(c.env.DB));
+});
 
 app.get('/api/admin/:slug/review', async (c) => c.json({ items: await reviewQueue(c.env.DB, dataAppFor(c.req.param('slug'))) }));
 
@@ -480,7 +555,8 @@ async function runCron(env: Env, origin: string, now: Date) {
   let datasets = 0;
   for (const config of dataApps) if (await refreshDataset(env.DB, config, now)) datasets += 1;
   const discord = await flushOutbox(env.DB, env, dataApps, origin, now);
-  return { ...housekeeping, datasets, discord };
+  const requests = await flushRequests(env.DB, env, now);
+  return { ...housekeeping, datasets, discord, requests };
 }
 
 app.post('/api/admin/maintenance', async (c) => c.json(await runCron(c.env, c.env.PUBLIC_ORIGIN ?? originOf(c), new Date())));

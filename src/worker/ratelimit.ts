@@ -21,6 +21,13 @@ export const RULES = {
   joinPerDay: { limit: 20, windowMs: DAY },
   /** Requests per agent token. */
   tokenPerMinute: { limit: 60, windowMs: MINUTE },
+  /** Readers' data requests (POST /api/requests) per client IP. */
+  requestPerHour: { limit: 5, windowMs: HOUR },
+  /**
+   * Data requests the whole site accepts in a day: the bound on the requests channel when many
+   * addresses send at once. Counted only for requests that passed the IP limit and the check.
+   */
+  requestsPerDay: { limit: 100, windowMs: DAY },
 } as const satisfies Record<string, RateRule>;
 
 const windowIndex = (nowMs: number, windowMs: number) => Math.floor(nowMs / windowMs);
