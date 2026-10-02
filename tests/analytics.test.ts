@@ -14,6 +14,7 @@ import {
   shouldInject,
   type InjectionContext,
 } from '../src/worker/analytics';
+import { consentState } from '../src/shared/consent';
 import { measuredUrl, TYPED_PARAMS } from '../src/shared/query';
 import { app } from '../src/worker/index';
 import { createD1 } from './d1';
@@ -84,6 +85,16 @@ describe('the tag itself', () => {
   it('replays a stored answer ahead of the first hit', () => {
     expect(head.indexOf(CONSENT_KEY)).toBeGreaterThan(-1);
     expect(head.indexOf(CONSENT_KEY)).toBeLessThan(head.indexOf("gtag('config'"));
+  });
+
+  it('measures ads but never grants ad personalization, by default or after a yes', () => {
+    expect(head).toContain("'ad_storage':'granted'");
+    expect(head).not.toMatch(/ad_personalization['"]:\s*['"]granted/);
+    const start = head.indexOf('try{var c=');
+    const replay = new Function('localStorage', 'gtag', head.slice(start, head.indexOf('\n', start)));
+    const sent: unknown[] = [];
+    replay({ getItem: () => 'granted' }, (...args: unknown[]) => sent.push(args));
+    expect(sent).toEqual([['consent', 'update', consentState('granted')]]);
   });
 
   it('leaves the reader\'s search out of the page address, before the first hit', () => {
@@ -215,6 +226,23 @@ describe('the Worker', () => {
     expect(await ask({})).toBe(true);
     env.GA_MEASUREMENT_ID = '';
     expect(await ask({ 'cf-ipcountry': 'DE' })).toBe(false);
+  });
+});
+
+describe('what an answer sets', () => {
+  it('covers analytics and ad measurement, and never grants ad personalization', () => {
+    expect(consentState('granted')).toEqual({
+      ad_storage: 'granted',
+      ad_user_data: 'granted',
+      ad_personalization: 'denied',
+      analytics_storage: 'granted',
+    });
+    expect(consentState('denied')).toEqual({
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+    });
   });
 });
 

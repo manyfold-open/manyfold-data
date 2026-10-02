@@ -47,7 +47,8 @@ Rules for anyone — human or AI agent — changing Manyfold Data. These are the
 16. **Exports are spreadsheet-safe.** The CSV writer prefixes cells that start with `=`, `+`, `-` or `@`
     so a contributor's text never runs as a formula; keep that guard on every new export.
 17. **Analytics is consent-first and stays out of the console.** Only `src/worker/analytics.ts` writes
-    the Google tag, consent defaults before the library; never tag `/settings`, the API, or a host other
+    the Google tag, consent defaults before the library; one answer covers analytics and ad measurement,
+    and `ad_personalization` is never granted; never tag `/settings`, the API, or a host other
     than `PUBLIC_ORIGIN`'s. Events (`src/app/analytics.ts`) carry the data app's slug and fixed values,
     never text a person typed; page views carry `page_location` without `TYPED_PARAMS` (the search). Tests use made-up ids like `G-TESTID0000`, never the real one, and
     `/privacy` must keep describing what the code does.

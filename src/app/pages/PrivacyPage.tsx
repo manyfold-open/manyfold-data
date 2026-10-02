@@ -8,8 +8,8 @@ import { useEffect, useState } from 'react';
 import { measuring, setConsent, storedConsent, type Consent } from '../analytics';
 
 const STATE: Record<Consent | 'unset', string> = {
-  granted: 'You allowed analytics in this browser.',
-  denied: 'You declined analytics in this browser.',
+  granted: 'You allowed analytics and ad measurement in this browser.',
+  denied: 'You declined analytics and ad measurement in this browser.',
   unset: 'You have not answered in this browser yet.',
 };
 
@@ -49,8 +49,8 @@ export default function PrivacyPage() {
           days.
         </li>
         <li>
-          In your browser only: your answer to the analytics question below, and the light or dark theme if you picked
-          one with the toggle in the top bar.
+          In your browser only: your answer to the analytics and ad measurement question below, and the light or dark
+          theme if you picked one with the toggle in the top bar.
         </li>
       </ul>
 
@@ -69,6 +69,12 @@ export default function PrivacyPage() {
           from the page address before Google sees it.
         </li>
         <li>
+          If you came from one of our Google ads, Google Ads also learns, under the same consent, whether the visit led
+          to a data request, an opened Discord invite, or a download of a data app's data or feed. That is how we
+          measure the ad. Ad personalization stays off whatever you answer, so your visit is not used to pick the ads
+          you see.
+        </li>
+        <li>
           The smart filter on each table reads your sentence in your browser and turns it into filters there; the
           sentence itself is never sent anywhere.
         </li>
@@ -77,21 +83,23 @@ export default function PrivacyPage() {
 
       <h2>About consent</h2>
       <p>
-        In the EEA, the UK and Switzerland, no analytics cookies or identifiers are stored until you answer: Google
-        Consent Mode starts there with everything denied, before the tag loads, and Google receives only cookieless
-        signals in the meantime. Elsewhere analytics starts on, and you can turn it off here at any time.
+        In the EEA, the UK and Switzerland, no analytics or advertising cookies or identifiers are stored until you
+        answer: Google Consent Mode starts there with everything denied, before the tag loads, and Google receives only
+        cookieless signals in the meantime. Elsewhere analytics and ad measurement start on, and you can turn them off
+        here at any time.
       </p>
 
       <section className="panel choice" aria-labelledby="choice-heading">
         <h2 id="choice-heading">Your choice</h2>
+        <p>One answer covers both: Google Analytics, and measuring which of our Google ads brought you.</p>
         <p role="status">{STATE[choice ?? 'unset']}</p>
         {measuring() ? null : <p className="muted small">This page has no analytics tag, so there is nothing to send.</p>}
         <div className="consent-answer">
           <button type="button" className="quiet-button" aria-pressed={choice === 'denied'} onClick={() => answer('denied')}>
-            Decline analytics
+            Decline both
           </button>
           <button type="button" className="quiet-button" aria-pressed={choice === 'granted'} onClick={() => answer('granted')}>
-            Allow analytics
+            Allow both
           </button>
         </div>
       </section>
