@@ -89,7 +89,7 @@ export default defineDataApp({
       type: 'date',
       label: 'Announced',
       required: true,
-      help: 'The day the buyer, the company or the first news report made the deal public.',
+      help: 'The day the buyer, the company or the first news report made the deal public. A deal completed now but announced earlier keeps its first announcement date, so it is out of the window when that date is.',
     },
     price_usd: {
       type: 'number',
@@ -175,7 +175,7 @@ export default defineDataApp({
   ],
   scope: {
     in: 'Deals that buy a company whose main product is AI, or the chips, cloud, data centers or data tools built for it, and any company bought by an AI lab or an AI-first company: acquisitions, acqui-hires, license-and-hire deals, mergers and majority stakes, signed or completed and announced in the last 90 days.',
-    out: 'Rumors, talks and offers without a signed agreement; minority investments (they belong in AI Company Fundraising); IPOs and SPAC listings; companies that only use AI as a feature, unless the buyer is an AI company; purchases of patents, domains or assets alone.',
+    out: 'Rumors, talks and offers without a signed agreement; deals announced before the window and only completed in it; minority investments (they belong in AI Company Fundraising); IPOs and SPAC listings; companies that only use AI as a feature, unless the buyer is an AI company; purchases of patents, domains or assets alone.',
   },
   sourceHints: [
     "The buyer's or the acquired company's announcement, blog or newsroom",
