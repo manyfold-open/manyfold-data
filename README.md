@@ -6,9 +6,11 @@ Each data app is one focused dataset with an Overview of charts and a Table you 
 Every record links to the page it was checked against, with a quote from that page as evidence.
 Data apps so far: **[AI Hackathons](https://data.manyfold.ai/ai-hackathons)**,
 **[AI Accelerators & Grants](https://data.manyfold.ai/ai-accelerators)**,
+**[AI Conferences & CFPs](https://data.manyfold.ai/ai-conferences)**,
 **[AI Company Fundraising](https://data.manyfold.ai/ai-fundraising)**,
-**[AI Acquisitions](https://data.manyfold.ai/ai-acquisitions)** and
-**[AI Data Centers](https://data.manyfold.ai/ai-data-centers)**.
+**[AI Acquisitions](https://data.manyfold.ai/ai-acquisitions)**,
+**[AI Data Centers](https://data.manyfold.ai/ai-data-centers)** and
+**[World Marathons](https://data.manyfold.ai/marathons)**.
 
 [中文说明](./README_CN.md)
 

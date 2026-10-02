@@ -197,6 +197,11 @@ describe('histograms', () => {
     expect(model.bins.map((bin) => bin.label)).toEqual(['Under $1K', '$1K to under $5K', '$5K to under $10K', '$10K or more']);
     expect(model.lowCoverage).toBe(true);
     expect(coverageText(aiHackathons, prizes as never)).toBe('Only 16% of hackathons state a prize pool');
+    // The article follows the label: "an investment", "their attendees".
+    const conferences = dataApps.find((app) => app.slug === 'ai-conferences')!;
+    const centers = dataApps.find((app) => app.slug === 'ai-data-centers')!;
+    expect(coverageText(conferences, { ...prizes, field: 'attendees' } as never)).toBe('Only 16% of conferences state their attendees');
+    expect(coverageText(centers, { ...prizes, field: 'investment_usd' } as never)).toBe('Only 16% of projects state an investment');
     // The coverage line carries the warning; the takeaway still says where the stated values sit.
     expect(takeawayText(takeaway(aiHackathons, prizes, stats(156)))).toBe('Median in $5K–$10K · stated for 25 of 156 hackathons');
   });

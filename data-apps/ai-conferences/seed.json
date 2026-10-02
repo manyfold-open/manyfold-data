@@ -1,0 +1,3653 @@
+[
+  {
+    "data": {
+      "name": "MLcon New York 2026",
+      "url": "https://mlconference.ai/new-york/",
+      "kind": "developer",
+      "starts_on": "2026-09-28",
+      "ends_on": "2026-10-02",
+      "format": "hybrid",
+      "city": [
+        "New York"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "topics": [
+        "genai",
+        "llm",
+        "mlops",
+        "agents"
+      ]
+    },
+    "source_url": "https://mlconference.ai/new-york/",
+    "evidence": "The Event for Generative AI & Machine Learning Engineering New York Marriott at The Brooklyn Bridge Sep 28 - Oct 2, 2026 | New York or Online Expo: Sep 29 - 30, 2026",
+    "observed_at": "2026-10-02T13:56:20Z"
+  },
+  {
+    "data": {
+      "name": "VibeKode Utrecht 2026",
+      "url": "https://vibekode.it/netherlands/",
+      "kind": "developer",
+      "starts_on": "2026-10-05",
+      "ends_on": "2026-10-07",
+      "format": "in-person",
+      "city": [
+        "Utrecht"
+      ],
+      "country": [
+        "Netherlands"
+      ],
+      "region": "europe",
+      "topics": [
+        "ai-coding",
+        "agents"
+      ]
+    },
+    "source_url": "https://vibekode.it/netherlands/",
+    "evidence": "The Conference for AI-Driven Software Development & Engineering October 05 – 07, 2026 | Utrecht Expo: October 07",
+    "observed_at": "2026-10-02T13:56:21Z"
+  },
+  {
+    "data": {
+      "name": "MCP Dev Summit Toronto 2026",
+      "organizer": "Agentic AI Foundation",
+      "url": "https://events.linuxfoundation.org/mcp-dev-summit-toronto/",
+      "kind": "developer",
+      "starts_on": "2026-10-05",
+      "ends_on": "2026-10-06",
+      "format": "in-person",
+      "city": [
+        "Toronto"
+      ],
+      "country": [
+        "Canada"
+      ],
+      "region": "americas",
+      "topics": [
+        "mcp",
+        "agents"
+      ]
+    },
+    "source_url": "https://events.linuxfoundation.org/mcp-dev-summit-toronto/",
+    "evidence": "MCP Dev Summit Toronto 5-6 October 2026 Toronto, Canada Register Sponsor View the Schedule",
+    "observed_at": "2026-10-02T13:56:42Z"
+  },
+  {
+    "data": {
+      "name": "ICMI 2026",
+      "organizer": "ACM",
+      "url": "https://icmi.acm.org/2026/",
+      "kind": "research",
+      "starts_on": "2026-10-05",
+      "ends_on": "2026-10-09",
+      "format": "in-person",
+      "city": [
+        "Naples"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe",
+      "cfp_deadline": "2026-04-13",
+      "cfp_url": "https://icmi.acm.org/2026/call-for-papers/",
+      "topics": [
+        "multimodal",
+        "human-computer-interaction"
+      ]
+    },
+    "source_url": "https://icmi.acm.org/2026/",
+    "evidence": "The main conference days will be on 6-8 Oct 2026, while workshops/tutorials and grand challenges will be held on 5 or 9 Oct 2026.",
+    "observed_at": "2026-10-02T13:41:36Z"
+  },
+  {
+    "data": {
+      "name": "ICMLA 2026",
+      "url": "https://www.icmla-conference.org/icmla26/",
+      "kind": "research",
+      "starts_on": "2026-10-05",
+      "ends_on": "2026-10-07",
+      "format": "in-person",
+      "city": [
+        "Rochester"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "cfp_deadline": "2026-05-31",
+      "cfp_url": "https://www.icmla-conference.org/icmla26/callforpapers.html",
+      "topics": [
+        "machine-learning"
+      ]
+    },
+    "source_url": "https://www.icmla-conference.org/icmla26/keydates.html",
+    "evidence": "Camera Ready Papers Main Conference: July 25, 2026 Special Sessions: July 25, 2026 Pre-registration: July 25, 2026 Conference: October 5-7, 2026",
+    "observed_at": "2026-10-02T13:52:45Z"
+  },
+  {
+    "data": {
+      "name": "betterCode() Agentic AI 2026",
+      "url": "https://agenticai.bettercode.eu/",
+      "kind": "developer",
+      "starts_on": "2026-10-06",
+      "ends_on": "2026-10-06",
+      "format": "online",
+      "region": "global",
+      "topics": [
+        "ai-coding",
+        "agents"
+      ]
+    },
+    "source_url": "https://agenticai.bettercode.eu/",
+    "evidence": "Agentic AI 2026 Die Konferenz zu KI-gestützter Softwareentwicklung Online – 6. Oktober 2026 Zum Programm",
+    "observed_at": "2026-10-02T13:56:18Z"
+  },
+  {
+    "data": {
+      "name": "Ai Everything Abu Dhabi 2026",
+      "url": "https://www.aieverythingabudhabi.com/",
+      "kind": "industry",
+      "starts_on": "2026-10-06",
+      "ends_on": "2026-10-07",
+      "format": "in-person",
+      "city": [
+        "Abu Dhabi"
+      ],
+      "country": [
+        "United Arab Emirates"
+      ],
+      "region": "africa-middle-east",
+      "topics": [
+        "sovereign-ai",
+        "agents"
+      ]
+    },
+    "source_url": "https://www.aieverythingabudhabi.com/home",
+    "evidence": "Ai Everything Abu Dhabi EXPO 6-7 October 2026 ADNEC Centre Abu Dhabi The largest curation of global AI-first innovations.",
+    "observed_at": "2026-10-02T13:56:29Z"
+  },
+  {
+    "data": {
+      "name": "COLM 2026",
+      "url": "https://colm.cc/Conferences/2026",
+      "kind": "research",
+      "starts_on": "2026-10-06",
+      "ends_on": "2026-10-09",
+      "format": "in-person",
+      "city": [
+        "San Francisco"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "cfp_deadline": "2026-03-26",
+      "cfp_url": "https://colm.cc/Conferences/2026/CallForPapers",
+      "topics": [
+        "llm",
+        "nlp"
+      ]
+    },
+    "source_url": "https://colm.cc/Conferences/2026/Dates",
+    "evidence": "COLM 2026 Meeting Dates Main Conference October 6 - 8 Workshops October 9",
+    "observed_at": "2026-10-02T13:45:46Z"
+  },
+  {
+    "data": {
+      "name": "DSAA 2026",
+      "organizer": "IEEE",
+      "url": "https://dsaa-2026.vercel.app/",
+      "kind": "research",
+      "starts_on": "2026-10-06",
+      "ends_on": "2026-10-09",
+      "format": "in-person",
+      "city": [
+        "New Delhi"
+      ],
+      "country": [
+        "India"
+      ],
+      "region": "asia-pacific",
+      "cfp_deadline": "2026-06-07",
+      "cfp_url": "https://dsaa-2026.vercel.app/calls/research-track",
+      "topics": [
+        "data-science",
+        "analytics",
+        "machine-learning"
+      ]
+    },
+    "source_url": "https://dsaa-2026.vercel.app/",
+    "evidence": "The 13th IEEE International Conference on Data Science and Advanced Analytics (DSAA’2026) will be held in New Delhi, India on October 6-9, 2026.",
+    "observed_at": "2026-10-02T13:43:10Z"
+  },
+  {
+    "data": {
+      "name": "Enterprise AI Summit Charlotte 2026",
+      "organizer": "IT Revolution",
+      "url": "https://events.itrevolution.com/2026-charlotte/",
+      "kind": "industry",
+      "starts_on": "2026-10-07",
+      "ends_on": "2026-10-08",
+      "format": "in-person",
+      "city": [
+        "Charlotte"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "topics": [
+        "enterprise-ai",
+        "ai-coding"
+      ]
+    },
+    "source_url": "https://events.itrevolution.com/2026-charlotte/",
+    "evidence": "When and where is the Enterprise AI Summit in Charlotte? October 7–8, 2026 at the Carolina Theatre, 230 N Tryon St, Charlotte, NC 28202.",
+    "observed_at": "2026-10-02T13:56:19Z"
+  },
+  {
+    "data": {
+      "name": "World Summit AI 2026",
+      "organizer": "Inspired Minds Media Ltd",
+      "url": "https://worldsummit.ai/",
+      "kind": "industry",
+      "starts_on": "2026-10-07",
+      "ends_on": "2026-10-08",
+      "format": "in-person",
+      "city": [
+        "Amsterdam"
+      ],
+      "country": [
+        "Netherlands"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://worldsummit.ai/",
+    "evidence": "The world’s leading AI summit 07 – 08 October 2026 Taets Art & Event Park, Amsterdam 10 years of defining Artificial Intelligence.",
+    "observed_at": "2026-10-02T13:56:19Z"
+  },
+  {
+    "data": {
+      "name": "Cypher 2026",
+      "organizer": "Analytics India Magazine",
+      "url": "https://cypher.analyticsindiamag.com/",
+      "kind": "industry",
+      "starts_on": "2026-10-07",
+      "ends_on": "2026-10-09",
+      "format": "in-person",
+      "city": [
+        "Bengaluru"
+      ],
+      "country": [
+        "India"
+      ],
+      "region": "asia-pacific",
+      "topics": [
+        "genai",
+        "agents",
+        "enterprise-ai"
+      ],
+      "attendees": 5000
+    },
+    "source_url": "https://cypher.analyticsindiamag.com/",
+    "evidence": "Cypher 2026, India's biggest AI Conference, takes place on October 7–9, 2026 at KTPO Whitefield, Bengaluru. It is the 10th edition of India's flagship AI summit organised by Analytics India Magazine.",
+    "observed_at": "2026-10-02T13:56:40Z"
+  },
+  {
+    "data": {
+      "name": "AI Engineer New York 2026",
+      "url": "https://ai.engineer/nyc/2026",
+      "kind": "developer",
+      "starts_on": "2026-10-12",
+      "ends_on": "2026-10-14",
+      "format": "hybrid",
+      "city": [
+        "New York"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "topics": [
+        "ai-engineering",
+        "finance"
+      ],
+      "attendees": 1000
+    },
+    "source_url": "https://ai.engineer/nyc/2026",
+    "evidence": "October 12–14, 2026 AI Engineer New York 2026: Where AI Engineering Meets Wall Street An AI conference in New York for engineers and technical leaders building production AI across banking, hedge funds, fintech, insurance, and asset management.",
+    "observed_at": "2026-10-02T13:56:25Z"
+  },
+  {
+    "data": {
+      "name": "AIES 2026",
+      "organizer": "AAAI / ACM",
+      "url": "https://www.aies-conference.com/2026/",
+      "kind": "research",
+      "starts_on": "2026-10-12",
+      "ends_on": "2026-10-14",
+      "format": "in-person",
+      "city": [
+        "Malmö"
+      ],
+      "country": [
+        "Sweden"
+      ],
+      "region": "europe",
+      "cfp_deadline": "2026-05-14",
+      "cfp_url": "https://www.aies-conference.com/2026/call-for-papers/",
+      "topics": [
+        "ai-governance"
+      ]
+    },
+    "source_url": "https://www.aies-conference.com/2026/",
+    "evidence": "Ninth AAAI/ACM Conference on Malmo Live Malmo, Sweden October 12-14, 2026 AI, Ethics, and Society",
+    "observed_at": "2026-10-02T13:40:13Z"
+  },
+  {
+    "data": {
+      "name": "Interrupt London 2026",
+      "organizer": "LangChain",
+      "url": "https://interrupt.langchain.com/london",
+      "kind": "developer",
+      "starts_on": "2026-10-13",
+      "ends_on": "2026-10-13",
+      "format": "in-person",
+      "city": [
+        "London"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "topics": [
+        "agents"
+      ]
+    },
+    "source_url": "https://interrupt.langchain.com/london",
+    "evidence": "Interrupt 2026 London takes place October 13th at Outernet, located in the West End of London.",
+    "observed_at": "2026-10-02T13:56:34Z"
+  },
+  {
+    "data": {
+      "name": "ai-PULSE 2026",
+      "url": "https://www.ai-pulse.eu/",
+      "kind": "developer",
+      "starts_on": "2026-10-13",
+      "ends_on": "2026-10-13",
+      "format": "in-person",
+      "city": [
+        "Paris"
+      ],
+      "country": [
+        "France"
+      ],
+      "region": "europe",
+      "topics": [
+        "ai-infrastructure",
+        "sovereign-ai"
+      ]
+    },
+    "source_url": "https://www.ai-pulse.eu/",
+    "evidence": "October 13, 2026 Station F, Paris ai-PULSE IS BACK! Join leaders and engineers for a one-day technical conference dedicated to AI breakthroughs, research and product demonstrations",
+    "observed_at": "2026-10-02T13:56:41Z"
+  },
+  {
+    "data": {
+      "name": "MIT AI Conference 2026",
+      "organizer": "MIT Alumni Startups",
+      "url": "https://www.mitaiconference.org/",
+      "kind": "industry",
+      "starts_on": "2026-10-17",
+      "ends_on": "2026-10-17",
+      "format": "in-person",
+      "city": [
+        "Mountain View"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "topics": [
+        "agents"
+      ],
+      "attendees": 500
+    },
+    "source_url": "https://www.mitaiconference.org/",
+    "evidence": "One high-signal day with the leaders, researchers, founders, and executives shaping what comes next. Secure your place before registration closes. October 17, 2026 Mountain View, CA",
+    "observed_at": "2026-10-02T13:56:19Z"
+  },
+  {
+    "data": {
+      "name": "INLG 2026",
+      "url": "https://2026.inlgmeeting.org/",
+      "kind": "research",
+      "starts_on": "2026-10-17",
+      "ends_on": "2026-10-21",
+      "format": "in-person",
+      "city": [
+        "Utrecht"
+      ],
+      "country": [
+        "Netherlands"
+      ],
+      "region": "europe",
+      "cfp_deadline": "2026-07-18",
+      "cfp_url": "https://2026.inlgmeeting.org/calls.html",
+      "topics": [
+        "nlp",
+        "natural-language-generation"
+      ]
+    },
+    "source_url": "https://2026.inlgmeeting.org/",
+    "evidence": "The 19th International Conference on Natural Language Generation will be in Utrecht, the Netherlands, October 17-21, 2026, just before EMNLP 2026 in Hungary. Workshops will take place on October 17 and 18, 2026, and the main conference will run from October 19-21, 2026.",
+    "observed_at": "2026-10-02T13:43:10Z"
+  },
+  {
+    "data": {
+      "name": "PyTorch Conference North America 2026",
+      "organizer": "PyTorch Foundation",
+      "url": "https://events.linuxfoundation.org/pytorch-conference-north-america/",
+      "kind": "developer",
+      "starts_on": "2026-10-20",
+      "ends_on": "2026-10-21",
+      "format": "in-person",
+      "city": [
+        "San Jose"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "topics": [
+        "pytorch",
+        "open-source"
+      ]
+    },
+    "source_url": "https://events.linuxfoundation.org/pytorch-conference-north-america/",
+    "evidence": "Join us in San Jose, CA, October 20-21 for PyTorch Conference North America 2026. This two-day event hosted by the PyTorch Foundation gathers top-tier AI pioneers, researchers, and developers",
+    "observed_at": "2026-10-02T13:56:26Z"
+  },
+  {
+    "data": {
+      "name": "NVIDIA GTC Berlin 2026",
+      "organizer": "NVIDIA",
+      "url": "https://www.nvidia.com/en-eu/gtc/",
+      "kind": "developer",
+      "starts_on": "2026-10-20",
+      "ends_on": "2026-10-22",
+      "format": "in-person",
+      "city": [
+        "Berlin"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "topics": [
+        "ai-infrastructure",
+        "agents",
+        "physical-ai"
+      ]
+    },
+    "source_url": "https://www.nvidia.com/en-eu/gtc/",
+    "evidence": "GTC Berlin AI Conference - 20-22 October 2026 | NVIDIA GTC AI Conference & Expo October 21–22, 2026",
+    "observed_at": "2026-10-02T13:56:28Z"
+  },
+  {
+    "data": {
+      "name": "All Day AI 2026",
+      "url": "https://www.alldayai.com/",
+      "kind": "developer",
+      "starts_on": "2026-10-22",
+      "ends_on": "2026-10-22",
+      "format": "online",
+      "region": "global",
+      "topics": [
+        "ai-engineering",
+        "ai-security"
+      ]
+    },
+    "source_url": "https://www.alldayai.com/",
+    "evidence": "All Day AI is a free, live, virtual conference on October 22, 2026 for teams and practitioners applying AI across development, leadership, security, and business functions.",
+    "observed_at": "2026-10-02T13:56:19Z"
+  },
+  {
+    "data": {
+      "name": "AGNTCon + MCPCon North America 2026",
+      "organizer": "Agentic AI Foundation",
+      "url": "https://events.linuxfoundation.org/agntcon-mcpcon-north-america/",
+      "kind": "developer",
+      "starts_on": "2026-10-22",
+      "ends_on": "2026-10-23",
+      "format": "in-person",
+      "city": [
+        "San Jose"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "topics": [
+        "agents",
+        "mcp"
+      ],
+      "attendees": 3500
+    },
+    "source_url": "https://events.linuxfoundation.org/agntcon-mcpcon-north-america/",
+    "evidence": "AGNTCon + MCPCon North America: The AI Agents Conference October 22-23, 2026 San Jose McEnery Convention Center Register Sponsor View the Schedule",
+    "observed_at": "2026-10-02T13:56:42Z"
+  },
+  {
+    "data": {
+      "name": "EMNLP 2026",
+      "organizer": "ACL SIGDAT",
+      "url": "https://2026.emnlp.org/",
+      "kind": "research",
+      "starts_on": "2026-10-24",
+      "ends_on": "2026-10-29",
+      "format": "in-person",
+      "city": [
+        "Budapest"
+      ],
+      "country": [
+        "Hungary"
+      ],
+      "region": "europe",
+      "cfp_deadline": "2026-05-25",
+      "cfp_url": "https://2026.emnlp.org/calls/main_conference_papers/",
+      "topics": [
+        "nlp",
+        "computational-linguistics",
+        "llm"
+      ]
+    },
+    "source_url": "https://2026.emnlp.org/",
+    "evidence": "The 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026) will be held in Budapest, Hungary from October 24th to October 29th, 2026.",
+    "observed_at": "2026-10-02T13:35:45Z"
+  },
+  {
+    "data": {
+      "name": "AI Expo Africa 2026",
+      "url": "https://aiexpoafrica.com/",
+      "kind": "industry",
+      "starts_on": "2026-10-28",
+      "ends_on": "2026-10-29",
+      "format": "in-person",
+      "city": [
+        "Johannesburg"
+      ],
+      "country": [
+        "South Africa"
+      ],
+      "region": "africa-middle-east",
+      "topics": [
+        "enterprise-ai",
+        "automation"
+      ],
+      "attendees": 3500
+    },
+    "source_url": "https://aiexpoafrica.com/",
+    "evidence": "(2 Day Event) 28th-29th October 2026 Sandton Convention Centre, JHB, South Africa",
+    "observed_at": "2026-10-02T13:56:33Z"
+  },
+  {
+    "data": {
+      "name": "AI DevCon NY 2026",
+      "organizer": "Tessl",
+      "url": "https://tessl.io/devcon",
+      "kind": "developer",
+      "starts_on": "2026-11-02",
+      "ends_on": "2026-11-04",
+      "format": "hybrid",
+      "city": [
+        "New York"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "cfp_deadline": "2026-10-01",
+      "cfp_url": "https://sessionize.com/ai-native-devcon-nyc-2026/",
+      "topics": [
+        "ai-coding",
+        "agents"
+      ],
+      "attendees": 700
+    },
+    "source_url": "https://tessl.io/devcon",
+    "evidence": "2 — 4 November 2026 700+ Attendees 52 Sessions 2000+ Content hours Speakers and sponsors from WHAT IS DEVCON Three days in Brooklyn for the people putting agents to work in real codebases.",
+    "observed_at": "2026-10-02T13:56:20Z"
+  },
+  {
+    "data": {
+      "name": "ICTAI 2026",
+      "organizer": "IEEE Computer Society",
+      "url": "https://ictai.computer.org/2026/",
+      "kind": "research",
+      "starts_on": "2026-11-02",
+      "ends_on": "2026-11-04",
+      "format": "in-person",
+      "city": [
+        "Boca Raton"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "cfp_deadline": "2026-07-21",
+      "topics": [
+        "ai-tools"
+      ]
+    },
+    "source_url": "https://ictai.computer.org/2026/",
+    "evidence": "ICTAI 2026 Skip to content 2-4 November 2026 Boca Raton FL, USA",
+    "observed_at": "2026-10-02T13:41:36Z"
+  },
+  {
+    "data": {
+      "name": "AI Engineer Shanghai 2026",
+      "organizer": "Standup Partners and Superlinear Academy",
+      "url": "https://ai.engineer/shanghai/2026",
+      "kind": "developer",
+      "starts_on": "2026-11-05",
+      "ends_on": "2026-11-06",
+      "format": "in-person",
+      "city": [
+        "Shanghai"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "cfp_deadline": "2026-10-07",
+      "cfp_url": "https://ai.engineer/shanghai/2026#cfp",
+      "topics": [
+        "open-models",
+        "ai-infrastructure",
+        "physical-ai"
+      ]
+    },
+    "source_url": "https://ai.engineer/shanghai/2026",
+    "evidence": "November 5–6, 2026 • Hilton Shanghai Hongqiao AI Engineer Shanghai Open models. Real infrastructure. Physical AI.",
+    "observed_at": "2026-10-02T13:56:26Z"
+  },
+  {
+    "data": {
+      "name": "MLOps North 2026",
+      "url": "https://www.torontomachinelearning.com/",
+      "kind": "developer",
+      "starts_on": "2026-11-05",
+      "ends_on": "2026-11-06",
+      "format": "in-person",
+      "city": [
+        "Toronto"
+      ],
+      "country": [
+        "Canada"
+      ],
+      "region": "americas",
+      "topics": [
+        "mlops",
+        "agents"
+      ]
+    },
+    "source_url": "https://www.torontomachinelearning.com/",
+    "evidence": "MLOps North — Building with Agents | Nov 5–6, 2026, Toronto",
+    "observed_at": "2026-10-02T13:56:33Z"
+  },
+  {
+    "data": {
+      "name": "AACL-IJCNLP 2026",
+      "organizer": "Asia-Pacific Chapter of the ACL",
+      "url": "https://2026.aaclnet.org/",
+      "kind": "research",
+      "starts_on": "2026-11-06",
+      "ends_on": "2026-11-10",
+      "format": "in-person",
+      "city": [
+        "Hengqin"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "cfp_deadline": "2026-05-25",
+      "cfp_url": "https://2026.aaclnet.org/calls/main_conference_papers/",
+      "topics": [
+        "nlp",
+        "computational-linguistics"
+      ]
+    },
+    "source_url": "https://2026.aaclnet.org/",
+    "evidence": "The 5th AACL & 15th IJCNLP will be held in Hengqin, China from November 6th to November 10th, 2026.",
+    "observed_at": "2026-10-02T13:35:45Z"
+  },
+  {
+    "data": {
+      "name": "CIKM 2026",
+      "organizer": "ACM",
+      "url": "https://cikm2026.diag.uniroma1.it/",
+      "kind": "research",
+      "starts_on": "2026-11-07",
+      "ends_on": "2026-11-11",
+      "format": "in-person",
+      "city": [
+        "Rome"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe",
+      "cfp_deadline": "2026-05-16",
+      "cfp_url": "https://cikm2026.diag.uniroma1.it/full-research-papers/",
+      "topics": [
+        "information-retrieval",
+        "knowledge-management",
+        "data-mining"
+      ]
+    },
+    "source_url": "https://cikm2026.diag.uniroma1.it/",
+    "evidence": "35th ACM International Conference on Information and Knowledge Management (CIKM 2026) November 7-11, 2026 | Rome, ITALY",
+    "observed_at": "2026-10-02T13:43:10Z"
+  },
+  {
+    "data": {
+      "name": "ISMIR 2026",
+      "organizer": "International Society for Music Information Retrieval",
+      "url": "https://ismir2026.ismir.net/",
+      "kind": "research",
+      "starts_on": "2026-11-08",
+      "ends_on": "2026-11-12",
+      "format": "in-person",
+      "city": [
+        "Abu Dhabi"
+      ],
+      "country": [
+        "United Arab Emirates"
+      ],
+      "region": "africa-middle-east",
+      "cfp_deadline": "2026-04-20",
+      "cfp_url": "https://ismir2026.ismir.net/authors/call-for-papers",
+      "topics": [
+        "music-information-retrieval",
+        "audio"
+      ]
+    },
+    "source_url": "https://ismir2026.ismir.net/",
+    "evidence": "November 8-12, 2026 Abu Dhabi, UAE The 27th International Society for Music Information Retrieval Conference",
+    "observed_at": "2026-10-02T13:41:36Z"
+  },
+  {
+    "data": {
+      "name": "CoRL 2026",
+      "url": "https://www.corl.org/",
+      "kind": "research",
+      "starts_on": "2026-11-09",
+      "ends_on": "2026-11-12",
+      "format": "in-person",
+      "city": [
+        "Austin"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "cfp_url": "https://www.corl.org/contributions/call-for-papers",
+      "topics": [
+        "robot-learning",
+        "robotics",
+        "machine-learning"
+      ]
+    },
+    "source_url": "https://www.corl.org/",
+    "evidence": "will be held in Austin, Texas, US. Main conference: November 9-11 Workshops: November 12 Registration is open!",
+    "observed_at": "2026-10-02T13:35:45Z"
+  },
+  {
+    "data": {
+      "name": "AI Engineer Code Summit 2026",
+      "url": "https://ai.engineer/code/2026",
+      "kind": "developer",
+      "starts_on": "2026-11-10",
+      "ends_on": "2026-11-12",
+      "format": "in-person",
+      "city": [
+        "San Francisco"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "cfp_deadline": "2026-10-11",
+      "cfp_url": "https://sessionize.com/aiecode26/",
+      "topics": [
+        "ai-coding",
+        "agents"
+      ],
+      "attendees": 800
+    },
+    "source_url": "https://ai.engineer/code/2026",
+    "evidence": "AI Engineer Code Summit 2026: AI Engineering Conference, Nov 10-12, San Francisco",
+    "observed_at": "2026-10-02T13:56:25Z"
+  },
+  {
+    "data": {
+      "name": "ACM Multimedia 2026",
+      "organizer": "ACM",
+      "url": "https://2026.acmmm.org/",
+      "kind": "research",
+      "starts_on": "2026-11-10",
+      "ends_on": "2026-11-14",
+      "format": "in-person",
+      "city": [
+        "Rio de Janeiro"
+      ],
+      "country": [
+        "Brazil"
+      ],
+      "region": "americas",
+      "topics": [
+        "multimedia",
+        "computer-vision",
+        "multimodal"
+      ]
+    },
+    "source_url": "https://2026.acmmm.org/",
+    "evidence": "Welcome to the 34th ACM International Conference on Multimedia Rio de Janeiro, Brazil — 10–14 November 2026.",
+    "observed_at": "2026-10-02T13:41:36Z"
+  },
+  {
+    "data": {
+      "name": "AI EXPO TOKYO Autumn 2026",
+      "organizer": "RX Japan",
+      "url": "https://www.nextech-week.jp/hub/ja-jp/about/ai.html",
+      "kind": "industry",
+      "starts_on": "2026-11-11",
+      "ends_on": "2026-11-13",
+      "format": "in-person",
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.nextech-week.jp/hub/ja-jp/about/ai.html",
+    "evidence": "AI・人工知能EXPO ～日本最大のAIビジネス専門展～ 会期：2026/11/11（水）-11/13 (金) 会場：幕張メッセ",
+    "observed_at": "2026-10-02T13:56:40Z"
+  },
+  {
+    "data": {
+      "name": "ICDM 2026",
+      "organizer": "IEEE",
+      "url": "https://icdm2026.neu.edu.cn/",
+      "kind": "research",
+      "starts_on": "2026-11-12",
+      "ends_on": "2026-11-15",
+      "format": "in-person",
+      "city": [
+        "Shenyang"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "cfp_deadline": "2026-06-06",
+      "cfp_url": "https://icdm2026.neu.edu.cn/CallforResearchTrack/list.htm",
+      "topics": [
+        "data-mining",
+        "machine-learning"
+      ]
+    },
+    "source_url": "https://icdm2026.neu.edu.cn/",
+    "evidence": "IEEE ICDM 2026 The world's premier research conference in Data Mining November 12-15, 2026 Shenyang, China",
+    "observed_at": "2026-10-02T13:45:46Z"
+  },
+  {
+    "data": {
+      "name": "MLcon Berlin 2026",
+      "url": "https://mlconference.ai/berlin/",
+      "kind": "developer",
+      "starts_on": "2026-11-16",
+      "ends_on": "2026-11-20",
+      "format": "hybrid",
+      "city": [
+        "Berlin"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "topics": [
+        "genai",
+        "llm",
+        "mlops",
+        "agents"
+      ]
+    },
+    "source_url": "https://mlconference.ai/berlin/",
+    "evidence": "The Event for Generative AI & Machine Learning Engineering Maritim ProArte Hotel Berlin Nov 16 - 20, 2026 | Berlin or Online Expo: Nov 18 - 19, 2026",
+    "observed_at": "2026-10-02T13:56:21Z"
+  },
+  {
+    "data": {
+      "name": "VibeKode Berlin 2026",
+      "url": "https://vibekode.it/berlin/",
+      "kind": "developer",
+      "starts_on": "2026-11-16",
+      "ends_on": "2026-11-20",
+      "format": "hybrid",
+      "city": [
+        "Berlin"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "topics": [
+        "ai-coding",
+        "agents"
+      ]
+    },
+    "source_url": "https://vibekode.it/berlin/",
+    "evidence": "The Conference for AI-Driven Software Development & Engineering November 16 – 20, 2026 | Berlin and online Expo: November 18 – 19, 2026",
+    "observed_at": "2026-10-02T13:56:21Z"
+  },
+  {
+    "data": {
+      "name": "AI Coding Summit New York 2026",
+      "url": "https://aicodingsummit.com/nyc/",
+      "kind": "developer",
+      "starts_on": "2026-11-16",
+      "ends_on": "2026-11-19",
+      "format": "hybrid",
+      "city": [
+        "New York"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "topics": [
+        "ai-coding"
+      ],
+      "attendees": 500
+    },
+    "source_url": "https://aicodingsummit.com/nyc/",
+    "evidence": "See how AI transforms software engineering In-person in NYC & Online November 16-17 & 19, 2026",
+    "observed_at": "2026-10-02T13:56:21Z"
+  },
+  {
+    "data": {
+      "name": "PRICAI 2026",
+      "url": "https://2026.pricai.org/",
+      "kind": "research",
+      "starts_on": "2026-11-16",
+      "ends_on": "2026-11-20",
+      "format": "in-person",
+      "city": [
+        "Guangzhou"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "cfp_deadline": "2026-06-27",
+      "cfp_url": "https://2026.pricai.org/calls/call-for-papers"
+    },
+    "source_url": "https://2026.pricai.org/",
+    "evidence": "Paper Submission Due: Jun 13, 2026 Paper Submission Due Extended: Jun 27, 2026 (AOE) Acceptance Notification: Aug 8, 2026 Acceptance Notification Extended: Aug 18, 2026 Camera-Ready Due: Aug 22, 2026 Camera-Ready Due Extended: Sep 1st, 2026 Main Conference: Nov 16-20, 2026",
+    "observed_at": "2026-10-02T13:43:10Z"
+  },
+  {
+    "data": {
+      "name": "MLOps World | GenAI Summit 2026",
+      "url": "https://mlopsworld.com/",
+      "kind": "developer",
+      "starts_on": "2026-11-17",
+      "ends_on": "2026-11-18",
+      "format": "in-person",
+      "city": [
+        "Austin"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "topics": [
+        "mlops",
+        "genai",
+        "agents"
+      ]
+    },
+    "source_url": "https://mlopsworld.com/",
+    "evidence": "7th Annual November 17-18, 2026 Austin, TX MLOps World | GenAI Summit 2026 Two days of case studies, workshops, and expo on taking AI/ML and agentic systems into production",
+    "observed_at": "2026-10-02T13:56:26Z"
+  },
+  {
+    "data": {
+      "name": "Global AI Show Abu Dhabi 2026",
+      "organizer": "VAP Group",
+      "url": "https://www.globalaishow.com/",
+      "kind": "industry",
+      "starts_on": "2026-11-18",
+      "ends_on": "2026-11-19",
+      "format": "in-person",
+      "city": [
+        "Abu Dhabi"
+      ],
+      "country": [
+        "United Arab Emirates"
+      ],
+      "region": "africa-middle-east",
+      "attendees": 6000
+    },
+    "source_url": "https://www.globalaishow.com/",
+    "evidence": "Global AI Show Abu Dhabi 18 – 19 November 2026 · Abu Dhabi, UAE 6,000+ Attendees Join us in Abu Dhabi",
+    "observed_at": "2026-10-02T13:56:41Z"
+  },
+  {
+    "data": {
+      "name": "KI Navigator 2026",
+      "url": "https://www.kinavigator.eu/de/home",
+      "kind": "industry",
+      "starts_on": "2026-11-18",
+      "ends_on": "2026-11-19",
+      "format": "in-person",
+      "city": [
+        "Nuremberg"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "attendees": 650
+    },
+    "source_url": "https://www.kinavigator.eu/de/home",
+    "evidence": "KI in Technologie, Wirtschaft und Arbeitswelt. Praxis statt Hype. Seit 2023. 18. und 19. November 2026, Nürnberg Convention Center Ost.",
+    "observed_at": "2026-10-02T13:56:42Z"
+  },
+  {
+    "data": {
+      "name": "IBERAMIA 2026",
+      "url": "https://www.iberamia.org/iberamia/iberamia2026/",
+      "kind": "research",
+      "starts_on": "2026-11-18",
+      "ends_on": "2026-11-20",
+      "format": "in-person",
+      "city": [
+        "Asunción"
+      ],
+      "country": [
+        "Paraguay"
+      ],
+      "region": "americas",
+      "cfp_deadline": "2026-06-10"
+    },
+    "source_url": "https://www.iberamia.org/iberamia/iberamia2026/",
+    "evidence": "IBERAMIA’2026 will be held on November 18-20th, 2026 in Asunción, Paraguay.",
+    "observed_at": "2026-10-02T13:52:45Z"
+  },
+  {
+    "data": {
+      "name": "MCP Dev Summit Nairobi 2026",
+      "organizer": "Agentic AI Foundation",
+      "url": "https://events.linuxfoundation.org/mcp-dev-summit-nairobi/",
+      "kind": "developer",
+      "starts_on": "2026-11-19",
+      "ends_on": "2026-11-20",
+      "format": "in-person",
+      "city": [
+        "Nairobi"
+      ],
+      "country": [
+        "Kenya"
+      ],
+      "region": "africa-middle-east",
+      "topics": [
+        "mcp",
+        "agents"
+      ]
+    },
+    "source_url": "https://events.linuxfoundation.org/mcp-dev-summit-nairobi/",
+    "evidence": "MCP Dev Summit Nairobi 19-20 November 2026 Nairobi, Kenya Register Sponsor",
+    "observed_at": "2026-10-02T13:56:42Z"
+  },
+  {
+    "data": {
+      "name": "Agentic Engineering Days Zurich 2026",
+      "organizer": "letsboot.ch",
+      "url": "https://www.agenticdays.com/",
+      "kind": "developer",
+      "starts_on": "2026-11-20",
+      "ends_on": "2026-11-20",
+      "format": "in-person",
+      "city": [
+        "Zurich"
+      ],
+      "country": [
+        "Switzerland"
+      ],
+      "region": "europe",
+      "cfp_deadline": "2026-07-23",
+      "topics": [
+        "ai-coding",
+        "agents"
+      ]
+    },
+    "source_url": "https://www.agenticdays.com/",
+    "evidence": "The AI Coding & Agents Conference in Switzerland Agentic Engineering Days Zurich 2026 November 20, 2026 · Marriott Hotel, Zurich Main Station",
+    "observed_at": "2026-10-02T13:56:21Z"
+  },
+  {
+    "data": {
+      "name": "LoG 2026",
+      "url": "https://logconference.org/",
+      "kind": "research",
+      "starts_on": "2026-11-20",
+      "ends_on": "2026-11-22",
+      "format": "in-person",
+      "city": [
+        "Boston"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "cfp_deadline": "2026-08-05",
+      "cfp_url": "https://logconference.org/cfp/",
+      "topics": [
+        "graph-learning",
+        "machine-learning",
+        "geometric-deep-learning"
+      ]
+    },
+    "source_url": "https://logconference.org/",
+    "evidence": "LoG is an annual research conference that covers areas broadly related to machine learning on graphs and geometry, with a special focus on review quality. November 20-22, 2026 Northeastern University, Boston",
+    "observed_at": "2026-10-02T13:40:13Z"
+  },
+  {
+    "data": {
+      "name": "PyTorch Day Korea 2026",
+      "organizer": "PyTorch Korea User Group",
+      "url": "https://pytorchday.kr/",
+      "kind": "developer",
+      "starts_on": "2026-11-21",
+      "ends_on": "2026-11-21",
+      "format": "in-person",
+      "city": [
+        "Seoul"
+      ],
+      "country": [
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "cfp_deadline": "2026-10-02",
+      "cfp_url": "https://talk.pytorchday.kr/pytorch-day-korea-2026/cfp",
+      "topics": [
+        "pytorch",
+        "open-source"
+      ]
+    },
+    "source_url": "https://pytorch.org/event/pytorch-day-korea-2026/",
+    "evidence": "PyTorch Day Korea 2026 is the first large-scale offline conference hosted by the PyTorch Korea User Group. Extended CFP deadline: Friday, October 2, 2026, 23:59 KST 📍 Seoul, Korea 📅 November 21, 2026",
+    "observed_at": "2026-10-02T13:56:39Z"
+  },
+  {
+    "data": {
+      "name": "BMVC 2026",
+      "organizer": "British Machine Vision Association",
+      "url": "https://bmvc2026.bmva.org/",
+      "kind": "research",
+      "starts_on": "2026-11-23",
+      "ends_on": "2026-11-26",
+      "format": "in-person",
+      "city": [
+        "Lancaster"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "cfp_deadline": "2026-05-22",
+      "cfp_url": "https://bmvc2026.bmva.org/calls/call-for-papers/",
+      "topics": [
+        "computer-vision"
+      ]
+    },
+    "source_url": "https://bmvc2026.bmva.org/dates/",
+    "evidence": "Conference Starts Everyone Monday, 23 November 2026 Conference Ends Everyone Thursday, 26 November 2026",
+    "observed_at": "2026-10-02T13:45:46Z"
+  },
+  {
+    "data": {
+      "name": "GITEX AI Vietnam 2026",
+      "url": "https://gitexvietnam.com/",
+      "kind": "industry",
+      "starts_on": "2026-11-26",
+      "ends_on": "2026-11-27",
+      "format": "in-person",
+      "city": [
+        "Hanoi"
+      ],
+      "country": [
+        "Vietnam"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://gitexvietnam.com/",
+    "evidence": "GITEX AI VIETNAM lands in Hanoi from 26-27 November 2026",
+    "observed_at": "2026-10-02T13:56:30Z"
+  },
+  {
+    "data": {
+      "name": "NVIDIA GTC Washington, D.C. 2026",
+      "organizer": "NVIDIA",
+      "url": "https://www.nvidia.com/gtc/dc/",
+      "kind": "developer",
+      "starts_on": "2026-11-30",
+      "ends_on": "2026-12-03",
+      "format": "in-person",
+      "city": [
+        "Washington"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "topics": [
+        "ai-infrastructure",
+        "agents"
+      ]
+    },
+    "source_url": "https://www.nvidia.com/gtc/dc/",
+    "evidence": "November 30–December 3, 2026 NVIDIA GTC Washington, D.C. Join us to explore how AI is accelerating American economic growth and scientific discovery.",
+    "observed_at": "2026-10-02T13:56:28Z"
+  },
+  {
+    "data": {
+      "name": "AI Dev NYC 2026",
+      "organizer": "DeepLearning.AI",
+      "url": "https://ai-dev.deeplearning.ai/",
+      "kind": "developer",
+      "starts_on": "2026-11-30",
+      "ends_on": "2026-12-01",
+      "format": "in-person",
+      "city": [
+        "New York"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "topics": [
+        "ai-engineering"
+      ],
+      "attendees": 2500
+    },
+    "source_url": "https://ai-dev.deeplearning.ai/",
+    "evidence": "WHEN NOVEMBER 30 – DECEMBER 1, 2026 WHERE CHELSEA PIERS, NYC WHO 2,500 AI ENGINEERS & BUILDERS FORMAT 2 DAYS · 4 STAGES · 50+ HANDS-ON LABS",
+    "observed_at": "2026-10-02T13:56:42Z"
+  },
+  {
+    "data": {
+      "name": "ACML 2026",
+      "url": "https://www.acml-conf.org/2026/",
+      "kind": "research",
+      "starts_on": "2026-12-01",
+      "ends_on": "2026-12-04",
+      "format": "in-person",
+      "city": [
+        "Melbourne"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "cfp_deadline": "2026-07-05",
+      "cfp_url": "https://www.acml-conf.org/2026/calls/papers/",
+      "topics": [
+        "machine-learning"
+      ]
+    },
+    "source_url": "https://www.acml-conf.org/2026/calls/papers/",
+    "evidence": "The 18th Asian Conference on Machine Learning (ACML 2026) will take place between December 1st - 4th, 2026, in Melbourne, Australia",
+    "observed_at": "2026-10-02T13:45:46Z"
+  },
+  {
+    "data": {
+      "name": "AI Coding Summit Berlin 2026",
+      "url": "https://aicodingsummit.com/berlin/",
+      "kind": "developer",
+      "starts_on": "2026-12-04",
+      "ends_on": "2026-12-07",
+      "format": "hybrid",
+      "city": [
+        "Berlin"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "topics": [
+        "ai-coding"
+      ],
+      "attendees": 300
+    },
+    "source_url": "https://aicodingsummit.com/berlin/",
+    "evidence": "Berlin & Online December 4 & 7, 2026 See how AI transforms software engineering",
+    "observed_at": "2026-10-02T13:56:22Z"
+  },
+  {
+    "data": {
+      "name": "NeurIPS 2026",
+      "organizer": "NeurIPS Foundation",
+      "url": "https://neurips.cc/Conferences/2026",
+      "kind": "research",
+      "starts_on": "2026-12-06",
+      "ends_on": "2026-12-12",
+      "format": "in-person",
+      "city": [
+        "Sydney"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "cfp_deadline": "2026-05-04",
+      "cfp_url": "https://neurips.cc/Conferences/2026/CallForPapers",
+      "topics": [
+        "machine-learning",
+        "genai"
+      ]
+    },
+    "source_url": "https://neurips.cc/Conferences/2026/Dates",
+    "evidence": "NeurIPS Sydney Dec 6th Expo Day Dec 7th Tutorial Day Dec 7th – 10th Exhibit Hall Open Dec 8th – 10th Main Conference Dec 11th & 12th Workshops & Competitions",
+    "observed_at": "2026-10-02T13:35:45Z"
+  },
+  {
+    "data": {
+      "name": "Humanoids 2026",
+      "organizer": "IEEE Robotics and Automation Society",
+      "url": "https://2026.ieee-humanoids.org/",
+      "kind": "research",
+      "starts_on": "2026-12-06",
+      "ends_on": "2026-12-09",
+      "format": "in-person",
+      "city": [
+        "Santa Clara"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "cfp_deadline": "2026-07-27",
+      "cfp_url": "https://2026.ieee-humanoids.org/call-for-papers/",
+      "topics": [
+        "robotics",
+        "humanoid-robots"
+      ]
+    },
+    "source_url": "https://2026.ieee-humanoids.org/",
+    "evidence": "The 25th IEEE‑RAS International Conference on Humanoid Robots will take place December 6–9, 2026, in Silicon Valley, California",
+    "observed_at": "2026-10-02T13:41:36Z"
+  },
+  {
+    "data": {
+      "name": "AI Engineer Sydney 2026",
+      "organizer": "Web Directions",
+      "url": "https://webdirections.org/ai-engineer/",
+      "kind": "developer",
+      "starts_on": "2026-12-07",
+      "ends_on": "2026-12-08",
+      "format": "in-person",
+      "city": [
+        "Sydney"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "topics": [
+        "ai-engineering",
+        "ai-coding"
+      ],
+      "attendees": 800
+    },
+    "source_url": "https://webdirections.org/ai-engineer/",
+    "evidence": "AI Engineer Sydney brings the global AI engineering movement to Sydney December 7–8 2026",
+    "observed_at": "2026-10-02T13:56:26Z"
+  },
+  {
+    "data": {
+      "name": "The AI Summit New York 2026",
+      "organizer": "Informa",
+      "url": "https://newyork.theaisummit.com/",
+      "kind": "industry",
+      "starts_on": "2026-12-09",
+      "ends_on": "2026-12-10",
+      "format": "in-person",
+      "city": [
+        "New York"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "cfp_url": "https://newyork.theaisummit.com/conference-speakers/call-for-papers/",
+      "topics": [
+        "enterprise-ai"
+      ],
+      "attendees": 7500
+    },
+    "source_url": "https://newyork.theaisummit.com/",
+    "evidence": "December 9-10, 2026 | Javits Center, New York Turn AI Ambition into Real-World Impact",
+    "observed_at": "2026-10-02T13:56:27Z"
+  },
+  {
+    "data": {
+      "name": "PyTorch Day Japan 2026",
+      "organizer": "PyTorch Foundation",
+      "url": "https://events.linuxfoundation.org/pytorch-day-japan/",
+      "kind": "developer",
+      "starts_on": "2026-12-10",
+      "ends_on": "2026-12-10",
+      "format": "in-person",
+      "city": [
+        "Tokyo"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "cfp_deadline": "2026-09-27",
+      "cfp_url": "https://events.linuxfoundation.org/pytorch-day-japan/program/cfp/",
+      "topics": [
+        "pytorch",
+        "open-source"
+      ]
+    },
+    "source_url": "https://events.linuxfoundation.org/pytorch-day-japan/",
+    "evidence": "PyTorch Day Japan Co-Hosted by 2026 December 10 Tokyo, Japan #PyTorchDayJapan register",
+    "observed_at": "2026-10-02T13:56:39Z"
+  },
+  {
+    "data": {
+      "name": "ACCV 2026",
+      "organizer": "Asian Federation of Computer Vision",
+      "url": "https://accv2026.org/",
+      "kind": "research",
+      "starts_on": "2026-12-14",
+      "ends_on": "2026-12-18",
+      "format": "in-person",
+      "city": [
+        "Osaka"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "cfp_deadline": "2026-07-03",
+      "cfp_url": "https://accv2026.org/submissions/",
+      "topics": [
+        "computer-vision"
+      ]
+    },
+    "source_url": "https://accv2026.org/",
+    "evidence": "December 14-18 in osaka, japan ACCV 2026 18th Asian Conference on Computer Vision",
+    "observed_at": "2026-10-02T13:41:36Z"
+  },
+  {
+    "data": {
+      "name": "PRIMA 2026",
+      "url": "https://www.prima2026.org/",
+      "kind": "research",
+      "starts_on": "2026-12-14",
+      "ends_on": "2026-12-17",
+      "format": "in-person",
+      "city": [
+        "Kumamoto"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "cfp_deadline": "2026-08-03",
+      "cfp_url": "https://www.prima2026.org/calls-main-track",
+      "topics": [
+        "multi-agent-systems",
+        "agents"
+      ]
+    },
+    "source_url": "https://www.prima2026.org/",
+    "evidence": "DATES: December 14-17, 2026 VENUE: Kumamoto-Jo Hall 3-40, Sakuramachi, Chuo-ku, Kumamoto-city, Kumamoto, Japan",
+    "observed_at": "2026-10-02T13:54:44Z"
+  },
+  {
+    "data": {
+      "name": "IEEE BigData 2026",
+      "organizer": "IEEE",
+      "url": "https://bigdataieee.org/BigData2026/",
+      "kind": "research",
+      "starts_on": "2026-12-14",
+      "ends_on": "2026-12-17",
+      "format": "in-person",
+      "city": [
+        "Phoenix"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "cfp_deadline": "2026-08-21",
+      "cfp_url": "https://bigdataieee.org/BigData2026/calls/papers/",
+      "topics": [
+        "big-data",
+        "data-mining",
+        "machine-learning"
+      ]
+    },
+    "source_url": "https://bigdataieee.org/BigData2026/important-dates/",
+    "evidence": "Electronic submission of full papers: Aug. 21, 2026 Notification of paper acceptance: Oct. 24, 2026 Camera-ready of accepted papers: Nov. 14, 2026 Conference: Dec 14-17, 2026",
+    "observed_at": "2026-10-02T13:55:13Z"
+  },
+  {
+    "data": {
+      "name": "World Summit AI Qatar 2026",
+      "url": "https://qatar.worldsummit.ai/",
+      "kind": "industry",
+      "starts_on": "2026-12-15",
+      "ends_on": "2026-12-16",
+      "format": "in-person",
+      "city": [
+        "Doha"
+      ],
+      "country": [
+        "Qatar"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://qatar.worldsummit.ai/",
+    "evidence": "WORLD SUMMIT AI GLOBAL SUMMIT SERIES 7 – 8 October 2026 Amsterdam, Netherlands Learn more 15-16 December 2026 Doha, Qatar Learn more",
+    "observed_at": "2026-10-02T13:56:19Z"
+  },
+  {
+    "data": {
+      "name": "AICon Beijing 2026",
+      "organizer": "InfoQ",
+      "url": "https://aicon.infoq.cn/2026/beijing",
+      "kind": "developer",
+      "starts_on": "2026-12-18",
+      "ends_on": "2026-12-19",
+      "format": "in-person",
+      "city": [
+        "Beijing"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "topics": [
+        "agents",
+        "llm"
+      ]
+    },
+    "source_url": "https://aicon.infoq.cn/2026/beijing",
+    "evidence": "AICon北京2026_全球人工智能开发与应用大会暨大模型应用生态展_InfoQ技术大会 时间：2026年12月18日-12月19日 地址：北京新云南皇冠假日酒店",
+    "observed_at": "2026-10-02T13:56:36Z"
+  },
+  {
+    "data": {
+      "name": "WACV 2027",
+      "organizer": "IEEE / CVF",
+      "url": "https://wacv.thecvf.com/Conferences/2027",
+      "kind": "research",
+      "starts_on": "2027-01-04",
+      "ends_on": "2027-01-08",
+      "format": "in-person",
+      "city": [
+        "Lake Buena Vista"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "cfp_deadline": "2026-06-19",
+      "cfp_url": "https://wacv.thecvf.com/Conferences/2027/CallForPapers",
+      "topics": [
+        "computer-vision"
+      ]
+    },
+    "source_url": "https://wacv.thecvf.com/Conferences/2027/Dates",
+    "evidence": "WACV 2027 Meeting Dates The conference takes place Mon. Jan 4th through Fri the 8th, 2027 at the Disney Springs. Session Overview Dates Workshops Jan 4th - 5th Main Conference Session s Jan 6th - 8th",
+    "observed_at": "2026-10-02T13:38:06Z"
+  },
+  {
+    "data": {
+      "name": "AI EXPO NEO 2027",
+      "organizer": "RX Japan",
+      "url": "https://www.nextech-week.jp/aineo/ja-jp.html",
+      "kind": "industry",
+      "starts_on": "2027-01-07",
+      "ends_on": "2027-01-08",
+      "format": "in-person",
+      "city": [
+        "Tokyo"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.nextech-week.jp/hub/ja-jp/about/ai.html",
+    "evidence": "AI・人工知能EXPO NEO 2027 会期：2027/1/7（木）～8（金） 会場：東京国際フォーラム",
+    "observed_at": "2026-10-02T13:56:40Z"
+  },
+  {
+    "data": {
+      "name": "AI Conf 2027",
+      "organizer": "wwktm",
+      "url": "https://aiconf.asia/2027/",
+      "kind": "developer",
+      "starts_on": "2027-01-08",
+      "ends_on": "2027-01-10",
+      "format": "in-person",
+      "city": [
+        "Kathmandu"
+      ],
+      "country": [
+        "Nepal"
+      ],
+      "region": "asia-pacific",
+      "cfp_url": "https://aiconf.asia/2027/#cfs",
+      "attendees": 500
+    },
+    "source_url": "https://aiconf.asia/2027/",
+    "evidence": "Community Gathers in the Himalayas Jan 8–10 2027 Kathmandu, Nepal 3 days, 500 builders",
+    "observed_at": "2026-10-02T13:56:22Z"
+  },
+  {
+    "data": {
+      "name": "Embedded Vision Summit 2027",
+      "organizer": "Edge AI + Vision Alliance",
+      "url": "https://embeddedvisionsummit.com/",
+      "kind": "developer",
+      "starts_on": "2027-02-02",
+      "ends_on": "2027-02-04",
+      "format": "in-person",
+      "city": [
+        "San Francisco"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "cfp_url": "https://embeddedvisionsummit.com/call-proposals/",
+      "topics": [
+        "computer-vision",
+        "physical-ai",
+        "edge-ai"
+      ],
+      "attendees": 1400
+    },
+    "source_url": "https://embeddedvisionsummit.com/call-proposals/",
+    "evidence": "The 2027 Summit is a live, in-person event, taking place February 2-4, 2027 in San Francisco, California, as part of Photonics West",
+    "observed_at": "2026-10-02T13:56:33Z"
+  },
+  {
+    "data": {
+      "name": "Global AI Show Riyadh 2027",
+      "organizer": "VAP Group",
+      "url": "https://www.globalaishow.com/",
+      "kind": "industry",
+      "starts_on": "2027-02-02",
+      "ends_on": "2027-02-03",
+      "format": "in-person",
+      "city": [
+        "Riyadh"
+      ],
+      "country": [
+        "Saudi Arabia"
+      ],
+      "region": "africa-middle-east",
+      "attendees": 5000
+    },
+    "source_url": "https://www.globalaishow.com/",
+    "evidence": "Global AI Show Riyadh 2 – 3 February 2027 · Riyadh, Kingdom of Saudi Arabia 5,000+ Attendees Join us in Riyadh",
+    "observed_at": "2026-10-02T13:56:41Z"
+  },
+  {
+    "data": {
+      "name": "IUI 2027",
+      "organizer": "ACM",
+      "url": "https://iui.acm.org/2027/",
+      "kind": "research",
+      "starts_on": "2027-02-08",
+      "ends_on": "2027-02-11",
+      "format": "in-person",
+      "city": [
+        "Helsinki"
+      ],
+      "country": [
+        "Finland"
+      ],
+      "region": "europe",
+      "cfp_deadline": "2026-08-13",
+      "cfp_url": "https://iui.acm.org/2027/call-for-papers/",
+      "topics": [
+        "human-computer-interaction",
+        "intelligent-user-interfaces"
+      ]
+    },
+    "source_url": "https://iui.acm.org/2027/",
+    "evidence": "Intelligent User Interfaces February 8-11, 2027 Helsinki, Finland",
+    "observed_at": "2026-10-02T13:40:13Z"
+  },
+  {
+    "data": {
+      "name": "AI DevWorld 2027",
+      "organizer": "DevNetwork",
+      "url": "https://aidevworld.com/",
+      "kind": "developer",
+      "starts_on": "2027-02-09",
+      "ends_on": "2027-02-11",
+      "format": "in-person",
+      "city": [
+        "Santa Clara"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "topics": [
+        "agents",
+        "ai-coding"
+      ],
+      "attendees": 6000
+    },
+    "source_url": "https://aidevworld.com/",
+    "evidence": "World’s Largest AI & Machine Learning Developer Conference February 9-11, 2027 · Santa Clara, CA REGISTER 6,000 Total Participants",
+    "observed_at": "2026-10-02T13:56:37Z"
+  },
+  {
+    "data": {
+      "name": "WSDM 2027",
+      "organizer": "ACM",
+      "url": "https://www.wsdm-conference.org/2027/",
+      "kind": "research",
+      "starts_on": "2027-02-15",
+      "ends_on": "2027-02-19",
+      "format": "in-person",
+      "city": [
+        "Hong Kong"
+      ],
+      "region": "asia-pacific",
+      "cfp_deadline": "2026-08-17",
+      "cfp_url": "https://www.wsdm-conference.org/2027/cffp.html",
+      "topics": [
+        "search",
+        "data-mining",
+        "information-retrieval"
+      ]
+    },
+    "source_url": "https://www.wsdm-conference.org/2027/",
+    "evidence": "The WSDM 2027 @ Hong Kong The 20th ACM International Conference on Web Search and Data Mining Date: February 15–19, 2027",
+    "observed_at": "2026-10-02T13:35:45Z"
+  },
+  {
+    "data": {
+      "name": "AAAI 2027",
+      "organizer": "AAAI",
+      "url": "https://aaai.org/conference/aaai/aaai-27/",
+      "kind": "research",
+      "starts_on": "2027-02-16",
+      "ends_on": "2027-02-23",
+      "format": "in-person",
+      "city": [
+        "Montreal"
+      ],
+      "country": [
+        "Canada"
+      ],
+      "region": "americas",
+      "cfp_deadline": "2026-07-21",
+      "cfp_url": "https://aaai.org/conference/aaai/aaai-27/main-technical-track-call/",
+      "topics": [
+        "machine-learning"
+      ]
+    },
+    "source_url": "https://aaai.org/conference/aaai/aaai-27/",
+    "evidence": "The 41st Annual AAAI Conference on Artificial Intelligence February 16 – February 23, 2027 | Montréal, Canada",
+    "observed_at": "2026-10-02T13:34:12Z"
+  },
+  {
+    "data": {
+      "name": "AI Engineer Europe 2027",
+      "url": "https://ai.engineer/europe/2027",
+      "kind": "developer",
+      "starts_on": "2027-02-17",
+      "ends_on": "2027-02-19",
+      "format": "in-person",
+      "city": [
+        "London"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "topics": [
+        "ai-engineering"
+      ]
+    },
+    "source_url": "https://ai.engineer/europe/2027",
+    "evidence": "Europe's flagship technical AI conference returns to ExCeL London for three days, February 17–19, 2027",
+    "observed_at": "2026-10-02T13:56:26Z"
+  },
+  {
+    "data": {
+      "name": "ICAART 2027",
+      "organizer": "INSTICC",
+      "url": "https://icaart.scitevents.org/",
+      "kind": "research",
+      "starts_on": "2027-02-23",
+      "ends_on": "2027-02-26",
+      "format": "hybrid",
+      "city": [
+        "Valletta"
+      ],
+      "country": [
+        "Malta"
+      ],
+      "region": "europe",
+      "cfp_deadline": "2026-09-29",
+      "cfp_url": "https://icaart.scitevents.org/CallForPapers.aspx",
+      "topics": [
+        "agents",
+        "multi-agent-systems"
+      ]
+    },
+    "source_url": "https://icaart.scitevents.org/",
+    "evidence": "The main conference will take place from February 23 to 25. February 26 is reserved for special sessions and workshops only.",
+    "observed_at": "2026-10-02T13:41:36Z"
+  },
+  {
+    "data": {
+      "name": "MLDS 2027 Bengaluru",
+      "organizer": "Analytics India Magazine",
+      "url": "https://mlds.analyticsindiamag.com/",
+      "kind": "developer",
+      "starts_on": "2027-02-25",
+      "ends_on": "2027-02-26",
+      "format": "in-person",
+      "city": [
+        "Bengaluru"
+      ],
+      "country": [
+        "India"
+      ],
+      "region": "asia-pacific",
+      "topics": [
+        "agents",
+        "genai"
+      ]
+    },
+    "source_url": "https://mlds.analyticsindiamag.com/",
+    "evidence": "MLDS 2027 is India's largest agentic AI conference for developers. Bangalore Feb 25–26, 2027 Hyderabad Mar 4–5, 2027",
+    "observed_at": "2026-10-02T13:56:40Z"
+  },
+  {
+    "data": {
+      "name": "MLDS 2027 Hyderabad",
+      "organizer": "Analytics India Magazine",
+      "url": "https://mlds.analyticsindiamag.com/",
+      "kind": "developer",
+      "starts_on": "2027-03-04",
+      "ends_on": "2027-03-05",
+      "format": "in-person",
+      "city": [
+        "Hyderabad"
+      ],
+      "country": [
+        "India"
+      ],
+      "region": "asia-pacific",
+      "topics": [
+        "agents",
+        "genai"
+      ]
+    },
+    "source_url": "https://mlds.analyticsindiamag.com/",
+    "evidence": "MLDS 2027 is India's largest agentic AI conference for developers. Bangalore Feb 25–26, 2027 Hyderabad Mar 4–5, 2027",
+    "observed_at": "2026-10-02T13:56:40Z"
+  },
+  {
+    "data": {
+      "name": "HumanX Las Vegas 2027",
+      "url": "https://www.humanx.co/",
+      "kind": "industry",
+      "starts_on": "2027-03-07",
+      "ends_on": "2027-03-10",
+      "format": "in-person",
+      "city": [
+        "Las Vegas"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "topics": [
+        "enterprise-ai"
+      ]
+    },
+    "source_url": "https://www.humanx.co/",
+    "evidence": "WHERE GLOBAL AI MOVES FORWARD LAS VEGAS March 7-10, 2027 · Mandalay Bay, Las Vegas EXPLORE EVENT",
+    "observed_at": "2026-10-02T13:56:30Z"
+  },
+  {
+    "data": {
+      "name": "HRI 2027",
+      "organizer": "ACM / IEEE",
+      "url": "https://humanrobotinteraction.org/2027/",
+      "kind": "research",
+      "starts_on": "2027-03-08",
+      "ends_on": "2027-03-12",
+      "format": "in-person",
+      "city": [
+        "Santa Clara"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "cfp_deadline": "2026-09-11",
+      "cfp_url": "https://humanrobotinteraction.org/2027/full-papers/",
+      "topics": [
+        "human-robot-interaction",
+        "robotics"
+      ]
+    },
+    "source_url": "https://humanrobotinteraction.org/2027/",
+    "evidence": "The 22nd annual conference — themed Innovative HRI — will be held March 8–12, 2027 in Santa Clara, CA, in the heart of Silicon Valley.",
+    "observed_at": "2026-10-02T13:35:45Z"
+  },
+  {
+    "data": {
+      "name": "ALT 2027",
+      "url": "https://algorithmiclearningtheory.org/alt2027/",
+      "kind": "research",
+      "starts_on": "2027-03-09",
+      "ends_on": "2027-03-12",
+      "format": "in-person",
+      "city": [
+        "Leiden"
+      ],
+      "country": [
+        "Netherlands"
+      ],
+      "region": "europe",
+      "cfp_deadline": "2026-10-12",
+      "cfp_url": "https://algorithmiclearningtheory.org/alt2027/call-for-papers/",
+      "topics": [
+        "learning-theory",
+        "machine-learning"
+      ]
+    },
+    "source_url": "https://algorithmiclearningtheory.org/alt2027/call-for-papers/",
+    "evidence": "The 38th International Conference on Algorithmic Learning Theory (ALT 2027) will be held March 9–12, 2027, in Leiden, the Netherlands.",
+    "observed_at": "2026-10-02T13:43:10Z"
+  },
+  {
+    "data": {
+      "name": "EACL 2027",
+      "organizer": "European Chapter of the ACL",
+      "url": "https://2027.eacl.org/",
+      "kind": "research",
+      "starts_on": "2027-03-09",
+      "ends_on": "2027-03-14",
+      "format": "in-person",
+      "city": [
+        "Athens"
+      ],
+      "country": [
+        "Greece"
+      ],
+      "region": "europe",
+      "cfp_deadline": "2026-08-03",
+      "cfp_url": "https://2027.eacl.org/calls/papers/",
+      "topics": [
+        "nlp",
+        "computational-linguistics"
+      ]
+    },
+    "source_url": "https://2027.eacl.org/",
+    "evidence": "EACL 2027 will proudly be hosted in the historic and vibrant city of Athens, Greece, from March 9–14, 2027.",
+    "observed_at": "2026-10-02T13:35:45Z"
+  },
+  {
+    "data": {
+      "name": "NVIDIA GTC 2027",
+      "organizer": "NVIDIA",
+      "url": "https://www.nvidia.com/gtc/",
+      "kind": "developer",
+      "starts_on": "2027-03-15",
+      "ends_on": "2027-03-18",
+      "format": "in-person",
+      "city": [
+        "San Jose"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "cfp_deadline": "2026-11-10",
+      "cfp_url": "https://www.nvidia.com/gtc/call-for-submissions/",
+      "topics": [
+        "ai-infrastructure",
+        "agents",
+        "physical-ai"
+      ]
+    },
+    "source_url": "https://www.nvidia.com/gtc/call-for-submissions/",
+    "evidence": "NVIDIA GTC is returning to San Jose, CA on March 15–18, 2027. Help us shape the content at the conference by submitting a technical poster",
+    "observed_at": "2026-10-02T13:56:28Z"
+  },
+  {
+    "data": {
+      "name": "GITEX AI LATAM 2027",
+      "url": "https://www.gitexlatam.com/",
+      "kind": "industry",
+      "starts_on": "2027-03-16",
+      "ends_on": "2027-03-17",
+      "format": "in-person",
+      "city": [
+        "São Paulo"
+      ],
+      "country": [
+        "Brazil"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.gitexlatam.com/",
+    "evidence": "GITEX AI LATAM I 16-17 March 2027 I Sao Paulo I Brazil",
+    "observed_at": "2026-10-02T13:56:23Z"
+  },
+  {
+    "data": {
+      "name": "ECIR 2027",
+      "organizer": "BCS Information Retrieval Specialist Group",
+      "url": "https://www.ecir2027.co.uk/",
+      "kind": "research",
+      "starts_on": "2027-03-21",
+      "ends_on": "2027-03-25",
+      "format": "in-person",
+      "city": [
+        "Southampton"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "cfp_deadline": "2026-09-21",
+      "cfp_url": "https://www.ecir2027.co.uk/call-for-full-papers",
+      "topics": [
+        "information-retrieval",
+        "search"
+      ]
+    },
+    "source_url": "https://www.ecir2027.co.uk/",
+    "evidence": "ECIR 2027 will take place in-person from 21-25 March 2027, at Southampton Football Club, Southampton, England, UK.",
+    "observed_at": "2026-10-02T13:53:39Z"
+  },
+  {
+    "data": {
+      "name": "AI Council 2027",
+      "url": "https://www.aicouncil.com/",
+      "kind": "developer",
+      "starts_on": "2027-03-23",
+      "ends_on": "2027-03-24",
+      "format": "in-person",
+      "city": [
+        "San Francisco"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "topics": [
+        "ai-infrastructure"
+      ]
+    },
+    "source_url": "https://www.aicouncil.com/",
+    "evidence": "AI Council 2027 — AI Conference in San Francisco, Mar 23-24",
+    "observed_at": "2026-10-02T13:56:34Z"
+  },
+  {
+    "data": {
+      "name": "CPAL 2027",
+      "url": "https://cpal.cc/",
+      "kind": "research",
+      "starts_on": "2027-03-23",
+      "ends_on": "2027-03-26",
+      "format": "in-person",
+      "city": [
+        "Tokyo"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "cfp_deadline": "2026-11-23",
+      "cfp_url": "https://cpal.cc/call_for_papers/",
+      "topics": [
+        "machine-learning",
+        "sparsity",
+        "optimization"
+      ]
+    },
+    "source_url": "https://cpal.cc/",
+    "evidence": "CPAL 2027: March 23–26, 2027 We are pleased to announce the Fourth Conference on Parsimony and Learning, to be held at Hitotsubashi Hall in Tokyo, Japan.",
+    "observed_at": "2026-10-02T13:40:13Z"
+  },
+  {
+    "data": {
+      "name": "EvoStar 2027",
+      "url": "https://www.evostar.org/2027/",
+      "kind": "research",
+      "starts_on": "2027-03-31",
+      "ends_on": "2027-04-02",
+      "format": "hybrid",
+      "city": [
+        "Mainz"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "cfp_deadline": "2026-11-01",
+      "topics": [
+        "evolutionary-computation",
+        "bio-inspired-ai"
+      ]
+    },
+    "source_url": "https://www.evostar.org/2027/",
+    "evidence": "Evostar conferences will be held in Mainz, Germany from 31 March to 2 April 2027 in hybrid mode.",
+    "observed_at": "2026-10-02T13:41:36Z"
+  },
+  {
+    "data": {
+      "name": "ACIIDS 2027",
+      "url": "https://aciids.pwr.edu.pl/2027/",
+      "kind": "research",
+      "starts_on": "2027-04-05",
+      "ends_on": "2027-04-07",
+      "format": "in-person",
+      "country": [
+        "Indonesia"
+      ],
+      "region": "asia-pacific",
+      "cfp_deadline": "2026-10-31",
+      "cfp_url": "https://aciids.pwr.edu.pl/2027/submit.html",
+      "topics": [
+        "data-science"
+      ]
+    },
+    "source_url": "https://aciids.pwr.edu.pl/2027/",
+    "evidence": "A premier international forum for researchers, practitioners, and leading experts to share advances in artificial intelligence, data science, and intelligent computing. ◆ Bali, Indonesia ◆ 5–7 April 2027",
+    "observed_at": "2026-10-02T13:43:10Z"
+  },
+  {
+    "data": {
+      "name": "3DV 2027",
+      "url": "https://3dvconf.github.io/2027/",
+      "kind": "research",
+      "starts_on": "2027-04-06",
+      "ends_on": "2027-04-09",
+      "format": "in-person",
+      "city": [
+        "Thessaloniki"
+      ],
+      "country": [
+        "Greece"
+      ],
+      "region": "europe",
+      "cfp_deadline": "2026-08-28",
+      "cfp_url": "https://3dvconf.github.io/2027/call-for-papers/",
+      "topics": [
+        "computer-vision",
+        "3d-vision"
+      ]
+    },
+    "source_url": "https://3dvconf.github.io/2027/call-for-papers/",
+    "evidence": "We invite submissions to the 14th International Conference on 3D Vision (3DV) 2027, which will be held in Thessaloniki, Greece, on April 6-9, 2027.",
+    "observed_at": "2026-10-02T13:48:20Z"
+  },
+  {
+    "data": {
+      "name": "DeepFest 2027",
+      "url": "https://deepfest.com/",
+      "kind": "industry",
+      "starts_on": "2027-04-12",
+      "ends_on": "2027-04-15",
+      "format": "in-person",
+      "city": [
+        "Malham"
+      ],
+      "country": [
+        "Saudi Arabia"
+      ],
+      "region": "africa-middle-east",
+      "attendees": 68000
+    },
+    "source_url": "https://deepfest.com/",
+    "evidence": "12-15 April 2027 RECC, MALHAM, SAUDI ARABIA ORGANISED BY 68,000+ ATTENDANCE 180+ SPEAKERS 120+ GLOBAL BRANDS 04 DAYS",
+    "observed_at": "2026-10-02T13:56:29Z"
+  },
+  {
+    "data": {
+      "name": "GENAIX 2027",
+      "organizer": "The People Events",
+      "url": "https://genaixworld.com/",
+      "kind": "industry",
+      "starts_on": "2027-04-15",
+      "ends_on": "2027-04-16",
+      "format": "in-person",
+      "city": [
+        "Singapore"
+      ],
+      "country": [
+        "Singapore"
+      ],
+      "region": "asia-pacific",
+      "cfp_url": "https://genaixworld.com/apply-for-speaking",
+      "topics": [
+        "genai",
+        "agents"
+      ],
+      "attendees": 150
+    },
+    "source_url": "https://genaixworld.com/",
+    "evidence": "Singapore April 15–16, 2027 About the Event Global Generative & Agentic AI Summit — GENAIX 2027 GENAIX 2027 is Asia-Pacific's most anticipated AI event — a high-intensity, two-day gathering of 150–200 of the world's foremost enterprise AI leaders",
+    "observed_at": "2026-10-02T13:56:24Z"
+  },
+  {
+    "data": {
+      "name": "AiX Conference 2027",
+      "url": "https://aixconf.co.uk/",
+      "kind": "developer",
+      "starts_on": "2027-04-21",
+      "ends_on": "2027-04-21",
+      "format": "in-person",
+      "city": [
+        "Newcastle upon Tyne"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "cfp_url": "https://aixconf.co.uk/become-a-speaker",
+      "topics": [
+        "design"
+      ]
+    },
+    "source_url": "https://aixconf.co.uk/",
+    "evidence": "Wednesday 21 April 2027 · Newcastle upon Tyne, UK Wednesday 21 April 2027 · Newcastle upon Tyne The AI x Design Conference",
+    "observed_at": "2026-10-02T13:56:23Z"
+  },
+  {
+    "data": {
+      "name": "GITEX AI Mediterranean Italy 2027",
+      "url": "https://www.gitexitaly.com/",
+      "kind": "industry",
+      "starts_on": "2027-04-21",
+      "ends_on": "2027-04-22",
+      "format": "in-person",
+      "city": [
+        "Rome"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe",
+      "attendees": 10000
+    },
+    "source_url": "https://www.gitexitaly.com/",
+    "evidence": "GITEX AI MEDITERRANEAN / ITALY 2027 takes place on 21-22 April 2027 at The Roma Convention Center La Nuvola in Rome, Italy.",
+    "observed_at": "2026-10-02T13:56:30Z"
+  },
+  {
+    "data": {
+      "name": "AI EXPO TOKYO Spring 2027",
+      "organizer": "RX Japan",
+      "url": "https://www.nextech-week.jp/hub/ja-jp/about/ai.html",
+      "kind": "industry",
+      "starts_on": "2027-04-21",
+      "ends_on": "2027-04-23",
+      "format": "in-person",
+      "city": [
+        "Tokyo"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.nextech-week.jp/hub/ja-jp/about/ai.html",
+    "evidence": "【秋】 会期：2026/11/11（水）～13（金） 会場：幕張メッセ 【春】 会期：2027/4/21（水）～23（金） 会場：東京ビッグサイト",
+    "observed_at": "2026-10-02T13:56:40Z"
+  },
+  {
+    "data": {
+      "name": "AI Engineer Miami 2027",
+      "organizer": "React Miami",
+      "url": "https://ai.engineer/miami/2027",
+      "kind": "developer",
+      "starts_on": "2027-04-26",
+      "ends_on": "2027-04-27",
+      "format": "in-person",
+      "city": [
+        "Miami"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "topics": [
+        "ai-engineering"
+      ],
+      "attendees": 500
+    },
+    "source_url": "https://ai.engineer/miami/2027",
+    "evidence": "APRIL 26 - 27, 2027 • DOWNTOWN MIAMI AI ENGINEER RETURNS TO MIAMI Bringing 500+ AI engineers, CTOs, and VPs of AI back to Miami to connect, learn, and build what's next in AI engineering.",
+    "observed_at": "2026-10-02T13:56:26Z"
+  },
+  {
+    "data": {
+      "name": "ICLR 2027",
+      "url": "https://iclr.cc/Conferences/2027",
+      "kind": "research",
+      "starts_on": "2027-04-26",
+      "ends_on": "2027-04-30",
+      "format": "in-person",
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "cfp_deadline": "2026-09-18",
+      "cfp_url": "https://iclr.cc/Conferences/2027/CallForPapers",
+      "topics": [
+        "machine-learning",
+        "representation-learning"
+      ]
+    },
+    "source_url": "https://iclr.cc/Conferences/2027",
+    "evidence": "ICLR 2027 The Fifteenth International Conference on Learning Representations California April 26-30, 2027",
+    "observed_at": "2026-10-02T13:34:12Z"
+  },
+  {
+    "data": {
+      "name": "FG 2027",
+      "organizer": "IEEE Biometrics Council",
+      "url": "https://fg2027.ieee-biometrics.org/",
+      "kind": "research",
+      "starts_on": "2027-04-26",
+      "ends_on": "2027-04-30",
+      "format": "in-person",
+      "city": [
+        "Marrakesh"
+      ],
+      "country": [
+        "Morocco"
+      ],
+      "region": "africa-middle-east",
+      "cfp_deadline": "2026-10-09",
+      "cfp_url": "https://fg2027.ieee-biometrics.org/call-for-papers/",
+      "topics": [
+        "computer-vision",
+        "face-recognition",
+        "gesture-recognition"
+      ]
+    },
+    "source_url": "https://fg2027.ieee-biometrics.org/call-for-papers/",
+    "evidence": "FG 2027 will be held from April 26th to 30th, 2027, in Marrakesh, Morocco, as an in-person event.",
+    "observed_at": "2026-10-02T13:54:21Z"
+  },
+  {
+    "data": {
+      "name": "Mastering AI 2027",
+      "url": "https://mastering-ai.eu/",
+      "kind": "developer",
+      "starts_on": "2027-04-28",
+      "ends_on": "2027-04-29",
+      "format": "in-person",
+      "city": [
+        "Karlsruhe"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "cfp_deadline": "2026-11-19",
+      "cfp_url": "https://mastering-ai.eu/cfp.php",
+      "topics": [
+        "agents",
+        "llm",
+        "mlops"
+      ]
+    },
+    "source_url": "https://mastering-ai.eu/",
+    "evidence": "Karlsruhe 28. & 29. April 2027 KI-Anwendungen entwickeln und betreiben Gestern GenAI und ChatBots, heute Agentic AI und Securityvorfälle.",
+    "observed_at": "2026-10-02T13:56:41Z"
+  },
+  {
+    "data": {
+      "name": "AGNTCon + MCPCon North America 2027",
+      "organizer": "Linux Foundation",
+      "url": "https://events.linuxfoundation.org/agntcon-mcpcon-north-america-2027/",
+      "kind": "developer",
+      "starts_on": "2027-04-28",
+      "ends_on": "2027-04-29",
+      "format": "in-person",
+      "city": [
+        "San Francisco"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "topics": [
+        "agents",
+        "mcp"
+      ]
+    },
+    "source_url": "https://events.linuxfoundation.org/agntcon-mcpcon-north-america-2027/",
+    "evidence": "AGNTCon + MCPCon North America 2027 Save the Date! April 28-29, 2027 San Francisco, California Sponsor",
+    "observed_at": "2026-10-02T13:56:42Z"
+  },
+  {
+    "data": {
+      "name": "GITEX AI Asia 2027",
+      "url": "https://gitexasia.com/",
+      "kind": "industry",
+      "starts_on": "2027-04-29",
+      "ends_on": "2027-04-30",
+      "format": "in-person",
+      "city": [
+        "Singapore"
+      ],
+      "country": [
+        "Singapore"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://gitexasia.com/",
+    "evidence": "GITEX AI ASIA 2027 | 29-30 April | Singapore BOOK A SPACE FOR 2027 ENTERPRISE STARTUPS REGISTER TO VISIT",
+    "observed_at": "2026-10-02T13:56:29Z"
+  },
+  {
+    "data": {
+      "name": "Machine Learning Prague 2027",
+      "url": "https://www.mlprague.com/",
+      "kind": "developer",
+      "starts_on": "2027-05-03",
+      "ends_on": "2027-05-05",
+      "format": "hybrid",
+      "city": [
+        "Prague"
+      ],
+      "country": [
+        "Czechia"
+      ],
+      "region": "europe",
+      "cfp_deadline": "2026-10-15",
+      "cfp_url": "https://www.mlprague.com/call-for-proposals",
+      "attendees": 800
+    },
+    "source_url": "https://www.mlprague.com/",
+    "evidence": "taking place in person in Prague and online. Machine Learning Prague 2027 May 03 – 05, 2027 Registration",
+    "observed_at": "2026-10-02T13:56:34Z"
+  },
+  {
+    "data": {
+      "name": "AISTATS 2027",
+      "url": "https://aistats.org/aistats2027/",
+      "kind": "research",
+      "starts_on": "2027-05-03",
+      "ends_on": "2027-05-06",
+      "format": "in-person",
+      "city": [
+        "Montreal"
+      ],
+      "country": [
+        "Canada"
+      ],
+      "region": "americas",
+      "cfp_deadline": "2026-09-29",
+      "cfp_url": "https://aistats.org/aistats2027/call-for-papers.html",
+      "topics": [
+        "machine-learning",
+        "statistics"
+      ]
+    },
+    "source_url": "https://aistats.org/aistats2027/dates.html",
+    "evidence": "Abstract submission deadline: September 29, 2026 Paper submission deadline: October 6, 2026 Reviews released: November 16, 2026 Paper decision notifications: January 20, 2027 Camera-ready deadline: Conference dates: May 3, 2027 - May 6, 2027",
+    "observed_at": "2026-10-02T13:38:06Z"
+  },
+  {
+    "data": {
+      "name": "AAMAS 2027",
+      "organizer": "IFAAMAS",
+      "url": "https://warwick.ac.uk/fac/sci/dcs/aamas2027/",
+      "kind": "research",
+      "starts_on": "2027-05-03",
+      "ends_on": "2027-05-07",
+      "format": "in-person",
+      "city": [
+        "Hanoi"
+      ],
+      "country": [
+        "Vietnam"
+      ],
+      "region": "asia-pacific",
+      "cfp_deadline": "2026-10-01",
+      "cfp_url": "https://warwick.ac.uk/fac/sci/dcs/aamas2027/calls/call-for-main-track/",
+      "topics": [
+        "multi-agent-systems",
+        "agents"
+      ]
+    },
+    "source_url": "https://warwick.ac.uk/fac/sci/dcs/aamas2027/",
+    "evidence": "The 26th International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2027) will be held 3–7 May 2027 in Hanoi, Vietnam.",
+    "observed_at": "2026-10-02T13:43:10Z"
+  },
+  {
+    "data": {
+      "name": "COLING 2027",
+      "url": "https://2027.coling-iccl.org/",
+      "kind": "research",
+      "starts_on": "2027-05-09",
+      "ends_on": "2027-05-14",
+      "format": "hybrid",
+      "city": [
+        "Macau"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "cfp_deadline": "2026-10-12",
+      "cfp_url": "https://2027.coling-iccl.org/calls/main_conference_papers/",
+      "topics": [
+        "nlp",
+        "computational-linguistics"
+      ]
+    },
+    "source_url": "https://2027.coling-iccl.org/",
+    "evidence": "Virtual Conference Thursday - Friday May 6-7, 2027 Main Conference Sunday - Friday May 9–14, 2027",
+    "observed_at": "2026-10-02T13:43:10Z"
+  },
+  {
+    "data": {
+      "name": "The Web Conference 2027",
+      "organizer": "ACM",
+      "url": "https://www2027.thewebconf.org/",
+      "kind": "research",
+      "starts_on": "2027-05-10",
+      "ends_on": "2027-05-14",
+      "format": "in-person",
+      "city": [
+        "Dublin"
+      ],
+      "country": [
+        "Ireland"
+      ],
+      "region": "europe",
+      "cfp_deadline": "2026-10-18",
+      "cfp_url": "https://www2027.thewebconf.org/research-track-papers/",
+      "topics": [
+        "information-retrieval",
+        "data-mining"
+      ]
+    },
+    "source_url": "https://www2027.thewebconf.org/research-track-papers/",
+    "evidence": "We invite contributions to the research tracks of The Web Conference 2027 (formerly known as WWW), which is going to be held in Dublin, Ireland on 10th-14th May, 2027.",
+    "observed_at": "2026-10-02T13:38:06Z"
+  },
+  {
+    "data": {
+      "name": "ICASSP 2027",
+      "organizer": "IEEE Signal Processing Society",
+      "url": "https://2027.ieeeicassp.org/",
+      "kind": "research",
+      "starts_on": "2027-05-16",
+      "ends_on": "2027-05-21",
+      "format": "in-person",
+      "city": [
+        "Toronto"
+      ],
+      "country": [
+        "Canada"
+      ],
+      "region": "americas",
+      "cfp_deadline": "2026-09-23",
+      "cfp_url": "https://2027.ieeeicassp.org/call-for-papers/",
+      "topics": [
+        "signal-processing",
+        "speech",
+        "audio"
+      ]
+    },
+    "source_url": "https://2027.ieeeicassp.org/",
+    "evidence": "Join us 16-21 May 2027 in Toronto, Canada for the annual IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP)",
+    "observed_at": "2026-10-02T13:35:45Z"
+  },
+  {
+    "data": {
+      "name": "Agent Conference 2027",
+      "url": "https://www.agentconference.com/",
+      "kind": "industry",
+      "starts_on": "2027-05-17",
+      "ends_on": "2027-05-18",
+      "format": "in-person",
+      "city": [
+        "New York"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "cfp_url": "https://www.agentconference.com/call-for-proposals",
+      "topics": [
+        "agents",
+        "enterprise-ai"
+      ],
+      "attendees": 4000
+    },
+    "source_url": "https://www.agentconference.com/",
+    "evidence": "May 17–18, 2027 New York Hilton Midtown · New York City Reserve a Ticket 4,000+ attendees expected · 100+ exhibitors · 100+ speakers",
+    "observed_at": "2026-10-02T13:56:31Z"
+  },
+  {
+    "data": {
+      "name": "ICRA 2027",
+      "organizer": "IEEE Robotics and Automation Society",
+      "url": "https://2027.ieee-icra.org/",
+      "kind": "research",
+      "starts_on": "2027-05-24",
+      "ends_on": "2027-05-28",
+      "format": "in-person",
+      "city": [
+        "Seoul"
+      ],
+      "country": [
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "cfp_deadline": "2026-09-16",
+      "cfp_url": "https://2027.ieee-icra.org/contribute/call-for-icra-2027-papers-now-accepting-submissions/",
+      "topics": [
+        "robotics",
+        "automation"
+      ]
+    },
+    "source_url": "https://2027.ieee-icra.org/",
+    "evidence": "Save the date for ICRA 2027, May 24th to 28th, 2027 at Coex in Seoul, South Korea!",
+    "observed_at": "2026-10-02T13:35:45Z"
+  },
+  {
+    "data": {
+      "name": "GITEX AI Belgrade 2027",
+      "url": "https://www.gitexbelgrade.com/",
+      "kind": "industry",
+      "starts_on": "2027-05-25",
+      "ends_on": "2027-05-27",
+      "format": "in-person",
+      "city": [
+        "Belgrade"
+      ],
+      "country": [
+        "Serbia"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.gitexbelgrade.com/",
+    "evidence": "GITEX AI BELGRADE | 25 - 27 May 2027 | Belgrade Fair",
+    "observed_at": "2026-10-02T13:56:23Z"
+  },
+  {
+    "data": {
+      "name": "AI WEEK 2027",
+      "url": "https://www.aiweek.it/",
+      "kind": "industry",
+      "starts_on": "2027-05-25",
+      "ends_on": "2027-05-26",
+      "format": "in-person",
+      "city": [
+        "Milan"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe",
+      "attendees": 35000
+    },
+    "source_url": "https://www.aiweek.it/",
+    "evidence": "Welcome to Europe’s largest Artificial Intelligence event 25-26 Maggio 2027 | Milano, Italia",
+    "observed_at": "2026-10-02T13:56:38Z"
+  },
+  {
+    "data": {
+      "name": "ISBI 2027",
+      "organizer": "IEEE SPS and IEEE EMBS",
+      "url": "https://biomedicalimaging.org/2027/",
+      "kind": "research",
+      "starts_on": "2027-05-25",
+      "ends_on": "2027-05-28",
+      "format": "in-person",
+      "city": [
+        "Lausanne"
+      ],
+      "country": [
+        "Switzerland"
+      ],
+      "region": "europe",
+      "cfp_deadline": "2026-10-26",
+      "topics": [
+        "medical-imaging",
+        "image-processing"
+      ]
+    },
+    "source_url": "https://biomedicalimaging.org/2027/",
+    "evidence": "International Symposium on Biomedical Imaging ISBI 2027 Lausanne, Switzerland • 25th – 28th May 2027 Welcome to IEEE ISBI 2027",
+    "observed_at": "2026-10-02T13:41:36Z"
+  },
+  {
+    "data": {
+      "name": "NAACL 2027",
+      "organizer": "Nations of the Americas Chapter of the ACL",
+      "url": "https://2027.naacl.org/",
+      "kind": "research",
+      "starts_on": "2027-06-01",
+      "ends_on": "2027-06-05",
+      "format": "in-person",
+      "city": [
+        "San Francisco"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "cfp_deadline": "2026-10-12",
+      "cfp_url": "https://2027.naacl.org/calls/main_conference_papers/",
+      "topics": [
+        "nlp",
+        "computational-linguistics"
+      ]
+    },
+    "source_url": "https://2027.naacl.org/",
+    "evidence": "The 2027 Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics (NAACL 2027) will take place in San Francisco, California, from June 1 - 5, 2027.",
+    "observed_at": "2026-10-02T13:35:45Z"
+  },
+  {
+    "data": {
+      "name": "GITEX AI India 2027",
+      "url": "https://www.gitex-india.com/",
+      "kind": "industry",
+      "starts_on": "2027-06-02",
+      "ends_on": "2027-06-04",
+      "format": "in-person",
+      "city": [
+        "Bengaluru"
+      ],
+      "country": [
+        "India"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.gitex-india.com/",
+    "evidence": "GITEX AI INDIA 2-4 June 2027 | BIEC, Bengaluru",
+    "observed_at": "2026-10-02T13:56:29Z"
+  },
+  {
+    "data": {
+      "name": "AI Engineer Melbourne 2027",
+      "organizer": "Web Directions",
+      "url": "https://webdirections.org/ai-engineer/",
+      "kind": "developer",
+      "starts_on": "2027-06-09",
+      "ends_on": "2027-06-10",
+      "format": "in-person",
+      "city": [
+        "Melbourne"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "topics": [
+        "ai-engineering"
+      ]
+    },
+    "source_url": "https://webdirections.org/ai-engineer/",
+    "evidence": "AI Engineer Melbourne returns to Melbourne June 9–10 2027 · Federation Square",
+    "observed_at": "2026-10-02T13:56:26Z"
+  },
+  {
+    "data": {
+      "name": "The AI Summit London 2027",
+      "organizer": "Informa",
+      "url": "https://london.theaisummit.com/",
+      "kind": "industry",
+      "starts_on": "2027-06-09",
+      "ends_on": "2027-06-10",
+      "format": "in-person",
+      "city": [
+        "London"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "cfp_url": "https://london.theaisummit.com/conference-speakers/submit-speaker/",
+      "topics": [
+        "enterprise-ai"
+      ]
+    },
+    "source_url": "https://london.theaisummit.com/",
+    "evidence": "Register Interest for 2027 9-10 June 2027 | Tobacco Dock, London",
+    "observed_at": "2026-10-02T13:56:27Z"
+  },
+  {
+    "data": {
+      "name": "Accelerate Tomorrow AI Summit 2027",
+      "url": "https://www.acceleratetomorrow.com/",
+      "kind": "industry",
+      "starts_on": "2027-06-15",
+      "ends_on": "2027-06-16",
+      "format": "in-person",
+      "city": [
+        "Berlin"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "cfp_url": "https://www.acceleratetomorrow.com/become-a-speaker",
+      "topics": [
+        "enterprise-ai"
+      ],
+      "attendees": 2000
+    },
+    "source_url": "https://www.acceleratetomorrow.com/",
+    "evidence": "Berlin | 15-16 June 2027 AI Summit Accelerate Tomorrow Accelerate Tomorrow AI Summit Join ATS 2027 #1 AI Transformation Summit for Business Leaders",
+    "observed_at": "2026-10-02T13:56:23Z"
+  },
+  {
+    "data": {
+      "name": "CVPR 2027",
+      "organizer": "IEEE / CVF",
+      "url": "https://cvpr.thecvf.com/Conferences/2027",
+      "kind": "research",
+      "starts_on": "2027-06-20",
+      "ends_on": "2027-06-25",
+      "format": "in-person",
+      "city": [
+        "Seattle"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "cfp_deadline": "2026-11-10",
+      "cfp_url": "https://cvpr.thecvf.com/Conferences/2027/CallForPapers",
+      "topics": [
+        "computer-vision",
+        "pattern-recognition"
+      ]
+    },
+    "source_url": "https://cvpr.thecvf.com/Conferences/2027/Dates",
+    "evidence": "CVPR 2027 Meeting Dates Workshops and Tutorials June 20-21, 2027 Main Conference Sessions June 22-25, 2027",
+    "observed_at": "2026-10-02T13:48:20Z"
+  },
+  {
+    "data": {
+      "name": "Data + AI Summit 2027",
+      "organizer": "Databricks",
+      "url": "https://www.databricks.com/dataaisummit",
+      "kind": "developer",
+      "starts_on": "2027-06-21",
+      "ends_on": "2027-06-24",
+      "format": "hybrid",
+      "city": [
+        "San Francisco"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "topics": [
+        "agents"
+      ]
+    },
+    "source_url": "https://www.databricks.com/dataaisummit",
+    "evidence": "Data + AI Summit | Databricks | June 21–24, 2027 SAN FRANCISCO Skip to main content June 21–24, 2027 / San Francisco + Virtual",
+    "observed_at": "2026-10-02T13:56:27Z"
+  },
+  {
+    "data": {
+      "name": "MLSys 2027",
+      "url": "https://mlsys.org/Conferences/2027",
+      "kind": "research",
+      "starts_on": "2027-06-21",
+      "ends_on": "2027-06-25",
+      "format": "in-person",
+      "city": [
+        "Bellevue"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "cfp_deadline": "2026-10-30",
+      "cfp_url": "https://mlsys.org/Conferences/2027/CallForResearchPapers",
+      "topics": [
+        "ml-systems",
+        "machine-learning"
+      ]
+    },
+    "source_url": "https://mlsys.org/Conferences/2027",
+    "evidence": "MLSys 2027 Tenth Annual Conference on Machine Learning and Systems Bellevue, WA June 21st - 25th 2027",
+    "observed_at": "2026-10-02T13:40:13Z"
+  },
+  {
+    "data": {
+      "name": "ICAPS 2027",
+      "url": "https://icaps27.icaps-conference.org/",
+      "kind": "research",
+      "starts_on": "2027-06-27",
+      "ends_on": "2027-07-02",
+      "format": "in-person",
+      "city": [
+        "Columbia"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "cfp_deadline": "2026-12-07",
+      "topics": [
+        "planning",
+        "scheduling"
+      ]
+    },
+    "source_url": "https://icaps27.icaps-conference.org/",
+    "evidence": "ICAPS 2027 is the 37th edition of the ICAPS conference series and will take place in Columbia, SC, USA From June 27, 2027 to July 2, 2027.",
+    "observed_at": "2026-10-02T13:40:13Z"
+  },
+  {
+    "data": {
+      "name": "COLT 2027",
+      "url": "https://learningtheory.org/colt2027/",
+      "kind": "research",
+      "starts_on": "2027-06-28",
+      "ends_on": "2027-07-02",
+      "format": "in-person",
+      "city": [
+        "Tokyo"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "topics": [
+        "learning-theory",
+        "machine-learning"
+      ]
+    },
+    "source_url": "https://learningtheory.org/colt2027/",
+    "evidence": "The 40th Annual Conference on Learning Theory (COLT 2027) takes place June 28 to July 2 in Tokyo, JAPAN.",
+    "observed_at": "2026-10-02T13:40:13Z"
+  },
+  {
+    "data": {
+      "name": "AI Engineer World's Fair 2027",
+      "url": "https://ai.engineer/worldsfair/2027",
+      "kind": "developer",
+      "starts_on": "2027-06-29",
+      "ends_on": "2027-07-01",
+      "format": "in-person",
+      "city": [
+        "San Francisco"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "topics": [
+        "ai-engineering"
+      ],
+      "attendees": 7000
+    },
+    "source_url": "https://ai.engineer/worldsfair/2027",
+    "evidence": "AI Engineer World's Fair is our broad AI engineering conference in San Francisco. The 2027 edition returns to Moscone West June 29–July 1.",
+    "observed_at": "2026-10-02T13:56:26Z"
+  },
+  {
+    "data": {
+      "name": "PAKDD 2027",
+      "url": "https://pakdd2027.org/",
+      "kind": "research",
+      "starts_on": "2027-06-29",
+      "ends_on": "2027-07-02",
+      "format": "in-person",
+      "city": [
+        "Wellington"
+      ],
+      "country": [
+        "New Zealand"
+      ],
+      "region": "asia-pacific",
+      "cfp_deadline": "2026-11-20",
+      "cfp_url": "https://pakdd2027.org/pages/calls/research",
+      "topics": [
+        "data-mining"
+      ]
+    },
+    "source_url": "https://pakdd2027.org/pages/dates",
+    "evidence": "Conference PAKDD 2027, Wellington Tuesday 29 June – Friday 2 July 2027 Main Submission Deadline Paper submission deadline Friday, 20 November 2026",
+    "observed_at": "2026-10-02T13:45:46Z"
+  },
+  {
+    "data": {
+      "name": "RSS 2027",
+      "organizer": "RSS Foundation",
+      "url": "https://roboticsconference.org/",
+      "kind": "research",
+      "starts_on": "2027-07-06",
+      "ends_on": "2027-07-11",
+      "format": "in-person",
+      "city": [
+        "Athens"
+      ],
+      "country": [
+        "Greece"
+      ],
+      "region": "europe",
+      "cfp_deadline": "2026-12-04",
+      "cfp_url": "https://roboticsconference.org/information/cfp/",
+      "topics": [
+        "robotics"
+      ]
+    },
+    "source_url": "https://roboticsconference.org/",
+    "evidence": "We are pleased to announce the 23rd edition of the “Robotics: Science and Systems” (RSS) conference, to be held in Athens, Greece from July 6–11, 2027.",
+    "observed_at": "2026-10-02T13:35:45Z"
+  },
+  {
+    "data": {
+      "name": "RAISE Summit 2027",
+      "organizer": "Hyve",
+      "url": "https://www.raisesummit.com/",
+      "kind": "industry",
+      "starts_on": "2027-07-07",
+      "ends_on": "2027-07-08",
+      "format": "in-person",
+      "city": [
+        "Paris"
+      ],
+      "country": [
+        "France"
+      ],
+      "region": "europe",
+      "topics": [
+        "enterprise-ai"
+      ]
+    },
+    "source_url": "https://www.raisesummit.com/",
+    "evidence": "7-8 July 2027, Palais des Congrès, Paris Where visionaries and AI converge The global stage for AI leadership, enterprise adoption, and ROI",
+    "observed_at": "2026-10-02T13:56:28Z"
+  },
+  {
+    "data": {
+      "name": "GECCO 2027",
+      "organizer": "ACM SIGEVO",
+      "url": "https://gecco-2027.sigevo.org/",
+      "kind": "research",
+      "starts_on": "2027-07-12",
+      "ends_on": "2027-07-16",
+      "format": "in-person",
+      "city": [
+        "Kraków"
+      ],
+      "country": [
+        "Poland"
+      ],
+      "region": "europe",
+      "topics": [
+        "evolutionary-computation",
+        "genetic-algorithms"
+      ]
+    },
+    "source_url": "https://gecco-2027.sigevo.org/HomePage",
+    "evidence": "GECCO 2027 @ Kraków, Poland The Genetic and Evolutionary Computation Conference — in person only — July 12 - 16, 2027",
+    "observed_at": "2026-10-02T13:41:36Z"
+  },
+  {
+    "data": {
+      "name": "MIDL 2027",
+      "organizer": "MIDL Foundation",
+      "url": "https://2027.midl.io/",
+      "kind": "research",
+      "starts_on": "2027-07-14",
+      "ends_on": "2027-07-16",
+      "format": "hybrid",
+      "city": [
+        "Porto"
+      ],
+      "country": [
+        "Portugal"
+      ],
+      "region": "europe",
+      "cfp_deadline": "2026-11-30",
+      "cfp_url": "https://2027.midl.io/call-for-papers",
+      "topics": [
+        "medical-imaging",
+        "machine-learning"
+      ]
+    },
+    "source_url": "https://2027.midl.io/important-dates",
+    "evidence": "Conference Dates Main event: 14-16 July 2027 Doctoral Symposium: 13 July 2027 Gala Dinner: 15 July 2027",
+    "observed_at": "2026-10-02T13:45:46Z"
+  },
+  {
+    "data": {
+      "name": "SIGIR 2027",
+      "organizer": "ACM SIGIR",
+      "url": "https://sigir2027.org/",
+      "kind": "research",
+      "starts_on": "2027-07-18",
+      "ends_on": "2027-07-24",
+      "format": "in-person",
+      "city": [
+        "San Jose"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "cfp_deadline": "2027-01-14",
+      "cfp_url": "https://sigir2027.org/pages/submit-tracks.html",
+      "topics": [
+        "information-retrieval",
+        "search",
+        "recommender-systems"
+      ]
+    },
+    "source_url": "https://sigir2027.org/",
+    "evidence": "50th International ACM SIGIR Conference on Research and Development in Information Retrieval July 18-24, 2027 Signia by Hilton San Jose San Jose, California, USA",
+    "observed_at": "2026-10-02T13:41:36Z"
+  },
+  {
+    "data": {
+      "name": "KDD 2027",
+      "organizer": "ACM SIGKDD",
+      "url": "https://kdd2027.kdd.org/",
+      "kind": "research",
+      "starts_on": "2027-08-01",
+      "ends_on": "2027-08-05",
+      "format": "in-person",
+      "city": [
+        "San Jose"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "cfp_deadline": "2026-07-19",
+      "cfp_url": "https://kdd2027.kdd.org/research-track-call-for-papers/",
+      "topics": [
+        "data-mining",
+        "data-science",
+        "machine-learning"
+      ]
+    },
+    "source_url": "https://kdd2027.kdd.org/",
+    "evidence": "ACM KDD 2027 | San Jose, United States August 1–5, 2027 San Jose McEnery Convention Center",
+    "observed_at": "2026-10-02T13:35:45Z"
+  },
+  {
+    "data": {
+      "name": "Ai4 2027",
+      "url": "https://ai4.com/",
+      "kind": "industry",
+      "starts_on": "2027-08-02",
+      "ends_on": "2027-08-05",
+      "format": "in-person",
+      "city": [
+        "Las Vegas"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "cfp_url": "https://ai4.com/application-speaker/",
+      "topics": [
+        "enterprise-ai"
+      ]
+    },
+    "source_url": "https://ai4.com/",
+    "evidence": "America’s Largest AI Conference August 2-5, 2027 The Venetian, Las Vegas Register Now",
+    "observed_at": "2026-10-02T13:56:31Z"
+  },
+  {
+    "data": {
+      "name": "IJCAI 2027",
+      "url": "https://2027.ijcai.org/",
+      "kind": "research",
+      "starts_on": "2027-08-07",
+      "ends_on": "2027-08-13",
+      "format": "in-person",
+      "city": [
+        "Kyoto"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "cfp_deadline": "2027-01-04",
+      "topics": [
+        "machine-learning"
+      ]
+    },
+    "source_url": "https://2027.ijcai.org/",
+    "evidence": "IJCAI 2027 will take place in Kyoto, Japan, from August 7–13, 2027, with a satellite event in Hengqin, China, from August 15–17, 2027.",
+    "observed_at": "2026-10-02T13:38:06Z"
+  },
+  {
+    "data": {
+      "name": "AI Summit Seoul & EXPO 2027",
+      "organizer": "DMK Global, COEX, KITA",
+      "url": "https://www.aisummit.co.kr/",
+      "kind": "industry",
+      "starts_on": "2027-08-11",
+      "ends_on": "2027-08-13",
+      "format": "in-person",
+      "city": [
+        "Seoul"
+      ],
+      "country": [
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "cfp_url": "https://www.aisummit.co.kr/speaker-contact-form",
+      "topics": [
+        "agents",
+        "physical-ai"
+      ]
+    },
+    "source_url": "https://www.aisummit.co.kr/",
+    "evidence": "행사명 : AI Summit Seoul & EXPO 기간 : 컨퍼런스 2027년 8월 11-12일 EXPO 2027년 8월 11-13일 장소 : 코엑스 그랜드볼룸 & B홀 전시 주최 : DMK Global, COEX, KITA",
+    "observed_at": "2026-10-02T13:56:29Z"
+  },
+  {
+    "data": {
+      "name": "ACL 2027",
+      "organizer": "Association for Computational Linguistics",
+      "url": "https://2027.aclweb.org/",
+      "kind": "research",
+      "starts_on": "2027-08-17",
+      "ends_on": "2027-08-22",
+      "format": "in-person",
+      "city": [
+        "Kyoto"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "cfp_deadline": "2027-01-04",
+      "cfp_url": "https://2027.aclweb.org/calls/main/",
+      "topics": [
+        "nlp",
+        "computational-linguistics",
+        "llm"
+      ]
+    },
+    "source_url": "https://2027.aclweb.org/",
+    "evidence": "Tutorials August 17, 2027 Workshops August 18–19, 2027 Main Conference August 20–22, 2027 All deadlines are 11.59 pm UTC -12h (anywhere on earth).",
+    "observed_at": "2026-10-02T13:35:45Z"
+  },
+  {
+    "data": {
+      "name": "ICDAR 2027",
+      "url": "https://icdar2027.org/",
+      "kind": "research",
+      "starts_on": "2027-08-18",
+      "ends_on": "2027-08-22",
+      "format": "in-person",
+      "city": [
+        "Kuala Lumpur"
+      ],
+      "country": [
+        "Malaysia"
+      ],
+      "region": "asia-pacific",
+      "cfp_deadline": "2027-02-28",
+      "cfp_url": "https://icdar2027.org/call-for-papers",
+      "topics": [
+        "document-analysis",
+        "pattern-recognition",
+        "computer-vision"
+      ],
+      "attendees": 450
+    },
+    "source_url": "https://icdar2027.org/",
+    "evidence": "The Organizing Committee of the International Conference on Document Analysis and Recognition is delighted to invite you to Kuala Lumpur, Malaysia, for the 21st edition of ICDAR, taking place from August 18 to 22, 2027.",
+    "observed_at": "2026-10-02T13:54:44Z"
+  },
+  {
+    "data": {
+      "name": "The AI Summit Australia 2027",
+      "organizer": "Informa",
+      "url": "https://australia.theaisummit.com/",
+      "kind": "industry",
+      "starts_on": "2027-08-23",
+      "ends_on": "2027-08-25",
+      "format": "in-person",
+      "city": [
+        "Melbourne"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "topics": [
+        "enterprise-ai"
+      ]
+    },
+    "source_url": "https://australia.theaisummit.com/",
+    "evidence": "The AI Summit Australia Co-located with Data Center World Australia 23-25 August 2027 | Melbourne, Australia",
+    "observed_at": "2026-10-02T13:56:27Z"
+  },
+  {
+    "data": {
+      "name": "RecSys 2027",
+      "organizer": "ACM",
+      "url": "https://recsys.acm.org/recsys27/",
+      "kind": "research",
+      "starts_on": "2027-08-23",
+      "ends_on": "2027-08-27",
+      "format": "in-person",
+      "city": [
+        "Honolulu"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "topics": [
+        "recommender-systems"
+      ]
+    },
+    "source_url": "https://recsys.acm.org/recsys27/",
+    "evidence": "Honolulu, O‘ahu, Hawaii, US, August 23–27, 2027 Venue: Hilton Hawaiian Village Waikiki Beach Resort Dates: 23rd to 27th of August 2027",
+    "observed_at": "2026-10-02T13:38:06Z"
+  },
+  {
+    "data": {
+      "name": "Interspeech 2027",
+      "organizer": "International Speech Communication Association",
+      "url": "https://interspeech2027.org/",
+      "kind": "research",
+      "starts_on": "2027-08-29",
+      "ends_on": "2027-09-02",
+      "format": "in-person",
+      "city": [
+        "São Paulo"
+      ],
+      "country": [
+        "Brazil"
+      ],
+      "region": "americas",
+      "cfp_deadline": "2027-02-09",
+      "cfp_url": "https://interspeech2027.org/for_authors/key_dates/",
+      "topics": [
+        "speech"
+      ],
+      "attendees": 2000
+    },
+    "source_url": "https://interspeech2027.org/",
+    "evidence": "Contacts 29 August – 2 September 2027 São Paulo, Brazil",
+    "observed_at": "2026-10-02T13:41:36Z"
+  },
+  {
+    "data": {
+      "name": "ECML PKDD 2027",
+      "url": "https://ecmlpkdd.org/2027/",
+      "kind": "research",
+      "starts_on": "2027-08-30",
+      "ends_on": "2027-09-03",
+      "format": "in-person",
+      "city": [
+        "Eindhoven"
+      ],
+      "country": [
+        "Netherlands"
+      ],
+      "region": "europe",
+      "topics": [
+        "machine-learning",
+        "data-mining"
+      ]
+    },
+    "source_url": "https://ecmlpkdd.org/2027/",
+    "evidence": "EINDHOVEN, THE NETHERLANDS Welcome to: ECML PKDD 2027 30 August to 3 September 2027",
+    "observed_at": "2026-10-02T13:51:38Z"
+  },
+  {
+    "data": {
+      "name": "SuperAI 2027",
+      "url": "https://www.superai.com/",
+      "kind": "industry",
+      "starts_on": "2027-09-08",
+      "ends_on": "2027-09-09",
+      "format": "in-person",
+      "city": [
+        "Singapore"
+      ],
+      "country": [
+        "Singapore"
+      ],
+      "region": "asia-pacific",
+      "attendees": 10000
+    },
+    "source_url": "https://www.superai.com/",
+    "evidence": "Asia's Largest AI Event 8-9 September 2027 Marina Bay Sands, Singapore Get Tickets",
+    "observed_at": "2026-10-02T13:56:34Z"
+  },
+  {
+    "data": {
+      "name": "AGNTCon + MCPCon Europe 2027",
+      "url": "https://events.linuxfoundation.org/agntcon-mcpcon-europe-2027/",
+      "kind": "developer",
+      "starts_on": "2027-09-15",
+      "ends_on": "2027-09-16",
+      "format": "in-person",
+      "city": [
+        "London"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "topics": [
+        "agents",
+        "mcp"
+      ]
+    },
+    "source_url": "https://events.linuxfoundation.org/agntcon-mcpcon-europe-2027/",
+    "evidence": "AGNTCon + MCPCon Europe 2027 Save the Date! 15-16 September 2027 London, England Sponsor",
+    "observed_at": "2026-10-02T13:56:42Z"
+  },
+  {
+    "data": {
+      "name": "HumanX Amsterdam 2027",
+      "url": "https://www.humanx.co/",
+      "kind": "industry",
+      "starts_on": "2027-09-20",
+      "ends_on": "2027-09-22",
+      "format": "in-person",
+      "city": [
+        "Amsterdam"
+      ],
+      "country": [
+        "Netherlands"
+      ],
+      "region": "europe",
+      "cfp_url": "https://www.humanx.co/europe/become-a-speaker",
+      "topics": [
+        "enterprise-ai"
+      ]
+    },
+    "source_url": "https://www.humanx.co/",
+    "evidence": "AMSTERDAM September 20-22, 2027 · RAI Amsterdam, Netherlands The second annual European edition.",
+    "observed_at": "2026-10-02T13:56:30Z"
+  },
+  {
+    "data": {
+      "name": "MICCAI 2027",
+      "url": "https://conferences.miccai.org/2027/en/",
+      "kind": "research",
+      "starts_on": "2027-09-27",
+      "ends_on": "2027-10-01",
+      "format": "in-person",
+      "city": [
+        "Auckland"
+      ],
+      "country": [
+        "New Zealand"
+      ],
+      "region": "asia-pacific",
+      "topics": [
+        "medical-imaging",
+        "computer-vision"
+      ]
+    },
+    "source_url": "https://conferences.miccai.org/2027/en/",
+    "evidence": "The 30th International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI 2027) will be held from September 27th to October 1st, 2027 at the New Zealand International Convention Centre in Auckland.",
+    "observed_at": "2026-10-02T13:48:20Z"
+  },
+  {
+    "data": {
+      "name": "ICCV 2027",
+      "organizer": "IEEE / CVF",
+      "url": "https://iccv.thecvf.com/Conferences/2027",
+      "kind": "research",
+      "starts_on": "2027-10-02",
+      "ends_on": "2027-10-08",
+      "format": "in-person",
+      "city": [
+        "Hong Kong"
+      ],
+      "region": "asia-pacific",
+      "topics": [
+        "computer-vision"
+      ]
+    },
+    "source_url": "https://www.thecvf.com/",
+    "evidence": "Seattle, Washington ICCV 2027: October 2nd – 8th, Hong Kong",
+    "observed_at": "2026-10-02T13:48:20Z"
+  },
+  {
+    "data": {
+      "name": "ECAI 2027",
+      "organizer": "EurAI",
+      "url": "https://ecai2027.org/",
+      "kind": "research",
+      "starts_on": "2027-10-02",
+      "ends_on": "2027-10-07",
+      "format": "in-person",
+      "city": [
+        "Athens"
+      ],
+      "country": [
+        "Greece"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://ecai2027.org/",
+    "evidence": "Key Dates 2–7 October 2027 · Athens, Greece Pre-conference Main conference Sat 2 Oct Sun 3 Oct Mon 4 Oct Tue 5 Oct Wed 6 Oct Thu 7 Oct 2–3 October Pre-conference School of Science–NKUA The programme will include workshops, tutorials and the Doctoral Consortium. 4–7 October Main conference",
+    "observed_at": "2026-10-02T13:54:44Z"
+  },
+  {
+    "data": {
+      "name": "PyTorch Conference 2027",
+      "url": "https://events.linuxfoundation.org/pytorch-conference-2027/",
+      "kind": "developer",
+      "starts_on": "2027-10-06",
+      "ends_on": "2027-10-07",
+      "format": "in-person",
+      "city": [
+        "San Jose"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "topics": [
+        "pytorch",
+        "open-source"
+      ]
+    },
+    "source_url": "https://events.linuxfoundation.org/pytorch-conference-2027/",
+    "evidence": "PyTorch Conference 2027 Save the Date! October 6-7, 2027 San Jose, Ca #PyTorchCon",
+    "observed_at": "2026-10-02T13:56:26Z"
+  },
+  {
+    "data": {
+      "name": "dotAI 2027",
+      "organizer": "dotConferences",
+      "url": "https://www.dotai.io/",
+      "kind": "developer",
+      "starts_on": "2027-10-21",
+      "ends_on": "2027-10-21",
+      "format": "in-person",
+      "city": [
+        "Paris"
+      ],
+      "country": [
+        "France"
+      ],
+      "region": "europe",
+      "attendees": 1000
+    },
+    "source_url": "https://www.dotai.io/",
+    "evidence": "The world's brightest AI conference for AI Builders - october 21 2027 1 day - Paris",
+    "observed_at": "2026-10-02T13:56:41Z"
+  },
+  {
+    "data": {
+      "name": "ICIP 2027",
+      "organizer": "IEEE Signal Processing Society",
+      "url": "https://2027.ieeeicip.org/",
+      "kind": "research",
+      "starts_on": "2027-11-29",
+      "ends_on": "2027-12-03",
+      "format": "in-person",
+      "city": [
+        "Singapore"
+      ],
+      "country": [
+        "Singapore"
+      ],
+      "region": "asia-pacific",
+      "topics": [
+        "image-processing",
+        "computer-vision"
+      ]
+    },
+    "source_url": "https://2027.ieeeicip.org/",
+    "evidence": "2027 IEEE International Conference on Image Processing 29 November – 3 December 2027, Singapore",
+    "observed_at": "2026-10-02T13:54:05Z"
+  }
+]

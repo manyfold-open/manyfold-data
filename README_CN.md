@@ -4,7 +4,7 @@
 
 每个数据应用（data app）是一个聚焦的数据集，包含一个图表概览页（Overview）和一个可筛选、可排序的表格页（Table）。
 每条记录都链接到它所核验的来源页面，并附上该页面的原文引用作为证据。
-目前的数据应用：**[AI Hackathons](https://data.manyfold.ai/ai-hackathons)**、**[AI Accelerators & Grants](https://data.manyfold.ai/ai-accelerators)**（AI 加速器、资助与算力额度）、**[AI Company Fundraising](https://data.manyfold.ai/ai-fundraising)**（AI 公司融资）、**[AI Acquisitions](https://data.manyfold.ai/ai-acquisitions)**（AI 并购）和 **[AI Data Centers](https://data.manyfold.ai/ai-data-centers)**（AI 数据中心）。
+目前的数据应用：**[AI Hackathons](https://data.manyfold.ai/ai-hackathons)**、**[AI Accelerators & Grants](https://data.manyfold.ai/ai-accelerators)**（AI 加速器、资助与算力额度）、**[AI Conferences & CFPs](https://data.manyfold.ai/ai-conferences)**（AI 大会与征稿）、**[AI Company Fundraising](https://data.manyfold.ai/ai-fundraising)**（AI 公司融资）、**[AI Acquisitions](https://data.manyfold.ai/ai-acquisitions)**（AI 并购）、**[AI Data Centers](https://data.manyfold.ai/ai-data-centers)**（AI 数据中心）和 **[World Marathons](https://data.manyfold.ai/marathons)**（全球马拉松）。
 
 [English](./README.md)
 

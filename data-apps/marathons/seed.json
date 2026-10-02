@@ -1,0 +1,5632 @@
+[
+  {
+    "data": {
+      "name": "Bromine Amman Marathon",
+      "url": "https://www.runjordan.com/",
+      "race_date": "2026-10-02",
+      "city": [
+        "Amman"
+      ],
+      "country": [
+        "Jordan"
+      ],
+      "region": "africa-middle-east",
+      "label": "label"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/873.html",
+    "evidence": "Amman International Marathon Jordan | M,H,R | Full member of AIMS Race video Race information Forthcoming events Please consult race website for route map. 2 Amman Int'l Marathon Fri 2 October 2026",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "Tartu City Marathon",
+      "url": "https://tartumaraton.ee/",
+      "race_date": "2026-10-03",
+      "city": [
+        "Tartu"
+      ],
+      "country": [
+        "Estonia"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k"
+      ]
+    },
+    "source_url": "https://tartumaraton.ee/et/labi-aegade-suurim-tartu-linnamaraton-toob-starti-eesti-jooksuparemiku",
+    "evidence": "Läbi aegade suurim Tartu Linnamaraton toob starti Eesti jooksuparemiku 02.10.2026 Laupäeval, 3. oktoobril toimuva 15. Tartu Linnamaratoni stardis näeb arvukalt Eesti tippjooksjaid",
+    "observed_at": "2026-10-02T14:15:35Z"
+  },
+  {
+    "data": {
+      "name": "Medtronic Twin Cities Marathon",
+      "url": "https://www.tcmevents.org/",
+      "race_date": "2026-10-04",
+      "city": [
+        "Minneapolis"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "label": "label",
+      "distances": [
+        "10-mile",
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.tcmevents.org/alleventsandraces/medtronictwincitiesmarathonweekend",
+    "evidence": "Medtronic Twin Cities Marathon SUN. OCTOBER 4, 2026 8:00 A.M. Join us for The Most Beautiful Urban Marathon in America",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "Querétaro Maratón",
+      "url": "https://www.queretaromaraton.com.mx/",
+      "race_date": "2026-10-04",
+      "city": [
+        "Querétaro"
+      ],
+      "country": [
+        "Mexico"
+      ],
+      "region": "americas",
+      "label": "aims"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10366.html",
+    "evidence": "Queretaro Maraton Mexico | M | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 4 Queretaro Maraton Sun 4 October 2026",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "LSR Colombo Marathon",
+      "url": "https://www.colombomarathon.com/",
+      "race_date": "2026-10-04",
+      "city": [
+        "Colombo"
+      ],
+      "country": [
+        "Sri Lanka"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "entry_fee": "Rs. 5,000/- (local); US$ 50/- (foreign)",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.colombomarathon.com/",
+    "evidence": "LSR Colombo Marathon 04th October, 2026 LSR Colombo Marathon Sri Lanka well known as the “Pearl of the Indian Ocean\" is fast developing in to an ideal destination",
+    "observed_at": "2026-10-02T14:04:21Z"
+  },
+  {
+    "data": {
+      "name": "Sarmang Dehradun Marathon",
+      "url": "https://sarmangdehradunmarathon.sarmang.com/",
+      "race_date": "2026-10-04",
+      "city": [
+        "Dehradun"
+      ],
+      "country": [
+        "India"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "entry_fee": "INR 3000/- (Indian); 55 USD (foreign)",
+      "distances": [
+        "51k",
+        "half-marathon",
+        "10k",
+        "5k",
+        "fun-run"
+      ]
+    },
+    "source_url": "https://sarmangdehradunmarathon.sarmang.com/",
+    "evidence": "Venue: International Cricket Stadium, Dehradun Race Day Schedule Date: 04 October 2026 Ultra Marathon Flag Off: 4:00 am Full Marathon Flag Off: 5:00 am",
+    "observed_at": "2026-10-02T14:04:26Z"
+  },
+  {
+    "data": {
+      "name": "Kuala Lumpur Standard Chartered Marathon",
+      "url": "https://www.kl-marathon.com/",
+      "race_date": "2026-10-04",
+      "city": [
+        "Kuala Lumpur"
+      ],
+      "country": [
+        "Malaysia"
+      ],
+      "region": "asia-pacific",
+      "label": "elite",
+      "entry_fee": "RM 150 Malaysian residents / RM 430 non-residents",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k",
+        "kids-run"
+      ]
+    },
+    "source_url": "https://www.kl-marathon.com/news/118/",
+    "evidence": "KLSCM is the first and only road race in Malaysia with a World Athletics Elite Label with KLSCM 2026 set to be held on 3 and 4 October 2026. It is an international event that draws participants from all over Malaysia and over 70 countries",
+    "observed_at": "2026-10-02T14:05:33Z"
+  },
+  {
+    "data": {
+      "name": "Generali Cologne Marathon",
+      "url": "https://generali-koeln-marathon.de/",
+      "race_date": "2026-10-04",
+      "city": [
+        "Cologne"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "label": "label",
+      "distances": [
+        "half-marathon",
+        "relay"
+      ]
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/841.html",
+    "evidence": "Generali Cologne Marathon Generali Köln Marathon | Germany | M,H | Full member of AIMS Race information Forthcoming events Ottoplatz, Köln-Deutz Please consult race website for route map. 4 Generali Cologne Marathon Sun 4 October 2026",
+    "observed_at": "2026-10-02T13:36:23Z"
+  },
+  {
+    "data": {
+      "name": "Košice Peace Marathon",
+      "url": "https://www.kosicemarathon.com/",
+      "race_date": "2026-10-04",
+      "city": [
+        "Košice"
+      ],
+      "country": [
+        "Slovakia"
+      ],
+      "region": "europe",
+      "label": "label",
+      "distances": [
+        "half-marathon",
+        "relay",
+        "handbike"
+      ]
+    },
+    "source_url": "https://www.kosicemarathon.com/propozicie-mmm/",
+    "evidence": "HARMONOGRAM ŠTARTOV Nedeľa, 4. 10. 2026: Handbike a Inline: 8.45 hod. Maratón a Štafeta MMM: 9.00 hod. Volvo Polmaratón: od 10.30 hod.",
+    "observed_at": "2026-10-02T13:40:38Z"
+  },
+  {
+    "data": {
+      "name": "LOTTO Poznań Marathon",
+      "url": "https://marathon.poznan.pl/",
+      "race_date": "2026-10-04",
+      "city": [
+        "Poznań"
+      ],
+      "country": [
+        "Poland"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "field_size": 8000
+    },
+    "source_url": "https://marathon.poznan.pl/en/runners-zone/regulations/",
+    "evidence": "The right to start in the LOTTO 25th Poznań Marathon named after Maciej Frankiewicz is granted only to the persons who at the latest on 04th October 2026 turn 18 years old.",
+    "observed_at": "2026-10-02T13:42:47Z"
+  },
+  {
+    "data": {
+      "name": "Silesia Marathon",
+      "url": "https://silesiamarathon.pl/",
+      "race_date": "2026-10-04",
+      "city": [
+        "Chorzów"
+      ],
+      "country": [
+        "Poland"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "field_size": 4000,
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://silesiamarathon.pl/en/regulamin-silesia-marathon-2026/",
+    "evidence": "Organiser of Silesia Marathon 2026. 2. The Marshal Office of the Silesia Voivodship is the co-organisers of the races and the organisation partners are the cites: Katowice, Mysłowice, Siemianowice Śląskie, Chorzow. §2. Date and place. The Route. 1. Race will take place on October 4 th, 2026.",
+    "observed_at": "2026-10-02T13:43:07Z"
+  },
+  {
+    "data": {
+      "name": "Wizz Air Skopje Marathon",
+      "url": "https://www.skopjemarathon.com/",
+      "race_date": "2026-10-04",
+      "city": [
+        "Skopje"
+      ],
+      "country": [
+        "North Macedonia"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "relay",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/726.html",
+    "evidence": "Wizz Air Skopje Marathon Wizz Air Скопски маратон | North Macedonia | M,H,R | Full member of AIMS Race information Forthcoming events Skopje, Macedonia Please consult race website for route map. 4 Wizz Air Skopje Marathon Sun 4 October 2026",
+    "observed_at": "2026-10-02T13:36:20Z"
+  },
+  {
+    "data": {
+      "name": "Kathmandu Marathon",
+      "url": "https://www.kathmandumarathon.com.np/",
+      "race_date": "2026-10-10",
+      "city": [
+        "Kathmandu"
+      ],
+      "country": [
+        "Nepal"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k",
+        "3k",
+        "family-run"
+      ]
+    },
+    "source_url": "https://www.kathmandumarathon.com.np/marathon-42195.html",
+    "evidence": "Race Day: Saturday, 10th October 2026 Race Reporting Time: 5:00 AM Meeting Point and reporting desk: Tripureshwor Road, In fornt of Dasarath Stadium,Tripureshwor, Kathmandu, Nepal",
+    "observed_at": "2026-10-02T14:04:21Z"
+  },
+  {
+    "data": {
+      "name": "EDP Lisbon Marathon",
+      "url": "https://maratonaclubedeportugal.com/",
+      "race_date": "2026-10-10",
+      "city": [
+        "Carcavelos",
+        "Lisbon"
+      ],
+      "country": [
+        "Portugal"
+      ],
+      "region": "europe",
+      "label": "elite",
+      "distances": [
+        "half-marathon",
+        "8k"
+      ]
+    },
+    "source_url": "https://maratonaclubedeportugal.com/en/",
+    "evidence": "10 Oct, 2026 Saturday 08h00 Start of the EDP Lisbon Marathon 11 Oct, 2026 Sunday 09h20 Start of the Hyundai Half Marathon Start of the EDP 8K",
+    "observed_at": "2026-10-02T13:44:45Z"
+  },
+  {
+    "data": {
+      "name": "Bank of America Chicago Marathon",
+      "url": "https://www.chicagomarathon.com/",
+      "race_date": "2026-10-11",
+      "city": [
+        "Chicago"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "label": "world-major"
+    },
+    "source_url": "https://www.chicagomarathon.com/event-info/event-faqs/",
+    "evidence": "When is the 2026 Bank of America Chicago Marathon? The 48th running of the Bank of America Chicago Marathon will take place on Sunday, October 11, 2026.",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "Royal Victoria Marathon",
+      "url": "https://www.runvictoriamarathon.com/",
+      "race_date": "2026-10-11",
+      "city": [
+        "Victoria"
+      ],
+      "country": [
+        "Canada"
+      ],
+      "region": "americas",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "8k",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.runvictoriamarathon.com/royal-victoria-marathon",
+    "evidence": "42.2K Royal Victoria Marathon 2026 Royal Victoria Marathon SUNDAY, OCTOBER 11th @ 8:15am NOW SOLD OUT",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "Marathon Beneva de Montréal",
+      "url": "https://mtlmarathon.com/",
+      "race_date": "2026-10-11",
+      "city": [
+        "Montreal"
+      ],
+      "country": [
+        "Canada"
+      ],
+      "region": "americas",
+      "label": "label",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k",
+        "1k",
+        "mile"
+      ]
+    },
+    "source_url": "https://couronsmtl.com/en/marathon-beneva/home/",
+    "evidence": "October 11, 2026 Marathon + Info October 11, 2026 Half-Marathon + Info October 10, 2026 10 KM + Info October 10, 2026 5 KM + Info October 10, 2026 1 KM + Info October 9, 2026 The Mile + Info",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "Perth Running Festival – Marathon",
+      "url": "https://perthrunningfestival.com.au/",
+      "race_date": "2026-10-11",
+      "city": [
+        "Perth"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "label": "label",
+      "entry_fee": "$195",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "4k"
+      ]
+    },
+    "source_url": "https://perthrunningfestival.com.au/marathon/",
+    "evidence": "MARATHON (42.195 KM) Join thousands of runners on Sunday October 11th 2026 for a beautiful, fast and flat world-class marathon. Experience the most beautiful run in Australia surrounded by the natural beauty of Burswood Park, the serene Swan River",
+    "observed_at": "2026-10-02T14:06:51Z"
+  },
+  {
+    "data": {
+      "name": "Nike Melbourne Marathon Festival",
+      "url": "https://melbournemarathon.com.au/",
+      "race_date": "2026-10-11",
+      "city": [
+        "Melbourne"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "entry_fee": "$235",
+      "field_size": 20000,
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k",
+        "3k",
+        "wheelchair",
+        "kids-run"
+      ]
+    },
+    "source_url": "https://melbournemarathon.com.au/eliud-kipchoge-is-coming-to-melbourne/",
+    "evidence": "has announced the Nike Melbourne Marathon Festival as the third stop on his global world tour. On Sunday 11 October 2026, he will toe the start line alongside tens of thousands of runners, race through the streets of this city, and finish inside the Melbourne Cricket Ground.",
+    "observed_at": "2026-10-02T14:06:53Z"
+  },
+  {
+    "data": {
+      "name": "ASML Marathon Eindhoven",
+      "url": "https://asmlmarathoneindhoven.nl/",
+      "race_date": "2026-10-11",
+      "city": [
+        "Eindhoven"
+      ],
+      "country": [
+        "Netherlands"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "quarter-marathon",
+        "5k"
+      ]
+    },
+    "source_url": "https://asmlmarathoneindhoven.nl/en/",
+    "evidence": "All info for the 40th edition Saturday 10 & Sunday 11 October 2026 Dagen Uren Minuten Seconden ASML Marathon Eindhoven Saturday 10 & Sunday 11 October 2026 Traditionally, the ASML Marathon Eindhoven takes place in the second weekend of October.",
+    "observed_at": "2026-10-02T13:46:42Z"
+  },
+  {
+    "data": {
+      "name": "Marathon München by Brooks",
+      "url": "https://marathonmuenchen.org/",
+      "race_date": "2026-10-11",
+      "city": [
+        "Munich"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "label": "label",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "relay"
+      ]
+    },
+    "source_url": "https://marathonmuenchen.org/en/",
+    "evidence": "11 October 2026 Make it yours. Run Munich. Munich is ready. #MakeItYours. #RunMunich. The countdown for the MARATHON MÜNCHEN by Brooks 2026 is on.",
+    "observed_at": "2026-10-02T13:47:10Z"
+  },
+  {
+    "data": {
+      "name": "Novi Sad Marathon",
+      "url": "https://www.marathon.org.rs/",
+      "race_date": "2026-10-11",
+      "city": [
+        "Novi Sad"
+      ],
+      "country": [
+        "Serbia"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "quarter-marathon"
+      ]
+    },
+    "source_url": "https://www.marathon.org.rs/",
+    "evidence": "Više informacija vezano za 34. Novosadski maraton 2026. možete pronaći na strani maratona Pročitajte više 34. Novosadski Maraton 11. Oktobar 2026 Prijave su otvorene",
+    "observed_at": "2026-10-02T13:39:00Z"
+  },
+  {
+    "data": {
+      "name": "SPAR Budapest Marathon",
+      "url": "https://marathon.runinbudapest.com/",
+      "race_date": "2026-10-11",
+      "city": [
+        "Budapest"
+      ],
+      "country": [
+        "Hungary"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "relay",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/838.html",
+    "evidence": "SPAR Budapest Marathon Hungary | M | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 10 41st SPAR Budapest Marathon Sat 10 October 2026 – Sun 11 October 2026",
+    "observed_at": "2026-10-02T13:36:23Z"
+  },
+  {
+    "data": {
+      "name": "Sparkasse 3-Country Marathon",
+      "url": "https://www.sparkasse-3-laender-marathon.at/",
+      "race_date": "2026-10-11",
+      "city": [
+        "Lindau",
+        "Bregenz"
+      ],
+      "country": [
+        "Austria"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "relay",
+        "quarter-marathon",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.sparkasse-3-laender-marathon.at/de/wettbewerbe/sparkasse-marathon/",
+    "evidence": "Termin und Start Der Sparkasse 3-Länder-Marathon findet am 11.10.2026 statt. Der Start ist um 09:45 Uhr in Lindau (Bodensee). Zielschluss in Bregenz ist für den letzten Läufer um 16.30 Uhr.",
+    "observed_at": "2026-10-02T13:46:19Z"
+  },
+  {
+    "data": {
+      "name": "Wizz Air Sofia Marathon",
+      "url": "https://sofiamarathon.bg/",
+      "race_date": "2026-10-11",
+      "city": [
+        "Sofia"
+      ],
+      "country": [
+        "Bulgaria"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "relay",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10237.html",
+    "evidence": "Wizz Air Sofia Marathon Bulgaria | M,H,R | Full member of AIMS Race information Forthcoming events Sofia, Bulgaria Please consult race website for route map. 11 Wizz Air Sofia Marathon Sun 11 October 2026",
+    "observed_at": "2026-10-02T13:36:18Z"
+  },
+  {
+    "data": {
+      "name": "Zagreb Powerade Marathon",
+      "url": "https://www.zagreb-marathon.com/",
+      "race_date": "2026-10-11",
+      "city": [
+        "Zagreb"
+      ],
+      "country": [
+        "Croatia"
+      ],
+      "region": "europe",
+      "label": "label",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "relay"
+      ]
+    },
+    "source_url": "https://www.zagreb-marathon.com/en/informacije-o-utrci/",
+    "evidence": "SATNICA NEDJELJA, 11. LISTOPADA 2026. 7:45 – Start of the program 8:40 – Welcome speech 8:45 – Start Garmin 10K 9:00 – Start of Marathon/Half Marathon/Relays",
+    "observed_at": "2026-10-02T14:13:45Z"
+  },
+  {
+    "data": {
+      "name": "ActivePulse Chattogram International Marathon",
+      "url": "https://activepulsebd.com/",
+      "race_date": "2026-10-16",
+      "city": [
+        "Chattogram"
+      ],
+      "country": [
+        "Bangladesh"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "registration_closes": "2026-10-07",
+      "entry_fee": "BDT 1,750",
+      "distances": [
+        "half-marathon",
+        "challenge-run",
+        "fun-run"
+      ]
+    },
+    "source_url": "https://activepulsebd.com/product/apcm2026/",
+    "evidence": "#ChattogramInternationalMarathon #ActivePulse Event Booking: Patenga Sea Beach, Chattogram October 16, 2026 (Friday) 5:00 AM 1:00 PM",
+    "observed_at": "2026-10-02T14:04:30Z"
+  },
+  {
+    "data": {
+      "name": "Gyeongju International Marathon (경주마라톤)",
+      "url": "https://www.gyeongjumarathon.com/",
+      "race_date": "2026-10-17",
+      "city": [
+        "Gyeongju"
+      ],
+      "country": [
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "label": "elite",
+      "entry_fee": "USD 60 (overseas participants)",
+      "distances": [
+        "half-marathon",
+        "10k"
+      ]
+    },
+    "source_url": "https://en.gyeongjumarathon.com/57/?idx=171573356&bmode=view",
+    "evidence": "2026 GYEONGJU MARATHON Overseas participants Registration Open Run through the historic city of Gyeongju, Korea’s ancient capital, and take part in one of Korea’s most scenic marathon events. DATE OCTOBER 17, 2026 SAT 8:00 AM LOCATION GYEONGJU CIVIC STADIUM COURSES FULL MARATHON",
+    "observed_at": "2026-10-02T14:08:29Z"
+  },
+  {
+    "data": {
+      "name": "Maratón Internacional de Juárez",
+      "url": "https://maratondejuarez.com/",
+      "race_date": "2026-10-18",
+      "city": [
+        "Ciudad Juárez"
+      ],
+      "country": [
+        "Mexico"
+      ],
+      "region": "americas",
+      "label": "aims"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10185.html",
+    "evidence": "Maratón Internacional de Juárez Mexico | M,H | Full member of AIMS Race information Forthcoming events Juarez, Mexico Please consult race website for route map. 18 Maratón Int'l de Juárez Sun 18 October 2026",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "TCS Toronto Waterfront Marathon",
+      "url": "https://www.torontowaterfrontmarathon.com/",
+      "race_date": "2026-10-18",
+      "city": [
+        "Toronto"
+      ],
+      "country": [
+        "Canada"
+      ],
+      "region": "americas",
+      "label": "elite",
+      "distances": [
+        "half-marathon",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.torontowaterfrontmarathon.com/",
+    "evidence": "Join us in 2026! Marathon October 18, 2026 Start at 8:00 AM SOLD OUT Half Marathon October 18, 2026 Start at 8:00 AM SOLD OUT 5K October 17, 2026 Start at 9:00 AM SOLD OUT",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "Bishkek Snow Leopard Run",
+      "url": "https://nomadsport.net/",
+      "race_date": "2026-10-18",
+      "city": [
+        "Bishkek"
+      ],
+      "country": [
+        "Kyrgyzstan"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "14k",
+        "5k"
+      ]
+    },
+    "source_url": "https://nomadsport.net/event/BSLR26",
+    "evidence": "BISHKEK SNOW LEOPARD RUN Дата события Место проведения До старта воскресенье, 18 октября 2026 г.Бишкек,Центральная Площадь Ала-Тоо",
+    "observed_at": "2026-10-02T14:04:22Z"
+  },
+  {
+    "data": {
+      "name": "Beijing Marathon (北京马拉松)",
+      "url": "https://www.beijing-marathon.com/",
+      "race_date": "2026-10-18",
+      "city": [
+        "Beijing"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "label": "gold",
+      "registration_closes": "2026-09-22",
+      "entry_fee": "人民币200元/人",
+      "field_size": 32000
+    },
+    "source_url": "https://news.qq.com/rain/a/20260919A060PO00",
+    "evidence": "本届赛事的比赛和起跑时间 2026年10月18日（星期日）07:30 赛事设置了哪些项目？规模如何？ 1.2026 全国马拉松锦标赛 男子、女子马拉松（42.195公里） 2.2026中国银行北京马拉松 男子、女子马拉松（42.195公里） 赛事规模：32000人",
+    "observed_at": "2026-10-02T14:14:38Z"
+  },
+  {
+    "data": {
+      "name": "Yellow River Estuary (Dongying) Marathon (黄河口（东营）马拉松)",
+      "url": "https://hhkmls.com/",
+      "race_date": "2026-10-18",
+      "city": [
+        "Dongying"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "label": "gold",
+      "registration_closes": "2026-07-06",
+      "entry_fee": "180元人民币/人",
+      "field_size": 13000,
+      "distances": [
+        "half-marathon"
+      ]
+    },
+    "source_url": "https://hhkmls.com/document/7466",
+    "evidence": "黄河口（东营）马拉松报名须知 一、赛事基本信息 （一） 比赛日期及时间 2026年10月18日（星期日）上午7:30 （二） 比赛项目及规模 1.马拉松（42.195公里）：13,000人 2.半程马拉松（21.0975公里）：17,000人 赛事总规模30,000人。",
+    "observed_at": "2026-10-02T14:14:41Z"
+  },
+  {
+    "data": {
+      "name": "Zhengzhou Marathon (郑州马拉松)",
+      "url": "https://www.zhengzhou42195.com/",
+      "race_date": "2026-10-18",
+      "city": [
+        "Zhengzhou"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "label": "national",
+      "field_size": 12000,
+      "distances": [
+        "half-marathon"
+      ]
+    },
+    "source_url": "https://www.zhengzhou.gov.cn/conference3/10267565.jhtml",
+    "evidence": "由郑州市人民政府主办的2026“郑州银行”郑州马拉松，将于10月18日在郑东新区鸣枪开赛。今天我们召开新闻发布会，主要向大家介绍赛事信息及相关配套活动，并就媒体关心的问题回答记者提问。",
+    "observed_at": "2026-10-02T14:14:56Z"
+  },
+  {
+    "data": {
+      "name": "NLB Ljubljana Marathon",
+      "url": "https://ljubljanskimaraton.si/",
+      "race_date": "2026-10-18",
+      "city": [
+        "Ljubljana"
+      ],
+      "country": [
+        "Slovenia"
+      ],
+      "region": "europe",
+      "label": "gold",
+      "registration_closes": "2026-09-15",
+      "distances": [
+        "half-marathon",
+        "10k"
+      ]
+    },
+    "source_url": "https://ljubljanskimaraton.si/en/marathon",
+    "evidence": "Heineken 0.0 Marathon Distance 42.195m Start 9 a.m. Registration VENUE Ljubljana City centre and surrounding areas of the town DATE AND TIME OF THE EVENT Sunday, October 18 th 2026, at 9 a.m.",
+    "observed_at": "2026-10-02T13:48:17Z"
+  },
+  {
+    "data": {
+      "name": "TCS Amsterdam Marathon",
+      "url": "https://www.tcsamsterdammarathon.eu/",
+      "race_date": "2026-10-18",
+      "city": [
+        "Amsterdam"
+      ],
+      "country": [
+        "Netherlands"
+      ],
+      "region": "europe",
+      "label": "platinum",
+      "distances": [
+        "half-marathon"
+      ]
+    },
+    "source_url": "https://www.tcsamsterdammarathon.eu/program",
+    "evidence": "Sunday 18 October TCS Marathon 09.00 hours time limit 6 hours Mini Marathon - De Borcht 09.10 hours time limit 30 minutes",
+    "observed_at": "2026-10-02T13:48:00Z"
+  },
+  {
+    "data": {
+      "name": "TREK Antwerp Marathon",
+      "url": "https://antwerpmarathon.com/",
+      "race_date": "2026-10-18",
+      "city": [
+        "Antwerp"
+      ],
+      "country": [
+        "Belgium"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k"
+      ]
+    },
+    "source_url": "https://antwerpmarathon.com/en/",
+    "evidence": "TREK Antwerp Marathon On Sunday, October 18, 2026, Antwerp once again will become the beating heart of running during the TREK Antwerp Marathon!",
+    "observed_at": "2026-10-02T13:48:53Z"
+  },
+  {
+    "data": {
+      "name": "TUI Palma Marathon Mallorca",
+      "url": "https://www.palmademallorcamarathon.com/",
+      "race_date": "2026-10-18",
+      "city": [
+        "Palma"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k"
+      ]
+    },
+    "source_url": "https://www.palmademallorcamarathon.com/english/race-info/rules-and-regulations",
+    "evidence": "Kumulus Active World 2012 S.L. and the Municipal Institute of sports of the Town Hall of Palma (IME) organized the TUI Palma Marathon Mallorca to be held Sunday, October 18th, 2026 at 8:00.",
+    "observed_at": "2026-10-02T13:49:20Z"
+  },
+  {
+    "data": {
+      "name": "Maratón Aguascalientes",
+      "url": "https://www.maratonaguascalientes.com/",
+      "race_date": "2026-10-25",
+      "city": [
+        "Aguascalientes"
+      ],
+      "country": [
+        "Mexico"
+      ],
+      "region": "americas",
+      "label": "aims"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10005.html",
+    "evidence": "Forthcoming events Please consult race website for route map. 25 Maratón Aguascalientes Sun 25 October 2026 Add to calendar Please consult race website for route map. 24 Maratón Aguascalientes Sun 24 October 2027",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "Casablanca Marathon",
+      "url": "https://www.casablanca-marathon.com/",
+      "race_date": "2026-10-25",
+      "city": [
+        "Casablanca"
+      ],
+      "country": [
+        "Morocco"
+      ],
+      "region": "africa-middle-east",
+      "label": "elite"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/859.html",
+    "evidence": "The Casablanca Marathon returns on October 25, 2026, for its 17th edition, with the ambition of establishing itself as a leading reference in Africa and across the Mediterranean region.",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "Standard Chartered Nairobi Marathon",
+      "url": "https://nairobimarathon.com/",
+      "race_date": "2026-10-25",
+      "city": [
+        "Nairobi"
+      ],
+      "country": [
+        "Kenya"
+      ],
+      "region": "africa-middle-east",
+      "label": "label",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://nairobimarathon.com/",
+    "evidence": "Register Now Oct 25th, 2026 · Nairobi, Kenya Together we run further. Kenya's flagship road race. 42km through the heart of Nairobi.",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "Kanazawa Marathon (金沢マラソン)",
+      "url": "https://www.kanazawa-marathon.jp/",
+      "race_date": "2026-10-25",
+      "city": [
+        "Kanazawa"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "label": "aims"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10086.html",
+    "evidence": "Kanazawa City, Japan Please consult race website for route map. 25 Kanazawa Marathon Sun 25 October 2026",
+    "observed_at": "2026-10-02T13:57:02Z"
+  },
+  {
+    "data": {
+      "name": "Turkistan Marathon",
+      "url": "https://almaty-marathon.kz/",
+      "race_date": "2026-10-25",
+      "city": [
+        "Turkistan"
+      ],
+      "country": [
+        "Kazakhstan"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "entry_fee": "22,000 KZT",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "nordic-walking",
+        "kids-run"
+      ]
+    },
+    "source_url": "https://almaty-marathon.kz/en/events/turkistan_marathon_2026/",
+    "evidence": "TURKISTAN MARATHON 2026 / 25 October Registration: Open Participants A major running event across the Southern Kazakhstan, which is inspired by the spirit of the Great Silk Road.",
+    "observed_at": "2026-10-02T14:04:25Z"
+  },
+  {
+    "data": {
+      "name": "Kashmir Marathon",
+      "url": "https://kashmirmarathon.jk.gov.in/",
+      "race_date": "2026-10-25",
+      "city": [
+        "Srinagar"
+      ],
+      "country": [
+        "India"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "registration_closes": "2026-10-05",
+      "entry_fee": "₹2200",
+      "distances": [
+        "half-marathon"
+      ]
+    },
+    "source_url": "https://kashmirmarathon.jk.gov.in/",
+    "evidence": "GET SET FOR THE Third Edition OF KASHMIR MARATHON Join us for the adventure and challenge of a lifetime. Limited spots available. On 25 th October 2026.",
+    "observed_at": "2026-10-02T14:04:28Z"
+  },
+  {
+    "data": {
+      "name": "Jakarta Running Festival – Hydroplus Marathon",
+      "url": "https://www.jakartarunningfestival.id/",
+      "race_date": "2026-10-25",
+      "city": [
+        "Jakarta"
+      ],
+      "country": [
+        "Indonesia"
+      ],
+      "region": "asia-pacific",
+      "label": "label",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.jakartarunningfestival.id/event/marathon",
+    "evidence": "Jakarta Running Festival EVENT / Hydroplus Marathon Ultimate running challenge through Jakarta's iconic streets and landmarks. When & where About this race Course details Entitlements Contest & awards SHARE THIS When & Where Date Sunday, 25 October 2026",
+    "observed_at": "2026-10-02T14:06:51Z"
+  },
+  {
+    "data": {
+      "name": "Chuncheon International Marathon (춘천마라톤)",
+      "url": "https://www.chuncheonmarathon.com/",
+      "race_date": "2026-10-25",
+      "city": [
+        "Chuncheon"
+      ],
+      "country": [
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "distances": [
+        "10k"
+      ]
+    },
+    "source_url": "https://www.chuncheonmarathon.com/",
+    "evidence": "대회요강 출발일시 2026년 10월 25일(일) 09시 출발장소 춘천 공지천교 참가부문 Full 코스 (42.195km) / 10km 코스 춘천 국제공인코스 (의암호 순환코스) 접수일정 ➊ '명예의 전당' 헌액 예정자('춘천마라톤' Full코스 9회 완주자)",
+    "observed_at": "2026-10-02T14:08:36Z"
+  },
+  {
+    "data": {
+      "name": "EVA Air Marathon (長榮航空馬拉松)",
+      "url": "https://evaairrun.com/",
+      "race_date": "2026-10-25",
+      "city": [
+        "Taipei"
+      ],
+      "country": [
+        "Chinese Taipei"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "registration_closes": "2026-05-29",
+      "entry_fee": "NTD 1,900",
+      "field_size": 4000,
+      "distances": [
+        "half-marathon",
+        "10k",
+        "3k"
+      ]
+    },
+    "source_url": "https://evaairrun.com/race.html",
+    "evidence": "賽事日期： 2026年10月25日(日) 報名日期： 2026年5月8日(五) 17:00 至 2026年5月29日(五) 17:00 止 2026長榮航空馬拉松 各組別賽務資訊表 組別 全程馬拉松組 42.195公里",
+    "observed_at": "2026-10-02T14:08:54Z"
+  },
+  {
+    "data": {
+      "name": "Chengdu Marathon (成都马拉松)",
+      "url": "https://chengdumarathon.cn/",
+      "race_date": "2026-10-25",
+      "city": [
+        "Chengdu"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "label": "label",
+      "registration_closes": "2026-06-24",
+      "entry_fee": "人民币200元/人",
+      "field_size": 25000,
+      "distances": [
+        "half-marathon"
+      ]
+    },
+    "source_url": "https://sichuan.scol.com.cn/spsc/202609/83328760.html",
+    "evidence": "一年一度的成都马拉松将于10月25日开跑。9月22日，2026成都马拉松赛事组委会召开新闻发布会，公布相关信息。2026成都马拉松设置男子、女子马拉松及男子、女子半程马拉松项目，总规模为35000人，其中马拉松25000人、半程马拉松10000人。",
+    "observed_at": "2026-10-02T14:14:46Z"
+  },
+  {
+    "data": {
+      "name": "Irish Life Dublin Marathon",
+      "url": "https://irishlifedublinmarathon.ie/",
+      "race_date": "2026-10-25",
+      "city": [
+        "Dublin"
+      ],
+      "country": [
+        "Ireland"
+      ],
+      "region": "europe",
+      "label": "elite"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/869.html",
+    "evidence": "Irish Life Dublin Marathon Ireland | M | Full member of AIMS Race information Forthcoming events Fitzwilliam Square, Dublin Please consult race website for route map. 25 Irish Life Dublin Marathon Sun 25 October 2026",
+    "observed_at": "2026-10-02T13:36:24Z"
+  },
+  {
+    "data": {
+      "name": "Lausanne Marathon",
+      "url": "https://www.lausanne-marathon.com/",
+      "race_date": "2026-10-25",
+      "city": [
+        "Lausanne"
+      ],
+      "country": [
+        "Switzerland"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k"
+      ]
+    },
+    "source_url": "https://fr.lausanne-marathon.com/",
+    "evidence": "Lausanne Marathon 25.10.2026 Edition 2026 complète / Sold Out. Merci! Accueil Infos Coureurs Envoi du dossard à la maison Marathon Expo le vendredi 23 et samedi 24 octobre",
+    "observed_at": "2026-10-02T13:39:01Z"
+  },
+  {
+    "data": {
+      "name": "Mainova Frankfurt Marathon",
+      "url": "https://www.frankfurt-marathon.com/",
+      "race_date": "2026-10-25",
+      "city": [
+        "Frankfurt"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "label": "elite"
+    },
+    "source_url": "https://www.frankfurt-marathon.com/en/",
+    "evidence": "MAINOVA FRANKFURT MARATHON 25th OCTOBER 2026 BE PART OF IT 42195 meters through Frankfurt The course: fast. The atmosphere along the course: fantastic.",
+    "observed_at": "2026-10-02T13:50:11Z"
+  },
+  {
+    "data": {
+      "name": "SwissCityMarathon – Lucerne",
+      "url": "https://www.swisscitymarathon.ch/",
+      "race_date": "2026-10-25",
+      "city": [
+        "Lucerne"
+      ],
+      "country": [
+        "Switzerland"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k"
+      ]
+    },
+    "source_url": "https://www.swisscitymarathon.ch/en/",
+    "evidence": "Distance: 5KM To event To event 25 Oct 26 SwissCityMarathon - Lucerne Distances: 42KM / 21KM / 10KM / 195M To event To event",
+    "observed_at": "2026-10-02T13:50:42Z"
+  },
+  {
+    "data": {
+      "name": "Venicemarathon",
+      "url": "https://www.venicemarathon.it/",
+      "race_date": "2026-10-25",
+      "city": [
+        "Venice"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe",
+      "label": "label"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/863.html",
+    "evidence": "Venicemarathon Italy | M | Full member of AIMS Race video Race information Forthcoming events Please consult race website for route map. 25 Venicemarathon Sun 25 October 2026",
+    "observed_at": "2026-10-02T13:36:23Z"
+  },
+  {
+    "data": {
+      "name": "Istanbul Marathon",
+      "url": "https://www.maraton.istanbul/",
+      "race_date": "2026-11-01",
+      "city": [
+        "Istanbul"
+      ],
+      "country": [
+        "Türkiye"
+      ],
+      "region": "europe",
+      "label": "gold"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/882.html",
+    "evidence": "İstanbul Marathon Türkiye | M | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 1 İstanbul Marathon Sun 1 November 2026",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "TCS New York City Marathon",
+      "url": "https://www.tcsnycmarathon.org/",
+      "race_date": "2026-11-01",
+      "city": [
+        "New York City"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "label": "world-major"
+    },
+    "source_url": "https://www.worldmarathonmajors.com/races",
+    "evidence": "TCS New York City Marathon (NYRR) New York, United States New York North America United States 2026-11-01 Nov 1, 2026",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "Barfoot & Thompson Runaway Auckland Marathon presented by ASICS",
+      "url": "https://aucklandmarathon.co.nz/",
+      "race_date": "2026-11-01",
+      "city": [
+        "Auckland"
+      ],
+      "country": [
+        "New Zealand"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "registration_closes": "2026-10-31",
+      "entry_fee": "$271",
+      "distances": [
+        "half-marathon",
+        "11k",
+        "5k",
+        "kids-run",
+        "wheelchair"
+      ]
+    },
+    "source_url": "https://aucklandmarathon.co.nz/",
+    "evidence": "Sun, 1 Nov 2026 Enter now Run The City Barfoot & Thompson Runaway Auckland Marathon Set your sights on the City of Sails at the Barfoot & Thompson Runaway Auckland Marathon presented by ASICS.",
+    "observed_at": "2026-10-02T14:06:56Z"
+  },
+  {
+    "data": {
+      "name": "JTBC Seoul Marathon (JTBC 서울마라톤)",
+      "url": "https://marathon.jtbc.com/",
+      "race_date": "2026-11-01",
+      "city": [
+        "Seoul"
+      ],
+      "country": [
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "entry_fee": "15만원",
+      "distances": [
+        "10k",
+        "wheelchair"
+      ]
+    },
+    "source_url": "https://marathon.jtbc.com/index",
+    "evidence": "대회명 2026 JTBC 서울마라톤 대회 일정 2026년 11월 1일 (일) 대회 장소 출발: 상암월드컵공원 FULL: 올림픽 공원 10K : 여의도 공원",
+    "observed_at": "2026-10-02T14:08:35Z"
+  },
+  {
+    "data": {
+      "name": "Sun Moon Lake Marathon (日月潭環湖馬拉松)",
+      "url": "https://www.sunmoonlakemarathon.com/",
+      "race_date": "2026-11-01",
+      "city": [
+        "Yuchi"
+      ],
+      "country": [
+        "Chinese Taipei"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "registration_closes": "2026-05-31",
+      "entry_fee": "1,800元",
+      "field_size": 1000,
+      "distances": [
+        "29k",
+        "6k"
+      ]
+    },
+    "source_url": "https://isports-service.com/2026-%e7%b0%a1%e7%ab%a0/",
+    "evidence": "(一) 活動名稱:「2026日月潭環湖馬拉松」 (二) 活動目的 : 1. 強化人民之體能，得以旺盛精神面對多變產業競爭。 2. 引導運動人士參與正面積極的體育健身活動，進而將此風氣推廣至其所屬家庭、 企業、社區。 3. 略盡社會責任，發揮人溺已溺之精神，協助公益團體或弱勢族群。 4. 以實際力量推動地方經濟，發展地方觀光，増加地方繁榮與收入。 5. 接軌國際，讓世界看見台灣。 (三) 活動日期：2026年11月1日（星期日）06:00時至14:00時",
+    "observed_at": "2026-10-02T14:08:53Z"
+  },
+  {
+    "data": {
+      "name": "Hangzhou Marathon (杭州马拉松)",
+      "url": "https://www.hzim.org/",
+      "race_date": "2026-11-01",
+      "city": [
+        "Hangzhou"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "label": "gold",
+      "field_size": 22000,
+      "distances": [
+        "half-marathon"
+      ]
+    },
+    "source_url": "https://zjnews.zjol.com.cn/yc/qmt/202606/t20260622_31740534.shtml",
+    "evidence": "6月22日下午，2026吉利汽车杭州马拉松新闻通气会在黄龙体育中心举行 。此次马拉松 将于11月1日（星期日）上午7时从黄龙体育中心鸣枪起跑。本届赛事参赛规模再度扩容，由去年3.2万人提升至3.6万人，其中全程马拉松参赛名额2.2万个、半程马拉松参赛名额1.4万个。",
+    "observed_at": "2026-10-02T14:14:38Z"
+  },
+  {
+    "data": {
+      "name": "Yichang Marathon (宜昌马拉松)",
+      "url": "https://yichang.gusto.cn/",
+      "race_date": "2026-11-01",
+      "city": [
+        "Yichang"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "label": "label",
+      "registration_closes": "2026-09-08",
+      "entry_fee": "180元/人",
+      "field_size": 4000,
+      "distances": [
+        "half-marathon"
+      ]
+    },
+    "source_url": "https://yichang.gusto.cn/doc/986/7735",
+    "evidence": "二、主办单位：宜昌市人民政府 三、承办单位：宜昌市文化和旅游局 路越（上海）体育发展有限公司 四、安全监管：湖北省田径协会 五、运营单位：路越（上海）体育发展有限公司 六、日期地点 （一）比赛日期：2026年11月1日（星期日）7:30 （二）比赛地点：湖北省宜昌市主城区 七、项目规模 （一）比赛项目：马拉松（42.195公里）、半程马拉松（21.0975公里）",
+    "observed_at": "2026-10-02T14:14:49Z"
+  },
+  {
+    "data": {
+      "name": "Guadalajara Marathon Skarch hydrated by Electrolit",
+      "url": "https://www.maratongdl.com/",
+      "race_date": "2026-11-08",
+      "city": [
+        "Guadalajara"
+      ],
+      "country": [
+        "Mexico"
+      ],
+      "region": "americas",
+      "label": "label"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/1128.html",
+    "evidence": "Guadalajara Marathon Skarch hydrated by Electrolit Mexico | M | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 8 Guadalajara Marathon Skarch hydrated by Electrolit Sun 8 November 2026",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "Samarkand Marathon",
+      "url": "https://samarkandmarathon.uz/",
+      "race_date": "2026-11-08",
+      "city": [
+        "Samarkand"
+      ],
+      "country": [
+        "Uzbekistan"
+      ],
+      "region": "asia-pacific",
+      "label": "elite",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k",
+        "2k"
+      ]
+    },
+    "source_url": "https://worldathletics.org/competitions/world-athletics-label-road-races",
+    "evidence": "08 NOV 2026 Samarkand Marathon Samarkand UZB",
+    "observed_at": "2026-10-02T14:04:18Z"
+  },
+  {
+    "data": {
+      "name": "Korat Marathon (โคราชมาราธอน)",
+      "url": "https://www.koratmarathon.com/",
+      "race_date": "2026-11-08",
+      "city": [
+        "Nakhon Ratchasima"
+      ],
+      "country": [
+        "Thailand"
+      ],
+      "region": "asia-pacific",
+      "label": "label",
+      "registration_closes": "2026-10-08",
+      "entry_fee": "1,600 THB",
+      "field_size": 2000,
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://koratmarathon.com/en/",
+    "evidence": "All rights reserved. FOLLOW US 8 November 2026 Korat Marathon Register",
+    "observed_at": "2026-10-02T14:05:36Z"
+  },
+  {
+    "data": {
+      "name": "Standard Chartered Hanoi Marathon Heritage Race",
+      "url": "https://hanoi-marathon.com/",
+      "race_date": "2026-11-08",
+      "city": [
+        "Hanoi"
+      ],
+      "country": [
+        "Vietnam"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k",
+        "kids-run"
+      ]
+    },
+    "source_url": "https://hanoi-marathon.com/",
+    "evidence": "Standard Chartered Marathon Di sản Hà Nội 2026 sẽ diễn ra từ ngày 6 – 8/11/2026, với ngày đua chính vào 8/11/2026, gồm các cự ly Marathon (42,195km), Bán Marathon (21,0975km), 10km, 5km và Kid",
+    "observed_at": "2026-10-02T14:06:58Z"
+  },
+  {
+    "data": {
+      "name": "Taiwan's Rice Heaven Tianzhong Marathon (台灣米倉田中馬拉松)",
+      "url": "https://www.tianzhongmarathon.com/",
+      "race_date": "2026-11-08",
+      "city": [
+        "Tianzhong"
+      ],
+      "country": [
+        "Chinese Taipei"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "registration_closes": "2026-06-15",
+      "entry_fee": "NT$1450",
+      "field_size": 4100,
+      "distances": [
+        "half-marathon",
+        "fun-run",
+        "kids-run"
+      ]
+    },
+    "source_url": "https://irunner.biji.co/Tianzhong2026?page=5069",
+    "evidence": "(三)活動時間： 【雲端跑】2026年10月10日（六） - 11月08日（日）活動說明待公布 【田中馬周邊活動＋選手之夜】2026年11月07日（六） 14:00-21:00 【賽 事 日】2026年11月08日（日） 06:00-13:00",
+    "observed_at": "2026-10-02T14:08:49Z"
+  },
+  {
+    "data": {
+      "name": "Athens Marathon. The Authentic (Μαραθώνιος Αθήνας. Ο Αυθεντικός)",
+      "url": "https://www.athensauthenticmarathon.gr/",
+      "race_date": "2026-11-08",
+      "city": [
+        "Marathon",
+        "Athens"
+      ],
+      "country": [
+        "Greece"
+      ],
+      "region": "europe",
+      "label": "elite",
+      "distances": [
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.athensauthenticmarathon.gr/en/c/agones-2-26/authentic-marathon-1/marathonios-dromos-33",
+    "evidence": "MARATHON RACE DATE Sunday 8 November 2026 START TIME 08:30 STARTING LINE MARATHON FINISH LINE PANATHENAIC STADIUM Registrations are now closed.",
+    "observed_at": "2026-10-02T13:52:25Z"
+  },
+  {
+    "data": {
+      "name": "EDP Porto Marathon",
+      "url": "https://www.maratonadoporto.com/",
+      "race_date": "2026-11-08",
+      "city": [
+        "Porto"
+      ],
+      "country": [
+        "Portugal"
+      ],
+      "region": "europe",
+      "label": "label",
+      "distances": [
+        "10k",
+        "6k"
+      ]
+    },
+    "source_url": "https://www.maratonadoporto.com/en/",
+    "evidence": "The EDP Marathon in Porto, with its 21th anniversary, starts its publicity campaign, with a view to the 22th. Edition, in 2026 to November 8th, starting at 8:00 am",
+    "observed_at": "2026-10-02T13:52:36Z"
+  },
+  {
+    "data": {
+      "name": "French Riviera Marathon Nice-Cannes",
+      "url": "https://www.marathon06.com/",
+      "race_date": "2026-11-08",
+      "city": [
+        "Nice",
+        "Cannes"
+      ],
+      "country": [
+        "France"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "relay"
+      ]
+    },
+    "source_url": "https://www.marathon06.com/2026/AN/",
+    "evidence": "Sunday, November 8, 2026 Welcome to french riviera marathon Nice-Cannes The largest marathon in france after Paris From Nice to Cannes, come and enjoy a five-star experience on Sunday 8 November 2026",
+    "observed_at": "2026-10-02T13:52:59Z"
+  },
+  {
+    "data": {
+      "name": "Generali Maratón de Málaga",
+      "url": "https://www.generalimaratonmalaga.com/",
+      "race_date": "2026-11-08",
+      "city": [
+        "Málaga"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "region": "europe",
+      "label": "label",
+      "distances": [
+        "half-marathon"
+      ]
+    },
+    "source_url": "https://www.generalimaratonmalaga.com/regulations-marathon-malaga/",
+    "evidence": "GENERAL RULES OF THE MALAGA 2026 MARATHON ARTICLE 1. INTRODUCTION LASTLAP, S.L.U., is organising the GENERALI Maratón de Málaga, to be held on Sunday 8 November 2026, starting at 8.30 am",
+    "observed_at": "2026-10-02T13:58:52Z"
+  },
+  {
+    "data": {
+      "name": "Ravenna Marathon City of Art",
+      "url": "https://www.maratonadiravenna.com/",
+      "race_date": "2026-11-08",
+      "city": [
+        "Ravenna"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe",
+      "label": "label",
+      "distances": [
+        "half-marathon",
+        "10k"
+      ]
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/1121.html",
+    "evidence": "Ravenna Marathon City of Art Maratona di Ravenna Città d’Arte | Italy | M,H | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 8 Ravenna Marathon City of Art Sun 8 November 2026",
+    "observed_at": "2026-10-02T13:36:20Z"
+  },
+  {
+    "data": {
+      "name": "Marabana Cuba Marathon",
+      "url": "https://maratondelahabana.com/",
+      "race_date": "2026-11-15",
+      "city": [
+        "Havana"
+      ],
+      "country": [
+        "Cuba"
+      ],
+      "region": "americas",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://maratondelahabana.com/en/",
+    "evidence": "The date is now set for the leading event on the Cuban sporting calendar. The 2026 Marabana Cuba will take place on November 15th with its 40 th edition, a special occasion.",
+    "observed_at": "2026-10-02T14:06:06Z"
+  },
+  {
+    "data": {
+      "name": "Panama International Marathon",
+      "url": "https://www.maratoninternacionaldepanama.com/",
+      "race_date": "2026-11-15",
+      "city": [
+        "Panama City"
+      ],
+      "country": [
+        "Panama"
+      ],
+      "region": "americas",
+      "label": "aims"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/932.html",
+    "evidence": "Panama International Marathon Maratón Internacional de Panamá | Panama | M | Full member of AIMS Race information Forthcoming events Panama City, Panama Please consult race website for route map. 15 Panama Int'l Marathon Sun 15 November 2026",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "Kobe Marathon (神戸マラソン)",
+      "url": "https://kobe-marathon.net/",
+      "race_date": "2026-11-15",
+      "city": [
+        "Kobe"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "label": "label",
+      "registration_closes": "2026-06-01",
+      "entry_fee": "18,000円",
+      "field_size": 20000,
+      "distances": [
+        "relay"
+      ]
+    },
+    "source_url": "https://kobe-marathon.net/2026/news/race/3584.html",
+    "evidence": "神戸マラソン2026【11月15日（日曜）】の開催に伴い、全国各地から多くのランナーが神戸を訪れます。",
+    "observed_at": "2026-10-02T13:57:01Z"
+  },
+  {
+    "data": {
+      "name": "UST Trivandrum Marathon",
+      "url": "https://www.trivandrummarathon.com/",
+      "race_date": "2026-11-15",
+      "city": [
+        "Thiruvananthapuram"
+      ],
+      "country": [
+        "India"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.trivandrummarathon.com/",
+    "evidence": "On 15 November 2026, the 3rd edition of the UST Trivandrum Marathon invites runners to experience Thiruvananthapuram like never before",
+    "observed_at": "2026-10-02T14:04:27Z"
+  },
+  {
+    "data": {
+      "name": "Bangsaen42 Chonburi Marathon",
+      "url": "https://www.bangsaen42.com/",
+      "race_date": "2026-11-15",
+      "city": [
+        "Chonburi"
+      ],
+      "country": [
+        "Thailand"
+      ],
+      "region": "asia-pacific",
+      "label": "elite"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10184.html",
+    "evidence": "Bangsaen42 Chonburi Marathon Thailand | M | Full member of AIMS Race information Forthcoming events Bangkok, Thailand Please consult race website for route map. 15 Bangsaen42 Chonburi Marathon Sun 15 November 2026",
+    "observed_at": "2026-10-02T14:05:33Z"
+  },
+  {
+    "data": {
+      "name": "Bank Jateng Borobudur Marathon",
+      "url": "https://www.borobudurmarathon.com/",
+      "race_date": "2026-11-15",
+      "city": [
+        "Magelang"
+      ],
+      "country": [
+        "Indonesia"
+      ],
+      "region": "asia-pacific",
+      "label": "elite",
+      "distances": [
+        "half-marathon",
+        "10k"
+      ]
+    },
+    "source_url": "https://www.borobudurmarathon.com/bank-jateng-borobudur-marathon-2026/",
+    "evidence": "Race Date Sunday, November 15 th 2026 Bank Jateng Borobudur Marathon 2026 once again welcomes runners to experience the excitement of the Borobudur Marathon.",
+    "observed_at": "2026-10-02T14:06:47Z"
+  },
+  {
+    "data": {
+      "name": "Nanchang Marathon (南昌马拉松)",
+      "url": "https://www.nanchangmarathon.cn/",
+      "race_date": "2026-11-15",
+      "city": [
+        "Nanchang"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "label": "label",
+      "field_size": 20000,
+      "distances": [
+        "half-marathon"
+      ]
+    },
+    "source_url": "https://m.thepaper.cn/newsDetail_forward_34081339",
+    "evidence": "完赛奖牌、参赛服亮相！2026南昌马拉松11月15日开跑 南昌发布 2026-09-16 16:25 江西 9月16日下午，",
+    "observed_at": "2026-10-02T14:14:49Z"
+  },
+  {
+    "data": {
+      "name": "Guilin Marathon (桂林马拉松)",
+      "url": "https://guilin-marathon.cn/",
+      "race_date": "2026-11-15",
+      "city": [
+        "Guilin"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "label": "label",
+      "registration_closes": "2026-10-15",
+      "entry_fee": "200元人民币/人",
+      "field_size": 12000,
+      "distances": [
+        "half-marathon"
+      ]
+    },
+    "source_url": "https://guilin-marathon.cn/document/7628",
+    "evidence": "桂林马拉松 报名须知 一、赛事基本信息 （ 一）比赛日期及时间 2026年11月15日（星期日）上午7:00 （二）比赛项目及规模 1.马拉松（42.195公里）：12,000人 2.半程马拉松（21.0975公里）：13,000人 赛事总规模25,000人。",
+    "observed_at": "2026-10-02T14:14:50Z"
+  },
+  {
+    "data": {
+      "name": "Changsha Marathon (长沙马拉松)",
+      "url": "https://www.marathonchangsha.com/",
+      "race_date": "2026-11-15",
+      "city": [
+        "Changsha"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "registration_closes": "2026-08-11",
+      "field_size": 18000,
+      "distances": [
+        "half-marathon"
+      ]
+    },
+    "source_url": "https://hunan.voc.com.cn/news/202608/33382110.html",
+    "evidence": "2026长沙马拉松定档11月15日，报名将于8月4日10时启动，8月11日17时截止。本次报名不设先到先得机制，跑者可在报名时间段内任意时间提交申请，抽签结果将于8月25日10时公布。",
+    "observed_at": "2026-10-02T14:14:51Z"
+  },
+  {
+    "data": {
+      "name": "Eurospin Verona Run Marathon",
+      "url": "https://www.veronarunmarathon.it/",
+      "race_date": "2026-11-15",
+      "city": [
+        "Verona"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon"
+      ]
+    },
+    "source_url": "https://www.veronarunmarathon.it/?lang=en",
+    "evidence": "VERONA / NOV 15, 2026 REGISTER NOW VERIFY REGISTRATION EUROSPIN VERONA RUN MARATHON 42K | 21K | FAMILY RUN 25th Anniversary of Passion for Running",
+    "observed_at": "2026-10-02T13:39:01Z"
+  },
+  {
+    "data": {
+      "name": "Radisson Hotels Larnaka Marathon",
+      "url": "https://larnakamarathon.com/",
+      "race_date": "2026-11-15",
+      "city": [
+        "Larnaka"
+      ],
+      "country": [
+        "Cyprus"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k"
+      ]
+    },
+    "source_url": "https://www.larnakamarathon.com/",
+    "evidence": "Register Now Register Now 9 th Radisson Hotels Larnaka Marathon 15.11.2026 Days Hours Minutes Seconds Register Now 50% OFF Radisson Hotels Larnaka Marathon 15.11.2026",
+    "observed_at": "2026-10-02T13:39:01Z"
+  },
+  {
+    "data": {
+      "name": "Ring Running Series",
+      "url": "https://ringrunningseries.com/",
+      "race_date": "2026-11-21",
+      "city": [
+        "Hockenheim"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon"
+      ]
+    },
+    "source_url": "https://www.ringrunningseries.com/",
+    "evidence": "Ring Running Series Laufen auf dem Hockenheimring Zur Anmeldung 21. November 2026 - Halbmarathon & Marathon Laufen auf der Formel 1 - Strecke!",
+    "observed_at": "2026-10-02T13:54:38Z"
+  },
+  {
+    "data": {
+      "name": "Maratona Monumental de Brasília",
+      "url": "https://maratonamonumentalbsb.com.br/",
+      "race_date": "2026-11-22",
+      "city": [
+        "Brasília"
+      ],
+      "country": [
+        "Brazil"
+      ],
+      "region": "americas",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://maratonamonumentalbsb.com.br/",
+    "evidence": "Viva a experiência monumental em Brasília com distâncias para todos: 5km, 10km, 21km e 42km nos dias 21 e 22 de novembro de 2026",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "Halong Bay Heritage Marathon",
+      "url": "https://halongmarathon.com/",
+      "race_date": "2026-11-22",
+      "city": [
+        "Ha Long"
+      ],
+      "country": [
+        "Vietnam"
+      ],
+      "region": "asia-pacific",
+      "label": "label",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://halongmarathon.com/en/home/",
+    "evidence": "The 2026 edition of the Halong Bay Heritage Marathon will take place from November 20–22, with the official race day scheduled for November 22.",
+    "observed_at": "2026-10-02T14:06:49Z"
+  },
+  {
+    "data": {
+      "name": "Bank of Nanjing Nanjing Marathon (南京银行南京马拉松)",
+      "url": "https://www.nj-marathon.cn/",
+      "race_date": "2026-11-22",
+      "city": [
+        "Nanjing"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "label": "elite",
+      "registration_closes": "2026-08-28",
+      "field_size": 26000
+    },
+    "source_url": "https://www.nj-marathon.cn/page/L51XZa20wrP7jAM6vG98.html",
+    "evidence": "2026南京银行南京马拉松报名须知 一、赛事基本信息 （一）比赛日期及出发时间 2026年11月22日上午7:30 （二）比赛项目 马拉松项目（42.195公里）",
+    "observed_at": "2026-10-02T14:14:43Z"
+  },
+  {
+    "data": {
+      "name": "Gulf Bank 642 Marathon",
+      "url": "https://www.gulfbank642marathon.com/",
+      "race_date": "2026-11-28",
+      "city": [
+        "Kuwait City"
+      ],
+      "country": [
+        "Kuwait"
+      ],
+      "region": "africa-middle-east",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.gulfbank642marathon.com/faq",
+    "evidence": "The annual Gulf Bank 642 Marathon, catering to runners, joggers and walkers from all over the world. When is it? On the 28th November 2026",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "7 Colors Marathon",
+      "url": "https://www.fundacion7colores.org/",
+      "race_date": "2026-11-29",
+      "city": [
+        "San Andrés"
+      ],
+      "country": [
+        "Colombia"
+      ],
+      "region": "americas",
+      "label": "aims",
+      "entry_fee": "$390.000",
+      "distances": [
+        "32k",
+        "half-marathon",
+        "10k",
+        "5k",
+        "2k"
+      ]
+    },
+    "source_url": "https://www.fundacion7colores.org/en/",
+    "evidence": "WHAT YOU NEED TO KNOW ABOUT EACH RACE 42K Race Carrera 32k 21K Race 10K Race 5K Race 2K Race DATE: NOVEMBER 29, 2026",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "Spinneys Beirut Marathon",
+      "url": "https://www.beirutmarathon.org/",
+      "race_date": "2026-11-29",
+      "city": [
+        "Beirut"
+      ],
+      "country": [
+        "Lebanon"
+      ],
+      "region": "africa-middle-east",
+      "label": "aims",
+      "registration_closes": "2026-11-22",
+      "entry_fee": "$50.00 USD"
+    },
+    "source_url": "https://www.beirutmarathon.org/registration.php",
+    "evidence": "Lebanon is calling, and the streets of Beirut are ready to welcome the world for the Spinneys Beirut Marathon on the 29 th of November 2026, the pinnacle running event of the year!",
+    "observed_at": "2026-10-02T14:06:06Z"
+  },
+  {
+    "data": {
+      "name": "KLM Curaçao Marathon",
+      "url": "https://curacaomarathon.com/",
+      "race_date": "2026-11-29",
+      "city": [
+        "Willemstad"
+      ],
+      "country": [
+        "Curaçao"
+      ],
+      "region": "americas",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://curacaomarathon.com/runners/course-map",
+    "evidence": "Full Marathon course start 3.15 am Sunday November 29th, 2026 (please click on the map to view a larger image). Elevation (twice): Half Marathon course start 5.15 am Sunday November 29th, 2026",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "Maratón Monumental Primer Santiago de América",
+      "url": "https://www.maratonsantiago.com.do/",
+      "race_date": "2026-11-29",
+      "city": [
+        "Santiago de los Caballeros"
+      ],
+      "country": [
+        "Dominican Republic"
+      ],
+      "region": "americas",
+      "label": "aims"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10183.html",
+    "evidence": "Maratón Monumental Primer Santiago de América Dominican Republic | M,H,R | Full member of AIMS Race information Forthcoming events Santiago, Dominican Republic Please consult race website for route map. 29 Maratón Monumental Primer Santiago de América Sun 29 November 2026",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "Adani Ahmedabad Marathon",
+      "url": "https://www.ahmedabadmarathon.com/",
+      "race_date": "2026-11-29",
+      "city": [
+        "Ahmedabad"
+      ],
+      "country": [
+        "India"
+      ],
+      "region": "asia-pacific",
+      "label": "label",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10317.html",
+    "evidence": "Adani Ahmedabad Marathon India | M,H,R | Full member of AIMS Race information Forthcoming events Ahmedabad, India Please consult race website for route map. 29 Adani Ahmedabad Marathon Sun 29 November 2026",
+    "observed_at": "2026-10-02T14:04:18Z"
+  },
+  {
+    "data": {
+      "name": "JBG Kolkata Marathon",
+      "url": "https://jbgkolkatamarathon.com/",
+      "race_date": "2026-11-29",
+      "city": [
+        "Kolkata"
+      ],
+      "country": [
+        "India"
+      ],
+      "region": "asia-pacific",
+      "label": "label",
+      "entry_fee": "₹ 1500 + GST",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k",
+        "special-heroes",
+        "cosplay-run"
+      ]
+    },
+    "source_url": "https://jbgkolkatamarathon.com/racecategory/full-marathon-42195-kms/information",
+    "evidence": "JBG KOLKATA MARATHON 2026 CATEGORY Full Marathon 42.195 KMs REGISTRATION FEE (₹) ₹ 1500 + GST Click Here to Register Date : Sunday, 29th November, 2026 Venue : Red Road Maidan, Kolkata",
+    "observed_at": "2026-10-02T14:04:18Z"
+  },
+  {
+    "data": {
+      "name": "Amazing Thailand Marathon Bangkok presented by TOYOTA (อะเมซิ่งไทยแลนด์มาราธอน)",
+      "url": "https://amazingthailandmarathon.com/",
+      "race_date": "2026-11-29",
+      "city": [
+        "Bangkok"
+      ],
+      "country": [
+        "Thailand"
+      ],
+      "region": "asia-pacific",
+      "label": "label",
+      "registration_closes": "2026-10-31",
+      "entry_fee": "1,600 THB",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "fun-run"
+      ]
+    },
+    "source_url": "https://amazingthailandmarathon.com/",
+    "evidence": "AMAZING THAILAND MARATHON BANGKOK 2026 presented by TOYOTA 28 th NOVEMBER 2026 (21K) 29 th NOVEMBER 2026 (42K I 10K I 4.5K) REGISTER FOR PUBLIC (3 JUL - 31 OCT 2026)",
+    "observed_at": "2026-10-02T14:05:35Z"
+  },
+  {
+    "data": {
+      "name": "Estra Firenze Marathon",
+      "url": "https://www.firenzemarathon.it/",
+      "race_date": "2026-11-29",
+      "city": [
+        "Florence"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "10k"
+      ]
+    },
+    "source_url": "https://www.firenzemarathon.it/en/home-en/",
+    "evidence": "Florence November 29, 2026 Days Hours Minutes Seconds 42nd ESTRA Firenze Marathon SOLD OUT This year, our magazine is online!",
+    "observed_at": "2026-10-02T13:52:04Z"
+  },
+  {
+    "data": {
+      "name": "Serge Vigot La Rochelle International Marathon",
+      "url": "https://marathondelarochelle.com/",
+      "race_date": "2026-11-29",
+      "city": [
+        "La Rochelle"
+      ],
+      "country": [
+        "France"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "field_size": 10000,
+      "distances": [
+        "10k",
+        "relay"
+      ]
+    },
+    "source_url": "https://marathondelarochelle.com/marathon-sommaire/",
+    "evidence": "Marathon Heure de départ 9h00 DATE 29 novembre 2026 LieuX de départ Quai Maubec & Durand MARATHON COMPLET 10 000 coureurs",
+    "observed_at": "2026-10-02T13:53:15Z"
+  },
+  {
+    "data": {
+      "name": "Run Barbados Marathon",
+      "url": "https://www.runbarbados.org/",
+      "race_date": "2026-12-06",
+      "city": [
+        "Bridgetown"
+      ],
+      "country": [
+        "Barbados"
+      ],
+      "region": "americas",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k",
+        "mile"
+      ]
+    },
+    "source_url": "https://www.visitbarbados.org/runbarbados-marathon-weekend",
+    "evidence": "Sunday Dec. 6th at Bay Street Esplanade, St. Micheal - Half Marathon and Marathon Half-Marathon & Marathon 5:00am: Start in Bridgetown at 5:00 am for the 1/2 or full marathon",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "Cayman Islands Marathon",
+      "url": "https://www.caymanislandsmarathon.com/",
+      "race_date": "2026-12-06",
+      "city": [
+        "George Town"
+      ],
+      "country": [
+        "Cayman Islands"
+      ],
+      "region": "americas",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "relay"
+      ]
+    },
+    "source_url": "https://www.caymanislandsmarathon.com/",
+    "evidence": "The full and half marathon course are AIMS-certified and the marathon is a Boston Marathon-qualifying event. Sunday, 6 December 2026 | 04:30 AM",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "San José Marathon Costa Rica",
+      "url": "https://www.marathonsanjosecostarica.com/",
+      "race_date": "2026-12-06",
+      "city": [
+        "San José"
+      ],
+      "country": [
+        "Costa Rica"
+      ],
+      "region": "americas",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.marathonsanjosecostarica.com/",
+    "evidence": "Dorsal oficial Tu lugar en la meta 6 de diciembre de 2026 · San José Marathon Costa Rica Inscribirme ahora",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "Marathon COMAR Tunis - Carthage",
+      "url": "https://www.marathon.comar.tn/",
+      "race_date": "2026-12-06",
+      "city": [
+        "Tunis"
+      ],
+      "country": [
+        "Tunisia"
+      ],
+      "region": "africa-middle-east",
+      "label": "aims"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10232.html",
+    "evidence": "Marathon COMAR Tunis - Carthage Tunisia | M,H,R | Full member of AIMS Race information Forthcoming events Tunis, Tunisia Please consult race website for route map. 6 Marathon COMAR Tunis - Carthage Sun 6 December 2026",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "Fukuoka International Marathon (福岡国際マラソン)",
+      "url": "https://www.fukuoka-international-marathon.jp/",
+      "race_date": "2026-12-06",
+      "city": [
+        "Fukuoka"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "label": "elite",
+      "registration_closes": "2026-09-11"
+    },
+    "source_url": "https://www.fukuoka-international-marathon.jp/?p=3845",
+    "evidence": "福岡国際マラソン２０２６の日程及び大会概要が決定しましたので、下記のとおりお知らせします。 ２０２６年（令和８年）１２月６日（日）１２時１０分スタート",
+    "observed_at": "2026-10-02T13:56:56Z"
+  },
+  {
+    "data": {
+      "name": "Hofu Yomiuri Marathon (防府読売マラソン)",
+      "url": "https://hofu-yomiuri.jp/",
+      "race_date": "2026-12-06",
+      "city": [
+        "Hofu"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "label": "elite",
+      "registration_closes": "2026-07-06",
+      "entry_fee": "13,000 yen",
+      "field_size": 3500
+    },
+    "source_url": "https://hofu-yomiuri.jp/english_guidelines/",
+    "evidence": "Schedule Starting at 10:40 am, Sunday, December 6, 2026 Course Hofu Yomiuri Marathon Course – certified by JAAF and WA/AIMS: 42.195km",
+    "observed_at": "2026-10-02T13:56:57Z"
+  },
+  {
+    "data": {
+      "name": "Pune International Marathon",
+      "url": "https://www.marathonpune.com/",
+      "race_date": "2026-12-06",
+      "city": [
+        "Pune"
+      ],
+      "country": [
+        "India"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "entry_fee": "Rs 2,000 + GST",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k",
+        "wheelchair"
+      ]
+    },
+    "source_url": "https://www.marathonpune.com/raceinfo.html",
+    "evidence": "Race Information 40 th Pune International Marathon 6 th December 2026 Baburao Sanas Sports Ground ,Pune Event Details(Tentative)",
+    "observed_at": "2026-10-02T14:04:19Z"
+  },
+  {
+    "data": {
+      "name": "BYD Singapore International Marathon presented by adidas",
+      "url": "https://singaporeinternationalmarathon.com/",
+      "race_date": "2026-12-06",
+      "city": [
+        "Singapore"
+      ],
+      "country": [
+        "Singapore"
+      ],
+      "region": "asia-pacific",
+      "label": "gold",
+      "entry_fee": "$188 local / $208 international",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k",
+        "kids-run"
+      ]
+    },
+    "source_url": "https://singaporeinternationalmarathon.com/events/byd-marathon/",
+    "evidence": "Singapore’s winding streets, where heat and humidity test endurance against a backdrop of iconic skylines and cheering crowds. REGISTER NOW Race Details This event is fully sold out, with no slots remaining for either Local or International participants. RACE DATE 6 Dec 2026 (Sun) DISTANCE 42.195km",
+    "observed_at": "2026-10-02T14:05:31Z"
+  },
+  {
+    "data": {
+      "name": "Techcombank Ho Chi Minh City International Marathon",
+      "url": "https://marathonhcmc.com/",
+      "race_date": "2026-12-06",
+      "city": [
+        "Ho Chi Minh City"
+      ],
+      "country": [
+        "Vietnam"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k",
+        "kids-run"
+      ]
+    },
+    "source_url": "https://marathonhcmc.com/en/",
+    "evidence": "TECHCOMBANK HO CHI MINH CITY INTERNATIONAL MARATHON · Dec 06, 2026 Race date Dec 06, 2026 Start line Le Duan – Nguyen Binh Khiem · District 1 Gun time 03:30",
+    "observed_at": "2026-10-02T14:06:56Z"
+  },
+  {
+    "data": {
+      "name": "Galaxy Entertainment Macao International Marathon (銀河娛樂澳門國際馬拉松)",
+      "url": "https://www.macaomarathon.com/",
+      "race_date": "2026-12-06",
+      "city": [
+        "Macao"
+      ],
+      "country": [
+        "Macao"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "entry_fee": "MOP 150 (local) / MOP 400 (non-local)",
+      "field_size": 2000,
+      "distances": [
+        "half-marathon",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.macaomarathon.com/en/information",
+    "evidence": "Event Title: 2026 Galaxy Entertainment Macao International Marathon Date: 06 December 2026 (Sunday) Organizers: Sports Bureau of Macao SAR Government",
+    "observed_at": "2026-10-02T14:08:37Z"
+  },
+  {
+    "data": {
+      "name": "Hsinchu City Marathon (新竹城市馬拉松)",
+      "url": "https://hsinchucitymarathon.com/",
+      "race_date": "2026-12-06",
+      "city": [
+        "Hsinchu"
+      ],
+      "country": [
+        "Chinese Taipei"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "entry_fee": "NT$1,600",
+      "field_size": 1500,
+      "distances": [
+        "half-marathon",
+        "9k",
+        "fun-run"
+      ]
+    },
+    "source_url": "https://hsinchucitymarathon.com/tw/competition-introduction/registration-information",
+    "evidence": "競賽日期 2026年12月06日(星期日) 05：00～13：00 起跑地點 新竹市樹林頭停車場 比賽項目 項目 全程 馬拉松組 (42.195KM) 半程 馬拉松組 (21KM) 健康樂跑組 (9KM) 親子 / 休閒組 (4KM)",
+    "observed_at": "2026-10-02T14:08:45Z"
+  },
+  {
+    "data": {
+      "name": "Shanghai Marathon (上海马拉松)",
+      "url": "https://www.shang-ma.com/",
+      "race_date": "2026-12-06",
+      "city": [
+        "Shanghai"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "label": "platinum",
+      "registration_closes": "2026-05-29",
+      "entry_fee": "中国籍（含港澳台）跑者200元/人 外籍跑者160美元/人",
+      "field_size": 30000,
+      "distances": [
+        "wheelchair"
+      ]
+    },
+    "source_url": "https://www.shobserver.cn/sgh/detail?id=1739872",
+    "evidence": "2026上海马拉松将于 12月6日 在外滩金牛广场起跑 竞赛项目共设置 马拉松、竞速轮椅马拉松两项 竞速轮椅项目将率先于 6:45 开始 马拉松项目将于 7:00 分枪起跑",
+    "observed_at": "2026-10-02T14:14:36Z"
+  },
+  {
+    "data": {
+      "name": "Shenzhen Marathon (深圳马拉松)",
+      "url": "https://shenzhenmarathon.org.cn/",
+      "race_date": "2026-12-06",
+      "city": [
+        "Shenzhen"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "label": "gold",
+      "registration_closes": "2026-09-28",
+      "entry_fee": "200元/人",
+      "field_size": 30000
+    },
+    "source_url": "https://huacheng.gz-cmc.com/pages/2026/09/20/1248f882cd75423aaec28a1fd25fbb8c.html",
+    "evidence": "9月20日14时，2026深圳马拉松正式开放报名，广大跑者可通过赛事官网或马拉马拉App提交报名信息，报名通道将于9月28日17时关闭。 本届深马定于12月6日7时鸣枪开跑，赛事仅设置马拉松（42.195公里）单个竞赛项目，总参赛规模30000人。",
+    "observed_at": "2026-10-02T14:14:39Z"
+  },
+  {
+    "data": {
+      "name": "Valencia Marathon Trinidad Alfonso Zurich",
+      "url": "https://www.valenciaciudaddelrunning.com/",
+      "race_date": "2026-12-06",
+      "city": [
+        "Valencia"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "region": "europe",
+      "label": "platinum"
+    },
+    "source_url": "https://www.valenciaciudaddelrunning.com/en/marathon/presentation/",
+    "evidence": "Highlights Next edition: 6 December 2026 Organisers: SD Correcaminos Ajuntament de València Distinctions: World Athletics Platinum Label Best Marathon in Spain by the Royal Spanish Athletics Federation (RFEA)",
+    "observed_at": "2026-10-02T13:53:52Z"
+  },
+  {
+    "data": {
+      "name": "ADNOC Abu Dhabi Marathon",
+      "url": "https://www.adnocabudhabimarathon.com/",
+      "race_date": "2026-12-12",
+      "city": [
+        "Abu Dhabi"
+      ],
+      "country": [
+        "United Arab Emirates"
+      ],
+      "region": "africa-middle-east",
+      "label": "gold",
+      "entry_fee": "382 AED",
+      "distances": [
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.adnocabudhabimarathon.com/",
+    "evidence": "12 December 2026 - Registration is now open - pricing Entry Fees Service Fee, Transaction Fee and VAT will be calculated at the check out. 42.195 km 382 AED",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "Maratón Powerade Monterrey",
+      "url": "https://maratonmonterrey.mx/",
+      "race_date": "2026-12-13",
+      "city": [
+        "Monterrey"
+      ],
+      "country": [
+        "Mexico"
+      ],
+      "region": "americas",
+      "label": "aims"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/934.html",
+    "evidence": "Maratón Powerade Monterrey Mexico | M | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 13 Maratón Powerade Monterrey Sun 13 December 2026",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "JAL Honolulu Marathon",
+      "url": "https://www.honolulumarathon.org/",
+      "race_date": "2026-12-13",
+      "city": [
+        "Honolulu"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "label": "label",
+      "distances": [
+        "10k",
+        "mile"
+      ]
+    },
+    "source_url": "https://www.honolulumarathon.org/",
+    "evidence": "Registration for the 2026 Honolulu Marathon Weekend is open. JAL Honolulu Marathon. - December 13, 2026 Start to Park 10k - December 13, 2026 Kalakaua Merrie Mile - December 12, 2026",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "Nara Marathon (奈良マラソン)",
+      "url": "https://www.nara-marathon.jp/",
+      "race_date": "2026-12-13",
+      "city": [
+        "Nara"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "field_size": 11750,
+      "distances": [
+        "relay",
+        "10k",
+        "mini-marathon"
+      ]
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/931.html",
+    "evidence": "Forthcoming events Please consult race website for route map. 13 Nara Marathon Sun 13 December 2026",
+    "observed_at": "2026-10-02T13:57:02Z"
+  },
+  {
+    "data": {
+      "name": "Mt. Fuji International Marathon (富士山マラソン)",
+      "url": "https://mtfujimarathon.com/",
+      "race_date": "2026-12-13",
+      "city": [
+        "Fujikawaguchiko"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "entry_fee": "12,900円",
+      "distances": [
+        "17k",
+        "fun-run",
+        "8k",
+        "4k"
+      ]
+    },
+    "source_url": "https://mtfujimarathon.com/full-marathon/",
+    "evidence": "フルマラソン RUNNETエントリーの方 日本国内在住者 Run Japanエントリーの方 日本国外（海外）在住者 レース開催日 2026年12月13日（日） コース フルマラソン（42.195km日本陸連公認河口湖-西湖周回コース）",
+    "observed_at": "2026-10-02T13:57:03Z"
+  },
+  {
+    "data": {
+      "name": "SKF Goa River Marathon",
+      "url": "https://www.skfgoarivermarathon.com/",
+      "race_date": "2026-12-13",
+      "city": [
+        "Vasco da Gama"
+      ],
+      "country": [
+        "India"
+      ],
+      "region": "asia-pacific",
+      "label": "aims"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10125.html",
+    "evidence": "SKF Goa River Marathon India | M,H,R | Full member of AIMS Race information Forthcoming events Vasco da Gama, Goa, India Please consult race website for route map. 13 SKF Goa River Marathon Sun 13 December 2026",
+    "observed_at": "2026-10-02T14:04:22Z"
+  },
+  {
+    "data": {
+      "name": "Aspen-Klippa Penang Bridge International Marathon",
+      "url": "https://penangmarathon.gov.my/",
+      "race_date": "2026-12-13",
+      "city": [
+        "Penang"
+      ],
+      "country": [
+        "Malaysia"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "entry_fee": "RM 150 Malaysian / RM 300 non-Malaysian",
+      "distances": [
+        "half-marathon",
+        "10k"
+      ]
+    },
+    "source_url": "https://system.penangmarathon.gov.my/register/2026",
+    "evidence": "ASPEN-KLIPPA PENANG BRIDGE INTERNATIONAL MARATHON @ PENANG 2ND BRIDGE 2026 13th December 2026 Individual Registration",
+    "observed_at": "2026-10-02T14:05:38Z"
+  },
+  {
+    "data": {
+      "name": "Lok Sahaita Marathon",
+      "url": "https://loksahaita.org/",
+      "race_date": "2026-12-20",
+      "city": [
+        "Sukkur"
+      ],
+      "country": [
+        "Pakistan"
+      ],
+      "region": "asia-pacific",
+      "label": "label",
+      "distances": [
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://loksahaita.org/hkportal/",
+    "evidence": "Upcoming Events 20 Dec 2026 3rd Lok Sahaita Marathon 2026 (42.195km)",
+    "observed_at": "2026-10-02T14:04:19Z"
+  },
+  {
+    "data": {
+      "name": "Muang Thai-Chiang Mai Marathon (เมืองไทย-เชียงใหม่มาราธอน)",
+      "url": "https://www.chiangmaimarathon.com/",
+      "race_date": "2026-12-20",
+      "city": [
+        "Chiang Mai"
+      ],
+      "country": [
+        "Thailand"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "entry_fee": "1,500 THB foreigners / 1,200 THB Thai",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "fun-run",
+        "kids-run",
+        "relay"
+      ]
+    },
+    "source_url": "https://www.chiangmaimarathon.com/th",
+    "evidence": "เมืองไทย เชียงใหม่มาราธอน 2026 สนามวิ่งมาราธอนประเพณีนานาชาติ กระตุ้นเศรษฐกิจและการท่องเที่ยวจังหวัดเชียงใหม่ ครั้งที่ 21 20 ธันวาคม 2569 ณ ข่วงประตูท่าแพ จังหวัดเชียงใหม่",
+    "observed_at": "2026-10-02T14:05:41Z"
+  },
+  {
+    "data": {
+      "name": "Taipei Marathon (臺北馬拉松)",
+      "url": "https://www.taipeicitymarathon.com/",
+      "race_date": "2026-12-20",
+      "city": [
+        "Taipei"
+      ],
+      "country": [
+        "Chinese Taipei"
+      ],
+      "region": "asia-pacific",
+      "label": "gold",
+      "registration_closes": "2026-07-15",
+      "entry_fee": "NT$2200",
+      "field_size": 9000,
+      "distances": [
+        "half-marathon",
+        "wheelchair"
+      ]
+    },
+    "source_url": "https://www.taipeicitymarathon.com/REGULATION202612.php",
+    "evidence": "競賽日期 2026年 12 月 20 日（星期日）上午 06:30 起跑 起跑地點 臺北市市民廣場 終點地點 (一)馬拉松: 臺北田徑場 (二)半程馬拉松&半程馬拉松輪椅組: 南京東路四段不越過健康路口",
+    "observed_at": "2026-10-02T14:08:26Z"
+  },
+  {
+    "data": {
+      "name": "Guangzhou Marathon (广州马拉松赛)",
+      "url": "https://www.guangzhou-marathon.com/",
+      "race_date": "2026-12-20",
+      "city": [
+        "Guangzhou"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "label": "gold",
+      "registration_closes": "2026-09-11",
+      "entry_fee": "180元人民币/人",
+      "field_size": 30000
+    },
+    "source_url": "https://huacheng.gz-cmc.com/pages/2026/09/02/a78e2721c8344bd9a7b4e7749c38ec99.html",
+    "evidence": "据广州马拉松赛组委会消息，2026广汽丰田广州马拉松赛将于12月20日（星期日）鸣枪起跑，赛事规模30000人。赛事于9月2日10时启动报名，9月11日18时截止。",
+    "observed_at": "2026-10-02T14:14:40Z"
+  },
+  {
+    "data": {
+      "name": "Fuzhou Marathon (福州马拉松)",
+      "url": "https://www.fuzhou-marathon.com/",
+      "race_date": "2026-12-27",
+      "city": [
+        "Fuzhou"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "label": "elite",
+      "registration_closes": "2026-09-19"
+    },
+    "source_url": "https://finance.sina.com.cn/wm/2026-07-05/doc-inifuaqx2146137.shtml",
+    "evidence": "福建省2026年下半年马拉松赛事 赛历 近日正式敲定！ 其中 福州马拉松将于12月27日举行！ 本次赛历由省体育局广泛征求各地体育部门及行业专家意见，经全面梳理优化、统筹调整，并通过中国田径协会审核确认。",
+    "observed_at": "2026-10-02T14:14:44Z"
+  },
+  {
+    "data": {
+      "name": "Neujahrsmarathon Zürich",
+      "url": "https://www.neujahrsmarathon.ch/",
+      "race_date": "2027-01-01",
+      "city": [
+        "Schlieren"
+      ],
+      "country": [
+        "Switzerland"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "quarter-marathon"
+      ]
+    },
+    "source_url": "https://www.neujahrsmarathon.ch/information/",
+    "evidence": "Organisers Verein Neujahrsmarathon Zürich Date Thursday, 31 December 2026 – Friday, 1 January 2027 Start times Kids run, 750 m: 31 December, 22h00 Marathon, half marathon, quarter marathon and team run: 1 January, 00h00",
+    "observed_at": "2026-10-02T13:55:03Z"
+  },
+  {
+    "data": {
+      "name": "Freshworks Chennai Marathon",
+      "url": "https://www.thechennaimarathon.com/",
+      "race_date": "2027-01-03",
+      "city": [
+        "Chennai"
+      ],
+      "country": [
+        "India"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "32k",
+        "10k"
+      ]
+    },
+    "source_url": "https://www.thechennaimarathon.com/",
+    "evidence": "Freshworks Chennai Marathon 2027 Level Up Together The 15th edition of the Freshworks Chennai Marathon, powered by Chennai Runners, takes place on Sunday, 3 January 2027.",
+    "observed_at": "2026-10-02T14:04:20Z"
+  },
+  {
+    "data": {
+      "name": "Egyptian Marathon",
+      "url": "https://www.egyptianmarathon.com/",
+      "race_date": "2027-01-08",
+      "city": [
+        "Luxor"
+      ],
+      "country": [
+        "Egypt"
+      ],
+      "region": "africa-middle-east",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "12k",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.egyptianmarathon.com/",
+    "evidence": "34th Egyptian Luxor Marathon Run along the Nile from Hatshepsut Temple through Luxor's historic landmarks Friday, January 8, 2027 Hatshepsut Temple, Luxor, Egypt 5K · 12K · Half Marathon · Marathon (AIMS Cert.)",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "Polar Night Marathon",
+      "url": "https://msm.no/",
+      "race_date": "2027-01-09",
+      "city": [
+        "Tromsø"
+      ],
+      "country": [
+        "Norway"
+      ],
+      "region": "europe",
+      "label": "aims"
+    },
+    "source_url": "https://msm.no/en/polar-night-marathon/",
+    "evidence": "January 9, 2027 Polar Night Marathon Join Norway's biggest winter race! Registration here Polar Night Marathon is a proud member of AIMS, the marathon distance is control measured and certified.",
+    "observed_at": "2026-10-02T13:55:15Z"
+  },
+  {
+    "data": {
+      "name": "Marathon Mérida Banorte",
+      "url": "https://marathonmerida.dashport.run/",
+      "race_date": "2027-01-10",
+      "city": [
+        "Mérida"
+      ],
+      "country": [
+        "Mexico"
+      ],
+      "region": "americas",
+      "label": "aims",
+      "entry_fee": "690 MXN"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10157.html",
+    "evidence": "Marathon Mérida Banorte Mexico | M,H,R | Full member of AIMS Race information Forthcoming events Merida, Mexico Please consult race website for route map. 10 Marathon Mérida Banorte Sun 10 January 2027",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "Bangkok Marathon",
+      "url": "https://www.bkkmarathon.com/",
+      "race_date": "2027-01-10",
+      "city": [
+        "Bangkok"
+      ],
+      "country": [
+        "Thailand"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "registration_closes": "2026-10-31",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.timeout.com/bangkok/news/bangkok-marathon-071026",
+    "evidence": "The 37th Bangkok Marathon returns on January 10, 2027, bringing together everyone from first-time runners looking for a new challenge to seasoned marathoners chasing their next personal best.",
+    "observed_at": "2026-10-02T14:05:38Z"
+  },
+  {
+    "data": {
+      "name": "Khon Kaen International Marathon (ขอนแก่นมาราธอนนานาชาติ)",
+      "url": "https://www.khonkaenmarathon.com/",
+      "race_date": "2027-01-10",
+      "city": [
+        "Khon Kaen"
+      ],
+      "country": [
+        "Thailand"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "entry_fee": "1,100 THB",
+      "distances": [
+        "half-marathon",
+        "mini-marathon",
+        "fun-run",
+        "kids-run"
+      ]
+    },
+    "source_url": "https://www.khonkaenmarathon.com/",
+    "evidence": "Get ready for the 22nd Khon Kaen International Marathon (KKIM 2027) on January 9–10, 2027",
+    "observed_at": "2026-10-02T14:05:44Z"
+  },
+  {
+    "data": {
+      "name": "B-Quik Khao Yai Marathon",
+      "url": "https://www.khaoyaimarathon.com/",
+      "race_date": "2027-01-10",
+      "city": [
+        "Pak Chong"
+      ],
+      "country": [
+        "Thailand"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k",
+        "fun-run"
+      ]
+    },
+    "source_url": "https://www.khaoyaimarathon.com/en/",
+    "evidence": "B-Quik Khao Yai Marathon 2027 — 9-10 January 2027, Khao Yai Marathon Venue, Pak Chong, Thailand",
+    "observed_at": "2026-10-02T14:05:44Z"
+  },
+  {
+    "data": {
+      "name": "Kaohsiung Fubon Marathon (富邦人壽高雄馬拉松)",
+      "url": "https://khm.com.tw/",
+      "race_date": "2027-01-10",
+      "city": [
+        "Kaohsiung"
+      ],
+      "country": [
+        "Chinese Taipei"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "registration_closes": "2026-10-23",
+      "distances": [
+        "half-marathon",
+        "fun-run"
+      ]
+    },
+    "source_url": "https://running.biji.co/index.php?q=news&act=info&id=114711",
+    "evidence": "2027 富邦人壽高雄馬拉松將於 2027 年 1 月 9、10 日 登場，全馬與半馬安排於 1 月 10 日舉行。報名於 9 月 21 日下午 3 點 正式開放，至 10 月 23 日截止",
+    "observed_at": "2026-10-02T14:08:39Z"
+  },
+  {
+    "data": {
+      "name": "Standard Chartered Taipei Charity Marathon (渣打臺北公益馬拉松)",
+      "url": "https://scbmarathon.com/",
+      "race_date": "2027-01-10",
+      "city": [
+        "Taipei"
+      ],
+      "country": [
+        "Chinese Taipei"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "registration_closes": "2026-10-30",
+      "entry_fee": "1,500元",
+      "field_size": 4700,
+      "distances": [
+        "half-marathon",
+        "12k",
+        "3k"
+      ]
+    },
+    "source_url": "https://scbmarathon.com/race-category.html",
+    "evidence": "地點：臺北田徑場檢錄室134、135室（暫定） 賽事日 2027年1月10日 (星期日) 早鳥期間，報名費享原價95折優惠。持渣打銀行發行之信用卡和簽帳金融卡 (Debit Card) 客戶通過驗證後，則可享原價9折優惠",
+    "observed_at": "2026-10-02T14:08:43Z"
+  },
+  {
+    "data": {
+      "name": "Chongqing Marathon (重庆马拉松)",
+      "url": "https://www.cqmarathon.com/",
+      "race_date": "2027-01-10",
+      "city": [
+        "Chongqing"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "label": "gold",
+      "registration_closes": "2026-09-13",
+      "entry_fee": "中国籍人民币200元/人 外籍人民币350元/人",
+      "field_size": 26000
+    },
+    "source_url": "https://www.cqmarathon.com/News/Detail/1CB916B2816F6C28",
+    "evidence": "2027重庆马拉松报名须知 一、赛事基本信息 （一）比赛日期：2027年1月10日（星期日），发令时间：8:00 （二）比赛地点：重庆市南滨路、巴滨路 二、赛事项目及规模 马拉松（42.195公里）：26000人",
+    "observed_at": "2026-10-02T14:14:53Z"
+  },
+  {
+    "data": {
+      "name": "C&D Xiamen Marathon (厦门马拉松)",
+      "url": "https://www.xmim.org/",
+      "race_date": "2027-01-10",
+      "city": [
+        "Xiamen"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "label": "platinum"
+    },
+    "source_url": "https://aims-worldrunning.org/races/632.html",
+    "evidence": "C&D Xiamen Marathon China | M | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 10 C&D Xiamen Marathon Sun 10 January 2027",
+    "observed_at": "2026-10-02T14:14:53Z"
+  },
+  {
+    "data": {
+      "name": "Doha Marathon by Ooredoo",
+      "url": "https://dohamarathonooredoo.com/",
+      "race_date": "2027-01-15",
+      "city": [
+        "Doha"
+      ],
+      "country": [
+        "Qatar"
+      ],
+      "region": "africa-middle-east",
+      "label": "gold"
+    },
+    "source_url": "https://dohamarathonooredoo.com/en/",
+    "evidence": "The 15th edition of the Doha Marathon by Ooredoo, scheduled for 15 January 2027, is set to be the largest ever. With over 25,000 participants expected",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "Chevron Houston Marathon",
+      "url": "https://www.chevronhoustonmarathon.com/",
+      "race_date": "2027-01-17",
+      "city": [
+        "Houston"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "label": "gold",
+      "distances": [
+        "half-marathon",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.chevronhoustonmarathon.com/faqs/",
+    "evidence": "When is the race? The Chevron Houston Marathon and Aramco Houston Half Marathon will take place on Sunday, Jan. 17, 2027. The We Are Houston 5K presented by Aramco and Chevron will take place on Saturday, Jan. 16, 2027.",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "Maui Oceanfront Marathon",
+      "url": "https://www.mauioceanfrontmarathon.com/",
+      "race_date": "2027-01-17",
+      "city": [
+        "Wailea"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "6-miler",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.mauioceanfrontmarathon.com/",
+    "evidence": "Maui Oceanfront Marathon- January 17, 2027 RRCA State Marathon & Half Marathon Championships",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "Dubai Marathon",
+      "url": "https://www.dubaimarathon.org/",
+      "race_date": "2027-01-17",
+      "city": [
+        "Dubai"
+      ],
+      "country": [
+        "United Arab Emirates"
+      ],
+      "region": "africa-middle-east",
+      "label": "label"
+    },
+    "source_url": "https://www.dubaimarathon.org/",
+    "evidence": "Runner registration for the 26th edition of the Dubai Marathon is now open with the Middle East's oldest international marathon set to take place on Sunday, January 17, 2027.",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "Tata Mumbai Marathon",
+      "url": "https://tatamumbaimarathon.procam.in/",
+      "race_date": "2027-01-17",
+      "city": [
+        "Mumbai"
+      ],
+      "country": [
+        "India"
+      ],
+      "region": "asia-pacific",
+      "label": "gold",
+      "registration_closes": "2026-11-05",
+      "entry_fee": "₹ 5,000 (domestic); USD 90 (overseas)",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "fun-run",
+        "senior-citizens-run",
+        "champions-with-disability"
+      ]
+    },
+    "source_url": "https://tatamumbaimarathon.procam.in/race-categories/marathon/faqs",
+    "evidence": "When is the On-Ground event's race day? The Tata Mumbai Marathon 2027 will happen on Sunday, 17th January 2027. When do the registrations start and end? Marathon (42.195 km) Registration Start Date: Friday, 31st July 2026, 7 AM IST. Registration End Date: Thursday, 5th November 2026",
+    "observed_at": "2026-10-02T14:04:17Z"
+  },
+  {
+    "data": {
+      "name": "Standard Chartered Hong Kong Marathon (渣打香港馬拉松)",
+      "url": "https://www.hkmarathon.com/",
+      "race_date": "2027-01-17",
+      "city": [
+        "Hong Kong"
+      ],
+      "country": [
+        "Hong Kong"
+      ],
+      "region": "asia-pacific",
+      "label": "gold",
+      "registration_closes": "2026-09-20",
+      "entry_fee": "HKD 600 (local) / USD 90 (non-local)",
+      "field_size": 18000,
+      "distances": [
+        "half-marathon",
+        "10k",
+        "wheelchair"
+      ]
+    },
+    "source_url": "https://www.hkmarathon.com/race-information",
+    "evidence": "Race Information Marathon Half Marathon 10km 10km Wheelchair Race Information Registration Entry Requirements E-Certificates and Finisher Medal Information Distance 42.195km Race Day 17 January 2027 (Sunday) Quota 18,000",
+    "observed_at": "2026-10-02T14:08:25Z"
+  },
+  {
+    "data": {
+      "name": "Kinmen Marathon (金門馬拉松)",
+      "url": "https://www.sportsnet.org.tw/",
+      "race_date": "2027-01-17",
+      "city": [
+        "Kinmen"
+      ],
+      "country": [
+        "Chinese Taipei"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "registration_closes": "2026-10-30",
+      "entry_fee": "NT$1000",
+      "field_size": 2000,
+      "distances": [
+        "half-marathon",
+        "10k",
+        "fun-run"
+      ]
+    },
+    "source_url": "https://www.sportsnet.org.tw/20270117_web/",
+    "evidence": "2027 金門馬拉松 金馬二十，傳奇有您 2027/1/16-1/17 全馬・半馬・10KM・4KM 金門縣金城鎮 競賽項目 路線說明 報名辦法 參賽物品領取方式 跑者好禮 線上訓練指南 金門遊程推薦 立榮假期 秩序冊 立即報名 活動資訊 活動日期 2027年 1/16（六）健康休閒組-4KM 1/17（日）競賽組-馬拉松、半程馬拉松 、10KM 活動地點 1/16 金城田徑場 1/17 金馬聯合服務中心前廣場",
+    "observed_at": "2026-10-02T14:08:52Z"
+  },
+  {
+    "data": {
+      "name": "Buriram Marathon Presented by Chang Mineral (บุรีรัมย์ มาราธอน)",
+      "url": "https://burirammarathon.com/",
+      "race_date": "2027-01-23",
+      "city": [
+        "Buriram"
+      ],
+      "country": [
+        "Thailand"
+      ],
+      "region": "asia-pacific",
+      "label": "label",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "fun-run"
+      ]
+    },
+    "source_url": "https://burirammarathon.com/%e0%b9%81%e0%b8%96%e0%b8%a5%e0%b8%87%e0%b9%83%e0%b8%ab%e0%b8%8d%e0%b9%88%e0%b8%9b%e0%b8%b5%e0%b8%97%e0%b8%b5%e0%b9%88-11-%e0%b8%9a%e0%b8%b8%e0%b8%a3%e0%b8%b5%e0%b8%a3%e0%b8%b1%e0%b8%a1%e0%b8%a2/",
+    "evidence": "ชวนปอดเหล็กทั่วโลกร่วมบันทึกประวัติศาสตร์หน้าใหม่ 23 มกราคม 2570 คาดนักวิ่งและผู้ติดตามทะลุแสนคน การแถลงข่าวการจัดการแข่งขัน “บุรีรัมย์ มาราธอน 2027 พรีเซนเต็ด บาย น้ำแร่ธรรมชาติตราช้าง”",
+    "observed_at": "2026-10-02T14:05:37Z"
+  },
+  {
+    "data": {
+      "name": "Twincity Marathon",
+      "url": "https://www.twincitymarathon.com/",
+      "race_date": "2027-01-24",
+      "city": [
+        "Putrajaya",
+        "Cyberjaya"
+      ],
+      "country": [
+        "Malaysia"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "entry_fee": "RM 145 normal / RM 165 international",
+      "distances": [
+        "half-marathon",
+        "12k",
+        "10k",
+        "5k",
+        "kids-run"
+      ]
+    },
+    "source_url": "https://www.twincitymarathon.com/",
+    "evidence": "23 January 2027 (3KM Kids Dash & 10KM Friendship Run) and 24 January 2027 (42KM Full Marathon, 21KM Half Marathon, 12KM Race, 5KM Fun Run).",
+    "observed_at": "2026-10-02T14:24:09Z"
+  },
+  {
+    "data": {
+      "name": "Bank of Cyprus Nicosia Marathon",
+      "url": "https://nicosiamarathon.com/",
+      "race_date": "2027-01-24",
+      "city": [
+        "Nicosia"
+      ],
+      "country": [
+        "Cyprus"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k"
+      ]
+    },
+    "source_url": "https://www.nicosiamarathon.com/",
+    "evidence": "Register Now Register Now 8 th Bank of Cyprus Nicosia Marathon 24.01.2027 Days Hours Minutes Seconds Register Now 50% OFF Bank of Cyprus Nicosia Marathon 24.01.2027",
+    "observed_at": "2026-10-02T13:39:02Z"
+  },
+  {
+    "data": {
+      "name": "Experience Oman Muscat Marathon",
+      "url": "https://muscatmarathon.om/",
+      "race_date": "2027-01-29",
+      "city": [
+        "Muscat"
+      ],
+      "country": [
+        "Oman"
+      ],
+      "region": "africa-middle-east",
+      "label": "aims",
+      "entry_fee": "USD $99",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10194.html",
+    "evidence": "Muscat Marathon Oman | M,H,R | Full member of AIMS Race information Forthcoming events Ruwi Muscat, Oman Please consult race website for route map. 29 Muscat Marathon Fri 29 January 2027 - Sat 30 January 2027",
+    "observed_at": "2026-10-02T14:06:06Z"
+  },
+  {
+    "data": {
+      "name": "Marathon International de Marrakech",
+      "url": "https://www.marathonmarrakech.ma/",
+      "race_date": "2027-01-31",
+      "city": [
+        "Marrakech"
+      ],
+      "country": [
+        "Morocco"
+      ],
+      "region": "africa-middle-east",
+      "label": "label",
+      "distances": [
+        "half-marathon",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/642.html",
+    "evidence": "Marathon & Semi-marathon International de Marrakech Morocco | M,H | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 31 Marathon & Semi Int'l de Marrakech Sun 31 January 2027",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "Osaka Women's Marathon (大阪国際女子マラソン)",
+      "url": "https://www.osaka-marathon.jp/",
+      "race_date": "2027-01-31",
+      "city": [
+        "Osaka"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "label": "platinum"
+    },
+    "source_url": "https://www.osaka-marathon.jp/",
+    "evidence": "WORLD ATHLETICS PLATINUM LABEL OSAKA WOMEN'S MARATHON 46 第46回大阪国際女子マラソン大会 DATE JAN 31 2027 2027年1月31日（日） START 12:15 ヤンマースタジアム長居",
+    "observed_at": "2026-10-02T13:56:53Z"
+  },
+  {
+    "data": {
+      "name": "Funchal Marathon",
+      "url": "https://www.madeiramarathon.com/",
+      "race_date": "2027-01-31",
+      "city": [
+        "Funchal"
+      ],
+      "country": [
+        "Portugal"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "8k"
+      ]
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10131.html",
+    "evidence": "Funchal Marathon Maratona do Funchal | Portugal | M,H | Full member of AIMS Race information Forthcoming events Funchal, Madeira Please consult race website for route map. 31 Funchal Marathon Sun 31 January 2027",
+    "observed_at": "2026-10-02T13:36:17Z"
+  },
+  {
+    "data": {
+      "name": "Johannesbad Thermen-Marathon",
+      "url": "https://www.thermen-marathon.de/",
+      "race_date": "2027-01-31",
+      "city": [
+        "Bad Füssing"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k"
+      ]
+    },
+    "source_url": "https://www.thermen-marathon.de/",
+    "evidence": "Ergebnisse 2026 Laufstrecke Fotos 2026 Wir sehen uns am 31.01.2027 zum 32. Thermen-marathon!",
+    "observed_at": "2026-10-02T13:55:40Z"
+  },
+  {
+    "data": {
+      "name": "Kilimanjaro Marathon",
+      "url": "https://www.kilimanjaromarathon.com/",
+      "race_date": "2027-02-07",
+      "city": [
+        "Moshi"
+      ],
+      "country": [
+        "Tanzania"
+      ],
+      "region": "africa-middle-east",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.kilimanjaromarathon.com/",
+    "evidence": "THE KILIMANJARO MARATHON HAS CHANGED DATES! NEW RACE DATE: 7 FEB 2027 DID YOU KNOW? THE 2027 KILIMANJARO FULL MARATHON IS AN OFFICIAL COMRADES QUALIFIER!",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "Beppu-Oita Mainichi Marathon (別府大分毎日マラソン)",
+      "url": "https://www.betsudai.com/",
+      "race_date": "2027-02-07",
+      "city": [
+        "Oita"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "label": "elite",
+      "entry_fee": "18,000円",
+      "field_size": 4000
+    },
+    "source_url": "https://www.betsudai.com/outline/",
+    "evidence": "期日 2027年2月7日（日）12:05スタート コース 日本陸連公認別府大分毎日マラソン大会コース（42.195km）",
+    "observed_at": "2026-10-02T13:56:59Z"
+  },
+  {
+    "data": {
+      "name": "Ehime Marathon (愛媛マラソン)",
+      "url": "https://ehimemarathon.jp/",
+      "race_date": "2027-02-07",
+      "city": [
+        "Matsuyama"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "registration_closes": "2026-08-20",
+      "entry_fee": "12,900円"
+    },
+    "source_url": "https://ehimemarathon.jp/outline/",
+    "evidence": "第64回愛媛マラソン大会要項 開催日 2027年2月7日（日） 雨天決行 10:00スタート 種目 マラソン（42.195km）",
+    "observed_at": "2026-10-02T13:57:04Z"
+  },
+  {
+    "data": {
+      "name": "MG Vadodara Marathon",
+      "url": "https://www.vadodaramarathon.com/",
+      "race_date": "2027-02-07",
+      "city": [
+        "Vadodara"
+      ],
+      "country": [
+        "India"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "entry_fee": "Rs. 2713 (Indian); Rs. 4739 (foreigners)",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k",
+        "fun-run"
+      ]
+    },
+    "source_url": "https://vadodaramarathon.com/price_chart",
+    "evidence": "VADODARA INTERNATIONAL MARATHON 2027 7 th February 2027 Sr.No Event Categories Participants Age Group Registration Amount (including GST and Convenience fees)",
+    "observed_at": "2026-10-02T14:04:26Z"
+  },
+  {
+    "data": {
+      "name": "AU Jaipur Marathon",
+      "url": "https://www.marathonjaipur.com/",
+      "race_date": "2027-02-14",
+      "city": [
+        "Jaipur"
+      ],
+      "country": [
+        "India"
+      ],
+      "region": "asia-pacific",
+      "label": "aims"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10175.html",
+    "evidence": "AU Jaipur Marathon India | M,H,R | Full member of AIMS Race video Race information Forthcoming events Jaipur, India Please consult race website for route map. 14 AU Jaipur Marathon Sun 14 February 2027",
+    "observed_at": "2026-10-02T14:04:27Z"
+  },
+  {
+    "data": {
+      "name": "Split Marathon",
+      "url": "https://splitmarathon.com/",
+      "race_date": "2027-02-14",
+      "city": [
+        "Split"
+      ],
+      "country": [
+        "Croatia"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://splitmarathon.com/en/home/",
+    "evidence": "Split night half 5K 8.8.2026. 22:00 Žnjan beach Find out more Marathon 42K 14.2.2027. 9:00 Riva Find out more TOMMY Half marathon 21K 14.2.2027. 9:00 Riva Find out more Mazda 10k 14.2.2027.",
+    "observed_at": "2026-10-02T13:55:54Z"
+  },
+  {
+    "data": {
+      "name": "Kyoto Marathon (京都マラソン)",
+      "url": "https://kyoto-marathon.com/",
+      "race_date": "2027-02-21",
+      "city": [
+        "Kyoto"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "entry_fee": "JPY19,500",
+      "field_size": 16000,
+      "distances": [
+        "relay",
+        "wheelchair"
+      ]
+    },
+    "source_url": "https://kyoto-marathon.com/en/info/",
+    "evidence": "Events Marathon (42.195 km) Pair-Ekiden (1st Stage: approx. 27.6 km, 2nd Stage: approx. 14.6 km) Wheelchair race (6.1 km) Date & Time Sunday, February 21, 2027 08:55: Wheelchair race start 09:00: Marathon and pair-Ekiden start",
+    "observed_at": "2026-10-02T13:57:01Z"
+  },
+  {
+    "data": {
+      "name": "Kitakyushu Marathon (北九州マラソン)",
+      "url": "https://kitakyushu-marathon.jp/",
+      "race_date": "2027-02-21",
+      "city": [
+        "Kitakyushu"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "entry_fee": "15,500円",
+      "field_size": 10800,
+      "distances": [
+        "relay",
+        "fun-run"
+      ]
+    },
+    "source_url": "https://kitakyushu-marathon.jp/about/",
+    "evidence": "開催日時 2027年（令和9年）2月21日（日） 9:00 マラソン、ペアリレーマラソン、20.7kmマラソン スタート（予定） 10:00 ファンラン スタート（予定） 10:45 ファンラン 終了 12:00 20.7kmマラソン 終了 15:00 マラソン、ペアリレーマラソン 終了 競技規則 2026年度日本陸上競技連盟競技規則及び本大会競技注意事項によります。 コース マラソン 北九州市役所前をスタートし",
+    "observed_at": "2026-10-02T13:57:04Z"
+  },
+  {
+    "data": {
+      "name": "St. Valentine’s Marathon",
+      "url": "https://www.maratonadisanvalentino.it/",
+      "race_date": "2027-02-21",
+      "city": [
+        "Terni"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "8k"
+      ]
+    },
+    "source_url": "https://www.maratonadisanvalentino.it/la-gara/",
+    "evidence": "21 Febbraio 2027 Terni, Umbria - Italia Giorni Ore Minuti Secondi #runforlove Maratona 42,195 Km Iscriviti ora #runforlove Mezza Maratona 21,097 Km Iscriviti ora",
+    "observed_at": "2026-10-02T13:56:27Z"
+  },
+  {
+    "data": {
+      "name": "Zurich Seville Marathon",
+      "url": "https://www.zurichmaratonsevilla.es/",
+      "race_date": "2027-02-21",
+      "city": [
+        "Seville"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "region": "europe",
+      "label": "elite",
+      "registration_closes": "2027-02-15",
+      "field_size": 20000,
+      "distances": [
+        "5k"
+      ]
+    },
+    "source_url": "https://www.zurichmaratonsevilla.es/en/zms-regulations",
+    "evidence": "The Municipal Sports Institute of the City Council of Seville organizes, together with Sport Life Ibérica SA, the XLII Zurich Seville Marathon, to be held on Sunday, February 21, 2027, at 8:30 a.m.",
+    "observed_at": "2026-10-02T13:56:11Z"
+  },
+  {
+    "data": {
+      "name": "Tel Aviv Bank Leumi Marathon",
+      "url": "https://www.tlvmarathon.co.il/",
+      "race_date": "2027-02-26",
+      "city": [
+        "Tel Aviv"
+      ],
+      "country": [
+        "Israel"
+      ],
+      "region": "africa-middle-east",
+      "label": "label"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/683.html",
+    "evidence": "Tel Aviv Bank Leumi Marathon Israel | M,H,R | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 26 Tel Aviv Bank Leumi Marathon Fri 26 February 2027",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "Osaka Marathon (大阪マラソン)",
+      "url": "https://www.osaka-marathon.com/",
+      "race_date": "2027-02-28",
+      "city": [
+        "Osaka"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "label": "gold",
+      "registration_closes": "2026-08-28",
+      "entry_fee": "16,000円",
+      "field_size": 31970
+    },
+    "source_url": "https://www.osaka-marathon.com/2027/news/187",
+    "evidence": "大阪マラソン2027出場ランナーの募集を開始します 2027年2月28日（日）開催の大阪マラソン2027のランナー募集を10時から開始します。",
+    "observed_at": "2026-10-02T13:56:54Z"
+  },
+  {
+    "data": {
+      "name": "Cognizant New Delhi Marathon",
+      "url": "https://www.newdelhimarathon.com/",
+      "race_date": "2027-02-28",
+      "city": [
+        "New Delhi"
+      ],
+      "country": [
+        "India"
+      ],
+      "region": "asia-pacific",
+      "label": "label",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10167.html",
+    "evidence": "Cognizant New Delhi Marathon India | M,H | Full member of AIMS Race information Forthcoming events New Delhi, India Please consult race website for route map. 28 Cognizant New Delhi Marathon Sun 28 February 2027",
+    "observed_at": "2026-10-02T14:04:19Z"
+  },
+  {
+    "data": {
+      "name": "Daegu Marathon (대구마라톤)",
+      "url": "https://daegu.go.kr/",
+      "race_date": "2027-02-28",
+      "city": [
+        "Daegu"
+      ],
+      "country": [
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "label": "gold",
+      "field_size": 15000,
+      "distances": [
+        "10k",
+        "fun-run"
+      ]
+    },
+    "source_url": "https://www.kbmaeil.com/article/20260924500029",
+    "evidence": "2027 대구마라톤의 출발·도착지가 대구스타디움에서 국채보상운동기념공원으로 바뀐다. 대구시는 달구벌대로를 중심으로 시내 주요 명소를 지나는 도심 코스로 대회를 전면 개편한다고 24일 밝혔다. 대회는 내년 2월 28일 열린다.",
+    "observed_at": "2026-10-02T14:08:32Z"
+  },
+  {
+    "data": {
+      "name": "LifeStar Malta Marathon",
+      "url": "https://maltamarathon.com/",
+      "race_date": "2027-02-28",
+      "city": [
+        "Mdina"
+      ],
+      "country": [
+        "Malta"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon"
+      ]
+    },
+    "source_url": "https://maltamarathon.com/malta-marathon/",
+    "evidence": "Home » LifeStar Malta Marathon LifeStar Malta Marathon LifeStar Malta Marathon – 28 February 2027",
+    "observed_at": "2026-10-02T13:56:54Z"
+  },
+  {
+    "data": {
+      "name": "TUI Cyprus Marathon",
+      "url": "https://www.cyprusmarathon.com/",
+      "race_date": "2027-02-28",
+      "city": [
+        "Pafos"
+      ],
+      "country": [
+        "Cyprus"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10164.html",
+    "evidence": "TUI Cyprus Marathon Cyprus | M,H,R | Full member of AIMS Race information Forthcoming events Cyprus Please consult race website for route map. 27 TUI Cyprus Marathon Sat 27 February 2027 – Sun 28 February 2027",
+    "observed_at": "2026-10-02T13:36:17Z"
+  },
+  {
+    "data": {
+      "name": "Tokyo Marathon (東京マラソン)",
+      "url": "https://www.marathon.tokyo/",
+      "race_date": "2027-03-07",
+      "city": [
+        "Tokyo"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "label": "world-major",
+      "registration_closes": "2026-08-28",
+      "entry_fee": "JPY 19,800",
+      "field_size": 40000,
+      "distances": [
+        "wheelchair"
+      ]
+    },
+    "source_url": "https://www.marathon.tokyo/en/participants/guideline/",
+    "evidence": "Events Marathon (Marathon, Wheelchair Marathon) Date Sunday, March 7, 2027 Course Tokyo Metropolitan Government Building - Suidobashi - Ueno-hirokoji - Kanda - Nihombashi",
+    "observed_at": "2026-10-02T13:56:53Z"
+  },
+  {
+    "data": {
+      "name": "Nagoya Women's Marathon (名古屋ウィメンズマラソン)",
+      "url": "https://womens-marathon.nagoya/",
+      "race_date": "2027-03-14",
+      "city": [
+        "Nagoya"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "label": "platinum",
+      "entry_fee": "19,000円",
+      "distances": [
+        "wheelchair"
+      ]
+    },
+    "source_url": "https://womens-marathon.nagoya/outline/general/",
+    "evidence": "種目 女子マラソン 開催日時 2027年3月14日（日） 9:10スタート（※日本時間） コース 名古屋ウィメンズマラソンコース 【バンテリンドーム ナゴヤ発着、日本陸上競技連盟、WA/AIMS公認コース】",
+    "observed_at": "2026-10-02T13:56:53Z"
+  },
+  {
+    "data": {
+      "name": "Tokushima Marathon (とくしまマラソン)",
+      "url": "https://tokushima-marathon.jp/",
+      "race_date": "2027-03-14",
+      "city": [
+        "Tokushima",
+        "Naruto"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "entry_fee": "13,000円",
+      "field_size": 8500,
+      "distances": [
+        "2k"
+      ]
+    },
+    "source_url": "https://tokushima-marathon.jp/outline/",
+    "evidence": "主管 とくしまマラソン実行委員会 開催日程 2027年3月14日（日） 8:20第1ウェーブスタート～8:30第2ウェーブスタート～15:00競技終了",
+    "observed_at": "2026-10-02T13:57:05Z"
+  },
+  {
+    "data": {
+      "name": "Acea Run Rome The Marathon",
+      "url": "https://www.runromethemarathon.com/",
+      "race_date": "2027-03-14",
+      "city": [
+        "Rome"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe",
+      "label": "elite",
+      "distances": [
+        "relay",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.runromethemarathon.com/en/home-2025-en-2/marathon/",
+    "evidence": "discover why Rome’s marathon is considered one of the most fascinating in the world. Your heartbeat will follow the rhythm of thousands of runners from around the globe: 42.195 km of pure emotion among iconic monuments and stunning vistas. 14 March 2027 is your day—one that will never fade.",
+    "observed_at": "2026-10-02T13:58:15Z"
+  },
+  {
+    "data": {
+      "name": "Zurich Marató de Barcelona",
+      "url": "https://zurichmaratobarcelona.es/",
+      "race_date": "2027-03-14",
+      "city": [
+        "Barcelona"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "region": "europe",
+      "label": "elite"
+    },
+    "source_url": "https://zurichmaratobarcelona.es/en/i-am-a-runner/regulation/",
+    "evidence": "Its General Coordination and ownership of the event corresponds to the Institut Barcelona Esports and its Executive Organization at RPM Sports Race Day: Sunday, March 14, 2027. Check-out is at 8:30 am.",
+    "observed_at": "2026-10-02T13:57:32Z"
+  },
+  {
+    "data": {
+      "name": "Jerusalem Winner Marathon",
+      "url": "https://jerusalem-marathon.com/",
+      "race_date": "2027-03-19",
+      "city": [
+        "Jerusalem"
+      ],
+      "country": [
+        "Israel"
+      ],
+      "region": "africa-middle-east",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k"
+      ]
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/674.html",
+    "evidence": "Jerusalem Marathon, Half & 10k Israel | M,H,R | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 19 Jerusalem Marathon, Half & 10k Fri 19 March 2027",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "Standard Chartered Stanley Marathon",
+      "url": "https://www.sc.com/",
+      "race_date": "2027-03-21",
+      "city": [
+        "Stanley"
+      ],
+      "country": [
+        "Falkland Islands"
+      ],
+      "region": "americas",
+      "label": "aims",
+      "registration_closes": "2027-03-12",
+      "entry_fee": "£50",
+      "distances": [
+        "relay"
+      ]
+    },
+    "source_url": "https://www.sc.com/fk/marathon/",
+    "evidence": "Standard Chartered Stanley Marathon, 21 March 2027 General Information Our annual Marathon will take place on Sunday 21 March 2027.",
+    "observed_at": "2026-10-02T14:06:06Z"
+  },
+  {
+    "data": {
+      "name": "Miri Marathon",
+      "url": "https://www.marathonmiri.com/",
+      "race_date": "2027-03-21",
+      "city": [
+        "Miri"
+      ],
+      "country": [
+        "Malaysia"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.marathonmiri.com/",
+    "evidence": "Miri Marathon 2027 21 March 2027 Miri Outdoor Stadium",
+    "observed_at": "2026-10-02T14:05:45Z"
+  },
+  {
+    "data": {
+      "name": "Danang International Marathon",
+      "url": "https://rundanang.com/",
+      "race_date": "2027-03-21",
+      "city": [
+        "Da Nang"
+      ],
+      "country": [
+        "Vietnam"
+      ],
+      "region": "asia-pacific",
+      "label": "aims"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10058.html",
+    "evidence": "Danang International Marathon Vietnam | M,H,R | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 21 Danang Int’l Marathon Sun 21 March 2027",
+    "observed_at": "2026-10-02T14:06:57Z"
+  },
+  {
+    "data": {
+      "name": "Seoul Marathon (서울마라톤)",
+      "url": "https://www.seoul-marathon.com/",
+      "race_date": "2027-03-21",
+      "city": [
+        "Seoul"
+      ],
+      "country": [
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "label": "platinum",
+      "distances": [
+        "10k"
+      ]
+    },
+    "source_url": "https://www.seoul-marathon.com/96",
+    "evidence": "대회명 2027 서울마라톤 겸 제 97회 동아마라톤 대회일 2027년 3월 21일 일요일 집결장소 풀코스: 광화문광장(예정) 10km코스: 잠실종합운동장(예정)",
+    "observed_at": "2026-10-02T14:08:23Z"
+  },
+  {
+    "data": {
+      "name": "La Valette Marathon",
+      "url": "https://www.lavalettemarathon.com/",
+      "race_date": "2027-03-21",
+      "city": [
+        "St Paul's Bay"
+      ],
+      "country": [
+        "Malta"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10369.html",
+    "evidence": "Malta’s La Valette Marathon Malta | M,H | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 21 Malta’s La Valette Marathon Sun 21 March 2027",
+    "observed_at": "2026-10-02T13:36:19Z"
+  },
+  {
+    "data": {
+      "name": "Runtalya Marathon",
+      "url": "https://www.tursetsports.com/",
+      "race_date": "2027-04-04",
+      "city": [
+        "Antalya"
+      ],
+      "country": [
+        "Türkiye"
+      ],
+      "region": "africa-middle-east",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.tursetsports.com/races/runtalya",
+    "evidence": "NİSAN 04, 2027 Kategoriler 5K/10K/21K/42K Parkur Düz Başlangıç Cam Piramit Kit Dağıtımı Cam Piramit Sıcaklık 26°C Havalimanı AYT Çok Yakında Runtalya Maratonu",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "Maratón Cartago",
+      "url": "https://grupopublicitariocr.com/",
+      "race_date": "2027-04-04",
+      "city": [
+        "Cartago"
+      ],
+      "country": [
+        "Costa Rica"
+      ],
+      "region": "americas",
+      "label": "aims"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10225.html",
+    "evidence": "Maraton Cartago Costa Rica | M | Full member of AIMS Race information Forthcoming events San Jose, Costa Rica Please consult race website for route map. 4 Maraton Cartago Sun 4 April 2027",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "Hobart Marathon Festival",
+      "url": "https://www.hobartmarathon.com.au/",
+      "race_date": "2027-04-04",
+      "city": [
+        "Hobart"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k",
+        "2k"
+      ]
+    },
+    "source_url": "https://www.hobartmarathon.com.au/",
+    "evidence": "HOBART MARATHON FESTIVAL ⬩ 4 APRIL 2027 ⬩ 42.2KM · 21.1KM · 10KM · 5KM RUN · 5KM WALK · 2KM REGISTER NOW",
+    "observed_at": "2026-10-02T14:06:57Z"
+  },
+  {
+    "data": {
+      "name": "ASICS Marathon de Paris",
+      "url": "https://www.asicsmarathondeparis.com/",
+      "race_date": "2027-04-04",
+      "city": [
+        "Paris"
+      ],
+      "country": [
+        "France"
+      ],
+      "region": "europe",
+      "label": "gold"
+    },
+    "source_url": "https://news-emea.asics.com/latest-news/paris-runs-on-joy--asics-becomes-title-partner-of-the-marathon-de-paris/s/01ec1b17-7733-485f-ba64-f89cc36e3e57",
+    "evidence": "ASICS becomes title partner of the Marathon de Paris from 2027, building on a 17-year partnership. The first ASICS Marathon de Paris will mark the race’s 50th edition on April 4, 2027.",
+    "observed_at": "2026-10-02T14:03:38Z"
+  },
+  {
+    "data": {
+      "name": "International Marathon Alexander the Great",
+      "url": "https://atgm.gr/",
+      "race_date": "2027-04-04",
+      "city": [
+        "Pella",
+        "Thessaloniki"
+      ],
+      "country": [
+        "Greece"
+      ],
+      "region": "europe",
+      "label": "aims"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/688.html",
+    "evidence": "International Marathon Alexander the Great Greece | M,R | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 4 Int’l Marathon Alexander the Great Sun 4 April 2027",
+    "observed_at": "2026-10-02T13:36:19Z"
+  },
+  {
+    "data": {
+      "name": "Wizz Air Milano Marathon",
+      "url": "https://www.milanomarathon.it/",
+      "race_date": "2027-04-04",
+      "city": [
+        "Milan"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe",
+      "label": "label",
+      "distances": [
+        "relay"
+      ]
+    },
+    "source_url": "https://www.milanomarathon.it/en/",
+    "evidence": "Register Wizz Air Milano Marathon April 4, 2027 Register now Run for a Charity We Celebrate Together The Wizz Air Milano Marathon returns on April 4, 2027 with an event that’s even richer, more inclusive, and more engaging",
+    "observed_at": "2026-10-02T13:39:02Z"
+  },
+  {
+    "data": {
+      "name": "XM Limassol Marathon",
+      "url": "https://www.limassolmarathon.com/",
+      "race_date": "2027-04-04",
+      "city": [
+        "Limassol"
+      ],
+      "country": [
+        "Cyprus"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://raceroster.com/events/2027/110607/xm-limassol-marathon-2027",
+    "evidence": "XM Limassol Marathon 2027 https://www.limassolmarathon.com/ Register Store Instagram Sat, April 3, 2027 9:00 AM GMT+3 Sun, April 4, 2027 7:00 AM GMT+3 Add to calendar",
+    "observed_at": "2026-10-02T13:57:49Z"
+  },
+  {
+    "data": {
+      "name": "Canberra Marathon Festival",
+      "url": "https://solemotive.com/",
+      "race_date": "2027-04-11",
+      "city": [
+        "Canberra"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k",
+        "kids-run"
+      ]
+    },
+    "source_url": "https://solemotive.com/pages/canberra-marathon",
+    "evidence": "42.195K → MARATHON Sunday, 11 April 2027 21.1K → HALF MARATHON Sunday, 11 April 2027 10K → RUNNER'S WORLD 10K Saturday, 10 April 2027 5K → CHARTERPOINT 5K Saturday, 10 April 2027 2K → KIDS DASH Saturday, 10 April 2027 CANBERRA BECOMES THE RACE",
+    "observed_at": "2026-10-02T14:06:57Z"
+  },
+  {
+    "data": {
+      "name": "ADAC Marathon Hannover",
+      "url": "https://www.marathon-hannover.de/",
+      "race_date": "2027-04-11",
+      "city": [
+        "Hanover"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "label": "label"
+    },
+    "source_url": "https://www.marathon-hannover.de/landingpage.html",
+    "evidence": "Das war der 34. ADAC Marathon Hannover! Wir bedanken und bei allen, die Teil dieses wunderbaren Tages waren, gratulieren allen Finishern und freuen uns auf die Neuauflage am 11. April 2027.",
+    "observed_at": "2026-10-02T13:39:03Z"
+  },
+  {
+    "data": {
+      "name": "Crete Marathon (Μαραθώνιος Κρήτης)",
+      "url": "https://crete-marathon.gr/",
+      "race_date": "2027-04-11",
+      "city": [
+        "Chania"
+      ],
+      "country": [
+        "Greece"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10171.html",
+    "evidence": "Crete Marathon Μαραθώνιος Κρήτης | Greece | M,R | Full member of AIMS Race information Forthcoming events Crete, Greece Please consult race website for route map. 11 Crete Marathon Sun 11 April 2027",
+    "observed_at": "2026-10-02T13:36:17Z"
+  },
+  {
+    "data": {
+      "name": "Enschede Marathon",
+      "url": "https://www.enschedemarathon.nl/",
+      "race_date": "2027-04-11",
+      "city": [
+        "Enschede"
+      ],
+      "country": [
+        "Netherlands"
+      ],
+      "region": "europe",
+      "label": "label",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.enschedemarathon.nl/en/",
+    "evidence": "Results Register now en English Deutsch Nederlands 11 April 2027: Enschede Marathon 2027-04-11 10:00:00",
+    "observed_at": "2026-10-02T14:00:31Z"
+  },
+  {
+    "data": {
+      "name": "NN Marathon Rotterdam",
+      "url": "https://nnmarathonrotterdam.nl/",
+      "race_date": "2027-04-11",
+      "city": [
+        "Rotterdam"
+      ],
+      "country": [
+        "Netherlands"
+      ],
+      "region": "europe",
+      "label": "gold"
+    },
+    "source_url": "https://nnmarathonrotterdam.nl/en/",
+    "evidence": "In addition to the international marathon on Sunday, 11 April 2027, there will be a programme featuring various distances for young and old on Saturday, 10 April 2027. For the upcoming edition, the NN Marathon Rotterdam will use a pre-registration system",
+    "observed_at": "2026-10-02T13:59:29Z"
+  },
+  {
+    "data": {
+      "name": "Ochsner Sport Zürich Marathon",
+      "url": "https://www.zuerichmarathon.ch/",
+      "race_date": "2027-04-11",
+      "city": [
+        "Zurich"
+      ],
+      "country": [
+        "Switzerland"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k"
+      ]
+    },
+    "source_url": "https://www.zuerichmarathon.ch/",
+    "evidence": "11. April 2027 MARATHON Geniesse die 42,195 Kilometer durch die schöne Stadt Zürich und entlang des einmaligen Zürichsee. 70% aller Teilnehmenden unterbieten ihre Bestzeit in Zürich.",
+    "observed_at": "2026-10-02T13:39:03Z"
+  },
+  {
+    "data": {
+      "name": "Wizz Air Cluj-Napoca Marathon",
+      "url": "https://maraton-cluj.ro/",
+      "race_date": "2027-04-11",
+      "city": [
+        "Cluj-Napoca"
+      ],
+      "country": [
+        "Romania"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "relay"
+      ]
+    },
+    "source_url": "https://maraton-cluj.ro/en/",
+    "evidence": "CONTACT Marathon 42.2 KM 11Th April 2027 Înscrieri și detalii! Half Marathon 21.1 KM 11Th April 2027 Înscrieri și detalii! Cross 10 KM 11Th April 2027",
+    "observed_at": "2026-10-02T13:39:02Z"
+  },
+  {
+    "data": {
+      "name": "ČSOB Bratislava Marathon",
+      "url": "https://www.bratislavamarathon.com/",
+      "race_date": "2027-04-11",
+      "city": [
+        "Bratislava"
+      ],
+      "country": [
+        "Slovakia"
+      ],
+      "region": "europe",
+      "label": "label"
+    },
+    "source_url": "https://bratislavamarathon.sk",
+    "evidence": "Beh je naša vášeň ČSOB Bratislava Marathon 11 Apr 11. April 2027 Registrácia Zistiť viac",
+    "observed_at": "2026-10-02T13:59:40Z"
+  },
+  {
+    "data": {
+      "name": "Nagano Marathon (長野マラソン)",
+      "url": "https://www.naganomarathon.gr.jp/",
+      "race_date": "2027-04-18",
+      "city": [
+        "Nagano"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "registration_closes": "2026-11-01",
+      "entry_fee": "14,300円",
+      "field_size": 10000
+    },
+    "source_url": "https://www.naganomarathon.gr.jp/information",
+    "evidence": "開催日時 2027年4月18日（日） 午前8時30分スタート 種目 マラソン（42.195km） コース 長野マラソン長距離競走路（日本陸連公認、AIMS公認）",
+    "observed_at": "2026-10-02T13:57:02Z"
+  },
+  {
+    "data": {
+      "name": "Cracovia Marathon",
+      "url": "https://cracoviamaraton.pl/",
+      "race_date": "2027-04-18",
+      "city": [
+        "Kraków"
+      ],
+      "country": [
+        "Poland"
+      ],
+      "region": "europe",
+      "label": "aims"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/708.html",
+    "evidence": "and the start and finish are located at the iconic Main Market Square. The event attracts thousands of runners from Poland and around the world, offering an unforgettable marathon experience. Forthcoming events Please consult race website for route map. 18 Cracovia Marathon Sun 18 April 2027",
+    "observed_at": "2026-10-02T13:36:20Z"
+  },
+  {
+    "data": {
+      "name": "Powerade Belgrade Marathon",
+      "url": "https://bgdmarathon.org/",
+      "race_date": "2027-04-18",
+      "city": [
+        "Belgrade"
+      ],
+      "country": [
+        "Serbia"
+      ],
+      "region": "europe",
+      "label": "label"
+    },
+    "source_url": "https://bgdmarathon.org/?lang=en",
+    "evidence": "December 2026 Ušće New Year's race Saturday-Sunday, April 17-18, 2027 40th POWERADE BELGRADE MARATHON 2027 BEG RUNWAY RUN September 2027",
+    "observed_at": "2026-10-02T14:00:49Z"
+  },
+  {
+    "data": {
+      "name": "TUI Rhodes Marathon (TUI Μαραθώνιος Ρόδου)",
+      "url": "https://rhodesmarathon.gr/",
+      "race_date": "2027-04-18",
+      "city": [
+        "Rhodes"
+      ],
+      "country": [
+        "Greece"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "5k"
+      ]
+    },
+    "source_url": "https://rhodesmarathon.gr/en/",
+    "evidence": "SUPPORTER NAMED SPONSOR UNDER THE AUSPICES OF COUNTDOWN 12th TUI Rhodes Marathon 18.04.2027",
+    "observed_at": "2026-10-02T14:01:44Z"
+  },
+  {
+    "data": {
+      "name": "Vienna City Marathon",
+      "url": "https://www.vienna-marathon.com/",
+      "race_date": "2027-04-18",
+      "city": [
+        "Vienna"
+      ],
+      "country": [
+        "Austria"
+      ],
+      "region": "europe",
+      "label": "elite",
+      "distances": [
+        "half-marathon",
+        "relay",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.vienna-marathon.com/",
+    "evidence": "Vienna City Marathon, 18. April 2027 Let’s run & let the music play! Lauf deinen Marathon in der Welthauptstadt der Musik.",
+    "observed_at": "2026-10-02T13:39:03Z"
+  },
+  {
+    "data": {
+      "name": "Boston Marathon",
+      "url": "https://www.baa.org/",
+      "race_date": "2027-04-19",
+      "city": [
+        "Hopkinton",
+        "Boston"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "label": "world-major"
+    },
+    "source_url": "https://www.baa.org/news/record-field-of-qualifiers-accepted-into-the-131st-boston-marathon-presented-by-bank-of-america/",
+    "evidence": "today began notifying qualified applicants of their acceptance into the 131 st Boston Marathon presented by Bank of America. The race will be run on Monday, April 19, 2027.",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "Fjordkraft Bergen City Marathon",
+      "url": "https://www.bergencitymarathon.no/",
+      "race_date": "2027-04-24",
+      "city": [
+        "Bergen"
+      ],
+      "country": [
+        "Norway"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "5k",
+        "relay"
+      ]
+    },
+    "source_url": "https://www.bergencitymarathon.no/velkommen/",
+    "evidence": "Velkommen til BCM 2027 Velkommen til Fjordkraft Bergen City Marathon (FBCM) lørdag 24. april 2027. Dette blir den 15. utgaven av løpet",
+    "observed_at": "2026-10-02T14:02:15Z"
+  },
+  {
+    "data": {
+      "name": "TCS London Marathon",
+      "url": "https://www.tcslondonmarathon.com/",
+      "race_date": "2027-04-24",
+      "city": [
+        "London"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "label": "world-major",
+      "field_size": 100000
+    },
+    "source_url": "https://www.londonmarathonevents.co.uk/london-marathon",
+    "evidence": "For the first and only time, the TCS London Marathon will take place across two days, on Saturday 24 and Sunday 25 April 2027, welcoming 100,000 runners to the streets of London for a spectacular Marathon Weekend.",
+    "observed_at": "2026-10-02T13:39:07Z"
+  },
+  {
+    "data": {
+      "name": "Big Sur International Marathon",
+      "url": "https://www.bigsurmarathon.org/",
+      "race_date": "2027-04-25",
+      "city": [
+        "Big Sur",
+        "Carmel"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "label": "aims",
+      "distances": [
+        "relay",
+        "21-miler",
+        "11-miler",
+        "12k",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.bigsurmarathon.org/",
+    "evidence": "View Full Course Details 2027-04-25 Big Sur International Marathon - April 25, 2027",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "Diacore Gaborone Marathon",
+      "url": "https://www.diacoregaboronemarathon.com/",
+      "race_date": "2027-04-25",
+      "city": [
+        "Gaborone"
+      ],
+      "country": [
+        "Botswana"
+      ],
+      "region": "africa-middle-east",
+      "label": "aims"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/711.html",
+    "evidence": "Diacore Gaborone Marathon Botswana | M,H,R | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 25 Diacore Gaborone Marathon Sun 25 April 2027",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "Maratón de Cali",
+      "url": "https://maratondecali.co/",
+      "race_date": "2027-04-25",
+      "city": [
+        "Cali"
+      ],
+      "country": [
+        "Colombia"
+      ],
+      "region": "americas",
+      "label": "elite",
+      "distances": [
+        "15k"
+      ]
+    },
+    "source_url": "https://maratondecali.co/",
+    "evidence": "Este 25 de abril de 2027 Corre en la Sucursal del Cielo la MARATÓN DE CALI Escoge entre las 3 distancias, la prueba reina: 42K 195m, los retadores 15K o sueña en el mini maratón 4.2K",
+    "observed_at": "2026-10-02T14:06:06Z"
+  },
+  {
+    "data": {
+      "name": "Haspa Marathon Hamburg",
+      "url": "https://haspa-marathon-hamburg.de/",
+      "race_date": "2027-04-25",
+      "city": [
+        "Hamburg"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "field_size": 20000,
+      "distances": [
+        "half-marathon",
+        "relay"
+      ]
+    },
+    "source_url": "https://haspa-marathon-hamburg.de/haspa-marathon-hamburg-2027-komplett-ausverkauft/",
+    "evidence": "Jetzt ist auch die Marathon-Distanz ausverkauft! Alle 20.000 Startplätze für die 42,195 Kilometer beim 41. Haspa Marathon Hamburg am 25. April sind vergeben. Damit sind die Startplätze für alle drei großen Wettbewerbe des Haspa Marathon Hamburg 2027 vollständig vergriffen.",
+    "observed_at": "2026-10-02T14:15:18Z"
+  },
+  {
+    "data": {
+      "name": "Kaunas Akropolis Marathon",
+      "url": "https://www.kaunasmarathon.lt/",
+      "race_date": "2027-04-25",
+      "city": [
+        "Kaunas"
+      ],
+      "country": [
+        "Lithuania"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.kaunasmarathon.lt/page",
+    "evidence": "Kaunas marathon 2027 rules and regulations I. GENERAL INFORMATION The public enterprise „VšĮ Kauno maratono klubas“ („Kaunas marathon club“) is organizing the running event „Kaunas Akropolis marathon“ on April 25, 2027.",
+    "observed_at": "2026-10-02T14:02:27Z"
+  },
+  {
+    "data": {
+      "name": "Zurich Rock 'n' Roll Running Series Madrid",
+      "url": "https://rocknrollmadridrun.com/",
+      "race_date": "2027-04-25",
+      "city": [
+        "Madrid"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "region": "europe",
+      "label": "label",
+      "distances": [
+        "half-marathon"
+      ]
+    },
+    "source_url": "https://rocknrollmadridrun.com/reglamento/",
+    "evidence": "organizan el Zurich Rock´n´Roll Running Series Madrid distancia Maratón, que se celebrará en la ciudad de Madrid el próximo 25 de abril de 2027.",
+    "observed_at": "2026-10-02T14:02:41Z"
+  },
+  {
+    "data": {
+      "name": "Durban International Marathon",
+      "url": "https://durbanmarathon.co.za/",
+      "race_date": "2027-05-02",
+      "city": [
+        "Durban"
+      ],
+      "country": [
+        "South Africa"
+      ],
+      "region": "africa-middle-east",
+      "label": "label",
+      "distances": [
+        "10k"
+      ]
+    },
+    "source_url": "https://durbanmarathon.co.za/",
+    "evidence": "ENTER DIM2027 Sunday, 2 May 2027 Newlands AC presents Durban international Marathon 2027 - 42km and 10km JOIN THE EVENT",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "Phoenix Energy Belfast City Marathon",
+      "url": "https://belfastcitymarathon.com/",
+      "race_date": "2027-05-02",
+      "city": [
+        "Belfast"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "label": "label",
+      "distances": [
+        "relay"
+      ]
+    },
+    "source_url": "https://www.belfastcitymarathon.com/",
+    "evidence": "2 May 2027 Phoenix Energy Belfast City Marathon Date: Sunday 02 May 2027 Start: Stormont Estate 2 May 2027 Phoenix Energy Belfast City Marathon Team Relay Date: Sunday 02 May 2027",
+    "observed_at": "2026-10-02T13:39:04Z"
+  },
+  {
+    "data": {
+      "name": "Vodafone Prague Marathon",
+      "url": "https://www.runczech.com/",
+      "race_date": "2027-05-02",
+      "city": [
+        "Prague"
+      ],
+      "country": [
+        "Czech Republic"
+      ],
+      "region": "europe",
+      "label": "elite",
+      "entry_fee": "From EUR 120.00",
+      "distances": [
+        "relay"
+      ]
+    },
+    "source_url": "https://www.runczech.com/en/events/vodafone-prague-marathon-2027",
+    "evidence": "Sold Out More details Vodafone Prague Marathon Distance: 42.195km Date: Sunday 2. 5. 2027 From 08:00 From EUR 120.00 Register More details ČT 2Run Prague Marathon",
+    "observed_at": "2026-10-02T14:04:39Z"
+  },
+  {
+    "data": {
+      "name": "MK Marathon",
+      "url": "https://mkmarathon.com/",
+      "race_date": "2027-05-03",
+      "city": [
+        "Milton Keynes"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "relay",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/1160.html",
+    "evidence": "Milton Keynes Marathon & Half Marathon Great Britain | M,H,R | Full member of AIMS Race information Forthcoming events Stadium Way, MK1 1ST Please consult race website for route map. 3 Milton Keynes Marathon & Half Mon 3 May 2027",
+    "observed_at": "2026-10-02T13:36:19Z"
+  },
+  {
+    "data": {
+      "name": "Saucony Helsinki City Marathon",
+      "url": "https://helsinkicityrun.fi/",
+      "race_date": "2027-05-08",
+      "city": [
+        "Helsinki"
+      ],
+      "country": [
+        "Finland"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "relay",
+        "5k"
+      ]
+    },
+    "source_url": "https://helsinkicityrun.fi/en/helsinkicitymarathon/",
+    "evidence": "In 2027 will be the 47th edition for HCM. The Saucony Helsinki City Marathon’s route will offer you a beautiful sea views and finish at the Helsinki Olympic Stadium on May 8th, 2027!",
+    "observed_at": "2026-10-02T14:04:53Z"
+  },
+  {
+    "data": {
+      "name": "Copenhagen Marathon",
+      "url": "https://copenhagenmarathon.dk/",
+      "race_date": "2027-05-09",
+      "city": [
+        "Copenhagen"
+      ],
+      "country": [
+        "Denmark"
+      ],
+      "region": "europe",
+      "label": "label"
+    },
+    "source_url": "https://copenhagenmarathon.dk/en/my-race/",
+    "evidence": "Copenhagen Marathon May 9th, 2027 You want to be here. You want it to be over. And you’ll want to do it again. Even better. Because you are a runner.",
+    "observed_at": "2026-10-02T14:14:48Z"
+  },
+  {
+    "data": {
+      "name": "Generali Genève Marathon",
+      "url": "https://www.generaligenevemarathon.com/",
+      "race_date": "2027-05-09",
+      "city": [
+        "Geneva"
+      ],
+      "country": [
+        "Switzerland"
+      ],
+      "region": "europe",
+      "label": "label",
+      "distances": [
+        "half-marathon",
+        "relay"
+      ]
+    },
+    "source_url": "https://www.generaligenevemarathon.com/marathon",
+    "evidence": "La Boutique Visitez Genève Infos Riverains Conditions Générales de Ventes FAQs BÉNÉVOLES PARTENAIRES CHARITÉ INSCRIPTIONS 2027 42.195KM DIMANCHE 9 MAI 2027: 9H00",
+    "observed_at": "2026-10-02T14:05:20Z"
+  },
+  {
+    "data": {
+      "name": "Leiden Marathon",
+      "url": "https://marathon.nl/",
+      "race_date": "2027-05-09",
+      "city": [
+        "Leiden"
+      ],
+      "country": [
+        "Netherlands"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://marathon.nl/",
+    "evidence": "van de oudste universiteit van Nederland én van een van de meest gevestigde marathons van het land. Op zondag 9 mei 2027 komen die twee werelden samen tijdens de 36e Leiden Marathon.",
+    "observed_at": "2026-10-02T13:39:04Z"
+  },
+  {
+    "data": {
+      "name": "Three Hearts Marathon",
+      "url": "https://www.maraton-radenci.si/",
+      "race_date": "2027-05-15",
+      "city": [
+        "Radenci"
+      ],
+      "country": [
+        "Slovenia"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k"
+      ]
+    },
+    "source_url": "https://www.maraton-radenci.si/",
+    "evidence": "Uradni rezultati Uradni rezultati 44. Maratona treh src! Preveri svoj rezultat >> 45. Maraton treh src, 15. maj 2027",
+    "observed_at": "2026-10-02T13:39:04Z"
+  },
+  {
+    "data": {
+      "name": "Maratón de Santiago",
+      "url": "https://maratondesantiago.cl/",
+      "race_date": "2027-05-16",
+      "city": [
+        "Santiago"
+      ],
+      "country": [
+        "Chile"
+      ],
+      "region": "americas",
+      "label": "aims"
+    },
+    "source_url": "https://maratondesantiago.cl/",
+    "evidence": "Maratón de Santiago - Bienvenidos Ir al contenido 16 de Mayo, 2027 Runners Expo Running Bases Resultados 2026",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "Changchun Marathon (长春马拉松)",
+      "url": "https://www.changchunmarathon.com/",
+      "race_date": "2027-05-16",
+      "city": [
+        "Changchun"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "label": "national"
+    },
+    "source_url": "https://finance.sina.com.cn/jjxw/2026-05-17/doc-inhyevrp3642127.shtml",
+    "evidence": "2027.5.16 长马再相会！ 2027长春马拉松定档2027年5月16日鸣枪开跑！ 长春马拉松按照往年惯例，于赛后公布次年比赛日期。",
+    "observed_at": "2026-10-02T14:14:57Z"
+  },
+  {
+    "data": {
+      "name": "Rimi Riga Marathon",
+      "url": "https://rimirigamarathon.com/",
+      "race_date": "2027-05-16",
+      "city": [
+        "Riga"
+      ],
+      "country": [
+        "Latvia"
+      ],
+      "region": "europe",
+      "label": "label",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k",
+        "mile"
+      ]
+    },
+    "source_url": "https://rimirigamarathon.com/en/",
+    "evidence": "On which dates will the Rimi Riga Marathon take place in 2027? Rimi Riga Marathon will take place on May 15 and 16, 2027. May 15: DPD Mile (1609m) & the Kids’ Day distances; May 16: Marathon, Half marathon, 10 km and “5 km”.",
+    "observed_at": "2026-10-02T14:06:15Z"
+  },
+  {
+    "data": {
+      "name": "Sanlam Cape Town Marathon",
+      "url": "https://www.capetownmarathon.com/",
+      "race_date": "2027-05-23",
+      "city": [
+        "Cape Town"
+      ],
+      "country": [
+        "South Africa"
+      ],
+      "region": "africa-middle-east",
+      "label": "world-major"
+    },
+    "source_url": "https://www.worldmarathonmajors.com/cape-town-major",
+    "evidence": "Following two successful evaluations by the AbbottWMM team, the Sanlam Cape Town Marathon has now joined the series as the eighth member of the family! Cape Town's first race as a Major will take place on May 23, 2027.",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "Lanzhou Marathon (兰州马拉松)",
+      "url": "https://www.lzmarathon.com/",
+      "race_date": "2027-05-23",
+      "city": [
+        "Lanzhou"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "label": "gold",
+      "field_size": 27000,
+      "distances": [
+        "half-marathon"
+      ]
+    },
+    "source_url": "https://finance.sina.com.cn/wm/2026-08-10/doc-inimvxcf2712285.shtml",
+    "evidence": "8月10日，奔流新闻记者从兰州市体育局获悉，2027兰州马拉松扩大参赛规模，新增3000个参赛席位，赛事总参赛人数将达到3.6万人。比赛定于2027年5月23日在黄河之滨鸣枪起跑，将以更大赛事体量、更高办赛品质迎接海内外跑友。",
+    "observed_at": "2026-10-02T14:14:54Z"
+  },
+  {
+    "data": {
+      "name": "PUMA Salzburg Marathon",
+      "url": "https://salzburg-marathon.at/",
+      "race_date": "2027-05-23",
+      "city": [
+        "Salzburg"
+      ],
+      "country": [
+        "Austria"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "relay"
+      ]
+    },
+    "source_url": "https://salzburg-marathon.at/de/",
+    "evidence": "PUMA Salzburg Marathon Der Mythos Marathon – 42,195 km voller Leidenschaft und Tradition 23. Mai 2027 Jetzt anmelden!",
+    "observed_at": "2026-10-02T13:39:04Z"
+  },
+  {
+    "data": {
+      "name": "WVV Marathon Würzburg",
+      "url": "https://www.wuerzburg-marathon.de/",
+      "race_date": "2027-05-23",
+      "city": [
+        "Würzburg"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "label": "aims"
+    },
+    "source_url": "https://www.wuerzburg-marathon.de/",
+    "evidence": "Der 25. WVV Marathon Würzburg startet am 23. Mai 2027 Emotionen, Atmosphäre, Highlights – beim WVV Marathon erlebst du Würzburg von seiner schönsten Seite.",
+    "observed_at": "2026-10-02T13:39:05Z"
+  },
+  {
+    "data": {
+      "name": "adidas Stockholm Marathon",
+      "url": "https://stockholmmarathon.se/",
+      "race_date": "2027-05-29",
+      "city": [
+        "Stockholm"
+      ],
+      "country": [
+        "Sweden"
+      ],
+      "region": "europe",
+      "label": "label"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/745.html",
+    "evidence": "adidas Stockholm Marathon Sweden | M | Full member of AIMS Race information Forthcoming events Lidingövägen, Stockholm Please consult race website for route map. 29 adidas Stockholm Marathon Sat 29 May 2027",
+    "observed_at": "2026-10-02T13:36:20Z"
+  },
+  {
+    "data": {
+      "name": "Tamarack Ottawa International Marathon",
+      "url": "https://www.runottawa.ca/",
+      "race_date": "2027-05-30",
+      "city": [
+        "Ottawa"
+      ],
+      "country": [
+        "Canada"
+      ],
+      "region": "americas",
+      "label": "elite",
+      "entry_fee": "$180.00 + HST",
+      "field_size": 6000
+    },
+    "source_url": "https://www.runottawa.ca/races-and-events/ottawa-marathon/",
+    "evidence": "EVENT DETAILS: Date: Sunday, May 30, 2027 Start Time: 7:00 am ET Location: Ottawa City Hall 110 Laurier Ave W, Ottawa, Ontario",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "KLM Aruba Marathon",
+      "url": "https://arubainternationalmarathon.com/",
+      "race_date": "2027-06-06",
+      "city": [
+        "Oranjestad"
+      ],
+      "country": [
+        "Aruba"
+      ],
+      "region": "americas",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://arubainternationalmarathon.com/en/runners/race-packet-pickup-start-times",
+    "evidence": "Sunday Morning June 6th: 3:00 am start Full Marathon (Time cut off 9:00 am: runners have six hours to complete the course) 5:15 am start Half Marathon 6:15 am start 10K",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "Brisbane Marathon Festival",
+      "url": "https://www.brisbanemarathon.com.au/",
+      "race_date": "2027-06-06",
+      "city": [
+        "Brisbane"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k",
+        "2k"
+      ]
+    },
+    "source_url": "https://www.brisbanemarathon.com.au/marathon",
+    "evidence": "REGISTER BRISBANE MARATHON 6 JUNE 2027 BRISBANE, QUEENSLAND RACE DAY",
+    "observed_at": "2026-10-02T14:06:57Z"
+  },
+  {
+    "data": {
+      "name": "Tórshavn Marathon",
+      "url": "https://www.torshavnmarathon.com/",
+      "race_date": "2027-06-06",
+      "city": [
+        "Tórshavn"
+      ],
+      "country": [
+        "Faroe Islands"
+      ],
+      "region": "europe",
+      "label": "aims"
+    },
+    "source_url": "https://www.torshavnmarathon.com/",
+    "evidence": "Søgur frá rennarum Myndir Ferðavinna Melda Til A race unmatched 6. juni 2027 kl. 13.00 Dagsskrá Rutan Tænastur Tilmelding Tórshavn marathon",
+    "observed_at": "2026-10-02T13:39:05Z"
+  },
+  {
+    "data": {
+      "name": "Kigali International Peace Marathon",
+      "url": "https://kigalimarathon.org/",
+      "race_date": "2027-06-13",
+      "city": [
+        "Kigali"
+      ],
+      "country": [
+        "Rwanda"
+      ],
+      "region": "africa-middle-east",
+      "label": "elite",
+      "distances": [
+        "half-marathon",
+        "10k"
+      ]
+    },
+    "source_url": "https://kigalimarathon.org/",
+    "evidence": "22. Kigali Peace Marathon 2027 - Saturday June 12: Run for Peace / Sunday June 13: Half/Full Marathon",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "Laguna Phuket Marathon presented by Supersports (ลากูน่า ภูเก็ต มาราธอน)",
+      "url": "https://phuketmarathon.com/",
+      "race_date": "2027-06-13",
+      "city": [
+        "Phuket"
+      ],
+      "country": [
+        "Thailand"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k",
+        "kids-run"
+      ]
+    },
+    "source_url": "https://phuketmarathon.com/race-information/",
+    "evidence": "17:00 - 20:00 h - Pasta party, Angsana Laguna Phuket Sunday, 13 June 2027 02:00 h - Venue open for runners 03:00 h - Marathon start (NEW START TIME) 04:30 h - Half Marathon start (NEW START TIME)",
+    "observed_at": "2026-10-02T14:05:42Z"
+  },
+  {
+    "data": {
+      "name": "Midnight Sun Marathon",
+      "url": "https://msm.no/",
+      "race_date": "2027-06-19",
+      "city": [
+        "Tromsø"
+      ],
+      "country": [
+        "Norway"
+      ],
+      "region": "europe",
+      "label": "aims"
+    },
+    "source_url": "https://msm.no/en/midnight-sun-marathon/",
+    "evidence": "June 19, 2027 Midnight sun marathon An Arctic adventure for runners Every year, a large number of runners from all over the world come to Tromsø to participate",
+    "observed_at": "2026-10-02T13:55:15Z"
+  },
+  {
+    "data": {
+      "name": "Waterford Viking Marathon",
+      "url": "https://waterfordvikingmarathon.com/",
+      "race_date": "2027-06-20",
+      "city": [
+        "Waterford"
+      ],
+      "country": [
+        "Ireland"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k"
+      ]
+    },
+    "source_url": "https://waterfordvikingmarathon.com/",
+    "evidence": "The countdown to the 15th Waterford Viking Marathon has begun! Join us on Saturday 19th and Sunday 20th June 2027 for an unforgettable weekend of running in Ireland’s oldest city.",
+    "observed_at": "2026-10-02T13:39:05Z"
+  },
+  {
+    "data": {
+      "name": "Victoria Falls Marathon",
+      "url": "https://www.vicfallsmarathon.com/",
+      "race_date": "2027-07-04",
+      "city": [
+        "Victoria Falls"
+      ],
+      "country": [
+        "Zimbabwe"
+      ],
+      "region": "africa-middle-east",
+      "label": "aims"
+    },
+    "source_url": "https://www.vicfallsmarathon.com/",
+    "evidence": "The Countdown to 2027 Begins Sunday 4 July 2027! SUBSCRIBE Run. Explore. Celebrate. An unforgettable race through one of Africa's most iconic destinations.",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "ASICS Gold Coast Marathon",
+      "url": "https://goldcoastmarathon.com.au/",
+      "race_date": "2027-07-04",
+      "city": [
+        "Gold Coast"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "label": "label",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k",
+        "kids-run",
+        "wheelchair"
+      ]
+    },
+    "source_url": "https://goldcoastmarathon.com.au/races/marathon/",
+    "evidence": "ASICS Gold Coast Marathon 2027 entries open early December Race Information Distance 42.195km Date Sunday 4 July 2027 Entries open Early December 2026 Minimum Age 18 Fee TBC",
+    "observed_at": "2026-10-02T14:06:56Z"
+  },
+  {
+    "data": {
+      "name": "7Cairns Marathon Festival",
+      "url": "https://www.cairnsmarathon.com.au/",
+      "race_date": "2027-07-11",
+      "city": [
+        "Cairns"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k",
+        "2k"
+      ]
+    },
+    "source_url": "https://www.cairnsmarathon.com.au/7news-marathon",
+    "evidence": "The course is AIMS certified and is a Boston Qualifier event. REGISTER NOW SEE WHAT'S INCLUDED DISTANCE Marathon DATE Sunday, 11 July 2027 START TIME 05:45AM START LINE Fogarty Park, Cairns FINISH LINE Fogarty Park, Cairns",
+    "observed_at": "2026-10-02T14:06:57Z"
+  },
+  {
+    "data": {
+      "name": "Tassal Airlie Beach Marathon Festival",
+      "url": "https://runairlie.com.au/",
+      "race_date": "2027-07-18",
+      "city": [
+        "Airlie Beach"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "label": "aims",
+      "registration_closes": "2027-07-16",
+      "entry_fee": "$150.00",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k",
+        "kids-run",
+        "relay",
+        "mile"
+      ]
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10319.html",
+    "evidence": "Airlie Beach, Queensland, Australia Please consult race website for route map. 18 Airlie Beach Marathon Festival Sun 18 July 2027 Add to calendar",
+    "observed_at": "2026-10-02T14:06:57Z"
+  },
+  {
+    "data": {
+      "name": "Panama City Marathon",
+      "url": "https://panamamarathon.com/",
+      "race_date": "2027-08-01",
+      "city": [
+        "Panama City"
+      ],
+      "country": [
+        "Panama"
+      ],
+      "region": "americas",
+      "label": "aims"
+    },
+    "source_url": "https://panamamarathon.com/",
+    "evidence": "adidas Panama City Marathon 2027 Domingo, 1 de Agosto, 2027 | Ciudad de Panamá, Panamá",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "EVA Air Sunshine Coast Marathon",
+      "url": "https://sunshinecoastmarathon.com.au/",
+      "race_date": "2027-08-01",
+      "city": [
+        "Sunshine Coast"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "label": "label",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k",
+        "2k"
+      ]
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10019.html",
+    "evidence": "Sunshine Coast Marathon Festival Australia | M,H,R | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 1 Sunshine Coast Marathon Festival Sun 1 August 2027",
+    "observed_at": "2026-10-02T14:06:56Z"
+  },
+  {
+    "data": {
+      "name": "Angkor Empire Marathon",
+      "url": "https://www.cambodia-events.org/",
+      "race_date": "2027-08-08",
+      "city": [
+        "Siem Reap"
+      ],
+      "country": [
+        "Cambodia"
+      ],
+      "region": "asia-pacific",
+      "label": "aims"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10008.html",
+    "evidence": "Angkor Empire Marathon Cambodia | M,H,R | Full member of AIMS Race information Sister event to the Angkor Wat Half Marathon to be held for the first time in 2014. Forthcoming events Please consult race website for route map. 8 Angkor Empire Marathon Sun 8 August 2027",
+    "observed_at": "2026-10-02T14:06:58Z"
+  },
+  {
+    "data": {
+      "name": "Paavo Nurmi Marathon",
+      "url": "https://www.paavonurmimarathon.fi/",
+      "race_date": "2027-08-21",
+      "city": [
+        "Turku"
+      ],
+      "country": [
+        "Finland"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://juoksuaika.fi/paavo-nurmi-marathon/",
+    "evidence": "Kaksipäiväinen Paavo Nurmi Marathon tarjoaa neljä eri matkavaihtoehtoa ja lapsille oman MiniMarathon by OmaSp -juoksun. Perjantai 20.8.2027 Paavo Nurmi MiniMarathon 5 km ja 10 km Lauantai 21.8.2027 Puolimaraton ja Maraton",
+    "observed_at": "2026-10-02T13:39:05Z"
+  },
+  {
+    "data": {
+      "name": "Íslandsbanki Reykjavik Marathon",
+      "url": "https://www.rmi.is/",
+      "race_date": "2027-08-21",
+      "city": [
+        "Reykjavik"
+      ],
+      "country": [
+        "Iceland"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon"
+      ]
+    },
+    "source_url": "https://www.corsa.is/reykjavikur-marathon",
+    "evidence": "Register Reykjavík - 21 August 2027 Islandsbanki Reykjavik Marathon Islandsbanki Reykjavik Marathon takes place on August 21, 2027, and is the biggest running event in Iceland.",
+    "observed_at": "2026-10-02T14:07:20Z"
+  },
+  {
+    "data": {
+      "name": "Björn Borg Helsinki Marathon",
+      "url": "https://www.helsinkimarathon.fi/",
+      "race_date": "2027-08-28",
+      "city": [
+        "Helsinki"
+      ],
+      "country": [
+        "Finland"
+      ],
+      "region": "europe",
+      "label": "aims"
+    },
+    "source_url": "https://www.helsinkimarathon.fi/",
+    "evidence": "Milloin? Björn Borg Helsinki Marathon 2027 juostaan 28.8.2027 Missä? Björn Borg Helsinki Marathonin reitti kulkee Helsingin kaduilla",
+    "observed_at": "2026-10-02T13:39:06Z"
+  },
+  {
+    "data": {
+      "name": "Stavanger Marathon",
+      "url": "https://stavangermarathon.no/",
+      "race_date": "2027-08-28",
+      "city": [
+        "Stavanger"
+      ],
+      "country": [
+        "Norway"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "5k"
+      ]
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10144.html",
+    "evidence": "Full member of AIMS Race information Forthcoming events Stavanger, Norway Please consult race website for route map. 29 Stavanger Marathon Sat 29 August 2026 Add to calendar Stavanger, Norway Please consult race website for route map. 28 Stavanger Marathon Sat 28 August 2027",
+    "observed_at": "2026-10-02T13:36:18Z"
+  },
+  {
+    "data": {
+      "name": "Maratón Internacional de Asunción",
+      "url": "https://www.maratondeasuncion.com.py/",
+      "race_date": "2027-08-29",
+      "city": [
+        "Asunción"
+      ],
+      "country": [
+        "Paraguay"
+      ],
+      "region": "americas",
+      "label": "aims",
+      "distances": [
+        "half-marathon"
+      ]
+    },
+    "source_url": "https://www.maratondeasuncion.com.py/",
+    "evidence": "Inscripciones 2027 abiertas Detalles 29 de Agosto, 2027 Largada 05:30 AM Costanera de Asunción | Asunción, Paraguay 42km / 21Km",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "TCS Sydney Marathon",
+      "url": "https://www.tcssydneymarathon.com/",
+      "race_date": "2027-08-29",
+      "city": [
+        "Sydney"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "label": "world-major",
+      "registration_closes": "2026-10-19",
+      "distances": [
+        "5k",
+        "wheelchair"
+      ]
+    },
+    "source_url": "https://www.tcssydneymarathon.com/marathon",
+    "evidence": "When is the 2027 TCS Sydney Marathon? The 2027 TCS Sydney Marathon presented by ASICS will be held on Sunday, 29 August. The 2027 TCS Sydney Mini Marathon will take place on Saturday, 28 August.",
+    "observed_at": "2026-10-02T14:06:47Z"
+  },
+  {
+    "data": {
+      "name": "Swedbank Tallinn Marathon",
+      "url": "https://www.tallinnmarathon.ee/",
+      "race_date": "2027-09-12",
+      "city": [
+        "Tallinn"
+      ],
+      "country": [
+        "Estonia"
+      ],
+      "region": "europe",
+      "label": "label",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k",
+        "relay"
+      ]
+    },
+    "source_url": "https://www.jooks.ee/en/tallinn-marathon/races-info",
+    "evidence": "42K About Regulations 21K Tallinn Fall Race 10K Nike Youth Run 5K Limpa Kids' race Relay Marathon 42K Welcome Run Virtual Run 2026 42K SEPTEMBER 12, 2027 START 9:00",
+    "observed_at": "2026-10-02T14:08:12Z"
+  },
+  {
+    "data": {
+      "name": "Volksbank-Münster-Marathon",
+      "url": "https://www.volksbank-muenster-marathon.de/",
+      "race_date": "2027-09-12",
+      "city": [
+        "Münster"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "label": "aims"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/1115.html",
+    "evidence": "Volksbank-Münster-Marathon Germany | M | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 12 Volksbank-Münster-Marathon Sun 12 September 2027",
+    "observed_at": "2026-10-02T13:36:19Z"
+  },
+  {
+    "data": {
+      "name": "Chisinau International Marathon",
+      "url": "https://marathon.md/",
+      "race_date": "2027-09-26",
+      "city": [
+        "Chișinău"
+      ],
+      "country": [
+        "Moldova"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k",
+        "5k"
+      ]
+    },
+    "source_url": "https://marathon.md/",
+    "evidence": "25-26 septembrie 2027 maib | Mastercard CHISINAU MARATHON Înregistrare 2027 REZULTATE 2026 Înregistrează-te acum!",
+    "observed_at": "2026-10-02T13:39:06Z"
+  },
+  {
+    "data": {
+      "name": "Generali Berlin-Marathon",
+      "url": "https://www.bmw-berlin-marathon.com/",
+      "race_date": "2027-09-26",
+      "city": [
+        "Berlin"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "label": "world-major"
+    },
+    "source_url": "https://www.bmw-berlin-marathon.com/",
+    "evidence": "Am 26. September 2027 beginnt mit dem GENERALI BERLIN-MARATHON ein neues Kapitel – mit neuen Geschichten und der einzigartigen Energie, die entsteht, wenn Menschen aus aller Welt gemeinsam durch Berlin einen Marathon absolvieren.",
+    "observed_at": "2026-10-02T13:39:06Z"
+  },
+  {
+    "data": {
+      "name": "HCA Marathon",
+      "url": "https://hcamarathon.dk/",
+      "race_date": "2027-09-26",
+      "city": [
+        "Odense"
+      ],
+      "country": [
+        "Denmark"
+      ],
+      "region": "europe",
+      "label": "aims"
+    },
+    "source_url": "https://www.hcamarathon.com/",
+    "evidence": "Marathon 27. udgave af HCA Marathon Søndag d. 26. september 2027 forvandles Odense igen til en festlig løbescene, når HCA Marathon inviterer løbere, tilskuere og hele byen til årets store løbeoplevelse.",
+    "observed_at": "2026-10-02T13:39:06Z"
+  },
+  {
+    "data": {
+      "name": "Loch Ness Marathon",
+      "url": "https://www.lochnessmarathon.com/",
+      "race_date": "2027-09-26",
+      "city": [
+        "Whitebridge",
+        "Inverness"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "label": "aims"
+    },
+    "source_url": "https://caledoniangroupevents.co.uk/loch-ness-marathon",
+    "evidence": "Sunday 26 September 2027 Title Loch Ness Marathon Subtitle The point-to-point course begins in a dramatic moorland setting and winds its way along the south-eastern shores of Loch Ness",
+    "observed_at": "2026-10-02T13:39:07Z"
+  },
+  {
+    "data": {
+      "name": "WACHAUmarathon by Brooks",
+      "url": "https://www.wachaumarathon.com/",
+      "race_date": "2027-09-26",
+      "city": [
+        "Emmersdorf",
+        "Krems"
+      ],
+      "country": [
+        "Austria"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon"
+      ]
+    },
+    "source_url": "https://www.wachaumarathon.com/",
+    "evidence": "Der 27. WACHAUmarathon by Brooks findet am 26. September 2027 statt. Zu den Ergebnissen Save the date 26. September 2027 27. WACHAUmarathon by Brooks WACHAU Emmersdorf - Krems",
+    "observed_at": "2026-10-02T13:39:06Z"
+  },
+  {
+    "data": {
+      "name": "Warsaw Marathon",
+      "url": "https://maratonwarszawski.com/",
+      "race_date": "2027-09-26",
+      "city": [
+        "Warsaw"
+      ],
+      "country": [
+        "Poland"
+      ],
+      "region": "europe",
+      "label": "elite",
+      "distances": [
+        "10k"
+      ]
+    },
+    "source_url": "https://maratonwarszawski.com/en/news/registration-is-now-open-for-the-49th-warsaw-marathon/",
+    "evidence": "Registration is now open for the 49th Warsaw Marathon, which will take place on 26 September 2027. There are 14,000 places available through standard registration and another 1,000 for runners who choose the charity entry option",
+    "observed_at": "2026-10-02T14:07:50Z"
+  },
+  {
+    "data": {
+      "name": "Bank of America Chicago Marathon",
+      "url": "https://www.chicagomarathon.com/",
+      "race_date": "2027-10-10",
+      "city": [
+        "Chicago"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "label": "world-major",
+      "registration_closes": "2026-10-29"
+    },
+    "source_url": "https://www.chicagomarathon.com/apply/",
+    "evidence": "The application will close three weeks later at 2 p.m. (U.S. Central Time) on Thursday, October 29. The 49th running of the Bank of America Chicago Marathon will take place on Sunday, October 10, 2027.",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "Royal Victoria Marathon",
+      "url": "https://www.runvictoriamarathon.com/",
+      "race_date": "2027-10-10",
+      "city": [
+        "Victoria"
+      ],
+      "country": [
+        "Canada"
+      ],
+      "region": "americas",
+      "label": "aims"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/833.html",
+    "evidence": "Forthcoming events Please consult race website for route map. 11 Royal Victoria Marathon Sun 11 October 2026 Add to calendar Please consult race website for route map. 10 Royal Victoria Marathon Sun 10 October 2027",
+    "observed_at": "2026-10-02T13:56:01Z"
+  },
+  {
+    "data": {
+      "name": "Great Welsh Marathon",
+      "url": "https://greatwelshmarathon.co.uk/",
+      "race_date": "2027-10-17",
+      "city": [
+        "Pembrey"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon"
+      ]
+    },
+    "source_url": "https://www.greatwelshmarathon.co.uk/",
+    "evidence": "Sunday 17 October 2027 Sign Up The Great Welsh Marathon Join us on a World Marathon Majors Qualifying Race! The Great Welsh Marathon returns in 2027 for an unforgettable running event in Wales",
+    "observed_at": "2026-10-02T13:51:26Z"
+  },
+  {
+    "data": {
+      "name": "Maratón Aguascalientes",
+      "url": "https://www.maratonaguascalientes.com/",
+      "race_date": "2027-10-24",
+      "city": [
+        "Aguascalientes"
+      ],
+      "country": [
+        "Mexico"
+      ],
+      "region": "americas",
+      "label": "aims"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10005.html",
+    "evidence": "Forthcoming events Please consult race website for route map. 25 Maratón Aguascalientes Sun 25 October 2026 Add to calendar Please consult race website for route map. 24 Maratón Aguascalientes Sun 24 October 2027",
+    "observed_at": "2026-10-02T13:55:14Z"
+  },
+  {
+    "data": {
+      "name": "Irish Life Dublin Marathon",
+      "url": "https://irishlifedublinmarathon.ie/",
+      "race_date": "2027-10-24",
+      "city": [
+        "Dublin"
+      ],
+      "country": [
+        "Ireland"
+      ],
+      "region": "europe",
+      "label": "elite",
+      "entry_fee": "€130",
+      "field_size": 22500
+    },
+    "source_url": "https://www.the42.ie/dublin-marathon-entry-fee-e130-2027-7176703-Sep2026/",
+    "evidence": "with Dublin Marathon Group citing inflation and the rising costs associated with staging the event as the reasons for the change. The 46th edition of the race will take place on Sunday 24 October 2027, with a capacity of 22,500 runners.",
+    "observed_at": "2026-10-02T13:49:50Z"
+  },
+  {
+    "data": {
+      "name": "Lausanne Marathon",
+      "url": "https://www.lausanne-marathon.com/",
+      "race_date": "2027-10-24",
+      "city": [
+        "Lausanne"
+      ],
+      "country": [
+        "Switzerland"
+      ],
+      "region": "europe",
+      "label": "aims"
+    },
+    "source_url": "https://fr.lausanne-marathon.com/conseils/dates-de-levenement/",
+    "evidence": "Dates de l'évènement Dimanche 24 octobre 2027 Dimanche 29 octobre 2028 Dimanche 28 octobre 2029 Retrouvez toutes ces informations et bien plus sur www.lausanne-tourisme.ch Lausanne Marathon",
+    "observed_at": "2026-10-02T13:50:28Z"
+  },
+  {
+    "data": {
+      "name": "TREK Antwerp Marathon",
+      "url": "https://antwerpmarathon.com/",
+      "race_date": "2027-10-24",
+      "city": [
+        "Antwerp"
+      ],
+      "country": [
+        "Belgium"
+      ],
+      "region": "europe",
+      "label": "aims",
+      "distances": [
+        "half-marathon",
+        "10k"
+      ]
+    },
+    "source_url": "https://antwerpmarathon.com/en/edition-2027/",
+    "evidence": "On Sunday 24 October 2027, the TREK Antwerp Marathon returns to the heart of Antwerp, once again offering three distances: the Marathon, Half Marathon and 10K.",
+    "observed_at": "2026-10-02T13:49:01Z"
+  },
+  {
+    "data": {
+      "name": "TCS Amsterdam Marathon",
+      "url": "https://www.tcsamsterdammarathon.eu/",
+      "race_date": "2027-10-31",
+      "city": [
+        "Amsterdam"
+      ],
+      "country": [
+        "Netherlands"
+      ],
+      "region": "europe",
+      "label": "platinum"
+    },
+    "source_url": "https://www.tcsamsterdammarathon.eu/program",
+    "evidence": "2027 Edition In 2027, the TCS Amsterdam Marathon will take place on Saturday 30 and Sunday 31 October.",
+    "observed_at": "2026-10-02T13:48:00Z"
+  }
+]

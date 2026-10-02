@@ -203,11 +203,15 @@ export function histogramModel(config: DataAppConfig, chart: Histogram): Histogr
   };
 }
 
-/** The sentence a coverage line says: "Only 16% of hackathons state a prize pool". */
+/**
+ * The sentence a coverage line says: "Only 16% of hackathons state a prize pool", "… state an
+ * investment", "… state their attendees" (a plural label takes no "a").
+ */
 export function coverageText(config: DataAppConfig, chart: Histogram): string {
   const model = histogramModel(config, chart);
   const label = bareLabel(config.fields[chart.field]?.label ?? chart.field).toLowerCase();
-  return `Only ${pct(model.stated, model.total)} of ${config.noun.other} state a ${label}`;
+  const article = /[^s]s$/.test(label) ? 'their' : /^[aeiou]/.test(label) ? 'an' : 'a';
+  return `Only ${pct(model.stated, model.total)} of ${config.noun.other} state ${article} ${label}`;
 }
 
 function histogramTakeaway(config: DataAppConfig, chart: Histogram): Takeaway {
