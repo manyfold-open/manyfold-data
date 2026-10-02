@@ -9,8 +9,8 @@ Rules for anyone — human or AI agent — changing Manyfold Data. These are the
 2. **A data app is its config.** Pages, filters, charts and validation derive from
    `data-apps/<slug>/config.ts`. Do not special-case a slug in code; extend the config format in
    `src/shared/data-app.ts` instead, and teach `validateConfig()` the new rule.
-3. **Field names reach SQL text only after validation.** `buildWhere()` interpolates field names that
-   `parseQuery()` matched against the config; every value is a bound parameter. Keep it that way.
+3. **No field name reaches SQL text.** The Table's queries run in memory over the dataset
+   (`src/shared/engine.ts`), and every value in the SQL that remains is a bound parameter. Keep it that way.
 4. **Evolve the database only through `SCHEMA` in `src/worker/schema.ts`**, with
    `CREATE TABLE IF NOT EXISTS` / `CREATE INDEX IF NOT EXISTS`. No semicolons inside statement bodies
    or comments — the splitter treats every `;` as a boundary. There is no migration step.
@@ -49,9 +49,13 @@ Rules for anyone — human or AI agent — changing Manyfold Data. These are the
     than `PUBLIC_ORIGIN`'s. Events (`src/app/analytics.ts`) carry the data app's slug and fixed values,
     never text a person typed; page views carry `page_location` without `TYPED_PARAMS` (the search). Tests use made-up ids like `G-TESTID0000`, never the real one, and
     `/privacy` must keep describing what the code does.
-18. **Public reads go through `cachedFor` (src/worker/cache.ts)**, and nothing else does: never cache
-    a route that reads a token, the admin password or a visitor's country. D1's free tier has a daily
-    read limit, and an uncached facet-heavy page can spend it in an evening.
+18. **Readers' pages cost the database one read per dataset, not one per view.** The only public read
+    that scans a data app's records is `loadDataset()` (src/worker/records.ts); the Table, the Overview
+    and the /records and /stats routes are computed from that dataset by `src/shared/engine.ts`, in the
+    browser and in the Worker alike. A new public view is computed from the dataset, never from new SQL
+    over records. Public reads are cached with `cachedFor`/`cachedJson` (src/worker/cache.ts), and
+    nothing else is: never cache a route that reads a token, the admin password or a visitor's
+    country. D1's free tier caps reads a day for the whole account; see "Database budget" in the README.
 
 ## Tests
 

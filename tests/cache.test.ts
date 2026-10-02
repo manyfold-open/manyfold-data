@@ -66,15 +66,19 @@ describe('the edge cache', () => {
     expect([...cache.store.keys()].some((url) => url.includes('rec_missing'))).toBe(false);
   });
 
-  it('skips the per-filter counts when asked, for callers that only show rows', async () => {
-    await get('/api/consent'); // creates the schema, so only the list's own queries are counted
+  it('computes every list and the stats from one dataset read', async () => {
+    await get('/api/consent'); // creates the schema, so only reads are counted
     queries = 0;
-    await get('/api/ai-hackathons/records?limit=6&facets=none');
-    const lean = queries;
-    queries = 0;
-    const full = await (await get('/api/ai-hackathons/records?limit=6')).json();
-    expect(lean).toBeLessThan(queries);
-    expect(Object.keys((full as { facets: object }).facets).length).toBeGreaterThan(0);
+    const lean = (await (await get('/api/ai-hackathons/records?limit=6&facets=none')).json()) as { facets: object };
+    expect(lean.facets).toEqual({});
+    const first = queries;
+    expect(first).toBeGreaterThan(0);
+    // Other filters, the facets and the Overview's numbers all come from the cached dataset.
+    const full = (await (await get('/api/ai-hackathons/records?format=online&limit=20')).json()) as { facets: object };
+    expect(Object.keys(full.facets).length).toBeGreaterThan(0);
+    expect((await get('/api/ai-hackathons/stats')).status).toBe(200);
+    expect((await get('/api/ai-hackathons/dataset')).status).toBe(200);
+    expect(queries).toBe(first);
   });
 });
 

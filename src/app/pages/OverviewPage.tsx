@@ -1,14 +1,16 @@
 /**
  * A data app's Overview: the stat strip, one chart per entry in the config's `charts`, the
- * first rows of the default Table view, and how to contribute. Everything reads /stats and
- * /records; nothing here knows which data app it is showing.
+ * first rows of the default Table view, and how to contribute. Everything is computed from the
+ * data app's dataset (src/app/dataset.ts); nothing here knows which data app it is showing.
  */
 
+import { useMemo } from 'react';
 import { valueLabel, type ChartDef, type DataAppConfig } from '../../shared/data-app';
-import { defaultQuery, serializeQuery } from '../../shared/query';
-import type { ChartResult, RecordsResponse, StatsResponse } from '../../shared/types';
+import { listFrom, statsFrom } from '../../shared/engine';
+import { defaultQuery } from '../../shared/query';
+import type { ChartResult, StatsResponse } from '../../shared/types';
 import { track } from '../analytics';
-import { useApi } from '../api';
+import { useDataset } from '../dataset';
 import { ChartFrame, Columns, Coverage, RankedBars, ShareBar, type CategoryItem } from '../components/charts';
 import { ContributeStrip, FollowStrip } from '../components/Contribute';
 import { RecordList, RecordTable } from '../components/RecordTable';
@@ -201,11 +203,18 @@ function OverviewSkeleton({ config, phone }: { config: DataAppConfig; phone: boo
 
 export default function OverviewPage({ config }: { config: DataAppConfig }) {
   const phone = useIsPhone();
-  const stats = useApi<StatsResponse>(`/api/${config.slug}/stats`);
-  const previewParams = serializeQuery(config, defaultQuery(config));
-  previewParams.set('limit', String(PREVIEW_ROWS));
-  previewParams.set('facets', 'none'); // the preview shows rows only
-  const preview = useApi<RecordsResponse>(`/api/${config.slug}/records?${previewParams}`);
+  const dataset = useDataset(config.slug);
+  const stats = {
+    data: useMemo(() => (dataset.data ? statsFrom(config, dataset.data, new Date()) : null), [config, dataset.data]),
+    error: dataset.error,
+  };
+  const preview = {
+    data: useMemo(
+      () => (dataset.data ? listFrom(config, dataset.data, defaultQuery(config), PREVIEW_ROWS, { facets: false }) : null),
+      [config, dataset.data],
+    ),
+    error: dataset.error,
+  };
   const statsPending = usePending(!stats.data && !stats.error);
   const previewPending = usePending(!preview.data && !preview.error);
 

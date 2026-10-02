@@ -33,8 +33,12 @@ interface TokenRow {
   pending_cap: number | null;
   daily_task_limit: number | null;
   expires_at: string | null;
+  last_used_at: string | null;
   created_at: string;
 }
+
+/** last_used_at is written at most this often per token: the console needs minutes, not calls. */
+const LAST_USED_EVERY_MS = 10 * 60 * 1000;
 
 /** A new collector may have this many records waiting for review... */
 export const PENDING_CAP_START = 5;
@@ -126,7 +130,10 @@ export async function authenticate(db: D1Database, header: string | undefined, n
   if (token.expiresAt && token.expiresAt <= now.toISOString()) {
     throw new HttpError(403, 'token_expired', `This token expired on ${token.expiresAt}. Your owner can ask for a new one.`);
   }
-  await db.prepare('UPDATE tokens SET last_used_at = ? WHERE id = ?').bind(now.toISOString(), token.id).run();
+  const last = row.last_used_at ? Date.parse(row.last_used_at) : 0;
+  if (now.getTime() - last >= LAST_USED_EVERY_MS) {
+    await db.prepare('UPDATE tokens SET last_used_at = ? WHERE id = ?').bind(now.toISOString(), token.id).run();
+  }
   return token;
 }
 

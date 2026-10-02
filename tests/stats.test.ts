@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { weekStart } from '../src/shared/dates';
-import { bucketDates, histogram } from '../src/worker/stats';
+import { bucketDates, histogram } from '../src/shared/engine';
 import { schemaStatements, SCHEMA } from '../src/worker/schema';
 
 describe('weekStart', () => {

@@ -41,8 +41,10 @@ The skill tells it how to get a token, where to keep it (`MANYFOLD_DATA_TOKEN` i
   Table columns, filters, charts and validation rules all come from that file.
 - **Only verified records are public.** Pending, rejected and merged records never leave the API.
 - **Every change is a revision** naming who made it, so any contributor's work can be audited and undone.
-- **Public reads are cached at the edge** for a minute (feeds and exports for five), so a busy page
-  costs D1 one query run a minute per data center rather than one per view (`src/worker/cache.ts`).
+- **Readers' pages are computed in the browser** from one file per data app, the dataset of its
+  verified records (`GET /api/<slug>/dataset`, cached at the edge for a minute). Filtering, sorting,
+  searching, facet counts, charts and "load more" never reach the database; the public API computes
+  `/records` and `/stats` from the same dataset with the same code (`src/shared/engine.ts`).
 - **A cron trigger every five minutes** releases expired leases, queues rechecks, and posts newly
   verified records to Discord, so a record reaches the channel within minutes of being verified.
 
@@ -84,6 +86,7 @@ Everything is JSON, open to any origin, and covers verified records only.
 | `GET /api/<slug>/records` | One page of records, the total, and facet counts |
 | `GET /api/<slug>/records/<id>` | One record with its source, evidence and history |
 | `GET /api/<slug>/stats` | The Overview's tiles and chart data |
+| `GET /api/<slug>/dataset` | Every verified record, the count waiting for review and the Discord invite: what the pages compute from |
 | `GET /<slug>/export.csv`, `/<slug>/export.json` | Every verified record with its source and evidence |
 | `GET /<slug>/feed.xml` | RSS: the 50 most recently verified records |
 | `POST /api/<slug>/records/<id>/report` | A reader says what is wrong: `{"reason"}`, 10 per IP per hour; it goes to the admin |
@@ -217,6 +220,23 @@ Pushes to `main` deploy through `.github/workflows/ci.yml` after checks and test
 A cron trigger runs the housekeeping every five minutes once deployed.
 
 The schema applies itself on the first request. The seed is insert-if-absent, so loading it again changes nothing.
+
+## Database budget
+
+D1's free tier allows 5 million rows read and 100,000 written a day, for the whole Cloudflare account.
+Manyfold Data is built to spend almost none of it on readers:
+
+- **Readers:** one dataset build per data app per minute per data center, each reading that app's
+  verified records once (a few hundred rows). Everything else a reader does is computed from it.
+  A record page reads one record and its history, cached for a minute; feeds and exports are cached
+  for five.
+- **Agents:** a token lookup per call (last-used time written at most every ten minutes), plus what
+  the call itself does: a submit, a lease, a verdict. Their reads are indexed lookups.
+- **Cron:** every five minutes, indexed: expired leases, due rechecks, unsent announcements, old counters.
+- **Schema:** a new Worker instance checks one fingerprint row instead of re-running every CREATE.
+
+The in-browser approach suits datasets up to a few thousand records (a few megabytes). Past that,
+page the dataset or let the Worker serve computed pages: the engine already runs in both places.
 
 ## Analytics
 

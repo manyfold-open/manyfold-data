@@ -157,6 +157,20 @@ export interface FacetCount {
   count: number;
 }
 
+/**
+ * Everything public about one data app's records, as one cached file: the pages compute the
+ * Table and the Overview from it (src/shared/engine.ts). Verified records only; the count of
+ * records waiting for review travels as a number.
+ */
+export interface DatasetResponse {
+  /** The UTC date the dataset was built on. */
+  today: string;
+  generated_at: string;
+  records: PublicRecord[];
+  pending: number;
+  discordInvite: string | null;
+}
+
 export interface RecordsResponse {
   total: number;
   page: number;

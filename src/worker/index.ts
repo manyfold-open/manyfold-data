@@ -48,12 +48,13 @@
 import { Hono, type Context } from 'hono';
 import { cors } from 'hono/cors';
 import { dataApps, findDataApp } from '../../data-apps/index';
-import { todayUtc, type DataAppConfig } from '../shared/data-app';
+import type { DataAppConfig } from '../shared/data-app';
 import { parseQuery } from '../shared/query';
-import type { IssuedToken, JoinResponse, MeResponse } from '../shared/types';
+import type { DatasetResponse, IssuedToken, JoinResponse, MeResponse } from '../shared/types';
 import { HttpError, type Env } from './types';
 import { requireAdmin } from './admin';
-import { cachedFor, isDailyLimit, secondsToMidnightUtc } from './cache';
+import { cachedFor, cachedJson, isDailyLimit, secondsToMidnightUtc } from './cache';
+import { listFrom, statsFrom } from '../shared/engine';
 import { consentRequiredFor, freshRequest, measurementIdFor, wantsTag, withAnalytics, type InjectionContext } from './analytics';
 import {
   activity,
@@ -77,9 +78,8 @@ import { ensureSchema } from './db';
 import { maintain } from './maintenance';
 import { applyVerdicts, LEASE_MAX, leaseTasks, workOf } from './maintainer';
 import { enforce, HOUR, RULES, sweep } from './ratelimit';
-import { appSummaries, getRecord, listRecords } from './records';
+import { appSummaries, getRecord, loadDataset } from './records';
 import { collectorSkill, maintainerSkill, publicSkill } from './skill';
-import { computeStats } from './stats';
 import { idempotencyKey, recall, remember, sourceExists, submitRecords } from './submit';
 import {
   adminTokens,
@@ -193,6 +193,20 @@ app.get('/api/consent', (c) =>
   ),
 );
 
+/**
+ * A data app's public dataset, the one read that scans its records: this data center's cached
+ * copy when it has one (the /dataset route stores it under the same URL), else one D1 read.
+ * The Table's pages and the Overview's stats are computed from it (src/shared/engine.ts).
+ */
+const datasetOf = (c: AppContext, config: DataAppConfig): Promise<DatasetResponse> =>
+  cachedJson(c, `${new URL(c.req.url).origin}/api/${config.slug}/dataset`, 60, () =>
+    loadDataset(c.env.DB, config, new Date()),
+  );
+
+app.get('/api/:slug/dataset', API_CACHE, async (c) =>
+  c.json(await loadDataset(c.env.DB, dataAppFor(c.req.param('slug')), new Date())),
+);
+
 app.get('/api/:slug/records', API_CACHE, async (c) => {
   const config = dataAppFor(c.req.param('slug'));
   const params = new URL(c.req.url).searchParams;
@@ -201,7 +215,7 @@ app.get('/api/:slug/records', API_CACHE, async (c) => {
   const limit = parseLimit(params.get('limit'));
   // facets=none skips the per-filter counts, for callers that only show rows.
   const facets = params.get('facets') !== 'none';
-  return c.json(await listRecords(c.env.DB, config, state, limit, todayUtc(), { facets }));
+  return c.json(listFrom(config, await datasetOf(c, config), state, limit, { facets }));
 });
 
 app.get('/api/:slug/records/:id', API_CACHE, async (c) => {
@@ -211,9 +225,10 @@ app.get('/api/:slug/records/:id', API_CACHE, async (c) => {
   return c.json(found);
 });
 
-app.get('/api/:slug/stats', API_CACHE, async (c) =>
-  c.json(await computeStats(c.env.DB, dataAppFor(c.req.param('slug')), new Date())),
-);
+app.get('/api/:slug/stats', API_CACHE, async (c) => {
+  const config = dataAppFor(c.req.param('slug'));
+  return c.json(statsFrom(config, await datasetOf(c, config), new Date()));
+});
 
 app.post('/api/:slug/records/:id/report', async (c) => {
   const config = dataAppFor(c.req.param('slug'));

@@ -52,6 +52,8 @@ CREATE TABLE IF NOT EXISTS revisions (
 );
 CREATE INDEX IF NOT EXISTS revisions_record ON revisions (record_id, id);
 CREATE INDEX IF NOT EXISTS revisions_actor ON revisions (actor, id);
+-- A maintainer's verdicts today, counted on every lease and skill fetch: a range, not a scan.
+CREATE INDEX IF NOT EXISTS revisions_actor_time ON revisions (actor, created_at);
 
 -- Agent credentials. Only a hash of each secret is stored.
 CREATE TABLE IF NOT EXISTS tokens (
@@ -81,6 +83,8 @@ CREATE TABLE IF NOT EXISTS tasks (
   done_at          TEXT
 );
 CREATE INDEX IF NOT EXISTS tasks_queue ON tasks (app_slug, status, created_at);
+-- The leases the cron releases, found by expiry instead of a scan of every task.
+CREATE INDEX IF NOT EXISTS tasks_leased ON tasks (lease_expires_at) WHERE status = 'leased';
 
 -- Verified records waiting to be announced.
 CREATE TABLE IF NOT EXISTS outbox (
@@ -90,6 +94,9 @@ CREATE TABLE IF NOT EXISTS outbox (
   created_at TEXT NOT NULL,
   sent_at    TEXT
 );
+-- Every cron run reads only what is unsent, and its sweep drops old rows by age.
+CREATE INDEX IF NOT EXISTS outbox_unsent ON outbox (app_slug, id) WHERE sent_at IS NULL;
+CREATE INDEX IF NOT EXISTS outbox_age ON outbox (created_at);
 
 -- Replies to submits that carried an Idempotency-Key, kept for 24 hours.
 CREATE TABLE IF NOT EXISTS idempotency (

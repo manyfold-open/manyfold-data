@@ -1,7 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import hackathons from '../data-apps/ai-hackathons/config';
 import { defaultQuery, parseQuery, serializeQuery, withFilter } from '../src/shared/query';
-import { buildWhere, orderBy } from '../src/worker/records';
+import { facetsOf, listFrom, matches } from '../src/shared/engine';
+import type { PublicRecord } from '../src/shared/types';
 
 const parse = (search: string) => parseQuery(hackathons, new URLSearchParams(search));
 
@@ -65,46 +66,64 @@ describe('defaultQuery and withFilter', () => {
   });
 });
 
-describe('buildWhere', () => {
-  it('binds every value and resolves today', () => {
-    const { state } = parse('q=50%_off&format=online&tags=llm,agents&deadline_from=today&prize_usd_from=1000');
-    const where = buildWhere(hackathons, state, '2026-10-01');
-    expect(where.sql).toContain("status = 'verified'");
-    expect(where.sql).toContain("json_extract(data_json, '$.format') IN (?)");
-    expect(where.sql).toContain("json_each(records.data_json, '$.tags') WHERE json_each.value IN (?, ?)");
-    expect(where.params).toEqual([
-      'ai-hackathons',
-      '%50\\%\\_off%',
-      '%50\\%\\_off%',
-      '%50\\%\\_off%',
-      '2026-10-01',
-      'online',
-      1000,
-      'llm',
-      'agents',
+/** A verified record with these field values. */
+const rec = (id: string, data: Record<string, unknown>): PublicRecord => ({
+  id,
+  status: 'verified',
+  data: data as PublicRecord['data'],
+  source_url: 'https://example.org/',
+  observed_at: '2026-10-01T00:00:00Z',
+  verified_at: '2026-10-01T00:00:00Z',
+  updated_at: '2026-10-01T00:00:00Z',
+});
+
+const records = [
+  rec('a', { name: 'Agents 50%_off Jam', format: 'online', tags: ['llm', 'agents'], deadline: '2026-10-20', prize_usd: 5000 }),
+  rec('b', { name: 'London Build', format: 'in-person', city: ['London'], region: 'europe', deadline: '2026-10-05', prize_usd: 20000 }),
+  rec('c', { name: 'zürich hack', format: 'hybrid', city: ['Zürich', 'Bern'], region: 'europe', deadline: '2026-09-30' }),
+  rec('d', { name: 'Berlin Sprint', format: 'online', tags: ['robotics'], deadline: '2026-11-01', prize_usd: 1000 }),
+];
+const today = '2026-10-01';
+const ids = (search: string) => records.filter((record) => matches(hackathons, record, parse(search).state, today)).map((r) => r.id);
+
+describe('the in-memory query engine', () => {
+  it('applies every kind of filter, resolving today', () => {
+    expect(ids('format=online')).toEqual(['a', 'd']);
+    expect(ids('tags=llm,robotics')).toEqual(['a', 'd']);
+    expect(ids('deadline_from=today')).toEqual(['a', 'b', 'd']);
+    expect(ids('deadline_from=today&deadline_to=today%2B10')).toEqual(['b']);
+    expect(ids('prize_usd_from=1000&prize_usd_to=6000')).toEqual(['a', 'd']);
+    // A record without the value never passes a range.
+    expect(ids('prize_usd_to=100000')).toEqual(['a', 'b', 'd']);
+  });
+
+  it('searches text and lists of names without case, and takes the query literally', () => {
+    expect(ids('q=50%_off')).toEqual(['a']);
+    expect(ids('q=london')).toEqual(['b']);
+    expect(ids('q=BERN')).toEqual(['c']);
+    expect(ids('city=Zürich')).toEqual(['c']);
+  });
+
+  it('counts each facet under every other filter', () => {
+    const facets = facetsOf(hackathons, records, parse('format=online&region=europe').state, today);
+    // format's own counts ignore the format filter: europe has one in-person and one hybrid.
+    expect(facets.format).toEqual([
+      { value: 'hybrid', count: 1 },
+      { value: 'in-person', count: 1 },
     ]);
+    expect(facets.region).toEqual([]);
   });
 
-  it('filters by names as written, and finds them with the text search', () => {
-    const { state, errors } = parse('city=San Francisco,Zürich&q=london');
-    expect(errors).toEqual([]);
-    expect(state.filters.city).toEqual({ kind: 'in', values: ['San Francisco', 'Zürich'] });
-    const where = buildWhere(hackathons, state, '2026-10-01');
-    expect(where.sql).toContain("json_each(records.data_json, '$.city')");
-    expect(where.sql).toContain("json_extract(data_json, '$.city') LIKE ?");
+  it('sorts missing values last both ways, text without case, then by id', () => {
+    const order = (search: string) => listFrom(hackathons, { records, today }, parse(search).state, 10).records.map((r) => r.id);
+    expect(order('sort=-prize_usd')).toEqual(['b', 'a', 'd', 'c']);
+    expect(order('sort=prize_usd')).toEqual(['d', 'a', 'b', 'c']);
+    expect(order('sort=name')).toEqual(['a', 'd', 'b', 'c']);
   });
 
-  it('leaves out one field for its own facet counts', () => {
-    const { state } = parse('format=online&region=europe');
-    const where = buildWhere(hackathons, state, '2026-10-01', 'format');
-    expect(where.sql).not.toContain('$.format');
-    expect(where.params).toEqual(['ai-hackathons', 'europe']);
-  });
-
-  it('sorts missing values last and text without case', () => {
-    expect(orderBy(hackathons, parse('sort=-prize_usd').state)).toBe(
-      "json_extract(data_json, '$.prize_usd') IS NULL, json_extract(data_json, '$.prize_usd') DESC, id",
-    );
-    expect(orderBy(hackathons, parse('sort=name').state)).toContain('COLLATE NOCASE ASC');
+  it('pages after sorting and leaves facets out when asked', () => {
+    const page = listFrom(hackathons, { records, today }, parse('sort=name&page=2').state, 3, { facets: false });
+    expect(page).toMatchObject({ total: 4, page: 2, limit: 3, today, facets: {} });
+    expect(page.records.map((r) => r.id)).toEqual(['c']);
   });
 });

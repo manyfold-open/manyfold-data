@@ -8,8 +8,9 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { DataAppConfig } from '../../shared/data-app';
 import { defaultQuery, parseQuery, Q_MAX, serializeQuery, type QueryState } from '../../shared/query';
-import type { PublicRecord, RecordsResponse, StatsResponse } from '../../shared/types';
-import { ApiError, getJson, useApi } from '../api';
+import type { RecordsResponse } from '../../shared/types';
+import { listFrom, statsFrom } from '../../shared/engine';
+import { useDataset } from '../dataset';
 import { FilterPanel, type SmartFilterState } from '../components/FilterPanel';
 import { RecordList, RecordTable } from '../components/RecordTable';
 import { bareLabel, formatCount, nounTitle } from '../format';
@@ -21,59 +22,8 @@ import { navigate } from '../router';
 import { Button, Chip, Icon, Pill, SearchField, Sheet, Skeleton, usePending } from '../ui';
 
 const PAGE_SIZE = 50;
-/** Most pages a link may ask for at once, so a stray ?page=400 cannot fire 400 requests. */
+/** Most pages a link may show at once, so a stray ?page=400 cannot render 20,000 rows. */
 const MAX_PAGES = 20;
-
-interface Pages {
-  /** Every record of every loaded page, in order. */
-  records: PublicRecord[];
-  first: RecordsResponse | null;
-  /** True while any page for the current filters is out; the old rows stay on screen. */
-  loading: boolean;
-  error: ApiError | null;
-  /** Asks again for whatever failed. */
-  retry: () => void;
-}
-
-/** Pages 1 to `count` of one query, loaded in parallel and kept while more are added. */
-function usePagedRecords(base: string, count: number): Pages {
-  const [store, setStore] = useState<{ base: string; pages: RecordsResponse[] } | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<ApiError | null>(null);
-  const [attempt, setAttempt] = useState(0);
-  const latest = useRef(store);
-  latest.current = store;
-
-  useEffect(() => {
-    const have = latest.current?.base === base ? latest.current.pages.length : 0;
-    if (have >= count) {
-      setLoading(false);
-      setError(null);
-      return;
-    }
-    const controller = new AbortController();
-    setLoading(true);
-    const wanted = Array.from({ length: count - have }, (_, index) => have + index + 1);
-    Promise.all(wanted.map((page) => getJson<RecordsResponse>(`${base}&page=${page}`, controller.signal)))
-      .then((results) => {
-        setStore((previous) => ({ base, pages: [...(previous?.base === base ? previous.pages : []), ...results] }));
-        setError(null);
-        setLoading(false);
-      })
-      .catch((failure: unknown) => {
-        if (controller.signal.aborted) return;
-        setError(failure instanceof ApiError ? failure : new ApiError(0, 'network', 'Could not reach the server.'));
-        setLoading(false);
-      });
-    return () => controller.abort();
-  }, [base, count, attempt]);
-
-  const pages = store?.pages.slice(0, store.base === base ? count : undefined) ?? [];
-  // Offset pages read at different times can overlap when a record is verified in between.
-  const seen = new Set<string>();
-  const records = pages.flatMap((page) => page.records).filter((record) => !seen.has(record.id) && Boolean(seen.add(record.id)));
-  return { records, first: pages[0] ?? null, loading, error, retry: () => setAttempt((value) => value + 1) };
-}
 
 /** Search input that waits for a pause in typing before it changes the URL. */
 function Search({ value, label, onChange }: { value: string; label: string; onChange: (q: string) => void }) {
@@ -155,20 +105,23 @@ export default function TablePage({ config, search }: { config: DataAppConfig; s
     () => (search ? parseQuery(config, new URLSearchParams(search)).state : defaultQuery(config)),
     [config, search],
   );
-  const baseParams = serializeQuery(config, { ...state, page: 1 });
-  baseParams.delete('page');
-  baseParams.set('limit', String(PAGE_SIZE));
-  const base = `/api/${config.slug}/records?${baseParams}`;
-  const [lastPage, setLastPage] = useState<{ base: string; pages: number } | null>(null);
-  const { records, first, loading, error, retry } = usePagedRecords(
-    base,
-    Math.max(1, Math.min(state.page, MAX_PAGES, lastPage?.base === base ? lastPage.pages : MAX_PAGES)),
+  // The whole public dataset is in memory (src/app/dataset.ts): pages 1 to `page` are one slice
+  // of the filtered, sorted records, and facets, stats and counts cost no request.
+  const dataset = useDataset(config.slug);
+  const { loading, error, retry } = dataset;
+  const shownPages = Math.max(1, Math.min(state.page, MAX_PAGES));
+  const view = useMemo(
+    () => (dataset.data ? listFrom(config, dataset.data, { ...state, page: 1 }, PAGE_SIZE * shownPages) : null),
+    [config, dataset.data, state, shownPages],
   );
-  useEffect(() => {
-    if (first) setLastPage({ base, pages: Math.max(1, Math.ceil(first.total / PAGE_SIZE)) });
-    // `first` belongs to the base it was read for only once that base's page 1 is in.
-  }, [first]);
-  const stats = useApi<StatsResponse>(`/api/${config.slug}/stats`);
+  const records = view?.records ?? [];
+  const first: RecordsResponse | null = useMemo(
+    () => (view ? { ...view, limit: PAGE_SIZE, records: view.records.slice(0, PAGE_SIZE) } : null),
+    [view],
+  );
+  const stats = {
+    data: useMemo(() => (dataset.data ? statsFrom(config, dataset.data, new Date()) : null), [config, dataset.data]),
+  };
   const firstPending = usePending(!first && !error);
 
   const go = (next: QueryState, replace = false) => navigate(`?${serializeQuery(config, next)}`, { replace });
@@ -222,9 +175,13 @@ export default function TablePage({ config, search }: { config: DataAppConfig; s
   // Phone sheets. The filter sheet edits a draft and counts it before it is applied.
   const [sheet, setSheet] = useState<'filters' | 'sort' | null>(null);
   const [draft, setDraft] = useState<QueryState>(state);
-  const draftParams = serializeQuery(config, { ...draft, page: 1 });
-  draftParams.set('limit', '1');
-  const draftCount = useApi<RecordsResponse>(sheet === 'filters' ? `/api/${config.slug}/records?${draftParams}` : null);
+  const draftCount = {
+    data: useMemo(
+      () => (sheet === 'filters' && dataset.data ? listFrom(config, dataset.data, { ...draft, page: 1 }, 1) : null),
+      [config, dataset.data, draft, sheet],
+    ),
+    loading: false,
+  };
   const openFilters = () => {
     setDraft(state);
     setSmartMessage(null);

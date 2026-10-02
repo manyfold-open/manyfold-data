@@ -11,7 +11,7 @@
  * maintainers verify. The admin console reads its own, uncached routes.
  */
 
-import type { MiddlewareHandler } from 'hono';
+import type { Context, MiddlewareHandler } from 'hono';
 import type { Env } from './types';
 
 /** The cache this Worker can use, or null where there is none (tests, some local runtimes). */
@@ -49,6 +49,33 @@ export function cachedFor(seconds: number): MiddlewareHandler<{ Bindings: Env }>
       await put; // no execution context (tests): finish the write before answering
     }
   };
+}
+
+/**
+ * A JSON value cached under `url` for `seconds`: this data center's copy when it has one, else
+ * `load()` once and keep it. The /dataset route stores its answer under the same URL, so the
+ * computed reads (/records, /stats) reuse whichever of them read D1 first.
+ */
+export async function cachedJson<T>(c: Context, url: string, seconds: number, load: () => Promise<T>): Promise<T> {
+  const cache = edgeCache();
+  const key = new Request(url, { method: 'GET' });
+  if (cache) {
+    const hit = await cache.match(key);
+    if (hit) return (await hit.json()) as T;
+  }
+  const value = await load();
+  if (cache) {
+    const response = new Response(JSON.stringify(value), {
+      headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': `public, max-age=${seconds}` },
+    });
+    const put = cache.put(key, response);
+    try {
+      c.executionCtx.waitUntil(put);
+    } catch {
+      await put;
+    }
+  }
+  return value;
 }
 
 /**
