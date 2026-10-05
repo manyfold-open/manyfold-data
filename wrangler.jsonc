@@ -18,7 +18,7 @@
     "not_found_handling": "single-page-application",
     // Every request but static files reaches the Worker first: the API, each data app's
     // generated files, and the pages, which get the Google tag (src/worker/analytics.ts).
-    "run_worker_first": ["/*", "!/assets/*", "!/favicon.svg", "!/robots.txt"]
+    "run_worker_first": ["/*", "!/assets/*", "!/favicon.svg", "!/robots.txt", "!/og.png"]
   },
   "d1_databases": [
     {
