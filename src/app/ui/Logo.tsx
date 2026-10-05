@@ -39,7 +39,7 @@ export function Logo() {
   );
 }
 
-/** The Manyfold app's own mark (from manyfold.ai), for "Built on Manyfold". Not this site's logo. */
+/** The Manyfold app's own mark (from manyfold.ai), for "powered by Manyfold". Not this site's logo. */
 export function ManyfoldMark({ size = 16 }: { size?: number }) {
   return (
     <svg className="manyfold-mark" width={size * 1.35} height={size} viewBox="0 10 135 75" aria-hidden="true" focusable="false">
