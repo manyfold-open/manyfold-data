@@ -84,7 +84,7 @@ export default function App() {
           <p className="footer-end">
             <a
               className="built-on"
-              href="https://github.com/manyfold-open/manyfold"
+              href="https://github.com/manyfold-open/manyfold-data"
               target="_blank"
               rel="noopener noreferrer"
             >
