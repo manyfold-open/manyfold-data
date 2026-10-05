@@ -82,8 +82,13 @@ export default function App() {
         <footer className="site-footer">
           <p>Data is CC BY 4.0, code is MIT. Every record links to the page it was checked against.</p>
           <p className="footer-end">
-            <a className="built-on" href="https://manyfold.ai" target="_blank" rel="noopener noreferrer">
-              Built on
+            <a
+              className="built-on"
+              href="https://github.com/manyfold-open/manyfold"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              powered by
               <ManyfoldMark />
               <b>Manyfold</b>
             </a>
