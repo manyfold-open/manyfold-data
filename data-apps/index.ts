@@ -15,6 +15,7 @@ import enduranceRaces from './endurance-races/config.ts';
 import marathons from './marathons/config.ts';
 import newRules from './new-rules/config.ts';
 import recalls from './recalls/config.ts';
+import robotLaunches from './robot-launches/config.ts';
 import robotaxis from './robotaxis/config.ts';
 import scholarships from './scholarships/config.ts';
 import skyEvents from './sky-events/config.ts';
@@ -28,6 +29,7 @@ export const dataApps: readonly DataAppConfig[] = [
   aiAcquisitions,
   aiDataCenters,
   robotaxis,
+  robotLaunches,
   aiScams,
   visaChanges,
   newRules,

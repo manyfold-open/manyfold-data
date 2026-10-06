@@ -1,0 +1,2625 @@
+[
+  {
+    "data": {
+      "product": "DEEP Robotics DR02",
+      "maker": [
+        "DEEP Robotics"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2025-10-09",
+      "height_cm": 175,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.deeprobotics.cn/robot/index/dr02.html"
+    },
+    "source_url": "https://www.deeprobotics.cn/robot/index/article/id/284.html",
+    "evidence": "10月9日，作为具身智能创新技术与应用引领者的云深处科技，正式发布全新一代行业级人形机器人——DR02。作为全球首款具备IP66防护等级、可适应全天候户外作业的人形机器人",
+    "observed_at": "2026-10-06T14:18:30Z"
+  },
+  {
+    "data": {
+      "product": "Figure 03",
+      "maker": [
+        "Figure"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2025-10-09",
+      "height_cm": 173,
+      "maker_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "url": "https://www.figure.ai/figure"
+    },
+    "source_url": "https://www.figure.ai/news/introducing-figure-03",
+    "evidence": "October 09, 2025 Today we’re introducing Figure 03, our 3rd generation humanoid robot. Figure 03 is designed for Helix, the home, and the world at scale.",
+    "observed_at": "2026-10-06T13:25:00Z"
+  },
+  {
+    "data": {
+      "product": "MagicLab MagicDog Y1",
+      "maker": [
+        "MagicLab"
+      ],
+      "kind": "quadruped",
+      "milestone": "unveiled",
+      "date": "2025-10-10",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.magiclab.top/"
+    },
+    "source_url": "https://www.ithome.com/0/888/484.htm",
+    "evidence": "IT之家 10 月 10 日消息，魔法原子今日发布首个面向行业应用的四足机器人 MagicDog Y1， 支持 45kg 移动负载 + 150kg 最大负载，最高 6m/s 高速奔跑 。",
+    "observed_at": "2026-10-06T14:32:52Z"
+  },
+  {
+    "data": {
+      "product": "China Mobile Lingxi quadruped (灵犀四足机器人)",
+      "maker": [
+        "China Mobile"
+      ],
+      "kind": "quadruped",
+      "milestone": "unveiled",
+      "date": "2025-10-11",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.10086.cn/"
+    },
+    "source_url": "https://www.ithome.com/0/889/103.htm",
+    "evidence": "IT之家 10 月 13 日消息，中国移动灵犀智能体赋能论坛于 10 月 11 日在广州召开，中国移动智慧家庭运营中心总经理于蓉蓉正式宣布 灵犀机器人智创体验官计划 全面启动。 中国移动在 2024 年推出首款四足机器人原型机，历经 40 余轮迭代，正式公布 中国移动首款消费级四足机器人 。",
+    "observed_at": "2026-10-06T14:32:53Z"
+  },
+  {
+    "data": {
+      "product": "AgiBot G2 (精灵 G2)",
+      "maker": [
+        "AgiBot"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2025-10-16",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.agibot.com/"
+    },
+    "source_url": "https://www.ithome.com/0/889/866.htm",
+    "evidence": "IT之家 10 月 16 日消息，今日智元机器人举行线上直播发布会，正式发布新一代工业级交互式具身作业机器人智元精灵 G2。",
+    "observed_at": "2026-10-06T14:18:30Z"
+  },
+  {
+    "data": {
+      "product": "Unitree H2",
+      "maker": [
+        "Unitree"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2025-10-20",
+      "height_cm": 180,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.unitree.com/H2"
+    },
+    "source_url": "https://www.ithome.com/0/890/787.htm",
+    "evidence": "IT之家 10 月 20 日消息，今日，宇树科技正式发布了其新一代仿生人形机器人 Unitree H2。 据官方介绍，Unitree H2 身高 180 厘米，体重 70 公斤",
+    "observed_at": "2026-10-06T14:18:32Z"
+  },
+  {
+    "data": {
+      "product": "Booster K1",
+      "maker": [
+        "Booster Robotics"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2025-10-21",
+      "price_usd": 4200,
+      "price_stated": "限时 2.99 万元起",
+      "height_cm": 100,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.booster.tech/booster-k1/"
+    },
+    "source_url": "https://www.ithome.com/0/891/130.htm",
+    "evidence": "IT之家 10 月 21 日消息，加速进化今日公布了一款 Booster K1 人形机器人新品，这是一款具身开发入门级平台， 限时 2.99 万元起 。",
+    "observed_at": "2026-10-06T14:18:33Z"
+  },
+  {
+    "data": {
+      "product": "Noetix Bumi (小布米)",
+      "maker": [
+        "Noetix"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2025-10-22",
+      "price_usd": 1403,
+      "price_stated": "9998 元",
+      "height_cm": 94,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.noetixrobotics.com/"
+    },
+    "source_url": "https://www.ithome.com/0/891/493.htm",
+    "evidence": "IT之家 10 月 22 日消息，松延动力今日发布全球首款万元以内高性能人形机器人 —— 松延动力 Bumi 小布米 。 小布米定价 9998 元 ，身高约 94cm",
+    "observed_at": "2026-10-06T14:18:35Z"
+  },
+  {
+    "data": {
+      "product": "1X NEO",
+      "maker": [
+        "1X"
+      ],
+      "kind": "humanoid",
+      "milestone": "preorder",
+      "date": "2025-10-28",
+      "price_usd": 20000,
+      "price_stated": "US$20,000 or US$499 a month",
+      "markets": [
+        "United States"
+      ],
+      "height_cm": 168,
+      "maker_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "url": "https://www.1x.tech/neo"
+    },
+    "source_url": "https://www.1x.tech/discover/neo-home-robot",
+    "evidence": "NEO is now available for pre-order, with first orders shipping to consumer homes in 2026. NEO is now available via 1X’s online store [ 1x.tech/order ] and comes in three distinct colors (Tan, Gray, Dark Brown). Customers interested owning one of the first NEOs can purchase Early Access for $20,000",
+    "observed_at": "2026-10-06T13:27:00Z"
+  },
+  {
+    "data": {
+      "product": "Richtech Dex",
+      "maker": [
+        "Richtech Robotics"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2025-10-28",
+      "maker_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "url": "https://richtechrobotics.com/solutions/dex"
+    },
+    "source_url": "https://www.globenewswire.com/news-release/2025/10/28/3175859/0/en/richtech-robotics-offers-first-look-at-dex-a-mobile-humanoid-robot-for-real-world-work.html",
+    "evidence": "LAS VEGAS, Oct. 28, 2025 (GLOBE NEWSWIRE) -- Richtech Robotics Inc. (Nasdaq: RR) (“Richtech”), a U.S.-based provider of AI-driven robotics solutions, today unveiled Dex, the company’s first mobile humanoid robot for industrial use.",
+    "observed_at": "2026-10-06T13:57:39Z"
+  },
+  {
+    "data": {
+      "product": "Holiday Robotics FRIDAY",
+      "maker": [
+        "Holiday Robotics"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2025-10-29",
+      "height_cm": 176,
+      "maker_country": [
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "url": "https://holiday-robotics.com/"
+    },
+    "source_url": "https://zdnet.co.kr/view/?no=20251029175427",
+    "evidence": "로봇 스타트업 홀리데이로보틱스가 첫 번째 휴머노이드 로봇 '프라이데이(FRIDAY)'를 공개했다.",
+    "observed_at": "2026-10-06T14:14:58Z"
+  },
+  {
+    "data": {
+      "product": "Dobot Rover X1",
+      "maker": [
+        "Dobot"
+      ],
+      "kind": "quadruped",
+      "milestone": "unveiled",
+      "date": "2025-11-03",
+      "price_usd": 1053,
+      "price_stated": "¥7,499",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.dobot.cn/products/humanoid-robots/rover-x1.html"
+    },
+    "source_url": "https://www.ithome.com/0/894/464.htm",
+    "evidence": "IT之家 11 月 3 日消息，越疆今日发布全球首款家庭智能体机器人 Rover X1， 售价 7499 元 。这台从工厂走出的智能机器狗，首次应用于家庭场景。",
+    "observed_at": "2026-10-06T14:32:32Z"
+  },
+  {
+    "data": {
+      "product": "XPeng IRON",
+      "maker": [
+        "XPeng"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2025-11-05",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.xpeng.com/news"
+    },
+    "source_url": "https://www.ithome.com/0/895/090.htm",
+    "evidence": "IT之家 11 月 5 日消息，在今日的 2025 小鹏科技日活动上，小鹏全新一代 IRON 人形机器人亮相，号称“最拟人的人形机器人”。",
+    "observed_at": "2026-10-06T14:18:36Z"
+  },
+  {
+    "data": {
+      "product": "AIDOL",
+      "maker": [
+        "AIDOL"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2025-11-10",
+      "height_cm": 186,
+      "maker_country": [
+        "Russia"
+      ],
+      "region": "europe",
+      "url": "https://aidoltech.ru/en/walking"
+    },
+    "source_url": "https://interestingengineering.com/ai-robotics/russias-first-humanoid-robot-falls-on-its-face",
+    "evidence": "during its much-anticipated debut at a major technology forum in Moscow. The fall, which was caught on camera and quickly went viral, showed the robot, named AIdol, walking unsteadily across the stage to Rocky’s iconic theme song “Gonna Fly Now” on Monday, November 10.",
+    "observed_at": "2026-10-06T14:16:39Z"
+  },
+  {
+    "data": {
+      "product": "UBTech Walker S2",
+      "maker": [
+        "UBTech"
+      ],
+      "kind": "humanoid",
+      "milestone": "shipping",
+      "date": "2025-11-12",
+      "height_cm": 176,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.ubtrobot.com/cn/humanoid/products/walker-s2"
+    },
+    "source_url": "https://www.ithome.com/0/897/076.htm",
+    "evidence": "IT之家 11 月 13 日消息，11 月 12 日，优必选首批数百台全尺寸工业人形机器人 Walker S2 正式开启量产交付，将分批投入产业一线应用。",
+    "observed_at": "2026-10-06T14:18:38Z"
+  },
+  {
+    "data": {
+      "product": "Unitree G1-D",
+      "maker": [
+        "Unitree"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2025-11-13",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.unitree.com/G1-D"
+    },
+    "source_url": "https://www.ithome.com/0/897/148.htm",
+    "evidence": "IT之家 11 月 13 日消息，宇树科技今日在官网上线了一套人形机器人数采训练全栈解决方案。 该方案基于一款轮式机器人 G1-D ，由人形机器人本体、系统化的数据采集工具和全面的模型训练及推理工具组成。",
+    "observed_at": "2026-10-06T14:18:39Z"
+  },
+  {
+    "data": {
+      "product": "RobotPhoenix Hogene (鸿钧)",
+      "maker": [
+        "RobotPhoenix"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2025-11-17",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.robotphoenix.com/"
+    },
+    "source_url": "https://www.ithome.com/0/898/373.htm",
+    "evidence": "IT之家 11 月 18 日消息，国产工业机器人企业翼菲科技官宣入局人形机器人领域，于 11 月 17 日发布旗下首款人形机器人“ 鸿钧 ”。",
+    "observed_at": "2026-10-06T14:18:41Z"
+  },
+  {
+    "data": {
+      "product": "Sunday Memo",
+      "maker": [
+        "Sunday Robotics"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2025-11-19",
+      "maker_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "url": "https://www.sunday.ai/"
+    },
+    "source_url": "https://www.wired.com/story/memo-sunday-robotics-home-robot/",
+    "evidence": "I recently watched as Memo, a new home robot from a company called Sunday Robotics, made coffee in an open-plan kitchen in Mountain View, California.",
+    "observed_at": "2026-10-06T13:57:39Z"
+  },
+  {
+    "data": {
+      "product": "Agile ONE",
+      "maker": [
+        "Agile Robots"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2025-11-19",
+      "maker_country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "url": "https://www.agile-robots.com/en/products/agile-one/"
+    },
+    "source_url": "https://www.agile-robots.com/en/news/detail/agile-robots-launches-humanoid-robot-for-industry-agile-one/",
+    "evidence": "Munich, 19.11.2025 – Agile Robots, a global leader in intelligent robotic solutions, is launching its first humanoid robot. Agile ONE is designed for use in industrial settings, where it will work safely and efficiently alongside humans and other robotic solutions.",
+    "observed_at": "2026-10-06T14:16:37Z"
+  },
+  {
+    "data": {
+      "product": "EngineAI T800",
+      "maker": [
+        "EngineAI"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2025-12-02",
+      "height_cm": 173,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.engineai.com.cn/product-t800.html"
+    },
+    "source_url": "https://www.ithome.com/0/901/866.htm",
+    "evidence": "IT之家 12 月 2 日消息，众擎机器人今日公布了一段 众擎 T800 人形机器人 的实拍视频，新品实现空中回旋踢，还能连续多次回旋踢，一脚踹烂门。",
+    "observed_at": "2026-10-06T14:18:43Z"
+  },
+  {
+    "data": {
+      "product": "EngineAI T800",
+      "maker": [
+        "EngineAI"
+      ],
+      "kind": "humanoid",
+      "milestone": "on-sale",
+      "date": "2025-12-02",
+      "price_usd": 25456,
+      "price_stated": "18 万元起",
+      "height_cm": 173,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.engineai.com.cn/product-t800.html"
+    },
+    "source_url": "https://www.ithome.com/0/901/878.htm",
+    "evidence": "IT之家 12 月 2 日消息，众擎 T800 人形机器人今日正式发布， 定价 18 万元起 。 众擎官方此前已公布一段 T800 人形机器人的实拍视频 ，实现空中回旋踢，还能连续多次回旋踢，一脚踹烂门。 众擎官方宣布，产品发售进程正式启动， T800 产品定价 18 万元起",
+    "observed_at": "2026-10-06T14:18:44Z"
+  },
+  {
+    "data": {
+      "product": "Humanoid HMND 01 Alpha Bipedal",
+      "maker": [
+        "Humanoid"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2025-12-02",
+      "height_cm": 179,
+      "maker_country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "url": "https://thehumanoid.ai/hmnd-01-alpha-bipedal/"
+    },
+    "source_url": "https://thehumanoid.ai/humanoid-unveils-record-breaking-bipedal-robot-walking-48-hours-after-assembly/",
+    "evidence": "London, UK, December 2, 2025 — Humanoid, a UK-based robotics and AI company, today unveiled HMND 01 Alpha Bipedal, a humanoid robot that sets a new benchmark for development speed and operational readiness.",
+    "observed_at": "2026-10-06T14:16:35Z"
+  },
+  {
+    "data": {
+      "product": "Kawasaki RHP Kaleido 9",
+      "maker": [
+        "Kawasaki"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2025-12-03",
+      "maker_country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "url": "https://kawasakirobotics.com/in/event/international-robot-exhibition-irex2025/"
+    },
+    "source_url": "https://kawasakirobotics.com/in/event/international-robot-exhibition-irex2025/",
+    "evidence": "Highlights include the latest industrial robots, the first public unveiling of the new humanoid RHP Kaleido, and CORLEO, featured at the Osaka-Kansai Expo.",
+    "observed_at": "2026-10-06T14:14:56Z"
+  },
+  {
+    "data": {
+      "product": "PUDU D5",
+      "maker": [
+        "Pudu"
+      ],
+      "kind": "quadruped",
+      "milestone": "unveiled",
+      "date": "2025-12-03",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.pudurobotics.com/en/products/d5"
+    },
+    "source_url": "https://www.prnewswire.co.uk/news-releases/pudu-robotics-unveils-pudu-d5-series-industry-grade-autonomous-quadruped-robots-designed-for-complex-real-world-operations-302630095.html",
+    "evidence": "SHENZHEN, China , Dec. 3, 2025 /PRNewswire/ -- Pudu Robotics , a global leader in service robotics, today announced the launch of the PUDU D5 Series",
+    "observed_at": "2026-10-06T14:32:46Z"
+  },
+  {
+    "data": {
+      "product": "Sharp Poketomo (ポケとも)",
+      "maker": [
+        "Sharp"
+      ],
+      "kind": "home-robot",
+      "milestone": "on-sale",
+      "date": "2025-12-05",
+      "maker_country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "url": "https://poketomo.com/"
+    },
+    "source_url": "https://corporate.jp.sharp/news/251027-a.html",
+    "evidence": "シャープは、対話AIキャラクター「ポケとも」を、本年 11月21日（金） 12月5日（金） に発売します。家電量販店のほか、百貨店や生活雑貨店、通信事業者、シャープの「COCORO STORE」をはじめとするECサイトなどでご購入いただけます（※1）。",
+    "observed_at": "2026-10-06T14:33:00Z"
+  },
+  {
+    "data": {
+      "product": "LimX TRON 2",
+      "maker": [
+        "LimX Dynamics"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2025-12-18",
+      "price_usd": 7073,
+      "price_stated": "4.98 万元起",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.limxdynamics.com/zh/products/tron2"
+    },
+    "source_url": "https://www.ithome.com/0/906/067.htm",
+    "evidence": "IT之家 12 月 18 日消息，逐际动力 LimX Dynamics 今日推出全新多形态具身机器人 TRON 2，售价 4.98 万元起，即日起在官网开放预订。一个本体，三种形态自由组合，集高性能操作双臂与全地形移动双足于一体。",
+    "observed_at": "2026-10-06T14:18:46Z"
+  },
+  {
+    "data": {
+      "product": "LimX TRON 2",
+      "maker": [
+        "LimX Dynamics"
+      ],
+      "kind": "humanoid",
+      "milestone": "preorder",
+      "date": "2025-12-18",
+      "price_usd": 7073,
+      "price_stated": "4.98 万元起",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.limxdynamics.com/zh/products/tron2"
+    },
+    "source_url": "https://www.limxdynamics.com/zh/news/BK000047",
+    "evidence": "4.98 万起丨一机三态！逐际动力 TRON 2 重磅发布，即日起开放预订 产品 2025/12/18",
+    "observed_at": "2026-10-06T14:18:47Z"
+  },
+  {
+    "data": {
+      "product": "Dobot Rover X1",
+      "maker": [
+        "Dobot"
+      ],
+      "kind": "quadruped",
+      "milestone": "preorder",
+      "date": "2025-12-23",
+      "price_usd": 1067,
+      "price_stated": "¥7,499",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.dobot.cn/products/humanoid-robots/rover-x1.html"
+    },
+    "source_url": "https://finance.sina.com.cn/stock/t/2025-12-24/doc-inhcwtcp4532287.shtml",
+    "evidence": "12月23日，国内具身智能企业维他动力发布了首款消费级四足机器狗“大头Bobo”，预售价格9988元，首日成交额超过千万元。仅仅九小时之后，越疆（2432.HK）宣布消费级四足Rover X1开启预售，预售价格为7499元。",
+    "observed_at": "2026-10-06T14:32:34Z"
+  },
+  {
+    "data": {
+      "product": "Vbot SuperDog (超能机器狗)",
+      "maker": [
+        "Vita Dynamics"
+      ],
+      "kind": "quadruped",
+      "milestone": "preorder",
+      "date": "2025-12-23",
+      "price_usd": 1421,
+      "price_stated": "¥9,988 founder price",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.vbot.cn/Detail"
+    },
+    "source_url": "https://finance.sina.com.cn/stock/t/2026-01-12/doc-inhfzukp8374847.shtml",
+    "evidence": "2025年12月23日至2026年1月10日的限时创始权益预售期内，该产品累计订单量6540台，预订销售额近亿元。Vbot超能机器狗是一款无需遥控的智能机器狗，9988元的创始权益价包含终身质保、无线充电站、全能拓展背板等在内的限时权益。",
+    "observed_at": "2026-10-06T14:32:36Z"
+  },
+  {
+    "data": {
+      "product": "EIR AIQ (爱湫)",
+      "maker": [
+        "EIR"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2025-12-31",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.eir.com.cn/"
+    },
+    "source_url": "https://www.chinanews.com.cn/sh/2025/12-31/10543819.shtml",
+    "evidence": "中新社 成都12月31日电 (记者 岳依桐)四川具身人形机器人科技有限公司(下称“四川具身科技”)研发的全球首款情感交互人形机器人——“爱湫”12月31日在成都亮相。",
+    "observed_at": "2026-10-06T14:18:48Z"
+  },
+  {
+    "data": {
+      "product": "Zeroth W1",
+      "maker": [
+        "Zeroth"
+      ],
+      "kind": "home-robot",
+      "milestone": "unveiled",
+      "date": "2026-01-04",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.zeroth0.com/products/w1"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/zeroth-robotics-launches-into-the-us-with-debut-lineup-of-interactive-ai-robots-for-consumer-and-commercial-buyers-302652162.html",
+    "evidence": "In addition to M1, Zeroth is revealing: W1: An autonomous, wheel-based assistant built for homes and light commercial environments.",
+    "observed_at": "2026-10-06T14:33:10Z"
+  },
+  {
+    "data": {
+      "product": "Boston Dynamics Atlas",
+      "maker": [
+        "Boston Dynamics"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-01-05",
+      "height_cm": 190,
+      "maker_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "url": "https://bostondynamics.com/products/atlas/"
+    },
+    "source_url": "https://bostondynamics.com/blog/boston-dynamics-unveils-new-atlas-robot-to-revolutionize-industry/",
+    "evidence": "LAS VEGAS (Jan. 5, 2026) – Boston Dynamics, the global leader in mobile robotics, unveiled the product version of its new Atlas ® robot at the Consumer Electronics Show in Las Vegas today.",
+    "observed_at": "2026-10-06T13:33:00Z"
+  },
+  {
+    "data": {
+      "product": "LG CLOiD",
+      "maker": [
+        "LG"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-01-05",
+      "maker_country": [
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.lg.com/global/newsroom/news/home-appliance-solution/lg-electronics-presents-lg-cloid-home-robot-to-demonstrate-zero-labor-home-at-ces-2026/"
+    },
+    "source_url": "https://www.koreaherald.com/article/10649588",
+    "evidence": "At LG World Premiere, the company's annual pre-CES event held Monday in Las Vegas under the theme \"Innovation in tune with you,\" CLOiD was first introduced as a home-specialized agent",
+    "observed_at": "2026-10-06T14:14:28Z"
+  },
+  {
+    "data": {
+      "product": "NEURA 4NE1 Gen 3.5",
+      "maker": [
+        "NEURA Robotics"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-01-05",
+      "height_cm": 180,
+      "maker_country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "url": "https://neura-robotics.com/products/4ne1/"
+    },
+    "source_url": "https://neura-robotics.com/neura-robotics-at-ces-2026/",
+    "evidence": "NEURA Robotics Unveils Next-Generation Robots and Announces Exciting CES 2026 Program 5. January 2026 GO BACK NEURA CES exhibit will demonstrate the capabilities of its industry-leading Neuraverse platform New generation of the Humanoid 4NE1 as well as its smaller version, 4NE1 Mini",
+    "observed_at": "2026-10-06T14:16:41Z"
+  },
+  {
+    "data": {
+      "product": "Sharpa North",
+      "maker": [
+        "Sharpa"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-01-06",
+      "maker_country": [
+        "Singapore"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.sharpa.com/blogs/news/sharpa-unveils-its-first-autonomous-full-body-robot-with-human-dexterity-at-ces-2026"
+    },
+    "source_url": "https://www.sharpa.com/blogs/news/sharpa-unveils-its-first-autonomous-full-body-robot-with-human-dexterity-at-ces-2026",
+    "evidence": "2026-01-06 Sharpa, an AI robotics company, today unveiled North, its first full-body robot, at CES 2026.",
+    "observed_at": "2026-10-06T14:14:31Z"
+  },
+  {
+    "data": {
+      "product": "ECOVACS LilMilo (毛团儿)",
+      "maker": [
+        "Ecovacs"
+      ],
+      "kind": "home-robot",
+      "milestone": "unveiled",
+      "date": "2026-01-06",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.ecovacs.com/us/famibot-ai-companion-robot/lilmilo-white"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/ecovacs-showcases-its-acceleration-towards-full-scenario-service-robotics-at-ces-2026-302653595.html",
+    "evidence": "ECOVACS is also unveiling its first robotic pet companion LilMilo at CES, marking another strategic step into embodied intelligence.",
+    "observed_at": "2026-10-06T14:33:03Z"
+  },
+  {
+    "data": {
+      "product": "NEURA 4NE1 Gen 3.5",
+      "maker": [
+        "NEURA Robotics"
+      ],
+      "kind": "humanoid",
+      "milestone": "preorder",
+      "date": "2026-01-08",
+      "price_usd": 114415,
+      "price_stated": "€98,000",
+      "height_cm": 180,
+      "maker_country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "url": "https://neura-robotics.com/product/4ne1-reservation/"
+    },
+    "source_url": "https://robohorizon.com/en-us/news/2026/01/neura-robotics-opens-preorders-for-98k-porsche-designed-humanoid/",
+    "evidence": "January 8, 2026 Robot King German robotics firm NEURA Robotics GmbH crashed the CES 2026 party by announcing it has opened preorders for its next-generation humanoid robots. For a fully refundable €100 deposit, you can secure a spot to purchase the flagship 4NE-1 Gen 3.5 for €98,000",
+    "observed_at": "2026-10-06T14:16:42Z"
+  },
+  {
+    "data": {
+      "product": "NEURA 4NE1 Mini",
+      "maker": [
+        "NEURA Robotics"
+      ],
+      "kind": "humanoid",
+      "milestone": "preorder",
+      "date": "2026-01-08",
+      "price_usd": 23349,
+      "price_stated": "€19,999",
+      "ships_on": "2026-04-01",
+      "height_cm": 132,
+      "maker_country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "url": "https://neura-robotics.com/product/4ne1-mini-reservation/"
+    },
+    "source_url": "https://robohorizon.com/en-us/news/2026/01/neura-robotics-opens-preorders-for-98k-porsche-designed-humanoid/",
+    "evidence": "crashed the CES 2026 party by announcing it has opened preorders for its next-generation humanoid robots. For a fully refundable €100 deposit, you can secure a spot to purchase the flagship 4NE-1 Gen 3.5 for €98,000 or its smaller sibling, the 4NE-1 Mini, for a more palatable €19,999.",
+    "observed_at": "2026-10-06T14:16:42Z"
+  },
+  {
+    "data": {
+      "product": "Fauna Sprout",
+      "maker": [
+        "Fauna Robotics"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-01-27",
+      "height_cm": 107,
+      "maker_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "url": "https://faunarobotics.com/product"
+    },
+    "source_url": "https://www.globenewswire.com/news-release/2026/01/27/3226441/0/en/fauna-robotics-unveils-sprout-a-lightweight-interactive-and-capable-developer-ready-humanoid-platform.html",
+    "evidence": "NEW YORK, Jan. 27, 2026 (GLOBE NEWSWIRE) -- Fauna Robotics today launches out of stealth with its debut robot Sprout.",
+    "observed_at": "2026-10-06T13:57:39Z"
+  },
+  {
+    "data": {
+      "product": "Fauna Sprout",
+      "maker": [
+        "Fauna Robotics"
+      ],
+      "kind": "humanoid",
+      "milestone": "on-sale",
+      "date": "2026-01-27",
+      "height_cm": 107,
+      "maker_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "url": "https://faunarobotics.com/product"
+    },
+    "source_url": "https://www.globenewswire.com/news-release/2026/01/27/3226441/0/en/fauna-robotics-unveils-sprout-a-lightweight-interactive-and-capable-developer-ready-humanoid-platform.html",
+    "evidence": "Availability Sprout is available starting today for researchers, educators, and commercial developers. The platform is manufactured in the United States, with engineering and production teams based in New York City.",
+    "observed_at": "2026-10-06T14:02:00Z"
+  },
+  {
+    "data": {
+      "product": "DroidUp Moya",
+      "maker": [
+        "DroidUp"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-01-30",
+      "price_usd": 172669,
+      "price_stated": "120 万至 150 万元人民币",
+      "height_cm": 165,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.droidup.com/"
+    },
+    "source_url": "https://www.ithome.com/0/918/066.htm",
+    "evidence": "IT之家 1 月 31 日消息，1 月 30 日，上海卓益得机器人有限公司在张江机器人谷总部展厅开业仪式上发布全球首款完全仿生具身智能机器人 Moya。 该机器人身高 1.65 米，体重约 32 公斤",
+    "observed_at": "2026-10-06T14:18:48Z"
+  },
+  {
+    "data": {
+      "product": "Walden",
+      "maker": [
+        "Walden Robotics"
+      ],
+      "kind": "humanoid",
+      "milestone": "shipping",
+      "date": "2026-02-01",
+      "maker_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "url": "https://www.waldenrobotics.com/"
+    },
+    "source_url": "https://www.waldenrobotics.com/news/walden-robotics-launches-from-stealth",
+    "evidence": "Since February, Walden’s general-purpose robots have been doing useful work in production at a Toyota plant in North America, moving from first pilot to real work in under two months.",
+    "observed_at": "2026-10-06T13:40:00Z"
+  },
+  {
+    "data": {
+      "product": "MirrorMe Bolt",
+      "maker": [
+        "MirrorMe"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-02-02",
+      "height_cm": 175,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.mirrormetech.com/en/product_5.html"
+    },
+    "source_url": "https://www.ithome.com/0/918/581.htm",
+    "evidence": "IT之家 2 月 2 日消息，镜识科技今日宣布，正式面向全球发布首款 峰值速度达到 10m/s 的全尺寸人形机器人 —— Bolt。官方还放出了 Blot 与公司创始人王宏涛对跑的视频。",
+    "observed_at": "2026-10-06T14:18:50Z"
+  },
+  {
+    "data": {
+      "product": "Addverb Elixis-W",
+      "maker": [
+        "Addverb"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-02-05",
+      "maker_country": [
+        "India"
+      ],
+      "region": "asia-pacific",
+      "url": "https://addverb.ai/humanoid-robot-elixis"
+    },
+    "source_url": "https://www.indiantelevision.com/technology/hardware/headend-equipment/addverb-launches-elixis-w-wheeled-humanoid-in-india-260205",
+    "evidence": "MUMBAI: Addverb has taken a decisive turn on the road to humanoid automation, unveiling its first wheeled humanoid robot, Elixis-W, at LogiMAT India 2026 in Mumbai.",
+    "observed_at": "2026-10-06T14:14:34Z"
+  },
+  {
+    "data": {
+      "product": "X-Humanoid Tien Kung 3.0 (具身天工 3.0)",
+      "maker": [
+        "X-Humanoid"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-02-10",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.x-humanoid.com/detail/jstg.html"
+    },
+    "source_url": "https://www.x-humanoid.com/news-view-251.html",
+    "evidence": "2026 年 2 月 10 日，北京人形机器人创新中心正式发布新一代通用机器人平台具身天工 3.0",
+    "observed_at": "2026-10-06T14:18:56Z"
+  },
+  {
+    "data": {
+      "product": "Geek+ Gino 1",
+      "maker": [
+        "Geek+"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-02-10",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.geekplus.com/en"
+    },
+    "source_url": "https://www.ithome.com/0/921/115.htm",
+    "evidence": "IT之家 2 月 11 日消息，物流机器人企业极智嘉推出了全球首款面向仓储场景的通用人形机器人 Gino1。该产品专为仓储作业全链路设计，具备 仓储拣货、搬箱、打包、巡检 等多任务操作能力，真正实现了“一台机器人覆盖仓内主流人工操作场景”，引领仓储行业实现从“移动智能化”到“操作智能化”的关键跨越。 根据极智嘉官方公众号昨天发布的推文",
+    "observed_at": "2026-10-06T14:18:56Z"
+  },
+  {
+    "data": {
+      "product": "UBTech Walker Tienkung DEX (天工行者 DEX)",
+      "maker": [
+        "UBTech"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-02-10",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.ubtrobot.com/en/ai-education/products/walker-tienkung"
+    },
+    "source_url": "https://www.ithome.com/0/921/359.htm",
+    "evidence": "IT之家 2 月 12 日消息，2 月 10 日，由北京人形机器人创新中心和优必选科技联合推出的全尺寸全能科研人形机器人 ——“天工行者 DEX”发布。",
+    "observed_at": "2026-10-06T14:18:57Z"
+  },
+  {
+    "data": {
+      "product": "AgiBot A3 (远征 A3)",
+      "maker": [
+        "AgiBot"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-02-13",
+      "height_cm": 173,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.agibot.com/"
+    },
+    "source_url": "https://www.ithome.com/0/921/706.htm",
+    "evidence": "IT之家 2 月 13 日消息，今天下午，智元机器人正式发布全新一代全尺寸人形机器人远征 A3。该机器人以“绝世高手”为主题首次亮相，演示视频中，其接连完成了 凌空飞踹、连续飞踢、空中漫步、摸地旋风 等高难度动作",
+    "observed_at": "2026-10-06T14:18:59Z"
+  },
+  {
+    "data": {
+      "product": "Unitree As2",
+      "maker": [
+        "Unitree"
+      ],
+      "kind": "quadruped",
+      "milestone": "unveiled",
+      "date": "2026-02-24",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.unitree.com/As2"
+    },
+    "source_url": "https://www.ithome.com/0/923/211.htm",
+    "evidence": "IT之家 2 月 24 日消息，宇树发布四足机器人 Unitree As2，搭载仿生具身大模型，并开放二次开发生态。",
+    "observed_at": "2026-10-06T14:32:30Z"
+  },
+  {
+    "data": {
+      "product": "HONOR ROBOT",
+      "maker": [
+        "HONOR"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-03-01",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.honor.com/global/"
+    },
+    "source_url": "https://www.ithome.com/0/924/852.htm",
+    "evidence": "IT之家 3 月 1 日消息，2026 世界移动通信大会前夕，荣耀在西班牙巴塞罗那举行了 MWC 2026 全球新品发布会。 会上，荣耀首款人形机器人正式亮相，现场表演舞蹈及后空翻等动作。",
+    "observed_at": "2026-10-06T14:19:00Z"
+  },
+  {
+    "data": {
+      "product": "Noetix Bumi (小布米)",
+      "maker": [
+        "Noetix"
+      ],
+      "kind": "humanoid",
+      "milestone": "shipping",
+      "date": "2026-03-15",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.noetixrobotics.com/"
+    },
+    "source_url": "https://www.ithome.com/0/929/227.htm",
+    "evidence": "IT之家 3 月 15 日消息，据新浪报道，松延动力公司创始人姜哲源今天在 AWE 2026 现场，将此前因亮相 2026 马年春晚而备受关注的“小布米”人形机器人正式交付给用户",
+    "observed_at": "2026-10-06T14:19:02Z"
+  },
+  {
+    "data": {
+      "product": "Hugging Face Reachy Mini",
+      "maker": [
+        "Hugging Face"
+      ],
+      "kind": "home-robot",
+      "milestone": "on-sale",
+      "date": "2026-03-16",
+      "markets": [
+        "United States",
+        "Europe",
+        "South Korea",
+        "Japan",
+        "Brazil"
+      ],
+      "maker_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "url": "https://www.pollen-robotics.com/reachy-mini/"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/reachy-mini-hits-aliexpress-taking-embodied-ai-global-302715067.html",
+    "evidence": "LOS ANGELES , March 16, 2026 /PRNewswire/ -- Reachy Mini, the open-source desktop robot that has captivated the developer community, is now available to global consumers on AliExpress, coinciding with the platform's Anniversary Sale promotion.",
+    "observed_at": "2026-10-06T14:33:05Z"
+  },
+  {
+    "data": {
+      "product": "X-Humanoid Tien Kung 3.0 (具身天工 3.0)",
+      "maker": [
+        "X-Humanoid"
+      ],
+      "kind": "humanoid",
+      "milestone": "shipping",
+      "date": "2026-03-19",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.x-humanoid.com/detail/jstg.html"
+    },
+    "source_url": "https://www.ithome.com/0/931/287.htm",
+    "evidence": "3 月 19 日，北京人形机器人创新中心（国家地方共建具身智能机器人创新中心）在北京亦庄举办“人形机器人半马实训营开营及交付仪式”。 北京人形机器人创新中心向北京大学、北航、北理工、华中科大、港科大（广州）等顶尖高校，以及蔚来、中船等二次开发合作伙伴代表正式 交付 15 台“天工”机器人 ，并提供通用具身智能平台“慧思开物”技术支持，为即将到来的人形机器人半程马拉松赛事蓄力准备。 此次交付的核心设备包括： 6 台“具身天工 3.0”",
+    "observed_at": "2026-10-06T14:20:00Z"
+  },
+  {
+    "data": {
+      "product": "AgiBot D1 Max (智元酷拓 D1 MAX)",
+      "maker": [
+        "AgiBot"
+      ],
+      "kind": "quadruped",
+      "milestone": "unveiled",
+      "date": "2026-03-23",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.agibot.com.cn/"
+    },
+    "source_url": "https://www.ithome.com/0/931/677.htm",
+    "evidence": "IT之家 3 月 23 日消息，智元机器人今日发布了 智元酷拓 D1 MAX ，这是一款行业四足机器人。",
+    "observed_at": "2026-10-06T14:32:54Z"
+  },
+  {
+    "data": {
+      "product": "Enabot EBO Max",
+      "maker": [
+        "Enabot"
+      ],
+      "kind": "home-robot",
+      "milestone": "preorder",
+      "date": "2026-03-31",
+      "price_usd": 662,
+      "price_stated": "£499.99",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.enabot.com/pages/ebo-max-familybot"
+    },
+    "source_url": "https://www.prnewswire.co.uk/news-releases/enabot-introduces-ebo-max-an-ai-powered-family-robot-designed-to-think-learn-and-care-302727059.html",
+    "evidence": "The EBO Max is available for pre-order at £499.99 (£50 OFF) on the Enabot website .",
+    "observed_at": "2026-10-06T14:33:02Z"
+  },
+  {
+    "data": {
+      "product": "UniX AI Panther",
+      "maker": [
+        "UniX AI"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-04-08",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.prnewswire.com/news-releases/unix-ai-introduces-panther-the-worlds-first-service-humanoid-robot-to-enter-real-household-deployment-powered-by-its-differentiated-wheeled-dual-arm-architecture-302736872.html"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/unix-ai-introduces-panther-the-worlds-first-service-humanoid-robot-to-enter-real-household-deployment-powered-by-its-differentiated-wheeled-dual-arm-architecture-302736872.html",
+    "evidence": "April 8, 2026 /PRNewswire/ -- UniX AI , a global humanoid robotics service provider specializing in R&D, mass production, and real-world deployment of general-purpose humanoid robots, has unveiled Panther , its all-new third-generation full-size wheeled dual-arm humanoid robot series.",
+    "observed_at": "2026-10-06T14:19:59Z"
+  },
+  {
+    "data": {
+      "product": "UniX AI Panther",
+      "maker": [
+        "UniX AI"
+      ],
+      "kind": "humanoid",
+      "milestone": "shipping",
+      "date": "2026-04-08",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.prnewswire.com/news-releases/unix-ai-introduces-panther-the-worlds-first-service-humanoid-robot-to-enter-real-household-deployment-powered-by-its-differentiated-wheeled-dual-arm-architecture-302736872.html"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/unix-ai-introduces-panther-the-worlds-first-service-humanoid-robot-to-enter-real-household-deployment-powered-by-its-differentiated-wheeled-dual-arm-architecture-302736872.html",
+    "evidence": "Alongside the recent release of a video demonstrating its humanoid robot in a real household setting, UniX AI has also commenced global deliveries of Panther , marking a major milestone in bringing service humanoid robots into real homes.",
+    "observed_at": "2026-10-06T14:19:04Z"
+  },
+  {
+    "data": {
+      "product": "AgiBot A3 (远征 A3)",
+      "maker": [
+        "AgiBot"
+      ],
+      "kind": "humanoid",
+      "milestone": "shipping",
+      "date": "2026-04-13",
+      "height_cm": 173,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.agibot.com/"
+    },
+    "source_url": "https://www.ithome.com/0/938/666.htm",
+    "evidence": "IT之家 4 月 13 日消息，智元官方今日宣布，智元机器人远征 A3 完成首批交付。 在首批交付仪式上，智元机器人合伙人、高级副总裁王闯将远征 A3 首批商用机交付给启泓文旅和秀卡科技两大客户。",
+    "observed_at": "2026-10-06T14:19:04Z"
+  },
+  {
+    "data": {
+      "product": "AiMOGA Mornine M1 (墨茵)",
+      "maker": [
+        "AiMOGA"
+      ],
+      "kind": "humanoid",
+      "milestone": "on-sale",
+      "date": "2026-04-13",
+      "price_usd": 41831,
+      "price_stated": "28.58万元",
+      "height_cm": 167,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.aimoga.com/"
+    },
+    "source_url": "https://finance.sina.com.cn/roll/2026-04-14/doc-inhunttq4621338.shtml",
+    "evidence": "2026年4月13日，奇瑞墨甲机器人在京东商城的“AiMOGA智能机器人京东自营旗舰店”正式上线运营。该店目前已推出两款核心产品，分别是墨茵（Mornine）M1全尺寸通用具身智能机器人，定价为28.58万元",
+    "observed_at": "2026-10-06T14:19:05Z"
+  },
+  {
+    "data": {
+      "product": "Rainbow Robotics RB-Y2",
+      "maker": [
+        "Rainbow Robotics"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-04-13",
+      "maker_country": [
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "url": "https://rainbow-robotics.com/en/products/mobile-humanoid/rb-y-series/"
+    },
+    "source_url": "https://www.edaily.co.kr/News/Read?newsId=01918806645415792",
+    "evidence": "회사는 13일부터 경기 고양 킨텍스에서 열리는 ‘서울국제생산제조기술전(SIMTOS 2026)’에서 산업용 양팔로봇 ‘RB-Y2’ 시제품을 처음 공개한다.",
+    "observed_at": "2026-10-06T14:14:40Z"
+  },
+  {
+    "data": {
+      "product": "ROBOTIS AI Sapiens",
+      "maker": [
+        "ROBOTIS"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-04-20",
+      "height_cm": 130,
+      "maker_country": [
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.robotis.com/en/product/ecosystem-aisapiens.php"
+    },
+    "source_url": "https://finance.biggo.com/news/LDY_qZ0ByH9TLH697UpC",
+    "evidence": "South Korea's Robotis unveiled its general-purpose humanoid robot \"AI Sapiens\" on the 20th, powered by its newly developed high-performance \"Dynamixel-Q\" actuator.",
+    "observed_at": "2026-10-06T14:20:00Z"
+  },
+  {
+    "data": {
+      "product": "Kinetix AI KAI",
+      "maker": [
+        "Kinetix AI"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-04-26",
+      "height_cm": 173,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.kinetixai.cn/en"
+    },
+    "source_url": "https://www.ithome.com/0/946/138.htm",
+    "evidence": "IT之家 5 月 3 日消息，深圳具身智能公司超维动力（Kinetix AI）4 月 26 日举办发布会，正式推出其首款全尺寸人形机器人产品“KAI”。",
+    "observed_at": "2026-10-06T14:19:05Z"
+  },
+  {
+    "data": {
+      "product": "Xiaomi CyberOne (铁大)",
+      "maker": [
+        "Xiaomi"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-04-27",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.mi.com/cyberone"
+    },
+    "source_url": "https://www.ithome.com/0/996/553.htm",
+    "evidence": "2025 年 2 月，小米开始推进该机器人在自有制造产线的分阶段落地。2026 年 4 月 27 日，全新一代人形机器人 CyberOne 正式发布。",
+    "observed_at": "2026-10-06T14:19:06Z"
+  },
+  {
+    "data": {
+      "product": "DEEP Robotics Lynx M20S (山猫 M20S)",
+      "maker": [
+        "DEEP Robotics"
+      ],
+      "kind": "quadruped",
+      "milestone": "unveiled",
+      "date": "2026-04-27",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.deeprobotics.cn/robot/index/lynx.html"
+    },
+    "source_url": "https://finance.sina.com.cn/jjxw/2026-04-27/doc-inhvxxww9011228.shtml",
+    "evidence": "4月27日，云深处科技正式发布新一代行业级轮足 机器人 山猫M20S。该产品在前代M20 Pro基础上迭代升级，在负载、防护、速度三项核心性能上实现跨越式提升，行业适配性与作业效率显著增强。",
+    "observed_at": "2026-10-06T14:32:42Z"
+  },
+  {
+    "data": {
+      "product": "Unitree R1-A",
+      "maker": [
+        "Unitree"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-04-30",
+      "price_usd": 3939,
+      "price_stated": "2.69 万元起",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.unitree.com/R1-D"
+    },
+    "source_url": "https://www.ithome.com/0/945/386.htm",
+    "evidence": "IT之家 4 月 30 日消息，宇树科技今日发布了一款双臂人形机器人新品， 定价 2.69 万元起 。",
+    "observed_at": "2026-10-06T14:19:08Z"
+  },
+  {
+    "data": {
+      "product": "Familiar Machines & Magic Familiar",
+      "maker": [
+        "Familiar Machines & Magic"
+      ],
+      "kind": "quadruped",
+      "milestone": "unveiled",
+      "date": "2026-05-04",
+      "maker_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "url": "https://www.familiarmachines.com/"
+    },
+    "source_url": "https://www.independent.co.uk/news/magic-sony-amazon-ceo-japanese-b2970220.html",
+    "evidence": "Colin Angle unveiled a four-legged prototype of that artificial pet, called the Familiar, on Monday.",
+    "observed_at": "2026-10-06T14:32:56Z"
+  },
+  {
+    "data": {
+      "product": "Vbot SuperDog (超能机器狗)",
+      "maker": [
+        "Vita Dynamics"
+      ],
+      "kind": "quadruped",
+      "milestone": "shipping",
+      "date": "2026-05-08",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.vbot.cn/Detail"
+    },
+    "source_url": "https://finance.sina.com.cn/roll/2026-05-11/doc-inhxphzf1912064.shtml",
+    "evidence": "与融资消息同步公布的还有交付数据，公司宣布首款产品Vbot超能机器狗已于5月8日正式启动交付，首批500台产品完成量产下线，5月内预计将完成超过1500名用户交付，6月产能将提升到2500台以上。",
+    "observed_at": "2026-10-06T14:32:38Z"
+  },
+  {
+    "data": {
+      "product": "SwitchBot KATA Friends",
+      "maker": [
+        "SwitchBot"
+      ],
+      "kind": "home-robot",
+      "milestone": "on-sale",
+      "date": "2026-05-12",
+      "price_usd": 699.99,
+      "price_stated": "from US$699.99",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.switch-bot.com/pages/katafriends"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/switchbot-officially-launches-kata-friends-ai-pets-that-truly-grow-with-you-302768006.html",
+    "evidence": "TOKYO , May 12, 2026 /PRNewswire/ -- SwitchBot, a leading provider of AI-enabled embodied home robotics systems, today announced the launch of KATA Friends, Noa and Niko, a new series of AI Pets designed to bring companionship",
+    "observed_at": "2026-10-06T14:33:01Z"
+  },
+  {
+    "data": {
+      "product": "Hello Robot Stretch 4",
+      "maker": [
+        "Hello Robot"
+      ],
+      "kind": "home-robot",
+      "milestone": "on-sale",
+      "date": "2026-05-12",
+      "price_usd": 29950,
+      "price_stated": "US$29,950",
+      "maker_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "url": "https://hello-robot.com/stretch-4/"
+    },
+    "source_url": "https://www.roboticstomorrow.com/news/2026/05/12/hello-robot-unveils-stretch-4-a-simply-useful-robot-that-puts-people-first/26547/",
+    "evidence": "MARTINEZ, Calif. — May 12, 2026 — Hello Robot, the team behind the Stretch mobile manipulation platform, today announced the release of Stretch 4. Available now for $29,950, Stretch 4 is an open-source robotics platform designed for researchers, developers, and application engineers",
+    "observed_at": "2026-10-06T14:33:12Z"
+  },
+  {
+    "data": {
+      "product": "ECOVACS LilMilo (毛团儿)",
+      "maker": [
+        "Ecovacs"
+      ],
+      "kind": "home-robot",
+      "milestone": "on-sale",
+      "date": "2026-05-15",
+      "price_usd": 799.99,
+      "price_stated": "US$799.99",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.ecovacs.com/us/famibot-ai-companion-robot/lilmilo-white"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/ecovacs-introduces-lilmilo-an-emotional-ai-companion-robot-designed-to-bring-warmth-presence-and-connection-into-everyday-life-302771294.html",
+    "evidence": "LilMilo is available now for $799.99 at ECOVACS.com .",
+    "observed_at": "2026-10-06T14:33:04Z"
+  },
+  {
+    "data": {
+      "product": "WEILAN BabyAlpha A3",
+      "maker": [
+        "Weilan"
+      ],
+      "kind": "quadruped",
+      "milestone": "unveiled",
+      "date": "2026-05-17",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.weilan.com/"
+    },
+    "source_url": "https://caijing.chinadaily.com.cn/a/202605/19/WS6a0bcd6ba310942cc49acf3c.html",
+    "evidence": "2026年5月17日，蔚蓝科技给出答案：全新一代消费级四足机器人BabyAlpha A3正式亮相。",
+    "observed_at": "2026-10-06T14:32:44Z"
+  },
+  {
+    "data": {
+      "product": "MATRIX-3",
+      "maker": [
+        "Matrix Robotics"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-05-18",
+      "price_usd": 85292,
+      "price_stated": "58 万元起",
+      "height_cm": 170,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.matrixrobotics.ai/"
+    },
+    "source_url": "https://www.ithome.com/0/952/077.htm",
+    "evidence": "IT之家 5 月 19 日消息，上海张江本土孵化的企业矩阵超智于 5 月 18 日发布了 MATRIX-3 全能旗舰人形机器人 、MFH 矩阵超智工厂、WAVE 物理智能模型、CAAI 人工智能计算架构、MATRIX RDK 开发套件、RAAS 生态计划。",
+    "observed_at": "2026-10-06T14:19:10Z"
+  },
+  {
+    "data": {
+      "product": "MATRIX-3",
+      "maker": [
+        "Matrix Robotics"
+      ],
+      "kind": "humanoid",
+      "milestone": "preorder",
+      "date": "2026-05-18",
+      "price_usd": 85292,
+      "price_stated": "58 万元起",
+      "height_cm": 170,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.matrixrobotics.ai/"
+    },
+    "source_url": "https://www.ithome.com/0/952/077.htm",
+    "evidence": "MATRIX-3 全能旗舰人形机器人 售价 58 万元起 ，现已开启预订： MATRIX-3 标准版：58 万元（含 1 年基础服务）",
+    "observed_at": "2026-10-06T14:19:10Z"
+  },
+  {
+    "data": {
+      "product": "DEEP Robotics Lynx S10 (山猫 S10)",
+      "maker": [
+        "DEEP Robotics"
+      ],
+      "kind": "quadruped",
+      "milestone": "unveiled",
+      "date": "2026-05-21",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.deeprobotics.cn/robot/index/lynxs10.html"
+    },
+    "source_url": "https://finance.sina.com.cn/tech/digi/2026-05-21/doc-inhysain5842595.shtml",
+    "evidence": "IT之家 5 月 21 日消息，云深处科技今日发布了一款行业级小型轮足机器人 山猫 S10 。",
+    "observed_at": "2026-10-06T14:32:43Z"
+  },
+  {
+    "data": {
+      "product": "LimX Luna",
+      "maker": [
+        "LimX Dynamics"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-05-25",
+      "price_usd": 43925,
+      "price_stated": "国内零售价29.8万元",
+      "height_cm": 160,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.limxdynamics.com/zh/products/luna"
+    },
+    "source_url": "https://www.limxdynamics.com/zh/news/BK000061",
+    "evidence": "LimX Luna 发布：定义新一代交互型全尺寸人形机器人 产品 2026/5/25",
+    "observed_at": "2026-10-06T14:19:11Z"
+  },
+  {
+    "data": {
+      "product": "LimX Luna",
+      "maker": [
+        "LimX Dynamics"
+      ],
+      "kind": "humanoid",
+      "milestone": "preorder",
+      "date": "2026-05-25",
+      "price_usd": 43925,
+      "price_stated": "国内零售价29.8万元",
+      "markets": [
+        "Worldwide"
+      ],
+      "height_cm": 160,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.limxdynamics.com/zh/products/luna"
+    },
+    "source_url": "https://www.limxdynamics.com/zh/news/BK000061",
+    "evidence": "即日起开启全球预订 LimX Luna 现已开放全球预订，国内零售价29.8万元，首批100台购机用户可享限时优惠，立减4万，售完即止。",
+    "observed_at": "2026-10-06T14:19:11Z"
+  },
+  {
+    "data": {
+      "product": "Keenon XMAN-L1",
+      "maker": [
+        "Keenon"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-05-26",
+      "height_cm": 136,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.keenon.com/en"
+    },
+    "source_url": "https://www.ithome.com/0/955/461.htm",
+    "evidence": "IT之家 5 月 26 日消息，据界面新闻消息，擎朗智能今天宣布推出新型小尺寸人形机器人 XMAN-L1，面向轻量级互动岗位场景。",
+    "observed_at": "2026-10-06T14:19:11Z"
+  },
+  {
+    "data": {
+      "product": "Astribot T1",
+      "maker": [
+        "Astribot"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-05-28",
+      "price_usd": 13260,
+      "price_stated": "8.99 万元起",
+      "ships_on": "2026-06-01",
+      "height_cm": 155,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.astribot.com/product"
+    },
+    "source_url": "https://www.ithome.com/0/956/356.htm",
+    "evidence": "IT之家 5 月 28 日消息，星尘智能绳驱机器人 T1 正式发布， 定价 8.99 万元起 ，6 月 1 日起发货。",
+    "observed_at": "2026-10-06T14:19:12Z"
+  },
+  {
+    "data": {
+      "product": "UBTech UWORLD U1 (优世界 U1)",
+      "maker": [
+        "UBTech"
+      ],
+      "kind": "humanoid",
+      "milestone": "preorder",
+      "date": "2026-06-02",
+      "price_stated": "3000 元定金",
+      "ships_on": "2026-09-01",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.ubtrobot.com/cn/"
+    },
+    "source_url": "https://www.ithome.com/0/970/516.htm",
+    "evidence": "该系列机器人早在 6 月 2 日就已登陆京东平台开启预售，预售周期持续至 7 月 15 日。消费者支付 3000 元定金即可锁定首批购买资格。",
+    "observed_at": "2026-10-06T14:19:14Z"
+  },
+  {
+    "data": {
+      "product": "Galaxea Kengo",
+      "maker": [
+        "Galaxea"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-06-02",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.galaxea-ai.com/cn"
+    },
+    "source_url": "https://www.ithome.com/0/958/651.htm",
+    "evidence": "IT之家 6 月 2 日消息， 星海图今日发布了一款双足人形机器人新品 Kengo 。",
+    "observed_at": "2026-10-06T14:19:15Z"
+  },
+  {
+    "data": {
+      "product": "igus Iggy Rob Home",
+      "maker": [
+        "igus"
+      ],
+      "kind": "humanoid",
+      "milestone": "on-sale",
+      "date": "2026-06-03",
+      "price_usd": 63877,
+      "price_stated": "starting at €55,000",
+      "maker_country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "url": "https://press.igus.eu/humanoid-robotics-from-germany-igus-launches-new-service-robot/"
+    },
+    "source_url": "https://press.igus.eu/humanoid-robotics-from-germany-igus-launches-new-service-robot/",
+    "evidence": "igus launches new service robot June 3, 2026 Iggy Rob platform ensures affordable and CE-compliant use of humanoid robots in industry and service With the Iggy Rob Home, igus has developed a new cost-effective and CE-compliant humanoid robot specifically for the service sector.",
+    "observed_at": "2026-10-06T14:16:43Z"
+  },
+  {
+    "data": {
+      "product": "Weave Isaac 1",
+      "maker": [
+        "Weave Robotics"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-06-11",
+      "maker_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "url": "https://www.weaverobotics.com/isaac-1"
+    },
+    "source_url": "https://www.humanoidsdaily.com/news/weave-robotics-unveils-isaac-1-a-mobile-friendly-bet-on-the-messy-reality-of-tidying-up",
+    "evidence": "On June 11, San Francisco-based Weave Robotics revealed its next hardware iteration, Isaac 1, during a public showcase at its 7th Street headquarters.",
+    "observed_at": "2026-10-06T14:03:00Z"
+  },
+  {
+    "data": {
+      "product": "Kepler Mechanical Qilin (机械麒麟)",
+      "maker": [
+        "Kepler"
+      ],
+      "kind": "quadruped",
+      "milestone": "unveiled",
+      "date": "2026-06-16",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.gotokepler.com/"
+    },
+    "source_url": "https://www.ithome.com/0/965/195.htm",
+    "evidence": "IT之家 6 月 17 日消息，在 6 月 16 日的 2026 张江具身智能开发者大会上，开普勒长航重载四足机器人“ 机械麒麟 ”系列正式亮相。",
+    "observed_at": "2026-10-06T14:32:55Z"
+  },
+  {
+    "data": {
+      "product": "UBTech Walker C1",
+      "maker": [
+        "UBTech"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-06-22",
+      "height_cm": 164,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.ubtrobot.com/cn/humanoid/products/walker-c1/"
+    },
+    "source_url": "https://www.ithome.com/0/967/191.htm",
+    "evidence": "IT之家 6 月 22 日消息，第四届中国国际供应链促进博览会今日在北京正式开幕，优必选在本次大会上正式发布全新一代面向商用服务场景的 具身智能人形机器人 Walker C1",
+    "observed_at": "2026-10-06T14:19:17Z"
+  },
+  {
+    "data": {
+      "product": "UBTech Cruzr Y1",
+      "maker": [
+        "UBTech"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-06-25",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.ubtrobot.com/cn/humanoid/products/cruzr-y1/"
+    },
+    "source_url": "https://www.ithome.com/0/969/219.htm",
+    "evidence": "IT之家 6 月 26 日消息，OPPO 技术发布会暨供应链技术展昨日举行，优必选旗下 Cruzr Y1 轮式工业人形机器人迎来首次公开亮相，展示料箱拆垛、码垛全流程。",
+    "observed_at": "2026-10-06T14:19:18Z"
+  },
+  {
+    "data": {
+      "product": "GENISOM L2 (钢镚 L2)",
+      "maker": [
+        "GENISOM AI"
+      ],
+      "kind": "quadruped",
+      "milestone": "unveiled",
+      "date": "2026-06-29",
+      "price_usd": 5887,
+      "price_stated": "from ¥39,999",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.zsibot.com/"
+    },
+    "source_url": "https://zhidx.com/p/570610.html",
+    "evidence": "机器人前瞻6月29日报道，今天，智身科技正式发布新一代四足机器人 “钢镚L2” ，售价 39999元起 。",
+    "observed_at": "2026-10-06T14:32:51Z"
+  },
+  {
+    "data": {
+      "product": "UBTech UWORLD U1 (优世界 U1)",
+      "maker": [
+        "UBTech"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-06-30",
+      "price_usd": 17655,
+      "price_stated": "11.98~99 万元",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.ubtrobot.com/cn/"
+    },
+    "source_url": "https://www.ithome.com/0/970/624.htm",
+    "evidence": "IT之家 6 月 30 日消息，优必选科技今日在深圳举办 2026 年度全球发布会，正式推出旗下消费级品牌“优世界”（UWORLD）的首款产品 —— 全尺寸超仿生人形机器人 U1 系列",
+    "observed_at": "2026-10-06T14:19:20Z"
+  },
+  {
+    "data": {
+      "product": "Figure 03",
+      "maker": [
+        "Figure"
+      ],
+      "kind": "humanoid",
+      "milestone": "shipping",
+      "date": "2026-06-30",
+      "height_cm": 173,
+      "maker_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "url": "https://www.figure.ai/news/f-03-at-bmw"
+    },
+    "source_url": "https://www.figure.ai/news/f-03-at-bmw",
+    "evidence": "June 30, 2026 F.03 Arrives at BMW Today we are excited to share the next chapter in our partnership with BMW Group as Figure returns to the factory floor. Following the successful deployment of Figure 02 on the assembly line in 2025, our latest generation robot - Figure 03 - arrived in Hall 52",
+    "observed_at": "2026-10-06T13:26:00Z"
+  },
+  {
+    "data": {
+      "product": "Apptronik Apollo 2",
+      "maker": [
+        "Apptronik"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-06-30",
+      "maker_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "url": "https://apptronik.com/apollo/apollo-2"
+    },
+    "source_url": "https://apptronik.com/news-collection/welcome-to-robot-park-where-apptroniks-apollo-goes-to-work",
+    "evidence": "Apptronik also unveiled Apollo 2™, the current version of its humanoid robot platform, in both bipedal and wheeled-base configurations.",
+    "observed_at": "2026-10-06T13:57:19Z"
+  },
+  {
+    "data": {
+      "product": "Weave Isaac 1",
+      "maker": [
+        "Weave Robotics"
+      ],
+      "kind": "humanoid",
+      "milestone": "preorder",
+      "date": "2026-07-01",
+      "price_usd": 7999,
+      "price_stated": "US$7,999 or US$449 a month",
+      "markets": [
+        "United States"
+      ],
+      "maker_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "url": "https://www.weaverobotics.com/isaac-1"
+    },
+    "source_url": "https://tech.yahoo.com/home/articles/7-999-home-robot-joins-151948840.html",
+    "evidence": "Y Combinator-backed Weave Robotics unveiled its home robot, Isaac 1, on Wednesday. It comes in five pastel colors and is available for preorder at $7,999 upfront or a $449 monthly subscription.",
+    "observed_at": "2026-10-06T14:02:30Z"
+  },
+  {
+    "data": {
+      "product": "Booster T2",
+      "maker": [
+        "Booster Robotics"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-07-10",
+      "height_cm": 140,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.booster.tech/booster-t2"
+    },
+    "source_url": "https://www.ithome.com/0/975/340.htm",
+    "evidence": "IT之家 7 月 10 日消息，加速进化今日发布了具身开发旗舰平台 Booster T2，专业版现已开售，具体价格暂未公开（需在官网填写采购信息）。",
+    "observed_at": "2026-10-06T14:19:21Z"
+  },
+  {
+    "data": {
+      "product": "Booster T2",
+      "maker": [
+        "Booster Robotics"
+      ],
+      "kind": "humanoid",
+      "milestone": "on-sale",
+      "date": "2026-07-10",
+      "height_cm": 140,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.booster.tech/booster-t2"
+    },
+    "source_url": "https://www.booster.tech/cn/news",
+    "evidence": "Booster T2 正式发售 具身旗舰开发平台 加速进化 · 2026/07/10",
+    "observed_at": "2026-10-06T14:19:24Z"
+  },
+  {
+    "data": {
+      "product": "PrimeBOT T1 (启元 T1)",
+      "maker": [
+        "PrimeBOT"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-07-12",
+      "height_cm": 100,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.primebot.cn/"
+    },
+    "source_url": "https://www.ithome.com/0/975/794.htm",
+    "evidence": "IT之家 7 月 12 日消息，上纬新材今日发布启元 T1 实机视频，号称“全球首款可变形个人机器人”。 从官方公布的视频来看，这款新品机器人可在轮足人形与四足形态之间进行切换，具有不错的稳定性。",
+    "observed_at": "2026-10-06T14:19:24Z"
+  },
+  {
+    "data": {
+      "product": "Vbot SuperDog EDU (大头EDU版)",
+      "maker": [
+        "Vita Dynamics"
+      ],
+      "kind": "quadruped",
+      "milestone": "unveiled",
+      "date": "2026-07-13",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.vbot.cn/"
+    },
+    "source_url": "https://tech.ifeng.com/c/8uxxbDd3KWf",
+    "evidence": "7 月 13 日,Vbot 维他动力发布超能机器狗「大头 EDU版」。",
+    "observed_at": "2026-10-06T14:32:40Z"
+  },
+  {
+    "data": {
+      "product": "Walden",
+      "maker": [
+        "Walden Robotics"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-07-15",
+      "maker_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "url": "https://www.waldenrobotics.com/"
+    },
+    "source_url": "https://www.waldenrobotics.com/news/walden-robotics-launches-from-stealth",
+    "evidence": "CAMBRIDGE, Mass. — July 15, 2026 — Walden Robotics, a full-stack Physical AI company building and deploying general-purpose robots that continuously learn and improve while performing real work, launched out of stealth with $300 million in funding.",
+    "observed_at": "2026-10-06T13:40:00Z"
+  },
+  {
+    "data": {
+      "product": "Fourier GRW",
+      "maker": [
+        "Fourier"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-07-17",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.fftai.com/"
+    },
+    "source_url": "https://www.ithome.com/0/978/489.htm",
+    "evidence": "IT之家 7 月 18 日消息，2026 世界人工智能大会近日在上海召开。傅利叶昨天在大会上推出首款轮式双臂机器人 GRW，主打仓储物流、工业制造、康养照护等高负载人机协同场景。",
+    "observed_at": "2026-10-06T14:19:25Z"
+  },
+  {
+    "data": {
+      "product": "ZTE Xingzai (中兴星仔)",
+      "maker": [
+        "ZTE"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-07-17",
+      "height_cm": 160,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.zte.com.cn/"
+    },
+    "source_url": "https://finance.sina.com.cn/stock/t/2026-07-17/doc-iniickaz8278453.shtml",
+    "evidence": "具身智能方面，中兴通讯首次集中展示自研多形态人形机器人矩阵，包括轻量仿生机器人“中兴星仔”、双足重载机器人“中兴星擎”和轮式重载机器人“中兴星旺”，覆盖商业服务及工业制造等应用场景。",
+    "observed_at": "2026-10-06T14:19:26Z"
+  },
+  {
+    "data": {
+      "product": "AgiBot G2 Max (精灵 G2 Max)",
+      "maker": [
+        "AgiBot"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-07-17",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.agibot.com/"
+    },
+    "source_url": "https://www.ithome.com/0/978/274.htm",
+    "evidence": "IT之家 7 月 17 日消息，2026 世界人工智能大会（WAIC）今日在上海开幕。京东物流与智元联合推出新一代安规级重载具身机器人 —— 精灵 G2 Max，并宣布该产品将应用于京东物流智狼仓",
+    "observed_at": "2026-10-06T14:19:26Z"
+  },
+  {
+    "data": {
+      "product": "AgiBot A3 Ultra (远征 A3 Ultra)",
+      "maker": [
+        "AgiBot"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-07-18",
+      "height_cm": 174,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.agibot.com/"
+    },
+    "source_url": "https://www.techtimes.com/articles/320899/20260718/agibot-debuts-four-robots-waic-2026-global-export-push-meets-chinas-spy-law-obligation.htm",
+    "evidence": "The headline product is the A3 Ultra, a full-size humanoid designed for sustained deployment rather than peak performance moments. Standing 174 centimeters tall and weighing 60 kilograms, it packs 51 active degrees of freedom and a five-kilogram payload per arm",
+    "observed_at": "2026-10-06T14:19:26Z"
+  },
+  {
+    "data": {
+      "product": "Generative Bionics Gene.01",
+      "maker": [
+        "Generative Bionics"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-07-20",
+      "maker_country": [
+        "Italy"
+      ],
+      "region": "europe",
+      "url": "https://gbionics.ai/"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/generative-bionics-introduces-gene01-a-fully-functional-smart-skin-humanoid-robot-platform-designed-for-safe-human-collaboration-302829062.html",
+    "evidence": "GENOA, Italy, July 20, 2026 /PRNewswire/ -- Generative Bionics, an Italian deep tech company developing humanoid robots for industrial applications, today unveiled Gene.01, a fully functional, sensorized humanoid robot platform designed to work safely and intuitively alongside people.",
+    "observed_at": "2026-10-06T14:16:44Z"
+  },
+  {
+    "data": {
+      "product": "Unitree As2-W",
+      "maker": [
+        "Unitree"
+      ],
+      "kind": "quadruped",
+      "milestone": "unveiled",
+      "date": "2026-07-24",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.unitree.com/As2-W"
+    },
+    "source_url": "https://www.ithome.com/0/981/372.htm",
+    "evidence": "IT之家 7 月 24 日消息，宇树科技今日发布新产品 As2-W 轮足机器人（机器狗），官方称其可以 16kg 持续负重长效作业，空载续航距离超 30km。",
+    "observed_at": "2026-10-06T14:32:31Z"
+  },
+  {
+    "data": {
+      "product": "Tactus Elsie",
+      "maker": [
+        "Tactus AI"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-07-28",
+      "maker_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "url": "https://tactus.ai/platform"
+    },
+    "source_url": "https://interestingengineering.com/ai-robotics/us-firms-elsie-robot-help-clinical-labs",
+    "evidence": "Tactus AI introduced its two-armed robot, Elsie, at the 2026 Association for Diagnostics & Laboratory Medicine (ADLM) Annual Scientific Meeting & Clinical Lab Expo.",
+    "observed_at": "2026-10-06T14:24:00Z"
+  },
+  {
+    "data": {
+      "product": "ZEALS D1",
+      "maker": [
+        "ZEALS"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-08-05",
+      "price_usd": 31728,
+      "price_stated": "from ¥5,000,000",
+      "height_cm": 129.3,
+      "maker_country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.omakaserobotics.ai"
+    },
+    "source_url": "https://prtimes.jp/main/html/rd/p/000000206.000019209.html",
+    "evidence": "株式会社ZEALS（所在地：東京都目黒区、代表取締役：清水正大、以下「ジールス」）は、2026年8月5日（水）、日本の屋内環境に最適化した“準国産”コンパクトヒューマノイド「D1」を正式発表しました。",
+    "observed_at": "2026-10-06T14:15:01Z"
+  },
+  {
+    "data": {
+      "product": "ZEALS D1",
+      "maker": [
+        "ZEALS"
+      ],
+      "kind": "humanoid",
+      "milestone": "preorder",
+      "date": "2026-08-05",
+      "price_usd": 31728,
+      "price_stated": "from ¥5,000,000",
+      "height_cm": 129.3,
+      "maker_country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.omakaserobotics.ai"
+    },
+    "source_url": "https://prtimes.jp/main/html/rd/p/000000206.000019209.html",
+    "evidence": "価格は1体500万円からを予定し、8月5日より導入相談および販売の受付を開始します。",
+    "observed_at": "2026-10-06T14:15:01Z"
+  },
+  {
+    "data": {
+      "product": "Unitree Superman (超人)",
+      "maker": [
+        "Unitree"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-08-17",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.unitree.com/"
+    },
+    "source_url": "https://www.ithome.com/0/990/607.htm",
+    "evidence": "IT之家 8 月 17 日消息，宇树科技今日发布了一款人形机器人新品“ 超人 ”，原地跳高 2m，极限速度 12.66m/s（0.85m 腿长），超越全世界全人类原地跳高和奔跑速度纪录。",
+    "observed_at": "2026-10-06T14:19:26Z"
+  },
+  {
+    "data": {
+      "product": "NineRay RayNex G3 (小睿 G3)",
+      "maker": [
+        "NineRay"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-08-17",
+      "height_cm": 173,
+      "maker_country": [
+        "Hong Kong"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.nineraygroup.com/"
+    },
+    "source_url": "https://www.news.cn/gangao/20260817/e916f19df83b4fc3ba465648c9f97d19/c.html",
+    "evidence": "新华社香港8月17日电 新一代产业级人形机器人“小睿G3”17日在香港发布。该机器人对标成年人力作业能力，可完成重载搬运、物料转运、精细操作等任务，具备产业价值。",
+    "observed_at": "2026-10-06T14:19:27Z"
+  },
+  {
+    "data": {
+      "product": "EIR AIQ (爱湫)",
+      "maker": [
+        "EIR"
+      ],
+      "kind": "humanoid",
+      "milestone": "on-sale",
+      "date": "2026-08-19",
+      "price_usd": 14544,
+      "price_stated": "9.8万元起",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.eir.com.cn/"
+    },
+    "source_url": "https://sichuan.scol.com.cn/ggxw/202608/83307923.html",
+    "evidence": "8月19日，在北京举行的2026世界机器人大会上，四川具身人形机器人科技有限公司（简称EIR）新一代情感交互人形机器人“爱湫”正式发布发售，同步推出交互版、运控版两大产品版本，售价9.8万元起。",
+    "observed_at": "2026-10-06T14:19:29Z"
+  },
+  {
+    "data": {
+      "product": "Galbot ET1 (银河星仔)",
+      "maker": [
+        "Galbot"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-08-20",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.galbot.com/et1"
+    },
+    "source_url": "https://www.ithome.com/0/992/247.htm",
+    "evidence": "IT之家 8 月 20 日消息，银河通用全新人形机器人 Galbot ET1 官宣，在今日的 2026 WRC 世界机器人大会首次公开亮相。",
+    "observed_at": "2026-10-06T14:19:29Z"
+  },
+  {
+    "data": {
+      "product": "GigaAI Maker L01",
+      "maker": [
+        "GigaAI"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-08-20",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.gigaai.cc/"
+    },
+    "source_url": "https://www.ithome.com/0/992/082.htm",
+    "evidence": "IT之家 8 月 20 日消息，极佳视界今日发布了通用双足人形机器人 Maker L01，展示了产品的多项亮点。 Maker L01 全身搭载 31 个关节电机， 支持奔跑、跳跃、空翻等动作 ，最高移动速度 4m/s，官方展示了打乒乓球的场景。",
+    "observed_at": "2026-10-06T14:19:31Z"
+  },
+  {
+    "data": {
+      "product": "X-Humanoid Tien Kung Omni (天工 Omni)",
+      "maker": [
+        "X-Humanoid"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-08-20",
+      "height_cm": 135,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.x-humanoid.com/detail/omni.html"
+    },
+    "source_url": "https://www.x-humanoid.com/news-view-291.html",
+    "evidence": "Pelican-VL 2.0正式商用，超智能新品天工Omni上市，北京人形WRC论坛亮点满满！ 北京人形机器人创新中心 2026-08-20",
+    "observed_at": "2026-10-06T14:19:31Z"
+  },
+  {
+    "data": {
+      "product": "PrimeBOT Q1 (启元 Q1)",
+      "maker": [
+        "PrimeBOT"
+      ],
+      "kind": "humanoid",
+      "milestone": "preorder",
+      "date": "2026-08-23",
+      "ships_on": "2026-09-01",
+      "height_cm": 88,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.primebot.cn/"
+    },
+    "source_url": "https://www.ithome.com/0/993/155.htm",
+    "evidence": "IT之家 8 月 23 日消息，据财联社今日报道，上纬新材消费级机器人启元 Q1、启元 T1 双产品开启预订，用户可通过上纬启元官方小程序、天猫、抖音、B站官方店铺，以及线下体验活动参与预订，预计首批发货时间为今年 9 月。",
+    "observed_at": "2026-10-06T14:19:31Z"
+  },
+  {
+    "data": {
+      "product": "PrimeBOT T1 (启元 T1)",
+      "maker": [
+        "PrimeBOT"
+      ],
+      "kind": "humanoid",
+      "milestone": "preorder",
+      "date": "2026-08-23",
+      "ships_on": "2026-09-01",
+      "height_cm": 100,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.primebot.cn/"
+    },
+    "source_url": "https://www.ithome.com/0/993/155.htm",
+    "evidence": "IT之家 8 月 23 日消息，据财联社今日报道，上纬新材消费级机器人启元 Q1、启元 T1 双产品开启预订，用户可通过上纬启元官方小程序、天猫、抖音、B站官方店铺，以及线下体验活动参与预订，预计首批发货时间为今年 9 月。",
+    "observed_at": "2026-10-06T14:19:31Z"
+  },
+  {
+    "data": {
+      "product": "Hugging Face Microduck",
+      "maker": [
+        "Hugging Face"
+      ],
+      "kind": "home-robot",
+      "milestone": "unveiled",
+      "date": "2026-08-27",
+      "price_usd": 399,
+      "price_stated": "US$399",
+      "maker_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "url": "https://www.pollen-robotics.com/microduck/"
+    },
+    "source_url": "https://techcrunch.com/2026/08/27/hugging-face-is-selling-a-cute-399-open-source-duck-robot-microduck/",
+    "evidence": "Hugging Face unveiled the Microduck on Thursday, a cute little duck-like robot that sells for $399 — and ships before Christmas.",
+    "observed_at": "2026-10-06T14:33:06Z"
+  },
+  {
+    "data": {
+      "product": "Hugging Face Microduck",
+      "maker": [
+        "Hugging Face"
+      ],
+      "kind": "home-robot",
+      "milestone": "preorder",
+      "date": "2026-08-27",
+      "price_usd": 399,
+      "price_stated": "US$399 before taxes and shipping",
+      "maker_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "url": "https://www.pollen-robotics.com/microduck/"
+    },
+    "source_url": "https://www.pollen-robotics.com/microduck/",
+    "evidence": "Pre-order for $399 Pre-orders open August 27, 2026 ★ $399 before taxes and shipping",
+    "observed_at": "2026-10-06T14:33:08Z"
+  },
+  {
+    "data": {
+      "product": "Galbot ET1 (银河星仔)",
+      "maker": [
+        "Galbot"
+      ],
+      "kind": "humanoid",
+      "milestone": "preorder",
+      "date": "2026-09-03",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.galbot.com/et1"
+    },
+    "source_url": "https://www.galbot.com/news",
+    "evidence": "2026年9月3日 全球首个原生智能体机器人『银河星仔』火热预订中",
+    "observed_at": "2026-10-06T14:19:34Z"
+  },
+  {
+    "data": {
+      "product": "Tuya Doova",
+      "maker": [
+        "Tuya"
+      ],
+      "kind": "home-robot",
+      "milestone": "unveiled",
+      "date": "2026-09-05",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.tuya.com/"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/tuya-smart-unveils-doova-at-ifa-2026-an-ai-home-companion-robot-designed-to-support-independently-living-seniors-302870724.html",
+    "evidence": "BERLIN , Sept. 5, 2026 /PRNewswire/ -- Tuya Smart (NYSE: TUYA ; HKEX: 2391), a global AI cloud platform service provider, today unveiled Doova, its new AI home companion robot, at IFA 2026.",
+    "observed_at": "2026-10-06T14:33:09Z"
+  },
+  {
+    "data": {
+      "product": "Unitree G1+",
+      "maker": [
+        "Unitree"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-09-14",
+      "price_usd": 14161,
+      "price_stated": "9.5 万元",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.unitree.com/g1"
+    },
+    "source_url": "https://www.ithome.com/1/002/133.htm",
+    "evidence": "IT之家 9 月 14 日消息，宇树科技今日宣布人形机器人 G1 大升级，推出 G1+。新品围绕运动性能、感知交互、智能体验三大维度一次性带来 6 项升级，在保留 G1 高性价比定位的同时，重点补强颈部灵活性、关节电机输出与热管理、视觉与触觉感知、供电续航以及远场语音交互能力。标准版 G1+ 含税售价为 9.5 万元",
+    "observed_at": "2026-10-06T14:19:34Z"
+  },
+  {
+    "data": {
+      "product": "BlueWorm Mantis Standard (小白)",
+      "maker": [
+        "BlueWorm"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-09-14",
+      "price_usd": 1461,
+      "price_stated": "0.98 万起",
+      "height_cm": 140,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.bluewormrobotics.com/"
+    },
+    "source_url": "https://www.ithome.com/1/002/166.htm",
+    "evidence": "IT之家 9 月 14 日消息，西安交通大学科技成果转化企业蓝虫具身今日发布新一代模块化人形机器人 Mantis Standard “小白”， 售价 0.98 万起 。",
+    "observed_at": "2026-10-06T14:19:35Z"
+  },
+  {
+    "data": {
+      "product": "Agility Digit 5",
+      "maker": [
+        "Agility Robotics"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-09-15",
+      "height_cm": 181,
+      "maker_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "url": "https://www.agilityrobotics.com/solutions/digit-5"
+    },
+    "source_url": "https://www.agilityrobotics.com/content/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale",
+    "evidence": "SALEM, Ore., Sept. 15, 2026 — Agility Robotics , a leading humanoid robotics and physical AI company, today unveiled Digit ® 5 , the next generation of its general-purpose humanoid robot.",
+    "observed_at": "2026-10-06T13:29:00Z"
+  },
+  {
+    "data": {
+      "product": "Xinyan Bubbo 1 (巴布)",
+      "maker": [
+        "Xinyan Robot"
+      ],
+      "kind": "home-robot",
+      "milestone": "preorder",
+      "date": "2026-09-15",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.xyrobot.com/"
+    },
+    "source_url": "https://finance.sina.com.cn/stock/t/2026-09-15/doc-inirwwmw7003664.shtml",
+    "evidence": "9月15日，心言集团旗下家庭主动智能陪伴 机器人 巴布（Bubbo 1）正式登陆京东平台开启线上预定。",
+    "observed_at": "2026-10-06T14:33:14Z"
+  },
+  {
+    "data": {
+      "product": "ugo Nova",
+      "maker": [
+        "ugo"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-09-16",
+      "maker_country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "url": "https://ugo.plus/ai/ugo-nova/"
+    },
+    "source_url": "https://prtimes.jp/main/html/rd/p/000000178.000034305.html",
+    "evidence": "フィジカルAIの社会実装を推進するｕｇｏ株式会社(ユーゴー、本社：東京都千代田区、代表取締役CEO：松井 健、以下 ｕｇｏ)は、2026年9月16日、国産セミヒューマノイド「ugo Nova」を発表しました。",
+    "observed_at": "2026-10-06T14:15:03Z"
+  },
+  {
+    "data": {
+      "product": "Booster K1 Explorer Edition (K1 探索版)",
+      "maker": [
+        "Booster Robotics"
+      ],
+      "kind": "humanoid",
+      "milestone": "on-sale",
+      "date": "2026-09-18",
+      "price_usd": 5823,
+      "price_stated": "38,999 元",
+      "height_cm": 95,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.booster.tech/booster-k1/"
+    },
+    "source_url": "https://www.ithome.com/1/003/924.htm",
+    "evidence": "IT之家 9 月 18 日消息，加速进化成长型人形机器人 Booster K1 探索版今日正式发售， 京东标价 38,999 元 。",
+    "observed_at": "2026-10-06T14:19:37Z"
+  },
+  {
+    "data": {
+      "product": "Astrall Dynamics Hypertron-SW01",
+      "maker": [
+        "Astrall Dynamics"
+      ],
+      "kind": "quadruped",
+      "milestone": "unveiled",
+      "date": "2026-09-19",
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.astralldynamics.com/"
+    },
+    "source_url": "https://www.ithome.com/1/004/558.htm",
+    "evidence": "IT之家 9 月 19 日消息，璇玑动力中型智能四足机器人及智能技术全球首发，正式推出 Hypertron-SW01 泛行业中型智能四足机器人。",
+    "observed_at": "2026-10-06T14:32:45Z"
+  },
+  {
+    "data": {
+      "product": "PrimeBOT T1 (启元 T1)",
+      "maker": [
+        "PrimeBOT"
+      ],
+      "kind": "humanoid",
+      "milestone": "on-sale",
+      "date": "2026-09-20",
+      "price_usd": 2986,
+      "price_stated": "19,999 元起",
+      "height_cm": 100,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.primebot.cn/"
+    },
+    "source_url": "https://www.ithome.com/1/004/890.htm",
+    "evidence": "IT之家 9 月 20 日消息，在今日的 2026 启元机器人全球产品发布会上，“ 全球首个可变形个人机器人 ”启元 T1 正式发售，定价 19,999 元起。",
+    "observed_at": "2026-10-06T14:19:38Z"
+  },
+  {
+    "data": {
+      "product": "PrimeBOT Q1 (启元 Q1)",
+      "maker": [
+        "PrimeBOT"
+      ],
+      "kind": "humanoid",
+      "milestone": "on-sale",
+      "date": "2026-09-20",
+      "price_usd": 2986,
+      "price_stated": "19,999 元",
+      "height_cm": 88,
+      "maker_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.primebot.cn/"
+    },
+    "source_url": "https://www.ithome.com/1/004/876.htm",
+    "evidence": "IT之家 9 月 20 日消息，在今日的 2026 启元机器人全球产品发布会上，启元机器人发布启元 Q1 人形机器人的正式售价： 启元 Q1 售价 19,999 元",
+    "observed_at": "2026-10-06T14:19:40Z"
+  },
+  {
+    "data": {
+      "product": "Sharpa D01",
+      "maker": [
+        "Sharpa"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-09-28",
+      "maker_country": [
+        "Singapore"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.sharpa.com/pages/d01"
+    },
+    "source_url": "https://www.sharpa.com/blogs/news/sharpa-launches-three-flagship-products-at-iros-pushing-the-boundaries-of-dexterous-manipulation",
+    "evidence": "PITTSBURGH, United States, Sept. 28, 2026 — Sharpa today unveiled three major proprietary new products at the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS): D01, the first integrated tactile-sensing robot built for dexterous manipulation",
+    "observed_at": "2026-10-06T14:14:33Z"
+  },
+  {
+    "data": {
+      "product": "DYNA 2.1",
+      "maker": [
+        "DYNA Robotics"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-09-29",
+      "maker_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "url": "https://www.dyna.co/dyna-2.1"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/dyna-robotics-launches-dyna-2-1-physical-agent-a-semi-humanoid-robot-that-completes-full-workflows-such-as-a-commercial-laundry-shift-302892411.html",
+    "evidence": "REDWOOD CITY, Calif., Sept. 29, 2026 /PRNewswire/ -- Today, DYNA Robotics launched the DYNA 2.1 physical agent, a semi-humanoid robot powered by DYNA's proprietary model that can autonomously complete entire physical workflows",
+    "observed_at": "2026-10-06T13:57:19Z"
+  },
+  {
+    "data": {
+      "product": "Flourish 1",
+      "maker": [
+        "Flourish Robots"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-09-29",
+      "price_usd": 3555,
+      "price_stated": "US$3,555",
+      "ships_on": "2026-12-01",
+      "height_cm": 109,
+      "maker_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "url": "https://flourish-robots.com/"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/flourish-robots-launches-flourish-1--a-3-555-home-robot-built-to-give-people-their-potential-back-302891638.html",
+    "evidence": "SAN FRANCISCO, Sept. 29, 2026 /PRNewswire/ -- Flourish Robots, a consumer robotics company building accessible robots for everyday life, today emerged from stealth and introduced Flourish 1, a $3,555 home robot designed to take repetitive household work and mental load out of people's lives.",
+    "observed_at": "2026-10-06T13:57:19Z"
+  },
+  {
+    "data": {
+      "product": "Flourish 1",
+      "maker": [
+        "Flourish Robots"
+      ],
+      "kind": "humanoid",
+      "milestone": "preorder",
+      "date": "2026-09-29",
+      "price_usd": 3555,
+      "price_stated": "US$3,555",
+      "ships_on": "2026-12-01",
+      "height_cm": 109,
+      "maker_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "url": "https://flourish-robots.com/"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/flourish-robots-launches-flourish-1--a-3-555-home-robot-built-to-give-people-their-potential-back-302891638.html",
+    "evidence": "Pre-orders for the first 50 units open September 29 at $3,555, with deliveries beginning in December 2026.",
+    "observed_at": "2026-10-06T13:57:19Z"
+  },
+  {
+    "data": {
+      "product": "Neubility Billi",
+      "maker": [
+        "Neubility"
+      ],
+      "kind": "humanoid",
+      "milestone": "unveiled",
+      "date": "2026-09-29",
+      "maker_country": [
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "url": "https://www.neubility.ai/en"
+    },
+    "source_url": "https://www.newstap.co.kr/news/articleView.html?idxno=334855",
+    "evidence": "피지컬 인공지능(AI) 기업 뉴빌리티는 29일 ‘빌리 더 퍼스트 룩(Billi The First Look)’ 행사를 열고 하이브리드 휴머노이드 ‘빌리(Billi)’를 공개했다.",
+    "observed_at": "2026-10-06T14:14:37Z"
+  }
+]
