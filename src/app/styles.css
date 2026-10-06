@@ -2001,6 +2001,11 @@ th[aria-sort='ascending'] .sort-button svg {
   padding-right: 40px;
 }
 
+/* The Today label floats 20px above the plot; leave room so it never lands on the takeaway line. */
+.columns-wrap.has-today {
+  padding-top: 10px;
+}
+
 .columns {
   position: relative;
   display: flex;

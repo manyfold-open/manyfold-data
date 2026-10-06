@@ -143,7 +143,7 @@ export function Columns({
   };
 
   return (
-    <div className="columns-wrap">
+    <div className={todayAt !== null && todayAt !== undefined ? 'columns-wrap has-today' : 'columns-wrap'}>
       <div ref={plot} className={ticks ? 'columns bins' : 'columns'} onPointerLeave={() => setTip(null)}>
         {[0, top / 2, top].map((value) => (
           <div key={value} className="gridline" style={{ bottom: `${(value / top) * 100}%` }} aria-hidden="true">
