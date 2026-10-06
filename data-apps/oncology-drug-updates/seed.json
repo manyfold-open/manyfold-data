@@ -1,0 +1,188 @@
+[
+  {
+    "data": {
+      "drug": "pirtobrutinib",
+      "company": [
+        "Eli Lilly and Company"
+      ],
+      "cancer_type": "leukemia-lymphoma",
+      "indication": "Adults with previously untreated chronic lymphocytic leukemia (CLL) or small lymphocytic lymphoma (SLL) with no known 17p deletion",
+      "event_type": "approval",
+      "authority": "fda",
+      "announced_on": "2026-10-02",
+      "result_summary": "FDA approved pirtobrutinib (Jaypirca) for adults with previously untreated CLL or SLL with no known 17p deletion.",
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pirtobrutinib-previously-untreated-chronic-lymphocytic-leukemia-or-small-lymphocytic"
+    },
+    "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-pirtobrutinib-previously-untreated-chronic-lymphocytic-leukemia-or-small-lymphocytic",
+    "evidence": "On October 2, 2026, the Food and Drug Administration approved pirtobrutinib (Jaypirca, Eli Lilly and Company) for adult patients with previously untreated chronic lymphocytic leukemia (CLL) or small lymphocytic lymphoma (SLL) with no known 17p deletion.",
+    "observed_at": "2026-10-06T20:54:57Z"
+  },
+  {
+    "data": {
+      "drug": "belzutifan + lenvatinib",
+      "company": [
+        "Merck",
+        "Eisai"
+      ],
+      "cancer_type": "kidney-bladder",
+      "indication": "Adults with advanced renal cell carcinoma with a clear cell component following a PD-1 or PD-L1 inhibitor",
+      "event_type": "approval",
+      "authority": "fda",
+      "announced_on": "2026-09-24",
+      "result_summary": "FDA approved belzutifan (Welireg) in combination with lenvatinib (Lenvima) for adults with advanced renal cell carcinoma with a clear cell component following a PD-1 or PD-L1 inhibitor.",
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-belzutifan-combination-lenvatinib-advanced-renal-cell-carcinoma-clear-cell-component"
+    },
+    "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-belzutifan-combination-lenvatinib-advanced-renal-cell-carcinoma-clear-cell-component",
+    "evidence": "On September 24, 2026, the Food and Drug Administration approved belzutifan (Welireg, Merck & Co., Inc.) in combination with lenvatinib (Lenvima, Eisai Inc.) for adults with advanced renal cell carcinoma with a clear cell component (ccRCC) following a programmed death receptor-1 (PD-1) or",
+    "observed_at": "2026-10-06T20:54:57Z"
+  },
+  {
+    "data": {
+      "drug": "lirafugratinib",
+      "company": [
+        "Elevar Therapeutics"
+      ],
+      "cancer_type": "liver-biliary-pancreatic",
+      "indication": "Adults with previously treated unresectable, locally advanced or metastatic cholangiocarcinoma with an FGFR2 gene fusion or other rearrangement",
+      "event_type": "approval",
+      "authority": "fda",
+      "announced_on": "2026-09-23",
+      "result_summary": "FDA approved lirafugratinib (Lyrfigtu) for adults with previously treated unresectable, locally advanced or metastatic cholangiocarcinoma with an FGFR2 fusion or other rearrangement.",
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-lirafugratinib-previously-treated-unresectable-locally-advanced-or-metastatic"
+    },
+    "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-lirafugratinib-previously-treated-unresectable-locally-advanced-or-metastatic",
+    "evidence": "On September 23, 2026, the Food and Drug Administration approved lirafugratinib (Lyrfigtu, Elevar Therapeutics, Inc.), a kinase inhibitor, for the treatment of adults with previously treated unresectable",
+    "observed_at": "2026-10-06T20:54:57Z"
+  },
+  {
+    "data": {
+      "drug": "imlunestrant + abemaciclib",
+      "company": [
+        "Eli Lilly and Company"
+      ],
+      "cancer_type": "breast",
+      "indication": "Adults with ER-positive, HER2-negative, ESR1-mutated advanced or metastatic breast cancer with progression after at least one line of endocrine therapy",
+      "event_type": "approval",
+      "authority": "fda",
+      "announced_on": "2026-09-18",
+      "result_summary": "FDA approved imlunestrant (Inluriyo) in combination with abemaciclib (Verzenio) for adults with ER-positive, HER2-negative, ESR1-mutated advanced or metastatic breast cancer.",
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-imlunestrant-combination-abemaciclib-er-positive-her2-negative-esr1-mutated-advanced-or"
+    },
+    "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-imlunestrant-combination-abemaciclib-er-positive-her2-negative-esr1-mutated-advanced-or",
+    "evidence": "On September 18, 2026, the Food and Drug Administration approved imlunestrant (Inluriyo) in combination with abemaciclib (Verzenio), for adults with estrogen receptor (ER)-positive, human epidermal growth factor receptor 2 (HER2)-negative",
+    "observed_at": "2026-10-06T20:54:57Z"
+  },
+  {
+    "data": {
+      "drug": "daraxonrasib",
+      "company": [
+        "Revolution Medicines"
+      ],
+      "cancer_type": "liver-biliary-pancreatic",
+      "indication": "Adults with metastatic pancreatic adenocarcinoma who have received at least one prior systemic therapy or are not candidates for multiagent systemic therapy",
+      "event_type": "approval",
+      "authority": "fda",
+      "announced_on": "2026-08-26",
+      "result_summary": "FDA approved daraxonrasib (RASONQUE) for adults with metastatic pancreatic adenocarcinoma who have received at least one prior systemic therapy or are not candidates for multiagent systemic therapy.",
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-daraxonrasib-metastatic-pancreatic-adenocarcinoma"
+    },
+    "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-daraxonrasib-metastatic-pancreatic-adenocarcinoma",
+    "evidence": "On August 26, 2026, the Food and Drug Administration approved daraxonrasib (RASONQUE, Revolution Medicines, Inc.), an inhibitor of the RAS GTPase family",
+    "observed_at": "2026-10-06T20:54:57Z"
+  },
+  {
+    "data": {
+      "drug": "zidesamtinib",
+      "company": [
+        "Nuvalent"
+      ],
+      "cancer_type": "lung",
+      "indication": "Adults with locally advanced or metastatic ROS1-positive non-small cell lung cancer who received at least one prior ROS1 tyrosine kinase inhibitor",
+      "event_type": "approval",
+      "authority": "fda",
+      "announced_on": "2026-07-22",
+      "result_summary": "FDA approved zidesamtinib (Jideytro) for adults with locally advanced or metastatic ROS1-positive non-small cell lung cancer who received at least one prior ROS1 tyrosine kinase inhibitor.",
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-zidesamtinib-ros1-positive-non-small-cell-lung-cancer"
+    },
+    "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-zidesamtinib-ros1-positive-non-small-cell-lung-cancer",
+    "evidence": "On July 22, 2026, the Food and Drug Administration approved zidesamtinib (Jideytro, Nuvalent, Inc.) for adults with locally advanced or metastatic ROS1 -positive non-small cell lung cancer (NSCLC) who received at least one prior ROS1 tyrosine kinase inhibitor (TKI).",
+    "observed_at": "2026-10-06T20:54:57Z"
+  },
+  {
+    "data": {
+      "drug": "iberdomide + daratumumab and hyaluronidase-fihj + dexamethasone",
+      "company": [
+        "Bristol-Myers Squibb"
+      ],
+      "cancer_type": "myeloma",
+      "indication": "Adults with multiple myeloma who have received at least one prior line of therapy including a proteasome inhibitor and an immunomodulatory agent",
+      "event_type": "approval",
+      "authority": "fda",
+      "announced_on": "2026-08-13",
+      "result_summary": "FDA granted accelerated approval to iberdomide (Zenbexus) with daratumumab and hyaluronidase-fihj and dexamethasone for adults with multiple myeloma after at least one prior line of therapy.",
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-iberdomide-daratumumab-and-hyaluronidase-fihj-and-dexamethasone"
+    },
+    "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-iberdomide-daratumumab-and-hyaluronidase-fihj-and-dexamethasone",
+    "evidence": "On August 13, 2026, the Food and Drug Administration granted accelerated approval to iberdomide (Zenbexus, Bristol-Myers Squibb Company) in combination with daratumumab and hyaluronidase-fihj and dexamethasone for adults with multiple myeloma who have received at least one prior line of therapy",
+    "observed_at": "2026-10-06T20:54:57Z"
+  },
+  {
+    "data": {
+      "drug": "vusolimogene oderparepvec-wtpg + nivolumab",
+      "company": [
+        "Replimune"
+      ],
+      "cancer_type": "skin-melanoma",
+      "indication": "Adults with unresectable advanced cutaneous melanoma that progressed on a PD-1-blocking antibody-based regimen",
+      "event_type": "approval",
+      "authority": "fda",
+      "announced_on": "2026-08-06",
+      "result_summary": "FDA granted accelerated approval to vusolimogene oderparepvec-wtpg (Tudriqev) with nivolumab for adults with unresectable advanced cutaneous melanoma that progressed on a PD-1-blocking antibody-based regimen.",
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-vusolimogene-oderparepvec-wtpg-combination-nivolumab-melanoma"
+    },
+    "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-accelerated-approval-vusolimogene-oderparepvec-wtpg-combination-nivolumab-melanoma",
+    "evidence": "On August 6, 2026, the Food and Drug Administration granted accelerated approval to vusolimogene oderparepvec-wtpg (Tudriqev, Replimune, Inc.), a genetically modified oncolytic viral therapy",
+    "observed_at": "2026-10-06T20:54:57Z"
+  },
+  {
+    "data": {
+      "drug": "lutetium Lu 177 vipivotide tetraxetan + androgen receptor pathway inhibitor",
+      "company": [
+        "Novartis"
+      ],
+      "cancer_type": "prostate",
+      "indication": "Adults with PSMA-positive metastatic androgen pathway modulation-naive or -sensitive prostate cancer",
+      "event_type": "approval",
+      "authority": "fda",
+      "announced_on": "2026-07-31",
+      "result_summary": "FDA approved lutetium Lu 177 vipivotide tetraxetan (Pluvicto) with androgen receptor pathway inhibitor therapy for adults with PSMA-positive metastatic androgen pathway modulation-naive or -sensitive prostate cancer.",
+      "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-lutetium-lu-177-vipivotide-tetraxetan-androgen-receptor-pathway-inhibitor-therapy"
+    },
+    "source_url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-lutetium-lu-177-vipivotide-tetraxetan-androgen-receptor-pathway-inhibitor-therapy",
+    "evidence": "On July 31, 2026, the Food and Drug Administration approved lutetium Lu 177 vipivotide tetraxetan (Pluvicto, Novartis Pharmaceuticals Corporation) in combination with androgen receptor pathway inhibitor (ARPI) therapy for adults with prostate-specific membrane antigen (PSMA)-positive metastatic",
+    "observed_at": "2026-10-06T20:54:57Z"
+  },
+  {
+    "data": {
+      "drug": "intismeran autogene + pembrolizumab",
+      "company": [
+        "Merck",
+        "Moderna"
+      ],
+      "cancer_type": "skin-melanoma",
+      "indication": "Adjuvant treatment of completely resected stage IIB-IV melanoma",
+      "event_type": "phase3-results",
+      "trial_phase": "phase-3",
+      "trial_name": "INTerpath-001",
+      "nct_id": "NCT05933577",
+      "participants": 1137,
+      "primary_endpoint": "met",
+      "announced_on": "2026-08-19",
+      "result_summary": "Merck and Moderna announced that the Phase 3 INTerpath-001 trial of intismeran autogene plus KEYTRUDA met its primary endpoint of recurrence-free survival and a key secondary endpoint of distant metastasis-free survival.",
+      "url": "https://news.modernatx.com/merck-and-moderna-announce-phase-3-interpath-001-trial-of-intismeran-plus-keytruda-met-endpoints-of-rfs-and-dmfs-in-melanoma"
+    },
+    "source_url": "https://news.modernatx.com/merck-and-moderna-announce-phase-3-interpath-001-trial-of-intismeran-plus-keytruda-met-endpoints-of-rfs-and-dmfs-in-melanoma",
+    "evidence": "The trial met its primary endpoint of recurrence-free survival (RFS) and a key secondary endpoint of distant metastasis-free survival (DMFS).",
+    "observed_at": "2026-10-06T20:54:57Z"
+  }
+]
