@@ -1588,7 +1588,13 @@ th[aria-sort='ascending'] .sort-button svg {
 }
 
 .list-row .end {
+  max-width: 50vw;
   justify-items: end;
+}
+
+/* A long stated figure (a grant range quoted in full) must ellipsize, not push the title out. */
+.list-row .end > * {
+  max-width: 100%;
 }
 
 .list-row b {
