@@ -770,6 +770,16 @@ textarea {
   gap: 4px;
 }
 
+/* On a record page a tag can be a whole phrase ("Nationals of 111 listed countries"): wrap it
+   inside its column instead of letting it run under the next one. */
+.detail .tag {
+  height: auto;
+  min-height: 22px;
+  max-width: 100%;
+  padding-block: 2px;
+  white-space: normal;
+}
+
 /* Checkbox rows: a 16px box, the label, the count on the right. */
 .check-row {
   display: grid;

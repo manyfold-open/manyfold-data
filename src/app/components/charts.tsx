@@ -6,7 +6,7 @@
  * can switch to a table holding the same numbers.
  */
 
-import { useEffect, useId, useRef, useState, type CSSProperties, type ReactNode } from 'react';
+import { useEffect, useId, useLayoutEffect, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import { formatCount } from '../format';
 import { prefersReducedMotion } from '../hooks';
 import type { Takeaway } from '../model/charts';
@@ -132,15 +132,27 @@ export function Columns({
   ticks?: readonly string[];
 }) {
   const plot = useRef<HTMLDivElement>(null);
+  const tipBox = useRef<HTMLDivElement>(null);
   const [tip, setTip] = useState<{ x: number; y: number; text: string } | null>(null);
 
   const show = (element: HTMLElement, item: ColumnItem) => {
     const box = plot.current;
     if (!box) return;
     const bar = element.firstElementChild as HTMLElement | null;
-    const x = Math.max(60, Math.min(box.clientWidth - 60, element.offsetLeft + element.offsetWidth / 2));
-    setTip({ x, y: box.clientHeight - (bar?.offsetHeight ?? 0) - 6, text: item.tip });
+    setTip({ x: element.offsetLeft + element.offsetWidth / 2, y: box.clientHeight - (bar?.offsetHeight ?? 0) - 6, text: item.tip });
   };
+
+  // The tip's width is only known once it is drawn, so fit it to the plot here, before paint: it
+  // stays inside the plot sideways, and for a bar that reaches the top it sits inside the plot
+  // instead of rising over the takeaway line.
+  useLayoutEffect(() => {
+    const box = plot.current;
+    const el = tipBox.current;
+    if (!tip || !box || !el) return;
+    const half = el.offsetWidth / 2;
+    el.style.left = `${Math.max(half, Math.min(box.clientWidth - half, tip.x))}px`;
+    el.style.top = `${Math.max(el.offsetHeight, tip.y)}px`;
+  }, [tip]);
 
   return (
     <div className={todayAt !== null && todayAt !== undefined ? 'columns-wrap has-today' : 'columns-wrap'}>
@@ -172,7 +184,7 @@ export function Columns({
           </span>
         ) : null}
         {tip ? (
-          <div className="chart-tip" style={{ left: tip.x, top: tip.y }} aria-hidden="true">
+          <div ref={tipBox} className="chart-tip" style={{ left: tip.x, top: tip.y }} aria-hidden="true">
             {tip.text}
           </div>
         ) : null}
