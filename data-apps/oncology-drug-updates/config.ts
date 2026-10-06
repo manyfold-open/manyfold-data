@@ -6,8 +6,9 @@ export default defineDataApp({
   description: 'Major cancer-drug events from regulators, trial registries and the companies behind them: Phase 3 results, approvals, accepted applications and safety notices — what was announced, by whom and when.',
   license: 'CC-BY-4.0',
   noun: { one: 'update', other: 'updates' },
-  // One record per drug, kind of event, cancer type and day it was announced.
-  identity: ['drug', 'event_type', 'cancer_type', 'announced_on'],
+  // One record per source page and kind of event. The drug's name is written in different ways (with or
+  // without a biologic suffix, with or without a salt), so it cannot tell two records of one event apart.
+  identity: ['url', 'event_type'],
   fields: {
     drug: {
       type: 'text',
@@ -152,7 +153,7 @@ export default defineDataApp({
       type: 'url',
       label: 'Source page',
       required: true,
-      help: 'The page that states the facts: the regulator\'s or registry\'s own page when there is one, otherwise the company\'s own release.',
+      help: 'The page that states the facts: the regulator\'s or registry\'s own page when there is one, otherwise the company\'s own release. Use the same address as source_url: it decides whether two records are the same event.',
     },
   },
   accept: { announced_on: { from: 'today-90', to: 'today' } },
