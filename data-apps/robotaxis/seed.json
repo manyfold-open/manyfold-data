@@ -1,0 +1,2194 @@
+[
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "Phoenix"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "driverless",
+      "since": "2020-10-08",
+      "access": "open",
+      "booking": [
+        "Waymo app"
+      ]
+    },
+    "source_url": "https://waymo.com/blog/2020/10/waymo-is-opening-its-fully-driverless-service-in-phoenix/",
+    "evidence": "Beginning today, October 8, we’re excited to open up our fully driverless offering to Waymo One riders. Members of the public service can now take friends and family along on their rides and share their experience with the world.",
+    "observed_at": "2026-10-06T10:02:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "San Francisco"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "driverless",
+      "since": "2022-12-01"
+    },
+    "source_url": "https://waymo.com/blog/2022/12/wheels-up-for-waymo-as-we-expand/",
+    "evidence": "Earlier this month, we began inviting members of the general public to experience fully autonomous rides in San Francisco for the first time.",
+    "observed_at": "2026-10-06T10:02:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "Los Angeles"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "driverless",
+      "since": "2023-10-01"
+    },
+    "source_url": "https://waymo.com/blog/2024/03/scaling-waymo-one-safely-across-four-cities-this-year/",
+    "evidence": "Last October, we invited a broad cross section of Angelenos to experience the Driver for themselves during our Waymo One Tour. Angelenos have taken over 15,000 fully autonomous rides with the Waymo Driver over the past five months",
+    "observed_at": "2026-10-06T10:02:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "Austin"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "driverless",
+      "since": "2025-03-04",
+      "access": "open",
+      "booking": [
+        "Uber"
+      ]
+    },
+    "source_url": "https://www.cnbc.com/2025/03/04/waymo-uber-begin-offering-robotaxi-rides-in-austin-ahead-of-sxsw.html",
+    "evidence": "Waymo on Tuesday began offering robotaxi rides in Austin, Texas, through the Uber app. The launch sets up Waymo to showcase its driverless technology during Austin's annual South by Southwest festival that kicks off Friday.",
+    "observed_at": "2026-10-06T10:08:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "Atlanta"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "driverless",
+      "since": "2025-06-24",
+      "access": "open",
+      "booking": [
+        "Uber"
+      ]
+    },
+    "source_url": "https://www.cnbc.com/2025/06/24/uber-waymo-robotaxi-service-opens-to-passengers-in-atlanta.html",
+    "evidence": "On Tuesday, Waymo robotaxis became available to Uber users in Atlanta as the companies expanded their ride-hailing partnership in the U.S.",
+    "observed_at": "2026-10-06T10:09:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "Miami"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "driverless",
+      "since": "2026-01-22",
+      "booking": [
+        "Waymo app"
+      ]
+    },
+    "source_url": "https://waymo.com/blog/2026/01/miami-your-waymo-ride-is-ready/",
+    "evidence": "Starting today, Waymo is welcoming the first public riders into our fully autonomous ride-hailing service in Miami.",
+    "observed_at": "2026-10-06T09:55:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "Dallas"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "driverless",
+      "since": "2026-02-24",
+      "booking": [
+        "Waymo app"
+      ]
+    },
+    "source_url": "https://waymo.com/blog/2026/02/dallas-houston-san-antonio-orlando/",
+    "evidence": "Today, we continue our accelerated growth and welcome the first public riders into our fully autonomous ride-hailing service in four new cities: Dallas, Houston, San Antonio, and Orlando.",
+    "observed_at": "2026-10-06T09:57:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "Houston"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "driverless",
+      "since": "2026-02-24",
+      "booking": [
+        "Waymo app"
+      ]
+    },
+    "source_url": "https://waymo.com/blog/2026/02/dallas-houston-san-antonio-orlando/",
+    "evidence": "Today, we continue our accelerated growth and welcome the first public riders into our fully autonomous ride-hailing service in four new cities: Dallas, Houston, San Antonio, and Orlando.",
+    "observed_at": "2026-10-06T09:57:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "San Antonio"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "driverless",
+      "since": "2026-02-24",
+      "access": "waitlist",
+      "booking": [
+        "Waymo app"
+      ]
+    },
+    "source_url": "https://waymo.com/blog/2026/02/dallas-houston-san-antonio-orlando/",
+    "evidence": "Today, we continue our accelerated growth and welcome the first public riders into our fully autonomous ride-hailing service in four new cities: Dallas, Houston, San Antonio, and Orlando.",
+    "observed_at": "2026-10-06T09:57:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "Orlando"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "driverless",
+      "since": "2026-02-24",
+      "booking": [
+        "Waymo app"
+      ]
+    },
+    "source_url": "https://waymo.com/blog/2026/02/dallas-houston-san-antonio-orlando/",
+    "evidence": "Today, we continue our accelerated growth and welcome the first public riders into our fully autonomous ride-hailing service in four new cities: Dallas, Houston, San Antonio, and Orlando.",
+    "observed_at": "2026-10-06T09:57:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "Nashville"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "driverless",
+      "since": "2026-04-07",
+      "booking": [
+        "Waymo app"
+      ]
+    },
+    "source_url": "https://waymo.com/blog/2026/04/your-waymo-ride-now-arriving-in-nashville/",
+    "evidence": "Starting today, Waymo is welcoming the first public riders into our fully autonomous ride-hailing service in Nashville.",
+    "observed_at": "2026-10-06T09:57:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "Denver"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "driverless",
+      "since": "2026-09-01",
+      "booking": [
+        "Waymo app"
+      ]
+    },
+    "source_url": "https://waymo.com/blog/2026/09/ride-in-denver-san-diego-tampa/",
+    "evidence": "Today, we’ll begin welcoming our first public riders in Denver, San Diego, and Tampa, marking 14 cities where we’re providing riders fully autonomous trips.",
+    "observed_at": "2026-10-06T09:57:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "San Diego"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "driverless",
+      "since": "2026-09-01",
+      "booking": [
+        "Waymo app"
+      ]
+    },
+    "source_url": "https://waymo.com/blog/2026/09/ride-in-denver-san-diego-tampa/",
+    "evidence": "Today, we’ll begin welcoming our first public riders in Denver, San Diego, and Tampa, marking 14 cities where we’re providing riders fully autonomous trips.",
+    "observed_at": "2026-10-06T09:57:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "Tampa"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "driverless",
+      "since": "2026-09-01",
+      "booking": [
+        "Waymo app"
+      ]
+    },
+    "source_url": "https://waymo.com/blog/2026/09/ride-in-denver-san-diego-tampa/",
+    "evidence": "Today, we’ll begin welcoming our first public riders in Denver, San Diego, and Tampa, marking 14 cities where we’re providing riders fully autonomous trips.",
+    "observed_at": "2026-10-06T09:57:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "Las Vegas"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "driverless",
+      "since": "2026-09-14",
+      "area": "From Boulder Junction up the Strip to Sahara Avenue, and from the edge of Spring Valley to Winchester"
+    },
+    "source_url": "https://waymo.com/blog/2026/09/ride-in-las-vegas/",
+    "evidence": "That’s why we’re excited to announce that starting today, residents and visitors alike can go all in on Waymo, now providing our first public riders in the city with fully autonomous trips.",
+    "observed_at": "2026-10-06T09:57:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "Washington D.C."
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "testing",
+      "since": "2025-01-01"
+    },
+    "source_url": "https://waymo.com/blog/2025/03/next-stop-for-waymo-one-washingtondc/",
+    "evidence": "It’s official: Waymo One, the world’s leading fully autonomous ride-hailing service, will be ready for riders in the nation’s capital on the Waymo One app in 2026. We’re laying the groundwork for our fully autonomous ride-hailing service after returning to Washington, D.C. earlier this year",
+    "observed_at": "2026-10-06T10:05:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "Philadelphia"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "testing",
+      "since": "2025-01-01"
+    },
+    "source_url": "https://waymo.com/blog/shorts/bringing-our-service-to-philadelphia/",
+    "evidence": "We’ve made great progress since arriving in Philadelphia this summer. After a period of manual testing, we recently shifted to autonomous testing with specialists behind the wheel",
+    "observed_at": "2026-10-06T10:00:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "St. Louis"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "testing",
+      "since": "2025-12-03"
+    },
+    "source_url": "https://waymo.com/blog/shorts/entering-st-louis/",
+    "evidence": "now St. Louis will serve as a gateway to the future of transportation, as we lay the early groundwork to offer our fully-autonomous ride-hailing service in the city! Starting this week, we’ll begin manually driving a fleet of our all-electric Jaguar I-PACE vehicles around the city",
+    "observed_at": "2026-10-06T10:00:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "Pittsburgh"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "testing",
+      "since": "2025-12-03"
+    },
+    "source_url": "https://waymo.com/blog/shorts/waymo-coming-to-pittsburgh/",
+    "evidence": "This week, we’ll start manually driving in Pittsburgh’s downtown core with a fleet of our 5th and 6th generation Waymo Driver.",
+    "observed_at": "2026-10-06T10:01:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "Baltimore"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "testing",
+      "since": "2025-12-03"
+    },
+    "source_url": "https://waymo.com/blog/shorts/waymo-is-heading-to-baltimore/",
+    "evidence": "This week we’ll start manually driving in Baltimore as we get to know the city’s roads, meet Baltimore’s diverse communities, and ready our service for riders in the future.",
+    "observed_at": "2026-10-06T10:01:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "Minneapolis"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "testing",
+      "since": "2025-11-20"
+    },
+    "source_url": "https://waymo.com/blog/shorts/were-lacing-up-our-skates-and-laying-the-early-groundwork-for-our-fully/",
+    "evidence": "We’re lacing up our skates and laying the early groundwork for our fully autonomous ride-hailing service in Minneapolis! Starting today, you’ll see us begin driving in the city with a mixed fleet of our Jaguar I-PACE and Zeekr RT vehicles.",
+    "observed_at": "2026-10-06T10:01:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "Sacramento"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "testing",
+      "since": "2026-02-05"
+    },
+    "source_url": "https://waymo.com/blog/shorts/waymo-is-headed-to-sacramento/",
+    "evidence": "Starting this week, we’ll begin manually driving a fleet of our all-electric Jaguar I-PACE vehicles around the Capital City. This initial phase allows the Waymo Driver to get to know Sacramento’s unique dynamics",
+    "observed_at": "2026-10-06T10:01:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "Portland"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "testing",
+      "since": "2026-04-28"
+    },
+    "source_url": "https://waymo.com/blog/shorts/waymo-in-portland/",
+    "evidence": "Starting today, we’ll begin manually driving our vehicles to help familiarize the Waymo Driver with Portland’s distinct streetscapes",
+    "observed_at": "2026-10-06T10:01:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "Chicago"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "testing",
+      "since": "2026-02-25"
+    },
+    "source_url": "https://waymo.com/blog/shorts/waymo-in-chicago/",
+    "evidence": "Chicago is leading the future of mobility by welcoming Waymo to begin initial mapping and manual testing in the city",
+    "observed_at": "2026-10-06T10:03:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "Charlotte"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "testing",
+      "since": "2026-02-25"
+    },
+    "source_url": "https://waymo.com/blog/shorts/waymo-in-charlotte/",
+    "evidence": "The arrival of Waymo’s autonomous vehicle testing in Charlotte represents an exciting step toward expanding safe, independent mobility options.",
+    "observed_at": "2026-10-06T10:03:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "London"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "stage": "testing",
+      "since": "2026-04-14"
+    },
+    "source_url": "https://waymo.com/blog/shorts/autonomous-driving-in-london/",
+    "evidence": "We’re taking the next step toward bringing fully autonomous ride-hailing to London this year with the start of autonomous driving with trained specialists behind the wheel.",
+    "observed_at": "2026-10-06T10:00:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "Tokyo"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "stage": "testing",
+      "since": "2025-04-01"
+    },
+    "source_url": "https://waymo.com/blog/shorts/waymo-arrived-in-tokyo-this-april-and-has-been-adapting-our-technology-and/",
+    "evidence": "Waymo arrived in Tokyo this April and has been adapting our technology and operations for Japan’s capital as we expand to major cities across the U.S. and globally.",
+    "observed_at": "2026-10-06T10:01:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "Munich"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "stage": "announced",
+      "since": "2027-01-01"
+    },
+    "source_url": "https://waymo.com/blog/2026/08/waymo-in-munich/",
+    "evidence": "This validation period will ensure the Waymo Driver adapts seamlessly to Munich’s distinct driving conditions before we aim to open commercial ride-hailing to the public towards the end of 2027.",
+    "observed_at": "2026-10-06T09:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Waymo"
+      ],
+      "city": [
+        "Singapore"
+      ],
+      "country": [
+        "Singapore"
+      ],
+      "region": "asia-pacific",
+      "stage": "announced",
+      "since": "2028-01-01",
+      "booking": [
+        "Waymo app"
+      ]
+    },
+    "source_url": "https://waymo.com/blog/2026/09/waymo-in-singapore/",
+    "evidence": "In partnership with the Ministry of Transport (MOT) and the Land Transport Authority (LTA), we are laying the foundation to introduce our fully autonomous, all-electric commercial ride-hailing service to Singapore via the Waymo app in 2028.",
+    "observed_at": "2026-10-06T09:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Zoox"
+      ],
+      "city": [
+        "Las Vegas"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "driverless",
+      "since": "2025-09-10",
+      "booking": [
+        "Zoox app"
+      ]
+    },
+    "source_url": "https://zoox.com/journal/las-vegas",
+    "evidence": "On September 10, 2025, we officially launched the Zoox service on and around the Las Vegas Strip. Rides are available through the Zoox app",
+    "observed_at": "2026-10-06T10:35:14Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Zoox"
+      ],
+      "city": [
+        "San Francisco"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "driverless",
+      "since": "2025-11-18",
+      "access": "waitlist",
+      "booking": [
+        "Zoox app"
+      ]
+    },
+    "source_url": "https://zoox.com/journal/zoox-robotaxi-in-san-francisco",
+    "evidence": "We're excited to announce that our Zoox Explorers program is officially live in San Francisco, and we're inviting members of the public off our waitlist to be among the first to ride.",
+    "observed_at": "2026-10-06T10:35:14Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Zoox"
+      ],
+      "city": [
+        "Austin"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "testing",
+      "since": "2024-06-05"
+    },
+    "source_url": "https://zoox.com/journal/austin-miami-2024",
+    "evidence": "Austin and Miami will mark the fourth and fifth public testing locations for Zoox.",
+    "observed_at": "2026-10-06T10:35:14Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Zoox"
+      ],
+      "city": [
+        "Miami"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "testing",
+      "since": "2024-06-05"
+    },
+    "source_url": "https://zoox.com/journal/austin-miami-2024",
+    "evidence": "Austin and Miami will mark the fourth and fifth public testing locations for Zoox.",
+    "observed_at": "2026-10-06T10:35:14Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Zoox"
+      ],
+      "city": [
+        "Los Angeles"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "testing",
+      "since": "2025-04-09"
+    },
+    "source_url": "https://zoox.com/journal/los-angeles-2025",
+    "evidence": "Today, Zoox is excited to share that we are continuing to grow our presence in California and expand testing operations to the iconic entertainment capital: Los Angeles.",
+    "observed_at": "2026-10-06T10:35:14Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Zoox"
+      ],
+      "city": [
+        "Washington D.C."
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "testing",
+      "since": "2025-09-30"
+    },
+    "source_url": "https://zoox.com/journal/dc-expansion-2025",
+    "evidence": "We’re excited to announce the addition of a new city to our testing roadmap: Washington, D.C.",
+    "observed_at": "2026-10-06T10:35:14Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Zoox"
+      ],
+      "city": [
+        "Seattle"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "testing",
+      "since": "2021-10-18"
+    },
+    "source_url": "https://zoox.com/journal/seattle",
+    "evidence": "We’re excited to be testing in Seattle. The data we’re gathering will be invaluable for the continued development and generalization of our AI stack.",
+    "observed_at": "2026-10-06T10:35:14Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Zoox"
+      ],
+      "city": [
+        "Dallas"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "testing",
+      "since": "2026-03-09"
+    },
+    "source_url": "https://zoox.com/journal/zoox-expanding-testing-dallas-phoenix",
+    "evidence": "We are thrilled to announce that we are launching operations in Arizona, beginning with Phoenix, and expanding our testing in Texas to Dallas.",
+    "observed_at": "2026-10-06T10:35:14Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Zoox"
+      ],
+      "city": [
+        "Phoenix"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "testing",
+      "since": "2026-03-09"
+    },
+    "source_url": "https://zoox.com/journal/zoox-expanding-testing-dallas-phoenix",
+    "evidence": "We are thrilled to announce that we are launching operations in Arizona, beginning with Phoenix, and expanding our testing in Texas to Dallas.",
+    "observed_at": "2026-10-06T10:35:14Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Zoox"
+      ],
+      "city": [
+        "Houston"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "testing",
+      "since": "2026-09-01"
+    },
+    "source_url": "https://zoox.com/journal/zoox-now-testing-houston-san-diego",
+    "evidence": "in the downtown, central tourist areas, and select residential neighborhoods of San Diego and Houston. As in every new location, we begin by focusing on manual mapping before progressing to autonomous testing.",
+    "observed_at": "2026-10-06T10:35:14Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Zoox"
+      ],
+      "city": [
+        "San Diego"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "testing",
+      "since": "2026-09-01"
+    },
+    "source_url": "https://zoox.com/journal/zoox-now-testing-houston-san-diego",
+    "evidence": "in the downtown, central tourist areas, and select residential neighborhoods of San Diego and Houston. As in every new location, we begin by focusing on manual mapping before progressing to autonomous testing.",
+    "observed_at": "2026-10-06T10:35:14Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Tesla Robotaxi"
+      ],
+      "company": "Tesla",
+      "city": [
+        "Austin"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "driverless",
+      "since": "2025-06-22"
+    },
+    "source_url": "https://techcrunch.com/2025/06/22/tesla-launches-robotaxi-rides-in-austin-with-big-promises-and-unanswered-questions/",
+    "evidence": "June 22, 2025 Tesla has started giving rides in driverless Model Y SUVs in Austin, a decade after CEO Elon Musk began making — and breaking — myriad promises about his company’s ability to launch such a service.",
+    "observed_at": "2026-10-06T10:35:14Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Tesla Robotaxi"
+      ],
+      "company": "Tesla",
+      "city": [
+        "San Francisco"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "safety-driver",
+      "since": "2025-07-30"
+    },
+    "source_url": "https://www.notateslaapp.com/news/2974/tesla-launches-robotaxi-in-the-bay-area-with-higher-fares-and-strict-supervision",
+    "evidence": "Tesla’s Robotaxi network officially went live in the San Francisco Bay Area on the night of July 30th, expanding the program outside of Texas for the first time.",
+    "observed_at": "2026-10-06T10:35:14Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Tesla Robotaxi"
+      ],
+      "company": "Tesla",
+      "city": [
+        "Dallas"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "driverless",
+      "since": "2026-04-18"
+    },
+    "source_url": "https://techcrunch.com/2026/04/18/tesla-brings-its-robotaxi-service-to-dallas-and-houston/",
+    "evidence": "Tesla is expanding its robotaxi service to Dallas and Houston, according to a social media post from the company. The post says simply that “Robotaxi is now rolling out in Dallas & Houston 🤠” and includes a 14-second video showing Tesla vehicles driving without human monitors",
+    "observed_at": "2026-10-06T10:44:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Tesla Robotaxi"
+      ],
+      "company": "Tesla",
+      "city": [
+        "Houston"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "driverless",
+      "since": "2026-04-18"
+    },
+    "source_url": "https://techcrunch.com/2026/04/18/tesla-brings-its-robotaxi-service-to-dallas-and-houston/",
+    "evidence": "Tesla is expanding its robotaxi service to Dallas and Houston, according to a social media post from the company. The post says simply that “Robotaxi is now rolling out in Dallas & Houston 🤠” and includes a 14-second video showing Tesla vehicles driving without human monitors",
+    "observed_at": "2026-10-06T10:44:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Tesla Robotaxi"
+      ],
+      "company": "Tesla",
+      "city": [
+        "Miami"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "driverless",
+      "since": "2026-07-03",
+      "access": "open",
+      "booking": [
+        "Tesla Robotaxi app"
+      ]
+    },
+    "source_url": "https://www.notateslaapp.com/news/4394/tesla-launches-unsupervised-robotaxi-rides-in-miami",
+    "evidence": "As spotted by longtime Tesla watcher @SawyerMerritt , the driverless platform is officially live in Miami. One X user under the handle @unlimited_ls has already uploaded real-world footage riding inside one of the very first Tesla Robotaxi rides in the city.",
+    "observed_at": "2026-10-06T10:35:14Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Tesla Robotaxi"
+      ],
+      "company": "Tesla",
+      "city": [
+        "Orlando"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "driverless",
+      "since": "2026-07-21",
+      "access": "open",
+      "booking": [
+        "Tesla Robotaxi app"
+      ]
+    },
+    "source_url": "https://www.notateslaapp.com/news/4470/tesla-robotaxi-launches-unsupervised-rides-in-orlando-tampa",
+    "evidence": "The official @robotaxi account announced the expansion on X, confirming that Robotaxi rides are now live in Orlando and Tampa. This means residents in both cities can open the official Robotaxi app on Android or iOS and hail a fully unsupervised Model Y.",
+    "observed_at": "2026-10-06T10:35:14Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Tesla Robotaxi"
+      ],
+      "company": "Tesla",
+      "city": [
+        "Tampa"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "driverless",
+      "since": "2026-07-21",
+      "access": "open",
+      "booking": [
+        "Tesla Robotaxi app"
+      ]
+    },
+    "source_url": "https://www.notateslaapp.com/news/4470/tesla-robotaxi-launches-unsupervised-rides-in-orlando-tampa",
+    "evidence": "The official @robotaxi account announced the expansion on X, confirming that Robotaxi rides are now live in Orlando and Tampa. This means residents in both cities can open the official Robotaxi app on Android or iOS and hail a fully unsupervised Model Y.",
+    "observed_at": "2026-10-06T10:35:14Z"
+  },
+  {
+    "data": {
+      "service": [
+        "May Mobility"
+      ],
+      "city": [
+        "Atlanta"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "safety-driver",
+      "since": "2025-09-10",
+      "access": "open",
+      "booking": [
+        "Lyft"
+      ],
+      "area": "around the Midtown area, including Virginia Highlands, Old Fourth Ward, and Inman Park"
+    },
+    "source_url": "https://maymobility.com/posts/lyft-and-may-mobility-deploy-their-first-autonomous-vehicle-fleet-in-atlanta/",
+    "evidence": "ATLANTA, GA, September 10, 2025 – Lyft, Inc. (NASDAQ: LYFT) and May Mobility, Inc. today announced the launch of their autonomous vehicle (AV) pilot program in Atlanta, marking the first public autonomous vehicle deployment for the partnership.",
+    "observed_at": "2026-10-06T10:35:14Z"
+  },
+  {
+    "data": {
+      "service": [
+        "May Mobility"
+      ],
+      "city": [
+        "Arlington"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "announced",
+      "since": "2026-10-01",
+      "booking": [
+        "Uber"
+      ]
+    },
+    "source_url": "https://maymobility.com/posts/may-mobility-first-publicly-listed-pure-play-autonomous-ride-hail-technology-company-acp-holdings-acquisition-corp/",
+    "evidence": "May Mobility currently operates commercially in three U.S. locations, with Lyft in Atlanta and autonomous ride services in Eden Prairie and Grand Rapids, Minnesota, and is targeting to launch commercial operations with Uber in Arlington, Texas, in Q4 2026 or Q1 2027.",
+    "observed_at": "2026-10-06T10:35:14Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Avride"
+      ],
+      "city": [
+        "Dallas"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "safety-driver",
+      "since": "2025-12-03",
+      "access": "open",
+      "booking": [
+        "Uber"
+      ]
+    },
+    "source_url": "https://techcrunch.com/2025/12/03/uber-and-avride-launch-robotaxi-service-in-dallas/",
+    "evidence": "A year after announcing their partnership, Uber and Avride have launched a commercial robotaxi service in Dallas. The service comes with a few caveats, however, including the addition of a human safety operator behind the wheel and a limited operating area.",
+    "observed_at": "2026-10-06T10:35:14Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Motional"
+      ],
+      "city": [
+        "Las Vegas"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "safety-driver",
+      "since": "2026-03-13",
+      "access": "open",
+      "booking": [
+        "Uber"
+      ]
+    },
+    "source_url": "https://motional.com/news/uber-and-motional-launch-robotaxi-service-las-vegas",
+    "evidence": "Starting today, Uber Technologies, Inc. (NYSE: UBER) and Motional, a leader in autonomous vehicle technology that is majority owned by Hyundai Motor Group, announced that Uber riders in Las Vegas can now be matched with an all-electric Motional IONIQ 5 robotaxi",
+    "observed_at": "2026-10-06T10:35:14Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Uber"
+      ],
+      "city": [
+        "San Francisco"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "testing",
+      "since": "2026-01-05"
+    },
+    "source_url": "https://techcrunch.com/2026/01/05/this-is-ubers-new-robotaxi-from-lucid-and-nuro/",
+    "evidence": "On Monday, the companies said the robotaxi is already being tested on public roads ahead of a planned commercial service launching in the San Francisco Bay Area later this year.",
+    "observed_at": "2026-10-06T10:35:14Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Uber"
+      ],
+      "city": [
+        "Houston"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "testing",
+      "since": "2026-06-17"
+    },
+    "source_url": "https://www.nuro.ai/blog/uber-nuro-and-lucid-to-bring-robotaxi-service-to-houston-in-2027",
+    "evidence": "Houston named as the second planned deployment market, with service expected to launch in mid-2027, and dozens of additional markets over the coming years. Nuro is conducting 24/7 autonomous on-road testing with safety operators in Houston and the San Francisco Bay Area.",
+    "observed_at": "2026-10-06T10:35:14Z"
+  },
+  {
+    "data": {
+      "service": [
+        "MOIA"
+      ],
+      "company": "Volkswagen Group",
+      "city": [
+        "Los Angeles"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "stage": "testing",
+      "since": "2026-04-08",
+      "booking": [
+        "Uber"
+      ]
+    },
+    "source_url": "https://www.volkswagen-group.com/en/articles/moia-america-to-deploy-autonomous-id-buzz-vehicles-on-the-uber-platform-in-los-angeles-by-the-end-of-2026-20306",
+    "evidence": "MOIA America, LLC, a Volkswagen Group company working on autonomous mobility technology, and Uber Technologies, Inc. (NYSE:UBER), today announced the start of on-road validation testing of purpose-built, autonomous ID. Buzz vehicles in Los Angeles",
+    "observed_at": "2026-10-06T10:35:14Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Wayve"
+      ],
+      "city": [
+        "London"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "stage": "safety-driver",
+      "since": "2026-09-03",
+      "access": "open",
+      "booking": [
+        "Uber"
+      ],
+      "vehicles": 15
+    },
+    "source_url": "https://www.theguardian.com/technology/2026/sep/03/london-first-self-driving-taxis-for-hire-wayve-uber",
+    "evidence": "Londoners are now able to hire self-driving taxis for the first time, after rides in Wayve’s autonomous vehicles were added to the Uber app on Thursday. The chances of landing a robotaxi on request immediately are slim, with only 15 vehicles so far licensed.",
+    "observed_at": "2026-10-06T10:35:30Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Apollo Go"
+      ],
+      "company": "Baidu",
+      "city": [
+        "London"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "stage": "testing",
+      "since": "2026-07-28",
+      "booking": [
+        "Freenow"
+      ],
+      "area": "the borough of Brent"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/baidus-apollo-go-and-freenow-by-lyft-begin-road-testing-in-london-302836171.html",
+    "evidence": "BEIJING and LONDON, July 28, 2026 /PRNewswire/ -- Baidu, Inc. (NASDAQ: BIDU and HKEX: 9888) today announced that its autonomous ride-hailing platform, Apollo Go, has begun road testing in London with Freenow by Lyft.",
+    "observed_at": "2026-10-06T10:03:58Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Apollo Go"
+      ],
+      "company": "Baidu",
+      "city": [
+        "Altstätten"
+      ],
+      "country": [
+        "Switzerland"
+      ],
+      "region": "europe",
+      "stage": "testing",
+      "since": "2026-06-01",
+      "booking": [
+        "AmiGo app"
+      ],
+      "area": "about 80 km² across the cantons of St. Gallen, Appenzell Ausserrhoden and Appenzell Innerrhoden"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/baidus-apollo-go-expands-european-footprint-as-amigo-in-partnership-with-postbus-receives-level-4-regulatory-approval-in-switzerland-302799022.html",
+    "evidence": "for Level 4 autonomous operations in Eastern Switzerland. AmiGo vehicles have been conducting open-road testing since June 1, 2026, marking a major development in Apollo Go's European expansion",
+    "observed_at": "2026-10-06T10:04:24Z"
+  },
+  {
+    "data": {
+      "service": [
+        "WeRide"
+      ],
+      "city": [
+        "Zurich"
+      ],
+      "country": [
+        "Switzerland"
+      ],
+      "region": "europe",
+      "stage": "safety-driver",
+      "since": "2026-09-28",
+      "access": "open",
+      "booking": [
+        "iamo app"
+      ],
+      "area": "almost 100 predefined stops in Boppelsen, Dänikon, Hüttikon and Otelfingen (Furttal)",
+      "vehicles": 3
+    },
+    "source_url": "https://www.zh.ch/de/news-uebersicht/medienmitteilungen/2026/09/im-furttal-startet-der-passagierbetrieb-mit-selbstfahrenden-fahrzeugen.html",
+    "evidence": "Ab dem 28. September 2026 startet im Furttal der öffentliche Passagierbetrieb des Pilotversuchs «iamo – intelligente automatisierte Mobilität». Fahrgäste können dann erstmals in der Schweiz selbstfahrende Fahrzeuge buchen und nutzen, wobei weiterhin eine Sicherheitsperson mit an Bord ist.",
+    "observed_at": "2026-10-06T10:12:30Z"
+  },
+  {
+    "data": {
+      "service": [
+        "WeRide"
+      ],
+      "city": [
+        "Madrid"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "region": "europe",
+      "stage": "testing",
+      "since": "2026-09-10",
+      "booking": [
+        "Uber"
+      ],
+      "area": "various high-demand areas within the Greater Madrid region",
+      "vehicles": 20
+    },
+    "source_url": "https://ir.weride.ai/news-releases/news-release-details/weride-uber-and-avomo-receive-spains-first-national-operating",
+    "evidence": "in collaboration with the Regional Government of Madrid, today announced that they have received Spain’s first national permit for Level 4 autonomous passenger vehicles to operate on public roads, from Spain’s Directorate General of Traffic (DGT) within the ES-AV framework.",
+    "observed_at": "2026-10-06T10:08:44Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Verne"
+      ],
+      "city": [
+        "Zagreb"
+      ],
+      "country": [
+        "Croatia"
+      ],
+      "region": "europe",
+      "stage": "driverless",
+      "since": "2026-09-10",
+      "access": "limited",
+      "area": "a 22-kilometre route connecting the Verne headquarters and one of Zagreb’s main business districts with Franjo Tuđman Airport Zagreb"
+    },
+    "source_url": "https://www.letsverne.com/news-grid/verne-and-pony.ai-begin-fully-driverless-test-rides-with-passengers-on-public-roads-in-zagreb",
+    "evidence": "ZAGREB, Croatia, September 10, 2026 – Verne and Pony.ai have started fully driverless test rides in Zagreb, with invited passengers travelling without an AV operator or any other personnel onboard.",
+    "observed_at": "2026-10-06T10:15:20Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Pony.ai"
+      ],
+      "city": [
+        "Luxembourg"
+      ],
+      "country": [
+        "Luxembourg"
+      ],
+      "region": "europe",
+      "stage": "testing",
+      "since": "2026-06-09",
+      "booking": [
+        "Bolt"
+      ]
+    },
+    "source_url": "https://ir.pony.ai/news-releases/news-release-details/pony-ai-inc-announces-autonomous-mobility-testing-program",
+    "evidence": "LUXEMBOURG, June 9, 2026 — Pony AI Inc. (“Pony.ai” or the “Company”) (NASDAQ: PONY; HKEX: 2026), a global leader in achieving large-scale mass production and commercialization of autonomous driving technology, today announced the launch of an autonomous mobility pilot testing program in Luxembourg",
+    "observed_at": "2026-10-06T10:13:13Z"
+  },
+  {
+    "data": {
+      "service": [
+        "MOIA"
+      ],
+      "company": "Volkswagen",
+      "city": [
+        "Hamburg"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "stage": "safety-driver",
+      "since": "2026-07-15",
+      "access": "limited",
+      "booking": [
+        "MOIA app"
+      ],
+      "area": "parts of Winterhude, Barmbek and Wandsbek"
+    },
+    "source_url": "https://www.moia.io/en/news/moia-launches-passenger-test-operation-in-hamburg",
+    "evidence": "Hamburg, 15 july 2026 – MOIA is taking the next step toward large-scale deployment of autonomous mobility in Hamburg: Starting today, selected pre-registered Hamburg residents will be able to book rides in the all-electric, self-driving ID. Buzz via the MOIA app.",
+    "observed_at": "2026-10-06T10:17:35Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Ruter"
+      ],
+      "city": [
+        "Oslo"
+      ],
+      "country": [
+        "Norway"
+      ],
+      "region": "europe",
+      "stage": "announced",
+      "since": "2026-09-01",
+      "booking": [
+        "Selvkjørende app"
+      ],
+      "area": "Groruddalen and Søndre Lørenskog",
+      "vehicles": 6
+    },
+    "source_url": "https://ruter.no/om-oss/prosjekter-og-innovasjon/selvkjoringspiloten",
+    "evidence": "Når blir det mulig for folk å prøve? Etter flere runder med testkjøring vil tjenesten åpne for passasjerer i september 2026.",
+    "observed_at": "2026-10-06T10:18:21Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Momenta"
+      ],
+      "city": [
+        "Munich"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "stage": "testing",
+      "since": "2026-07-29"
+    },
+    "source_url": "https://www.momenta.cn/en/article/596.html",
+    "evidence": "Munich, July 29, 2026 – Momenta has received Germany-wide L4 testing approval from the Kraftfahrt-Bundesamt (KBA), one of the world's most rigorous vehicle safety authorities.",
+    "observed_at": "2026-10-06T10:19:40Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Yandex Robotaxi"
+      ],
+      "city": [
+        "Moscow"
+      ],
+      "country": [
+        "Russia"
+      ],
+      "region": "europe",
+      "stage": "testing",
+      "since": "2026-07-10",
+      "access": "limited",
+      "booking": [
+        "Yandex Go"
+      ]
+    },
+    "source_url": "https://yandex.ru/company/news/10-07-2026-01",
+    "evidence": "Роботакси Яндекса начало курсировать между офисами компании в деловом квартале «Красная Роза» и Москве-Сити. Воспользоваться им могут сотрудники Яндекса — это позволит дополнительно протестировать технологию перед коммерческим запуском роботакси в столице, который состоится до конца 2026 года.",
+    "observed_at": "2026-10-06T10:24:18Z"
+  },
+  {
+    "data": {
+      "service": [
+        "WeRide"
+      ],
+      "city": [
+        "Abu Dhabi"
+      ],
+      "country": [
+        "United Arab Emirates"
+      ],
+      "region": "africa-middle-east",
+      "stage": "driverless",
+      "since": "2025-11-01",
+      "access": "open",
+      "booking": [
+        "Uber"
+      ],
+      "area": "70% of the city’s core area"
+    },
+    "source_url": "https://ir.weride.ai/news-releases/news-release-details/weride-reports-record-full-year-2025-revenue-rmb6846-million-90",
+    "evidence": "In November 2025, WeRide and Uber launched fully driverless robotaxi commercial operations in Abu Dhabi and expanded to cover 70% of the city’s core area over time.",
+    "observed_at": "2026-10-06T10:45:47Z"
+  },
+  {
+    "data": {
+      "service": [
+        "WeRide"
+      ],
+      "city": [
+        "Dubai"
+      ],
+      "country": [
+        "United Arab Emirates"
+      ],
+      "region": "africa-middle-east",
+      "stage": "driverless",
+      "since": "2026-03-31",
+      "access": "open",
+      "booking": [
+        "Uber"
+      ],
+      "area": "Jumeirah and Umm Suqeim"
+    },
+    "source_url": "https://ir.weride.ai/news-releases/news-release-details/weride-and-uber-launch-fully-driverless-robotaxi-fare-charging",
+    "evidence": "DUBAI, United Arab Emirates, March 31, 2026 (GLOBE NEWSWIRE) -- WeRide (NASDAQ: WRD, HKEX: 0800), a global leader in autonomous driving technology, and Uber Technologies (NYSE: UBER), today launched fully driverless Robotaxi fare-charging operations in Dubai",
+    "observed_at": "2026-10-06T10:45:47Z"
+  },
+  {
+    "data": {
+      "service": [
+        "WeRide"
+      ],
+      "city": [
+        "Riyadh"
+      ],
+      "country": [
+        "Saudi Arabia"
+      ],
+      "region": "africa-middle-east",
+      "stage": "safety-driver",
+      "since": "2025-10-01",
+      "access": "open",
+      "booking": [
+        "Uber"
+      ]
+    },
+    "source_url": "https://ir.weride.ai/news-releases/news-release-details/global-expansion-accelerates-landmark-uae-driverless-robotaxi",
+    "evidence": "In October 2025, WeRide and Uber began offering autonomous robotaxi passenger rides in Riyadh, marking the first time robotaxis are publicly available on the Uber platform in Saudi Arabia.",
+    "observed_at": "2026-10-06T10:45:47Z"
+  },
+  {
+    "data": {
+      "service": [
+        "WeRide"
+      ],
+      "city": [
+        "Ras Al Khaimah"
+      ],
+      "country": [
+        "United Arab Emirates"
+      ],
+      "region": "africa-middle-east",
+      "stage": "testing",
+      "since": "2025-10-02",
+      "area": "the city center"
+    },
+    "source_url": "https://ir.weride.ai/news-releases/news-release-details/weride-launches-robotaxi-and-robobus-pilots-ras-al-khaimah",
+    "evidence": "RAS AL KHAIMAH, United Arab Emirates, Oct. 02, 2025 (GLOBE NEWSWIRE) -- WeRide (Nasdaq: WRD), a global leader in autonomous driving technology, today announced the launch of Robotaxi GXR and Robobus pilot operations in partnership with the Ras Al Khaimah Transport Authority (RAKTA).",
+    "observed_at": "2026-10-06T10:45:47Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Apollo Go"
+      ],
+      "company": "Baidu",
+      "city": [
+        "Abu Dhabi"
+      ],
+      "country": [
+        "United Arab Emirates"
+      ],
+      "region": "africa-middle-east",
+      "stage": "driverless",
+      "since": "2026-01-17",
+      "access": "open",
+      "booking": [
+        "AutoGo app"
+      ],
+      "area": "Yas Island"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/baidus-apollo-go-and-k2s-autogo-commence-fully-autonomous-ride-hailing-service-on-yas-island-announce-phased-expansion-across-abu-dhabi-302663468.html",
+    "evidence": "ABU DHABI, UAE, Jan. 17, 2026 /PRNewswire/ -- Baidu, Inc. (NASDAQ: BIDU and HKEX: 9888) today announced that its autonomous ride-hailing service, Apollo Go, and AutoGo, a leading UAE-based autonomous mobility company, have officially launched the fully autonomous commercial ride-hailing service",
+    "observed_at": "2026-10-06T10:45:47Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Apollo Go"
+      ],
+      "company": "Baidu",
+      "city": [
+        "Dubai"
+      ],
+      "country": [
+        "United Arab Emirates"
+      ],
+      "region": "africa-middle-east",
+      "stage": "driverless",
+      "since": "2026-03-01",
+      "access": "open",
+      "booking": [
+        "Apollo Go app",
+        "Uber"
+      ],
+      "area": "select locations in Umm Suqeim and Jumeirah"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/baidus-apollo-go-goes-live-on-uber-in-dubai-offering-a-new-way-for-users-to-hail-fully-driverless-rides-302856106.html",
+    "evidence": "Dubai is Apollo Go's first market to operate through both self-operated app and third-party platform partnership. In March 2026, Apollo Go began offering commercial fully driverless rides through its own app, marking its first international app deployment.",
+    "observed_at": "2026-10-06T10:45:47Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Pony.ai"
+      ],
+      "city": [
+        "Dubai"
+      ],
+      "country": [
+        "United Arab Emirates"
+      ],
+      "region": "africa-middle-east",
+      "stage": "testing",
+      "since": "2025-09-26"
+    },
+    "source_url": "https://www.mediaoffice.ae/en/news/2025/september/26-09/rta-grants-first-autonomous-driving-test-permits",
+    "evidence": "RTA Grants First Autonomous Driving Test Permits to Baidu’s Apollo Go, WeRide and Pony.ai to Begin On-Road Trials Friday, September 26, 2025",
+    "observed_at": "2026-10-06T10:45:47Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Pony.ai"
+      ],
+      "city": [
+        "Doha"
+      ],
+      "country": [
+        "Qatar"
+      ],
+      "region": "africa-middle-east",
+      "stage": "safety-driver",
+      "since": "2025-12-01",
+      "booking": [
+        "Karwa app"
+      ],
+      "area": "Old Doha and West Bay, plus an airport connection to Hamad International Airport"
+    },
+    "source_url": "https://ir.pony.ai/news-releases/news-release-details/pony-ai-inc-highlights-progress-doha-robotaxi-commercial",
+    "evidence": "making Doha one of Pony.ai’s key commercial operations outside China. The program began in August 2025 with initial public-road testing and launched a commercial pilot service through the Karwa app in December 2025, with trained safety operators onboard.",
+    "observed_at": "2026-10-06T10:45:47Z"
+  },
+  {
+    "data": {
+      "service": [
+        "SWM"
+      ],
+      "city": [
+        "Seoul"
+      ],
+      "country": [
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "stage": "safety-driver",
+      "since": "2024-09-26",
+      "access": "open",
+      "booking": [
+        "Kakao T"
+      ],
+      "area": "Entire Gangnam Autonomous Driving Pilot Zone (approx. 20.4 km²)"
+    },
+    "source_url": "https://english.seoul.go.kr/gangnam-late-night-autonomous-taxi-to-begin-paid-service-in-april-alongside-fleet-expansion/",
+    "evidence": "The Seoul Metropolitan Government (SMG) announced that the late-night autonomous taxi service in Gangnam, which first began operations in September 2024, will conclude its approximately 17-month free pilot period and transition to a paid service starting on April 6.",
+    "observed_at": "2026-10-06T10:45:47Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Kakao Mobility"
+      ],
+      "city": [
+        "Seoul"
+      ],
+      "country": [
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "stage": "safety-driver",
+      "since": "2026-03-16",
+      "access": "open",
+      "booking": [
+        "Kakao T"
+      ],
+      "area": "Entire Gangnam Autonomous Driving Pilot Zone (approx. 20.4 km²)"
+    },
+    "source_url": "https://english.seoul.go.kr/gangnam-late-night-autonomous-taxi-to-begin-paid-service-in-april-alongside-fleet-expansion/",
+    "evidence": "The city will also expand the fleet from three to seven vehicles (excluding two reserve vehicles) starting Monday, March 16, enhancing user convenience. SWM—the current operator—will add two vehicles, and Kakao Mobility will be added as an additional operator, deploying two more vehicles.",
+    "observed_at": "2026-10-06T10:45:47Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Nissan"
+      ],
+      "city": [
+        "Yokohama"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "stage": "safety-driver",
+      "since": "2026-10-01",
+      "access": "limited",
+      "area": "Minato Mirai, Sakuragi-cho and Kannai",
+      "vehicles": 10
+    },
+    "source_url": "https://global.nissannews.com/ja-JP/releases/260914-01-j",
+    "evidence": "横浜市で2026年度に実施する自動運転モビリティサービスの実証実験の詳細を発表しました。あわせて、実証実験の開始にあたり、一般モニターの第1期募集を本日より開始します。 本実証実験は、横浜市のみなとみらい・桜木町・関内を含む市街地エリアにて、10月1日から12月18日まで、2期に分けて実施します。",
+    "observed_at": "2026-10-06T10:45:47Z"
+  },
+  {
+    "data": {
+      "service": [
+        "newmo"
+      ],
+      "city": [
+        "Osaka"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "stage": "announced",
+      "since": "2028-01-01"
+    },
+    "source_url": "https://prtimes.jp/main/html/rd/p/000000052.000137033.html",
+    "evidence": "大阪市とnewmo・夢洲交通、自動運転タクシーサービスの実現に向けた連携協定を締結 2026年5月より舞洲で実証実験を開始、2028年の商用化を目指す",
+    "observed_at": "2026-10-06T10:45:47Z"
+  },
+  {
+    "data": {
+      "service": [
+        "newmo"
+      ],
+      "city": [
+        "Sakai"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "stage": "announced",
+      "since": "2028-01-01"
+    },
+    "source_url": "https://prtimes.jp/main/html/rd/p/000000068.000137033.html",
+    "evidence": "2025 年には堺市・大阪市と自動運転タクシーの実現に向けた連携協定を締結し、2028 年のレベル 4 商用化を目指して実証を進めています。",
+    "observed_at": "2026-10-06T10:45:47Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Apollo Go"
+      ],
+      "company": "Baidu",
+      "city": [
+        "Beijing"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "stage": "driverless",
+      "since": "2021-05-02",
+      "access": "open",
+      "booking": [
+        "Apollo Go app"
+      ]
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/baidu-apollo-to-launch-fully-driverless-ride-hailing-services-in-beijing-demonstrating-a-new-commercialization-model-for-autonomous-driving-301279856.html",
+    "evidence": "Baidu, Inc. (NASDAQ: BIDU and HKEX: 9888) will open fully driverless robotaxi services to the public in Beijing starting from May 2, 2021, which will be China's first paid autonomous vehicle service where users can hail a robotaxi without a safety driver behind the steering wheel",
+    "observed_at": "2026-10-06T10:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Apollo Go"
+      ],
+      "company": "Baidu",
+      "city": [
+        "Wuhan"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "stage": "driverless",
+      "since": "2022-08-08"
+    },
+    "source_url": "https://www.wuhan.gov.cn/sy/whyw/202208/t20220809_2020331.shtml",
+    "evidence": "“萝卜快跑”无人自动驾驶车辆行驶中。 8月8日，在武汉经开区，打开手机小程序下单，几分钟后，一辆没有驾驶员的汽车飞奔而来，科幻电影里的情节在这里已成为现实。",
+    "observed_at": "2026-10-06T10:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Apollo Go"
+      ],
+      "company": "Baidu",
+      "city": [
+        "Chongqing"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "stage": "driverless",
+      "since": "2022-08-08"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/baidu-granted-chinas-first-ever-permits-for-commercial-fully-driverless-ride-hailing-services-301601296.html",
+    "evidence": "Apollo Go, Baidu's autonomous ride-hailing service, is now authorized to collect fares for robotaxi rides - completely without human drivers in the car - in Chongqing and Wuhan, two of China's largest megacities.",
+    "observed_at": "2026-10-06T10:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Apollo Go"
+      ],
+      "company": "Baidu",
+      "city": [
+        "Shenzhen"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "stage": "driverless",
+      "since": "2023-06-16",
+      "booking": [
+        "Apollo Go app",
+        "Baidu Maps",
+        "Baidu App"
+      ]
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/baidu-launches-commercial-fully-driverless-ride-hailing-service-in-shenzhen-expanding-nationwide-operations-301853087.html",
+    "evidence": "BEIJING, June 16, 2023 /PRNewswire/ -- Baidu, Inc. (NASDAQ: BIDU and HKEX: 9888) (\"Baidu\" or the \"Company\"), a leading AI company with a strong internet foundation, has obtained licensing for commercial operation of its fully driverless ride-hailing service in Shenzhen.",
+    "observed_at": "2026-10-06T10:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Apollo Go"
+      ],
+      "company": "Baidu",
+      "city": [
+        "Shanghai"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "stage": "driverless",
+      "since": "2024-07-04"
+    },
+    "source_url": "https://www.thepaper.cn/newsDetail_forward_27993899",
+    "evidence": "7月4日，2024世界人工智能大会，赛可智能科技（上海）有限公司、百度智行科技（上海）有限公司、上海裹动科技有限公司（AutoX）、小马易行科技（上海）有限公司成为获得上海市无驾驶人智能网联汽车示范应用许可的首批企业。根据许可证显示，有效期为2024年7月4日至2025年1月4日。 这也意味着四家获证企业 可在浦东部分路段 实现全无人载人的车辆应用！ 市民可以通过相应软件 预约乘坐这些无人车 目前，所有示范应用阶段 无人载人车辆都是免费体验",
+    "observed_at": "2026-10-06T10:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Apollo Go"
+      ],
+      "company": "Baidu",
+      "city": [
+        "Chengdu"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "stage": "driverless",
+      "since": "2025-10-01"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/baidu-announces-third-quarter-2025-results-302618226.html",
+    "evidence": "As of October 2025, Apollo Go's global footprint covered 22 cities. In Chinese mainland, Apollo Go has achieved 100% fully driverless operations in all cities where it operates, including Beijing, Shanghai, Shenzhen, Wuhan, Chengdu, Chongqing, Haikou, Sanya, etc.",
+    "observed_at": "2026-10-06T10:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Apollo Go"
+      ],
+      "company": "Baidu",
+      "city": [
+        "Haikou"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "stage": "driverless",
+      "since": "2025-08-02",
+      "access": "open"
+    },
+    "source_url": "https://difang.gmw.cn/hi/2025-08/04/content_38196903.htm",
+    "evidence": "8月2日晚上，2025海南国际旅游岛欢乐节在海口启幕。活动现场，自动驾驶出行服务平台“萝卜快跑”被正式授予\"智慧文旅新向导\"称号，成为本次欢乐节官方合作伙伴。与此同时，海南首个全场景自动驾驶服务在海口正式上线，标志着海南在智能交通与文旅融合领域迈出关键一步。 作为百度旗下自动驾驶出行服务平台，“萝卜快跑”此次在海口首批开放的运营路线，覆盖了假日海滩、骑楼老街等核心文旅地标，并逐步拓展至cdf海口国际免税城、海口东站、海南省博物馆等城市核心功能区，形成了覆盖更广的智慧出行网络，市民与游客可通过手机APP或小程序便捷呼叫车辆，体验无人驾驶带来的安全、舒适与新奇。",
+    "observed_at": "2026-10-06T10:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Apollo Go"
+      ],
+      "company": "Baidu",
+      "city": [
+        "Sanya"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "stage": "driverless",
+      "since": "2025-10-01"
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/baidu-announces-third-quarter-2025-results-302618226.html",
+    "evidence": "As of October 2025, Apollo Go's global footprint covered 22 cities. In Chinese mainland, Apollo Go has achieved 100% fully driverless operations in all cities where it operates, including Beijing, Shanghai, Shenzhen, Wuhan, Chengdu, Chongqing, Haikou, Sanya, etc.",
+    "observed_at": "2026-10-06T10:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Apollo Go"
+      ],
+      "company": "Baidu",
+      "city": [
+        "Qingdao"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "stage": "driverless",
+      "since": "2026-02-01",
+      "booking": [
+        "Apollo Go app"
+      ],
+      "area": "Chengyang District"
+    },
+    "source_url": "https://www.qingdaonews.com/app/content/2026-02/02/content_23715697.htm",
+    "evidence": "无人驾驶网约车“登陆”青岛“ 萝卜快跑”在城阳上路载客测试 青岛日报社/观海新闻讯 记者1日探访获悉，百度公司旗下自动驾驶出行服务平台“萝卜快跑”目前已在城阳区上路载客测试。",
+    "observed_at": "2026-10-06T10:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Apollo Go"
+      ],
+      "company": "Baidu",
+      "city": [
+        "Nanjing"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "stage": "driverless",
+      "since": "2026-03-17",
+      "booking": [
+        "Apollo Go app"
+      ],
+      "area": "Jiangbei New Area and Qixia District (Jiangsu Software Park to Xianlin University Town)"
+    },
+    "source_url": "https://finance.sina.com.cn/wm/2026-03-18/doc-inhrkwsr7517052.shtml",
+    "evidence": "3月17日，新华日报·交汇点记者前往 位于 南京江北新区 的 “萝卜快跑”运营区，实地体验了这一科技感满满的出行方式。 记者打开 “萝卜快跑”APP ， 路线是 从砂之船 (南京江北新区)奥莱到青奥体育公园地铁站 。 与其他打车软件不同，乘坐 ”萝卜快跑”需要前往APP地图上标注的专门上车点， 到达 指定上车点后，等待约 5分钟，一辆白色无人驾驶车辆便打着双闪缓缓驶来——这辆车目前仍使用临时牌照，且全程没有驾驶员，方向盘自动转动，车辆完全自主行驶。",
+    "observed_at": "2026-10-06T10:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Apollo Go"
+      ],
+      "company": "Baidu",
+      "city": [
+        "Hong Kong"
+      ],
+      "country": [
+        "Hong Kong"
+      ],
+      "region": "asia-pacific",
+      "stage": "testing",
+      "since": "2024-12-01"
+    },
+    "source_url": "https://www.apollo.auto/news/17611",
+    "evidence": "去年12月，百度旗下自动驾驶出行服务平台萝卜快跑获准在香港开展公开道路测试。",
+    "observed_at": "2026-10-06T10:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Pony.ai"
+      ],
+      "city": [
+        "Beijing"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "stage": "driverless",
+      "since": "2022-04-28",
+      "access": "open",
+      "booking": [
+        "PonyPilot+"
+      ]
+    },
+    "source_url": "https://mp.weixin.qq.com/s/4_3djORMAQj7j5bifgPfbQ",
+    "evidence": "4月28日，小马智行率先取得北京市智能网联汽车政策先行区首批“无人化示范应用道路测试”通知书，获准向公众提供“主驾位无安全员、副驾有安全员”的自动驾驶出行服务（Robotaxi）。",
+    "observed_at": "2026-10-06T10:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Pony.ai"
+      ],
+      "city": [
+        "Guangzhou"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "stage": "driverless",
+      "since": "2021-06-01",
+      "access": "open",
+      "booking": [
+        "PonyPilot+"
+      ]
+    },
+    "source_url": "https://mp.weixin.qq.com/s/1v2XMOjnToYywKgwsIvT2Q",
+    "evidence": "小马智行2021年6月起在广州开启常态化的远程测试，并向特邀用户开放体验车内无安全员的Robotaxi服务。",
+    "observed_at": "2026-10-06T10:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Pony.ai"
+      ],
+      "city": [
+        "Shenzhen"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "stage": "driverless",
+      "since": "2023-08-01"
+    },
+    "source_url": "https://ir.pony.ai/news-releases/news-release-details/pony-ai-inc-expands-fully-driverless-commercial-robotaxi",
+    "evidence": "Since receiving Shenzhen’s first city-level driverless pilot license to operate intelligent connected vehicles in August 2023, Pony.ai has rapidly expanded its robotaxi services network to connect the city’s core districts.",
+    "observed_at": "2026-10-06T10:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Pony.ai"
+      ],
+      "city": [
+        "Shanghai"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "stage": "driverless",
+      "since": "2024-07-04"
+    },
+    "source_url": "https://mp.weixin.qq.com/s/BbifBBT-pzcVi10foRRZMA",
+    "evidence": "7月4日，在2024世界人工智能大会上，小马智行首批获得上海市无驾驶人智能网联汽车示范应用许可，这意味着在上海中心城区浦东205公里路线上，乘客不久后将可以通过“小马智行”同名手机软件预约乘坐一辆没有驾驶员的Robotaxi。",
+    "observed_at": "2026-10-06T10:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "WeRide"
+      ],
+      "city": [
+        "Beijing"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "stage": "driverless",
+      "since": "2023-11-17",
+      "access": "open",
+      "booking": [
+        "WeRide Go"
+      ]
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/weride-approved-to-launch-a-paid-service-of-fully-driverless-robotaxis-in-beijing-301996522.html",
+    "evidence": "BEIJING, Nov. 23, 2023 /PRNewswire/ -- November 17, 2023 -- WeRide received the notice to launch a commercial operation of fully driverless Robotaxi from Beijing Intelligent Connected Vehicle Policy Piolt Zone",
+    "observed_at": "2026-10-06T10:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "WeRide"
+      ],
+      "city": [
+        "Guangzhou"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "stage": "driverless",
+      "since": "2025-09-04",
+      "booking": [
+        "WeRide Go"
+      ]
+    },
+    "source_url": "https://ir.weride.ai/news-releases/news-release-details/weride-launches-247-fully-driverless-robotaxi-service-guangzhous",
+    "evidence": "GUANGZHOU, China, Sept. 04, 2025 (GLOBE NEWSWIRE) -- WeRide (Nasdaq: WRD), a global leader in autonomous driving technology, announced that its mass-produced Robotaxi GXR has launched 24-hour fully driverless commercial operations in Huangpu District, Guangzhou.",
+    "observed_at": "2026-10-06T10:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "WeRide"
+      ],
+      "city": [
+        "Shanghai"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "stage": "driverless",
+      "since": "2025-07-26"
+    },
+    "source_url": "https://hzjl.sh.gov.cn/n1315/20250806/23eff44491e14dc3bc4c58fb5b78202e.html",
+    "evidence": "这一次，除了一批拿到示范运营牌照的企业外，自动驾驶科技公司文远知行和奇瑞汽车、锦江出租合作，获批在上海市浦东新区开展基于法规的主驾无人公开道路载人自动驾驶出行示范应用服务",
+    "observed_at": "2026-10-06T10:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "DiDi Autonomous Driving"
+      ],
+      "city": [
+        "Beijing"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "stage": "driverless",
+      "since": "2026-08-31",
+      "booking": [
+        "DiDi"
+      ]
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/didi-autonomous-driving-begins-fully-driverless-service-trials-with-next-generation-robotaxi-r2-302864755.html",
+    "evidence": "DiDi Autonomous Driving began fully driverless service trials with its next-generation Robotaxi R2 With new upgrades in driving performance and cabin experience, the new vehicle is available for bookings in selected demonstration areas in Beijing and Guangzhou via the DiDi App",
+    "observed_at": "2026-10-06T10:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "DiDi Autonomous Driving"
+      ],
+      "city": [
+        "Guangzhou"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "stage": "driverless",
+      "since": "2026-08-31",
+      "booking": [
+        "DiDi"
+      ]
+    },
+    "source_url": "https://www.prnewswire.com/news-releases/didi-autonomous-driving-begins-fully-driverless-service-trials-with-next-generation-robotaxi-r2-302864755.html",
+    "evidence": "DiDi Autonomous Driving began fully driverless service trials with its next-generation Robotaxi R2 With new upgrades in driving performance and cabin experience, the new vehicle is available for bookings in selected demonstration areas in Beijing and Guangzhou via the DiDi App",
+    "observed_at": "2026-10-06T10:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "XPENG Robotaxi"
+      ],
+      "city": [
+        "Guangzhou"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "stage": "testing",
+      "since": "2026-01-01"
+    },
+    "source_url": "https://www.xpeng.com/news/019e3ad2f9789dd703de8a0282290180",
+    "evidence": "In January of this year, XPENG Robotaxi secured a road testing permit for intelligent connected vehicles in Guangzhou, formally entering the phase of routine L4 public road testing.",
+    "observed_at": "2026-10-06T10:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "CaoCao Robotaxi"
+      ],
+      "company": "CaoCao Mobility",
+      "city": [
+        "Hangzhou"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "stage": "safety-driver",
+      "since": "2025-02-28"
+    },
+    "source_url": "https://www.caocaoglobal.com/robox/milestones",
+    "evidence": "2025 2/28 The CaoCao Zhixing autonomous driving platform went live, launching Robotaxi demonstration operations in Suzhou and Hangzhou",
+    "observed_at": "2026-10-06T10:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "CaoCao Robotaxi"
+      ],
+      "company": "CaoCao Mobility",
+      "city": [
+        "Suzhou"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "stage": "safety-driver",
+      "since": "2025-02-28"
+    },
+    "source_url": "https://www.caocaoglobal.com/robox/milestones",
+    "evidence": "2025 2/28 The CaoCao Zhixing autonomous driving platform went live, launching Robotaxi demonstration operations in Suzhou and Hangzhou",
+    "observed_at": "2026-10-06T10:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "T3 Robotaxi"
+      ],
+      "city": [
+        "Nanjing"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "stage": "driverless",
+      "since": "2026-05-12",
+      "access": "open",
+      "area": "Jiangning Economic and Technological Development Zone"
+    },
+    "source_url": "https://news.qq.com/rain/a/20260513A02VBA00",
+    "evidence": "而在南京，Robotaxi进入示范应用阶段后开始被更多市民所接触。5月12日，笔者走进江宁经济技术开发区，0元体验了一把自动驾驶出租车出行。 Robotaxi试乘体验：没有安全员，驾驶水平媲美“老司机” 江宁的Robotaxi由T3出行平台运营。",
+    "observed_at": "2026-10-06T10:58:00Z"
+  },
+  {
+    "data": {
+      "service": [
+        "Foxconn"
+      ],
+      "city": [
+        "Kaohsiung"
+      ],
+      "country": [
+        "Taiwan"
+      ],
+      "region": "asia-pacific",
+      "stage": "announced",
+      "since": "2028-01-01"
+    },
+    "source_url": "https://blogs.nvidia.com.tw/blog/nvidia-drive-hyperion-becomes-the-global-platform-for-a-robotaxi-ready-world/",
+    "evidence": "該計畫將從台灣開始，預計高雄將成為早期部署城市，並進一步拓展至亞洲各地。 這項合作強化了台灣在全球自動駕駛生態系中的角色，透過打造可擴展且聚焦安全的自駕計程車平台，推動更高效的城市交通。鴻海科技集團計畫於 2028 年推出自駕計程車服務，初期將從機場往返市區的路線開始",
+    "observed_at": "2026-10-06T10:58:00Z"
+  }
+]

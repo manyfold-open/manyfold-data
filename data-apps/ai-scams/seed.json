@@ -1,0 +1,2029 @@
+[
+  {
+    "data": {
+      "title": "Finnish police warn criminals use generative AI, deepfakes and voice cloning to make scam messages and phishing more convincing",
+      "url": "https://poliisi.fi/-/tekoaly-auttaa-myos-rikollista",
+      "scam_type": "ai-phishing",
+      "kind": "warning",
+      "issuer": "Finnish Police",
+      "country": [
+        "Finland"
+      ],
+      "region": "europe",
+      "published_on": "2026-10-05"
+    },
+    "source_url": "https://poliisi.fi/-/tekoaly-auttaa-myos-rikollista",
+    "evidence": "virheettöminä ja personoituina huijausviesteinä, jotka generatiivinen tekoäly on mahdollistanut. Syväväärennetyt kuvat ja videot sekä äänen kloonaus tarjoavat rikollisille tapoja tehdä tietojenkalastelusta aiempaa uskottavampaa.",
+    "observed_at": "2026-10-06T10:57:26Z"
+  },
+  {
+    "data": {
+      "title": "Fake doctor phone scam uses AI voice cloning to trick Mandarin speakers into buying gift cards",
+      "url": "https://www.police.vic.gov.au/fake-doctor-scam-targeting-chinese-community",
+      "scam_type": "voice-clone",
+      "kind": "warning",
+      "channel": [
+        "phone",
+        "messaging"
+      ],
+      "targets": "Mandarin-speaking community, especially people of Chinese background",
+      "issuer": "Victoria Police",
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "loss_stated": "A$50,000 and A$40,000 (two victims)",
+      "published_on": "2026-10-01"
+    },
+    "source_url": "https://www.police.vic.gov.au/fake-doctor-scam-targeting-chinese-community",
+    "evidence": "The use of artificial intelligence voice cloning by the caller has been featured in several reports to police. Victoria Police first received reports of the scam in early September, with the scammers predominantly targeting persons of Chinese background that speak Mandarin.",
+    "observed_at": "2026-10-06T11:01:33Z"
+  },
+  {
+    "data": {
+      "title": "Fake investment ads on social media use celebrity images and AI-generated videos, CERT Polska warns",
+      "url": "https://moje.cert.pl/komunikaty/2026/182/prawdziwy-wizerunek-falszywa-inwestycja/",
+      "scam_type": "deepfake-ad",
+      "kind": "warning",
+      "channel": [
+        "ads",
+        "social-media",
+        "website"
+      ],
+      "issuer": "CERT Polska (NASK)",
+      "country": [
+        "Poland"
+      ],
+      "region": "europe",
+      "published_on": "2026-09-29"
+    },
+    "source_url": "https://moje.cert.pl/komunikaty/2026/182/prawdziwy-wizerunek-falszywa-inwestycja/",
+    "evidence": "Przestępcy wykorzystują reklamy w mediach społecznościowych, wizerunki znanych osób, logotypy firm oraz materiały wideo wygenerowane za pomocą AI, aby uwiarygodnić próbę oszustwa.",
+    "observed_at": "2026-10-06T10:57:26Z"
+  },
+  {
+    "data": {
+      "title": "SEC charges WhatsApp investment schemes that sold fake AI trading bots and AI-generated trading signals",
+      "url": "https://www.sec.gov/newsroom/press-releases/2026-95-sec-charges-multiple-entities-fraud-schemes-totaling-least-15-million-used-whatsapp-other-platforms",
+      "scam_type": "fake-ai-investment",
+      "kind": "case",
+      "channel": [
+        "messaging",
+        "social-media",
+        "website"
+      ],
+      "targets": "retail investors",
+      "issuer": "U.S. Securities and Exchange Commission",
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "loss_usd": 15000000,
+      "loss_stated": "at least $15 million",
+      "published_on": "2026-09-29"
+    },
+    "source_url": "https://www.sec.gov/newsroom/press-releases/2026-95-sec-charges-multiple-entities-fraud-schemes-totaling-least-15-million-used-whatsapp-other-platforms",
+    "evidence": "As alleged, the entire AI-trading bot program was a fraud: there were no AI trading bots and deposited funds never were used to earn returns for investors.",
+    "observed_at": "2026-10-06T10:45:00Z"
+  },
+  {
+    "data": {
+      "title": "AI makes fraud harder to spot with natural-sounding messages, fake images and videos, and imitated voices",
+      "url": "https://antifraudcentre-centreantifraude.ca/features-vedette/2026/10/spotting-fraud-reperer-fraude-eng.htm",
+      "scam_type": "ai-phishing",
+      "kind": "warning",
+      "channel": [
+        "phone",
+        "messaging",
+        "email",
+        "social-media"
+      ],
+      "issuer": "Canadian Anti-Fraud Centre",
+      "country": [
+        "Canada"
+      ],
+      "region": "americas",
+      "published_on": "2026-09-28"
+    },
+    "source_url": "https://antifraudcentre-centreantifraude.ca/features-vedette/2026/10/spotting-fraud-reperer-fraude-eng.htm",
+    "evidence": "Fraudsters can use AI to create realistic messages, images, videos and voices. They can also combine these tools with information available online to make their approach more personal and believable.",
+    "observed_at": "2026-10-06T11:12:01Z"
+  },
+  {
+    "data": {
+      "title": "Italian police warn criminals use AI to build cloned websites of banks, firms and online services to steal credentials",
+      "url": "https://www.commissariatodips.it/notizie/articolo/siti-clone-e-intelligenza-artificiale-attenzione-alle-truffe/index.html",
+      "scam_type": "ai-phishing",
+      "kind": "warning",
+      "channel": [
+        "email",
+        "messaging",
+        "social-media",
+        "website"
+      ],
+      "issuer": "Polizia Postale (Italian State Police)",
+      "country": [
+        "Italy"
+      ],
+      "region": "europe",
+      "published_on": "2026-09-25"
+    },
+    "source_url": "https://www.commissariatodips.it/notizie/articolo/siti-clone-e-intelligenza-artificiale-attenzione-alle-truffe/index.html",
+    "evidence": "I sistemi di IA consentono di creare falsi siti, graficamente identici o molto simili a quelli originali, che riproducono loghi, immagini, testi di aziende, istituti di credito, enti e servizi online.",
+    "observed_at": "2026-10-06T10:57:26Z"
+  },
+  {
+    "data": {
+      "title": "Cyber Threat Report 2026: AI is enabling more convincing phishing campaigns, scams and social engineering",
+      "url": "https://www.ncsc.govt.nz/news/cyber-threat-report-2026-leaders-need-to-prepare-now-for-the-impact-of-ai/",
+      "scam_type": "ai-phishing",
+      "kind": "warning",
+      "targets": "New Zealand businesses and organisations",
+      "issuer": "National Cyber Security Centre (NCSC) New Zealand",
+      "country": [
+        "New Zealand"
+      ],
+      "region": "asia-pacific",
+      "published_on": "2026-09-24"
+    },
+    "source_url": "https://www.ncsc.govt.nz/news/cyber-threat-report-2026-leaders-need-to-prepare-now-for-the-impact-of-ai/",
+    "evidence": "The report notes AI is becoming part of the cybercrime toolkit, enabling more convincing phishing campaigns, scams, and social engineering attacks.",
+    "observed_at": "2026-10-06T11:01:33Z"
+  },
+  {
+    "data": {
+      "title": "Deepfake video calls fake the faces and voices of relatives, friends or colleagues to demand urgent money transfers",
+      "url": "https://congan.tuyenquang.gov.vn/vi/tin-bai/canh-bao-thu-doan-gia-danh-nguoi-than-goi-video-bang-cong-nghe-deepfake-de-vay-tien-nho-chuyen-tien-gap?type=NEWS&id=258371",
+      "scam_type": "deepfake-video",
+      "kind": "warning",
+      "channel": [
+        "video-call"
+      ],
+      "issuer": "Tuyen Quang Provincial Police",
+      "country": [
+        "Vietnam"
+      ],
+      "region": "asia-pacific",
+      "published_on": "2026-09-17"
+    },
+    "source_url": "https://congan.tuyenquang.gov.vn/vi/tin-bai/canh-bao-thu-doan-gia-danh-nguoi-than-goi-video-bang-cong-nghe-deepfake-de-vay-tien-nho-chuyen-tien-gap?type=NEWS&id=258371",
+    "evidence": "Trong thời gian gần đây, cùng với sự phát triển của trí tuệ nhân tạo (AI), các đối tượng lừa đảo đã sử dụng công nghệ Deepfake để tạo ra các cuộc gọi video giả mạo khuôn mặt, giọng nói của người thân, bạn bè hoặc đồng nghiệp nhằm lừa người dân chuyển tiền.",
+    "observed_at": "2026-10-06T11:11:37Z"
+  },
+  {
+    "data": {
+      "title": "Scammers use AI to reproduce relatives' images and voices in fake emergency requests for money",
+      "url": "https://www.agenciasp.sp.gov.br/golpistas-exploram-emocoes-veja-proteger/",
+      "scam_type": "voice-clone",
+      "kind": "warning",
+      "channel": [
+        "messaging",
+        "social-media"
+      ],
+      "issuer": "São Paulo State Government (Civil Police Cybercrime Division, DCCiber)",
+      "country": [
+        "Brazil"
+      ],
+      "region": "americas",
+      "published_on": "2026-09-17"
+    },
+    "source_url": "https://www.agenciasp.sp.gov.br/golpistas-exploram-emocoes-veja-proteger/",
+    "evidence": "As fraudes vão desde o envio de links usados para obter dados bancários e informações pessoais até o uso de Inteligência Artificial (IA) para reproduzir imagens e vozes de familiares em supostas situações de emergência.",
+    "observed_at": "2026-10-06T11:12:01Z"
+  },
+  {
+    "data": {
+      "title": "Scammers impersonating law enforcement use AI to pose as officials on video calls",
+      "url": "https://www.ic3.gov/PSA/2026/PSA260917",
+      "scam_type": "deepfake-video",
+      "kind": "warning",
+      "channel": [
+        "phone",
+        "video-call",
+        "messaging",
+        "email"
+      ],
+      "issuer": "Federal Bureau of Investigation",
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "published_on": "2026-09-17"
+    },
+    "source_url": "https://www.ic3.gov/PSA/2026/PSA260917",
+    "evidence": "Scammers use new technologies, such as artificial intelligence, to support their impersonation schemes. These technologies allow scammers to appear as law enforcement and government officials on video calls with victims, adding the appearance of legitimacy to the scam.",
+    "observed_at": "2026-10-06T10:45:00Z"
+  },
+  {
+    "data": {
+      "title": "WhatsApp investment groups promote a supposed AI project and AI trading apps to investors in Germany, BaFin warns",
+      "url": "https://www.bafin.de/SharedDocs/Veroeffentlichungen/DE/Verbrauchermitteilung/unerlaubte/2026/meldung_2026_09_09_pinney_investment_lab_pisi-group.html",
+      "scam_type": "fake-ai-investment",
+      "kind": "warning",
+      "channel": [
+        "messaging",
+        "app-store"
+      ],
+      "targets": "investors in Germany",
+      "issuer": "Federal Financial Supervisory Authority (BaFin)",
+      "country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "published_on": "2026-09-09"
+    },
+    "source_url": "https://www.bafin.de/SharedDocs/Veroeffentlichungen/DE/Verbrauchermitteilung/unerlaubte/2026/meldung_2026_09_09_pinney_investment_lab_pisi-group.html",
+    "evidence": "Einige Initiatoren solcher WhatsApp -Gruppen geben sich als US -amerikanisches Unternehmen „Pinney Investment Lab“ oder auch als „PISI Investment Forum“ aus und bewerben ein neuartiges KI -Projekt mit dem Namen „Dual-Track-Transformationsplan“.",
+    "observed_at": "2026-10-06T10:57:26Z"
+  },
+  {
+    "data": {
+      "title": "Scammers use AI to clone real car dealership websites and take upfront payments for cars that never arrive",
+      "url": "https://consumer.ftc.gov/consumer-alerts/2026/09/scammers-are-spoofing-car-dealership-websites-what-you-need-know",
+      "scam_type": "other",
+      "kind": "warning",
+      "channel": [
+        "website"
+      ],
+      "targets": "car buyers",
+      "issuer": "Federal Trade Commission",
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "published_on": "2026-09-01"
+    },
+    "source_url": "https://consumer.ftc.gov/consumer-alerts/2026/09/scammers-are-spoofing-car-dealership-websites-what-you-need-know",
+    "evidence": "They clone a real auto dealer’s website — often using AI to do so — copying the brand logos, vehicle listings, and photos down to the last detail.",
+    "observed_at": "2026-10-06T10:45:00Z"
+  },
+  {
+    "data": {
+      "title": "New York consumer protection agency warns of a surge in AI-driven investment scams using deepfakes and cloned voices",
+      "url": "https://www.dfs.ny.gov/reports_and_publications/press_releases/pr20260826",
+      "scam_type": "deepfake-ad",
+      "kind": "warning",
+      "channel": [
+        "ads",
+        "social-media",
+        "messaging",
+        "email"
+      ],
+      "targets": "investors",
+      "issuer": "New York Department of State, Division of Consumer Protection",
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "published_on": "2026-08-27"
+    },
+    "source_url": "https://www.dfs.ny.gov/reports_and_publications/press_releases/pr20260826",
+    "evidence": "Scammers use AI to create convincing ads on social media featuring recognizable figures and celebrities that promise exclusive insider memberships or guaranteed high return investment tips.",
+    "observed_at": "2026-10-06T10:45:00Z"
+  },
+  {
+    "data": {
+      "title": "WhatsApp groups impersonating licensed firms push investment plans built on a supposed AI system promising 360% returns",
+      "url": "https://www.fsma.be/fr/warnings/la-fsma-met-de-nouveau-le-public-en-garde-contre-des-groupes-whatsapp-douteux-1",
+      "scam_type": "fake-ai-investment",
+      "kind": "warning",
+      "channel": [
+        "messaging",
+        "social-media",
+        "ads"
+      ],
+      "targets": "consumers",
+      "issuer": "Financial Services and Markets Authority (FSMA)",
+      "country": [
+        "Belgium"
+      ],
+      "region": "europe",
+      "published_on": "2026-08-20"
+    },
+    "source_url": "https://www.fsma.be/fr/warnings/la-fsma-met-de-nouveau-le-public-en-garde-contre-des-groupes-whatsapp-douteux-1",
+    "evidence": "Pour ce faire, les fraudeurs mettent en avant un modèle basé sur l’intelligence artificielle et prétendent distiller des leçons aux fins d’informer les consommateurs sur des prétendues analyses de marché.",
+    "observed_at": "2026-10-06T10:57:26Z"
+  },
+  {
+    "data": {
+      "title": "Scammers use generative AI to build networks of deepfake websites, endorsements and fake news to push investment scams",
+      "url": "https://www.asic.gov.au/about-asic/news-centre/find-a-media-release/2026-releases/26-195mr-asic-warns-scammers-are-using-ai-to-spin-vast-webs-of-deception",
+      "scam_type": "deepfake-ad",
+      "kind": "warning",
+      "channel": [
+        "ads",
+        "website",
+        "phone"
+      ],
+      "issuer": "Australian Securities and Investments Commission",
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "loss_usd": 5270000,
+      "loss_stated": "A$7.4 million",
+      "published_on": "2026-08-17"
+    },
+    "source_url": "https://www.asic.gov.au/about-asic/news-centre/find-a-media-release/2026-releases/26-195mr-asic-warns-scammers-are-using-ai-to-spin-vast-webs-of-deception",
+    "evidence": "ASIC is warning Australians that a quick online search is not enough to verify investment opportunities as scammers use generative AI to create vast networks of deepfake websites and endorsements to lure victims.",
+    "observed_at": "2026-10-06T11:01:33Z"
+  },
+  {
+    "data": {
+      "title": "AI now enables more than half of reported cybercrime in Africa, with AI-facilitated scams driving rising losses",
+      "url": "https://www.interpol.int/en/News-and-Events/News/2026/INTERPOL-report-finds-AI-linked-to-more-than-half-of-cybercrime-in-Africa",
+      "scam_type": "other",
+      "kind": "statistics",
+      "channel": [
+        "social-media",
+        "email"
+      ],
+      "issuer": "INTERPOL",
+      "country": [
+        "Africa"
+      ],
+      "region": "africa-middle-east",
+      "published_on": "2026-08-03"
+    },
+    "source_url": "https://www.interpol.int/en/News-and-Events/News/2026/INTERPOL-report-finds-AI-linked-to-more-than-half-of-cybercrime-in-Africa",
+    "evidence": "Artificial intelligence is enabling 55 per cent of reported cybercrimes across Africa making attacks faster, more scalable, and increasingly difficult for victims and platforms to detect",
+    "observed_at": "2026-10-06T10:04:55Z"
+  },
+  {
+    "data": {
+      "title": "Fake welfare-payment offers use AI-generated content that looks like legitimate government ads",
+      "url": "https://www.programasparaelbienestar.gob.mx/noticias-y-comunicados/noticia/evita-caer-en-estafas-de-supuestos-apoyos-algunas-usan-ia/",
+      "scam_type": "deepfake-ad",
+      "kind": "warning",
+      "channel": [
+        "ads",
+        "website"
+      ],
+      "issuer": "Government of Mexico – Programas para el Bienestar",
+      "country": [
+        "Mexico"
+      ],
+      "region": "americas",
+      "published_on": "2026-07-30"
+    },
+    "source_url": "https://www.programasparaelbienestar.gob.mx/noticias-y-comunicados/noticia/evita-caer-en-estafas-de-supuestos-apoyos-algunas-usan-ia/",
+    "evidence": "advirtió que se trata de intentos de fraude de parte de sujetos que utilizan técnicas cada vez más sofisticadas, incluidos contenidos generados con inteligencia artificial (IA) que pueden parecer anuncios legítimos",
+    "observed_at": "2026-10-06T11:12:01Z"
+  },
+  {
+    "data": {
+      "title": "Fake-sextortion scammers have begun using AI face- and body-swapping to fabricate images and videos of their victims",
+      "url": "https://www.bacs.admin.ch/de/26w30-de",
+      "scam_type": "ai-romance",
+      "kind": "warning",
+      "channel": [
+        "email"
+      ],
+      "issuer": "Federal Office for Cybersecurity (BACS)",
+      "country": [
+        "Switzerland"
+      ],
+      "region": "europe",
+      "published_on": "2026-07-28"
+    },
+    "source_url": "https://www.bacs.admin.ch/de/26w30-de",
+    "evidence": "Kritisch wird es jedoch, wenn die Betrüger sich auf künstliche Intelligenz abstützen, um gefälschte Bilder und Videos ihrer Opfer zu erstellen. In einzelnen Fällen hat das BACS dies bereits beobachtet.",
+    "observed_at": "2026-10-06T10:57:26Z"
+  },
+  {
+    "data": {
+      "title": "Tax-refund phishing wave by SMS and email uses AI-generated, professional-looking email templates",
+      "url": "https://www.sars.gov.za/latest-news/scam-alert-tax-return-notification/",
+      "scam_type": "ai-phishing",
+      "kind": "warning",
+      "channel": [
+        "messaging",
+        "email",
+        "website"
+      ],
+      "issuer": "South African Revenue Service",
+      "country": [
+        "South Africa"
+      ],
+      "region": "africa-middle-east",
+      "published_on": "2026-07-28"
+    },
+    "source_url": "https://www.sars.gov.za/latest-news/scam-alert-tax-return-notification/",
+    "evidence": "SARS is noting with concern that the scammers are now using AI to generate professional-looking email templates that are harder to identify as fraudulent",
+    "observed_at": "2026-10-06T11:12:01Z"
+  },
+  {
+    "data": {
+      "title": "Scammers use AI to clone the voices of relatives, friends or company managers from a few seconds of audio, Banco de España warns",
+      "url": "https://clientebancario.bde.es/pcb/es/blog/te-pueden-enganar-con-una-voz-conocida-asi-funcionan-las-estafas-con-clonacion-de-voz.html",
+      "scam_type": "voice-clone",
+      "kind": "warning",
+      "channel": [
+        "phone",
+        "messaging"
+      ],
+      "issuer": "Banco de España",
+      "country": [
+        "Spain"
+      ],
+      "region": "europe",
+      "published_on": "2026-07-23"
+    },
+    "source_url": "https://clientebancario.bde.es/pcb/es/blog/te-pueden-enganar-con-una-voz-conocida-asi-funcionan-las-estafas-con-clonacion-de-voz.html",
+    "evidence": "de la inteligencia artificial, los ciberdelincuentes pueden imitar la voz de una persona a partir de unos pocos segundos de audio.",
+    "observed_at": "2026-10-06T11:33:41Z"
+  },
+  {
+    "data": {
+      "title": "Criminal networks use AI to generate fake investment platforms, reviews, ads and news coverage",
+      "url": "https://www.afp.gov.au/news-centre/media-release/criminal-networks-weaponise-tech-steal-millions-everyday-australians",
+      "scam_type": "other",
+      "kind": "warning",
+      "channel": [
+        "ads",
+        "social-media",
+        "messaging",
+        "phone"
+      ],
+      "targets": "first-time or inexperienced investors, many of retirement age",
+      "issuer": "Australian Federal Police (Joint Policing Cybercrime Coordination Centre)",
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "published_on": "2026-07-23"
+    },
+    "source_url": "https://www.afp.gov.au/news-centre/media-release/criminal-networks-weaponise-tech-steal-millions-everyday-australians",
+    "evidence": "Criminal networks are weaponising artificial intelligence (AI) to help steal millions of dollars from everyday Australians through sophisticated fake investment scams.",
+    "observed_at": "2026-10-06T11:01:33Z"
+  },
+  {
+    "data": {
+      "title": "Deepfake videos of celebrities and AI-created doctors promote unapproved medicines and supplements",
+      "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/viu-alguem-indicando-medicamento-ou-suplemento-alimentar-cuidado-pode-nao-ser-seguro",
+      "scam_type": "deepfake-ad",
+      "kind": "warning",
+      "channel": [
+        "social-media",
+        "ads"
+      ],
+      "issuer": "Brazilian Health Regulatory Agency (Anvisa)",
+      "country": [
+        "Brazil"
+      ],
+      "region": "americas",
+      "published_on": "2026-07-21"
+    },
+    "source_url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/viu-alguem-indicando-medicamento-ou-suplemento-alimentar-cuidado-pode-nao-ser-seguro",
+    "evidence": "Criminosos vêm usando este tipo de manipulação, chamada de deepfake - produzida por meio de inteligência artificial (IA) - para gerar credibilidade junto ao público e impulsionar vendas de produtos que muitas vezes são clandestinos",
+    "observed_at": "2026-10-06T11:12:01Z"
+  },
+  {
+    "data": {
+      "title": "AI-generated videos of a senior FBI leader promote a spoofed IC3 complaint site to re-target scam victims",
+      "url": "https://www.ic3.gov/PSA/2026/PSA260720",
+      "scam_type": "deepfake-ad",
+      "kind": "warning",
+      "channel": [
+        "social-media",
+        "website",
+        "messaging"
+      ],
+      "targets": "previous scam victims",
+      "issuer": "Federal Bureau of Investigation",
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "published_on": "2026-07-20"
+    },
+    "source_url": "https://www.ic3.gov/PSA/2026/PSA260720",
+    "evidence": "A social media platform shared AI-generated videos depicting a senior FBI leader encouraging users to submit victim complaints on a spoofed IC3 website.",
+    "observed_at": "2026-10-06T10:45:00Z"
+  },
+  {
+    "data": {
+      "title": "Pump-and-dump share scams use fake celebrity endorsements, including AI deepfake videos, to lure investors into chat groups",
+      "url": "https://www.asic.gov.au/about-asic/news-centre/find-a-media-release/2026-releases/26-157mr-asic-warning-pump-and-dump-scammers-intensify-use-of-fake-celebrity-endorsements",
+      "scam_type": "deepfake-ad",
+      "kind": "warning",
+      "channel": [
+        "social-media",
+        "messaging"
+      ],
+      "targets": "older Australians nearing retirement",
+      "issuer": "Australian Securities and Investments Commission",
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "published_on": "2026-07-17"
+    },
+    "source_url": "https://www.asic.gov.au/about-asic/news-centre/find-a-media-release/2026-releases/26-157mr-asic-warning-pump-and-dump-scammers-intensify-use-of-fake-celebrity-endorsements",
+    "evidence": "Scams are becoming more sophisticated and harder to spot, including the use of AI-generated deep-fake videos of well-known personalities.",
+    "observed_at": "2026-10-06T11:01:33Z"
+  },
+  {
+    "data": {
+      "title": "Police dismantle visa-fraud call centres that used AI face-swaps on video calls to pose as US consular officials",
+      "url": "https://www.policia.gov.co/noticia/cae-red-transnacional-en-ibague-que-estafaba-ciudadanos-7-paises-usando-inteligencia",
+      "scam_type": "deepfake-video",
+      "kind": "case",
+      "channel": [
+        "video-call",
+        "social-media",
+        "phone",
+        "messaging"
+      ],
+      "targets": "people seeking US visas and permanent residence permits",
+      "issuer": "National Police of Colombia",
+      "country": [
+        "Colombia"
+      ],
+      "region": "americas",
+      "published_on": "2026-07-12"
+    },
+    "source_url": "https://www.policia.gov.co/noticia/cae-red-transnacional-en-ibague-que-estafaba-ciudadanos-7-paises-usando-inteligencia",
+    "evidence": "Para generar un escenario de confianza y engaño en tiempo real, los delincuentes utilizaban herramientas avanzadas de Inteligencia Artificial (IA). Mediante la modalidad de DeepFace alteraban sus rostros y acentos durante las videollamadas",
+    "observed_at": "2026-10-06T11:12:01Z"
+  },
+  {
+    "data": {
+      "title": "Fake ChatGPT 'outage' pages reached through Google ads push malware disguised as a ChatGPT download",
+      "url": "https://www.bsi.bund.de/DE/Service-Navi/Abonnements/Newsletter/Buerger-CERT-Abos/Newsletter-Einfach-Cybersicher/Einfach_Cybersicher_260701/Einfach-cybersicher_01-07-2026_node.html",
+      "scam_type": "fake-ai-tool",
+      "kind": "warning",
+      "channel": [
+        "ads",
+        "website"
+      ],
+      "issuer": "Federal Office for Information Security (BSI)",
+      "country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "published_on": "2026-07-01"
+    },
+    "source_url": "https://www.bsi.bund.de/DE/Service-Navi/Abonnements/Newsletter/Buerger-CERT-Abos/Newsletter-Einfach-Cybersicher/Einfach_Cybersicher_260701/Einfach-cybersicher_01-07-2026_node.html",
+    "evidence": "auf vorgebliche Fehlerseiten von ChatGPT gelangen, auf denen ihnen angezeigt wird, es gebe dort gerade eine Störung. Gleichzeitig werden sie aufgefordert, eine alternative Seite zu öffnen und sich dort ChatGPT herunterzuladen. Stattdessen enthält der dortige Download Schadsoftware.",
+    "observed_at": "2026-10-06T10:57:26Z"
+  },
+  {
+    "data": {
+      "title": "Pet scams use AI-generated deepfake photos and videos of animals in distress or in need of homes",
+      "url": "https://consumer.ftc.gov/consumer-alerts/2026/06/animal-lovers-learn-spot-and-avoid-breed-pet-scams",
+      "scam_type": "other",
+      "kind": "warning",
+      "channel": [
+        "social-media",
+        "website"
+      ],
+      "targets": "pet owners and animal lovers",
+      "issuer": "Federal Trade Commission",
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "published_on": "2026-06-24"
+    },
+    "source_url": "https://consumer.ftc.gov/consumer-alerts/2026/06/animal-lovers-learn-spot-and-avoid-breed-pet-scams",
+    "evidence": "They’ll steal and manipulate pet images, videos, and even use AI-generated deepfakes to help them trick you into giving them your money or personal information.",
+    "observed_at": "2026-10-06T10:45:00Z"
+  },
+  {
+    "data": {
+      "title": "FINRA warns of deepfake videos and AI voice-cloned calls posing as family members and investment professionals",
+      "url": "https://www.finra.org/investors/insights/deepfakes-vishing",
+      "scam_type": "voice-clone",
+      "kind": "warning",
+      "channel": [
+        "phone",
+        "social-media",
+        "messaging"
+      ],
+      "targets": "investors and brokerage customers",
+      "issuer": "Financial Industry Regulatory Authority (FINRA)",
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "published_on": "2026-06-18"
+    },
+    "source_url": "https://www.finra.org/investors/insights/deepfakes-vishing",
+    "evidence": "Modern vishing can use AI-powered voice cloning created from just seconds of recorded speech harvested from social media, public interviews or other sources.",
+    "observed_at": "2026-10-06T10:45:00Z"
+  },
+  {
+    "data": {
+      "title": "AI-powered social engineering, including deepfake voice calls impersonating executives, targets telecom operators",
+      "url": "https://csirt.ncc.gov.ng/index.php/resources/security-advisories/428-ai-driven-social-engineering-and-deepfake-threats-lessons-from-bayers-psychology-based-cybersecurity-awareness-program",
+      "scam_type": "voice-clone",
+      "kind": "warning",
+      "channel": [
+        "phone",
+        "email"
+      ],
+      "targets": "telecommunications service providers and their staff",
+      "issuer": "Nigerian Communications Commission Computer Security Incident Response Team (NCC-CSIRT)",
+      "country": [
+        "Nigeria"
+      ],
+      "region": "africa-middle-east",
+      "published_on": "2026-06-15"
+    },
+    "source_url": "https://csirt.ncc.gov.ng/index.php/resources/security-advisories/428-ai-driven-social-engineering-and-deepfake-threats-lessons-from-bayers-psychology-based-cybersecurity-awareness-program",
+    "evidence": "NCC-CSIRT is alerting Telecommunications Service Providers to the growing use of AI-powered social engineering attacks, including deepfake voice calls, phishing emails, and impersonation scams.",
+    "observed_at": "2026-10-06T11:12:01Z"
+  },
+  {
+    "data": {
+      "title": "Swedish regulator warns about 66 unlicensed firms luring investors with AI-driven trading and quick profits",
+      "url": "https://www.fi.se/sv/publicerat/nyheter/2026/fi-varnar-for-66-aktorer--lockar-med-ai-och-snabba-vinster/",
+      "scam_type": "fake-ai-investment",
+      "kind": "warning",
+      "channel": [
+        "ads",
+        "social-media",
+        "messaging",
+        "phone"
+      ],
+      "issuer": "Finansinspektionen (Swedish Financial Supervisory Authority)",
+      "country": [
+        "Sweden"
+      ],
+      "region": "europe",
+      "published_on": "2026-06-05"
+    },
+    "source_url": "https://www.fi.se/sv/publicerat/nyheter/2026/fi-varnar-for-66-aktorer--lockar-med-ai-och-snabba-vinster/",
+    "evidence": "Bedragare på nätet lockar med AI och snabba vinster. Nu varnar Finansinspektionen för 66 aktörer som saknar tillstånd att erbjuda finansiella tjänster i Sverige.",
+    "observed_at": "2026-10-06T10:57:26Z"
+  },
+  {
+    "data": {
+      "title": "Romance fraud ring charged with using AI-driven video personas to target older Americans",
+      "url": "https://www.justice.gov/opa/pr/fraud-division-announces-federal-state-partnership-ohio-prosecute-fraud",
+      "scam_type": "ai-romance",
+      "kind": "case",
+      "channel": [
+        "social-media",
+        "website"
+      ],
+      "targets": "older Americans",
+      "issuer": "U.S. Department of Justice",
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "loss_usd": 15000000,
+      "loss_stated": "over $15 million",
+      "published_on": "2026-06-04"
+    },
+    "source_url": "https://www.justice.gov/opa/pr/fraud-division-announces-federal-state-partnership-ohio-prosecute-fraud",
+    "evidence": "the defendants targeted older Americans on dating websites and social media platforms to engage in romance fraud schemes. They employed advanced techniques including artificial intelligence-driven video platforms to engage victims under fictitious female personas.",
+    "observed_at": "2026-10-06T10:45:00Z"
+  },
+  {
+    "data": {
+      "title": "Sextortion scammers use generative AI to create fake attractive personas and polish scripts aimed at young men",
+      "url": "https://www.esafety.gov.au/newsroom/media-releases/swipe-right-for-sextortion-esafety-unmasks-sexy-scam-artists",
+      "scam_type": "ai-romance",
+      "kind": "warning",
+      "channel": [
+        "social-media",
+        "messaging"
+      ],
+      "targets": "young men, especially those aged 18 to 24",
+      "issuer": "eSafety Commissioner",
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "published_on": "2026-06-03"
+    },
+    "source_url": "https://www.esafety.gov.au/newsroom/media-releases/swipe-right-for-sextortion-esafety-unmasks-sexy-scam-artists",
+    "evidence": "They're already adept at weaponising face-swapping and voice-cloning technologies. Now, they're using generative AI to create fake but relatable, attractive online characters that appeal to lots of young men to propagate this scam.",
+    "observed_at": "2026-10-06T11:01:33Z"
+  },
+  {
+    "data": {
+      "title": "Syndicate used deepfakes to swap portraits on lost ID cards, passing bank facial checks to open 19 accounts and apply for loans",
+      "url": "https://www.info.gov.hk/gia/general/202606/03/P2026060300535.htm",
+      "scam_type": "other",
+      "kind": "case",
+      "issuer": "Financial Services and the Treasury Bureau, HKSAR Government (LegCo reply citing Hong Kong Police Force)",
+      "country": [
+        "Hong Kong"
+      ],
+      "region": "asia-pacific",
+      "loss_usd": 28100,
+      "loss_stated": "approximately HK$220,000",
+      "published_on": "2026-06-03"
+    },
+    "source_url": "https://www.info.gov.hk/gia/general/202606/03/P2026060300535.htm",
+    "evidence": "The syndicate used deepfake technology to replace the portraits on HKICs which had been reported as lost, and successfully passed the facial recognition verification of online banking systems, opened 19 bank accounts, and used those identity cards to apply for loans and credit cards",
+    "observed_at": "2026-10-06T11:11:37Z"
+  },
+  {
+    "data": {
+      "title": "SEC charges crypto trading scheme that promised investors proprietary AI-based trading bots",
+      "url": "https://www.sec.gov/enforcement-litigation/litigation-releases/lr-26558",
+      "scam_type": "fake-ai-investment",
+      "kind": "case",
+      "targets": "investors",
+      "issuer": "U.S. Securities and Exchange Commission",
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "published_on": "2026-05-29"
+    },
+    "source_url": "https://www.sec.gov/enforcement-litigation/litigation-releases/lr-26558",
+    "evidence": "approximately $12.3 million from about 150 investors based on various misrepresentations and omissions, including that he would use proprietary AI-based trading bots to engage in high-frequency arbitrage trading in crypto assets",
+    "observed_at": "2026-10-06T10:45:00Z"
+  },
+  {
+    "data": {
+      "title": "Retiree lost NT$18.99 million to a fake investment app that claimed an AI system would trade stocks for her",
+      "url": "https://www.pbs.npa.gov.tw/ch/app/data/view?module=wg183&id=18740&serno=67c91f90-ff6e-4dab-b402-8eed8e15144b",
+      "scam_type": "fake-ai-investment",
+      "kind": "case",
+      "channel": [
+        "social-media",
+        "ads",
+        "messaging"
+      ],
+      "issuer": "Police Broadcasting Service, National Police Agency (Taiwan), reporting Yilan County police",
+      "country": [
+        "Taiwan"
+      ],
+      "region": "asia-pacific",
+      "loss_usd": 602000,
+      "loss_stated": "NT$18.99 million",
+      "published_on": "2026-05-22"
+    },
+    "source_url": "https://www.pbs.npa.gov.tw/ch/app/data/view?module=wg183&id=18740&serno=67c91f90-ff6e-4dab-b402-8eed8e15144b",
+    "evidence": "宜蘭縣三星鄉有一名退休婦人，誤信網路「AI代操股票」話術，落入假投資陷阱，被詐騙一千八百九十九萬元，直到女兒提醒才驚覺受騙",
+    "observed_at": "2026-10-06T11:11:37Z"
+  },
+  {
+    "data": {
+      "title": "Marketing firms settle FTC charges over a fake 'AI-powered' ad service claiming to use smart-device conversations",
+      "url": "https://www.ftc.gov/news-events/news/press-releases/2026/05/ftc-require-cox-media-group-two-other-firms-pay-nearly-1-million-settle-charges-they-deceived",
+      "scam_type": "fake-ai-tool",
+      "kind": "case",
+      "targets": "small businesses",
+      "issuer": "Federal Trade Commission",
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "published_on": "2026-05-21"
+    },
+    "source_url": "https://www.ftc.gov/news-events/news/press-releases/2026/05/ftc-require-cox-media-group-two-other-firms-pay-nearly-1-million-settle-charges-they-deceived",
+    "evidence": "deceived customers by falsely claiming to offer an AI-powered service that could target localized ads based on conversations captured from consumers’ smart devices",
+    "observed_at": "2026-10-06T10:45:00Z"
+  },
+  {
+    "data": {
+      "title": "Fake Facebook groups offering free tai chi and dance classes use AI-generated content to spread bank-stealing malware",
+      "url": "https://www.ownyouronline.govt.nz/news-and-alerts/scammers-target-facebook-users-with-free-tai-chi-and-social-dancing-classes/",
+      "scam_type": "ai-phishing",
+      "kind": "warning",
+      "channel": [
+        "social-media",
+        "ads",
+        "website"
+      ],
+      "targets": "Facebook users looking for free community classes",
+      "issuer": "National Cyber Security Centre (NCSC) New Zealand, Own Your Online",
+      "country": [
+        "New Zealand"
+      ],
+      "region": "asia-pacific",
+      "published_on": "2026-05-20"
+    },
+    "source_url": "https://www.ownyouronline.govt.nz/news-and-alerts/scammers-target-facebook-users-with-free-tai-chi-and-social-dancing-classes/",
+    "evidence": "Numerous Facebook groups have been created under this pretence, using AI-generated content to look authentic and trick users into downloading the malware.",
+    "observed_at": "2026-10-06T11:01:33Z"
+  },
+  {
+    "data": {
+      "title": "Raid on a love-scam and crypto-fraud hub finds AI face-swap deepfake software in a room for 'models'; 17 arrested",
+      "url": "https://nbi.gov.ph/press_releases/2026/05192026/10018/",
+      "scam_type": "ai-romance",
+      "kind": "case",
+      "issuer": "National Bureau of Investigation (Philippines)",
+      "country": [
+        "Philippines"
+      ],
+      "region": "asia-pacific",
+      "published_on": "2026-05-19"
+    },
+    "source_url": "https://nbi.gov.ph/press_releases/2026/05192026/10018/",
+    "evidence": "Operatives also discovered a separate room allegedly intended for “models,” where a computer installed with the “AI SWAP 2” application, reportedly capable of AI-based face replacement or deepfake technology, was recovered.",
+    "observed_at": "2026-10-06T11:11:37Z"
+  },
+  {
+    "data": {
+      "title": "Police release footage of a deepfake Zoom conference impersonating senior government officials and list signs of AI manipulation",
+      "url": "https://www.police.gov.sg/Media-Hub/News/2026/05/20260516_footage_from_zoom_video_conference_involving_impersonation_of_senior_government_officials",
+      "scam_type": "deepfake-video",
+      "kind": "warning",
+      "channel": [
+        "video-call",
+        "messaging"
+      ],
+      "issuer": "Singapore Police Force",
+      "country": [
+        "Singapore"
+      ],
+      "region": "asia-pacific",
+      "published_on": "2026-05-16"
+    },
+    "source_url": "https://www.police.gov.sg/Media-Hub/News/2026/05/20260516_footage_from_zoom_video_conference_involving_impersonation_of_senior_government_officials",
+    "evidence": "The Zoom video conference was fabricated, with some portions edited using deepfake AI technology.",
+    "observed_at": "2026-10-06T11:11:37Z"
+  },
+  {
+    "data": {
+      "title": "CBI warns AI and deepfakes make fake 'digital arrest' notices hard to spot, launches notice-verification helpbot",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2261539",
+      "scam_type": "other",
+      "kind": "warning",
+      "channel": [
+        "phone"
+      ],
+      "issuer": "Central Bureau of Investigation (Ministry of Home Affairs)",
+      "country": [
+        "India"
+      ],
+      "region": "asia-pacific",
+      "published_on": "2026-05-15"
+    },
+    "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2261539",
+    "evidence": "The rapid advancement of technologies such as Artificial Intelligence and deep fakes have made it increasingly difficult for ordinary citizens to distinguish between what is real and what is fabricated.",
+    "observed_at": "2026-10-06T11:01:33Z"
+  },
+  {
+    "data": {
+      "title": "Deepfake Zoom meeting impersonating senior government officials led a victim to transfer at least SGD 4.9 million",
+      "url": "https://www.police.gov.sg/Media-Hub/News/2026/05/20260514_advisory_on_scams_involving_impersonation_of_snr_govt_officials_incl_secy_cabinet",
+      "scam_type": "deepfake-video",
+      "kind": "case",
+      "channel": [
+        "video-call",
+        "messaging"
+      ],
+      "targets": "business professionals",
+      "issuer": "Singapore Police Force",
+      "country": [
+        "Singapore"
+      ],
+      "region": "asia-pacific",
+      "loss_usd": 3850000,
+      "loss_stated": "at least SGD 4.9 million",
+      "published_on": "2026-05-14"
+    },
+    "source_url": "https://www.police.gov.sg/Media-Hub/News/2026/05/20260514_advisory_on_scams_involving_impersonation_of_snr_govt_officials_incl_secy_cabinet",
+    "evidence": "In reality, the participants had been fabricated using deepfake AI technology. Following the meeting, the victim was contacted via WhatsApp and transferred at least SGD 4.9 million through a series of transactions to a corporate bank account supplied by the scammers.",
+    "observed_at": "2026-10-06T11:11:37Z"
+  },
+  {
+    "data": {
+      "title": "Europol's IOCTA 2026 finds criminals use generative AI to tailor social engineering, accelerating and concealing online fraud",
+      "url": "https://www.europol.europa.eu/media-press/newsroom/news/new-2026-iocta-highlights-sophisticated-tactics-and-emerging-challenges-in-digital-landscape",
+      "scam_type": "ai-phishing",
+      "kind": "warning",
+      "issuer": "Europol",
+      "country": [
+        "European Union"
+      ],
+      "region": "europe",
+      "published_on": "2026-04-28"
+    },
+    "source_url": "https://www.europol.europa.eu/media-press/newsroom/news/new-2026-iocta-highlights-sophisticated-tactics-and-emerging-challenges-in-digital-landscape",
+    "evidence": "Generative AI tools are increasingly employed to tailor social engineering tactics, accelerating and concealing online fraud schemes.",
+    "observed_at": "2026-10-06T10:57:26Z"
+  },
+  {
+    "data": {
+      "title": "Fake investment videos and apps on social media use deepfake AI to impersonate leaders, Finance Ministry warns",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2255490",
+      "scam_type": "deepfake-ad",
+      "kind": "warning",
+      "channel": [
+        "social-media"
+      ],
+      "issuer": "Ministry of Finance, Government of India",
+      "country": [
+        "India"
+      ],
+      "region": "asia-pacific",
+      "published_on": "2026-04-25"
+    },
+    "source_url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2255490",
+    "evidence": "With the increasing use of technology, there is an explosion of fake investment videos and apps circulating on social media, many of them using deepfake AI to impersonate leaders",
+    "observed_at": "2026-10-06T11:01:33Z"
+  },
+  {
+    "data": {
+      "title": "Grandparent scammers use AI to clone loved ones' voices in fake emergency calls",
+      "url": "https://www.fcc.gov/consumers/scam-alert/grandparent-scams-get-more-sophisticated",
+      "scam_type": "voice-clone",
+      "kind": "warning",
+      "channel": [
+        "phone"
+      ],
+      "targets": "grandparents",
+      "issuer": "Federal Communications Commission",
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "published_on": "2026-04-24"
+    },
+    "source_url": "https://www.fcc.gov/consumers/scam-alert/grandparent-scams-get-more-sophisticated",
+    "evidence": "With advances in Artificial Intelligence (AI), scammers can now clone voices of loved ones, making the call more believable.",
+    "observed_at": "2026-10-06T10:45:00Z"
+  },
+  {
+    "data": {
+      "title": "Washington regulator charges fake investment education foundations that used fake AI-generated trading signals",
+      "url": "https://dfi.wa.gov/news/press/washington-state-dfi-alleges-fake-investment-education-foundations-and-trading-platforms",
+      "scam_type": "fake-ai-investment",
+      "kind": "case",
+      "channel": [
+        "social-media",
+        "messaging",
+        "website"
+      ],
+      "targets": "investors",
+      "issuer": "Washington State Department of Financial Institutions",
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "loss_usd": 9900000,
+      "loss_stated": "nearly $9.9 million",
+      "published_on": "2026-04-22"
+    },
+    "source_url": "https://dfi.wa.gov/news/press/washington-state-dfi-alleges-fake-investment-education-foundations-and-trading-platforms",
+    "evidence": "DFI alleges that scammers defrauded investors through elaborate cryptocurrency scams that utilized fake education foundations, fake securities token offerings, fake AI generated investment trading signals, and fake trading platforms. At least 38 investors lost nearly $9.9 million in these scams",
+    "observed_at": "2026-10-06T10:45:00Z"
+  },
+  {
+    "data": {
+      "title": "German police and BSI warn cybertrading fraudsters use AI-made videos of celebrities to promote investments",
+      "url": "https://www.bsi.bund.de/DE/Service-Navi/Presse/Pressemitteilungen/Presse2026/260413_KI-Betrug-im-Netz.html",
+      "scam_type": "deepfake-ad",
+      "kind": "warning",
+      "issuer": "Federal Office for Information Security (BSI) and Police Crime Prevention Programme (ProPK)",
+      "country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "published_on": "2026-04-13"
+    },
+    "source_url": "https://www.bsi.bund.de/DE/Service-Navi/Presse/Pressemitteilungen/Presse2026/260413_KI-Betrug-im-Netz.html",
+    "evidence": "Oft erstellen sie hierfür mithilfe von KI Videos, in denen Prominente für lukrative Anlagemöglichkeiten zu werben scheinen.",
+    "observed_at": "2026-10-06T10:57:26Z"
+  },
+  {
+    "data": {
+      "title": "Fake AI-generated Facebook videos of the Finance Minister promote an investment opportunity",
+      "url": "https://www.ttsec.org.tt/beware-of-fake-ai-generated-video-of-the-minister-of-finance/",
+      "scam_type": "deepfake-ad",
+      "kind": "warning",
+      "channel": [
+        "social-media"
+      ],
+      "issuer": "Trinidad and Tobago Securities and Exchange Commission",
+      "country": [
+        "Trinidad and Tobago"
+      ],
+      "region": "americas",
+      "published_on": "2026-04-10"
+    },
+    "source_url": "https://www.ttsec.org.tt/beware-of-fake-ai-generated-video-of-the-minister-of-finance/",
+    "evidence": "The Trinidad and Tobago Securities and Exchange Commission (TTSEC) advises the public about the circulation of fake, AI-generated videos on the social media platform, Facebook that falsely depicts the Minister of Finance",
+    "observed_at": "2026-10-06T11:12:01Z"
+  },
+  {
+    "data": {
+      "title": "ASIC warns AI is super-charging online investment scam ads, including fake 'AI trading bot' schemes",
+      "url": "https://www.asic.gov.au/about-asic/news-centre/find-a-media-release/2026-releases/26-063mr-asic-ramps-up-action-to-protect-consumers-from-ai-powered-online-investment-scams",
+      "scam_type": "fake-ai-investment",
+      "kind": "warning",
+      "channel": [
+        "ads",
+        "social-media",
+        "website"
+      ],
+      "issuer": "Australian Securities and Investments Commission",
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "published_on": "2026-04-08"
+    },
+    "source_url": "https://www.asic.gov.au/about-asic/news-centre/find-a-media-release/2026-releases/26-063mr-asic-ramps-up-action-to-protect-consumers-from-ai-powered-online-investment-scams",
+    "evidence": "ASIC is removing record numbers of harmful social media phishing and investment scam websites, as it warns Australians that artificial intelligence (AI) is super-charging online scam threats.",
+    "observed_at": "2026-10-06T11:01:33Z"
+  },
+  {
+    "data": {
+      "title": "Romance scammers now use AI-generated images, such as a fake hospital-bed photo of the supposed partner, to extract payments",
+      "url": "https://www.bacs.admin.ch/de/26w14-de",
+      "scam_type": "ai-romance",
+      "kind": "case",
+      "channel": [
+        "social-media",
+        "messaging"
+      ],
+      "issuer": "Federal Office for Cybersecurity (BACS)",
+      "country": [
+        "Switzerland"
+      ],
+      "region": "europe",
+      "published_on": "2026-04-07"
+    },
+    "source_url": "https://www.bacs.admin.ch/de/26w14-de",
+    "evidence": "Täter bauen auf Social-Media-Plattformen und Partnerbörsen fingierte Beziehungen auf, um die Opfer später zu Zahlungen zu bewegen. Neuerdings nutzen die Betrüger zusätzlich KI‑generierte Bilder, um ihre Behauptungen weiter zu untermauern.",
+    "observed_at": "2026-10-06T10:57:26Z"
+  },
+  {
+    "data": {
+      "title": "Fake AI-generated video of the Prime Minister promotes an investment opportunity on social media",
+      "url": "https://www.ttsec.org.tt/beware-of-fake-ai-generated-video/",
+      "scam_type": "deepfake-ad",
+      "kind": "warning",
+      "channel": [
+        "social-media"
+      ],
+      "issuer": "Trinidad and Tobago Securities and Exchange Commission",
+      "country": [
+        "Trinidad and Tobago"
+      ],
+      "region": "americas",
+      "published_on": "2026-04-07"
+    },
+    "source_url": "https://www.ttsec.org.tt/beware-of-fake-ai-generated-video/",
+    "evidence": "The video is artificial intelligence (AI)-generated and completely false. Members of the public are urged to not click on suspicious links, share personal or financial information with unverified individuals / entities or send money to these unverified sources.",
+    "observed_at": "2026-10-06T11:12:01Z"
+  },
+  {
+    "data": {
+      "title": "New York AG warns of investment scams on Facebook, Instagram and WhatsApp that use deepfake celebrity ads",
+      "url": "https://ag.ny.gov/press-release/2026/investor-alert-attorney-general-james-warns-new-yorkers-investment-scams-meta",
+      "scam_type": "deepfake-ad",
+      "kind": "warning",
+      "channel": [
+        "ads",
+        "social-media",
+        "messaging"
+      ],
+      "targets": "investors",
+      "issuer": "New York State Attorney General",
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "published_on": "2026-04-06"
+    },
+    "source_url": "https://ag.ny.gov/press-release/2026/investor-alert-attorney-general-james-warns-new-yorkers-investment-scams-meta",
+    "evidence": "Scammers are increasingly using deceptive advertisements and “deepfake” technology to lure investors into high-stakes scams to defraud them of their savings.",
+    "observed_at": "2026-10-06T10:45:00Z"
+  },
+  {
+    "data": {
+      "title": "California AG warns of investment scams on Facebook, Instagram and WhatsApp that use deepfake ads",
+      "url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-warns-californians-investment-scams-facebook-instagram",
+      "scam_type": "deepfake-ad",
+      "kind": "warning",
+      "channel": [
+        "ads",
+        "social-media",
+        "messaging"
+      ],
+      "targets": "investors",
+      "issuer": "California Attorney General",
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "published_on": "2026-04-06"
+    },
+    "source_url": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-warns-californians-investment-scams-facebook-instagram",
+    "evidence": "Scammers are increasingly using deceptive advertisements (ads) and deepfake technology to lure people into high-stakes scams in order to then defraud them of their savings.",
+    "observed_at": "2026-10-06T10:45:00Z"
+  },
+  {
+    "data": {
+      "title": "New York AG warns of AI-powered tax scams: fake videos of officials or celebrities, AI-written phishing emails and cloned voices",
+      "url": "https://ag.ny.gov/press-release/2026/attorney-general-james-offers-tips-protect-consumers-fraud-during-tax-season",
+      "scam_type": "ai-phishing",
+      "kind": "warning",
+      "channel": [
+        "email",
+        "phone"
+      ],
+      "targets": "taxpayers",
+      "issuer": "New York State Attorney General",
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "published_on": "2026-04-01"
+    },
+    "source_url": "https://ag.ny.gov/press-release/2026/attorney-general-james-offers-tips-protect-consumers-fraud-during-tax-season",
+    "evidence": "AI technology allows attackers to send highly convincing, personalized emails disguised as tax notices or tax preparation offers to steal users’ personal information.",
+    "observed_at": "2026-10-06T10:45:00Z"
+  },
+  {
+    "data": {
+      "title": "QR-code phishing wave uses AI-generated messages to steal online banking logins from German bank customers",
+      "url": "https://www.bsi.bund.de/DE/Service-Navi/Abonnements/Newsletter/Buerger-CERT-Abos/Newsletter-Einfach-Cybersicher/Einfach_Cybersicher_260401/Einfach-cybersicher_01-04-2026_node.html",
+      "scam_type": "ai-phishing",
+      "kind": "warning",
+      "targets": "customers of German banks",
+      "issuer": "Federal Office for Information Security (BSI)",
+      "country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "published_on": "2026-04-01"
+    },
+    "source_url": "https://www.bsi.bund.de/DE/Service-Navi/Abonnements/Newsletter/Buerger-CERT-Abos/Newsletter-Einfach-Cybersicher/Einfach_Cybersicher_260401/Einfach-cybersicher_01-04-2026_node.html",
+    "evidence": "Eine neue Welle von Phishing-Angriffen über QR-Codes („Quishing“) setzt auf KI-generierte Nachrichten, um sensible Daten wie Bankzugänge zu stehlen. Besonders betroffen sind Kundinnen und Kunden deutscher Banken.",
+    "observed_at": "2026-10-06T10:57:26Z"
+  },
+  {
+    "data": {
+      "title": "Police seize over 50,000 AI-synthesised 'shake head, blink' face videos used to beat facial checks for fake real-name accounts",
+      "url": "https://gat.fujian.gov.cn/ztzl/fjjffpzxrx/spjq/202603/t20260330_7117146.htm",
+      "scam_type": "deepfake-video",
+      "kind": "case",
+      "channel": [
+        "social-media"
+      ],
+      "issuer": "Fujian Provincial Public Security Department (source: Ministry of Public Security Criminal Investigation Bureau)",
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "published_on": "2026-03-30"
+    },
+    "source_url": "https://gat.fujian.gov.cn/ztzl/fjjffpzxrx/spjq/202603/t20260330_7117146.htm",
+    "evidence": "山东青岛警方前不久破获利用AI技术合成、带有“摇摇头”、“眨眨眼”的动态人脸视频5万多条，这些动态视频能骗过人脸检验系统。在电诈团伙手里，他们就可以利用这些AI换脸视频去做虚假实名认证，进而诈骗",
+    "observed_at": "2026-10-06T11:11:37Z"
+  },
+  {
+    "data": {
+      "title": "Scammers use AI tools to turn official photos of agency heads into fake investment-tutorial videos and chats",
+      "url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202603260002&dtable=News",
+      "scam_type": "deepfake-ad",
+      "kind": "warning",
+      "channel": [
+        "social-media",
+        "messaging"
+      ],
+      "issuer": "Financial Supervisory Commission (Taiwan)",
+      "country": [
+        "Taiwan"
+      ],
+      "region": "asia-pacific",
+      "published_on": "2026-03-26"
+    },
+    "source_url": "https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202603260002&dtable=News",
+    "evidence": "詐騙集團經常利用民眾對政府機關的信任，將官網上的首長照片，透過AI工具竄改成投資教學影片或對話。",
+    "observed_at": "2026-10-06T11:11:37Z"
+  },
+  {
+    "data": {
+      "title": "Scamwatch explains how scammers use deepfakes, cloned voices, AI chatbots and mirror websites",
+      "url": "https://www.scamwatch.gov.au/stop-check-protect/help-to-spot-and-avoid-scams/how-scammers-use-technology-and-ai",
+      "scam_type": "other",
+      "kind": "warning",
+      "channel": [
+        "phone",
+        "social-media",
+        "email",
+        "website"
+      ],
+      "issuer": "National Anti-Scam Centre (ACCC), Scamwatch",
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "published_on": "2026-03-23"
+    },
+    "source_url": "https://www.scamwatch.gov.au/stop-check-protect/help-to-spot-and-avoid-scams/how-scammers-use-technology-and-ai",
+    "evidence": "Scammers use artificial intelligence (AI) to create fake videos, clone voices and send personal messages.",
+    "observed_at": "2026-10-06T11:01:33Z"
+  },
+  {
+    "data": {
+      "title": "'Truman Show' investment scam uses AI to simulate investor groups, financial experts and winning members",
+      "url": "https://buenosaires.gob.ar/gcaba_historico/noticias/truman-show-scam-el-fraude-sin-malware",
+      "scam_type": "ai-phishing",
+      "kind": "warning",
+      "issuer": "Buenos Aires City Government – Cybersecurity Centre",
+      "country": [
+        "Argentina"
+      ],
+      "region": "americas",
+      "published_on": "2026-03-18"
+    },
+    "source_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/truman-show-scam-el-fraude-sin-malware",
+    "evidence": "Esta estafa utiliza inteligencia artificial para simular: Grupos de inversión Expertos financieros Personas que “ganan dinero” Conversaciones personalizadas Todo forma parte de una comunidad falsa diseñada para generar confianza.",
+    "observed_at": "2026-10-06T11:12:01Z"
+  },
+  {
+    "data": {
+      "title": "Alberta RCMP warns of AI scams from voice cloning and fake kidnapping calls to deepfake video impersonation",
+      "url": "https://rcmp.ca/en/alberta/news/2026/03/4351444",
+      "scam_type": "voice-clone",
+      "kind": "warning",
+      "channel": [
+        "phone",
+        "email",
+        "messaging"
+      ],
+      "issuer": "Royal Canadian Mounted Police (Alberta RCMP)",
+      "country": [
+        "Canada"
+      ],
+      "region": "americas",
+      "published_on": "2026-03-17"
+    },
+    "source_url": "https://rcmp.ca/en/alberta/news/2026/03/4351444",
+    "evidence": "Today’s theme is artificial intelligence (AI) scams, which may include any of the following: Voice cloning scams AI-generated kidnapping calls Deepfake video impersonation",
+    "observed_at": "2026-10-06T11:12:01Z"
+  },
+  {
+    "data": {
+      "title": "Dutch prosecutors seek 30-month sentence in bank fraud that used deepfake faces to open accounts in other people's names",
+      "url": "https://www.om.nl/actueel/nieuws/2026/03/17/om-eist-celstraf-van-dertig-maanden-op-verdenking-van-oplichting-bank",
+      "scam_type": "deepfake-video",
+      "kind": "case",
+      "targets": "a bank and people whose identities were misused",
+      "issuer": "Public Prosecution Service of the Netherlands (Amsterdam)",
+      "country": [
+        "Netherlands"
+      ],
+      "region": "europe",
+      "published_on": "2026-03-17"
+    },
+    "source_url": "https://www.om.nl/actueel/nieuws/2026/03/17/om-eist-celstraf-van-dertig-maanden-op-verdenking-van-oplichting-bank",
+    "evidence": "In deze zaak werden valse biometrische gegevens in een systeem geïnjecteerd om toegang te krijgen tot beveiligde informatie of locaties. Bij deze aanvallen wordt vaak gebruik gemaakt van deepfake-technologie waarbij kunstmatige intelligentie wordt gebruikt",
+    "observed_at": "2026-10-06T10:57:26Z"
+  },
+  {
+    "data": {
+      "title": "Tax scammers use generative AI to make fake CRA messages and websites more convincing",
+      "url": "https://www.canada.ca/en/revenue-agency/news/newsroom/tax-tips/tax-tips-2026/what-you-need-to-know-ai-generated-tax-scams.html",
+      "scam_type": "ai-phishing",
+      "kind": "warning",
+      "channel": [
+        "email",
+        "messaging",
+        "phone",
+        "website"
+      ],
+      "issuer": "Canada Revenue Agency",
+      "country": [
+        "Canada"
+      ],
+      "region": "americas",
+      "published_on": "2026-03-13"
+    },
+    "source_url": "https://www.canada.ca/en/revenue-agency/news/newsroom/tax-tips/tax-tips-2026/what-you-need-to-know-ai-generated-tax-scams.html",
+    "evidence": "Scammers are always improving their tactics to trick you into giving away your personal or financial information. Their latest trick is using generative artificial intelligence (GenAI).",
+    "observed_at": "2026-10-06T11:12:01Z"
+  },
+  {
+    "data": {
+      "title": "Deepfake videos and sponsored ads featuring trusted figures lure Canadians into fake crypto investments",
+      "url": "https://antifraudcentre-centreantifraude.ca/features-vedette/2026/03/sophistication-fraud-fraude-eng.htm",
+      "scam_type": "deepfake-ad",
+      "kind": "warning",
+      "channel": [
+        "social-media",
+        "ads",
+        "website"
+      ],
+      "issuer": "Canadian Anti-Fraud Centre",
+      "country": [
+        "Canada"
+      ],
+      "region": "americas",
+      "published_on": "2026-03-10"
+    },
+    "source_url": "https://antifraudcentre-centreantifraude.ca/features-vedette/2026/03/sophistication-fraud-fraude-eng.htm",
+    "evidence": "To attract victims, perpetrators use deepfake videos, social media posts, and sponsored online ads that feature trusted individuals or well-known names.",
+    "observed_at": "2026-10-06T11:12:01Z"
+  },
+  {
+    "data": {
+      "title": "Romance scammers and sextortionists use AI to create convincing videos and documents that back up fake identities",
+      "url": "https://rcmp.ca/en/bc/prince-george/news/2026/03/4351037",
+      "scam_type": "ai-romance",
+      "kind": "warning",
+      "channel": [
+        "social-media",
+        "email",
+        "messaging"
+      ],
+      "issuer": "Royal Canadian Mounted Police (Prince George RCMP)",
+      "country": [
+        "Canada"
+      ],
+      "region": "americas",
+      "published_on": "2026-03-09"
+    },
+    "source_url": "https://rcmp.ca/en/bc/prince-george/news/2026/03/4351037",
+    "evidence": "With AI technology, they can create convincing videos that support the narrative of who they are or where they are pretending to be located.",
+    "observed_at": "2026-10-06T11:12:01Z"
+  },
+  {
+    "data": {
+      "title": "AI deepfakes, cloned voices and spoofed websites impersonate government officials and politicians",
+      "url": "https://www.canada.ca/en/competition-bureau/news/2026/03/watch-out-for-ai-generated-government-impersonators.html",
+      "scam_type": "deepfake-ad",
+      "kind": "warning",
+      "channel": [
+        "phone",
+        "messaging",
+        "website"
+      ],
+      "issuer": "Competition Bureau Canada",
+      "country": [
+        "Canada"
+      ],
+      "region": "americas",
+      "published_on": "2026-03-09"
+    },
+    "source_url": "https://www.canada.ca/en/competition-bureau/news/2026/03/watch-out-for-ai-generated-government-impersonators.html",
+    "evidence": "Artificial intelligence (AI) is giving fraudsters powerful new tools to deceive. Scammers are using AI to impersonate government officials, politicians, and other high-profile leaders with a level of realism that’s harder than ever to spot.",
+    "observed_at": "2026-10-06T11:12:01Z"
+  },
+  {
+    "data": {
+      "title": "Swedish regulator warns fraudsters exploit AI deepfake voices and videos in investment scams",
+      "url": "https://www.fi.se/sv/publicerat/nyheter/2026/ta-snacket-med-familjen--fi-varnar-for-ai-bedragerier/",
+      "scam_type": "deepfake-video",
+      "kind": "warning",
+      "targets": "consumers",
+      "issuer": "Finansinspektionen (Swedish Financial Supervisory Authority)",
+      "country": [
+        "Sweden"
+      ],
+      "region": "europe",
+      "published_on": "2026-03-06"
+    },
+    "source_url": "https://www.fi.se/sv/publicerat/nyheter/2026/ta-snacket-med-familjen--fi-varnar-for-ai-bedragerier/",
+    "evidence": "Fenomenet är inte nytt, men tekniken för att skapa röster och videor som ser ut och låter äkta har blivit både bättre och tillgängligare. Nu vill Finansinspektionen varna konsumenter för att bedragare utnyttjar AI för investeringsbedrägerier.",
+    "observed_at": "2026-10-06T10:57:26Z"
+  },
+  {
+    "data": {
+      "title": "Justice Department webinar warns scammers use AI to clone voices and spoof family members of older adults",
+      "url": "https://www.justice.gov/elderjustice/video/how-mdts-can-better-respond-ai-enhanced-fraud",
+      "scam_type": "voice-clone",
+      "kind": "warning",
+      "targets": "older adults",
+      "issuer": "U.S. Department of Justice, Elder Justice Initiative",
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "published_on": "2026-03-06"
+    },
+    "source_url": "https://www.justice.gov/elderjustice/video/how-mdts-can-better-respond-ai-enhanced-fraud",
+    "evidence": "Scammers are now using artificial intelligence (AI) to clone voices, spoof family members, and stage realistic fraud schemes.",
+    "observed_at": "2026-10-06T10:45:00Z"
+  },
+  {
+    "data": {
+      "title": "Online scheme selling an 'AI-related' investment spreads AI-generated videos and fake endorsements",
+      "url": "https://www.ttsec.org.tt/public-advisory-fraudulent-online-scheme-using-ai-generated-impersonations/",
+      "scam_type": "fake-ai-investment",
+      "kind": "warning",
+      "issuer": "Trinidad and Tobago Securities and Exchange Commission",
+      "country": [
+        "Trinidad and Tobago"
+      ],
+      "region": "americas",
+      "published_on": "2026-03-05"
+    },
+    "source_url": "https://www.ttsec.org.tt/public-advisory-fraudulent-online-scheme-using-ai-generated-impersonations/",
+    "evidence": "is promoting an AI-related investment opportunity. The TTSEC has confirmed that the Scheme is distributing AI-generated videos, fabricated newspaper articles, altered images and other falsified promotional content purporting to show endorsements",
+    "observed_at": "2026-10-06T11:12:01Z"
+  },
+  {
+    "data": {
+      "title": "Michigan AG warns of AI voice-cloning and deepfake scams impersonating loved ones in distress",
+      "url": "https://www.michigan.gov/ag/news/press-releases/2026/03/04/ag-nessel-reissues-ai-scams-consumer-alert",
+      "scam_type": "voice-clone",
+      "kind": "warning",
+      "channel": [
+        "phone"
+      ],
+      "issuer": "Michigan Department of Attorney General",
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "published_on": "2026-03-04"
+    },
+    "source_url": "https://www.michigan.gov/ag/news/press-releases/2026/03/04/ag-nessel-reissues-ai-scams-consumer-alert",
+    "evidence": "to warn residents about the growing use of artificial intelligence (AI) by fraudsters to take advantage of consumers. AI is being misused to create realistic deepfake audio and video scams.",
+    "observed_at": "2026-10-06T10:45:00Z"
+  },
+  {
+    "data": {
+      "title": "Arizona AG warns of GLP-1 weight-loss scams using AI-generated ads and fake celebrity endorsements",
+      "url": "https://www.azag.gov/press-release/attorney-general-mayes-and-better-business-bureau-warn-arizonans-about-weight-loss",
+      "scam_type": "deepfake-ad",
+      "kind": "warning",
+      "channel": [
+        "ads",
+        "social-media"
+      ],
+      "targets": "consumers seeking weight-loss drugs",
+      "issuer": "Arizona Attorney General's Office",
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "published_on": "2026-03-02"
+    },
+    "source_url": "https://www.azag.gov/press-release/attorney-general-mayes-and-better-business-bureau-warn-arizonans-about-weight-loss",
+    "evidence": "warn consumers about a growing wave of weight loss scams that use artificial intelligence to create deceptive ads, fake celebrity endorsements, and too-good-to-be-true offers for GLP-1 drugs and other products.",
+    "observed_at": "2026-10-06T10:45:00Z"
+  },
+  {
+    "data": {
+      "title": "Fraudsters use AI and deepfakes to make scams look and sound real, New Brunswick regulator warns",
+      "url": "https://fcnb.ca/en/news-alerts/upcoming-webinar-aims-to-help-new-brunswickers-protect-themselves-from-ai-scams",
+      "scam_type": "other",
+      "kind": "warning",
+      "issuer": "Financial and Consumer Services Commission of New Brunswick",
+      "country": [
+        "Canada"
+      ],
+      "region": "americas",
+      "published_on": "2026-02-26"
+    },
+    "source_url": "https://fcnb.ca/en/news-alerts/upcoming-webinar-aims-to-help-new-brunswickers-protect-themselves-from-ai-scams",
+    "evidence": "With the rise of artificial intelligence (AI), new avenues have opened for perpetrators of fraud to mislead people. “These days, fraudsters are using AI and deepfakes to make scams look and sound real",
+    "observed_at": "2026-10-06T11:12:01Z"
+  },
+  {
+    "data": {
+      "title": "Deepfake videos of well-known journalists and officials promote fake online investment platforms, Italian police warn",
+      "url": "https://www.commissariatodips.it/notizie/articolo/attenzione-alle-false-proposte-di-investimenti-online/index.html",
+      "scam_type": "deepfake-ad",
+      "kind": "warning",
+      "channel": [
+        "social-media",
+        "ads"
+      ],
+      "issuer": "Polizia Postale (Italian State Police)",
+      "country": [
+        "Italy"
+      ],
+      "region": "europe",
+      "published_on": "2026-02-26"
+    },
+    "source_url": "https://www.commissariatodips.it/notizie/articolo/attenzione-alle-false-proposte-di-investimenti-online/index.html",
+    "evidence": "I cybercriminali utilizzano tecniche di intelligenza artificiale (deepfake) per riprodurre in modo estremamente realistico volti, voci e movimenti, attribuendo a persone pubbliche dichiarazioni mai fatte.",
+    "observed_at": "2026-10-06T10:57:26Z"
+  },
+  {
+    "data": {
+      "title": "Court typical case: AI voice cloning used to impersonate grandchildren and cheat three elderly people out of cash",
+      "url": "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+      "scam_type": "voice-clone",
+      "kind": "case",
+      "channel": [
+        "phone"
+      ],
+      "targets": "older people living alone",
+      "issuer": "Supreme People's Court",
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "loss_usd": 8770,
+      "loss_stated": "60,000 yuan",
+      "published_on": "2026-02-26"
+    },
+    "source_url": "https://www.court.gov.cn/zixun/xiangqing/490051.html",
+    "evidence": "再由上线利用AI拟声技术模拟被害人亲属声音，冒充亲属取得信任，从三名老人处骗取现金共计6万元",
+    "observed_at": "2026-10-06T11:11:37Z"
+  },
+  {
+    "data": {
+      "title": "Romance scammers use AI to create hyper-realistic personas, face-swapped video calls and cloned voices",
+      "url": "https://www.nsw.gov.au/departments-and-agencies/customer-service/media-releases/think-your-head-and-not-your-heart-to-avoid-scams-valentines-day",
+      "scam_type": "ai-romance",
+      "kind": "warning",
+      "channel": [
+        "email",
+        "phone",
+        "messaging",
+        "video-call"
+      ],
+      "targets": "online daters of all ages; people aged 65 and over tend to lose more",
+      "issuer": "Department of Customer Service (ID Support NSW), NSW Government",
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "published_on": "2026-02-12"
+    },
+    "source_url": "https://www.nsw.gov.au/departments-and-agencies/customer-service/media-releases/think-your-head-and-not-your-heart-to-avoid-scams-valentines-day",
+    "evidence": "NSW residents are being urged to stay alert online this Valentine's Day with scammers increasingly using artificial intelligence (AI) to target people through romance scams.",
+    "observed_at": "2026-10-06T11:01:33Z"
+  },
+  {
+    "data": {
+      "title": "Romance scam case: victim talked into investing in a fake AI application lost more than A$600,000",
+      "url": "https://www.afp.gov.au/news-centre/media-release/48-hour-rom-con-how-business-romance-scams-target-heart-and-wallets",
+      "scam_type": "fake-ai-investment",
+      "kind": "case",
+      "channel": [
+        "messaging"
+      ],
+      "targets": "people over 55, widows, recently separated people and retirees",
+      "issuer": "Australian Federal Police (Joint Policing Cybercrime Coordination Centre)",
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "loss_usd": 423000,
+      "loss_stated": "more than A$600,000",
+      "published_on": "2026-02-09"
+    },
+    "source_url": "https://www.afp.gov.au/news-centre/media-release/48-hour-rom-con-how-business-romance-scams-target-heart-and-wallets",
+    "evidence": "After one month of conversation, the man convinced the victim to invest in a fake AI application. Over a week, the victim transferred more than $600,000 to an overseas bank, including a significant portion borrowed from her mortgage.",
+    "observed_at": "2026-10-06T11:01:33Z"
+  },
+  {
+    "data": {
+      "title": "Romance scammers use AI images, chatbots and live face and voice swaps on video calls",
+      "url": "https://www.afp.gov.au/news-centre/feature/clickfit-romance-scams",
+      "scam_type": "ai-romance",
+      "kind": "warning",
+      "channel": [
+        "social-media",
+        "messaging",
+        "video-call"
+      ],
+      "issuer": "Australian Federal Police (Joint Policing Cybercrime Coordination Centre)",
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "published_on": "2026-02-06"
+    },
+    "source_url": "https://www.afp.gov.au/news-centre/feature/clickfit-romance-scams",
+    "evidence": "AI TREND ALERT: Scammers use AI to create images, videos, chatbots and face swaps that look realistic but are fake. They even use AI during live video-chats to mimic another person's face and voice.",
+    "observed_at": "2026-10-06T11:01:33Z"
+  },
+  {
+    "data": {
+      "title": "An estimated 8 million deepfakes were shared in 2025, often used by criminals to steal money, UK government says",
+      "url": "https://www.gov.uk/government/news/government-leads-global-fight-against-deepfake-threats",
+      "scam_type": "deepfake-video",
+      "kind": "statistics",
+      "issuer": "Home Office",
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "published_on": "2026-02-05"
+    },
+    "source_url": "https://www.gov.uk/government/news/government-leads-global-fight-against-deepfake-threats",
+    "evidence": "8,000,000 deepfakes are estimated to have been shared, up from 500,000 in 2023. Every person in the UK faces growing risk from harmful deepfakes – AI-generated fake images, videos and audio designed to deceive. These materials are often being used by criminals to deceptively steal money",
+    "observed_at": "2026-10-06T10:57:26Z"
+  },
+  {
+    "data": {
+      "title": "Washington regulator warns investors of AI-powered investment scams using chatbots and deepfakes",
+      "url": "https://dfi.wa.gov/news/press/washington-dfi-urges-investors-beware-ai-powered-investment-scams",
+      "scam_type": "other",
+      "kind": "warning",
+      "targets": "investors",
+      "issuer": "Washington State Department of Financial Institutions",
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "published_on": "2026-02-02"
+    },
+    "source_url": "https://dfi.wa.gov/news/press/washington-dfi-urges-investors-beware-ai-powered-investment-scams",
+    "evidence": "From convincing chatbots to realistic deepfakes, fraudsters are increasingly using AI tools to mislead and manipulate.",
+    "observed_at": "2026-10-06T10:45:00Z"
+  },
+  {
+    "data": {
+      "title": "Police bust a vendor that made deepfake face-verification videos so overseas scam centres could pass e-CNY app checks and drain deposits",
+      "url": "https://www.cib.npa.gov.tw/ch/app/news/view?module=news&id=1885&serno=724b3a6f-43bd-4407-8310-0fd1193b4107",
+      "scam_type": "deepfake-video",
+      "kind": "case",
+      "issuer": "Criminal Investigation Bureau, National Police Agency (Taiwan)",
+      "country": [
+        "Taiwan",
+        "China"
+      ],
+      "region": "asia-pacific",
+      "published_on": "2026-02-02"
+    },
+    "source_url": "https://www.cib.npa.gov.tw/ch/app/news/view?module=news&id=1885&serno=724b3a6f-43bd-4407-8310-0fd1193b4107",
+    "evidence": "另配合詐欺機房騙取大陸地區民眾個資後，利用深偽技術（Deepfake）製作被害人臉部驗證影片，順利通過「數字人民幣」APP身分驗證程序，以綁定被害人金融帳戶，藉此盜取移轉被害人存款。",
+    "observed_at": "2026-10-06T11:11:37Z"
+  },
+  {
+    "data": {
+      "title": "Fake-kidnapping voice phishing uses AI-manipulated sounds of a crying child to pressure parents into quick transfers",
+      "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=209831&menuNo=200218",
+      "scam_type": "voice-clone",
+      "kind": "warning",
+      "channel": [
+        "phone"
+      ],
+      "targets": "parents of minor children",
+      "issuer": "Financial Supervisory Service",
+      "country": [
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "published_on": "2026-02-01"
+    },
+    "source_url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=209831&menuNo=200218",
+    "evidence": "최근 미성년 자녀와 학부모의 이름, 연락처 등 정보를 악용하여 자녀 납치를 빙자한 보이스피싱 사기가 성행 ㅇ 특히, AI로 조작한 아이의 울음소리로 부모의 불안감을 자극하고, 소액 송금을 요구",
+    "observed_at": "2026-10-06T11:11:37Z"
+  },
+  {
+    "data": {
+      "title": "French banking supervisor warns scammers use AI to generate voices or videos posing as a banker, friends or relatives",
+      "url": "https://acpr.banque-france.fr/fr/actualites/leiopa-leba-et-lesma-publient-des-fiches-dinformations-pratiques-afin-daider-les-consommateurs-se",
+      "scam_type": "voice-clone",
+      "kind": "warning",
+      "targets": "consumers",
+      "issuer": "Prudential Supervision and Resolution Authority (ACPR), Banque de France",
+      "country": [
+        "France"
+      ],
+      "region": "europe",
+      "published_on": "2026-01-30"
+    },
+    "source_url": "https://acpr.banque-france.fr/fr/actualites/leiopa-leba-et-lesma-publient-des-fiches-dinformations-pratiques-afin-daider-les-consommateurs-se",
+    "evidence": "Les escrocs n’utilisent plus seulement de faux messages et sites internet, mais peuvent grâce à l’IA, générer des voix ou des vidéos, se faisant ainsi passer pour un banquier, des amis ou des membres de la famille.",
+    "observed_at": "2026-10-06T10:57:26Z"
+  },
+  {
+    "data": {
+      "title": "CEO fraud against Swiss firms increasingly uses AI-cloned voices of bosses; one company lost several million francs",
+      "url": "https://www.bacs.admin.ch/de/26w4-de",
+      "scam_type": "voice-clone",
+      "kind": "warning",
+      "channel": [
+        "phone",
+        "messaging",
+        "email"
+      ],
+      "targets": "finance staff at companies, associations and municipalities",
+      "issuer": "Federal Office for Cybersecurity (BACS)",
+      "country": [
+        "Switzerland"
+      ],
+      "region": "europe",
+      "loss_stated": "several million Swiss francs",
+      "published_on": "2026-01-27"
+    },
+    "source_url": "https://www.bacs.admin.ch/de/26w4-de",
+    "evidence": "Wie ein in der letzten Woche publik gewordener Fall im Kanton Schwyz gezeigt hat, bei dem eine Firma mehrere Millionen Franken verloren hat, werden vermehrt auch Deepfake-Audioanrufe oder Sprachnachrichten eingesetzt.",
+    "observed_at": "2026-10-06T10:57:26Z"
+  },
+  {
+    "data": {
+      "title": "Illegal stock-tip chat rooms use AI deepfakes to pose as real experts and win investors' trust, consumer alert warns",
+      "url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=209363&menuNo=200218",
+      "scam_type": "deepfake-ad",
+      "kind": "warning",
+      "channel": [
+        "messaging"
+      ],
+      "targets": "investors",
+      "issuer": "Financial Supervisory Service",
+      "country": [
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "published_on": "2026-01-26"
+    },
+    "source_url": "https://www.fss.or.kr/fss/bbs/B0000188/view.do?nttId=209363&menuNo=200218",
+    "evidence": "특히, 인공지능(AI) 딥페이크 기술을 악용해 실제 존재하는 전문가인 척 행세하여 교묘하게 투자자들의 의심을 차단하고 신뢰를 형성하고 있습니다.",
+    "observed_at": "2026-10-06T11:11:37Z"
+  },
+  {
+    "data": {
+      "title": "Deepfakes of public figures and local business leaders promote fraudulent investment and crypto schemes",
+      "url": "https://www.asc.ca/News-and-Publications/News-Releases/2026/01/19-ASC-warns-Alberta-investors-of-the-top-misleading-investment-fraud-tactics-to-watch-for-in-2026",
+      "scam_type": "deepfake-ad",
+      "kind": "warning",
+      "channel": [
+        "ads",
+        "website",
+        "social-media"
+      ],
+      "targets": "investors",
+      "issuer": "Alberta Securities Commission",
+      "country": [
+        "Canada"
+      ],
+      "region": "americas",
+      "published_on": "2026-01-19"
+    },
+    "source_url": "https://www.asc.ca/News-and-Publications/News-Releases/2026/01/19-ASC-warns-Alberta-investors-of-the-top-misleading-investment-fraud-tactics-to-watch-for-in-2026",
+    "evidence": "Attempts by scammers to impersonate local individuals, including deepfakes of Alberta-based business leaders, industry experts, and other credible provincial public figures.",
+    "observed_at": "2026-10-06T11:12:01Z"
+  },
+  {
+    "data": {
+      "title": "Scam groups use AI-generated fake doctors in videos and ads to sell unlabelled medicine online",
+      "url": "https://www.pbs.npa.gov.tw/ch/app/data/view?module=wg183&id=18740&serno=8cdb7291-2c5f-477e-aa44-853dc0a4eaa1",
+      "scam_type": "deepfake-ad",
+      "kind": "warning",
+      "channel": [
+        "social-media",
+        "ads",
+        "messaging"
+      ],
+      "targets": "people urgently seeking medical treatment",
+      "issuer": "Police Broadcasting Service, National Police Agency (Taiwan), citing the Criminal Investigation Bureau",
+      "country": [
+        "Taiwan"
+      ],
+      "region": "asia-pacific",
+      "published_on": "2026-01-11"
+    },
+    "source_url": "https://www.pbs.npa.gov.tw/ch/app/data/view?module=wg183&id=18740&serno=8cdb7291-2c5f-477e-aa44-853dc0a4eaa1",
+    "evidence": "刑事警察局分析指出，詐騙集團近來濫用AI科技，得以輕易冒用專業人士身分，於網路販售不實商品。尤其假冒專科醫師高價兜售藥品的詐騙手法近期有升溫趨勢，甚至以AI生成虛構醫師形象與賣藥影片",
+    "observed_at": "2026-10-06T11:11:37Z"
+  },
+  {
+    "data": {
+      "title": "Investment scams lure people with 'AI diagnosis' websites promising analysis reports, then steer them to social media",
+      "url": "https://www.fsa.go.jp/receipt/toushisagi_koukoku/shuhou.html",
+      "scam_type": "fake-ai-tool",
+      "kind": "warning",
+      "channel": [
+        "website",
+        "social-media"
+      ],
+      "issuer": "Financial Services Agency",
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "published_on": "2025-12-23"
+    },
+    "source_url": "https://www.fsa.go.jp/receipt/toushisagi_koukoku/shuhou.html",
+    "evidence": "AI診断を謳い文句にウェブサイトへ誘い込み、分析レポートを配信すると偽ってSNSへ誘導し、投資話を持ち掛ける。",
+    "observed_at": "2026-10-06T11:11:37Z"
+  },
+  {
+    "data": {
+      "title": "SEC investor alert: group-chat investment scams use deepfake videos of impersonated experts and tout AI trading tools",
+      "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-alerts/gateway-to-investment-scams",
+      "scam_type": "deepfake-ad",
+      "kind": "warning",
+      "channel": [
+        "messaging",
+        "social-media",
+        "ads",
+        "app-store"
+      ],
+      "targets": "investors",
+      "issuer": "U.S. Securities and Exchange Commission (Office of Investor Education and Assistance)",
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "published_on": "2025-12-22"
+    },
+    "source_url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-alerts/gateway-to-investment-scams",
+    "evidence": "The purported leader of the group chat may be a well-known person who is being impersonated, sometimes using artificial intelligence (AI) such as “deepfake” videos.",
+    "observed_at": "2026-10-06T10:45:00Z"
+  },
+  {
+    "data": {
+      "title": "SEC charges fake crypto trading platforms and investment clubs that lured investors with AI-generated investment tips",
+      "url": "https://www.sec.gov/newsroom/press-releases/2025-144-sec-charges-three-purported-crypto-asset-trading-platforms-four-investment-clubs-scheme-targeted",
+      "scam_type": "fake-ai-investment",
+      "kind": "case",
+      "channel": [
+        "ads",
+        "social-media",
+        "messaging"
+      ],
+      "targets": "U.S. retail investors",
+      "issuer": "U.S. Securities and Exchange Commission",
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "loss_usd": 14000000,
+      "loss_stated": "more than $14 million",
+      "published_on": "2025-12-22"
+    },
+    "source_url": "https://www.sec.gov/newsroom/press-releases/2025-144-sec-charges-three-purported-crypto-asset-trading-platforms-four-investment-clubs-scheme-targeted",
+    "evidence": "The clubs gained investors’ confidence with supposedly AI-generated investment tips before luring investors to open and fund accounts on purported crypto asset trading platforms",
+    "observed_at": "2026-10-06T10:45:00Z"
+  },
+  {
+    "data": {
+      "title": "Pump-and-dump promoters use AI-generated deepfake videos of public figures to push investments",
+      "url": "https://www.fca.org.uk/investsmart/pump-and-dump-schemes",
+      "scam_type": "deepfake-ad",
+      "kind": "warning",
+      "channel": [
+        "ads",
+        "social-media",
+        "messaging"
+      ],
+      "targets": "investors",
+      "issuer": "Financial Conduct Authority",
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "published_on": "2025-12-19"
+    },
+    "source_url": "https://www.fca.org.uk/investsmart/pump-and-dump-schemes",
+    "evidence": "One growing trend is the use of AI-generated videos, or deepfakes that are used to impersonate public figures or well-known personalities.",
+    "observed_at": "2026-10-06T10:57:26Z"
+  },
+  {
+    "data": {
+      "title": "AI-generated voice messages impersonate senior U.S. officials in an ongoing smishing and vishing campaign",
+      "url": "https://www.ic3.gov/PSA/2025/PSA251219",
+      "scam_type": "voice-clone",
+      "kind": "warning",
+      "channel": [
+        "messaging"
+      ],
+      "targets": "officials' family members and personal acquaintances",
+      "issuer": "Federal Bureau of Investigation",
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "published_on": "2025-12-19"
+    },
+    "source_url": "https://www.ic3.gov/PSA/2025/PSA251219",
+    "evidence": "Since at least 2023, malicious actors have sent text messages and AI -generated voice messages",
+    "observed_at": "2026-10-06T10:45:00Z"
+  },
+  {
+    "data": {
+      "title": "EU financial supervisors warn fraudsters use AI-generated voices or videos to impersonate friends or family",
+      "url": "https://www.esma.europa.eu/press-news/esma-news/esas-publish-key-tips-help-consumers-detect-prevent-and-act-online-frauds-and",
+      "scam_type": "voice-clone",
+      "kind": "warning",
+      "targets": "consumers",
+      "issuer": "European Supervisory Authorities (EBA, EIOPA and ESMA)",
+      "country": [
+        "European Union"
+      ],
+      "region": "europe",
+      "published_on": "2025-12-15"
+    },
+    "source_url": "https://www.esma.europa.eu/press-news/esma-news/esas-publish-key-tips-help-consumers-detect-prevent-and-act-online-frauds-and",
+    "evidence": "Technologies like AI and blockchain make frauds and scams more convincing and harder to detect. For example, AI-generated voices or videos can impersonate friends or family members.",
+    "observed_at": "2026-10-06T10:57:26Z"
+  },
+  {
+    "data": {
+      "title": "Macao recorded its first AI deepfake fraud cases in 2025: 3 cases reported from late April to end-November, with no actual losses",
+      "url": "https://www.gov.mo/zh-hant/news/1199114/",
+      "scam_type": "deepfake-video",
+      "kind": "statistics",
+      "issuer": "Government Information Bureau, Macao SAR (Secretary for Security crime briefing)",
+      "country": [
+        "Macao"
+      ],
+      "region": "asia-pacific",
+      "published_on": "2025-12-12"
+    },
+    "source_url": "https://www.gov.mo/zh-hant/news/1199114/",
+    "evidence": "尤其是今年4月底，本澳首次出現涉及AI深偽技術的詐騙案件，至11月底警方已接報3宗個案，雖未造成實際損失，但仍需要公眾保持高度警惕",
+    "observed_at": "2026-10-06T11:11:37Z"
+  },
+  {
+    "data": {
+      "title": "International action hits crypto investment fraud network and the affiliate marketers behind its deepfake social media ads",
+      "url": "https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million",
+      "scam_type": "deepfake-ad",
+      "kind": "case",
+      "channel": [
+        "ads",
+        "social-media",
+        "phone"
+      ],
+      "targets": "potential investors",
+      "issuer": "Europol",
+      "country": [
+        "France",
+        "Belgium",
+        "Germany"
+      ],
+      "region": "europe",
+      "published_on": "2025-12-04"
+    },
+    "source_url": "https://www.europol.europa.eu/media-press/newsroom/news/international-takedown-of-cryptocurrency-fraud-network-laundering-over-eur-700-million",
+    "evidence": "Coordinated actions were taken against the companies and suspects behind fraudulent advertising campaigns on social media platforms. In recent years, deceptive advertisements impersonating renowned media outlets, celebrities and politicians – often using deepfake videos",
+    "observed_at": "2026-10-06T10:57:26Z"
+  },
+  {
+    "data": {
+      "title": "Task force warns of widespread AI scams that clone voices and fake faces to pose as friends, colleagues or family",
+      "url": "https://www.ojk.go.id/id/berita-dan-kegiatan/info-terkini/Pages/Satgas-PASTI-Imbau-Masyarakat-Waspadai-Penipuan-Menggunakan-AI.aspx",
+      "scam_type": "voice-clone",
+      "kind": "warning",
+      "issuer": "Satgas PASTI (Task Force on Illegal Financial Activities), Financial Services Authority (OJK)",
+      "country": [
+        "Indonesia"
+      ],
+      "region": "asia-pacific",
+      "published_on": "2025-11-15"
+    },
+    "source_url": "https://www.ojk.go.id/id/berita-dan-kegiatan/info-terkini/Pages/Satgas-PASTI-Imbau-Masyarakat-Waspadai-Penipuan-Menggunakan-AI.aspx",
+    "evidence": "Satuan Tugas Pemberantasan Aktivitas Keuangan Ilegal (Satgas PASTI) mengimbau masyarakat untuk mewaspadai modus penipuan memanfaatkan Artificial Intelligence (AI) yang marak terjadi dan menimbulkan kerugian.",
+    "observed_at": "2026-10-06T11:11:37Z"
+  },
+  {
+    "data": {
+      "title": "Central bank says suspects who made AI fake videos from victims' photos were testing Chinese, not Thai, bank face checks",
+      "url": "https://www.bot.or.th/th/news-and-media/news/news-20251110-2.html",
+      "scam_type": "deepfake-video",
+      "kind": "case",
+      "issuer": "Bank of Thailand",
+      "country": [
+        "Thailand"
+      ],
+      "region": "asia-pacific",
+      "published_on": "2025-11-10"
+    },
+    "source_url": "https://www.bot.or.th/th/news-and-media/news/news-20251110-2.html",
+    "evidence": "ที่ใช้ AI สร้างคลิปวิดีโอปลอมจากภาพนิ่งของเหยื่อ เพื่อหลอกระบบยืนยันตัวตนของธนาคารนั้น จากการตรวจสอบพบว่า เป็นกรณี scammer ชาวจีนทดสอบระบบยืนยันตัวตนโดยใช้ข้อมูลและแอปพลิเคชั่นของจีนเท่านั้น",
+    "observed_at": "2026-10-06T11:11:37Z"
+  },
+  {
+    "data": {
+      "title": "Central Bank of Ireland sees rise in AI-made deepfake ads and profiles impersonating public figures to push fake investment platforms",
+      "url": "https://www.centralbank.ie/news/article/press-release-central-bank-of-ireland-warns-consumers-about-changing-fraud-landscape-10-november-2025",
+      "scam_type": "deepfake-ad",
+      "kind": "warning",
+      "channel": [
+        "social-media",
+        "ads"
+      ],
+      "targets": "consumers",
+      "issuer": "Central Bank of Ireland",
+      "country": [
+        "Ireland"
+      ],
+      "region": "europe",
+      "published_on": "2025-11-10"
+    },
+    "source_url": "https://www.centralbank.ie/news/article/press-release-central-bank-of-ireland-warns-consumers-about-changing-fraud-landscape-10-november-2025",
+    "evidence": "The Central Bank has noted a rise in AI being used to create realistic social media ads and profiles impersonating public or business figures",
+    "observed_at": "2026-10-06T10:57:26Z"
+  },
+  {
+    "data": {
+      "title": "Scam groups use AI-generated lifelike videos of public figures to endorse products and investments, police warn",
+      "url": "https://www.cib.npa.gov.tw/ch/app/news/view?module=news&id=1887&serno=6bd1fbb5-2ef3-47a4-b5a4-b223046a1cc2",
+      "scam_type": "deepfake-ad",
+      "kind": "warning",
+      "channel": [
+        "social-media",
+        "ads"
+      ],
+      "issuer": "Criminal Investigation Bureau, National Police Agency (Taiwan)",
+      "country": [
+        "Taiwan"
+      ],
+      "region": "asia-pacific",
+      "published_on": "2025-11-10"
+    },
+    "source_url": "https://www.cib.npa.gov.tw/ch/app/news/view?module=news&id=1887&serno=6bd1fbb5-2ef3-47a4-b5a4-b223046a1cc2",
+    "evidence": "揭露詐騙集團結合人工智慧（AI）影片生成技術，製作假冒公眾人物擬真影片行騙的最新態樣，呼籲全民提高警覺、強化識詐能力，防範受害。",
+    "observed_at": "2026-10-06T11:11:37Z"
+  }
+]

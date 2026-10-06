@@ -1,0 +1,2119 @@
+[
+  {
+    "data": {
+      "name": "Chevening Scholarships",
+      "url": "https://www.chevening.org/scholarships/",
+      "provider": "UK Government (FCDO)",
+      "funder_type": "government",
+      "host_country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "Payment of tuition fees, economy travel to and from your country of residence, an arrival allowance, a monthly personal living allowance (stipend)",
+      "eligibility": "Be a citizen of a Chevening-eligible country or territory, commit to returning to your home country for at least two years after your scholarship ends, have at least two years’ work experience",
+      "opens_on": "2026-08-04",
+      "deadline": "2026-10-06"
+    },
+    "source_url": "https://www.chevening.org/scholarships/application-timeline/",
+    "evidence": "6 October 2026 Applications close at 11:00 UTC The deadline for applications is 6 October 2026 at 11:00 UTC. You will not be able to access the online application system after this date.",
+    "observed_at": "2026-10-06T10:25:52Z"
+  },
+  {
+    "data": {
+      "name": "Fulbright Canada Graduate Studies Award",
+      "url": "https://us.fulbrightonline.org/countries/western-hemisphere/canada/1908",
+      "provider": "Fulbright Canada",
+      "funder_type": "government",
+      "host_country": [
+        "Canada"
+      ],
+      "region": "americas",
+      "level": [
+        "master",
+        "phd"
+      ],
+      "coverage": "partial",
+      "value_stated": "US$25,000 fixed sum for one eight-month academic year (September to April)",
+      "eligibility": "U.S. citizens who will hold a bachelor’s degree by the award start date and do not have a Ph.D. degree",
+      "deadline": "2026-10-06"
+    },
+    "source_url": "https://us.fulbrightonline.org/countries/western-hemisphere/canada/1908",
+    "evidence": "The 2027-2028 Competition is now open. The National Deadline is October 6, 2026 at 5pm Eastern Time.",
+    "observed_at": "2026-10-06T10:05:52Z"
+  },
+  {
+    "data": {
+      "name": "Fulbright Graduate Degree Award (Mexico)",
+      "url": "https://us.fulbrightonline.org/countries/western-hemisphere/mexico/1644",
+      "provider": "COMEXUS (Fulbright Commission in Mexico)",
+      "funder_type": "government",
+      "host_country": [
+        "Mexico"
+      ],
+      "region": "americas",
+      "level": [
+        "master",
+        "phd"
+      ],
+      "coverage": "full",
+      "value_stated": "Monthly maintenance, up to 50,000 pesos in tuition per year, and one round-trip ticket United States-Mexico per year",
+      "eligibility": "U.S. citizens who will hold a bachelor’s degree by the award start date and do not have a Ph.D. degree",
+      "deadline": "2026-10-06"
+    },
+    "source_url": "https://us.fulbrightonline.org/countries/western-hemisphere/mexico/1644",
+    "evidence": "The 2027-2028 Competition is now open. The National Deadline is October 6, 2026 at 5pm Eastern Time.",
+    "observed_at": "2026-10-06T10:05:17Z"
+  },
+  {
+    "data": {
+      "name": "Fulbright Postgraduate Scholarships to the UK",
+      "url": "https://fulbright.org.uk/our-programmes/fulbright-scholarships-to-the-uk/us-postgraduates/",
+      "provider": "US-UK Fulbright Commission",
+      "funder_type": "government",
+      "host_country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "level": [
+        "master",
+        "phd"
+      ],
+      "coverage": "full",
+      "value_stated": "Tuition waiver, a personal living allowance (stipend), sickness and accident coverage",
+      "eligibility": "Be a US citizen and a non-UK resident, hold a Bachelor degree or equivalent professional training/experience in a relevant field before departure to the UK",
+      "deadline": "2026-10-06"
+    },
+    "source_url": "https://fulbright.org.uk/our-programmes/fulbright-scholarships-to-the-uk/us-postgraduates/",
+    "evidence": "our Postgraduate Student Awards provide the only scholarships available for academic work in any graduate programme at any recognised UK university. Applications for US Postgraduate Awards are open for 2027-28, and will close on 6 October 2026, 5 PM EST.",
+    "observed_at": "2026-10-06T10:16:19Z"
+  },
+  {
+    "data": {
+      "name": "Knight-Hennessy Scholars",
+      "url": "https://knight-hennessy.stanford.edu/admission/preparing-your-applications/application-deadlines",
+      "provider": "Stanford University (Knight-Hennessy Scholars)",
+      "funder_type": "university",
+      "host_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "level": [
+        "master",
+        "phd"
+      ],
+      "coverage": "full",
+      "value_stated": "A fellowship applied directly to cover tuition and associated fees, a stipend for living and academic expenses, a travel stipend",
+      "eligibility": "Citizens and residents of all countries who earned a bachelor's degree in January 2020 or later and apply to a full-time Stanford graduate degree program",
+      "deadline": "2026-10-06"
+    },
+    "source_url": "https://knight-hennessy.stanford.edu/admission/preparing-your-applications/application-deadlines",
+    "evidence": "The Knight-Hennessy Scholars application deadline is October 6, 2026, 1:00pm Pacific Time . The KHS application deadline is the same for all applicants, regardless of the Stanford graduate degree program to which you will apply.",
+    "observed_at": "2026-10-06T10:17:25Z"
+  },
+  {
+    "data": {
+      "name": "Fulbright Foreign Student Program – Doktorand:innenprogramm (Germany)",
+      "url": "https://www.fulbright.de/stipendien/programm/doktorandinnenprogramm",
+      "provider": "German-American Fulbright Commission (Fulbright Germany)",
+      "funder_type": "government",
+      "host_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "level": [
+        "phd"
+      ],
+      "coverage": "partial",
+      "value_stated": "A monthly living-cost allowance of 2,400 euros (for up to six months)",
+      "eligibility": "German citizens doing a doctorate at a university (or a university of applied sciences with doctoral rights)",
+      "deadline": "2026-10-07"
+    },
+    "source_url": "https://www.fulbright.de/stipendien/programm/doktorandinnenprogramm",
+    "evidence": "Das Doktorand:innenprogramm 2027-28 ist aktuell mit einer Bewerbungsfrist am 7. Oktober 2026 ausgeschrieben. Die Ausschreibung bezieht sich auf einen Aufenthaltsbeginn in den USA ab dem 1. August 2027 und einem Aufenthaltsende vor dem 31. Mai 2028.",
+    "observed_at": "2026-10-06T10:04:22Z"
+  },
+  {
+    "data": {
+      "name": "International Research Training Program Scholarship (IRTP)",
+      "url": "https://www.uts.edu.au/for-students/admissions-entry/scholarships/scholarships-search/international-research-training-program-scholarship-irtp",
+      "provider": "Australian Government (Department of Education), through UTS",
+      "funder_type": "government",
+      "host_country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "level": [
+        "phd",
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "Tuition fees, Overseas Student Health Cover and a living allowance of $40,500 per annum, tax-free (from 1 January 2026)",
+      "eligibility": "Overseas students undertaking a higher degree by research at UTS",
+      "opens_on": "2026-09-07",
+      "deadline": "2026-10-07"
+    },
+    "source_url": "https://www.uts.edu.au/for-students/admissions-entry/scholarships/scholarships-search/international-research-training-program-scholarship-irtp",
+    "evidence": "Application Open 07/09/2026 Application Close 07/10/2026 STATUS Open",
+    "observed_at": "2026-10-06T10:33:10Z"
+  },
+  {
+    "data": {
+      "name": "Rhodes Scholarships for the United States",
+      "url": "https://www.rhodeshouse.ox.ac.uk/scholarships/applications/united-states/",
+      "provider": "Rhodes Trust",
+      "funder_type": "foundation",
+      "host_country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "level": [
+        "master",
+        "phd"
+      ],
+      "coverage": "full",
+      "value_stated": "University of Oxford course fees, as well as providing an annual stipend. For the 2025-26 academic year, the stipend is £20,400 per annum (£1,700 per month)",
+      "opens_on": "2026-07-01",
+      "deadline": "2026-10-07"
+    },
+    "source_url": "https://www.rhodeshouse.ox.ac.uk/scholarships/applications/united-states/",
+    "evidence": "Opening date: 1 July 2026 Closing date: 23:59, Eastern Time, 7 October 2026 For full information on the application process for the Rhodes Scholarships for the United States of America",
+    "observed_at": "2026-10-06T10:05:33Z"
+  },
+  {
+    "data": {
+      "name": "Chevening Europe Defence and Security Fellowship",
+      "url": "https://www.chevening.org/fellowship/chevening-europe-defence-and-security-fellowship/",
+      "provider": "UK Government (FCDO)",
+      "funder_type": "government",
+      "host_country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "level": [
+        "short-course"
+      ],
+      "coverage": "full",
+      "value_stated": "Full programme fees, living expenses for the duration of the fellowship, including pre-arranged accommodation close to Oxford, return economy airfare",
+      "eligibility": "Mid-career professionals from across Europe who have demonstrated leadership potential in security and defence",
+      "deadline": "2026-10-12"
+    },
+    "source_url": "https://www.chevening.org/fellowship/chevening-europe-defence-and-security-fellowship/",
+    "evidence": "Chevening Europe Defence and Security Fellowship Hosted by Cranfield University Open for applications until 12 October 2026, at 11:00 (UTC) Apply today Overview The Chevening Europe Defence and Security Fellowship is funded by the UK Foreign, Commonwealth and Development Office (FCDO)",
+    "observed_at": "2026-10-06T10:13:12Z"
+  },
+  {
+    "data": {
+      "name": "Fulbright Foreign Student Program – Fulbright Visiting Student Researcher Program (Colombia)",
+      "url": "https://fulbright.edu.co/portfolio-academico/fulbright-visiting-student-researcher-program/",
+      "provider": "Fulbright Commission Colombia",
+      "funder_type": "government",
+      "host_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "level": [
+        "phd"
+      ],
+      "coverage": "partial",
+      "value_stated": "A stipend for living costs during the stay in the US and a round-trip international air ticket",
+      "eligibility": "Colombian citizens resident in Colombia and enrolled in a doctoral programme at a Colombian university",
+      "opens_on": "2026-08-19",
+      "deadline": "2026-10-12"
+    },
+    "source_url": "https://fulbright.edu.co/portfolio-academico/fulbright-visiting-student-researcher-program/",
+    "evidence": "Proceso de aplicación Apertura de convocatoria: 19 de agosto de 2026 Cierre de convocatoria: 12 de octubre de 2026 a las 11:59pm (hora Colombia)",
+    "observed_at": "2026-10-06T10:08:41Z"
+  },
+  {
+    "data": {
+      "name": "Fulbright Foreign Student Program – Fulbright Junior Research Award (Poland)",
+      "url": "https://fulbright.edu.pl/junior-research/",
+      "provider": "Polish-U.S. Fulbright Commission",
+      "funder_type": "government",
+      "host_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "level": [
+        "phd"
+      ],
+      "coverage": "partial",
+      "value_stated": "Funding to cover living costs in the USA",
+      "eligibility": "Polish citizens preparing a doctoral dissertation at Polish research institutions",
+      "opens_on": "2026-05-12",
+      "deadline": "2026-10-13"
+    },
+    "source_url": "https://fulbright.edu.pl/junior-research/",
+    "evidence": "Fulbright Junior Research Award 2027-28 Nabór jest otwarty. Wnioski przyjmujemy do 13 października 2026 r. do godziny 15:00 czasu polskiego. Fulbright Junior Research Award to stypendia dla osób z polskim obywatelstwem, przygotowujących rozprawę doktorską w polskich instytucjach naukowych.",
+    "observed_at": "2026-10-06T10:28:42Z"
+  },
+  {
+    "data": {
+      "name": "Mandela Washington Fellowship for Young African Leaders",
+      "url": "https://www.mandelawashingtonfellowship.org/apply/",
+      "provider": "U.S. Department of State (Bureau of Educational and Cultural Affairs)",
+      "funder_type": "government",
+      "host_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "level": [
+        "short-course"
+      ],
+      "coverage": "partial",
+      "eligibility": "Young African leaders between the ages of 25 and 35 on or before the application deadline, citizens and residents of an eligible Sub-Saharan African country",
+      "opens_on": "2026-09-22",
+      "deadline": "2026-10-13"
+    },
+    "source_url": "https://www.mandelawashingtonfellowship.org/apply/",
+    "evidence": "Application and Selection Timeline September 22, 2026 | Application opens October 13, 2026 | Application deadline",
+    "observed_at": "2026-10-06T10:32:59Z"
+  },
+  {
+    "data": {
+      "name": "American-Scandinavian Foundation-Fulbright Commission Fellowship (Iceland)",
+      "url": "https://fulbright.is/asf-fellowship/",
+      "provider": "American-Scandinavian Foundation (ASF) with the Iceland-United States Educational Commission (Fulbright Commission)",
+      "funder_type": "foundation",
+      "host_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "level": [
+        "master",
+        "phd"
+      ],
+      "coverage": "partial",
+      "value_stated": "Grants of USD 15,000",
+      "eligibility": "Icelandic students pursuing a graduate degree or research project in any field at a U.S. university",
+      "deadline": "2026-10-14"
+    },
+    "source_url": "https://fulbright.is/asf-fellowship/",
+    "evidence": "The deadline for Icelandic grantees applying for funding through ASF for the 2027-2028 is the 14th of October 2026.",
+    "observed_at": "2026-10-06T10:31:37Z"
+  },
+  {
+    "data": {
+      "name": "Fulbright Foreign Student Program – Fulbright-styrkir til framhaldsnáms (Iceland)",
+      "url": "https://fulbright.is/grants-to-the-us/framhaldsnam/",
+      "provider": "Fulbright Commission Iceland",
+      "funder_type": "government",
+      "host_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "level": [
+        "master",
+        "phd"
+      ],
+      "coverage": "partial",
+      "value_stated": "Up to USD 24,000 for a two-year master's, up to USD 12,000 for a shorter master's, up to USD 10,000 for doctoral study",
+      "eligibility": "Icelandic students who plan to start a master's or doctoral degree in the United States",
+      "deadline": "2026-10-14"
+    },
+    "source_url": "https://fulbright.is/grants-to-the-us/framhaldsnam/",
+    "evidence": "2-ára mastersnám – allt að USD 24.000 styttra mastersnám – allt að USD 12.000 doktorsnám – allt að USD 10.000 Endanleg styrkfjárhæð er ákveðin síðar þegar frekari upplýsingar um aðra fjármögnun liggur fyrir. Umsóknarfrestur fyrir skólaárið 2027-2028 er til og með 14. október 2026.",
+    "observed_at": "2026-10-06T10:05:48Z"
+  },
+  {
+    "data": {
+      "name": "Gates Cambridge Scholarship",
+      "url": "https://www.gatescambridge.org/programme/the-scholarship/",
+      "provider": "Gates Cambridge Trust",
+      "funder_type": "foundation",
+      "host_country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "level": [
+        "master",
+        "phd"
+      ],
+      "coverage": "full",
+      "value_stated": "The University Composition Fee, a maintenance allowance for a single student (£23,152 for 12 months at the 2026-27 rate), inbound visa costs",
+      "eligibility": "A citizen of any country outside the United Kingdom applying to pursue one of the following courses at the University of Cambridge: PhD, MLitt, one-year postgraduate course",
+      "opens_on": "2026-09-11",
+      "deadline": "2026-10-14"
+    },
+    "source_url": "https://www.gatescambridge.org/apply/timeline/",
+    "evidence": "What stage? Date Applications open 11th September 2026 Application deadline Wednesday 14th October 2026 (Full application must be submitted by 11:59pm UK time on the date given)",
+    "observed_at": "2026-10-06T10:00:33Z"
+  },
+  {
+    "data": {
+      "name": "Fulbright Foreign Student Program – Programa Fulbright Estadías Doctorales de Investigación (Chile)",
+      "url": "https://fulbrightchile.cl/becas/programa-fulbright-estadias-doctorales-de-investigacion/",
+      "provider": "Fulbright Commission Chile",
+      "funder_type": "government",
+      "host_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "level": [
+        "phd"
+      ],
+      "coverage": "partial",
+      "value_stated": "Support for living costs, health insurance during the stay and processing of the corresponding visas",
+      "eligibility": "Chilean students in a doctoral programme at a Chilean university accredited by the CNA",
+      "deadline": "2026-10-15"
+    },
+    "source_url": "https://fulbrightchile.cl/becas/programa-fulbright-estadias-doctorales-de-investigacion/",
+    "evidence": "convocatoria abierta hasta el jueves 15 de octubre de 2026. El Programa Fulbright Estadías Doctorales ofrece a estudiantes chilenos/as que estén cursando un programa de doctorado acreditado por la Comisión Nacional de Acreditación (CNA) en una universidad chilena",
+    "observed_at": "2026-10-06T10:20:02Z"
+  },
+  {
+    "data": {
+      "name": "Thouron Award for Penn Graduates",
+      "url": "https://www.thouronaward.org/apply-from-penn/",
+      "provider": "The Thouron Award",
+      "funder_type": "foundation",
+      "host_country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "level": [
+        "master",
+        "phd"
+      ],
+      "coverage": "full",
+      "value_stated": "Full tuition and fees for up to two years (Master’s) or three years (Ph.D.), an annual stipend sufficient to cover living costs",
+      "eligibility": "U.S. citizens who normally reside in the United States, affiliated with the University of Pennsylvania as graduating seniors, recent graduates, or current graduate or professional students",
+      "deadline": "2026-10-15"
+    },
+    "source_url": "https://www.thouronaward.org/apply-from-penn/",
+    "evidence": "What is the application deadline? 15 October 2026, with references due 22 October 2026.",
+    "observed_at": "2026-10-06T10:15:24Z"
+  },
+  {
+    "data": {
+      "name": "Kennedy Scholarships",
+      "url": "https://www.kennedytrust.org.uk/scholarships/",
+      "provider": "Kennedy Memorial Trust",
+      "funder_type": "foundation",
+      "host_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "level": [
+        "master",
+        "phd"
+      ],
+      "coverage": "full",
+      "value_stated": "Full costs of tuition and health insurance, and a means-tested bursary of up to $33,000 to cover living costs",
+      "eligibility": "British citizens ordinarily resident in the UK, wholly or mainly educated in the UK prior to university and (will be) graduates of a UK university",
+      "deadline": "2026-10-18"
+    },
+    "source_url": "https://www.kennedytrust.org.uk/scholarships/",
+    "evidence": "The closing date for applications for a 2027/28 Kennedy Scholarship is 18 October 2026.",
+    "observed_at": "2026-10-06T10:12:57Z"
+  },
+  {
+    "data": {
+      "name": "Graduate Research School Scholarships (UQGRSS) – includes Research Training Program (RTP)",
+      "url": "https://scholarships.uq.edu.au/scholarship/graduate-school-scholarships-uqgss-%E2%80%93-includes-rtp",
+      "provider": "The University of Queensland (with the Australian Government Research Training Program)",
+      "funder_type": "university",
+      "host_country": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "level": [
+        "phd",
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "Tuition fees, a living stipend of $39,220 per annum tax free (2026 rate, indexed annually) and single Overseas Student Health Cover",
+      "eligibility": "International applicants starting a PhD, MPhil or research-focused professional doctorate in Research Quarter 4 2027 or early 2028",
+      "opens_on": "2026-08-20",
+      "deadline": "2026-10-19"
+    },
+    "source_url": "https://scholarships.uq.edu.au/scholarship/graduate-school-scholarships-uqgss-%E2%80%93-includes-rtp",
+    "evidence": "This round is for international applicants only. Thursday 20 August 2026 – Scholarship consideration begins. ( Applicants prepare documents and submit EOI.) How to submit an EOI . Monday 19 October 2026 – Application closing date .",
+    "observed_at": "2026-10-06T10:33:10Z"
+  },
+  {
+    "data": {
+      "name": "Commonwealth Master’s Scholarships",
+      "url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships/",
+      "provider": "UK Government (FCDO)",
+      "funder_type": "government",
+      "host_country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "Approved tuition fees, stipend (living allowance) at the rate of £1,712 per month, or £2,000 per month for those at universities in the London metropolitan area",
+      "eligibility": "Candidates from eligible low and middle income Commonwealth countries, to undertake full-time taught Master’s study at a UK university",
+      "deadline": "2026-10-20"
+    },
+    "source_url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships/",
+    "evidence": "Applications for Commonwealth Master’s Scholarships for the 2027/28 academic year are now open . The closing date for applications is 16:00 BST on Tuesday 20 October .",
+    "observed_at": "2026-10-06T10:25:52Z"
+  },
+  {
+    "data": {
+      "name": "Commonwealth PhD Scholarships",
+      "url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-phd-scholarships-for-least-developed-countries-and-vulnerable-states/",
+      "provider": "UK Government (FCDO)",
+      "funder_type": "government",
+      "host_country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "level": [
+        "phd"
+      ],
+      "coverage": "full",
+      "value_stated": "Approved tuition fees, stipend (living allowance) at the rate of £1,712 per month, or £2,000 per month for those at universities in the London metropolitan area",
+      "eligibility": "Applicants from least developed countries and vulnerable states, as classified by the OECD Development Assistance Committee (DAC), in the Commonwealth",
+      "deadline": "2026-10-20"
+    },
+    "source_url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-phd-scholarships-for-least-developed-countries-and-vulnerable-states/",
+    "evidence": "Applications for Commonwealth PhD Scholarships for the 2027/28 academic year are now open . The closing date for applications is 16:00 BST on Tuesday 20 October .",
+    "observed_at": "2026-10-06T10:03:54Z"
+  },
+  {
+    "data": {
+      "name": "Marshall Plan Scholarships",
+      "url": "https://www.marshallplan.at/overview-scholarships",
+      "provider": "Austrian Marshall Plan Foundation",
+      "funder_type": "foundation",
+      "host_country": [
+        "United States",
+        "Austria"
+      ],
+      "region": "americas",
+      "level": [
+        "master",
+        "phd"
+      ],
+      "coverage": "partial",
+      "value_stated": "€4,000–€10,000 for research visits of at least three months",
+      "eligibility": "Students enrolled at any U.S. university or an Austrian partner university studying a technical, natural or economic field",
+      "opens_on": "2026-09-01",
+      "deadline": "2026-10-30"
+    },
+    "source_url": "https://www.marshallplan.at/overview-scholarships",
+    "evidence": "Open Call: Application: September 1, 2026 to October 30, 2026 Earliest start of study at the host university: January 4, 2027",
+    "observed_at": "2026-10-06T10:12:55Z"
+  },
+  {
+    "data": {
+      "name": "Programa de Becas República de Chile para estudios de Magíster",
+      "url": "https://www.agcid.gob.cl/becas/becas-para-extranjeros",
+      "provider": "Chilean Agency for International Development Cooperation (AGCID)",
+      "funder_type": "government",
+      "host_country": [
+        "Chile"
+      ],
+      "region": "americas",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "deadline": "2026-10-30"
+    },
+    "source_url": "https://appspublic.agci.cl/convocatorias/extranjeros.php",
+    "evidence": "Programa de Becas de Cooperación Sur Sur-Republica de Chile 2027 30/10/2026",
+    "observed_at": "2026-10-06T10:10:34Z"
+  },
+  {
+    "data": {
+      "name": "Programa de Becas de Cooperación Sur Sur-Nelson Mandela",
+      "url": "https://appspublic.agci.cl/convocatorias/extranjeros.php",
+      "provider": "Chilean Agency for International Development Cooperation (AGCID)",
+      "funder_type": "government",
+      "host_country": [
+        "Chile"
+      ],
+      "region": "americas",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "deadline": "2026-10-30"
+    },
+    "source_url": "https://appspublic.agci.cl/convocatorias/extranjeros.php",
+    "evidence": "Programa de Becas de Cooperación Sur Sur-Nelson Mandela 2027 30/10/2026",
+    "observed_at": "2026-10-06T10:10:34Z"
+  },
+  {
+    "data": {
+      "name": "Saïd Foundation Scholarships",
+      "url": "https://saidfoundation.org/scholarships/",
+      "provider": "Saïd Foundation",
+      "funder_type": "foundation",
+      "host_country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "Tuition fees, full maintenance/living costs for the duration of your course, an arrival allowance, visa and healthcare surcharge fees, one economy return flight",
+      "eligibility": "Hold Syrian, Jordanian, Lebanese or Palestinian nationality and permanently reside in one of these countries",
+      "deadline": "2026-10-30"
+    },
+    "source_url": "https://saidfoundation.org/apply/",
+    "evidence": "Applications for 2027/28 Saïd Foundation scholarships are now open and will close at 5:00pm UK time on Friday 30 th October.",
+    "observed_at": "2026-10-06T10:09:43Z"
+  },
+  {
+    "data": {
+      "name": "BAEF Graduate Study Fellowships",
+      "url": "https://baef.be/graduate-study-fellowships-be/",
+      "provider": "Belgian American Educational Foundation (BAEF)",
+      "funder_type": "foundation",
+      "host_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "level": [
+        "master",
+        "phd"
+      ],
+      "coverage": "full",
+      "value_stated": "First year of the Master's programs up to $72,000 ($22,000 for stipend and up to $50,000 for tuition and health insurance)",
+      "eligibility": "Hold the Belgian nationality; hold a Bachelor’s degree at the time of activation of the Fellowship",
+      "deadline": "2026-10-31"
+    },
+    "source_url": "https://baef.be/graduate-study-fellowships-be/",
+    "evidence": "Deadline for application: Before October 31, 2026 for graduate studies in the U.S.A. during the two academic years 2027-2028 and 2028-2029.",
+    "observed_at": "2026-10-06T10:12:55Z"
+  },
+  {
+    "data": {
+      "name": "BAEF Research Fellowships",
+      "url": "https://baef.be/research-fellowships-be/",
+      "provider": "Belgian American Educational Foundation (BAEF)",
+      "funder_type": "foundation",
+      "host_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "level": [
+        "master",
+        "phd",
+        "postdoc"
+      ],
+      "coverage": "partial",
+      "value_stated": "Outright non-renewable grants of $35,000 (master’s-level or doctoral research) or $55,000 (post-doctoral), plus health insurance",
+      "eligibility": "Hold the Belgian nationality",
+      "deadline": "2026-10-31"
+    },
+    "source_url": "https://baef.be/research-fellowships-be/",
+    "evidence": "Deadline for Application: Before October 31, 2026 for research starting in the US between July 1, 2027 and January 3, 2028.",
+    "observed_at": "2026-10-06T10:12:56Z"
+  },
+  {
+    "data": {
+      "name": "Mastercard Foundation Scholars Program at the University of Cape Town",
+      "url": "https://uct.ac.za/mastercardfdn/apply-mastercard-foundation-scholars-program",
+      "provider": "Mastercard Foundation",
+      "funder_type": "foundation",
+      "host_country": [
+        "South Africa"
+      ],
+      "region": "africa-middle-east",
+      "level": [
+        "master"
+      ],
+      "coverage": "partial",
+      "eligibility": "Citizens of an African country, including South Africa, applying for an eligible postgraduate diploma, honours degree or master’s programme at UCT",
+      "deadline": "2026-10-31"
+    },
+    "source_url": "https://uct.ac.za/mastercardfdn/apply-mastercard-foundation-scholars-program",
+    "evidence": "For applicants to an eligible postgraduate diploma in the Faculty of Health Sciences or an honours degree or master’s programme at UCT, the Mastercard Foundation Scholars Program application deadline is 31 October 2026.",
+    "observed_at": "2026-10-06T10:30:43Z"
+  },
+  {
+    "data": {
+      "name": "Thouron Award",
+      "url": "https://www.thouronaward.org/apply-from-uk/",
+      "provider": "Thouron Award (University of Pennsylvania)",
+      "funder_type": "university",
+      "host_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "level": [
+        "master",
+        "phd"
+      ],
+      "coverage": "full",
+      "value_stated": "Full tuition and fees for up to two years, an annual stipend sufficient to cover living costs, health insurance",
+      "eligibility": "Final-year undergraduate students or recent graduates of any university in the United Kingdom who are British citizens and completed their secondary schooling within the U.K.",
+      "deadline": "2026-11-01"
+    },
+    "source_url": "https://www.thouronaward.org/apply-from-uk/",
+    "evidence": "What is the application deadline? 1 November 2026, with references due 8 November 2026.",
+    "observed_at": "2026-10-06T10:12:56Z"
+  },
+  {
+    "data": {
+      "name": "Unil Master's Scholarship",
+      "url": "https://www.unil.ch/unil/en/home/menuinst/etudier/mobilite-et-echange/etudiantes-et-etudiants-internationaux/etudiantes-internationaux-reguliers/bourse-de-master.html",
+      "provider": "University of Lausanne (Unil)",
+      "funder_type": "university",
+      "host_country": [
+        "Switzerland"
+      ],
+      "region": "europe",
+      "level": [
+        "master"
+      ],
+      "coverage": "partial",
+      "value_stated": "CHF 1,600 per month for the minimum statutory period of the Master’s programme, and exemption from the standard course registration fees",
+      "eligibility": "Graduates of a foreign university whose academic results are of a very high standard",
+      "deadline": "2026-11-01"
+    },
+    "source_url": "https://www.unil.ch/unil/en/home/menuinst/etudier/mobilite-et-echange/etudiantes-et-etudiants-internationaux/etudiantes-internationaux-reguliers/bourse-de-master.html",
+    "evidence": "The online application for the academic year 2027/2028 is open. The deadline is 1 November 2026.",
+    "observed_at": "2026-10-06T10:24:20Z"
+  },
+  {
+    "data": {
+      "name": "Wellington Doctoral Scholarships",
+      "url": "https://www.wgtn.ac.nz/scholarships/current/wellington-doctoral-scholarships",
+      "provider": "Te Herenga Waka—Victoria University of Wellington",
+      "funder_type": "university",
+      "host_country": [
+        "New Zealand"
+      ],
+      "region": "asia-pacific",
+      "level": [
+        "phd"
+      ],
+      "coverage": "full",
+      "value_stated": "$32,000 stipend annually plus tuition fees",
+      "eligibility": "International and domestic doctoral applicants",
+      "deadline": "2026-11-01"
+    },
+    "source_url": "https://www.wgtn.ac.nz/scholarships/current/wellington-doctoral-scholarships",
+    "evidence": "Scholarship level: Doctoral; Doctoral (fully funded) Closing date(s): Three rounds each year closing 1 March, 1 July and 1 November.",
+    "observed_at": "2026-10-06T10:19:06Z"
+  },
+  {
+    "data": {
+      "name": "Churchill Scholarship",
+      "url": "https://www.churchillscholarship.org/the-scholarship",
+      "provider": "Winston Churchill Foundation of the United States",
+      "funder_type": "foundation",
+      "host_country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "Tuition, roundtrip airfare to the UK, visa fees and health surcharge, and a stipend that is set higher than the UK Research Council standard",
+      "eligibility": "Citizens of the United States enrolled in one of the Participating Institutions and due to graduate during the same academic year as the deadline, or graduated within the past 12 months",
+      "deadline": "2026-11-02"
+    },
+    "source_url": "https://www.churchillscholarship.org/the-scholarship",
+    "evidence": "Each institution will have an internal application deadline some weeks in advance of the Foundation nomination deadline. The next nomination deadline for the Churchill Scholarship is: Monday, November 2, 2026, at 5pm Eastern Time.",
+    "observed_at": "2026-10-06T10:02:53Z"
+  },
+  {
+    "data": {
+      "name": "Marshall Sherfield Fellowships",
+      "url": "https://www.marshallscholarship.org/apply/marshall-sherfield/",
+      "provider": "Marshall Sherfield Fellowship Foundation",
+      "funder_type": "foundation",
+      "host_country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "level": [
+        "postdoc"
+      ],
+      "coverage": "partial",
+      "eligibility": "Outstanding American scientists, technologists, engineers and mathematicians to undertake postdoctoral research for one or two academic years at a British university or research institute",
+      "deadline": "2026-11-02"
+    },
+    "source_url": "https://www.marshallscholarship.org/apply/marshall-sherfield/applications/",
+    "evidence": "SUBMIT YOUR APPLICATION Completed applications and recommendation forms must be submitted by email to prog.admin@marshallscholarship.org by the 2nd of November 2026.",
+    "observed_at": "2026-10-06T10:07:38Z"
+  },
+  {
+    "data": {
+      "name": "President’s PhD Scholarships",
+      "url": "https://www.imperial.ac.uk/study/fees-and-funding/postgraduate-doctoral/grants-scholarships/presidents-phd/",
+      "provider": "Imperial College London",
+      "funder_type": "university",
+      "host_country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "level": [
+        "phd"
+      ],
+      "coverage": "full",
+      "value_stated": "Full funding for tuition fees, a stipend of £27,036 (2027-28 rate) per annum to assist with living costs, a consumables fund of £2,000 per annum",
+      "eligibility": "Talented candidates from Imperial College London, the UK and worldwide. There are no restrictions on nationality.",
+      "deadline": "2026-11-02"
+    },
+    "source_url": "https://www.imperial.ac.uk/study/fees-and-funding/postgraduate-doctoral/grants-scholarships/presidents-phd/",
+    "evidence": "Applicants who apply by 23:59 (UK time) 2 November 2026 and are awarded a scholarship will be notified by 31 January 2027. Applicants who apply by 23:59 (UK time) 11 January 2027 and are awarded a scholarship will be notified by 15 April 2027.",
+    "observed_at": "2026-10-06T10:18:55Z"
+  },
+  {
+    "data": {
+      "name": "Crick PhD Programme and Studentship",
+      "url": "https://www.crick.ac.uk/careers-study/students/phd-student-recruitment",
+      "provider": "Francis Crick Institute",
+      "funder_type": "foundation",
+      "host_country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "level": [
+        "phd"
+      ],
+      "coverage": "full",
+      "value_stated": "£27,715 tax-free student stipend (living allowance) per year for four years, Tuition fees (including for international students) and research costs",
+      "eligibility": "Candidates of all nationalities; a first/upper second-class honours degree (or equivalent from a non-UK university) in a relevant subject",
+      "deadline": "2026-11-03"
+    },
+    "source_url": "https://www.crick.ac.uk/careers-study/students/phd-student-recruitment",
+    "evidence": "2027 PhD recruitment is now open Deadline 12:00 (GMT) midday Tuesday 3 Nov 2026 How to apply Introduction What we offer We offer successful applicants a place on the Crick PhD programme , and a PhD studentship that covers: £27,715 tax-free student stipend (living allowance) per year for four years",
+    "observed_at": "2026-10-06T10:19:33Z"
+  },
+  {
+    "data": {
+      "name": "African Development Bank-Japan Africa Dream Scholarship (AfDB-JADS) at APU",
+      "url": "https://admissions.apu.ac.jp/graduate/how_to_apply/external_scholarship/AfDB_JADS/",
+      "provider": "African Development Bank (Japan Africa Dream Scholarship)",
+      "funder_type": "international",
+      "host_country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "Admission fee, full tuition fee, monthly subsistence allowance of 150,000 JPY (including housing) and economy air travel",
+      "eligibility": "Nationals of AfDB member countries aged 35 or less with a Bachelor’s degree in energy or related areas and development experience",
+      "deadline": "2026-11-05"
+    },
+    "source_url": "https://admissions.apu.ac.jp/graduate/how_to_apply/external_scholarship/AfDB_JADS/",
+    "evidence": "For April 2027 enrollment, please submit your application by September 15, 2026 . For September 2027 enrollment, please submit your application by November 5, 2026 or January 8, 2027 .",
+    "observed_at": "2026-10-06T10:24:55Z"
+  },
+  {
+    "data": {
+      "name": "Lester B. Pearson International Scholarships",
+      "url": "https://future.utoronto.ca/pearson-scholarships",
+      "provider": "University of Toronto",
+      "funder_type": "university",
+      "host_country": [
+        "Canada"
+      ],
+      "region": "americas",
+      "level": [
+        "bachelor"
+      ],
+      "coverage": "full",
+      "value_stated": "Tuition, books, incidental fees and full residence support for four years",
+      "eligibility": "International students (non-Canadians requiring a study permit) in the final year of senior secondary school in 2026/2027 or graduated no earlier than June 2026, nominated by their school",
+      "deadline": "2026-11-06"
+    },
+    "source_url": "https://future.utoronto.ca/pearson-scholarships",
+    "evidence": "Important dates and deadlines School nomination deadline: October 9, 2026 Student OUAC admission application deadline: October 16, 2026 Student scholarship application deadline and documentation submission deadline: November 6, 2026",
+    "observed_at": "2026-10-06T10:06:29Z"
+  },
+  {
+    "data": {
+      "name": "Fulbright Foreign Student Program – Fulbright Canada Student Awards",
+      "url": "https://www.fulbright.ca/programs/canadian-students/traditional-awards",
+      "provider": "Fulbright Canada (Foundation for Educational Exchange between Canada and the United States of America)",
+      "funder_type": "government",
+      "host_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "level": [
+        "master",
+        "phd"
+      ],
+      "coverage": "partial",
+      "value_stated": "US$25,000 for one academic year (8 months)",
+      "eligibility": "Canadian citizens who are graduate students, prospective graduate students, or promising young professionals",
+      "deadline": "2026-11-15"
+    },
+    "source_url": "https://www.fulbright.ca/programs/canadian-students/traditional-awards",
+    "evidence": "COMPETITION OPEN Awards to be taken up in the 2027-2028 Academic Year Applications accepted until November 15, 2026 The next competition for awards to be taken up in the 2028-2029 Academic Year will open in May 2027. US$25,000 for one academic year (8 months)",
+    "observed_at": "2026-10-06T10:08:06Z"
+  },
+  {
+    "data": {
+      "name": "UBC International Scholars Program",
+      "url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
+      "provider": "University of British Columbia",
+      "funder_type": "university",
+      "host_country": [
+        "Canada"
+      ],
+      "region": "americas",
+      "level": [
+        "bachelor"
+      ],
+      "coverage": "partial",
+      "eligibility": "International students with demonstrated leadership, exceptional contributions to their communities and outstanding academic performance, who require meaningful financial support to attend UBC",
+      "opens_on": "2026-10-05",
+      "deadline": "2026-11-15"
+    },
+    "source_url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
+    "evidence": "How to apply for the International Scholars Program Applications for the September 2027 intake will open on October 5, 2026. We recommend starting the application process as early as possible.",
+    "observed_at": "2026-10-06T10:06:57Z"
+  },
+  {
+    "data": {
+      "name": "Wellcome Sanger Institute 4-Year PhD Programme",
+      "url": "https://www.sanger.ac.uk/about/study/phd-programmes/4-year-phd-programme/",
+      "provider": "Wellcome Sanger Institute",
+      "funder_type": "foundation",
+      "host_country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "level": [
+        "phd"
+      ],
+      "coverage": "full",
+      "value_stated": "Full financial support, including University tuition fees, regardless of nationality; tax-free stipends, 1st year £25,649 p.a.",
+      "deadline": "2026-11-24"
+    },
+    "source_url": "https://www.sanger.ac.uk/about/study/phd-programmes/4-year-phd-programme/",
+    "evidence": "The application process for the 2027 intake of the Wellcome Sanger Institute 4-year PhD Programme will open in early October 2026. The closing date will be Tuesday 24 November 2026 (09:00 am GMT).",
+    "observed_at": "2026-10-06T10:20:06Z"
+  },
+  {
+    "data": {
+      "name": "JDS – Project for Human Resource Development Scholarship (Bhutan)",
+      "url": "https://jds-scholarship.org/country/bhutan/index.html",
+      "provider": "Government of Japan (JDS, through ODA)",
+      "funder_type": "government",
+      "host_country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "All the costs to study in Japan",
+      "eligibility": "Citizens of Bhutan aged 45 or younger as of 1 April 2027 with a bachelor's degree, shortlisted after screening by RCSC",
+      "deadline": "2026-11-26"
+    },
+    "source_url": "https://jds-scholarship.org/country/bhutan/index.html",
+    "evidence": "Closing Date: Nov 26, 2026 Note: You have to be shortlisted after screening by RCSC to apply for JDS.",
+    "observed_at": "2026-10-06T10:15:56Z"
+  },
+  {
+    "data": {
+      "name": "Excellence Scholarship & Opportunity Programme (ESOP)",
+      "url": "https://ethz.ch/students/en/studies/financial/scholarships/excellencescholarship.html",
+      "provider": "ETH Zurich",
+      "funder_type": "university",
+      "host_country": [
+        "Switzerland"
+      ],
+      "region": "europe",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "A scholarship covering living and study expenses (CHF 12'000 per semester, from HS27 onwards 13'500 CHF) and a tuition fee waiver",
+      "eligibility": "Very good result in Bachelor’s degree programme (top 10% of Bachelor’s degree programme)",
+      "opens_on": "2026-11-01",
+      "deadline": "2026-11-30"
+    },
+    "source_url": "https://ethz.ch/students/en/studies/financial/scholarships/excellencescholarship.html",
+    "evidence": "The scholarship covers the full study and living costs during the Master’s degree course. The next application window is open Nov, 1 - Nov, 30 2026, 11.59h, MEZ for a start in the Master programme in HS27.",
+    "observed_at": "2026-10-06T10:19:05Z"
+  },
+  {
+    "data": {
+      "name": "Fulbright Foreign Student Program – Fulbright Self Placed in All Disciplines (Italy)",
+      "url": "https://www.fulbright.it/borse-studio-cittadini-italiani/studio/fulbright-all-disciplines/",
+      "provider": "U.S.-Italy Fulbright Commission",
+      "funder_type": "government",
+      "host_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "level": [
+        "master",
+        "phd"
+      ],
+      "coverage": "partial",
+      "value_stated": "Scholarships of up to $50,000 for Master's and Ph.D. study at US campuses",
+      "eligibility": "Italian graduates who plan to apply (or have applied) to US universities for a Master's or Ph.D.",
+      "deadline": "2026-11-30"
+    },
+    "source_url": "https://www.fulbright.it/borse-studio-cittadini-italiani/studio/fulbright-all-disciplines/",
+    "evidence": "Scadenza lunedì 30 novembre 2026, h 23:59 Destinatari (info generali & bando di concorso) Il concorso Fulbright – Self Placed in All Disciplines offre a laureati italiani l’opportunità di frequentare percorsi di specializzazione post-laurea, Master e Ph.D.",
+    "observed_at": "2026-10-06T10:06:49Z"
+  },
+  {
+    "data": {
+      "name": "JDS – Project for Human Resource Development Scholarship (Bangladesh)",
+      "url": "https://jds-scholarship.org/country/bangladesh/index.html",
+      "provider": "Government of Japan (JDS, through ODA)",
+      "funder_type": "government",
+      "host_country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "All the costs to study in Japan",
+      "eligibility": "Citizens of Bangladesh below forty years as of April 1st, 2027, with sixteen years of education and at least a Bachelor's degree",
+      "opens_on": "2026-10-01",
+      "deadline": "2026-11-30"
+    },
+    "source_url": "https://jds-scholarship.org/country/bangladesh/index.html",
+    "evidence": "1st October 2026- 30th November 2026 Application Closing Date: 4:00 p.m. on 30th November (Monday) 2026",
+    "observed_at": "2026-10-06T10:15:15Z"
+  },
+  {
+    "data": {
+      "name": "Kosciuszko Foundation Exchange Program to the US",
+      "url": "https://thekf.org/scholarship/exchange-program-to-the-us-grants-and-fellowships/",
+      "provider": "The Kosciuszko Foundation",
+      "funder_type": "foundation",
+      "host_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "level": [
+        "phd",
+        "postdoc"
+      ],
+      "coverage": "partial",
+      "eligibility": "Polish citizens who are PhD students, academic scholars, advanced post-doctoral fellows, instructors, assistant professors, researchers, and artists",
+      "deadline": "2026-11-30"
+    },
+    "source_url": "https://thekf.org/scholarship/exchange-program-to-the-us-grants-and-fellowships/",
+    "evidence": "We are accepting applications for: ACADEMIC YEAR 2027/2028 Grants and Fellowships for stays: from July 1, 2027 through June 30, 2028 Submissions accepted until: November 30, 2026 at 23:59 PM (EST)",
+    "observed_at": "2026-10-06T10:15:14Z"
+  },
+  {
+    "data": {
+      "name": "Yenching Academy of Peking University – Yenching Scholars",
+      "url": "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm",
+      "provider": "Peking University (Yenching Academy)",
+      "funder_type": "university",
+      "host_country": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "Tuition, accommodation, a round-trip travel stipend, basic medical insurance, a monthly stipend and research expenses for the first academic year",
+      "eligibility": "Non-Chinese citizens with a valid passport and at least a Bachelor’s degree in any field (or finishing one by August of the enrollment year)",
+      "opens_on": "2026-09-01",
+      "deadline": "2026-11-30"
+    },
+    "source_url": "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm",
+    "evidence": "For International Candidates: We accept a pplications for the 2027 cohort of Yenching Scholars starting September 1, 2026. Application deadline: November 30, 2026 ( 9:00 am Beijing time)",
+    "observed_at": "2026-10-06T10:15:15Z"
+  },
+  {
+    "data": {
+      "name": "European Master's in Clinical Linguistics (EMCL)",
+      "url": "https://www.emcl.eu/fees/",
+      "provider": "European Union (Erasmus+)",
+      "funder_type": "international",
+      "host_country": [
+        "Finland",
+        "Belgium",
+        "Netherlands"
+      ],
+      "region": "europe",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "A full tuition waiver and a monthly allowance of EUR 1.400 to cover travel, visa, installation, insurance and subsistence costs",
+      "opens_on": "2026-10-01",
+      "deadline": "2026-12-01"
+    },
+    "source_url": "https://www.emcl.eu/admission/",
+    "evidence": "Deadline Applications need to be submitted no later than December 1, 2026. You can apply for the programme starting October 1, 2026.",
+    "observed_at": "2026-10-06T10:08:04Z"
+  },
+  {
+    "data": {
+      "name": "Fulbright Foreign Student Program – Fulbright Slovak Student Program",
+      "url": "https://www.fulbright.sk/slovak-student",
+      "provider": "J. William Fulbright Commission in Slovakia",
+      "funder_type": "government",
+      "host_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "level": [
+        "phd"
+      ],
+      "coverage": "partial",
+      "value_stated": "A contribution to living costs and a return air ticket",
+      "eligibility": "Slovak citizens who have completed a second-level university degree (Mgr. or Ing.)",
+      "deadline": "2026-12-01"
+    },
+    "source_url": "https://www.fulbright.sk/slovak-student",
+    "evidence": "Termín na podávanie prihlášok je otvorený od júla do decembra aktuálneho kalendárneho roka. Uzávierka termínu na podanie prihlášok na akademický rok 2027/2028 je 1. decembra 2026",
+    "observed_at": "2026-10-06T10:12:35Z"
+  },
+  {
+    "data": {
+      "name": "Fulbright Foreign Student Program – Programme Étudiant (France)",
+      "url": "https://fulbright-france.org/fr/bourses/etudiantes-etudiants/programme-etudiant",
+      "provider": "Franco-American Fulbright Commission (French Ministry of Foreign Affairs and U.S. Department of State)",
+      "funder_type": "government",
+      "host_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "level": [
+        "master",
+        "phd"
+      ],
+      "coverage": "partial",
+      "value_stated": "$40,000 for the Fulbright grant (excluding partner-foundation awards)",
+      "eligibility": "French citizens admitted to, or applying to, a US university for a Master's or PhD degree",
+      "deadline": "2026-12-01"
+    },
+    "source_url": "https://fulbright-france.org/fr/bourses/etudiantes-etudiants/programme-etudiant",
+    "evidence": "Programme Étudiant Cycle 2027-2028 : L'appel est ouvert Date limite de dépôt de candidature : 1er décembre 2026 à 23h59 (heure de Paris) pour le cycle 2027/2028.",
+    "observed_at": "2026-10-06T10:05:15Z"
+  },
+  {
+    "data": {
+      "name": "Hong Kong PhD Fellowship Scheme",
+      "url": "https://cerg1.ugc.edu.hk/hkpfs/index.html",
+      "provider": "Research Grants Council (RGC) of Hong Kong",
+      "funder_type": "government",
+      "host_country": [
+        "Hong Kong"
+      ],
+      "region": "asia-pacific",
+      "level": [
+        "phd"
+      ],
+      "coverage": "partial",
+      "value_stated": "An annual stipend of HK$344,400 and a conference and research-related travel allowance of HK$14,400 per year, for up to three years",
+      "eligibility": "Candidates seeking admission as new full-time PhD students at the eight participating universities, irrespective of country of origin",
+      "opens_on": "2026-09-01",
+      "deadline": "2026-12-01"
+    },
+    "source_url": "https://cerg1.ugc.edu.hk/hkpfs/news.html",
+    "evidence": "The Hong Kong PhD Fellowship Scheme 2027/28 is open for application from 1 September 2026 at 12:00 noon Hong Kong Time. The deadline for initial applications is 1 December 2026 at 12:00 noon Hong Kong Time.",
+    "observed_at": "2026-10-06T10:02:25Z"
+  },
+  {
+    "data": {
+      "name": "International Nieman Fellowship",
+      "url": "https://nieman.harvard.edu/fellowships/how-to-apply/",
+      "provider": "Nieman Foundation for Journalism at Harvard",
+      "funder_type": "university",
+      "host_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "level": [
+        "short-course"
+      ],
+      "coverage": "partial",
+      "value_stated": "A stipend of $87,500 paid over a nine-month period to cover living costs, some financial support for child care and health insurance",
+      "eligibility": "Non-U.S. citizens who are working journalists with at least five years of full-time media experience",
+      "deadline": "2026-12-01"
+    },
+    "source_url": "https://nieman.harvard.edu/fellowships/how-to-apply/",
+    "evidence": "Application deadlines: International Nieman Fellowship (non-U.S. citizens, including those working in the U.S.): December 1",
+    "observed_at": "2026-10-06T10:15:13Z"
+  },
+  {
+    "data": {
+      "name": "Stipendienprogramm des Freistaats Bayern für Graduierte aus Mittel-, Ost- und Südosteuropa",
+      "url": "https://www.uni-regensburg.de/bayhost/foerderung-und-stipendien/nach-bayern/studieren-in-bayern",
+      "provider": "Free State of Bavaria (administered by BAYHOST)",
+      "funder_type": "government",
+      "host_country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "level": [
+        "master",
+        "phd"
+      ],
+      "coverage": "partial",
+      "value_stated": "11,904 € a year (992 € a month), paid in twelve instalments",
+      "eligibility": "Graduates who are citizens of Bulgaria, Croatia, Poland, Romania, Russia, Serbia, Slovakia, Czechia, Ukraine or Hungary",
+      "deadline": "2026-12-01"
+    },
+    "source_url": "https://www.uni-regensburg.de/bayhost/foerderung-und-stipendien/nach-bayern/studieren-in-bayern",
+    "evidence": "ERSTANTRAG Bewerbungsschluss: 1. Dezember 2026 Ausschreibung für das Förderjahr 2027/28",
+    "observed_at": "2026-10-06T10:26:43Z"
+  },
+  {
+    "data": {
+      "name": "Theatre SPACEs Erasmus Mundus Joint Master",
+      "url": "https://www.theatre-spaces.eu/admission",
+      "provider": "European Union (Erasmus+)",
+      "funder_type": "international",
+      "host_country": [
+        "Norway",
+        "Ireland",
+        "Romania"
+      ],
+      "region": "europe",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "€1,400 per month for 24 months to help cover travel, visa and living expenses; exemption from tuition fees",
+      "eligibility": "Candidates from any country in the world",
+      "opens_on": "2026-10-01",
+      "deadline": "2026-12-01"
+    },
+    "source_url": "https://www.theatre-spaces.eu/admission",
+    "evidence": "The application portal opens on 1 October , with the deadline set for 1 December 2026 at 23:59 CET.",
+    "observed_at": "2026-10-06T10:08:02Z"
+  },
+  {
+    "data": {
+      "name": "John S. Knight Journalism Fellowships",
+      "url": "https://jsk.stanford.edu/become-a-fellow",
+      "provider": "Stanford University (John S. Knight Journalism Fellowships)",
+      "funder_type": "university",
+      "host_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "level": [
+        "short-course"
+      ],
+      "coverage": "full",
+      "value_stated": "A $135,000 stipend for the nine months, Stanford tuition and health insurance",
+      "eligibility": "Applicants with at least five years of professional experience, for the U.S. or international fellowship",
+      "opens_on": "2026-10-14",
+      "deadline": "2026-12-02"
+    },
+    "source_url": "https://jsk.stanford.edu/become-a-fellow",
+    "evidence": "Applications for the 2027-28 fellowships open on Oct 14 at 1:00 p.m. Pacific time (20:00 UTC). The deadline is Dec 2 at 1:00 p.m. Pacific time (21:00 UTC).",
+    "observed_at": "2026-10-06T10:16:59Z"
+  },
+  {
+    "data": {
+      "name": "Yale World Fellows (Maurice R. Greenberg World Fellows Program)",
+      "url": "https://jackson.yale.edu/international-leadership-center/yale-world-fellows",
+      "provider": "Yale University (Jackson School of Global Affairs)",
+      "funder_type": "university",
+      "host_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "level": [
+        "short-course"
+      ],
+      "coverage": "partial",
+      "value_stated": "A taxable stipend to cover the costs of living in New Haven, a furnished apartment, medical insurance, round-trip travel from home country",
+      "eligibility": "Citizens of a country other than the United States, between five and twenty-five years into their professional careers",
+      "deadline": "2026-12-02"
+    },
+    "source_url": "https://jackson.yale.edu/international-leadership-center/yale-world-fellows",
+    "evidence": "accepting applications for the 2027 World Fellows program Applications close on Wednesday, 2 December at 14:00 PM Eastern Time.",
+    "observed_at": "2026-10-06T10:31:15Z"
+  },
+  {
+    "data": {
+      "name": "Kyoto University International Undergraduate Program (Kyoto iUP)",
+      "url": "https://www.iup.kyoto-u.ac.jp/apply/",
+      "provider": "Kyoto University",
+      "funder_type": "university",
+      "host_country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "level": [
+        "bachelor",
+        "language"
+      ],
+      "coverage": "partial",
+      "value_stated": "Admission/tuition fee waivers and monthly scholarships",
+      "opens_on": "2026-11-02",
+      "deadline": "2026-12-03"
+    },
+    "source_url": "https://www.iup.kyoto-u.ac.jp/apply/",
+    "evidence": "Applications must be submitted through the Online Application System . The system will be available from November 2 until December 3, 2026 (5 p.m. Japan Standard Time ) .",
+    "observed_at": "2026-10-06T10:45:24Z"
+  },
+  {
+    "data": {
+      "name": "Fulbright Foreign Student Program – Non-Degree Research Programs (Bulgaria)",
+      "url": "https://www.fulbright.bg/en/non-degree-research-programs-bg/",
+      "provider": "Bulgarian-American Fulbright Commission for Educational Exchange",
+      "funder_type": "government",
+      "host_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "level": [
+        "phd"
+      ],
+      "coverage": "partial",
+      "value_stated": "Funding for 4-6 months of research",
+      "eligibility": "Bulgarian citizens enrolled in a full-time or part-time Ph.D. program, with English language proficiency",
+      "deadline": "2026-12-04"
+    },
+    "source_url": "https://www.fulbright.bg/en/non-degree-research-programs-bg/",
+    "evidence": "Non-Degree Research Programs The competition for AY 2027-28 is now open. Grants for full-time and part-time PhD students last for 4-6 months and are valid for all disciplines except clinical medicine and dentistry. Application deadline: December 4, 2026",
+    "observed_at": "2026-10-06T10:43:53Z"
+  },
+  {
+    "data": {
+      "name": "JDS – Project for Human Resource Development Scholarship (Kyrgyz Republic)",
+      "url": "https://jds-scholarship.org/country/kyrgyz/index.html",
+      "provider": "Government of Japan (JDS, through ODA)",
+      "funder_type": "government",
+      "host_country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "level": [
+        "master",
+        "phd"
+      ],
+      "coverage": "full",
+      "value_stated": "All the costs to study in Japan",
+      "eligibility": "Citizens of the Kyrgyz Republic aged between 22 and 40 years old as of April 1st, 2027",
+      "deadline": "2026-12-06"
+    },
+    "source_url": "https://jds-scholarship.org/country/kyrgyz/index.html",
+    "evidence": "Deadline for Application: 17:00, December 6 (Sun), 2026 Submissions after the deadline will not be accepted for any reason.",
+    "observed_at": "2026-10-06T10:15:21Z"
+  },
+  {
+    "data": {
+      "name": "Asian Development Bank - Japan Scholarship Program (ADB-JSP) at Ritsumeikan University",
+      "url": "https://en.ritsumei.ac.jp/admissions/adb-jsp/?version=English",
+      "provider": "Asian Development Bank, with financing from the Government of Japan",
+      "funder_type": "international",
+      "host_country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "Full tuition fees, monthly subsistence allowance (including housing), books and instructional materials, medical insurance and travel expenses",
+      "eligibility": "Nationals of ADB borrowing member countries admitted to the Master's Program in Economic Development",
+      "opens_on": "2026-11-19",
+      "deadline": "2026-12-10"
+    },
+    "source_url": "https://en.ritsumei.ac.jp/admissions/adb-jsp/?version=English",
+    "evidence": "Application guidelines and forms for September 2027 enrollment are now online! Please follow all instructions and submit your application so that it arrives within the application period! APPLICATION PERIOD: November 19 ~ December 10, 2026",
+    "observed_at": "2026-10-06T10:22:12Z"
+  },
+  {
+    "data": {
+      "name": "Warwick Postgraduate Research Scholarships",
+      "url": "https://warwick.ac.uk/services/dc/schols_fund/applicants/competitions/",
+      "provider": "University of Warwick",
+      "funder_type": "university",
+      "host_country": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "level": [
+        "phd"
+      ],
+      "coverage": "full",
+      "value_stated": "Full payment of your academic fees (UK or international), a tax-free maintenance stipend to support living costs",
+      "opens_on": "2026-10-05",
+      "deadline": "2026-12-10"
+    },
+    "source_url": "https://warwick.ac.uk/services/dc/schols_fund/applicants/competitions/",
+    "evidence": "The call for applications will open on 5 October 2026 Key Deadlines All deadlines are 16:59 GMT and late submissions are not accepted. Course Applications 7 December 2026 Scholarship Applications 10 December 2026",
+    "observed_at": "2026-10-06T10:06:56Z"
+  },
+  {
+    "data": {
+      "name": "EPFL Master Excellence Fellowships",
+      "url": "https://www.epfl.ch/education/master/master-excellence-fellowships/",
+      "provider": "EPFL",
+      "funder_type": "university",
+      "host_country": [
+        "Switzerland"
+      ],
+      "region": "europe",
+      "level": [
+        "master"
+      ],
+      "coverage": "partial",
+      "value_stated": "CHF 10,000 per semester, along with guaranteed housing",
+      "eligibility": "Students with remarkable academic results who distinguish themselves in extracurricular activities, from EPFL or other universities",
+      "deadline": "2026-12-15"
+    },
+    "source_url": "https://www.epfl.ch/education/master/master-excellence-fellowships/",
+    "evidence": "Important: New deadline for the 2027 EPFL Master Excellence Fellowship . Applicants must submit their application within the first application window for a Master’s program: – December 15 for applications submitted via IS-Academia.",
+    "observed_at": "2026-10-06T10:20:06Z"
+  },
+  {
+    "data": {
+      "name": "Fulbright Foreign Student Program – Fulbright Joint-Supervision Program (Morocco)",
+      "url": "https://macece.ma/program/fulbright-joint-supervision-program/",
+      "provider": "Moroccan-American Commission for Educational & Cultural Exchange (MACECE)",
+      "funder_type": "government",
+      "host_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "level": [
+        "phd"
+      ],
+      "coverage": "partial",
+      "value_stated": "A monthly stipend for a total of 12 months while at the American university, an allowance of up to $1000 for books and materials, medical insurance",
+      "eligibility": "Moroccan doctoral candidates",
+      "opens_on": "2026-08-01",
+      "deadline": "2026-12-15"
+    },
+    "source_url": "https://macece.ma/program/fulbright-joint-supervision-program/",
+    "evidence": "Application timeline Application launch: August 1, 2026 Application deadline: December 15, 2026 Interviews: February 2027 Final decision: March 2027 Depart to the U.S.: Summer 2027",
+    "observed_at": "2026-10-06T10:10:08Z"
+  },
+  {
+    "data": {
+      "name": "Undergraduate Scholars Entrance Scholarships (USES)",
+      "url": "https://www.sfu.ca/students/financial-aid/entrance/highschool/uses.html",
+      "provider": "Simon Fraser University",
+      "funder_type": "university",
+      "host_country": [
+        "Canada"
+      ],
+      "region": "americas",
+      "level": [
+        "bachelor"
+      ],
+      "coverage": "partial",
+      "value_stated": "International Undergraduate Scholars Entrance Scholarship: $140,000 (8 x $17,500)",
+      "eligibility": "Domestic and international high school applicants who demonstrate potential to enrich the university community through ongoing academic and community contributions",
+      "opens_on": "2026-10-01",
+      "deadline": "2026-12-15"
+    },
+    "source_url": "https://www.sfu.ca/students/financial-aid/entrance/highschool/uses.html",
+    "evidence": "October 1, 2026 USES application opens. Applicants will need to apply to SFU first and have their SFU student number to access the scholarship application. December 15, 2026 Deadline to apply for SFU USES January 31, 2027 Supporting Documentation deadline.",
+    "observed_at": "2026-10-06T10:16:33Z"
+  },
+  {
+    "data": {
+      "name": "JDS – Project for Human Resource Development Scholarship (Laos)",
+      "url": "https://jds-scholarship.org/country/laos/index.html",
+      "provider": "Government of Japan (JDS, through ODA)",
+      "funder_type": "government",
+      "host_country": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "All the costs to study in Japan",
+      "eligibility": "Citizens of Lao P.D.R. aged between 22 and 39 as of April 1st, 2027",
+      "deadline": "2026-12-27"
+    },
+    "source_url": "https://jds-scholarship.org/country/laos/index.html",
+    "evidence": "Deadline for Application: December 27 (Sun) 2026, 23:59",
+    "observed_at": "2026-10-06T10:15:19Z"
+  },
+  {
+    "data": {
+      "name": "Blakemore Freeman Fellowships",
+      "url": "https://www.blakemorefoundation.org/blakemorefreeman",
+      "provider": "Blakemore Foundation",
+      "funder_type": "foundation",
+      "host_country": [
+        "East Asia",
+        "Southeast Asia"
+      ],
+      "region": "asia-pacific",
+      "level": [
+        "language"
+      ],
+      "coverage": "full",
+      "value_stated": "Tuition, and a stipend for related educational expenses, basic living costs and transportation",
+      "eligibility": "U.S. citizens or permanent residents who will have at least a bachelor's degree by the start of the grant and are at or near an advanced level in the language",
+      "opens_on": "2026-07-01",
+      "deadline": "2026-12-30"
+    },
+    "source_url": "https://www.blakemorefoundation.org/blakemorefreeman",
+    "evidence": "All fellowships cover tuition, and a stipend for related educational expenses, basic living costs and transportation. Applications for grants for study starting in the 2027/2028 academic year open on July 1, 2026 with an application deadline of December 30, 2026.",
+    "observed_at": "2026-10-06T10:29:25Z"
+  },
+  {
+    "data": {
+      "name": "Blakemore Kingfisher Art History Language Fellowships",
+      "url": "https://www.blakemorefoundation.org/blakemorekingfisher",
+      "provider": "Blakemore Foundation",
+      "funder_type": "foundation",
+      "host_country": [
+        "Taiwan",
+        "China",
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "level": [
+        "language"
+      ],
+      "coverage": "full",
+      "value_stated": "Tuition and/or tutoring fees, plus a stipend for travel, living and study expenses",
+      "eligibility": "Citizens and permanent residents of the United States and Canada, and foreign nationals studying in colleges or universities in the United States or Canada",
+      "opens_on": "2026-07-01",
+      "deadline": "2026-12-30"
+    },
+    "source_url": "https://www.blakemorefoundation.org/blakemorekingfisher",
+    "evidence": "Applications for the 2027/2028 academic year are open from July 1, 2026 - December 30, 2026 at https://blakemorefoundation.communityforce.com These grants are open to citizens and permanent residents of the United States and Canada",
+    "observed_at": "2026-10-06T10:29:55Z"
+  },
+  {
+    "data": {
+      "name": "Erasmus Mundus Joint Master Degree in Public Health in Disasters (EMJMD PHID)",
+      "url": "https://masterpublichealthdisasters.eu/tuition-fees-and-scholarships/",
+      "provider": "European Union (Erasmus+)",
+      "funder_type": "international",
+      "host_country": [
+        "Spain",
+        "Sweden",
+        "Cyprus"
+      ],
+      "region": "europe",
+      "level": [
+        "master"
+      ],
+      "coverage": "partial",
+      "value_stated": "Contribution to subsistence costs of € 1,400 per month for the entire duration of the EMJMD study programme (24 months maximum)",
+      "opens_on": "2026-10-01",
+      "deadline": "2026-12-31"
+    },
+    "source_url": "https://masterpublichealthdisasters.eu/",
+    "evidence": "The application period will be open from October 1 to December 31, 2026",
+    "observed_at": "2026-10-06T10:09:38Z"
+  },
+  {
+    "data": {
+      "name": "Erasmus Mundus Programme on Flood Risk Management (FloodRisk)",
+      "url": "https://www.floodriskmaster.org/scholarships",
+      "provider": "European Union (Erasmus+)",
+      "funder_type": "international",
+      "host_country": [
+        "Germany",
+        "Netherlands",
+        "Spain",
+        "Slovenia"
+      ],
+      "region": "europe",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "Participation costs including tuition fees, and a monthly allowance of 1400 EURO per month for up to 24 months",
+      "deadline": "2027-01-03"
+    },
+    "source_url": "https://www.floodriskmaster.org/howtoapply",
+    "evidence": "Application deadline for an Erasmus Mundus Scholarship is 3 January 2027, 23:59 CET for applicants from Partner Countries. Application deadline for an Erasmus Mundus Scholarship is 7 February 2027, 23:59 CET for applicants from Programme Countries.",
+    "observed_at": "2026-10-06T10:08:04Z"
+  },
+  {
+    "data": {
+      "name": "Joint Master Programme in Groundwater and Global Change – Impacts and Adaptation (GroundwatCh)",
+      "url": "https://www.groundwatermaster.eu/scholarships",
+      "provider": "European Union (Erasmus+)",
+      "funder_type": "international",
+      "host_country": [
+        "Portugal",
+        "Netherlands",
+        "Germany"
+      ],
+      "region": "europe",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "Participation costs including the tuition fee, and EURO 1,400 per month for subsistence, travel and installation for the 2 years",
+      "opens_on": "2026-10-01",
+      "deadline": "2027-01-03"
+    },
+    "source_url": "https://www.groundwatermaster.eu/how-to-apply",
+    "evidence": "Application deadline for an Eras mus Mundus Scholarship is 3 January 2027, 23:59 CET for applicants from Partner Countries . Submission deadline for an Erasmus Mundus Scholarship is 7 February 2027, 23:59 CET for applicants from Programme Countries",
+    "observed_at": "2026-10-06T10:08:02Z"
+  },
+  {
+    "data": {
+      "name": "KAUST Fellowship",
+      "url": "https://admissions.kaust.edu.sa/fees-funding",
+      "provider": "King Abdullah University of Science and Technology (KAUST)",
+      "funder_type": "university",
+      "host_country": [
+        "Saudi Arabia"
+      ],
+      "region": "africa-middle-east",
+      "level": [
+        "master",
+        "phd"
+      ],
+      "coverage": "full",
+      "value_stated": "Full tuition and bench fee coverage, a monthly stipend (USD $20,000 a year for M.S., USD $25,000 to $30,000 for Ph.D.) and base accommodation",
+      "opens_on": "2026-09-28",
+      "deadline": "2027-01-03"
+    },
+    "source_url": "https://admissions.kaust.edu.sa/how-to-apply/admission-timelines",
+    "evidence": "Fall 2027 admission is open to MS, MS/PhD, and PhD applicants. Activity Date Round 2 application open 28 September 2026 Round 2 application deadline 3 January 2027",
+    "observed_at": "2026-10-06T10:15:14Z"
+  },
+  {
+    "data": {
+      "name": "Erasmus Mundus Joint Master in International Law of Security, Peace and Sustainable Development (ILSPSD)",
+      "url": "https://master-international-law-erasmusmundus.eu/erasmus-mundus-scholarships/",
+      "provider": "European Union (Erasmus+)",
+      "funder_type": "international",
+      "host_country": [
+        "Europe"
+      ],
+      "region": "europe",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "1.400,00 € per month for the entire programme (24 months) for travel, visa, installation and subsistence costs; exempt from tuition fees",
+      "eligibility": "Students from any region of the world",
+      "deadline": "2027-01-04"
+    },
+    "source_url": "https://master-international-law-erasmusmundus.eu/",
+    "evidence": "The application platform to join the second intake of ILSPSD (2027–2029) with an EMJM Scholarship is open until 4 January 2027 (23:59 CET)",
+    "observed_at": "2026-10-06T10:04:27Z"
+  },
+  {
+    "data": {
+      "name": "President's International Distinction Scholarship",
+      "url": "https://www.ualberta.ca/en/admissions/tuition-and-scholarships/international-entrance-scholarships/index.html",
+      "provider": "University of Alberta",
+      "funder_type": "university",
+      "host_country": [
+        "Canada"
+      ],
+      "region": "americas",
+      "level": [
+        "bachelor"
+      ],
+      "coverage": "partial",
+      "value_stated": "Up to CAN $120,000 (payable over 4 years)",
+      "eligibility": "Students with a superior admission average and demonstrated leadership qualities entering their first year of an undergraduate degree on a student visa permit",
+      "opens_on": "2026-10-01",
+      "deadline": "2027-01-10"
+    },
+    "source_url": "https://www.ualberta.ca/en/admissions/tuition-and-scholarships/international-entrance-scholarships/index.html",
+    "evidence": "President’s International Distinction Scholarship Each year 25 students with a superior admission average and demonstrated leadership qualities entering their first year of an undergraduate degree on a student visa permit receive up to CAN $120,000 (payable over 4 years).",
+    "observed_at": "2026-10-06T10:13:21Z"
+  },
+  {
+    "data": {
+      "name": "Master of Science in European Forestry (MSc EF)",
+      "url": "https://sites.uef.fi/europeanforestry/emjmd-scholarships-and-fees/",
+      "provider": "European Union (Erasmus+)",
+      "funder_type": "international",
+      "host_country": [
+        "Europe"
+      ],
+      "region": "europe",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "Participation costs (including the Consortium fees and full insurance coverage) and a monthly subsistence allowance of 1 400 EUR/month for a max. of 24 months",
+      "opens_on": "2026-12-02",
+      "deadline": "2027-01-13"
+    },
+    "source_url": "https://sites.uef.fi/europeanforestry/",
+    "evidence": "Next time the call will be open 2 December 2026 – 13 January 2027 for the course starting in August 2027. EMJM scholarships will be available on a competitive basis.",
+    "observed_at": "2026-10-06T10:19:05Z"
+  },
+  {
+    "data": {
+      "name": "Fulbright Foreign Student Program – Beca Posgrado Regular Fulbright-García Robles (Mexico)",
+      "url": "https://www.comexus.org.mx/becas_para_mexicanos/fulbright_garcia_robles",
+      "provider": "U.S.-Mexico Commission for Educational and Cultural Exchange (COMEXUS)",
+      "funder_type": "government",
+      "host_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "level": [
+        "master",
+        "phd"
+      ],
+      "coverage": "partial",
+      "value_stated": "Up to US$37,000 per school year for up to 18 months for a master's, and up to $25,000 per school year for up to three years for a doctorate",
+      "eligibility": "Mexican nationals",
+      "opens_on": "2026-09-02",
+      "deadline": "2027-01-15"
+    },
+    "source_url": "https://www.comexus.org.mx/becas_para_mexicanos/fulbright_garcia_robles",
+    "evidence": "Beca Posgrado Regular CONVOCATORIA ABIERTA Del 2 de septiembre de 2026 al 15 de enero de 2027, para iniciar estudios en agosto de 2028 sin excepción.",
+    "observed_at": "2026-10-06T10:09:08Z"
+  },
+  {
+    "data": {
+      "name": "Fulbright Foreign Student Program – Bolsa Fulbright para Mestrado (Portugal)",
+      "url": "https://www.fulbright.pt/bolsas/bolsa-fulbright-para-mestrado/",
+      "provider": "Fulbright Commission Portugal",
+      "funder_type": "government",
+      "host_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "level": [
+        "master"
+      ],
+      "coverage": "partial",
+      "value_stated": "Funding of up to US$40,000 for the first year of study",
+      "eligibility": "Portuguese nationals admitted to a master's programme at a US university starting in the 2027/2028 academic year",
+      "opens_on": "2026-10-01",
+      "deadline": "2027-01-15"
+    },
+    "source_url": "https://www.fulbright.pt/bolsas/bolsa-fulbright-para-mestrado/",
+    "evidence": "O período de candidatura tem início no dia 1 de outubro de 2026 e termina no dia 15 de janeiro de 2027",
+    "observed_at": "2026-10-06T10:07:03Z"
+  },
+  {
+    "data": {
+      "name": "Boren Fellowships",
+      "url": "https://www.borenawards.org/application-instructions-boren-fellowships",
+      "provider": "National Security Education Program (NSEP)",
+      "funder_type": "government",
+      "host_country": [
+        "Africa",
+        "Asia",
+        "Central & Eastern Europe",
+        "Latin America",
+        "Middle East"
+      ],
+      "region": "africa-middle-east",
+      "level": [
+        "master",
+        "phd",
+        "language"
+      ],
+      "coverage": "partial",
+      "value_stated": "Maximum awards: $25,000 for 25-52 weeks (preferred), $12,500 for 12-24 weeks",
+      "eligibility": "U.S. citizens at the time of the national application deadline, matriculated in a graduate degree program located within the United States",
+      "deadline": "2027-01-20"
+    },
+    "source_url": "https://www.borenawards.org/application-instructions-boren-fellowships",
+    "evidence": "2026 NATIONAL SECURITY EDUCATION PROGRAM DEADLINES : BOREN FELLOWSHIPS: JANUARY 20, 2027 | BOREN SCHOLARSHIPS: JANUARY 27, 2027",
+    "observed_at": "2026-10-06T10:02:59Z"
+  },
+  {
+    "data": {
+      "name": "SPACEMED Erasmus Mundus Joint Master Degree on Physiology and Medicine of Humans in Space and Extreme Environment",
+      "url": "https://space-med.eu/apply-to-spacemed/scholarships",
+      "provider": "European Union (Erasmus+)",
+      "funder_type": "international",
+      "host_country": [
+        "France",
+        "Germany",
+        "Slovenia"
+      ],
+      "region": "europe",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "€1,400 per month for a total of 24 months, including a participation fee waiver",
+      "eligibility": "Students from all over the world, under the EMJM scholarship conditions",
+      "opens_on": "2026-10-21",
+      "deadline": "2027-01-21"
+    },
+    "source_url": "https://space-med.eu",
+    "evidence": "The application platform (2027 intake) will be open from October 21st 2026 (8.00am CET) to January 21st 2027 (11.59pm CET)",
+    "observed_at": "2026-10-06T10:04:28Z"
+  },
+  {
+    "data": {
+      "name": "Boren Scholarships",
+      "url": "https://www.borenawards.org/application-instructions-boren-scholarships",
+      "provider": "National Security Education Program (NSEP)",
+      "funder_type": "government",
+      "host_country": [
+        "Africa",
+        "Asia",
+        "Central & Eastern Europe",
+        "Latin America",
+        "Middle East"
+      ],
+      "region": "africa-middle-east",
+      "level": [
+        "bachelor",
+        "language"
+      ],
+      "coverage": "partial",
+      "value_stated": "Maximum awards: $25,000 for 25-52 weeks (preferred), $12,500 for 12-24 weeks, $8,000 for 8-11 weeks (STEM majors only)",
+      "eligibility": "U.S. citizens at the time of the national application deadline, matriculated in an undergraduate degree program located within the United States",
+      "deadline": "2027-01-27"
+    },
+    "source_url": "https://www.borenawards.org/application-instructions-boren-scholarships",
+    "evidence": "2026 NATIONAL SECURITY EDUCATION PROGRAM DEADLINES : BOREN FELLOWSHIPS: JANUARY 20, 2027 | BOREN SCHOLARSHIPS: JANUARY 27, 2027",
+    "observed_at": "2026-10-06T10:02:53Z"
+  },
+  {
+    "data": {
+      "name": "Erasmus Mundus Joint Master Degree DENSYS 2.0 (Decentralised Smart Energy Systems)",
+      "url": "https://densys.univ-lorraine.fr/fees-and-scholarships/",
+      "provider": "European Union (Erasmus+)",
+      "funder_type": "international",
+      "host_country": [
+        "France",
+        "Sweden",
+        "Italy",
+        "Spain"
+      ],
+      "region": "europe",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "Participation costs and a monthly allowance (1,400 €/month) for the full 2-year Master’s program",
+      "opens_on": "2026-10-12",
+      "deadline": "2027-01-27"
+    },
+    "source_url": "https://densys.univ-lorraine.fr/",
+    "evidence": "The application campaign for 2027-2029 opens on 12 October 2026 at 8 am CEST and closes on 27 January 2027 at 6 pm CEST",
+    "observed_at": "2026-10-06T10:04:24Z"
+  },
+  {
+    "data": {
+      "name": "President's International Scholarship of Excellence (PISE)",
+      "url": "https://futurestudents.yorku.ca/presidents-international-scholarship-excellence-application-guides",
+      "provider": "York University",
+      "funder_type": "university",
+      "host_country": [
+        "Canada"
+      ],
+      "region": "americas",
+      "level": [
+        "bachelor"
+      ],
+      "coverage": "partial",
+      "value_stated": "$180,000 CAD valued over four years ($45,000/year)",
+      "eligibility": "High-school students entering the first year of an undergraduate degree at York in Fall 2027 who hold international student status and are subject to international tuition fees",
+      "deadline": "2027-01-27"
+    },
+    "source_url": "https://futurestudents.yorku.ca/presidents-international-scholarship-excellence-application-guides",
+    "evidence": "Student Application Deadline: January 27, 2027 at 11:59 p.m. EST Nomination & Reference Submission Deadline: February 4, 2027 at 11:59 p.m. EST Student Guide: President’s International Scholarship of Excellence",
+    "observed_at": "2026-10-06T10:17:07Z"
+  },
+  {
+    "data": {
+      "name": "Hamad Bin Khalifa University graduate scholarships",
+      "url": "https://www.hbku.edu.qa/en/scholarship",
+      "provider": "Hamad Bin Khalifa University",
+      "funder_type": "university",
+      "host_country": [
+        "Qatar"
+      ],
+      "region": "africa-middle-east",
+      "level": [
+        "master",
+        "phd"
+      ],
+      "coverage": "partial",
+      "value_stated": "May include a tuition waiver and a stipend paid directly to the student",
+      "opens_on": "2026-10-01",
+      "deadline": "2027-02-01"
+    },
+    "source_url": "https://www.hbku.edu.qa/en/admissions",
+    "evidence": "Online graduate admission application opens to the public 01 Oct 2026 Admission application deadline for international graduate applicants 01 Feb 2027",
+    "observed_at": "2026-10-06T10:25:53Z"
+  },
+  {
+    "data": {
+      "name": "UM NL Brightlands Talent Scholarship",
+      "url": "https://www.maastrichtuniversity.nl/studeren/toelating-inschrijving/financing-your-studies/scholarships/um-nl-brightlands-talent",
+      "provider": "Maastricht University",
+      "funder_type": "university",
+      "host_country": [
+        "Netherlands"
+      ],
+      "region": "europe",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "A tuition fee waiver and monthly stipend: living expenses of € 20,150 (13 months) or € 38,750 (25 months)",
+      "eligibility": "Top-performing non-EU/EEA, non-Switzerland or non-Surinam students applying to a participating UM master’s programme",
+      "opens_on": "2026-10-01",
+      "deadline": "2027-02-01"
+    },
+    "source_url": "https://www.maastrichtuniversity.nl/studeren/toelating-inschrijving/financing-your-studies/scholarships/um-nl-brightlands-talent",
+    "evidence": "Application deadline Applications are open from 1 October 2026 until 1 February 2027 at 23:59 CET.",
+    "observed_at": "2026-10-06T10:20:06Z"
+  },
+  {
+    "data": {
+      "name": "UM NL-High Potential Scholarship",
+      "url": "https://www.maastrichtuniversity.nl/studeren/toelating-inschrijving/financing-your-studies/scholarships/maastricht-university-nl-high",
+      "provider": "Maastricht University",
+      "funder_type": "university",
+      "host_country": [
+        "Netherlands"
+      ],
+      "region": "europe",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "Tuition fee waiver and a monthly stipend: living expenses of € 20,150 (13 months) or € 38,750 (25 months), plus health and liability insurance",
+      "eligibility": "Highly talented students from outside the EU/EEA, Switzerland or Surinam admitted to a participating UM master’s programme",
+      "opens_on": "2026-10-01",
+      "deadline": "2027-02-01"
+    },
+    "source_url": "https://www.maastrichtuniversity.nl/studeren/toelating-inschrijving/financing-your-studies/scholarships/maastricht-university-nl-high",
+    "evidence": "Application deadline Applications are open from 1 October 2026 until 1 February 2027 23:59 CET.",
+    "observed_at": "2026-10-06T10:20:05Z"
+  },
+  {
+    "data": {
+      "name": "Erasmus Mundus Joint Master in Artificial Intelligence for Image Processing and Computer Vision",
+      "url": "https://ipcv.eu/about-ipcv-program-2/costs-and-funding-2/",
+      "provider": "European Union (Erasmus+)",
+      "funder_type": "international",
+      "host_country": [
+        "Hungary",
+        "Spain",
+        "France"
+      ],
+      "region": "europe",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "€1,400 per month for the entire two-year duration of the programme; participation costs (all tuition and administrative fees) fully paid",
+      "eligibility": "Candidates from all countries can apply",
+      "opens_on": "2026-11-01",
+      "deadline": "2027-02-02"
+    },
+    "source_url": "https://ipcv.eu/application-and-selection/application/",
+    "evidence": "Application deadline NEW ERASMUS MUNDUS CALL: Dates: November 1, 2026 – February 2, 2027 (at noon – Paris time)",
+    "observed_at": "2026-10-06T10:08:08Z"
+  },
+  {
+    "data": {
+      "name": "Beit Trust Postgraduate Scholarships",
+      "url": "https://beittrust.org.uk/beit-trust-scholarships/",
+      "provider": "Beit Trust",
+      "funder_type": "foundation",
+      "host_country": [
+        "United Kingdom",
+        "South Africa"
+      ],
+      "region": "europe",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "Full tuition and academic fees, living allowance, UK Visa and Health Surcharge, allowances for Arrival, Laptop, Departure, economy-class flights",
+      "eligibility": "Nationals of Zambia, Zimbabwe, or Malawi who are permanent residents of one of these countries",
+      "opens_on": "2026-12-01",
+      "deadline": "2027-02-12"
+    },
+    "source_url": "https://beittrust.org.uk/beit-trust-scholarships/",
+    "evidence": "The next round of Beit Scholarships will be awarded for: UK Partner Universities: Academic year starting September 2027 South African Partner Universities: Academic year starting January 2028 The next application window will be as follows: Open: 1 December 2026 Close: 12 February 2027.",
+    "observed_at": "2026-10-06T10:11:21Z"
+  },
+  {
+    "data": {
+      "name": "Erasmus Mundus Master in Education, Migration, and Diversity (EDU_MIG)",
+      "url": "https://www.edumig.org/",
+      "provider": "European Union (Erasmus+)",
+      "funder_type": "international",
+      "host_country": [
+        "Germany",
+        "Sweden",
+        "Italy"
+      ],
+      "region": "europe",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "A monthly allowance with covered tuition and health insurance",
+      "opens_on": "2026-12-15",
+      "deadline": "2027-02-15"
+    },
+    "source_url": "https://www.edumig.org/",
+    "evidence": "Application period for 2027 will open on: 15th December 2026-15th February 2027 for scholarships 1st April 2027-31st May 2027 for self-funded students",
+    "observed_at": "2026-10-06T10:08:02Z"
+  },
+  {
+    "data": {
+      "name": "Joint Japan/World Bank Graduate Scholarship Program",
+      "url": "https://www.worldbank.org/en/programs/scholarships/jj-wbgsp",
+      "provider": "World Bank (Joint Japan/World Bank Graduate Scholarship Program)",
+      "funder_type": "international",
+      "host_country": [
+        "United States",
+        "Europe",
+        "Africa",
+        "Oceania",
+        "Japan"
+      ],
+      "region": "americas",
+      "level": [
+        "master"
+      ],
+      "coverage": "full",
+      "value_stated": "Tuition, a monthly living stipend, round-trip airfare, health insurance, and travel allowance",
+      "eligibility": "Citizens of certain developing countries with relevant professional experience and a history of supporting their countries’ development efforts",
+      "opens_on": "2027-01-18",
+      "deadline": "2027-02-26"
+    },
+    "source_url": "https://www.worldbank.org/en/programs/scholarships/jj-wbgsp",
+    "evidence": "the application process is organized in two rounds: Application Window#1 Application Window #1 from January 18 to February 26, 2027 Application Window #2 Application Window #2 from March 29 to May 21, 2027",
+    "observed_at": "2026-10-06T10:02:22Z"
+  },
+  {
+    "data": {
+      "name": "Heinrich Böll Foundation Scholarships for Graduates and PhD students",
+      "url": "https://www.boell.de/en/foundation/scholarships",
+      "provider": "Heinrich Böll Foundation (funded by BMBF and the Federal Foreign Office)",
+      "funder_type": "foundation",
+      "host_country": [
+        "Germany"
+      ],
+      "region": "europe",
+      "level": [
+        "master",
+        "phd"
+      ],
+      "coverage": "full",
+      "value_stated": "A base scholarship of 992 € a month, a health insurance allowance of up to 100 €, and optional reimbursement of tuition fees in Germany of up to 10,000 € a year",
+      "eligibility": "International students with a first (or graduate) degree from abroad starting a Master's or PhD in Germany; priority to applicants from DAC countries",
+      "opens_on": "2027-01-15",
+      "deadline": "2027-03-01"
+    },
+    "source_url": "https://www.boell.de/en/foundation/scholarships",
+    "evidence": "Our next application deadlines: Spring 2027: 15 January 2027 until 1 March 2027 Fall 2027: 15 July 2027 until 1 September 2027 The online application portal opens on January 15, 2027, and closes on March 1, 2027.",
+    "observed_at": "2026-10-06T10:25:53Z"
+  },
+  {
+    "data": {
+      "name": "MOFA Taiwan Scholarship Program",
+      "url": "https://en.mofa.gov.tw/cp.aspx?n=1325",
+      "provider": "Ministry of Foreign Affairs, Republic of China (Taiwan)",
+      "funder_type": "government",
+      "host_country": [
+        "Taiwan"
+      ],
+      "region": "asia-pacific",
+      "level": [
+        "bachelor",
+        "master",
+        "phd",
+        "language"
+      ],
+      "coverage": "partial",
+      "value_stated": "A monthly stipend of NT$28,000 for the LEP and NT$33,000 for degree programs, plus one-way economy-class plane tickets to and from Taiwan",
+      "eligibility": "In principle students from countries with diplomatic relations with Taiwan; high school graduates or above with an excellent academic record",
+      "opens_on": "2027-02-01",
+      "deadline": "2027-03-31"
+    },
+    "source_url": "https://en.mofa.gov.tw/cp.aspx?n=1325",
+    "evidence": "V. Application period from February 1 to March 31",
+    "observed_at": "2026-10-06T10:40:36Z"
+  },
+  {
+    "data": {
+      "name": "TWAS-FAPESP Postdoctoral Fellowship Programme for Developing Countries",
+      "url": "https://twas.org/opportunity/twas-fapesp-postdoctoral-fellowship-programme-developing-countries",
+      "provider": "São Paulo Research Foundation (FAPESP) and TWAS",
+      "funder_type": "government",
+      "host_country": [
+        "Brazil"
+      ],
+      "region": "americas",
+      "level": [
+        "postdoc"
+      ],
+      "coverage": "partial",
+      "eligibility": "Researchers from Developing Countries, in all areas of natural, applied and social sciences",
+      "deadline": "2027-04-01"
+    },
+    "source_url": "https://twas.org/opportunity/twas-fapesp-postdoctoral-fellowship-programme-developing-countries",
+    "evidence": "Deadline 01 April 2027 Partner Organizations São Paulo Research Foundation (FAPESP) Location(s) São Paulo Region Latin America and Caribbean Country Brazil",
+    "observed_at": "2026-10-06T10:21:31Z"
+  },
+  {
+    "data": {
+      "name": "Fulbright Foreign Student Program – Student Program, degree or research (Sweden)",
+      "url": "https://www.fulbright.se/the-graduate-student-program-degree-or-research/",
+      "provider": "Fulbright Commission Sweden",
+      "funder_type": "government",
+      "host_country": [
+        "United States"
+      ],
+      "region": "americas",
+      "level": [
+        "master",
+        "phd"
+      ],
+      "coverage": "partial",
+      "value_stated": "SEK 50 000 (non-degree research), SEK 100 000 (master's or Ph.D. degrees)",
+      "eligibility": "Swedish citizenship, fluency in English, excellent academic record, Swedish or EU/UK university degree completed prior to departure for the U.S.",
+      "deadline": "2027-04-26"
+    },
+    "source_url": "https://www.fulbright.se/the-graduate-student-program-degree-or-research/",
+    "evidence": "Annual Timeline (for academic year 2028-29) January 2027: online application opens April 26, 2027 (23:59 CEST): application deadline",
+    "observed_at": "2026-10-06T10:06:30Z"
+  },
+  {
+    "data": {
+      "name": "MOE Taiwan Scholarship (Philippines)",
+      "url": "https://depart.moe.edu.tw/ph/cp.aspx?n=6f4dd13e01438599&s=AF9491E7DE1B4470",
+      "provider": "Ministry of Education, Republic of China (Taiwan)",
+      "funder_type": "government",
+      "host_country": [
+        "Taiwan"
+      ],
+      "region": "asia-pacific",
+      "level": [
+        "bachelor",
+        "master",
+        "phd"
+      ],
+      "coverage": "full",
+      "value_stated": "Up to NT$40,000 per semester for tuition and miscellaneous expenses, and a monthly stipend of NT$15,000 (undergraduate) or NT$20,000 (master’s and PhD)",
+      "opens_on": "2027-02-01",
+      "deadline": "2027-04-30"
+    },
+    "source_url": "https://depart.moe.edu.tw/ph/cp.aspx?n=6f4dd13e01438599&s=AF9491E7DE1B4470",
+    "evidence": "Application Period: February 1 to April 30 every year.",
+    "observed_at": "2026-10-06T10:40:38Z"
+  }
+]

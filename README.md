@@ -9,8 +9,16 @@ Data apps so far: **[AI Hackathons](https://data.manyfold.ai/ai-hackathons)**,
 **[AI Conferences & CFPs](https://data.manyfold.ai/ai-conferences)**,
 **[AI Company Fundraising](https://data.manyfold.ai/ai-fundraising)**,
 **[AI Acquisitions](https://data.manyfold.ai/ai-acquisitions)**,
-**[AI Data Centers](https://data.manyfold.ai/ai-data-centers)** and
-**[World Marathons](https://data.manyfold.ai/marathons)**.
+**[AI Data Centers](https://data.manyfold.ai/ai-data-centers)**,
+**[Robotaxi Cities](https://data.manyfold.ai/robotaxis)**,
+**[AI Scam Alerts](https://data.manyfold.ai/ai-scams)**,
+**[Visa Policy Changes](https://data.manyfold.ai/visa-changes)**,
+**[New Rules Taking Effect](https://data.manyfold.ai/new-rules)**,
+**[Product Recalls](https://data.manyfold.ai/recalls)**,
+**[International Scholarships](https://data.manyfold.ai/scholarships)**,
+**[World Marathons](https://data.manyfold.ai/marathons)**,
+**[Half Marathons, Trails & Triathlons](https://data.manyfold.ai/endurance-races)** and
+**[Sky Events](https://data.manyfold.ai/sky-events)**.
 
 [中文说明](./README_CN.md)
 

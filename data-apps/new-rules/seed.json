@@ -1,0 +1,1090 @@
+[
+  {
+    "data": {
+      "title": "Personal Information Protection Act and Enforcement Decree, amended (개인정보 보호법)",
+      "what_changes": "People must be notified even when their personal data may have been leaked, leak notices must cover more items and people, and repeated or large leaks caused by intent or gross negligence are punished more severely.",
+      "jurisdiction": [
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "topic": "online-privacy",
+      "effective_on": "2026-09-11",
+      "issuer": "Government of South Korea (Personal Information Protection Commission)",
+      "url": "https://www.pipc.go.kr/np/cop/bbs/selectBoardArticle.do?bbsId=BS074&mCode=C020010000&nttId=12459"
+    },
+    "source_url": "https://www.pipc.go.kr/np/cop/bbs/selectBoardArticle.do?bbsId=BS074&mCode=C020010000&nttId=12459",
+    "evidence": "이를 위해 지난 3월 개정된 ｢개인정보 보호법｣(이하 ‘법’)과 위임사항을 구체화한 개정 ｢개인정보 보호법 시행령｣(이하 ‘시행령’)이 9월 11일부터 시행된다.",
+    "observed_at": "2026-10-06T11:03:56Z"
+  },
+  {
+    "data": {
+      "title": "State Council Provisions on Exit and Entry Administration (国务院关于出境入境管理的规定)",
+      "what_changes": "Chinese citizens punished for fraudulently obtaining travel documents or crossing the border illegally can be barred from leaving China for 6 months to 3 years, and anyone who writes a false invitation letter for a traveller faces a fine of ¥5,000 to ¥10,000.",
+      "jurisdiction": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "topic": "travel-immigration",
+      "effective_on": "2026-09-15",
+      "issuer": "State Council of China",
+      "url": "https://www.gov.cn/zhengce/content/202607/content_7077172.htm"
+    },
+    "source_url": "https://www.gov.cn/zhengce/content/202607/content_7077172.htm",
+    "evidence": "《国务院关于出境入境管理的规定》已经2026年6月29日国务院第90次常务会议通过，现予公布，自2026年9月15日起施行。",
+    "observed_at": "2026-10-06T10:12:40Z"
+  },
+  {
+    "data": {
+      "title": "Fixed Time Period of Admission and Extension of Stay Procedure for Students, Exchange Visitors and Foreign Media (DHS final rule)",
+      "what_changes": "International students on F visas, exchange visitors on J visas and foreign journalists on I visas are admitted for a fixed period instead of 'duration of status', and must apply for an extension to stay longer.",
+      "jurisdiction": [
+        "United States"
+      ],
+      "region": "americas",
+      "topic": "travel-immigration",
+      "effective_on": "2026-09-15",
+      "issuer": "US Department of Homeland Security",
+      "url": "https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant"
+    },
+    "source_url": "https://www.federalregister.gov/documents/2026/07/17/2026-14439/establishing-a-fixed-time-period-of-admission-and-an-extension-of-stay-procedure-for-nonimmigrant",
+    "evidence": "This rule has been classified as a major rule subject to congressional review. The effective date is September 15, 2026.",
+    "observed_at": "2026-10-06T10:44:05Z"
+  },
+  {
+    "data": {
+      "title": "Prenatal parental leave and earlier spouse maternity leave (출산 전 육아휴직·배우자 출산전후휴가)",
+      "what_changes": "Workers whose spouse is pregnant and at risk of miscarriage or premature birth can take parental leave before the birth, spouse leave can start 50 days before the due date, and a new 5-day leave covers a spouse's miscarriage or stillbirth.",
+      "jurisdiction": [
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "topic": "family-education",
+      "effective_on": "2026-09-18",
+      "issuer": "Government of South Korea",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148967434"
+    },
+    "source_url": "https://www.korea.kr/news/policyNewsView.do?newsId=148967434",
+    "evidence": "9월 18일부터는 배우자가 임신 중이고 유산·조산 등의 위험이 있으면 출산 전에도 육아휴직을 쓸 수 있다. 그동안 남성은 자녀가 태어난 이후에만 육아휴직을 사용할 수 있었지만, 앞으로는 출산 전부터 배우자를 돌볼 수 있게 된다.",
+    "observed_at": "2026-10-06T10:58:13Z"
+  },
+  {
+    "data": {
+      "title": "Tougher penalties for unpaid retirement benefits (퇴직급여 체불 처벌 강화)",
+      "what_changes": "Employers who fail to pay workers' retirement benefits face up to 5 years in prison or a ₩50 million fine, up from 3 years or ₩30 million.",
+      "jurisdiction": [
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "topic": "work-pay",
+      "effective_on": "2026-09-18",
+      "issuer": "Government of South Korea",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148967434"
+    },
+    "source_url": "https://www.korea.kr/news/policyNewsView.do?newsId=148967434",
+    "evidence": "9월 18일부터 퇴직급여 체불의 법정형은 기존 '3년 이하 징역 또는 3000만 원 이하 벌금'에서 '5년 이하 징역 또는 5000만 원 이하 벌금'으로 상향된다.",
+    "observed_at": "2026-10-06T10:58:17Z"
+  },
+  {
+    "data": {
+      "title": "Public Charge Ground of Inadmissibility (2026 final rule)",
+      "what_changes": "DHS rescinds its 2022 public charge rules, giving immigration officers broader discretion to judge whether people applying for admission or a green card are likely to become a public charge.",
+      "jurisdiction": [
+        "United States"
+      ],
+      "region": "americas",
+      "topic": "travel-immigration",
+      "effective_on": "2026-09-18",
+      "issuer": "US Department of Homeland Security",
+      "url": "https://www.federalregister.gov/documents/2026/07/20/2026-14539/public-charge-ground-of-inadmissibility"
+    },
+    "source_url": "https://www.federalregister.gov/documents/2026/07/20/2026-14539/public-charge-ground-of-inadmissibility",
+    "evidence": "The final rule is effective on September 18, 2026. This rule applies to applications for admission made on or after September 18, 2026 or applications for adjustment of status postmarked or electronically submitted on or after September 18, 2026.",
+    "observed_at": "2026-10-06T10:44:52Z"
+  },
+  {
+    "data": {
+      "title": "Regulations on the Administration of Housing Provident Fund, amended (住房公积金管理条例)",
+      "what_changes": "Workers may withdraw their housing provident fund savings to renovate their own home or pay its property management fees, and self-employed and other flexible workers may choose to pay into the fund.",
+      "jurisdiction": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "topic": "housing",
+      "effective_on": "2026-09-20",
+      "issuer": "State Council of China",
+      "url": "https://www.gov.cn/zhengce/content/202608/content_7078477.htm"
+    },
+    "source_url": "https://www.gov.cn/zhengce/content/202608/content_7078477.htm",
+    "evidence": "《国务院关于修改〈住房公积金管理条例〉的决定》已经2026年7月31日国务院第93次常务会议通过，现予公布，自2026年9月20日起施行。",
+    "observed_at": "2026-10-06T10:12:41Z"
+  },
+  {
+    "data": {
+      "title": "Directive (EU) 2024/825 on empowering consumers for the green transition",
+      "what_changes": "Shoppers must get clearer information at the point of sale on how long goods last, whether they can be repaired and their legal guarantee rights, and greenwashing and early-obsolescence practices face tougher bans.",
+      "jurisdiction": [
+        "European Union"
+      ],
+      "region": "europe",
+      "topic": "consumer",
+      "effective_on": "2026-09-27",
+      "issuer": "European Parliament and Council",
+      "url": "https://commission.europa.eu/live-work-travel-eu/consumer-rights-and-complaints/sustainable-consumption_en"
+    },
+    "source_url": "https://commission.europa.eu/live-work-travel-eu/consumer-rights-and-complaints/sustainable-consumption_en",
+    "evidence": "The Directive was adopted by the co-legislators on 28 February 2024 and Member States had until 27 March 2026 to transpose the Directive. Since 27 September 2026, the Directive entered into application.",
+    "observed_at": "2026-10-06T10:32:06Z"
+  },
+  {
+    "data": {
+      "title": "Measures for the Administration of Online Marketing of Financial Products (金融产品网络营销管理办法)",
+      "what_changes": "Online ads for loans and investments may no longer use lures such as 'low interest', 'instant cash' or promised returns, and payment app checkouts must show loan products separately from ordinary payment options.",
+      "jurisdiction": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "topic": "consumer",
+      "effective_on": "2026-09-30",
+      "issuer": "People's Bank of China and seven other national departments",
+      "url": "https://www.gov.cn/zhengce/zhengceku/202604/content_7066927.htm"
+    },
+    "source_url": "https://www.news.cn/fortune/20260930/050f18562e5c4dfd9cb577596ed4dd10/c.html",
+    "evidence": "中国人民银行等8部门联合印发的《金融产品网络营销管理办法》9月30日起正式实施。办法将网络营销内容的标准设定为“真实准确、通俗易懂”，诱导性用语、话术将不能再使用。",
+    "observed_at": "2026-10-06T10:13:37Z"
+  },
+  {
+    "data": {
+      "title": "Notice on the Interest Subsidy for Home Purchase Loans (关于实施居民购房贷款贴息政策的通知)",
+      "what_changes": "Families taking out a new commercial mortgage for a first home of up to 120 square metres and ¥1.5 million get a state interest subsidy of 1 percentage point a year for up to 5 years, on up to ¥1 million of the loan.",
+      "jurisdiction": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "topic": "housing",
+      "effective_on": "2026-10-01",
+      "issuer": "Ministry of Finance, People's Bank of China and National Financial Regulatory Administration",
+      "url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026092917051440583/index.html"
+    },
+    "source_url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026092917051440583/index.html",
+    "evidence": "政策自2026年10月1日起实施，实施期限暂定1年，其间经办银行新发放符合条件的首套住房商业性个人住房贷款，财政部门按照贷款本金给予年化1个百分点、期限不超过5年的贴息支持，单户可享受贴息的贷款规模上限为100万元。",
+    "observed_at": "2026-10-06T10:15:08Z"
+  },
+  {
+    "data": {
+      "title": "Regulations on the Management of Narcotic and Psychotropic Drugs in Medical Institutions (医疗机构麻醉药品和精神药品管理规定)",
+      "what_changes": "Prescription controls now cover all medical narcotic and psychotropic drugs, including second-class psychotropics, and doctors need a guardian's written informed consent before prescribing them to a minor.",
+      "jurisdiction": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "topic": "health",
+      "effective_on": "2026-10-01",
+      "issuer": "National Health Commission of China and three other bodies",
+      "url": "https://wjw.xinjiang.gov.cn/hfpc/zcwj4/202609/a4e9fca4e5564afd99ed54904d37f761.shtml"
+    },
+    "source_url": "https://www.chinanews.com.cn/jk/2026/09-09/10693162.shtml",
+    "evidence": "国家卫生健康委会同国家中医药局、国家疾控局、中央军委后勤保障部在2005年发布实施的《医疗机构麻醉药品、第一类精神药品管理规定》基础上，修订形成了《医疗机构麻醉药品和精神药品管理规定》(以下简称《管理规定》)，将于2026年10月1日起实施。",
+    "observed_at": "2026-10-06T11:22:23Z"
+  },
+  {
+    "data": {
+      "title": "Decree of 11 September 2026 raising the caps on medical deductibles and flat-rate charges",
+      "what_changes": "Patients without an exemption can now be charged up to €140 a year in medical deductibles and flat-rate contributions, up from €100.",
+      "jurisdiction": [
+        "France"
+      ],
+      "region": "europe",
+      "topic": "health",
+      "effective_on": "2026-10-01",
+      "issuer": "Government of France",
+      "url": "https://www.service-public.gouv.fr/particuliers/actualites/A17166"
+    },
+    "source_url": "https://www.service-public.gouv.fr/particuliers/actualites/A17166",
+    "evidence": "Un décret paru au Journal officiel le 12 septembre 2026 rehausse les plafonds annuels des franchises médicales et des participations forfaitaires pour les assurés à partir du 1 er octobre 2026.",
+    "observed_at": "2026-10-06T11:07:43Z"
+  },
+  {
+    "data": {
+      "title": "Decree on standard residential lease templates",
+      "what_changes": "New standard lease templates for unfurnished, furnished and shared rentals must be used, adding the termination clause for unpaid rent or an unpaid deposit and new wording on occupying the home.",
+      "jurisdiction": [
+        "France"
+      ],
+      "region": "europe",
+      "topic": "housing",
+      "effective_on": "2026-10-01",
+      "issuer": "Government of France",
+      "url": "https://www.service-public.gouv.fr/particuliers/actualites/A19067"
+    },
+    "source_url": "https://www.service-public.gouv.fr/particuliers/actualites/A19067",
+    "evidence": "Les modèles réglementaires de bail évoluent à compter du 1 er octobre 2026. Un décret paru au Journal officiel du 7 juillet modifie les contrats types de location des logements loués vides, meublés et des colocations à bail unique.",
+    "observed_at": "2026-10-06T11:07:44Z"
+  },
+  {
+    "data": {
+      "title": "Decree on the standard funeral information notice",
+      "what_changes": "Funeral providers must give families a standard information notice on their rights and on funeral services when organising a funeral.",
+      "jurisdiction": [
+        "France"
+      ],
+      "region": "europe",
+      "topic": "consumer",
+      "effective_on": "2026-10-01",
+      "issuer": "Government of France",
+      "url": "https://www.service-public.gouv.fr/particuliers/actualites/A19044"
+    },
+    "source_url": "https://www.service-public.gouv.fr/particuliers/actualites/A19044",
+    "evidence": "À compter du 1 er octobre 2026, les opérateurs funéraires devront remettre aux familles une notice d'information standardisée lors de l'organisation d'obsèques.",
+    "observed_at": "2026-10-06T11:07:44Z"
+  },
+  {
+    "data": {
+      "title": "Health insurance reimbursement of reusable period products",
+      "what_changes": "Reusable period products are fully or partly reimbursed for all women under 26 and for people covered by the Complémentaire santé solidaire (C2S).",
+      "jurisdiction": [
+        "France"
+      ],
+      "region": "europe",
+      "topic": "health",
+      "effective_on": "2026-10-01",
+      "issuer": "Government of France",
+      "url": "https://www.service-public.gouv.fr/particuliers/actualites/A18883"
+    },
+    "source_url": "https://www.service-public.gouv.fr/particuliers/actualites/A18883",
+    "evidence": "À partir du 1 er octobre 2026, les protections hygiéniques réutilisables sont intégralement ou partiellement remboursées pour toutes les femmes de moins de 26 ans ainsi que pour les bénéficiaires de la Complémentaire santé solidaire (C2S).",
+    "observed_at": "2026-10-06T11:07:43Z"
+  },
+  {
+    "data": {
+      "title": "Cabinet Order amending the Immigration Control Act Enforcement Order on residence permit fees (改正入管法施行令)",
+      "what_changes": "Foreign residents pay revised fees for changing their status of residence, renewing their period of stay and getting permanent residency, with change and renewal fees now set by the length of stay granted.",
+      "jurisdiction": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "topic": "travel-immigration",
+      "effective_on": "2026-10-01",
+      "issuer": "Cabinet of Japan",
+      "url": "https://www.moj.go.jp/isa/01_00644.html"
+    },
+    "source_url": "https://www.moj.go.jp/isa/01_00644.html",
+    "evidence": "令和８年１０月１日から「出入国管理及び難民認定法施行令及び日本国との平和条約に基づき日本の国籍を離脱した者等の出入国管理に関する特例法施行令の一部を改正する政令」（以下「改正入管法施行令」という。）が施行されることに伴い、在留資格の変更の許可、在留期間の更新の許可及び永住許可に係る手数料（以下「在留許可手数料」という。）の額が改定されます。",
+    "observed_at": "2026-10-06T10:49:50Z"
+  },
+  {
+    "data": {
+      "title": "Sustainable Aviation Fuel Levy",
+      "what_changes": "Passengers whose journey starts in Singapore pay a sustainable aviation fuel levy on tickets sold from 1 October 2026 for flights departing from 1 January 2027.",
+      "jurisdiction": [
+        "Singapore"
+      ],
+      "region": "asia-pacific",
+      "topic": "travel-immigration",
+      "effective_on": "2026-10-01",
+      "issuer": "Civil Aviation Authority of Singapore",
+      "url": "https://www.caas.gov.sg/resources/media-and-publication/newsroom/caas-to-start-sustainable-aviation-fuel-levy-for-origin-destination-passengers-from-1-october-2026-for-flights-departing-from-1-january-2027/"
+    },
+    "source_url": "https://www.caas.gov.sg/resources/media-and-publication/newsroom/caas-to-start-sustainable-aviation-fuel-levy-for-origin-destination-passengers-from-1-october-2026-for-flights-departing-from-1-january-2027/",
+    "evidence": "the Civil Aviation Authority of Singapore (CAAS) will start the Sustainable Aviation Fuel (SAF) Levy for all Origin-Destination passengers and general and business aviation flights departing Singapore from 1 January 2027, for tickets or services sold from 1 October 2026.",
+    "observed_at": "2026-10-06T11:04:34Z"
+  },
+  {
+    "data": {
+      "title": "Employment Rights Act 2025",
+      "what_changes": "Workers get 6 months instead of 3 to bring a claim to an employment tribunal.",
+      "jurisdiction": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "topic": "work-pay",
+      "effective_on": "2026-10-01",
+      "issuer": "UK Parliament",
+      "url": "https://www.legislation.gov.uk/uksi/2026/954/made"
+    },
+    "source_url": "https://www.gov.uk/government/publications/implementing-the-plan-to-make-work-pay-and-employment-rights-act/plan-to-make-work-pay-and-employment-rights-act-timeline-update",
+    "evidence": "Measures that took effect on 1 October 2026 the time limit for bringing a claim to the Employment Tribunal has increased from 3 to 6 months",
+    "observed_at": "2026-10-06T10:24:26Z"
+  },
+  {
+    "data": {
+      "title": "Vaping Products Duty",
+      "what_changes": "A new excise duty of £2.20 per 10ml of vaping liquid applies, paid by manufacturers, importers and approved warehousekeepers, and vaping duty stamps start appearing on retail packs.",
+      "jurisdiction": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "topic": "money-tax",
+      "effective_on": "2026-10-01",
+      "issuer": "HM Revenue & Customs",
+      "url": "https://www.gov.uk/government/news/new-vaping-products-duty-comes-into-effect"
+    },
+    "source_url": "https://www.gov.uk/government/news/new-vaping-products-duty-comes-into-effect",
+    "evidence": "A new excise duty on vaping products has come into force in the UK today (1 October 2026) to reduce the affordability and appeal of vaping, especially to young people and non-smokers. Vaping Products Duty is charged at £2.20 per 10ml of vaping liquid",
+    "observed_at": "2026-10-06T11:31:00Z"
+  },
+  {
+    "data": {
+      "title": "Tougher penalties for unpaid wages (임금체불 처벌 강화)",
+      "what_changes": "Employers who fail to pay wages face up to 5 years in prison or a ₩50 million fine, up from 3 years or ₩30 million, the same as for unpaid retirement benefits.",
+      "jurisdiction": [
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "topic": "work-pay",
+      "effective_on": "2026-10-08",
+      "issuer": "Government of South Korea",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148967434"
+    },
+    "source_url": "https://www.korea.kr/news/policyNewsView.do?newsId=148967434",
+    "evidence": "9월 18일부터 퇴직급여 체불의 법정형은 기존 '3년 이하 징역 또는 3000만 원 이하 벌금'에서 '5년 이하 징역 또는 5000만 원 이하 벌금'으로 상향된다. 임금체불도 10월 8일부터 같은 수준으로 처벌이 강화된다.",
+    "observed_at": "2026-10-06T10:58:21Z"
+  },
+  {
+    "data": {
+      "title": "Medicaid Program; Prohibition on Federal Medicaid and CHIP Funding for Sex-Rejecting Procedures Furnished to Children",
+      "what_changes": "Medicaid stops paying for drug or surgical treatments that aim to align a child's body with an identity that differs from their sex for under-18s (under-19s in CHIP), with up to 6 months' continued funding for hormone therapy already under way.",
+      "jurisdiction": [
+        "United States"
+      ],
+      "region": "americas",
+      "topic": "health",
+      "effective_on": "2026-10-13",
+      "issuer": "Centers for Medicare & Medicaid Services",
+      "url": "https://www.federalregister.gov/documents/2026/08/13/2026-16508/medicaid-program-prohibition-on-federal-medicaid-and-childrens-health-insurance-program-funding-for"
+    },
+    "source_url": "https://www.federalregister.gov/documents/2026/08/13/2026-16508/medicaid-program-prohibition-on-federal-medicaid-and-childrens-health-insurance-program-funding-for",
+    "evidence": "State Medicaid and CHIP agencies may continue to claim Federal Financial Participation for those hormone therapy medications for a period of up to 6 months from the effective date of this final rule. DATES: These regulations are effective on October 13, 2026.",
+    "observed_at": "2026-10-06T10:45:41Z"
+  },
+  {
+    "data": {
+      "title": "Shorter maximum sick pay for long sick leave with a non-exempting long-term illness",
+      "what_changes": "Employees on long sick leave for a long-term illness that Health Insurance does not cover at 100% can receive daily sick pay for at most 1 year instead of 3.",
+      "jurisdiction": [
+        "France"
+      ],
+      "region": "europe",
+      "topic": "social-security",
+      "effective_on": "2026-10-15",
+      "issuer": "Government of France",
+      "url": "https://www.service-public.gouv.fr/particuliers/actualites/A19066"
+    },
+    "source_url": "https://www.service-public.gouv.fr/particuliers/actualites/A19066",
+    "evidence": "Deux textes parus au Journal officiel le 18 septembre 2026 modifient la durée d’indemnisation pour certains salariés en arrêt de travail de longue durée. Cette durée maximale passe de 3 à 1 an à compter du 15 octobre 2026.",
+    "observed_at": "2026-10-06T11:07:43Z"
+  },
+  {
+    "data": {
+      "title": "Canada Labour Code equal treatment provisions (Budget Implementation Act, 2018, No. 2)",
+      "what_changes": "Federally regulated employers may no longer pay part-time, casual or temporary employees a lower rate of wages than others for the same work because of their employment status, and employees can ask for a wage review.",
+      "jurisdiction": [
+        "Canada"
+      ],
+      "region": "americas",
+      "topic": "work-pay",
+      "effective_on": "2026-10-20",
+      "issuer": "Parliament of Canada",
+      "url": "https://gazette.gc.ca/rp-pr/p2/2026/2026-05-06/html/si-tr18-eng.html"
+    },
+    "source_url": "https://www.canada.ca/en/employment-social-development/programs/laws-regulations/labour/interpretations-policies/equal-treatment.html",
+    "evidence": "Effective October 20, 2026, federally regulated employers are prohibited from paying their employees at different rates of wages based on their employment status.",
+    "observed_at": "2026-10-06T10:48:31Z"
+  },
+  {
+    "data": {
+      "title": "Child support advance payment scheme without income test (양육비 선지급제)",
+      "what_changes": "Single-parent families who are not paid child support by the other parent get ₩200,000 a month per child from the state until the child turns 18, whatever their household income or assets.",
+      "jurisdiction": [
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "topic": "family-education",
+      "effective_on": "2026-10-29",
+      "issuer": "Government of South Korea",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148972822"
+    },
+    "source_url": "https://www.korea.kr/news/policyNewsView.do?newsId=148967434",
+    "evidence": "10월 29일부터 비양육 부모에게 양육비를 받지 못하는 한부모가족의 양육비를 가구 소득이나 재산과 관계 없이 나라가 먼저 지급한다. 자녀 1인당 월 20만 원의 양육비를 18세까지 지급한다.",
+    "observed_at": "2026-10-06T10:58:37Z"
+  },
+  {
+    "data": {
+      "title": "Employment Rights Act 2025",
+      "what_changes": "Employers must take all reasonable steps to prevent sexual harassment of their staff and must not permit staff to be harassed by third parties such as customers.",
+      "jurisdiction": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "topic": "work-pay",
+      "effective_on": "2026-10-30",
+      "issuer": "UK Parliament",
+      "url": "https://www.legislation.gov.uk/uksi/2026/1065/made"
+    },
+    "source_url": "https://www.legislation.gov.uk/uksi/2026/1065/made",
+    "evidence": "The following provisions of the 2025 Act come into force on 30th October 2026— (a) section 20 (employers to take all reasonable steps to prevent sexual harassment); (b) section 21 (harassment by third parties);",
+    "observed_at": "2026-10-06T10:24:26Z"
+  },
+  {
+    "data": {
+      "title": "Refund system for tax-free shopping by foreign visitors (輸出物品販売場制度のリファンド方式への見直し)",
+      "what_changes": "Foreign visitors no longer get consumption tax waived at the till: they pay it when buying and get it refunded once customs at the airport or seaport confirms the goods are being taken out of Japan.",
+      "jurisdiction": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "topic": "travel-immigration",
+      "effective_on": "2026-11-01",
+      "issuer": "Government of Japan",
+      "url": "https://www.mlit.go.jp/kankocho/tax-free/page01_000001_00021.html"
+    },
+    "source_url": "https://www.mlit.go.jp/kankocho/tax-free/page01_000001_00021.html",
+    "evidence": "免税店での購入時に消費税が免除され、税抜価格（免税）で購入することができますが、2026年11月１日購入分からは、制度改正により、出国時に空海港（税関）で物品を国外に持ち出すことが確認された後に消費税相当額を返金する「リファンド方式」に移行します。",
+    "observed_at": "2026-10-06T10:51:36Z"
+  },
+  {
+    "data": {
+      "title": "Stronger health warnings on alcohol containers and advertising (주류 경고문구·경고그림 표시 강화)",
+      "what_changes": "Alcohol containers and alcohol ads must carry stronger health warnings, including a new anti-drink-driving message and image, warning pictures and larger warning text.",
+      "jurisdiction": [
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "topic": "health",
+      "effective_on": "2026-11-09",
+      "issuer": "Ministry of Health and Welfare of South Korea",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148967360"
+    },
+    "source_url": "https://www.korea.kr/news/policyNewsView.do?newsId=148967360",
+    "evidence": "보건복지부는 11월 9일부터 주류용기와 주류광고의 경고문구 및 경고그림 표시를 강화한다. 음주운전 금지 문구와 그림을 추가하고, 경고그림 표시 근거를 마련하며, 경고문구 글자 크기를 확대해 과음과 음주운전 위험에 대한 경각심을 높인다.",
+    "observed_at": "2026-10-06T11:27:12Z"
+  },
+  {
+    "data": {
+      "title": "Consumer Credit Directive (EU) 2023/2225",
+      "what_changes": "Updated EU consumer credit rules apply, requiring lenders to check each borrower's creditworthiness and give standard cost information including the APR, and letting consumers ask for a human to review automated credit decisions.",
+      "jurisdiction": [
+        "European Union"
+      ],
+      "region": "europe",
+      "topic": "consumer",
+      "effective_on": "2026-11-20",
+      "issuer": "European Parliament and Council",
+      "url": "https://commission.europa.eu/topics/consumers/consumer-rights-and-complaints/consumer-financial-products-and-services/consumer-protection-financial-services_en"
+    },
+    "source_url": "https://commission.europa.eu/topics/consumers/consumer-rights-and-complaints/consumer-financial-products-and-services/consumer-protection-financial-services_en",
+    "evidence": "The new Directive (EU) 2023/2225 of the European Parliament and of the Council of 18 October 2023 on credit agreements for consumers and repealing Directive 2008/48/EC will apply from 20 November 2026.",
+    "observed_at": "2026-10-06T10:34:38Z"
+  },
+  {
+    "data": {
+      "title": "Infertility treatment leave pay (난임치료휴가급여)",
+      "what_changes": "Workers at smaller priority-support companies get paid for the first 4 days of infertility treatment leave instead of 2, and the pay cap doubles to ₩336,840.",
+      "jurisdiction": [
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "topic": "work-pay",
+      "effective_on": "2026-11-27",
+      "issuer": "Government of South Korea",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148967434"
+    },
+    "source_url": "https://www.korea.kr/news/policyNewsView.do?newsId=148967434",
+    "evidence": "11월 27일부터 우선지원대상기업 노동자의 난임치료휴가급여는 최초 2일에서 4일로 확대되고, 급여 상한액도 16만 8420원에서 33만 6840원으로 두 배 늘어난다.",
+    "observed_at": "2026-10-06T10:58:42Z"
+  },
+  {
+    "data": {
+      "title": "Enhanced Heat Stress Management Framework for outdoor work",
+      "what_changes": "Employers of outdoor workers must provide heat stress training, cool drinking water near work areas, cold water or ice packs on standby for emergencies, and suitable clothing against heat.",
+      "jurisdiction": [
+        "Singapore"
+      ],
+      "region": "asia-pacific",
+      "topic": "work-pay",
+      "effective_on": "2026-12-01",
+      "issuer": "Ministry of Manpower of Singapore",
+      "url": "https://www.mom.gov.sg/newsroom/press-releases/2026/0828-enhancements-to-heat-stress-framework"
+    },
+    "source_url": "https://www.mom.gov.sg/newsroom/press-releases/2026/0828-enhancements-to-heat-stress-framework",
+    "evidence": "the Ministry of Manpower (MOM) has enhanced the Heat Stress Management Framework to better protect outdoor workers from heat-related risks. Employers will have three months to put the necessary measures in place before the enhanced measures take effect on 1 December 2026.",
+    "observed_at": "2026-10-06T11:34:02Z"
+  },
+  {
+    "data": {
+      "title": "Artificial Intelligence Act (EU) 2024/1689, as amended by the AI Omnibus",
+      "what_changes": "AI systems that generate or manipulate realistic intimate or sexually explicit images, video or audio of identifiable people without their consent, or child sexual abuse material, such as 'nudifier' apps, are banned in the EU.",
+      "jurisdiction": [
+        "European Union"
+      ],
+      "region": "europe",
+      "topic": "online-privacy",
+      "effective_on": "2026-12-02",
+      "issuer": "European Parliament and Council",
+      "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-5"
+    },
+    "source_url": "https://digital-strategy.ec.europa.eu/en/policies/enforcement-ai-act",
+    "evidence": "The prohibitions related to the generation or manipulation of non-consensual intimate material and child sexual abuse material (CSAM) apply from 2 December 2026 .",
+    "observed_at": "2026-10-06T10:39:50Z"
+  },
+  {
+    "data": {
+      "title": "Platform Work Directive (EU) 2024/2831",
+      "what_changes": "EU countries must apply rules that let people working through digital platforms claim they are employees, with the platform having to prove otherwise, and that require human oversight of algorithmic management.",
+      "jurisdiction": [
+        "European Union"
+      ],
+      "region": "europe",
+      "topic": "work-pay",
+      "effective_on": "2026-12-02",
+      "issuer": "European Parliament and Council",
+      "url": "https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1794723"
+    },
+    "source_url": "https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1794723",
+    "evidence": "average income from activity of persons performing platform work on a regular basis through the digital labour platform concerned. ENTRY INTO FORCE: 1.12.2024. TRANSPOSITION: 2.12.2026 at the latest.",
+    "observed_at": "2026-10-06T10:35:56Z"
+  },
+  {
+    "data": {
+      "title": "Product Liability Directive (EU) 2024/2853",
+      "what_changes": "People harmed by defective products, now explicitly including software, apps and AI systems, can claim compensation from manufacturers under new EU liability rules for products placed on the market from 9 December 2026.",
+      "jurisdiction": [
+        "European Union"
+      ],
+      "region": "europe",
+      "topic": "consumer",
+      "effective_on": "2026-12-09",
+      "issuer": "European Parliament and Council",
+      "url": "https://single-market-economy.ec.europa.eu/single-market/goods/free-movement-sectors/liability-defective-products_en"
+    },
+    "source_url": "https://single-market-economy.ec.europa.eu/single-market/goods/free-movement-sectors/liability-defective-products_en",
+    "evidence": "EU countries will have until 9 December 2026 to transpose this directive into national law. PLD will apply to products placed on the market as of 9 December 2026.",
+    "observed_at": "2026-10-06T10:32:06Z"
+  },
+  {
+    "data": {
+      "title": "Privacy and Other Legislation Amendment Act 2024 (automated decision transparency)",
+      "what_changes": "Organisations covered by the Privacy Act must say in their privacy policy when a computer program makes or informs decisions that significantly affect people's rights or interests.",
+      "jurisdiction": [
+        "Australia"
+      ],
+      "region": "asia-pacific",
+      "topic": "online-privacy",
+      "effective_on": "2026-12-10",
+      "issuer": "Parliament of Australia",
+      "url": "https://www.oaic.gov.au/news/media-centre/new-resources-on-transparency-for-use-of-ai-and-automated-decision-making"
+    },
+    "source_url": "https://www.oaic.gov.au/news/media-centre/new-resources-on-transparency-for-use-of-ai-and-automated-decision-making",
+    "evidence": "On 10 December 2026, APP entities must include information in their privacy policy where they have arranged for a computer program to make or inform decisions that significantly affect individuals",
+    "observed_at": "2026-10-06T11:05:13Z"
+  },
+  {
+    "data": {
+      "title": "Rest break rule for four-hour workdays (4시간 근로 휴게시간)",
+      "what_changes": "Employees who work four hours in a day can ask to leave straight after work instead of first taking the 30-minute rest break.",
+      "jurisdiction": [
+        "South Korea"
+      ],
+      "region": "asia-pacific",
+      "topic": "work-pay",
+      "effective_on": "2026-12-10",
+      "issuer": "Government of South Korea",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148967434"
+    },
+    "source_url": "https://www.korea.kr/news/policyNewsView.do?newsId=148967434",
+    "evidence": "12월 10일부터 하루 근로시간이 4시간인 노동자가 요청할 경우에 별도의 30분 휴게시간 없이 바로 퇴근할 수 있다.",
+    "observed_at": "2026-10-06T10:58:46Z"
+  },
+  {
+    "data": {
+      "title": "Ambient Air Quality Directive (EU) 2024/2881",
+      "what_changes": "EU countries must apply rules giving people the right to claim compensation when their health is damaged by an intentional or negligent breach of national air quality rules, under stricter EU air quality standards for 2030.",
+      "jurisdiction": [
+        "European Union"
+      ],
+      "region": "europe",
+      "topic": "environment",
+      "effective_on": "2026-12-11",
+      "issuer": "European Parliament and Council",
+      "url": "https://environment.ec.europa.eu/topics/air/air-quality_en"
+    },
+    "source_url": "https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1796087",
+    "evidence": "citizens are entitled to claim and obtain compensation where damage to their health has occurred as a result of an intentional or negligent violation of the national rules transposing certain provisions of the directive. ENTRY INTO FORCE: 10.12.2024. TRANSPOSITION: 11.12.2026 at the latest.",
+    "observed_at": "2026-10-06T11:34:47Z"
+  },
+  {
+    "data": {
+      "title": "Announcement on Adjusting Vehicle and Vessel Tax Breaks for Energy-Saving and New Energy Vehicles (关于调整节能汽车、新能源汽车车船税优惠政策的公告)",
+      "what_changes": "Plug-in and range-extender hybrid cars lose their exemption from the annual vehicle and vessel tax, and energy-saving cars lose their half-rate tax, so their owners pay the standard tax.",
+      "jurisdiction": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "topic": "money-tax",
+      "effective_on": "2027-01-01",
+      "issuer": "Ministry of Finance, State Taxation Administration and Ministry of Industry and Information Technology",
+      "url": "https://www.gov.cn/zhengce/zhengceku/202607/content_7074231.htm"
+    },
+    "source_url": "https://www.gov.cn/zhengce/zhengceku/202607/content_7074231.htm",
+    "evidence": "自2027年1月1日起，取消对节能汽车减半征收车船税政策，取消对纯电动商用车、插电式（含增程式）混合动力汽车、燃料电池商用车免征车船税政策；纳税人新取得及本公告实施前已取得的上述类型车辆，应按照《中华人民共和国车船税法》及其实施条例和其他相关规定征收车船税。",
+    "observed_at": "2026-10-06T10:19:49Z"
+  },
+  {
+    "data": {
+      "title": "Farmland Protection and Quality Improvement Law (耕地保护和质量提升法)",
+      "what_changes": "Rural villagers building homes may not take permanent basic farmland and should first use existing homesteads or idle village land; if other farmland is needed, the county must provide replacement land and may not charge villagers a reclamation fee.",
+      "jurisdiction": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "topic": "housing",
+      "effective_on": "2027-01-01",
+      "issuer": "Standing Committee of the National People's Congress",
+      "url": "https://www.news.cn/politics/20260828/437d9117d7dd496aa541d294d0b59544/c.html"
+    },
+    "source_url": "https://www.chinanews.com.cn/gn/2026/08-28/10686090.shtml",
+    "evidence": "《中华人民共和国耕地保护和质量提升法》已由中华人民共和国第十四届全国人民代表大会常务委员会第二十四次会议于2026年8月28日通过，现予公布，自2027年1月1日起施行。",
+    "observed_at": "2026-10-06T11:20:22Z"
+  },
+  {
+    "data": {
+      "title": "Intelligent and Connected Vehicles: Safety Requirements of Combined Driver Assistance Systems, GB 47955-2026 (智能网联汽车 组合驾驶辅助系统安全要求)",
+      "what_changes": "Cars with driver-assistance systems that steer and control speed, including navigation assistance, must meet a mandatory safety baseline covering how the system works with the driver, user instructions and driver training.",
+      "jurisdiction": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "topic": "driving-transport",
+      "effective_on": "2027-01-01",
+      "issuer": "State Administration for Market Regulation and Standardization Administration of China",
+      "url": "https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=A606486C4B8AFC2BE009FE3705E31B2E"
+    },
+    "source_url": "https://www.gov.cn/lianbo/202607/content_7074120.htm",
+    "evidence": "记者2日从工业和信息化部获悉，《智能网联汽车 组合驾驶辅助系统安全要求》（GB 47955—2026）强制性国家标准日前由国家市场监督管理总局、国家标准化管理委员会批准发布，拟于2027年1月1日起正式实施。",
+    "observed_at": "2026-10-06T11:16:19Z"
+  },
+  {
+    "data": {
+      "title": "Medical Security Law (医疗保障法)",
+      "what_changes": "A national law on medical insurance sets out people's rights to basic medical cover, encourages self-employed and gig workers to join employee medical insurance, and requires prompt direct settlement of medical bills run up in other regions.",
+      "jurisdiction": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "topic": "health",
+      "effective_on": "2027-01-01",
+      "issuer": "Standing Committee of the National People's Congress",
+      "url": "https://www.news.cn/politics/20260828/dd01defc94094099a85edeacd6a268fb/c.html"
+    },
+    "source_url": "https://www.xinhuanet.com/politics/20260828/6325f971c0014c3488bfc06064b41618/c.html",
+    "evidence": "十四届全国人大常委会第二十四次会议8月28日表决通过医疗保障法，自2027年1月1日起施行。",
+    "observed_at": "2026-10-06T10:17:23Z"
+  },
+  {
+    "data": {
+      "title": "Procedures for Transferring Enterprise Annuity Individual Accounts (企业年金个人账户转移接续规程（暂行）)",
+      "what_changes": "Workers who change jobs can apply online, through national channels such as the e-social security card and the 12333 app, to transfer their enterprise annuity account and track the progress.",
+      "jurisdiction": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "topic": "social-security",
+      "effective_on": "2027-01-01",
+      "issuer": "Ministry of Human Resources and Social Security of China",
+      "url": "https://hrss.hlj.gov.cn/hrss/c111736/202607/c00_31963310.shtml"
+    },
+    "source_url": "https://www.xinhuanet.com/fortune/20260724/f623922bfe574bc79a2240533cc5f24f/c.html",
+    "evidence": "规程明确，自2027年1月1日起，职工可通过登录国家社会保险公共服务平台、全国人社政务服务平台、电子社保卡、掌上12333App等全国统一线上服务渠道，申请转移接续本人企业年金个人账户，并查询办理进度。",
+    "observed_at": "2026-10-06T11:24:13Z"
+  },
+  {
+    "data": {
+      "title": "Safety Technical Requirements for Automotive Door Handles, GB 48001-2026 (汽车车门把手安全技术要求)",
+      "what_changes": "Cars must have door handles with mechanical release, placed and sized so they can be operated, so doors still open from inside and outside after a crash, which takes fully hidden door handles off the market.",
+      "jurisdiction": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "topic": "driving-transport",
+      "effective_on": "2027-01-01",
+      "issuer": "State Administration for Market Regulation and Standardization Administration of China",
+      "url": "https://www.miit.gov.cn/xwfb/mtbd/twbd/art/2026/art_22fb0f56e167453c8fb42ea4085178b6.html"
+    },
+    "source_url": "https://www.news.cn/fortune/20260202/af1ed6e512c7459a80dbbece79f29586/c.html",
+    "evidence": "记者2日获悉，工业和信息化部组织制定的强制性国家标准《汽车车门把手安全技术要求》（GB 48001—2026）近日由国家市场监督管理总局、国家标准化管理委员会批准发布，将于2027年1月1日起实施。",
+    "observed_at": "2026-10-06T11:14:34Z"
+  },
+  {
+    "data": {
+      "title": "Technical Requirements for Safety and Security of Children's Watches, GB 46859-2025 (儿童手表安全技术要求)",
+      "what_changes": "Children's watches must meet a mandatory national safety standard, and children's smartwatches must allow friends to be added across brands, with this controlled through the watch's management app.",
+      "jurisdiction": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "topic": "consumer",
+      "effective_on": "2027-01-01",
+      "issuer": "State Administration for Market Regulation and Standardization Administration of China",
+      "url": "https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=BE01E81598A96AF64B885B0FED3B2DFB"
+    },
+    "source_url": "https://www.news.cn/tech/20251230/f2e1da01bb414bdf8fe3bc03573409da/c.html",
+    "evidence": "近日，国家市场监督管理总局（国家标准化管理委员会）正式批准发布了编号为GB 46859-2025的《儿童手表安全技术要求》国家标准，该标准将于2027年1月1日起全面实施",
+    "observed_at": "2026-10-06T11:17:45Z"
+  },
+  {
+    "data": {
+      "title": "Fifth Minimum Wage Adjustment Ordinance (Fünfte Mindestlohnanpassungsverordnung)",
+      "what_changes": "The statutory minimum wage in Germany rises from €13.90 to €14.60 gross per hour.",
+      "jurisdiction": [
+        "Germany"
+      ],
+      "region": "europe",
+      "topic": "work-pay",
+      "effective_on": "2027-01-01",
+      "issuer": "Federal Government of Germany",
+      "url": "https://www.bmas.de/DE/Service/Gesetze-und-Gesetzesvorhaben/fuenfte-mindestlohnanpassungsverordnung-milov5.html"
+    },
+    "source_url": "https://www.bmas.de/DE/Service/Gesetze-und-Gesetzesvorhaben/fuenfte-mindestlohnanpassungsverordnung-milov5.html",
+    "evidence": "Die Bundesregierung ist diesem Vorschlag gefolgt, weshalb die Mindestlohnhöhe wie folgt angepasst wird: ab 1. Januar 2026 13,90 Euro brutto je Zeitstunde und ab 1. Januar 2027 14,60 Euro brutto je Zeitstunde.",
+    "observed_at": "2026-10-06T11:06:52Z"
+  },
+  {
+    "data": {
+      "title": "Employment Rights Act 2025",
+      "what_changes": "Employees dismissed from 1 January 2027 can claim unfair dismissal after 6 months in the job, compensation awards are no longer capped, and new protections against 'fire and rehire' apply.",
+      "jurisdiction": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "topic": "work-pay",
+      "effective_on": "2027-01-01",
+      "issuer": "UK Parliament",
+      "url": "https://www.gov.uk/government/publications/implementing-the-plan-to-make-work-pay-and-employment-rights-act/plan-to-make-work-pay-and-employment-rights-act-timeline-update"
+    },
+    "source_url": "https://www.gov.uk/government/publications/implementing-the-plan-to-make-work-pay-and-employment-rights-act/plan-to-make-work-pay-and-employment-rights-act-timeline-update",
+    "evidence": "Measures that will take effect in January 2027 the duty to inform workers of their right to join a trade union reduction of unfair dismissal qualifying period to 6 months, for dismissals from 1 January 2027, and uncapping compensatory awards fire and rehire protections",
+    "observed_at": "2026-10-06T10:24:26Z"
+  },
+  {
+    "data": {
+      "title": "Immigration Rules, Appendix Graduate (Graduate visa length)",
+      "what_changes": "International students who apply for a Graduate visa on or after 1 January 2027 can stay for 18 months after their course instead of 2 years, while doctoral graduates still get 3 years.",
+      "jurisdiction": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "topic": "travel-immigration",
+      "effective_on": "2027-01-01",
+      "issuer": "Home Office",
+      "url": "https://www.gov.uk/graduate-visa"
+    },
+    "source_url": "https://www.gov.uk/graduate-visa",
+    "evidence": "A Graduate visa lasts for: 2 years if you apply on or before 31 December 2026 18 months if you apply on or after 1 January 2027 If you have a PhD or other doctoral qualification, it will last for 3 years.",
+    "observed_at": "2026-10-06T10:31:25Z"
+  },
+  {
+    "data": {
+      "title": "Lifelong Learning Entitlement (student finance for courses from 1 January 2027)",
+      "what_changes": "Students in England starting eligible higher education courses or modules on or after 1 January 2027 apply for loans through the new Lifelong Learning Entitlement, with tuition fee loans of up to £39,160, about 4 years of full-time study.",
+      "jurisdiction": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "topic": "family-education",
+      "effective_on": "2027-01-01",
+      "issuer": "Department for Education",
+      "url": "https://www.gov.uk/government/publications/lifelong-learning-entitlement-lle-overview"
+    },
+    "source_url": "https://www.gov.uk/student-finance-on-or-after-1-january-2027",
+    "evidence": "For courses starting on or after 1 January 2027, you may need to apply for student finance through the new student finance system. The new system is called your Lifelong Learning Entitlement",
+    "observed_at": "2026-10-06T11:31:23Z"
+  },
+  {
+    "data": {
+      "title": "Tobacco and Vapes Act 2026",
+      "what_changes": "It becomes an offence to sell tobacco, herbal smoking products or cigarette papers to anyone born on or after 1 January 2009.",
+      "jurisdiction": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "topic": "health",
+      "effective_on": "2027-01-01",
+      "issuer": "UK Parliament",
+      "url": "https://www.legislation.gov.uk/ukpga/2026/18/contents"
+    },
+    "source_url": "https://www.gov.uk/guidance/selling-tobacco-herbal-smoking-products-and-cigarette-papers",
+    "evidence": "From 1 January 2027, it will be an offence to sell tobacco products, herbal smoking products and cigarette papers to anyone born on or after 1 January 2009.",
+    "observed_at": "2026-10-06T10:30:40Z"
+  },
+  {
+    "data": {
+      "title": "Medicaid Program; Community Engagement Requirement for Certain Individuals",
+      "what_changes": "Adults covered by the requirement must work, study or do community service for at least 80 hours a month to get or keep Medicaid coverage, and states must start applying it no later than January 1, 2027.",
+      "jurisdiction": [
+        "United States"
+      ],
+      "region": "americas",
+      "topic": "health",
+      "effective_on": "2027-01-01",
+      "issuer": "Centers for Medicare & Medicaid Services",
+      "url": "https://www.federalregister.gov/documents/2026/06/03/2026-11094/medicaid-program-community-engagement-requirement-for-certain-individuals"
+    },
+    "source_url": "https://www.federalregister.gov/documents/2026/06/03/2026-11094/medicaid-program-community-engagement-requirement-for-certain-individuals",
+    "evidence": "This interim final rule with comment period (IFC) interprets and implements the community engagement requirement in Medicaid under section 1902(xx) of the Social Security Act. States are required to implement the new requirement no later than January 1, 2027.",
+    "observed_at": "2026-10-06T10:44:40Z"
+  },
+  {
+    "data": {
+      "title": "Medicare Drug Price Negotiation Program: negotiated prices for 15 Part D drugs (second cycle)",
+      "what_changes": "Negotiated maximum fair prices take effect in Medicare for the 15 Part D drugs chosen in the second round of Medicare drug price negotiation.",
+      "jurisdiction": [
+        "United States"
+      ],
+      "region": "americas",
+      "topic": "health",
+      "effective_on": "2027-01-01",
+      "issuer": "Centers for Medicare & Medicaid Services",
+      "url": "https://www.cms.gov/initiatives/medicare-prescription-drug-affordability/overview/medicare-drug-price-negotiation-program/selected-drugs-negotiated-prices"
+    },
+    "source_url": "https://www.cms.gov/initiatives/medicare-prescription-drug-affordability/overview/medicare-drug-price-negotiation-program/selected-drugs-negotiated-prices",
+    "evidence": "The below links contain the MFP explanations for the 15 drugs covered under Medicare Part D that were selected for the second cycle of negotiations; the MFPs will go into effect on January 1, 2027.",
+    "observed_at": "2026-10-06T10:46:14Z"
+  },
+  {
+    "data": {
+      "title": "Revocation of FD&C Red No. 3 in food (Color Additive Petition order)",
+      "what_changes": "Foods and dietary supplements may no longer contain the color additive FD&C Red No. 3, which FDA found causes cancer in male rats; the ban for ingested drugs follows in January 2028.",
+      "jurisdiction": [
+        "United States"
+      ],
+      "region": "americas",
+      "topic": "health",
+      "effective_on": "2027-01-15",
+      "issuer": "US Food and Drug Administration",
+      "url": "https://www.federalregister.gov/documents/2025/01/16/2025-00830/color-additive-petition-from-center-for-science-in-the-public-interest-et-al-request-to-revoke-color"
+    },
+    "source_url": "https://www.federalregister.gov/documents/2025/01/16/2025-00830/color-additive-petition-from-center-for-science-in-the-public-interest-et-al-request-to-revoke-color",
+    "evidence": "Therefore, FDA is revoking the authorized uses in food and ingested drugs of FD&C Red No. 3 in the color additive regulations. DATES: This order is effective January 15, 2027, except for amendatory instruction 4, which is effective January 18, 2028.",
+    "observed_at": "2026-10-06T10:43:02Z"
+  },
+  {
+    "data": {
+      "title": "National Food Safety Standard: General Standard for the Labeling of Prepackaged Foods, GB 7718-2025 (预包装食品标签通则)",
+      "what_changes": "Packaged food must show both the production date and the expiry date in a dedicated, easy-to-read area in year-month-day order, and labels may no longer use claims such as 'zero added' or 'no added'.",
+      "jurisdiction": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "topic": "consumer",
+      "effective_on": "2027-03-16",
+      "issuer": "National Health Commission and State Administration for Market Regulation of China",
+      "url": "https://www.nhc.gov.cn/sps/c100087/202509/bc824a504ec34c27883da73f14c20d44.shtml"
+    },
+    "source_url": "https://scjgj.beijing.gov.cn/zwxx/scjgdt/202605/t20260507_4639154.html",
+    "evidence": "《预包装食品标签通则》（GB 7718-2025）已于2025年3月16日发布，将于2027年3月16日起正式实施！新国标给予两年过渡期，目前距离正式实施已不足一年。",
+    "observed_at": "2026-10-06T11:19:30Z"
+  },
+  {
+    "data": {
+      "title": "Safety Technical Specification for Power Banks, GB 47372-2026 (移动电源安全技术规范)",
+      "what_changes": "Power banks must meet a stricter mandatory safety standard, with better protection against heat, overcharging and crushing, stored fault records, and a unique ID code that shows the battery brand.",
+      "jurisdiction": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "topic": "consumer",
+      "effective_on": "2027-04-01",
+      "issuer": "State Administration for Market Regulation and Standardization Administration of China",
+      "url": "https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=8DFBEDE88D831247BF30901B1B42E8D0"
+    },
+    "source_url": "https://www.news.cn/politics/20260403/875ebf0cfc2540a9b68130f5f81d8cfe/c.html",
+    "evidence": "2026年4月3日，强制性国家标准《移动电源安全技术规范》公开发布，将于2027年4月1日实施。新标准提出多项要求，进一步强化包括充电宝在内的移动电源产品安全水平",
+    "observed_at": "2026-10-06T11:08:44Z"
+  },
+  {
+    "data": {
+      "title": "Act No. 60 of 2024 amending the Immigration Control Act and the Technical Intern Training Act (育成就労制度の創設)",
+      "what_changes": "Japan launches the Employment for Skill Development (Ikusei Shuro) system for foreign workers, created by the 2024 amendment of its immigration and technical intern training laws.",
+      "jurisdiction": [
+        "Japan"
+      ],
+      "region": "asia-pacific",
+      "topic": "travel-immigration",
+      "effective_on": "2027-04-01",
+      "issuer": "National Diet of Japan",
+      "url": "https://www.moj.go.jp/isa/03_00163.html"
+    },
+    "source_url": "https://www.moj.go.jp/isa/03_00163.html",
+    "evidence": "公布日 : 令和６年６月２１日（法律第６０号） 施行日 : 一部の規定を除き、令和９年４月１日 改正法の概要（育成就労制度の創設等）",
+    "observed_at": "2026-10-06T10:49:50Z"
+  },
+  {
+    "data": {
+      "title": "Finance Act 2026 (income tax rates on savings and property income)",
+      "what_changes": "Income tax on savings interest and on property income such as rent rises by 2 percentage points, to 22% at the basic rate, 42% at the higher rate and 47% at the additional rate.",
+      "jurisdiction": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "topic": "money-tax",
+      "effective_on": "2027-04-06",
+      "issuer": "UK Parliament",
+      "url": "https://www.legislation.gov.uk/ukpga/2026/11/section/5"
+    },
+    "source_url": "https://www.gov.uk/government/publications/changes-to-tax-rates-for-property-savings-and-dividend-income/change-to-tax-rates-for-property-savings-and-dividend-income-technical-note",
+    "evidence": "the changes to dividend income will take effect from 6 April 2026, and the changes to property and savings income will take effect from 6 April 2027",
+    "observed_at": "2026-10-06T10:27:46Z"
+  },
+  {
+    "data": {
+      "title": "Finance Act 2026 (inheritance tax on unused pension funds)",
+      "what_changes": "Most unused pension funds and pension death benefits count towards a person's estate for inheritance tax on deaths from 6 April 2027, while death-in-service benefits stay outside it.",
+      "jurisdiction": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "topic": "money-tax",
+      "effective_on": "2027-04-06",
+      "issuer": "UK Parliament",
+      "url": "https://www.legislation.gov.uk/ukpga/2026/11/section/66"
+    },
+    "source_url": "https://www.gov.uk/government/publications/inheritance-tax-unused-pension-funds-and-death-benefits",
+    "evidence": "As announced at Autumn Budget 2024, the government will bring most unused pension funds and death benefits into scope of Inheritance Tax from 6 April 2027. All death in service benefits payable from a registered pension scheme will be excluded from the value of an individual’s estate",
+    "observed_at": "2026-10-06T10:27:51Z"
+  },
+  {
+    "data": {
+      "title": "Making Tax Digital for Income Tax",
+      "what_changes": "Sole traders and landlords whose qualifying income was over £30,000 in the 2025 to 2026 tax year must start using Making Tax Digital for Income Tax, dealing with HMRC through compatible software.",
+      "jurisdiction": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "topic": "money-tax",
+      "effective_on": "2027-04-06",
+      "issuer": "HM Revenue & Customs",
+      "url": "https://www.gov.uk/guidance/find-out-if-and-when-you-need-to-use-making-tax-digital-for-income-tax"
+    },
+    "source_url": "https://www.gov.uk/guidance/find-out-if-and-when-you-need-to-use-making-tax-digital-for-income-tax",
+    "evidence": "Making Tax Digital for Income Tax from 6 April 2026 — you can still sign up or sign up your client, if you have not already done so £30,000 for the 2025 to 2026 tax year, you will need to use it from 6 April 2027",
+    "observed_at": "2026-10-06T10:25:13Z"
+  },
+  {
+    "data": {
+      "title": "Environmental Protection (Wet Wipes Containing Plastic) (England) Regulations 2025",
+      "what_changes": "Shops and online sellers in England may no longer sell or supply single-use wet wipes that contain plastic, such as baby wipes, make-up wipes and cleaning wipes.",
+      "jurisdiction": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "topic": "environment",
+      "effective_on": "2027-05-19",
+      "issuer": "Department for Environment, Food & Rural Affairs",
+      "url": "https://www.legislation.gov.uk/uksi/2025/1218/contents"
+    },
+    "source_url": "https://www.gov.uk/guidance/plastic-wet-wipes-ban",
+    "evidence": "This ban comes into force on 19 May 2027 in England. All UK nations are introducing this ban, with different start dates.",
+    "observed_at": "2026-10-06T10:30:41Z"
+  },
+  {
+    "data": {
+      "title": "Directive (EU) 2024/1385 on combating violence against women and domestic violence",
+      "what_changes": "EU countries must have laws making female genital mutilation, forced marriage, sharing intimate images without consent, cyber stalking and cyber harassment criminal offences, with stronger protection and support for victims.",
+      "jurisdiction": [
+        "European Union"
+      ],
+      "region": "europe",
+      "topic": "public-safety",
+      "effective_on": "2027-06-14",
+      "issuer": "European Parliament and Council",
+      "url": "https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/gender-equality/gender-based-violence/ending-gender-based-violence_en"
+    },
+    "source_url": "https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/gender-equality/gender-based-violence/ending-gender-based-violence_en",
+    "evidence": "Member States will have until 14 June 2027 to transpose the Directive into their national law and policy. The Directive criminalises at EU level certain forms of violence against women offline (female genital mutilation and forced marriage)",
+    "observed_at": "2026-10-06T10:34:53Z"
+  },
+  {
+    "data": {
+      "title": "Technical Specifications for Safety of Power-Driven Vehicles Operating on Roads, GB 7258-2026 (机动车运行安全技术条件)",
+      "what_changes": "Vehicles must meet a revised national safety standard, including protection against pressing the accelerator by mistake in new-energy passenger cars, hands-off and eyes-off detection for driver assistance, and wider seat-belt reminders and driver-attention monitoring.",
+      "jurisdiction": [
+        "China"
+      ],
+      "region": "asia-pacific",
+      "topic": "driving-transport",
+      "effective_on": "2027-07-01",
+      "issuer": "State Administration for Market Regulation and Standardization Administration of China",
+      "url": "https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=9CDB22FE0BE30A91DAF603FE4D2FA107"
+    },
+    "source_url": "https://www.chinanews.com.cn/cj/2026/08-31/10687209.shtml",
+    "evidence": "据国家市场监督管理总局网站消息，近日，市场监管总局(国家标准委)批准发布《机动车运行安全技术条件》(GB 7258—2026)强制性国家标准，将自2027年7月1日起实施。",
+    "observed_at": "2026-10-06T11:29:46Z"
+  },
+  {
+    "data": {
+      "title": "Accountability in Higher Education and Access Through Demand-Driven Workforce Pell (Department of Education final rule)",
+      "what_changes": "Federal Direct Loans are limited to college programs whose graduates meet certain earnings benchmarks, under an earnings accountability framework for low-earning programs.",
+      "jurisdiction": [
+        "United States"
+      ],
+      "region": "americas",
+      "topic": "family-education",
+      "effective_on": "2027-07-01",
+      "issuer": "US Department of Education",
+      "url": "https://www.federalregister.gov/documents/2026/07/01/2026-13286/accountability-in-higher-education-and-access-through-demand--driven-workforce-pell-student-tuition"
+    },
+    "source_url": "https://www.federalregister.gov/documents/2026/07/01/2026-13286/accountability-in-higher-education-and-access-through-demand--driven-workforce-pell-student-tuition",
+    "evidence": "Effective dates: This rule is effective July 1, 2027, except for instructions 13 and 14, which are effective August 31, 2026.",
+    "observed_at": "2026-10-06T11:32:14Z"
+  },
+  {
+    "data": {
+      "title": "Anti-Money Laundering Regulation (EU) 2024/1624",
+      "what_changes": "A single EU anti-money-laundering rulebook applies, including an EU-wide cap of €10,000 on cash payments for goods and services, except between private individuals; countries may set a lower cap.",
+      "jurisdiction": [
+        "European Union"
+      ],
+      "region": "europe",
+      "topic": "money-tax",
+      "effective_on": "2027-07-10",
+      "issuer": "European Parliament and Council",
+      "url": "https://finance.ec.europa.eu/news/anti-money-laundering-2024-04-24_en"
+    },
+    "source_url": "https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1785526",
+    "evidence": "or indirect ownership of 25 % or more of the shares or voting rights or other ownership interest in the corporate entity. ENTRY INTO FORCE: 9.7.2024. APPLICATION: from 10.7.2027.",
+    "observed_at": "2026-10-06T10:37:30Z"
+  },
+  {
+    "data": {
+      "title": "Directive (EU) 2024/3237 on cross-border exchange of information on road-safety-related traffic offences",
+      "what_changes": "EU countries must be able to trace and fine drivers of cars registered in another EU country for more offences, adding dangerous parking, dangerous overtaking, crossing a solid line and hit-and-run to speeding and drink-driving.",
+      "jurisdiction": [
+        "European Union"
+      ],
+      "region": "europe",
+      "topic": "driving-transport",
+      "effective_on": "2027-07-20",
+      "issuer": "European Parliament and Council",
+      "url": "https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1800147"
+    },
+    "source_url": "https://oeil.europarl.europa.eu/oeil/en/document-summary?id=1800147",
+    "evidence": "dedicated to sharing information with road users on the rules in force in the Member States in the area covered by the directive. ENTRY INTO FORCE: 19.1.2025. TRANSPOSITION: no later than 20.7.2027.",
+    "observed_at": "2026-10-06T10:41:13Z"
+  },
+  {
+    "data": {
+      "title": "Deposit Scheme for Drinks Containers (England and Northern Ireland) Regulations 2025",
+      "what_changes": "Shoppers in England and Northern Ireland pay a refundable deposit on certain single-use drinks containers, which they get back when they return the empty container.",
+      "jurisdiction": [
+        "United Kingdom"
+      ],
+      "region": "europe",
+      "topic": "environment",
+      "effective_on": "2027-10-01",
+      "issuer": "Department for Environment, Food & Rural Affairs",
+      "url": "https://www.legislation.gov.uk/uksi/2025/67/contents/made"
+    },
+    "source_url": "https://www.gov.uk/guidance/deposit-return-scheme-drinks-producer-and-retailer-responsibilities",
+    "evidence": "From 1 October 2027, customers will pay a refundable deposit for certain single-use drink containers under the new Deposit Return Scheme",
+    "observed_at": "2026-10-06T10:30:41Z"
+  }
+]

@@ -10,7 +10,15 @@ import aiConferences from './ai-conferences/config.ts';
 import aiDataCenters from './ai-data-centers/config.ts';
 import aiFundraising from './ai-fundraising/config.ts';
 import aiHackathons from './ai-hackathons/config.ts';
+import aiScams from './ai-scams/config.ts';
+import enduranceRaces from './endurance-races/config.ts';
 import marathons from './marathons/config.ts';
+import newRules from './new-rules/config.ts';
+import recalls from './recalls/config.ts';
+import robotaxis from './robotaxis/config.ts';
+import scholarships from './scholarships/config.ts';
+import skyEvents from './sky-events/config.ts';
+import visaChanges from './visa-changes/config.ts';
 
 export const dataApps: readonly DataAppConfig[] = [
   aiHackathons,
@@ -19,7 +27,15 @@ export const dataApps: readonly DataAppConfig[] = [
   aiFundraising,
   aiAcquisitions,
   aiDataCenters,
+  robotaxis,
+  aiScams,
+  visaChanges,
+  newRules,
+  recalls,
+  scholarships,
   marathons,
+  enduranceRaces,
+  skyEvents,
 ];
 
 export const findDataApp = (slug: string): DataAppConfig | undefined =>

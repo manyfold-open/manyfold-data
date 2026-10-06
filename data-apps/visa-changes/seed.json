@@ -1,0 +1,471 @@
+[
+  {
+    "data": {
+      "title": "China extends 30-day visa-free entry for Russian citizens to the end of 2027",
+      "destination": [
+        "China"
+      ],
+      "travelers": [
+        "Russia"
+      ],
+      "change": "visa-free",
+      "stay_days": 30,
+      "effective_on": "2026-05-20",
+      "ends_on": "2027-12-31",
+      "issuer": "Ministry of Foreign Affairs of China",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.fmprc.gov.cn/eng/xw/fyrbt/lxjzh/202605/t20260520_11914528.html",
+    "evidence": "China has decided to extend visa-free policy to Russia to December 31, 2027. Ordinary passport holders from Russia can be exempted from visa to enter China and stay for no more than 30 days for business, tourism, family/friends visit, exchange and transit purposes.",
+    "observed_at": "2026-10-06T11:23:59Z"
+  },
+  {
+    "data": {
+      "title": "Russia extends visa-free entry for Chinese citizens, due to end on 14 September 2026, to the end of 2027",
+      "destination": [
+        "Russia"
+      ],
+      "travelers": [
+        "China"
+      ],
+      "change": "visa-free",
+      "effective_on": "2026-09-15",
+      "ends_on": "2027-12-31",
+      "issuer": "President of Russia",
+      "region": "europe"
+    },
+    "source_url": "https://yakutsk.mid.ru/ru/press-centre/news/dlya_grazhdan_kitaya_prodlili_bezvizovyy_vezd_v_rossiyu_do_kontsa_2027_goda/",
+    "evidence": "Право безвизового въезда граждан Китая в Россию продлено до 31 декабря 2027 года. Соответствующий указ президента РФ Владимира Путина опубликован на портале правовой информации. В соответствии с указом, слова «до 14 сентября 2026 года включительно» заменяются",
+    "observed_at": "2026-10-06T11:24:01Z"
+  },
+  {
+    "data": {
+      "title": "China adds Kyrgyzstan and Vietnam to its 240-hour visa-free transit scheme",
+      "destination": [
+        "China"
+      ],
+      "travelers": [
+        "Kyrgyzstan",
+        "Vietnam"
+      ],
+      "change": "visa-free-transit",
+      "stay_days": 10,
+      "effective_on": "2026-08-20",
+      "issuer": "National Immigration Administration of China",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://english.news.cn/20260820/3d7c748dedda4bb2af1621013cffb156/c.html",
+    "evidence": "China has added Kyrgyzstan and Vietnam to its 240-hour visa-free transit program, bringing the total number of countries eligible for this policy to 57, immigration authorities announced on Thursday. Effective from Aug. 20, citizens of Kyrgyzstan and Vietnam",
+    "observed_at": "2026-10-06T11:24:03Z"
+  },
+  {
+    "data": {
+      "title": "Hainan's 30-day visa-free entry opens to citizens of Kyrgyzstan and Vietnam",
+      "destination": [
+        "China"
+      ],
+      "travelers": [
+        "Kyrgyzstan",
+        "Vietnam"
+      ],
+      "change": "visa-free",
+      "stay_days": 30,
+      "effective_on": "2026-08-20",
+      "issuer": "National Immigration Administration of China",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://english.news.cn/20260820/3d7c748dedda4bb2af1621013cffb156/c.html",
+    "evidence": "Citizens of these two countries who hold ordinary passports will also be eligible for the 30-day visa-free entry policy for Hainan Province in south China starting the same day. This will allow them to enter the province through Hainan's open ports and stay visa-free for up to 30 days.",
+    "observed_at": "2026-10-06T11:24:03Z"
+  },
+  {
+    "data": {
+      "title": "Brazil grants Chinese citizens visa-free stays of up to 30 days until the end of 2026",
+      "destination": [
+        "Brazil"
+      ],
+      "travelers": [
+        "China"
+      ],
+      "change": "visa-free",
+      "stay_days": 30,
+      "effective_on": "2026-05-11",
+      "ends_on": "2026-12-31",
+      "issuer": "Ministry of Foreign Affairs of Brazil",
+      "region": "americas"
+    },
+    "source_url": "https://www.gov.br/mre/pt-br/embaixada-pequim/setor-consular-2/novas-regras-de-visto-para-nacionais-chineses-4e2d56fd516c6c118d745df47b7e8bc165b089c4",
+    "evidence": "自2026年5月11日起，基于互惠原则，作为对中国政府给予巴西公民赴华免签政策的回应，持中华人民共和国有效普通护照的中国公民，可免签入境巴西进行短期访问。 根据该政策，中国公民可免签停留最长30天，不可延期。",
+    "observed_at": "2026-10-06T11:24:04Z"
+  },
+  {
+    "data": {
+      "title": "Thailand replaces its 60-day visa exemption with 30-day visa-free entry for 60 countries and territories",
+      "destination": [
+        "Thailand"
+      ],
+      "travelers": [
+        "Australia",
+        "Austria",
+        "Bahrain",
+        "Belgium",
+        "Bulgaria",
+        "Bhutan",
+        "Brunei",
+        "Canada",
+        "Croatia",
+        "Cyprus",
+        "Czech Republic",
+        "Denmark",
+        "Estonia",
+        "Fiji",
+        "Finland",
+        "France",
+        "Georgia",
+        "Germany",
+        "Greece",
+        "Hungary",
+        "Iceland",
+        "Indonesia",
+        "India",
+        "Ireland",
+        "Israel",
+        "Italy",
+        "Japan",
+        "Jordan",
+        "Kuwait",
+        "Kyrgyzstan",
+        "Latvia",
+        "Liechtenstein",
+        "Lithuania",
+        "Luxembourg",
+        "Malta",
+        "Malaysia",
+        "Maldives",
+        "Netherlands",
+        "New Zealand",
+        "Norway",
+        "Oman",
+        "Philippines",
+        "Poland",
+        "Portugal",
+        "Qatar",
+        "Romania",
+        "Saudi Arabia",
+        "Singapore",
+        "Slovakia",
+        "Slovenia",
+        "South Africa",
+        "Spain",
+        "Sweden",
+        "Switzerland",
+        "Taiwan",
+        "Türkiye",
+        "Ukraine",
+        "United Arab Emirates",
+        "United Kingdom",
+        "United States"
+      ],
+      "change": "visa-free",
+      "stay_days": 30,
+      "effective_on": "2026-09-15",
+      "issuer": "Ministry of Interior of Thailand",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.tatnews.org/2026/09/thailand-introduces-new-30-day-and-15-day-visa-exemption-rules-from-15-september/",
+    "evidence": "Under the new framework, holders of passports or travel documents from 60 countries and territories will be eligible for visa exemption for tourism, with a permitted stay of up to 30 days. The Royal Gazette lists: Australia Austria Bahrain Belgium Bulgaria",
+    "observed_at": "2026-10-06T11:24:05Z"
+  },
+  {
+    "data": {
+      "title": "Thailand's revised visa-on-arrival scheme covers Azerbaijan, Belarus and Serbia",
+      "destination": [
+        "Thailand"
+      ],
+      "travelers": [
+        "Azerbaijan",
+        "Belarus",
+        "Serbia"
+      ],
+      "change": "visa-on-arrival",
+      "effective_on": "2026-09-15",
+      "issuer": "Ministry of Interior of Thailand",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.tatnews.org/2026/09/thailand-introduces-new-30-day-and-15-day-visa-exemption-rules-from-15-september/",
+    "evidence": "Visa on Arrival will apply to holders of passports or travel documents from Azerbaijan, Belarus and Serbia",
+    "observed_at": "2026-10-06T11:24:05Z"
+  },
+  {
+    "data": {
+      "title": "Thailand ends visa-free entry for citizens of Mexico, Guatemala and Cuba",
+      "destination": [
+        "Thailand"
+      ],
+      "travelers": [
+        "Mexico",
+        "Guatemala",
+        "Cuba"
+      ],
+      "change": "visa-required",
+      "effective_on": "2026-09-15",
+      "issuer": "Ministry of Interior of Thailand",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://mexico.thaiembassy.org/en/page/visa-process-to-apply?menu=641d1d3f854fe924473ac182",
+    "evidence": "As of 15 September 2026, nationals of Mexico, Guatemala, and Cuba holding ordinary passports will be required to obtain a Thai visa to enter Thailand, regardless of the purpose of their travel",
+    "observed_at": "2026-10-06T11:24:07Z"
+  },
+  {
+    "data": {
+      "title": "Taiwan extends trial visa-free entry for nationals of Thailand, Brunei and the Philippines to July 2027",
+      "destination": [
+        "Taiwan"
+      ],
+      "travelers": [
+        "Thailand",
+        "Brunei",
+        "Philippines"
+      ],
+      "change": "visa-free",
+      "effective_on": "2026-08-01",
+      "ends_on": "2027-07-31",
+      "issuer": "Ministry of Foreign Affairs of Taiwan",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://en.mofa.gov.tw/News_Content.aspx?n=1328&s=122671",
+    "evidence": "the relevant agencies decided to extend the trial visa-free entry program for one year for nationals of Thailand, Brunei, and the Philippines from August 1, 2026, to July 31, 2027.",
+    "observed_at": "2026-10-06T11:24:08Z"
+  },
+  {
+    "data": {
+      "title": "Taiwan ends conditional visa-free entry for Cambodian nationals",
+      "destination": [
+        "Taiwan"
+      ],
+      "travelers": [
+        "Cambodia"
+      ],
+      "change": "visa-required",
+      "effective_on": "2026-08-01",
+      "issuer": "Ministry of Foreign Affairs of Taiwan",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://en.mofa.gov.tw/News_Content.aspx?n=1328&s=122671",
+    "evidence": "the conditional visa-free entry through the TAC scheme will remain in place, with both continuing to apply to nationals of India, Indonesia, Vietnam, Myanmar, and Laos. Nationals of Cambodia will no longer be eligible for these two initiatives from August 1, 2026.",
+    "observed_at": "2026-10-06T11:24:08Z"
+  },
+  {
+    "data": {
+      "title": "Montenegro requires visas for citizens of Belarus, China, Russia, Saudi Arabia and Türkiye",
+      "destination": [
+        "Montenegro"
+      ],
+      "travelers": [
+        "Belarus",
+        "China",
+        "Russia",
+        "Saudi Arabia",
+        "Türkiye"
+      ],
+      "change": "visa-required",
+      "effective_on": "2026-11-01",
+      "issuer": "Government of Montenegro",
+      "region": "europe"
+    },
+    "source_url": "https://www.gov.me/clanak/crna-gora-u-potpunosti-uskladila-viznu-politiku-sa-evropskom-unijom-gradanima-brojnih-zemalja-dostupnije-podnosenje-zahtjeva-za-crnogorsku-vizu",
+    "evidence": "državljanima zemalja koje su činile neusklađenosti između viznog režima Crne Gore i Evropske unije (Bjelorusija, Kina, Rusija, Saudijska Arabija i Turska) od 1. novembra 2026. godine, neophodna viza za ulazak u Crnu Goru.",
+    "observed_at": "2026-10-06T11:24:10Z"
+  },
+  {
+    "data": {
+      "title": "Ireland requires visas for nationals of Nicaragua, Saint Kitts and Nevis and Saint Lucia",
+      "destination": [
+        "Ireland"
+      ],
+      "travelers": [
+        "Nicaragua",
+        "Saint Kitts and Nevis",
+        "Saint Lucia"
+      ],
+      "change": "visa-required",
+      "effective_on": "2026-06-15",
+      "issuer": "Department of Justice, Home Affairs and Migration of Ireland",
+      "region": "europe"
+    },
+    "source_url": "https://www.gov.ie/en/department-of-justice-home-affairs-and-migration/press-releases/minister-brophy-announces-new-visa-requirements/",
+    "evidence": "Minister for Migration Colm Brophy has announced, with effect from Monday 15 June 2026, nationals of Nicaragua, Saint Kitts and Nevis and Saint Lucia will be required to obtain a visa before travelling to Ireland.",
+    "observed_at": "2026-10-06T11:24:10Z"
+  },
+  {
+    "data": {
+      "title": "Germany lifts the airport transit visa requirement for Indian nationals",
+      "destination": [
+        "Germany"
+      ],
+      "travelers": [
+        "India"
+      ],
+      "change": "visa-free-transit",
+      "effective_on": "2026-06-03",
+      "issuer": "Federal Government of Germany",
+      "region": "europe"
+    },
+    "source_url": "https://india.diplo.de/in-en/2773894-2773894",
+    "evidence": "The lifting of the so-called airport transit visa requirement for Indian citizens was announced in the Federal Law Gazette (Bundesgesetzblatt) on June 2, 2026, and takes effect on June 3, 2026.",
+    "observed_at": "2026-10-06T11:24:10Z"
+  },
+  {
+    "data": {
+      "title": "Canada lets eligible Indonesian and Malaysian air travellers use an eTA instead of a visa",
+      "destination": [
+        "Canada"
+      ],
+      "travelers": [
+        "Indonesia",
+        "Malaysia"
+      ],
+      "change": "visa-free",
+      "effective_on": "2026-05-26",
+      "issuer": "Immigration, Refugees and Citizenship Canada",
+      "region": "americas"
+    },
+    "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/news/2026/05/canada-strengthens-indo-pacific-ties-through-changes-to-visa-requirements-for-eligible-travellers-from-indonesia-and-malaysia.html",
+    "evidence": "announced today that Canada will make changes to visa requirements for eligible citizens from Indonesia and Malaysia starting tomorrow, May 26, 2026, at 5:30 a.m. Eastern Time.",
+    "observed_at": "2026-10-06T11:24:10Z"
+  },
+  {
+    "data": {
+      "title": "Hong Kong grants 30-day visa-free entry to nationals of Nicaragua and Solomon Islands",
+      "destination": [
+        "Hong Kong"
+      ],
+      "travelers": [
+        "Nicaragua",
+        "Solomon Islands"
+      ],
+      "change": "visa-free",
+      "stay_days": 30,
+      "effective_on": "2026-08-26",
+      "issuer": "Immigration Department of Hong Kong",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.info.gov.hk/gia/general/202607/27/P2026072700708.htm",
+    "evidence": "Meanwhile, effective from August 26, 2026, nationals of Nicaragua and Solomon Islands may visit Hong Kong visa-free for a stay of up to 30 days.",
+    "observed_at": "2026-10-06T11:24:11Z"
+  },
+  {
+    "data": {
+      "title": "Solomon Islands grants 30-day visa-free entry to Hong Kong passport holders",
+      "destination": [
+        "Solomon Islands"
+      ],
+      "travelers": [
+        "Hong Kong"
+      ],
+      "change": "visa-free",
+      "stay_days": 30,
+      "effective_on": "2026-08-26",
+      "issuer": "Immigration Department of Hong Kong",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.info.gov.hk/gia/general/202607/27/P2026072700708.htm",
+    "evidence": "In addition, effective from August 26, 2026, HKSAR passport holders may also visit Solomon Islands visa-free for a stay of up to 30 days.",
+    "observed_at": "2026-10-06T11:24:11Z"
+  },
+  {
+    "data": {
+      "title": "Armenia waives visas until July 2027 for nationals of 111 countries holding US, EU, Schengen or Gulf residence permits",
+      "destination": [
+        "Armenia"
+      ],
+      "travelers": [
+        "Nationals of 111 listed countries"
+      ],
+      "change": "visa-free",
+      "stay_days": 180,
+      "effective_on": "2026-07-01",
+      "ends_on": "2027-07-01",
+      "issuer": "Ministry of Foreign Affairs of Armenia",
+      "region": "europe"
+    },
+    "source_url": "https://www.mfa.am/en/visa/",
+    "evidence": "the Kingdom of Saudi Arabia, the State of Kuwait, or the Sultanate of Oman, and whose residence permit is valid for at least six months from the date of entry into the Republic of Armenia, are exempt from the visa requirement starting from July 1, 2026 to July 1, 2027",
+    "observed_at": "2026-10-06T11:24:12Z"
+  },
+  {
+    "data": {
+      "title": "Russian citizens can visit Saudi Arabia visa-free as a mutual visa waiver takes effect",
+      "destination": [
+        "Saudi Arabia"
+      ],
+      "travelers": [
+        "Russia"
+      ],
+      "change": "visa-free",
+      "stay_days": 90,
+      "effective_on": "2026-05-11",
+      "issuer": "Ministry of Foreign Affairs of Russia",
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://yemen.mid.ru/ru/embassy/news/informatsiya_o_soglashenii_mezhdu_pravitelstvami_rossii_i_saudovskoy_aravii_o_vzaimnoy_otmene_vizovy/",
+    "evidence": "11 мая 2026 г. вступает в силу Соглашение между Правительством Российской Федерации и Правительством Королевства Саудовская Аравия о взаимной отмене визовых требований. Граждане России прибывают на территорию Саудовской Аравии без визы",
+    "observed_at": "2026-10-06T11:24:13Z"
+  },
+  {
+    "data": {
+      "title": "South Korea trials visa-free entry for Indonesian tour groups of three or more until the end of 2026",
+      "destination": [
+        "South Korea"
+      ],
+      "travelers": [
+        "Indonesia"
+      ],
+      "change": "visa-free",
+      "effective_on": "2026-05-28",
+      "ends_on": "2026-12-31",
+      "issuer": "Ministry of Justice of South Korea",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://m.korea.kr/briefing/pressReleaseView.do?newsId=156763856",
+    "evidence": "「인도네시아 단체관광객 한시 무사증」 제도 시행 - 3인 이상 단체관광객 대상, 5월 28일부터 12월 31일까지 시범 시행",
+    "observed_at": "2026-10-06T11:24:16Z"
+  },
+  {
+    "data": {
+      "title": "Uzbekistan lets Indian citizens holding US, UK, Schengen and other major visas enter visa-free for 30 days",
+      "destination": [
+        "Uzbekistan"
+      ],
+      "travelers": [
+        "India"
+      ],
+      "change": "visa-free",
+      "stay_days": 30,
+      "effective_on": "2026-09-01",
+      "issuer": "President of Uzbekistan",
+      "region": "asia-pacific"
+    },
+    "source_url": "https://lex.uz/ru/docs/8450765",
+    "evidence": "1. Внедрить с 1 сентября 2026 года практику безвизового режима для граждан Республики Индия, имеющих действующие многократные въездные визы бизнес- и туристической категорий Австралии, Соединенных Штатов Америки, Объединенного Королевства",
+    "observed_at": "2026-10-06T11:24:18Z"
+  },
+  {
+    "data": {
+      "title": "Canada requires an eTA from visa-exempt travellers arriving by boat from Saint-Pierre-et-Miquelon",
+      "destination": [
+        "Canada"
+      ],
+      "travelers": [
+        "Visa-exempt foreign nationals"
+      ],
+      "change": "travel-authorisation",
+      "effective_on": "2026-06-05",
+      "issuer": "Immigration, Refugees and Citizenship Canada",
+      "region": "americas"
+    },
+    "source_url": "https://www.canada.ca/en/immigration-refugees-citizenship/news/2026/06/canada-strengthens-borders-while-supporting-economic-and-tourism-ties-with-saint-pierre-et-miquelon0.html",
+    "evidence": "As of 1:00 a.m. Eastern Time on June 5, 2026, most visa-exempt foreign nationals travelling to Canada by boat from Saint-Pierre-et-Miquelon will need an electronic travel authorization (eTA).",
+    "observed_at": "2026-10-06T11:24:19Z"
+  }
+]

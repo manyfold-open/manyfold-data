@@ -1,0 +1,6027 @@
+[
+  {
+    "data": {
+      "name": "HOKA Kodiak Ultramarathons by UTMB",
+      "url": "https://kodiak.utmb.world/",
+      "race_date": "2026-10-09",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 161,
+      "climb_m": 4876,
+      "city": [
+        "Big Bear Lake"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://kodiak.utmb.world/races/100M",
+    "evidence": "Distance 161 KM Elevation Gain 4876 M+ Start Date Friday 9th October 2026 Race Start Rim Nordic Ski Area - 13:00",
+    "observed_at": "2026-10-06T10:03:45Z"
+  },
+  {
+    "data": {
+      "name": "Challenge Vieux Boucau",
+      "url": "https://challengefamily.com/races/challenge-vieux-boucau/",
+      "race_date": "2026-10-10",
+      "sport": "triathlon",
+      "series": "challenge",
+      "distance_km": 114,
+      "city": [
+        "Vieux-Boucau-les-Bains"
+      ],
+      "country": [
+        "France"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://challengefamily.com/races/challenge-vieux-boucau/",
+    "evidence": "WHEN 10 October 2026 WHERE Vieux-Boucau-les-Bains, France",
+    "observed_at": "2026-10-06T09:58:07Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN World Championship",
+      "url": "https://www.ironman.com/races/im-world-championship-kona",
+      "race_date": "2026-10-10",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Kona"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im-world-championship-kona",
+    "evidence": "October 10, 2026 IRONMAN World Championship Kona, HI, United States",
+    "observed_at": "2026-10-06T09:55:34Z"
+  },
+  {
+    "data": {
+      "name": "Hyundai Lisbon Half Marathon",
+      "url": "https://maratonaclubedeportugal.com/en/prova/hyundai-half-marathon-2026/",
+      "race_date": "2026-10-11",
+      "sport": "half-marathon",
+      "series": "world-athletics",
+      "distance_km": 21.1,
+      "city": [
+        "Lisbon"
+      ],
+      "country": [
+        "Portugal"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://maratonaclubedeportugal.com/en/prova/hyundai-half-marathon-2026/",
+    "evidence": "11 Oct, 2026 Sunday 09:20 Start of the Hyundai Half Marathon Start of the EDP 8K",
+    "observed_at": "2026-10-06T10:21:30Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Encarnacion",
+      "url": "https://www.ironman.com/races/im703-encarnacion",
+      "race_date": "2026-10-11",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Encarnación"
+      ],
+      "country": [
+        "Paraguay"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-encarnacion",
+    "evidence": "October 11, 2026 IRONMAN 70.3 Encarnacion Encarnacion, Paraguay",
+    "observed_at": "2026-10-06T09:56:58Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Versailles",
+      "url": "https://www.ironman.com/races/im703-versailles",
+      "race_date": "2026-10-11",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Versailles"
+      ],
+      "country": [
+        "France"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-versailles",
+    "evidence": "October 11, 2026 IRONMAN 70.3 Versailles Versailles, France",
+    "observed_at": "2026-10-06T09:59:21Z"
+  },
+  {
+    "data": {
+      "name": "Kazan Half Marathon",
+      "url": "https://timerman.org/",
+      "race_date": "2026-10-11",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Kazan"
+      ],
+      "country": [
+        "Russia"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10336.html",
+    "evidence": "Kazan Half Marathon Russia | H,R | Full member of AIMS Race information Forthcoming events Kazan, Russia Please consult race website for route map. 11 Kazan Half Marathon Sun 11 October 2026",
+    "observed_at": "2026-10-06T09:57:45Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Sharm El-Sheikh, Egypt",
+      "url": "https://www.ironman.com/races/im703-sharm-el-sheikh",
+      "race_date": "2026-10-16",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Sharm El Sheikh"
+      ],
+      "country": [
+        "Egypt"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.ironman.com/races/im703-sharm-el-sheikh",
+    "evidence": "October 16, 2026 IRONMAN 70.3 Sharm El-Sheikh, Egypt",
+    "observed_at": "2026-10-06T09:59:00Z"
+  },
+  {
+    "data": {
+      "name": "Ultra-Trail Mount Yun by UTMB",
+      "url": "https://mount-yun.utmb.world/",
+      "race_date": "2026-10-16",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 166,
+      "climb_m": 7400,
+      "city": [
+        "Mount Yun"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://mount-yun.utmb.world/races/100M",
+    "evidence": "Distance 166 KM Elevation Gain 7400 M+ Start Date Friday 16th October 2026 Race Start Zhonghe Square - 15:00",
+    "observed_at": "2026-10-06T10:03:51Z"
+  },
+  {
+    "data": {
+      "name": "Challenge Peguera-Mallorca",
+      "url": "https://challengefamily.com/races/challenge-peguera-mallorca/",
+      "race_date": "2026-10-17",
+      "sport": "triathlon",
+      "series": "challenge",
+      "distance_km": 113,
+      "city": [
+        "Peguera"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://challengefamily.com/races/challenge-peguera-mallorca/",
+    "evidence": "WHEN 17 October 2026 WHERE Mallorca, Spain",
+    "observed_at": "2026-10-06T09:57:54Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 North Carolina",
+      "url": "https://www.ironman.com/races/im703-north-carolina",
+      "race_date": "2026-10-17",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Wilmington"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-north-carolina",
+    "evidence": "October 17, 2026 IRONMAN 70.3 North Carolina Wilmington, NC, United States",
+    "observed_at": "2026-10-06T09:58:09Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Portugal-Cascais",
+      "url": "https://www.ironman.com/races/im703-cascais",
+      "race_date": "2026-10-17",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Cascais"
+      ],
+      "country": [
+        "Portugal"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-cascais",
+    "evidence": "October 17, 2026 IRONMAN 70.3 Portugal-Cascais Cascais, Portugal",
+    "observed_at": "2026-10-06T09:56:23Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Portugal-Cascais",
+      "url": "https://www.ironman.com/races/im-cascais",
+      "race_date": "2026-10-17",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Cascais"
+      ],
+      "country": [
+        "Portugal"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im-cascais",
+    "evidence": "October 17, 2026 IRONMAN Portugal-Cascais Cascais, Portugal",
+    "observed_at": "2026-10-06T09:54:39Z"
+  },
+  {
+    "data": {
+      "name": "International Thessaloniki Night Half Marathon",
+      "url": "https://thesshalfmarathon.org/",
+      "race_date": "2026-10-17",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Thessaloniki"
+      ],
+      "country": [
+        "Greece"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10007.html",
+    "evidence": "Forthcoming events Please consult race website for route map. 17 International Thessaloniki Night Halfmarathon, 10K, 5K & 1 Mile Sat 17 October 2026",
+    "observed_at": "2026-10-06T09:57:50Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Florianopolis",
+      "url": "https://www.ironman.com/races/im703-florianopolis",
+      "race_date": "2026-10-18",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Florianópolis"
+      ],
+      "country": [
+        "Brazil"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-florianopolis",
+    "evidence": "October 18, 2026 Nubank Ultravioleta IRONMAN 70.3 Florianopolis Florianopolis, SC, Brazil",
+    "observed_at": "2026-10-06T09:57:01Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Málaga",
+      "url": "https://www.ironman.com/races/im703-malaga",
+      "race_date": "2026-10-18",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Málaga"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-malaga",
+    "evidence": "October 18, 2026 IRONMAN 70.3 Málaga Málaga, Spain",
+    "observed_at": "2026-10-06T09:57:40Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Poreč",
+      "url": "https://www.ironman.com/races/im703-croatia",
+      "race_date": "2026-10-18",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Poreč"
+      ],
+      "country": [
+        "Croatia"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-croatia",
+    "evidence": "October 18, 2026 Plava Laguna IRONMAN 70.3 Poreč Porec, Croatia",
+    "observed_at": "2026-10-06T09:56:37Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Port Macquarie Oceania TriClub Championship",
+      "url": "https://www.ironman.com/races/im703-port-macquarie",
+      "race_date": "2026-10-18",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Port Macquarie"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im703-port-macquarie",
+    "evidence": "October 18, 2026 IRONMAN 70.3 Port Macquarie Oceania TriClub Championship Port Macquarie, NSW, Australia",
+    "observed_at": "2026-10-06T09:58:28Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Australia Oceania TriClub Championship",
+      "url": "https://www.ironman.com/races/im-australia",
+      "race_date": "2026-10-18",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Port Macquarie"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im-australia",
+    "evidence": "October 18, 2026 IRONMAN Australia Oceania TriClub Championship Port Macquarie, NSW, Australia",
+    "observed_at": "2026-10-06T09:54:27Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN California",
+      "url": "https://www.ironman.com/races/im-california",
+      "race_date": "2026-10-18",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Sacramento"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im-california",
+    "evidence": "October 18, 2026 IRONMAN California Sacramento, CA, United States",
+    "observed_at": "2026-10-06T09:54:37Z"
+  },
+  {
+    "data": {
+      "name": "Tokyo Legacy Half Marathon (東京レガシーハーフマラソン)",
+      "url": "https://legacyhalf.tokyo/",
+      "race_date": "2026-10-18",
+      "sport": "half-marathon",
+      "series": "world-athletics",
+      "distance_km": 21.1,
+      "city": [
+        "Tokyo"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://legacyhalf.tokyo/about/outline/index.html",
+    "evidence": "種目 ハーフマラソン 開催日 2026年10月18日(日) 雨天決行 開催地 MUFGスタジアム(国立競技場)：東京都新宿区霞ヶ丘町10-1",
+    "observed_at": "2026-10-06T10:12:54Z"
+  },
+  {
+    "data": {
+      "name": "Vedanta Delhi Half Marathon",
+      "url": "https://vedantadelhihalfmarathon.procam.in/",
+      "race_date": "2026-10-18",
+      "sport": "half-marathon",
+      "series": "world-athletics",
+      "distance_km": 21.1,
+      "city": [
+        "New Delhi"
+      ],
+      "country": [
+        "India"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://vedantadelhihalfmarathon.procam.in/",
+    "evidence": "Vedanta Delhi Half Marathon | 18th October 2026 |",
+    "observed_at": "2026-10-06T10:11:28Z"
+  },
+  {
+    "data": {
+      "name": "Wizz Air Rome Half Marathon by Brooks",
+      "url": "https://www.romehalfmarathon.it/en/",
+      "race_date": "2026-10-18",
+      "sport": "half-marathon",
+      "series": "world-athletics",
+      "distance_km": 21.1,
+      "city": [
+        "Rome"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.romehalfmarathon.it/en/the-event/",
+    "evidence": "On October 18, 2026, the third edition of the Wizz Air Rome Half Marathon by Brooks that made the heart of Rome beat returns to the capital.",
+    "observed_at": "2026-10-06T10:15:29Z"
+  },
+  {
+    "data": {
+      "name": "Puglia by UTMB",
+      "url": "https://puglia.utmb.world/",
+      "race_date": "2026-10-23",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 145,
+      "climb_m": 3500,
+      "city": [
+        "Matera"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://puglia.utmb.world/races/SDM",
+    "evidence": "Distance 145 KM Elevation Gain 3500 M+ Start Date Friday 23rd October 2026 Race Start Matera - 21:00",
+    "observed_at": "2026-10-06T10:04:01Z"
+  },
+  {
+    "data": {
+      "name": "Challenge Shanghai",
+      "url": "https://challengefamily.com/races/challenge-shanghai/",
+      "race_date": "2026-10-24",
+      "sport": "triathlon",
+      "series": "challenge",
+      "distance_km": 113,
+      "city": [
+        "Shanghai"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://challengefamily.com/races/challenge-shanghai/",
+    "evidence": "WHEN 24 October 2026 WHERE Shanghai, China",
+    "observed_at": "2026-10-06T09:58:01Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Dhofar",
+      "url": "https://www.ironman.com/races/im703-dhofar",
+      "race_date": "2026-10-24",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Salalah"
+      ],
+      "country": [
+        "Oman"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.ironman.com/races/im703-dhofar",
+    "evidence": "October 24, 2026 Experience Oman IRONMAN 70.3 Dhofar Salalah, Oman",
+    "observed_at": "2026-10-06T09:56:45Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 New York",
+      "url": "https://www.ironman.com/races/im703-new-york",
+      "race_date": "2026-10-24",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Jones Beach"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-new-york",
+    "evidence": "October 24, 2026 Northwell IRONMAN 70.3 New York Jones Beach, NY, United States",
+    "observed_at": "2026-10-06T09:58:05Z"
+  },
+  {
+    "data": {
+      "name": "Muju Trail Grand Finale",
+      "url": "https://goldentrailseries.com/race/muju-trail/",
+      "race_date": "2026-10-24",
+      "sport": "trail",
+      "series": "golden-trail",
+      "distance_km": 25.6,
+      "climb_m": 2294,
+      "city": [
+        "Muju"
+      ],
+      "country": [
+        "South Korea"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://goldentrailseries.com/calendar/",
+    "evidence": "Next Up 24/10/2026 World Series MUJU TRAIL GRAND FINALE Stitched by strides 25,6 km 2,294 m",
+    "observed_at": "2026-10-06T09:55:17Z"
+  },
+  {
+    "data": {
+      "name": "myBCA Jakarta Half Marathon",
+      "url": "https://jakartarunningfestival.id/event/half-marathon",
+      "race_date": "2026-10-24",
+      "sport": "half-marathon",
+      "series": "world-athletics",
+      "distance_km": 21.1,
+      "city": [
+        "Jakarta"
+      ],
+      "country": [
+        "Indonesia"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://jakartarunningfestival.id/event/half-marathon",
+    "evidence": "When & Where Date Saturday, 24 October 2026 Location Gelora Bung Karno Sports Complex, Jakarta",
+    "observed_at": "2026-10-06T10:24:24Z"
+  },
+  {
+    "data": {
+      "name": "Challenge Barcelona",
+      "url": "https://challengefamily.com/races/challenge-barcelona/",
+      "race_date": "2026-10-25",
+      "sport": "triathlon",
+      "series": "challenge",
+      "distance_km": 113,
+      "city": [
+        "Barcelona"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://challengefamily.com/races/challenge-barcelona/",
+    "evidence": "WHEN 25 October 2026 WHERE Barcelona, Spain",
+    "observed_at": "2026-10-06T09:57:38Z"
+  },
+  {
+    "data": {
+      "name": "Challenge Forte Village",
+      "url": "https://challengefamily.com/races/challenge-forte-village/",
+      "race_date": "2026-10-25",
+      "sport": "triathlon",
+      "series": "challenge",
+      "distance_km": 113,
+      "city": [
+        "Forte Village"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://challengefamily.com/races/challenge-forte-village/",
+    "evidence": "WHEN 25 October 2026 WHERE Sardinia, Italy",
+    "observed_at": "2026-10-06T09:57:46Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Agadir",
+      "url": "https://www.ironman.com/races/im703-agadir",
+      "race_date": "2026-10-25",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Agadir"
+      ],
+      "country": [
+        "Morocco"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.ironman.com/races/im703-agadir",
+    "evidence": "October 25, 2026 IRONMAN 70.3 Agadir Agadir, Morocco",
+    "observed_at": "2026-10-06T09:55:40Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Costa Navarino, Peloponnese, Greece",
+      "url": "https://www.ironman.com/races/im703-greece",
+      "race_date": "2026-10-25",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Costa Navarino"
+      ],
+      "country": [
+        "Greece"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-greece",
+    "evidence": "October 25, 2026 PPC IRONMAN 70.3 Costa Navarino, Peloponnese, Greece",
+    "observed_at": "2026-10-06T09:57:09Z"
+  },
+  {
+    "data": {
+      "name": "Mae Moh Half Marathon",
+      "url": "https://race.thai.run/maemohhalfmarathon2024",
+      "race_date": "2026-10-25",
+      "sport": "half-marathon",
+      "series": "world-athletics",
+      "distance_km": 21.1,
+      "city": [
+        "Mae Moh"
+      ],
+      "country": [
+        "Thailand"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10429.html",
+    "evidence": "Mae Moh Half Marathon Thailand | H,R | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 25 Mae Moh Half Marathon Sun 25 October 2026",
+    "observed_at": "2026-10-06T09:57:54Z"
+  },
+  {
+    "data": {
+      "name": "Medio Maratón Valencia Trinidad Alfonso Zurich",
+      "url": "https://www.valenciaciudaddelrunning.com/medio/medio-maraton/",
+      "race_date": "2026-10-25",
+      "sport": "half-marathon",
+      "series": "world-athletics",
+      "distance_km": 21.1,
+      "city": [
+        "Valencia"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.valenciaciudaddelrunning.com/medio/medio-maraton/",
+    "evidence": "Medio Maratón Valencia Trinidad Alfonso Zurich x 25-OCT-2026",
+    "observed_at": "2026-10-06T10:31:33Z"
+  },
+  {
+    "data": {
+      "name": "UWI SPEC International Half-Marathon",
+      "url": "https://sta.uwi.edu/spec/marathon/",
+      "race_date": "2026-10-25",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "St. Augustine"
+      ],
+      "country": [
+        "Trinidad and Tobago"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://sta.uwi.edu/spec/marathon/",
+    "evidence": "The 20th Anniversary edition of The UWI SPEC International Half-Marathon, taking place on Sunday, 25 October 2026, marks a significant milestone for one of the University’s flagship sporting events.",
+    "observed_at": "2026-10-06T10:11:47Z"
+  },
+  {
+    "data": {
+      "name": "hella hamburg half marathon",
+      "url": "https://www.hamburg-halbmarathon.com/",
+      "race_date": "2026-10-25",
+      "sport": "half-marathon",
+      "series": "world-athletics",
+      "distance_km": 21.1,
+      "city": [
+        "Hamburg"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.hamburg-halbmarathon.com/",
+    "evidence": "the hella hamburg half 2026 has a new race date! We’re looking forward to welcoming you back to the start line on Sunday, 25 October 2026, when Hamburg’s streets will once again belong to the running community.",
+    "observed_at": "2026-10-06T10:11:28Z"
+  },
+  {
+    "data": {
+      "name": "Kullamannen by UTMB",
+      "url": "https://kullamannen.utmb.world/",
+      "race_date": "2026-10-30",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 173,
+      "climb_m": 2300,
+      "city": [
+        "Höganäs"
+      ],
+      "country": [
+        "Sweden"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://kullamannen.utmb.world/races/ultra-100-miles",
+    "evidence": "Distance 173 KM Elevation Gain 2300 M+ Start Date Friday 30th October 2026 Race Start Höganäs Church - 18:00",
+    "observed_at": "2026-10-06T10:03:47Z"
+  },
+  {
+    "data": {
+      "name": "Mallorca by UTMB",
+      "url": "https://mallorca.utmb.world/",
+      "race_date": "2026-10-30",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 138,
+      "climb_m": 5350,
+      "city": [
+        "Estellencs"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://mallorca.utmb.world/races/100M",
+    "evidence": "Distance 138 KM Elevation Gain 5350 M+ Start Date Friday 30th October 2026 Race Start CALA ESTELLENCS - 22:00",
+    "observed_at": "2026-10-06T10:07:08Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Goa",
+      "url": "https://www.ironman.com/races/im703-goa",
+      "race_date": "2026-11-01",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Goa"
+      ],
+      "country": [
+        "India"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im703-goa",
+    "evidence": "November 1, 2026 IRONMAN 70.3 Goa Goa, GA, India",
+    "observed_at": "2026-10-06T09:57:06Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Kenting",
+      "url": "https://www.ironman.com/races/im703-kenting",
+      "race_date": "2026-11-01",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Kenting"
+      ],
+      "country": [
+        "Chinese Taipei"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im703-kenting",
+    "evidence": "November 1, 2026 IRONMAN 70.3 Kenting Kenting, Chinese Taipei",
+    "observed_at": "2026-10-06T09:57:16Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Türkiye",
+      "url": "https://www.ironman.com/races/im703-turkey",
+      "race_date": "2026-11-01",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Belek"
+      ],
+      "country": [
+        "Türkiye"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.ironman.com/races/im703-turkey",
+    "evidence": "November 1, 2026 IRONMAN 70.3 Türkiye Belek, 07, Türkiye",
+    "observed_at": "2026-10-06T09:59:11Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN San Juan",
+      "url": "https://www.ironman.com/races/im-san-juan",
+      "race_date": "2026-11-01",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "San Juan"
+      ],
+      "country": [
+        "Argentina"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im-san-juan",
+    "evidence": "November 1, 2026 Veladero IRONMAN San Juan San Juan, Argentina",
+    "observed_at": "2026-10-06T09:55:10Z"
+  },
+  {
+    "data": {
+      "name": "Ultra-Trail Shudao by UTMB",
+      "url": "https://shudao.utmb.world/",
+      "race_date": "2026-11-06",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 104,
+      "climb_m": 3800,
+      "city": [
+        "Jiange",
+        "Zhaohua"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://shudao.utmb.world/races/100K",
+    "evidence": "Distance 104 KM Elevation Gain 3800 M+ Start Date Friday 6th November 2026 Race Start Dashudao Buye Sanguo Town - 21:00",
+    "observed_at": "2026-10-06T10:04:07Z"
+  },
+  {
+    "data": {
+      "name": "Challenge Xiamen",
+      "url": "https://challengefamily.com/races/challenge-xiamen/",
+      "race_date": "2026-11-07",
+      "sport": "triathlon",
+      "series": "challenge",
+      "distance_km": 113,
+      "city": [
+        "Xiamen"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://challengefamily.com/races/challenge-xiamen/",
+    "evidence": "WHEN 7 November 2026 WHERE Xiamen, China",
+    "observed_at": "2026-10-06T09:58:12Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Florida",
+      "url": "https://www.ironman.com/races/im-florida",
+      "race_date": "2026-11-07",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Panama City Beach"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im-florida",
+    "evidence": "November 7, 2026 Visit Panama City Beach IRONMAN Florida Panama City Beach, FL, United States",
+    "observed_at": "2026-10-06T09:54:45Z"
+  },
+  {
+    "data": {
+      "name": "Boston Half",
+      "url": "https://www.baa.org/races/boston-half/",
+      "race_date": "2026-11-08",
+      "sport": "half-marathon",
+      "series": "world-athletics",
+      "distance_km": 21.1,
+      "city": [
+        "Boston"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.baa.org/races/boston-half/",
+    "evidence": "Boston Half Running through the Emerald Necklace on November 8, 2026.",
+    "observed_at": "2026-10-06T10:12:18Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Campeche",
+      "url": "https://www.ironman.com/races/im703-campeche",
+      "race_date": "2026-11-08",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Campeche"
+      ],
+      "country": [
+        "Mexico"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-campeche",
+    "evidence": "November 8, 2026 IRONMAN 70.3 Campeche Campeche, CAM, Mexico",
+    "observed_at": "2026-10-06T09:56:10Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Melbourne",
+      "url": "https://www.ironman.com/races/im703-melbourne",
+      "race_date": "2026-11-08",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Melbourne"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im703-melbourne",
+    "evidence": "November 8, 2026 IRONMAN 70.3 Melbourne St. Kilda, VIC, Australia",
+    "observed_at": "2026-10-06T09:57:45Z"
+  },
+  {
+    "data": {
+      "name": "Monterey Bay Half Marathon",
+      "url": "https://www.montereybayhalfmarathon.org/",
+      "race_date": "2026-11-08",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Monterey"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.montereybayhalfmarathon.org/",
+    "evidence": "Race Date November 8, 2026 Race Locations Monterey (Half Marathon) and Pacific Grove (5K, 3K) Start Time 7:00 AM PDT",
+    "observed_at": "2026-10-06T10:11:47Z"
+  },
+  {
+    "data": {
+      "name": "TransLantau by UTMB",
+      "url": "https://translantau.utmb.world/",
+      "race_date": "2026-11-13",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 104,
+      "climb_m": 4500,
+      "city": [
+        "Mui Wo"
+      ],
+      "country": [
+        "Hong Kong"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://translantau.utmb.world/races/tl100",
+    "evidence": "Distance 104 KM Elevation Gain 4500 M+ Start Date Friday 13th November 2026 Race Start Mui Wo River Silver Garden - 19:30",
+    "observed_at": "2026-10-06T10:04:13Z"
+  },
+  {
+    "data": {
+      "name": "Dubai T100 Triathlon",
+      "url": "https://t100triathlon.com/dubai/participate/",
+      "race_date": "2026-11-14",
+      "sport": "triathlon",
+      "series": "t100",
+      "distance_km": 100,
+      "city": [
+        "Dubai"
+      ],
+      "country": [
+        "United Arab Emirates"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://t100triathlon.com/dubai/pro/",
+    "evidence": "Dubai T100 Triathlon Women's Pro Race The pros return to the UAE for the Dubai T100 Triathlon in the glamorous heart of the Middle East. Who will handle the pressure and the heat to win big? 14 Nov 2026 | 13:15 GST",
+    "observed_at": "2026-10-06T09:56:08Z"
+  },
+  {
+    "data": {
+      "name": "HOKA Pacific Trails California by UTMB",
+      "url": "https://pacifictrails.utmb.world/",
+      "race_date": "2026-11-14",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 51,
+      "climb_m": 1550,
+      "city": [
+        "Santa Ynez Valley"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://pacifictrails.utmb.world/races/50K",
+    "evidence": "Distance 51 KM Elevation Gain 1550 M+ Start Date Saturday 14th November 2026 Race Start Rancho San Fernando Rey - 07:00",
+    "observed_at": "2026-10-06T10:03:57Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Phu Quoc",
+      "url": "https://www.ironman.com/races/im703-phu-quoc",
+      "race_date": "2026-11-15",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Phu Quoc"
+      ],
+      "country": [
+        "Vietnam"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im703-phu-quoc",
+    "evidence": "November 15, 2026 IRONMAN 70.3 Phu Quoc Phu Quoc, Vietnam",
+    "observed_at": "2026-10-06T09:58:27Z"
+  },
+  {
+    "data": {
+      "name": "Patagonia Bariloche by UTMB",
+      "url": "https://bariloche.utmb.world/",
+      "race_date": "2026-11-20",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 131,
+      "climb_m": 6580,
+      "city": [
+        "Bariloche"
+      ],
+      "country": [
+        "Argentina"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://bariloche.utmb.world/races/TRONADOR",
+    "evidence": "Distance 131 KM Elevation Gain 6580 M+ Start Date Friday 20th November 2026 Race Start Centro Civico Bariloche - 22:00",
+    "observed_at": "2026-10-06T10:03:27Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Langkawi",
+      "url": "https://www.ironman.com/races/im703-langkawi",
+      "race_date": "2026-11-21",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Langkawi"
+      ],
+      "country": [
+        "Malaysia"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im703-langkawi",
+    "evidence": "November 21, 2026 IRONMAN 70.3 Langkawi Langkawi, Malaysia",
+    "observed_at": "2026-10-06T09:57:22Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Malaysia",
+      "url": "https://www.ironman.com/races/im-malaysia",
+      "race_date": "2026-11-21",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Langkawi"
+      ],
+      "country": [
+        "Malaysia"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im-malaysia",
+    "evidence": "November 21, 2026 IRONMAN Malaysia Langkawi, Malaysia",
+    "observed_at": "2026-10-06T09:54:59Z"
+  },
+  {
+    "data": {
+      "name": "Challenge Canberra",
+      "url": "https://challengefamily.com/races/challenge-canberra/",
+      "race_date": "2026-11-22",
+      "sport": "triathlon",
+      "series": "challenge",
+      "distance_km": 100,
+      "city": [
+        "Canberra"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://challengefamily.com/races/challenge-canberra/",
+    "evidence": "WHEN 22 November 2026 WHERE Canberra, Australia",
+    "observed_at": "2026-10-06T09:57:39Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Mossel Bay African TriClub Championship",
+      "url": "https://www.ironman.com/races/im703-mossel-bay",
+      "race_date": "2026-11-22",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Mossel Bay"
+      ],
+      "country": [
+        "South Africa"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.ironman.com/races/im703-mossel-bay",
+    "evidence": "November 22, 2026 ISUZU IRONMAN 70.3 Mossel Bay African TriClub Championship Mossel Bay, South Africa",
+    "observed_at": "2026-10-06T09:57:54Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Cozumel Latin American Championship",
+      "url": "https://www.ironman.com/races/im-cozumel",
+      "race_date": "2026-11-22",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Cozumel"
+      ],
+      "country": [
+        "Mexico"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im-cozumel",
+    "evidence": "November 22, 2026 IRONMAN Cozumel Latin American Championship Cozumel, ROO, Mexico",
+    "observed_at": "2026-10-06T09:54:43Z"
+  },
+  {
+    "data": {
+      "name": "Powerade Milano Half Marathon",
+      "url": "https://followyourpassion.it/powerademilanohalfmarathon/",
+      "race_date": "2026-11-22",
+      "sport": "half-marathon",
+      "series": "world-athletics",
+      "distance_km": 21.1,
+      "city": [
+        "Milan"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://followyourpassion.it/powerademilanohalfmarathon/",
+    "evidence": "Powerade Milano Half Marathon 22 novembre 2026 Scegli la tua sfida: mezza maratona o 10 km tra i luoghi simbolo di Milano",
+    "observed_at": "2026-10-06T10:11:28Z"
+  },
+  {
+    "data": {
+      "name": "Ultra-Trail Kosciuszko by UTMB",
+      "url": "https://kosciuszko.utmb.world/",
+      "race_date": "2026-11-27",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 160.5,
+      "climb_m": 4731,
+      "city": [
+        "Jindabyne"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://kosciuszko.utmb.world/races/kosci-miler",
+    "evidence": "Distance 160.5 KM Elevation Gain 4731 M+ Start Date Friday 27th November 2026 Race Start Banjo Patterson Park, Jindabyne - 03:00",
+    "observed_at": "2026-10-06T10:03:46Z"
+  },
+  {
+    "data": {
+      "name": "Sharm El Sheikh Half Marathon",
+      "url": "https://www.egyptianmarathon.com/",
+      "race_date": "2026-11-28",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Sharm El Sheikh"
+      ],
+      "country": [
+        "Egypt"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.egyptianmarathon.com/",
+    "evidence": "15th Sharm El Sheikh Half Marathon Run the Red Sea coast through the jewel of Sinai for an unforgettable experience Saturday, November 28, 2026 Sharm El Sheikh, Red Sea, Egypt 5K · 10K · Half Marathon (AIMS Cert.)",
+    "observed_at": "2026-10-06T10:11:46Z"
+  },
+  {
+    "data": {
+      "name": "Challenge Florianópolis",
+      "url": "https://challengefamily.com/races/challenge-florianopolis-november/",
+      "race_date": "2026-11-29",
+      "sport": "triathlon",
+      "series": "challenge",
+      "distance_km": 113,
+      "city": [
+        "Florianópolis"
+      ],
+      "country": [
+        "Brazil"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://challengefamily.com/races/challenge-florianopolis-november/",
+    "evidence": "WHEN 29 November 2026 WHERE Florianópolis, Brazil",
+    "observed_at": "2026-10-06T09:57:44Z"
+  },
+  {
+    "data": {
+      "name": "Discoveries Half Marathon",
+      "url": "https://meiamaratonadosdescobrimentos.com/",
+      "race_date": "2026-11-29",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Lisbon"
+      ],
+      "country": [
+        "Portugal"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://meiamaratonadosdescobrimentos.com/",
+    "evidence": "29 novembro 2026 INSCRIÇÕES ONLINE REGULAMENTO 2026 Meia Maratona 21km INÍCIO: 10h00 PARTIDA: Praça do Império CHEGADA: Museu da Marinha",
+    "observed_at": "2026-10-06T10:11:27Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Aracaju-Sergipe",
+      "url": "https://www.ironman.com/races/im703-aracaju-sergipe",
+      "race_date": "2026-11-29",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Aracaju"
+      ],
+      "country": [
+        "Brazil"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-aracaju-sergipe",
+    "evidence": "November 29, 2026 Nubank Ultravioleta IRONMAN 70.3 Aracaju-Sergipe Aracaju, SE, Brazil",
+    "observed_at": "2026-10-06T09:55:44Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Cartagena",
+      "url": "https://www.ironman.com/races/im703-cartagena",
+      "race_date": "2026-11-29",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Cartagena"
+      ],
+      "country": [
+        "Colombia"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-cartagena",
+    "evidence": "November 29, 2026 IRONMAN 70.3 Cartagena Cartagena, Colombia",
+    "observed_at": "2026-10-06T09:56:17Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Valdivia",
+      "url": "https://www.ironman.com/races/im703-valdivia",
+      "race_date": "2026-11-29",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Valdivia"
+      ],
+      "country": [
+        "Chile"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-valdivia",
+    "evidence": "November 29, 2026 ITAÚ IRONMAN 70.3 Valdivia Valdivia, LR, Chile",
+    "observed_at": "2026-10-06T09:59:12Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Valdivia",
+      "url": "https://www.ironman.com/races/im-valdivia",
+      "race_date": "2026-11-29",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Valdivia"
+      ],
+      "country": [
+        "Chile"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im-valdivia",
+    "evidence": "November 29, 2026 ITAÚ IRONMAN Valdivia Valdivia, LR, Chile",
+    "observed_at": "2026-10-06T09:55:22Z"
+  },
+  {
+    "data": {
+      "name": "Stop GBV Half Marathon Zanzibar",
+      "url": "https://www.stopgbvmarathonzanzibar.com/",
+      "race_date": "2026-11-29",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Zanzibar"
+      ],
+      "country": [
+        "Tanzania"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10422.html",
+    "evidence": "Stop GBV Half Marathon Zanzibar Tanzania | H,R | * Associate member of AIMS Race information Forthcoming events Please consult race website for route map. 29 Stop GBV Half Marathon Zanzibar Sun 29 November 2026",
+    "observed_at": "2026-10-06T09:58:22Z"
+  },
+  {
+    "data": {
+      "name": "Vedanta Pink City Half Marathon",
+      "url": "https://pinkcitymarathon.com/",
+      "race_date": "2026-11-29",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Jaipur"
+      ],
+      "country": [
+        "India"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://pinkcitymarathon.com/",
+    "evidence": "Vedanta Pink City Half Marathon | November 29, 2026 |",
+    "observed_at": "2026-10-06T10:11:27Z"
+  },
+  {
+    "data": {
+      "name": "Venus Women's Half Marathon",
+      "url": "https://iguanasports.com.br/blogs/calendario-corridas-de-rua/venus-womens-half-marathon-2026",
+      "race_date": "2026-11-29",
+      "sport": "half-marathon",
+      "series": "world-athletics",
+      "distance_km": 21.1,
+      "city": [
+        "São Paulo"
+      ],
+      "country": [
+        "Brazil"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://iguanasports.com.br/blogs/calendario-corridas-de-rua/venus-womens-half-marathon-2026",
+    "evidence": "Venus Women's Half Marathon 2026 29 Nov 2026 06:00 São Paulo | SP | Brasil 10K 15K 21.1K 5K",
+    "observed_at": "2026-10-06T10:24:24Z"
+  },
+  {
+    "data": {
+      "name": "Ayla Red Sea Half Marathon",
+      "url": "https://www.runjordan.com/",
+      "race_date": "2026-12-04",
+      "sport": "half-marathon",
+      "series": "world-athletics",
+      "distance_km": 21.1,
+      "city": [
+        "Aqaba"
+      ],
+      "country": [
+        "Jordan"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/930.html",
+    "evidence": "Ayla Red Sea Half Marathon Jordan | H,R | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 4 Ayla Red Sea Half Marathon Fri 4 December 2026",
+    "observed_at": "2026-10-06T09:58:24Z"
+  },
+  {
+    "data": {
+      "name": "Chiangmai Thailand by UTMB",
+      "url": "https://chiangmai.utmb.world/",
+      "race_date": "2026-12-04",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 173,
+      "climb_m": 9800,
+      "city": [
+        "Chiang Dao"
+      ],
+      "country": [
+        "Thailand"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://chiangmai.utmb.world/races/CHIANGDAO160",
+    "evidence": "Distance 173 KM Elevation Gain 9800 M+ Start Date Friday 4th December 2026 Race Start Wat Tham Chiang Dao - 10:00",
+    "observed_at": "2026-10-06T10:03:32Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Oman",
+      "url": "https://www.ironman.com/races/im-oman",
+      "race_date": "2026-12-05",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Muscat"
+      ],
+      "country": [
+        "Oman"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.ironman.com/races/im-oman",
+    "evidence": "December 5, 2026 Experience Oman IRONMAN Oman Muscat, Oman",
+    "observed_at": "2026-10-06T09:55:04Z"
+  },
+  {
+    "data": {
+      "name": "BMW Brunei International Half Marathon",
+      "url": "https://www.bruneimarathon.com/",
+      "race_date": "2026-12-06",
+      "sport": "half-marathon",
+      "series": "world-athletics",
+      "distance_km": 21.1,
+      "city": [
+        "Bandar Seri Begawan"
+      ],
+      "country": [
+        "Brunei"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10438.html",
+    "evidence": "BMW Brunei International Half Marathon Brunei | H,R | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 6 BMW Brunei International Half Marathon Sun 6 December 2026",
+    "observed_at": "2026-10-06T09:58:28Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 La Quinta",
+      "url": "https://www.ironman.com/races/im703-la-quinta",
+      "race_date": "2026-12-06",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "La Quinta"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-la-quinta",
+    "evidence": "December 6, 2026 IRONMAN 70.3 La Quinta La Quinta, CA, United States",
+    "observed_at": "2026-10-06T09:57:21Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Veracruz",
+      "url": "https://www.ironman.com/races/im703-veracruz",
+      "race_date": "2026-12-06",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Veracruz"
+      ],
+      "country": [
+        "Mexico"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-veracruz",
+    "evidence": "December 6, 2026 IRONMAN 70.3 Veracruz Veracruz, Mexico",
+    "observed_at": "2026-10-06T09:59:16Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Western Australia",
+      "url": "https://www.ironman.com/races/im703-western-australia",
+      "race_date": "2026-12-06",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Busselton"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im703-western-australia",
+    "evidence": "December 6, 2026 IRONMAN 70.3 Western Australia Busselton, WA, Australia",
+    "observed_at": "2026-10-06T09:59:37Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Western Australia Asia Pacific Championship",
+      "url": "https://www.ironman.com/races/im-western-australia",
+      "race_date": "2026-12-06",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Busselton"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im-western-australia",
+    "evidence": "December 6, 2026 IRONMAN Western Australia Asia Pacific Championship Busselton, WA, Australia",
+    "observed_at": "2026-10-06T09:55:32Z"
+  },
+  {
+    "data": {
+      "name": "Reggae Marathon - the Half Marathon, 10K & 5K",
+      "url": "https://www.reggaemarathon.com/",
+      "race_date": "2026-12-06",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Kingston"
+      ],
+      "country": [
+        "Jamaica"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.reggaemarathon.com/",
+    "evidence": "The Reggae Marathon has announced new appointments to its Board ahead of the highly anticipated 2026 staging of the event, which returns later this year, December 6, 2026, in Kingston.",
+    "observed_at": "2026-10-06T10:11:49Z"
+  },
+  {
+    "data": {
+      "name": "Oman by UTMB",
+      "url": "https://oman.utmb.world/",
+      "race_date": "2026-12-10",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 154,
+      "climb_m": 8000,
+      "city": [
+        "Al Hamra"
+      ],
+      "country": [
+        "Oman"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://oman.utmb.world/races/HAJ",
+    "evidence": "Distance 154 KM Elevation Gain 8000 M+ Start Date Thursday 10th December 2026 Race Start Al Hamra - 15:30",
+    "observed_at": "2026-10-06T10:03:56Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Bahrain",
+      "url": "https://www.ironman.com/races/im703-bahrain",
+      "race_date": "2026-12-11",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Manama"
+      ],
+      "country": [
+        "Bahrain"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.ironman.com/races/im703-bahrain",
+    "evidence": "December 11, 2026 IRONMAN 70.3 Bahrain Manama, Bahrain",
+    "observed_at": "2026-10-06T09:55:49Z"
+  },
+  {
+    "data": {
+      "name": "Qatar T100 Triathlon World Championship Final",
+      "url": "https://t100triathlon.com/qatar/participate/",
+      "race_date": "2026-12-11",
+      "sport": "triathlon",
+      "series": "t100",
+      "distance_km": 100,
+      "city": [
+        "Lusail"
+      ],
+      "country": [
+        "Qatar"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://t100triathlon.com/qatar/pro/",
+    "evidence": "In 2026, the T100 Triathlon World Championship returns to Qatar, a destination like no other where cultural authenticity meets modernity. 11-12 Dec 2026 | 09:45 AST",
+    "observed_at": "2026-10-06T10:08:32Z"
+  },
+  {
+    "data": {
+      "name": "Marakez Pyramids Half Marathon",
+      "url": "https://www.pyramidshalfmarathon.com/",
+      "race_date": "2026-12-12",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Giza"
+      ],
+      "country": [
+        "Egypt"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10393.html",
+    "evidence": "Marakez Pyramids Half Marathon Egypt | H,R | * Associate member of AIMS Race information Forthcoming events Please consult race website for route map. 12 Marakez Pyramids Half Marathon Sat 12 December 2026",
+    "observed_at": "2026-10-06T09:58:31Z"
+  },
+  {
+    "data": {
+      "name": "Sharqiyah International Race Half Marathon",
+      "url": "https://runningrace.com.sa/en/",
+      "race_date": "2026-12-12",
+      "sport": "half-marathon",
+      "series": "world-athletics",
+      "distance_km": 21.1,
+      "city": [
+        "Al Khobar"
+      ],
+      "country": [
+        "Saudi Arabia"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://runningrace.com.sa/en/",
+    "evidence": "Sharqiyah International Race 2026 is a premier running event in Saudi Arabia, scheduled to take place on December 12, 2026, at Al-Khobar Corniche. The race features three main distances: a One-Mile race for the kids, a 5K race and a 21.1K Half Marathon",
+    "observed_at": "2026-10-06T10:15:35Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Florida",
+      "url": "https://www.ironman.com/races/im703-florida",
+      "race_date": "2026-12-13",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Haines City"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-florida",
+    "evidence": "December 13, 2026 IRONMAN 70.3 Florida Haines City, FL, United States",
+    "observed_at": "2026-10-06T09:57:03Z"
+  },
+  {
+    "data": {
+      "name": "Bangsaen21",
+      "url": "https://www.bangsaen21.com/en",
+      "race_date": "2026-12-20",
+      "sport": "half-marathon",
+      "series": "world-athletics",
+      "distance_km": 21.1,
+      "city": [
+        "Bangsaen"
+      ],
+      "country": [
+        "Thailand"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10154.html",
+    "evidence": "Bangsaen21 Thailand | H,R | Full member of AIMS Race information Forthcoming events Bangkok, Thailand Please consult race website for route map. 20 Bangsaen21 Sun 20 December 2026",
+    "observed_at": "2026-10-06T09:58:36Z"
+  },
+  {
+    "data": {
+      "name": "Vietnam Highlands Trail by UTMB",
+      "url": "https://vietnamhighlands.utmb.world/",
+      "race_date": "2027-01-09",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 104.2,
+      "climb_m": 5533,
+      "city": [
+        "Da Lat"
+      ],
+      "country": [
+        "Vietnam"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://vietnamhighlands.utmb.world/races/100Klangbiang",
+    "evidence": "Distance 104.2 KM Elevation Gain 5533 M+ Start Date Saturday 9th January 2027 Race Start Lam Vien Square - 03:00",
+    "observed_at": "2026-10-06T10:04:18Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Pucon",
+      "url": "https://www.ironman.com/races/im703-pucon",
+      "race_date": "2027-01-10",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Pucón"
+      ],
+      "country": [
+        "Chile"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-pucon",
+    "evidence": "January 10, 2027 itaũ IRONMAN 70.3 Pucon Pucon, Chile",
+    "observed_at": "2026-10-06T09:58:31Z"
+  },
+  {
+    "data": {
+      "name": "Arc of Attrition by UTMB",
+      "url": "https://arcofattrition.utmb.world/",
+      "race_date": "2027-01-22",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 173,
+      "climb_m": 5507,
+      "city": [
+        "Coverack"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://arcofattrition.utmb.world/races/Arc100M",
+    "evidence": "Distance 173 KM Elevation Gain 5507 M+ Start Date Friday 22nd January 2027 Race Start Coverack - 13:00",
+    "observed_at": "2026-10-06T10:03:26Z"
+  },
+  {
+    "data": {
+      "name": "Mitja Marató Internacional Vila de Santa Pola",
+      "url": "https://www.mitjasantapola.com/",
+      "race_date": "2027-01-24",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Santa Pola"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/639.html",
+    "evidence": "Mitja Marató Internacional Vila de Santa Pola Spain | H | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 24 Mitja Marato Int’l Vila de Santa Pola Sun 24 January 2027",
+    "observed_at": "2026-10-06T09:58:40Z"
+  },
+  {
+    "data": {
+      "name": "Challenge Israman",
+      "url": "https://challengefamily.com/races/challenge-israman/",
+      "race_date": "2027-01-29",
+      "sport": "triathlon",
+      "series": "challenge",
+      "distance_km": 226,
+      "city": [
+        "Eilat"
+      ],
+      "country": [
+        "Israel"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://challengefamily.com/races/challenge-israman/",
+    "evidence": "WHEN 29 January 2027 WHERE Eilat, Israel",
+    "observed_at": "2026-10-06T09:57:51Z"
+  },
+  {
+    "data": {
+      "name": "Challenge Sir Bani Yas",
+      "url": "https://challengefamily.com/races/challenge-sir-bani-yas/",
+      "race_date": "2027-01-30",
+      "sport": "triathlon",
+      "series": "challenge",
+      "distance_km": 226,
+      "city": [
+        "Sir Bani Yas Island"
+      ],
+      "country": [
+        "United Arab Emirates"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://challengefamily.com/races/challenge-sir-bani-yas/",
+    "evidence": "WHEN 30 January 2027 WHERE Abu Dhabi, United Arab Emirates",
+    "observed_at": "2026-10-06T09:58:03Z"
+  },
+  {
+    "data": {
+      "name": "Ras Al Khaimah Half Marathon",
+      "url": "https://www.rakhalfmarathon.com/",
+      "race_date": "2027-01-30",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Ras Al Khaimah"
+      ],
+      "country": [
+        "United Arab Emirates"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/650.html",
+    "evidence": "Forthcoming events 25º47'9.808, 55º57'56.3148 Please consult race website for route map. 30 Ras al Khaimah Half Marathon Sat 30 January 2027",
+    "observed_at": "2026-10-06T09:58:41Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Nelson Mandela Bay African Championship",
+      "url": "https://www.ironman.com/races/im703-nelson-mandela-bay",
+      "race_date": "2027-01-31",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Port Elizabeth"
+      ],
+      "country": [
+        "South Africa"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.ironman.com/races/im703-nelson-mandela-bay",
+    "evidence": "January 31, 2027 ISUZU IRONMAN 70.3 Nelson Mandela Bay African Championship Port Elizabeth, South Africa",
+    "observed_at": "2026-10-06T09:58:04Z"
+  },
+  {
+    "data": {
+      "name": "Osaka Half Marathon",
+      "url": "https://half.osaka-marathon.jp/",
+      "race_date": "2027-01-31",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Osaka"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10410.html",
+    "evidence": "Forthcoming events Please consult race website for route map. 31 Osaka Half Marathon Sun 31 January 2027",
+    "observed_at": "2026-10-06T09:58:43Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Muscat Middle East Championship",
+      "url": "https://www.ironman.com/races/im703-oman",
+      "race_date": "2027-02-06",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Muscat"
+      ],
+      "country": [
+        "Oman"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.ironman.com/races/im703-oman",
+    "evidence": "February 6, 2027 Experience Oman IRONMAN 70.3 Muscat Middle East Championship Muscat, Oman",
+    "observed_at": "2026-10-06T09:58:17Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 San Salvador",
+      "url": "https://www.ironman.com/races/im703-san-salvador",
+      "race_date": "2027-02-07",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "San Salvador"
+      ],
+      "country": [
+        "El Salvador"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-san-salvador",
+    "evidence": "February 7, 2027 El Salvador IRONMAN 70.3 San Salvador San Salvador, SS, El Salvador",
+    "observed_at": "2026-10-06T09:58:54Z"
+  },
+  {
+    "data": {
+      "name": "Kagawa Marugame International Half Marathon",
+      "url": "https://www.km-half.com/",
+      "race_date": "2027-02-07",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Marugame"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/645.html",
+    "evidence": "Kagawa Marugame International Half Marathon Japan | H | Full member of AIMS Race information Forthcoming events Kagawa Marugame Stadium, Marugame, Kagawa Prefecture, Japan Please consult race website for route map. 7 Kagawa Marugame Int’l Half Marathon Sun 7 February 2027",
+    "observed_at": "2026-10-06T09:58:47Z"
+  },
+  {
+    "data": {
+      "name": "Montepio Meia Maratona de Cascais",
+      "url": "https://www.meiamaratonadecascais.pt/",
+      "race_date": "2027-02-07",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Cascais"
+      ],
+      "country": [
+        "Portugal"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10238.html",
+    "evidence": "Montepio Meia Maratona de Cascais Portugal | H | Full member of AIMS Race information Forthcoming events Cascais, Portugal Please consult race website for route map. 7 Montepio Meia Maratona de Cascais Sun 7 February 2027",
+    "observed_at": "2026-10-06T09:58:46Z"
+  },
+  {
+    "data": {
+      "name": "Tarawera Ultra-Trail by UTMB",
+      "url": "https://tarawera.utmb.world/",
+      "race_date": "2027-02-13",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 163,
+      "climb_m": 3800,
+      "city": [
+        "Rotorua"
+      ],
+      "country": [
+        "New Zealand"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://tarawera.utmb.world/races/t-miler",
+    "evidence": "Distance 163 KM Elevation Gain 3800 M+ Start Date Saturday 13th February 2027 Race Start Te Puia, Rotorua - 04:00",
+    "observed_at": "2026-10-06T10:04:10Z"
+  },
+  {
+    "data": {
+      "name": "Ethio Telecom Lake Hawassa Half Marathon",
+      "url": "https://www.ethiopianrun.org/",
+      "race_date": "2027-02-14",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Hawassa"
+      ],
+      "country": [
+        "Ethiopia"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10187.html",
+    "evidence": "Ethio Telecom Lake Hawassa Half Marathon Ethiopia | H,R | Full member of AIMS Race information Forthcoming events Hawassa, Ethiopia Please consult race website for route map. 14 Ethio Telecom Lake Hawassa Half Marathon Sun 14 February 2027",
+    "observed_at": "2026-10-06T09:58:52Z"
+  },
+  {
+    "data": {
+      "name": "Hyundai Mitja Marató de Barcelona by Brooks",
+      "url": "https://mitjamarato.barcelona/",
+      "race_date": "2027-02-14",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Barcelona"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10084.html",
+    "evidence": "Hyundai Mitja Marató de Barcelona by Brooks Spain | H | Full member of AIMS Race information Forthcoming events Barcelona, Spain Please consult race website for route map. 14 Hyundai Mitja Marató de Barcelona by Brooks Sun 14 February 2027",
+    "observed_at": "2026-10-06T09:58:49Z"
+  },
+  {
+    "data": {
+      "name": "Romeo&Giulietta Run Half Marathon",
+      "url": "https://www.romeoegiuliettarunhalfmarathon.it/",
+      "race_date": "2027-02-14",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Verona"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10027.html",
+    "evidence": "Forthcoming events Please consult race website for route map. 14 Romeo&Giulietta Run Half Marathon Sun 14 February 2027",
+    "observed_at": "2026-10-06T09:58:50Z"
+  },
+  {
+    "data": {
+      "name": "Challenge Wānaka",
+      "url": "https://challengefamily.com/races/challenge-wanaka/",
+      "race_date": "2027-02-20",
+      "sport": "triathlon",
+      "series": "challenge",
+      "distance_km": 100,
+      "city": [
+        "Wānaka"
+      ],
+      "country": [
+        "New Zealand"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://challengefamily.com/races/challenge-wanaka/",
+    "evidence": "WHEN 20 February 2027 WHERE Lake Wānaka, New Zealand",
+    "observed_at": "2026-10-06T09:58:09Z"
+  },
+  {
+    "data": {
+      "name": "21K Guadalajara Electrolit",
+      "url": "https://medio.maratonguadalajara.org/",
+      "race_date": "2027-02-21",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Guadalajara"
+      ],
+      "country": [
+        "Mexico"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/653.html",
+    "evidence": "21K Guadalajara Electrolit nutrido por Granvita Mexico | H | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 21 21K Guadalajara Electrolit nutrido por Granvita Sun 21 February 2027",
+    "observed_at": "2026-10-06T09:58:53Z"
+  },
+  {
+    "data": {
+      "name": "COELMO Napoli City Half Marathon",
+      "url": "https://www.runczech.com/en/events/coelmo-napoli-city-half-marathon-2027",
+      "race_date": "2027-02-21",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Naples"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.runczech.com/en/",
+    "evidence": "COELMO Napoli City Half Marathon 2027 February 21, 2027, Napoli Detail",
+    "observed_at": "2026-10-06T10:14:18Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Panama",
+      "url": "https://www.ironman.com/races/im703-panama",
+      "race_date": "2027-02-28",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Panama City"
+      ],
+      "country": [
+        "Panama"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-panama",
+    "evidence": "February 28, 2027 IRONMAN 70.3 Panama Panama City, Panama",
+    "observed_at": "2026-10-06T09:58:19Z"
+  },
+  {
+    "data": {
+      "name": "Puerto Vallarta by UTMB",
+      "url": "https://puerto-vallarta.utmb.world/",
+      "race_date": "2027-03-05",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 81,
+      "climb_m": 3900,
+      "city": [
+        "Puerto Vallarta"
+      ],
+      "country": [
+        "Mexico"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://puerto-vallarta.utmb.world/races/Hikuri",
+    "evidence": "Distance 81 KM Elevation Gain 3900 M+ Start Date Friday 5th March 2027 Race Start Malecón Puerto Vallarta - 00:00",
+    "observed_at": "2026-10-06T10:03:59Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 New Zealand",
+      "url": "https://www.ironman.com/races/im703-new-zealand",
+      "race_date": "2027-03-06",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Taupo"
+      ],
+      "country": [
+        "New Zealand"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im703-new-zealand",
+    "evidence": "March 6, 2027 ANZCO Foods IRONMAN 70.3 New Zealand Taupo, New Zealand",
+    "observed_at": "2026-10-06T09:58:07Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN New Zealand",
+      "url": "https://www.ironman.com/races/im-new-zealand",
+      "race_date": "2027-03-06",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Taupo"
+      ],
+      "country": [
+        "New Zealand"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im-new-zealand",
+    "evidence": "March 6, 2027 IRONMAN New Zealand Taupo, New Zealand",
+    "observed_at": "2026-10-06T09:55:03Z"
+  },
+  {
+    "data": {
+      "name": "Xtrail Kenting by UTMB",
+      "url": "https://xtrail.utmb.world/",
+      "race_date": "2027-03-06",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 98,
+      "climb_m": 3291,
+      "city": [
+        "Kenting"
+      ],
+      "country": [
+        "Chinese Taipei"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://xtrail.utmb.world/races/Top-100K",
+    "evidence": "Distance 98 KM Elevation Gain 3291 M+ Start Date Saturday 6th March 2027 Race Start Howard Beach Resort Kenting - 04:00",
+    "observed_at": "2026-10-06T10:04:21Z"
+  },
+  {
+    "data": {
+      "name": "EDP Lisbon Half Marathon",
+      "url": "https://maratonaclubedeportugal.com/en/corrida-marco/edp-lisbon-half-marathon/",
+      "race_date": "2027-03-07",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Lisbon"
+      ],
+      "country": [
+        "Portugal"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://maratonaclubedeportugal.com/en/corrida-marco/edp-lisbon-half-marathon/",
+    "evidence": "07 Mar, 2027 Sunday 09:30 AM Start of the EDP Lisbon Half Marathon. The fastest half marathon in the world",
+    "observed_at": "2026-10-06T10:21:30Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Punta del Este",
+      "url": "https://www.ironman.com/races/im703-punta-del-este",
+      "race_date": "2027-03-07",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Punta del Este"
+      ],
+      "country": [
+        "Uruguay"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-punta-del-este",
+    "evidence": "March 7, 2027 Itaú IRONMAN 70.3 Punta del Este Punta del Este, Uruguay",
+    "observed_at": "2026-10-06T09:58:38Z"
+  },
+  {
+    "data": {
+      "name": "Tainan Half Marathon",
+      "url": "https://www.tainanhalfmarathon.com/",
+      "race_date": "2027-03-07",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Tainan"
+      ],
+      "country": [
+        "Chinese Taipei"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10240.html",
+    "evidence": "Tainan Half Marathon Chinese Taipei | H,R | Full member of AIMS Race information Forthcoming events Tainan, Taiwan Please consult race website for route map. 7 Tainan Half Marathon Sun 7 March 2027",
+    "observed_at": "2026-10-06T09:58:58Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Dallas-Little Elm",
+      "url": "https://www.ironman.com/races/im703-dallas-little-elm",
+      "race_date": "2027-03-14",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Little Elm"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-dallas-little-elm",
+    "evidence": "March 14, 2027 IRONMAN 70.3 Dallas-Little Elm Dallas, TX, United States",
+    "observed_at": "2026-10-06T09:56:40Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Hengqin",
+      "url": "https://www.ironman.com/races/im703-hengqin",
+      "race_date": "2027-03-14",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Hengqin"
+      ],
+      "country": [
+        "China"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im703-hengqin",
+    "evidence": "March 14, 2027 IRONMAN 70.3 Hengqin Hengqin, China",
+    "observed_at": "2026-10-06T09:57:12Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Laoag",
+      "url": "https://www.ironman.com/races/im703-laoag",
+      "race_date": "2027-03-14",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Laoag"
+      ],
+      "country": [
+        "Philippines"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im703-laoag",
+    "evidence": "March 14, 2027 IRONMAN 70.3 Laoag Laoag, Philippines",
+    "observed_at": "2026-10-06T09:57:23Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Puerto Rico",
+      "url": "https://www.ironman.com/races/im703-puerto-rico",
+      "race_date": "2027-03-14",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "San Juan"
+      ],
+      "country": [
+        "Puerto Rico"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-puerto-rico",
+    "evidence": "March 14, 2027 IRONMAN 70.3 Puerto Rico San Juan, Puerto Rico",
+    "observed_at": "2026-10-06T09:58:32Z"
+  },
+  {
+    "data": {
+      "name": "Chianti Ultra Trail by UTMB",
+      "url": "https://chianti.utmb.world/",
+      "race_date": "2027-03-20",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 123,
+      "climb_m": 5200,
+      "city": [
+        "Radda in Chianti"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://chianti.utmb.world/races/UTCC",
+    "evidence": "Distance 123 KM Elevation Gain 5200 M+ Start Date Saturday 20th March 2027 Race Start Radda in Chianti - 04:00",
+    "observed_at": "2026-10-06T10:03:33Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Doha",
+      "url": "https://www.ironman.com/races/im703-doha",
+      "race_date": "2027-03-20",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Doha"
+      ],
+      "country": [
+        "Qatar"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.ironman.com/races/im703-doha",
+    "evidence": "March 20, 2027 Visit Qatar IRONMAN 70.3 Doha Doha, Qatar",
+    "observed_at": "2026-10-06T09:56:46Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Curitiba",
+      "url": "https://www.ironman.com/races/im703-curitiba",
+      "race_date": "2027-03-21",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Curitiba"
+      ],
+      "country": [
+        "Brazil"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-curitiba",
+    "evidence": "March 21, 2027 Nubank Ultravioleta IRONMAN 70.3 Curitiba Curitiba, PR, Brazil",
+    "observed_at": "2026-10-06T09:56:38Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Geelong",
+      "url": "https://www.ironman.com/races/im703-geelong",
+      "race_date": "2027-03-21",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Geelong"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im703-geelong",
+    "evidence": "March 21, 2027 IRONMAN 70.3 Geelong Geelong, VIC, Australia",
+    "observed_at": "2026-10-06T09:57:05Z"
+  },
+  {
+    "data": {
+      "name": "Swansea Half Marathon",
+      "url": "https://swanseahalfmarathon.co.uk/",
+      "race_date": "2027-03-21",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Swansea"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10119.html",
+    "evidence": "Swansea Half Marathon Hanner Marathon Abertawe | Great Britain | H | Full member of AIMS Race information Forthcoming events Swansea, Wales Please consult race website for route map. 21 Swansea Half Marathon Sun 21 March 2027",
+    "observed_at": "2026-10-06T09:59:01Z"
+  },
+  {
+    "data": {
+      "name": "Istria 100 by UTMB",
+      "url": "https://istria.utmb.world/",
+      "race_date": "2027-04-02",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 168,
+      "climb_m": 6800,
+      "city": [
+        "Labin",
+        "Umag"
+      ],
+      "country": [
+        "Croatia"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://istria.utmb.world/races/168K",
+    "evidence": "Distance 168 KM Elevation Gain 6800 M+ Start Date Friday 2nd April 2027 Race Start Labin - 17:00",
+    "observed_at": "2026-10-06T10:03:40Z"
+  },
+  {
+    "data": {
+      "name": "Generali Prague Half Marathon",
+      "url": "https://www.runczech.com/en/events/generali-prague-half-marathon-2027-2",
+      "race_date": "2027-04-03",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Prague"
+      ],
+      "country": [
+        "Czech Republic"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.runczech.com/en/",
+    "evidence": "Generali Prague Half Marathon 2027 April 3, 2027, Prague Detail",
+    "observed_at": "2026-10-06T10:14:18Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Oceanside",
+      "url": "https://www.ironman.com/races/im703-oceanside",
+      "race_date": "2027-04-03",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Oceanside"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-oceanside",
+    "evidence": "April 3, 2027 Athletic Brewing IRONMAN 70.3 Oceanside Presented by Salomon Oceanside, CA, United States",
+    "observed_at": "2026-10-06T09:58:12Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Vilamoura-Algarve",
+      "url": "https://www.ironman.com/races/im703-vilamoura-algarve",
+      "race_date": "2027-04-03",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Vilamoura"
+      ],
+      "country": [
+        "Portugal"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-vilamoura-algarve",
+    "evidence": "April 3, 2027 IRONMAN 70.3 Vilamoura-Algarve Vilamoura, Portugal",
+    "observed_at": "2026-10-06T09:59:29Z"
+  },
+  {
+    "data": {
+      "name": "Jujuy Fuerza Sagrada by UTMB",
+      "url": "https://jujuy.utmb.world/",
+      "race_date": "2027-04-03",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 87.2,
+      "climb_m": 5101,
+      "city": [
+        "Tilcara"
+      ],
+      "country": [
+        "Argentina"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://jujuy.utmb.world/races/INTI",
+    "evidence": "Distance 87.2 KM Elevation Gain 5101 M+ Start Date Saturday 3rd April 2027 Race Start Tilcara - 05:00",
+    "observed_at": "2026-10-06T10:03:41Z"
+  },
+  {
+    "data": {
+      "name": "Generali Berlin Half Marathon",
+      "url": "https://www.generali-berliner-halbmarathon.de/",
+      "race_date": "2027-04-04",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Berlin"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/694.html",
+    "evidence": "Generali Berlin Half Marathon Generali Berliner Halbmarathon | Germany | H | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 4 Generali Berlin Half Marathon Sun 4 April 2027",
+    "observed_at": "2026-10-06T09:59:07Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Barranquilla",
+      "url": "https://www.ironman.com/races/im703-barranquilla",
+      "race_date": "2027-04-04",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Barranquilla"
+      ],
+      "country": [
+        "Colombia"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-barranquilla",
+    "evidence": "April 4, 2027 IRONMAN 70.3 Barranquilla Barranquilla, Colombia",
+    "observed_at": "2026-10-06T09:55:55Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Puerto Varas",
+      "url": "https://www.ironman.com/races/im703-puerto-varas",
+      "race_date": "2027-04-04",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Puerto Varas"
+      ],
+      "country": [
+        "Chile"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-puerto-varas",
+    "evidence": "April 4, 2027 IRONMAN 70.3 Puerto Varas Puerto Varas, LL, Chile",
+    "observed_at": "2026-10-06T09:58:33Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Texas",
+      "url": "https://www.ironman.com/races/im703-texas",
+      "race_date": "2027-04-04",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Galveston"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-texas",
+    "evidence": "April 4, 2027 IRONMAN 70.3 Texas Galveston Island, TX, United States",
+    "observed_at": "2026-10-06T09:59:08Z"
+  },
+  {
+    "data": {
+      "name": "Movistar Madrid Medio Maratón",
+      "url": "https://www.mediomaratonmadrid.es/",
+      "race_date": "2027-04-04",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Madrid"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/689.html",
+    "evidence": "Movistar Madrid Medio Maratón Spain | H | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 4 Movistar Madrid Medio Maratón Sun 4 April 2027",
+    "observed_at": "2026-10-06T09:59:08Z"
+  },
+  {
+    "data": {
+      "name": "Warsaw Half Marathon",
+      "url": "https://polmaratonwarszawski.com/en/",
+      "race_date": "2027-04-04",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Warsaw"
+      ],
+      "country": [
+        "Poland"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10066.html",
+    "evidence": "Warsaw Half Marathon Półmaraton Warszawski | Poland | H | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 4 21st Warsaw Half Marathon Sun 4 April 2027",
+    "observed_at": "2026-10-06T09:59:10Z"
+  },
+  {
+    "data": {
+      "name": "Tenerife Bluetrail by UTMB",
+      "url": "https://tenerife.utmb.world/",
+      "race_date": "2027-04-09",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 110,
+      "climb_m": 6250,
+      "city": [
+        "Los Cristianos"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://tenerife.utmb.world/races/tbt-100M",
+    "evidence": "Distance 110 KM Elevation Gain 6250 M+ Start Date Friday 9th April 2027 Race Start PLAYA DE LOS CRISTIANOS - 23:00",
+    "observed_at": "2026-10-06T10:04:11Z"
+  },
+  {
+    "data": {
+      "name": "Desert RATS Trail Running Festival by UTMB",
+      "url": "https://desertrats.utmb.world/",
+      "race_date": "2027-04-10",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 100,
+      "climb_m": 2050,
+      "city": [
+        "Fruita"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "entry_fee": "$295"
+    },
+    "source_url": "https://desertrats.utmb.world/races/100K",
+    "evidence": "Distance 100 KM Elevation Gain 2050 M+ Start Date Saturday 10th April 2027 Race Start Fruita CO, Mack Exit, Hawkeye Trailhead - 05:00",
+    "observed_at": "2026-10-06T10:03:34Z"
+  },
+  {
+    "data": {
+      "name": "Hiroshima Ultra-Trail by UTMB",
+      "url": "https://hiroshima.utmb.world/",
+      "race_date": "2027-04-10",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 95,
+      "climb_m": 5600,
+      "city": [
+        "Hiroshima"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://hiroshima.utmb.world/races/HIROSHIMA100K",
+    "evidence": "Distance 95 KM Elevation Gain 5600 M+ Start Date Saturday 10th April 2027 Race Start Hiroshima Gate Park - 05:00",
+    "observed_at": "2026-10-06T10:03:39Z"
+  },
+  {
+    "data": {
+      "name": "Almaty Half Marathon",
+      "url": "https://almaty-marathon.kz/en/events",
+      "race_date": "2027-04-11",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Almaty"
+      ],
+      "country": [
+        "Kazakhstan"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10328.html",
+    "evidence": "Almaty Half Marathon Kazakhstan | H,R | Full member of AIMS Race information Forthcoming events Almaty, Kazakhstan Please consult race website for route map. 11 Almaty Half Marathon Sun 11 April 2027",
+    "observed_at": "2026-10-06T09:59:15Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Los Cabos",
+      "url": "https://www.ironman.com/races/im703-los-cabos",
+      "race_date": "2027-04-11",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Los Cabos"
+      ],
+      "country": [
+        "Mexico"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-los-cabos",
+    "evidence": "April 11, 2027 IRONMAN 70.3 Los Cabos Los Cabos, BCS, Mexico",
+    "observed_at": "2026-10-06T09:57:29Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 San Juan",
+      "url": "https://www.ironman.com/races/im703-san-juan",
+      "race_date": "2027-04-11",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "San Juan"
+      ],
+      "country": [
+        "Argentina"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-san-juan",
+    "evidence": "April 11, 2027 IRONMAN 70.3 San Juan San Juan, Argentina",
+    "observed_at": "2026-10-06T09:58:49Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Penghu",
+      "url": "https://www.ironman.com/races/im-penghu",
+      "race_date": "2027-04-11",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Penghu"
+      ],
+      "country": [
+        "Chinese Taipei"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im-penghu",
+    "evidence": "April 11, 2027 Fubon Financial IRONMAN Penghu Penghu, Chinese Taipei",
+    "observed_at": "2026-10-06T09:55:05Z"
+  },
+  {
+    "data": {
+      "name": "Patras Half Marathon",
+      "url": "https://patrashalfmarathon.gr/en",
+      "race_date": "2027-04-11",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Patras"
+      ],
+      "country": [
+        "Greece"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10421.html",
+    "evidence": "Patras Half Marathon Greece | H,R | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 11 Patras Half Marathon Sun 11 April 2027",
+    "observed_at": "2026-10-06T09:59:17Z"
+  },
+  {
+    "data": {
+      "name": "Anfi Challenge Mogán-Gran Canaria",
+      "url": "https://challengefamily.com/races/challenge-mogan-gran-canaria/",
+      "race_date": "2027-04-17",
+      "sport": "triathlon",
+      "series": "challenge",
+      "distance_km": 100,
+      "city": [
+        "Mogán"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://challengefamily.com/races/challenge-mogan-gran-canaria/",
+    "evidence": "WHEN 17 April 2027 WHERE Gran Canaria, Spain",
+    "observed_at": "2026-10-06T09:57:53Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Brasilia",
+      "url": "https://www.ironman.com/races/im703-brasilia",
+      "race_date": "2027-04-18",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Brasília"
+      ],
+      "country": [
+        "Brazil"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-brasilia",
+    "evidence": "April 18, 2027 Nubank Ultravioleta IRONMAN 70.3 Brasilia DF, Brazil",
+    "observed_at": "2026-10-06T09:56:01Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Valencia",
+      "url": "https://www.ironman.com/races/im703-valencia",
+      "race_date": "2027-04-18",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Valencia"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-valencia",
+    "evidence": "April 18, 2027 IRONMAN 70.3 Valencia Valencia, Spain",
+    "observed_at": "2026-10-06T09:59:14Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN South Africa, Mossel Bay African Championship",
+      "url": "https://www.ironman.com/races/im-mossel-bay",
+      "race_date": "2027-04-18",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Mossel Bay"
+      ],
+      "country": [
+        "South Africa"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.ironman.com/races/im-mossel-bay",
+    "evidence": "April 18, 2027 ISUZU IRONMAN South Africa, Mossel Bay African Championship Mossel Bay, South Africa",
+    "observed_at": "2026-10-06T09:55:02Z"
+  },
+  {
+    "data": {
+      "name": "PKO Poznań Half Marathon",
+      "url": "https://www.halfmarathon.poznan.pl/",
+      "race_date": "2027-04-18",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Poznań"
+      ],
+      "country": [
+        "Poland"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/691.html",
+    "evidence": "PKO Poznań Halfmarathon PKO Poznań Półmaraton | Poland | H | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 18 19th PKO Poznań Halfmarathon Sun 18 April 2027",
+    "observed_at": "2026-10-06T09:59:24Z"
+  },
+  {
+    "data": {
+      "name": "Grand Raid Ventoux by UTMB",
+      "url": "https://ventoux.utmb.world/",
+      "race_date": "2027-04-23",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 125,
+      "climb_m": 5700,
+      "city": [
+        "Malaucène"
+      ],
+      "country": [
+        "France"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://ventoux.utmb.world/races/GRV100M",
+    "evidence": "Distance 125 KM Elevation Gain 5700 M+ Start Date Friday 23rd April 2027 Race Start Malaucène - 23:59",
+    "observed_at": "2026-10-06T10:04:16Z"
+  },
+  {
+    "data": {
+      "name": "The Canyons Endurance Runs by UTMB",
+      "url": "https://canyons.utmb.world/",
+      "race_date": "2027-04-23",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 161,
+      "climb_m": 5550,
+      "city": [
+        "Auburn"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://canyons.utmb.world/races/100M",
+    "evidence": "Distance 161 KM Elevation Gain 5550 M+ Start Date Friday 23rd April 2027 Race Start China Wall Trailhead - 12:00",
+    "observed_at": "2026-10-06T10:03:30Z"
+  },
+  {
+    "data": {
+      "name": "Challenge Taiwan",
+      "url": "https://challengefamily.com/races/challenge-taiwan/",
+      "race_date": "2027-04-24",
+      "sport": "triathlon",
+      "series": "challenge",
+      "distance_km": 226,
+      "city": [
+        "Taitung"
+      ],
+      "country": [
+        "Chinese Taipei"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://challengefamily.com/races/challenge-taiwan/",
+    "evidence": "WHEN 24 April 2027 WHERE Taitung, Chinese Taipei",
+    "observed_at": "2026-10-06T09:58:04Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Venice-Jesolo",
+      "url": "https://www.ironman.com/races/im703-venice-jesolo",
+      "race_date": "2027-04-24",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Jesolo"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-venice-jesolo",
+    "evidence": "April 24, 2027 IRONMAN 70.3 Venice-Jesolo Jesolo, Italy",
+    "observed_at": "2026-10-06T09:59:15Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Texas North American Championship",
+      "url": "https://www.ironman.com/races/im-texas",
+      "race_date": "2027-04-24",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "The Woodlands"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im-texas",
+    "evidence": "April 24, 2027 Memorial Hermann IRONMAN Texas North American Championship Presented by Salomon The Woodlands, TX, United States",
+    "observed_at": "2026-10-06T09:55:20Z"
+  },
+  {
+    "data": {
+      "name": "Gifu Half Marathon",
+      "url": "https://www.gifu-marathon.jp/",
+      "race_date": "2027-04-25",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Gifu"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/1122.html",
+    "evidence": "Gifu Half Marathon Japan | H | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 25 Gifu Half Marathon Sun 25 April 2027",
+    "observed_at": "2026-10-06T09:59:29Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Peru",
+      "url": "https://www.ironman.com/races/im703-peru",
+      "race_date": "2027-04-25",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Lima"
+      ],
+      "country": [
+        "Peru"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-peru",
+    "evidence": "April 25, 2027 IRONMAN 70.3 Peru Lima, Peru",
+    "observed_at": "2026-10-06T09:58:22Z"
+  },
+  {
+    "data": {
+      "name": "Poseidon Athens Half Marathon",
+      "url": "https://poseidon-athenshalfmarathon.com/",
+      "race_date": "2027-04-25",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Athens"
+      ],
+      "country": [
+        "Greece"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10414.html",
+    "evidence": "Poseidon Athens Half Marathon Greece | H | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 25 Poseidon Athens Half Marathon Sun 25 April 2027",
+    "observed_at": "2026-10-06T09:59:26Z"
+  },
+  {
+    "data": {
+      "name": "Türkiye İş Bankası İstanbul Half Marathon",
+      "url": "https://www.istanbulyarimaratonu.com/",
+      "race_date": "2027-04-25",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Istanbul"
+      ],
+      "country": [
+        "Türkiye"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10054.html",
+    "evidence": "Türkiye İş Bankası İstanbul Half Marathon Türkiye | H | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 25 Türkiye İş Bankası İstanbul Half Marathon Sun 25 April 2027",
+    "observed_at": "2026-10-06T09:59:33Z"
+  },
+  {
+    "data": {
+      "name": "Amazean Jungle Thailand by UTMB",
+      "url": "https://amazean.utmb.world/",
+      "race_date": "2027-04-30",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 115,
+      "climb_m": 5600,
+      "city": [
+        "Betong"
+      ],
+      "country": [
+        "Thailand"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://amazean.utmb.world/races/Betong100M",
+    "evidence": "Distance 115 KM Elevation Gain 5600 M+ Start Date Friday 30th April 2027 Race Start Betong Mongkollit Tunnel - 16:00",
+    "observed_at": "2026-10-06T10:03:24Z"
+  },
+  {
+    "data": {
+      "name": "Oh Meu Deus by UTMB",
+      "url": "https://ohmeudeus.utmb.world/",
+      "race_date": "2027-04-30",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 167,
+      "climb_m": 8900,
+      "city": [
+        "Serra da Estrela"
+      ],
+      "country": [
+        "Portugal"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://ohmeudeus.utmb.world/races/omd100m",
+    "evidence": "Distance 167 KM Elevation Gain 8900 M+ Start Date Friday 30th April 2027 Race Start To be defined - 18:00",
+    "observed_at": "2026-10-06T10:03:55Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Western Sydney",
+      "url": "https://www.ironman.com/races/im703-western-sydney",
+      "race_date": "2027-05-02",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Penrith"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im703-western-sydney",
+    "evidence": "May 2, 2027 IRONMAN 70.3 Western Sydney Penrith, NSW, Australia",
+    "observed_at": "2026-10-06T09:59:43Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Alcúdia-Mallorca",
+      "url": "https://www.ironman.com/races/im703-mallorca",
+      "race_date": "2027-05-08",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Alcúdia"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-mallorca",
+    "evidence": "May 8, 2027 IRONMAN 70.3 Alcúdia-Mallorca Alcúdia, Spain",
+    "observed_at": "2026-10-06T09:57:41Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Gulf Coast",
+      "url": "https://www.ironman.com/races/im703-gulf-coast",
+      "race_date": "2027-05-08",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Panama City Beach"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-gulf-coast",
+    "evidence": "May 8, 2027 Visit Panama City Beach IRONMAN 70.3 Gulf Coast Panama City Beach, FL, United States",
+    "observed_at": "2026-10-06T09:57:10Z"
+  },
+  {
+    "data": {
+      "name": "Challenge Salou-Costa Daurada",
+      "url": "https://challengefamily.com/races/challenge-salou-costa-daurada/",
+      "race_date": "2027-05-09",
+      "sport": "triathlon",
+      "series": "challenge",
+      "distance_km": 100,
+      "city": [
+        "Salou"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://challengefamily.com/races/challenge-salou-costa-daurada/",
+    "evidence": "WHEN 9 May 2027 WHERE Salou, Spain",
+    "observed_at": "2026-10-06T09:57:58Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Da Nang",
+      "url": "https://www.ironman.com/races/im703-danang",
+      "race_date": "2027-05-09",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Da Nang"
+      ],
+      "country": [
+        "Vietnam"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im703-danang",
+    "evidence": "May 9, 2027 IRONMAN 70.3 Da Nang Danang, Vietnam",
+    "observed_at": "2026-10-06T09:56:41Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Vietnam",
+      "url": "https://www.ironman.com/races/im-vietnam",
+      "race_date": "2027-05-09",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Da Nang"
+      ],
+      "country": [
+        "Vietnam"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im-vietnam",
+    "evidence": "May 9, 2027 VNG IRONMAN Vietnam Da Nang, Vietnam",
+    "observed_at": "2026-10-06T09:55:28Z"
+  },
+  {
+    "data": {
+      "name": "New Run Lviv Half Marathon",
+      "url": "https://newrun.com.ua/en/",
+      "race_date": "2027-05-09",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Lviv"
+      ],
+      "country": [
+        "Ukraine"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/20156.html",
+    "evidence": "New Run Lviv Halfmarathon Ukraine | H,R | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 9 New Run Lviv Halfmarathon Sun 9 May 2027",
+    "observed_at": "2026-10-06T09:59:36Z"
+  },
+  {
+    "data": {
+      "name": "Eryri by UTMB",
+      "url": "https://eryri.utmb.world/",
+      "race_date": "2027-05-14",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 163,
+      "climb_m": 9200,
+      "city": [
+        "Llanberis"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://eryri.utmb.world/races/Eryri-100M",
+    "evidence": "Distance 163 KM Elevation Gain 9200 M+ Start Date Friday 14th May 2027 Race Start Llanberis - 14:00",
+    "observed_at": "2026-10-06T10:03:36Z"
+  },
+  {
+    "data": {
+      "name": "Trail Alsace by UTMB",
+      "url": "https://alsace.utmb.world/",
+      "race_date": "2027-05-14",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 158,
+      "climb_m": 5100,
+      "city": [
+        "Lac Blanc",
+        "Obernai"
+      ],
+      "country": [
+        "France"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://alsace.utmb.world/races/UTDC",
+    "evidence": "Distance 158 KM Elevation Gain 5100 M+ Start Date Friday 14th May 2027 Race Start Station du Lac Blanc, massif des Vosges - 17:00",
+    "observed_at": "2026-10-06T10:03:23Z"
+  },
+  {
+    "data": {
+      "name": "Ultra-Trail Australia by UTMB",
+      "url": "https://uta.utmb.world/",
+      "race_date": "2027-05-14",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 161.1,
+      "climb_m": 7200,
+      "city": [
+        "Blackheath",
+        "Katoomba"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://uta.utmb.world/races/UTAMiler",
+    "evidence": "Distance 161.1 KM Elevation Gain 7200 M+ Start Date Friday 14th May 2027 Race Start Govetts Leap Carpark, Blackheath - 05:00",
+    "observed_at": "2026-10-06T10:04:14Z"
+  },
+  {
+    "data": {
+      "name": "French Riviera T100 Triathlon",
+      "url": "https://t100triathlon.com/french-riviera/pro/",
+      "race_date": "2027-05-15",
+      "sport": "triathlon",
+      "series": "t100",
+      "distance_km": 100,
+      "city": [
+        "Fréjus",
+        "Saint-Raphaël"
+      ],
+      "country": [
+        "France"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://t100triathlon.com/media-releases/triathlon-world-tour-announces-31-more-races-for-2027/",
+    "evidence": "confirmation of a date in Frejus-St Raphael for the third French Riviera T100 World Championship race on 15 May. Together with the Championship level races already announced on 24 July, this means 48 races are now in the 2027 calendar",
+    "observed_at": "2026-10-06T10:09:16Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Lanzarote",
+      "url": "https://www.ironman.com/races/im-lanzarote",
+      "race_date": "2027-05-15",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Lanzarote"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im-lanzarote",
+    "evidence": "May 15, 2027 Salomon IRONMAN Lanzarote Lanzarote, Spain",
+    "observed_at": "2026-10-06T09:54:56Z"
+  },
+  {
+    "data": {
+      "name": "Rothrock by UTMB",
+      "url": "https://rothrock.utmb.world/",
+      "race_date": "2027-05-15",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 53.3,
+      "climb_m": 1550,
+      "city": [
+        "Happy Valley"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://rothrock.utmb.world/races/50K",
+    "evidence": "Distance 53.3 KM Elevation Gain 1550 M+ Start Date Saturday 15th May 2027 Race Start Tussey Mountain Ski and Recreation - 08:00",
+    "observed_at": "2026-10-06T10:04:04Z"
+  },
+  {
+    "data": {
+      "name": "Challenge Cesenatico",
+      "url": "https://challengefamily.com/races/challenge-cesenatico/",
+      "race_date": "2027-05-16",
+      "sport": "triathlon",
+      "series": "challenge",
+      "distance_km": 100,
+      "city": [
+        "Cesenatico"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://challengefamily.com/races/challenge-cesenatico/",
+    "evidence": "WHEN 16 May 2027 WHERE Cesenatico, Italy",
+    "observed_at": "2026-10-06T09:57:41Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Chattanooga",
+      "url": "https://www.ironman.com/races/im703-chattanooga",
+      "race_date": "2027-05-16",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Chattanooga"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-chattanooga",
+    "evidence": "May 16, 2027 Salomon IRONMAN 70.3 Chattanooga Chattanooga, TN, United States",
+    "observed_at": "2026-10-06T09:56:25Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Jacksonville",
+      "url": "https://www.ironman.com/races/im-jacksonville",
+      "race_date": "2027-05-16",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Jacksonville"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im-jacksonville",
+    "evidence": "May 16, 2027 IRONMAN Jacksonville Jacksonville, FL, United States",
+    "observed_at": "2026-10-06T09:54:51Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Aix-en-Provence",
+      "url": "https://www.ironman.com/races/im703-aix-en-provence",
+      "race_date": "2027-05-23",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Aix-en-Provence"
+      ],
+      "country": [
+        "France"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-aix-en-provence",
+    "evidence": "May 23, 2027 IRONMAN 70.3 Aix-en-Provence Aix en Provence, France",
+    "observed_at": "2026-10-06T09:55:41Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Kraichgau",
+      "url": "https://www.ironman.com/races/im703-kraichgau",
+      "race_date": "2027-05-23",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Kraichgau"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-kraichgau",
+    "evidence": "May 23, 2027 IRONMAN 70.3 Kraichgau Kraichgau, Germany",
+    "observed_at": "2026-10-06T09:57:18Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Northern California",
+      "url": "https://www.ironman.com/races/im703-northern-california",
+      "race_date": "2027-05-23",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Redding"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-northern-california",
+    "evidence": "May 23, 2027 Dignity Health IRONMAN 70.3 Northern California Redding, CA, United States",
+    "observed_at": "2026-10-06T09:58:10Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Pennsylvania Happy Valley",
+      "url": "https://www.ironman.com/races/im703-pennsylvania",
+      "race_date": "2027-05-23",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "State College"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-pennsylvania",
+    "evidence": "May 23, 2027 IRONMAN 70.3 Pennsylvania Happy Valley State College, PA, United States",
+    "observed_at": "2026-10-06T09:58:20Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 St. Pölten",
+      "url": "https://www.ironman.com/races/im703-st-poelten",
+      "race_date": "2027-05-23",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "St. Pölten"
+      ],
+      "country": [
+        "Austria"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-st-poelten",
+    "evidence": "May 23, 2027 IRONMAN 70.3 St. Pölten St. Polten, Austria",
+    "observed_at": "2026-10-06T09:59:01Z"
+  },
+  {
+    "data": {
+      "name": "The Championship",
+      "url": "https://challengefamily.com/races/the-championship/",
+      "race_date": "2027-05-23",
+      "sport": "triathlon",
+      "series": "challenge",
+      "distance_km": 100,
+      "city": [
+        "Šamorín"
+      ],
+      "country": [
+        "Slovakia"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://challengefamily.com/races/the-championship/",
+    "evidence": "WHEN 23 May 2027 WHERE Šamorín, Slovakia",
+    "observed_at": "2026-10-06T09:58:18Z"
+  },
+  {
+    "data": {
+      "name": "MUT by UTMB",
+      "url": "https://mut.utmb.world/",
+      "race_date": "2027-05-28",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 168,
+      "climb_m": 8014,
+      "city": [
+        "George"
+      ],
+      "country": [
+        "South Africa"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://mut.utmb.world/races/mutmiler",
+    "evidence": "Distance 168 KM Elevation Gain 8014 M+ Start Date Friday 28th May 2027 Race Start Outeniqua Stadium, George - 12:00",
+    "observed_at": "2026-10-06T10:03:54Z"
+  },
+  {
+    "data": {
+      "name": "Challenge Gunsan-Saemangeum",
+      "url": "https://challengefamily.com/races/challenge-gunsan-saemangeum/",
+      "race_date": "2027-05-30",
+      "sport": "triathlon",
+      "series": "challenge",
+      "distance_km": 113,
+      "city": [
+        "Gunsan"
+      ],
+      "country": [
+        "South Korea"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://challengefamily.com/races/challenge-gunsan-saemangeum/",
+    "evidence": "WHEN 30 May 2027 WHERE Gunsan, South-Korea",
+    "observed_at": "2026-10-06T09:57:49Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Alghero",
+      "url": "https://www.ironman.com/races/im703-alghero",
+      "race_date": "2027-05-30",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Alghero"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-alghero",
+    "evidence": "May 30, 2027 IRONMAN 70.3 Alghero Alghero, Italy",
+    "observed_at": "2026-10-06T09:55:42Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Victoria",
+      "url": "https://www.ironman.com/races/im703-victoria",
+      "race_date": "2027-05-30",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Victoria"
+      ],
+      "country": [
+        "Canada"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-victoria",
+    "evidence": "May 30, 2027 IRONMAN 70.3 Victoria Victoria, BC, Canada",
+    "observed_at": "2026-10-06T09:59:24Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Hawai`i",
+      "url": "https://www.ironman.com/races/im703-hawaii",
+      "race_date": "2027-06-05",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Kohala Coast"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-hawaii",
+    "evidence": "June 5, 2027 IRONMAN 70.3 Hawai`i Kohala Coast, HI, United States",
+    "observed_at": "2026-10-06T09:57:11Z"
+  },
+  {
+    "data": {
+      "name": "Ultra Trail Chattanooga by UTMB",
+      "url": "https://chattanooga.utmb.world/",
+      "race_date": "2027-06-05",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 100,
+      "climb_m": 2436,
+      "city": [
+        "Chattanooga"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://chattanooga.utmb.world/races/100K",
+    "evidence": "Distance 100 KM Elevation Gain 2436 M+ Start Date Saturday 5th June 2027 Race Start Chattanooga TN, Erlanger Park - 06:00",
+    "observed_at": "2026-10-06T10:03:31Z"
+  },
+  {
+    "data": {
+      "name": "mozart 100 by UTMB",
+      "url": "https://mozart.utmb.world/",
+      "race_date": "2027-06-05",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 119,
+      "climb_m": 6000,
+      "city": [
+        "Fuschl am See"
+      ],
+      "country": [
+        "Austria"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://mozart.utmb.world/races/mozart100",
+    "evidence": "Distance 119 KM Elevation Gain 6000 M+ Start Date Saturday 5th June 2027 Race Start Fuschl am See - 05:00",
+    "observed_at": "2026-10-06T10:03:52Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Bolton",
+      "url": "https://www.ironman.com/races/im703-bolton",
+      "race_date": "2027-06-06",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Bolton"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-bolton",
+    "evidence": "June 6, 2027 IRONMAN 70.3 Bolton Bolton, United Kingdom",
+    "observed_at": "2026-10-06T09:55:59Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Durban",
+      "url": "https://www.ironman.com/races/im703-durban",
+      "race_date": "2027-06-06",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Durban"
+      ],
+      "country": [
+        "South Africa"
+      ],
+      "region": "africa-middle-east"
+    },
+    "source_url": "https://www.ironman.com/races/im703-durban",
+    "evidence": "June 6, 2027 ISUZU IRONMAN 70.3 Durban Durban, South Africa",
+    "observed_at": "2026-10-06T09:56:49Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Omaha",
+      "url": "https://www.ironman.com/races/im703-omaha",
+      "race_date": "2027-06-06",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Omaha"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-omaha",
+    "evidence": "June 6, 2027 IRONMAN 70.3 Omaha Omaha, NE, United States",
+    "observed_at": "2026-10-06T09:58:15Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Switzerland",
+      "url": "https://www.ironman.com/races/im703-switzerland",
+      "race_date": "2027-06-06",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Rapperswil-Jona"
+      ],
+      "country": [
+        "Switzerland"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-switzerland",
+    "evidence": "June 6, 2027 IRONMAN 70.3 Switzerland Rapperswil-Jona, Switzerland",
+    "observed_at": "2026-10-06T09:59:06Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Tours Metropole - Loire Valley",
+      "url": "https://www.ironman.com/races/im703-tours",
+      "race_date": "2027-06-06",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Tours"
+      ],
+      "country": [
+        "France"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-tours",
+    "evidence": "June 6, 2027 IRONMAN 70.3 Tours Metropole - Loire Valley Tours, France",
+    "observed_at": "2026-10-06T09:59:10Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Hamburg",
+      "url": "https://www.ironman.com/races/im-hamburg",
+      "race_date": "2027-06-06",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Hamburg"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im-hamburg",
+    "evidence": "June 6, 2027 IRONMAN Hamburg Hamburg, Germany",
+    "observed_at": "2026-10-06T09:54:50Z"
+  },
+  {
+    "data": {
+      "name": "Scenic Half Marathon Chanthaburi",
+      "url": "https://www.scenicmarathon.com/",
+      "race_date": "2027-06-06",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Chanthaburi"
+      ],
+      "country": [
+        "Thailand"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10340.html",
+    "evidence": "Scenic Half Marathon Chanthaburi Thailand | H,R | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 6 Scenic Half Marathon Chanthaburi Sun 6 June 2027",
+    "observed_at": "2026-10-06T09:59:40Z"
+  },
+  {
+    "data": {
+      "name": "Björn Borg Helsinki Half Marathon",
+      "url": "https://www.helsinkihalfmarathon.fi/",
+      "race_date": "2027-06-12",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Helsinki"
+      ],
+      "country": [
+        "Finland"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10145.html",
+    "evidence": "Forthcoming events Helsinki, Finland Please consult race website for route map. 12 Björn Borg Helsinki Half Marathon Sat 12 June 2027",
+    "observed_at": "2026-10-06T09:59:44Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Boulder",
+      "url": "https://www.ironman.com/races/im703-boulder",
+      "race_date": "2027-06-12",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Boulder"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-boulder",
+    "evidence": "June 12, 2027 IRONMAN 70.3 Boulder Boulder, CO, United States",
+    "observed_at": "2026-10-06T09:56:00Z"
+  },
+  {
+    "data": {
+      "name": "Trail 100 Andorra by UTMB",
+      "url": "https://andorra.utmb.world/",
+      "race_date": "2027-06-12",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 105,
+      "climb_m": 6800,
+      "city": [
+        "Ordino"
+      ],
+      "country": [
+        "Andorra"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://andorra.utmb.world/races/Ultra-105K",
+    "evidence": "Distance 105 KM Elevation Gain 6800 M+ Start Date Saturday 12th June 2027 Race Start Ordino - 06:00",
+    "observed_at": "2026-10-06T10:03:25Z"
+  },
+  {
+    "data": {
+      "name": "Trail of the Kings - Lake Toba by UTMB",
+      "url": "https://laketoba.utmb.world/",
+      "race_date": "2027-06-12",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 101.1,
+      "climb_m": 4205,
+      "city": [
+        "Pangururan"
+      ],
+      "country": [
+        "Indonesia"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://laketoba.utmb.world/races/calderacrown100K",
+    "evidence": "Distance 101.1 KM Elevation Gain 4205 M+ Start Date Saturday 12th June 2027 Race Start Waterfront City Pangururan - 03:00",
+    "observed_at": "2026-10-06T10:03:48Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Cairns",
+      "url": "https://www.ironman.com/races/im703-cairns",
+      "race_date": "2027-06-13",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Cairns"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im703-cairns",
+    "evidence": "June 13, 2027 Cairns Airport IRONMAN 70.3 Cairns Cairns, QLD, Australia",
+    "observed_at": "2026-10-06T09:56:07Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Davao Philippines",
+      "url": "https://www.ironman.com/races/im703-davao-philippines",
+      "race_date": "2027-06-13",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Davao City"
+      ],
+      "country": [
+        "Philippines"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im703-davao-philippines",
+    "evidence": "June 13, 2027 IRONMAN 70.3 Davao Philippines Davao City, Philippines",
+    "observed_at": "2026-10-06T09:56:43Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Eagleman",
+      "url": "https://www.ironman.com/races/im703-eagleman",
+      "race_date": "2027-06-13",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Cambridge"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-eagleman",
+    "evidence": "June 13, 2027 Cuisine Solutions IRONMAN 70.3 Eagleman Cambridge, MD, United States",
+    "observed_at": "2026-10-06T09:56:50Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Rockford - Illinois",
+      "url": "https://www.ironman.com/races/im703-rockford-illinois",
+      "race_date": "2027-06-13",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Rockford"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-rockford-illinois",
+    "evidence": "June 13, 2027 IRONMAN 70.3 Rockford - Illinois Rockford, IL, United States",
+    "observed_at": "2026-10-06T09:58:41Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Brazil",
+      "url": "https://www.ironman.com/races/im-brazil",
+      "race_date": "2027-06-13",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Florianópolis"
+      ],
+      "country": [
+        "Brazil"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im-brazil",
+    "evidence": "June 13, 2027 Nubank Ultravioleta IRONMAN Brazil SC, Brazil",
+    "observed_at": "2026-10-06T09:54:31Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Cairns Asia Pacific Championship",
+      "url": "https://www.ironman.com/races/im-cairns",
+      "race_date": "2027-06-13",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Cairns"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im-cairns",
+    "evidence": "June 13, 2027 Cairns Airport IRONMAN Cairns Asia Pacific Championship Cairns, QLD, Australia",
+    "observed_at": "2026-10-06T09:54:35Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Kaernten-Klagenfurt, Austria",
+      "url": "https://www.ironman.com/races/im-austria",
+      "race_date": "2027-06-13",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Klagenfurt"
+      ],
+      "country": [
+        "Austria"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im-austria",
+    "evidence": "June 13, 2027 IRONMAN Kaernten-Klagenfurt, Austria",
+    "observed_at": "2026-10-06T09:54:29Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Philippines Davao City",
+      "url": "https://www.ironman.com/races/im-philippines",
+      "race_date": "2027-06-13",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Davao City"
+      ],
+      "country": [
+        "Philippines"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im-philippines",
+    "evidence": "June 13, 2027 IRONMAN Philippines Davao City Davao City, Philippines",
+    "observed_at": "2026-10-06T09:55:07Z"
+  },
+  {
+    "data": {
+      "name": "Phnom Penh International Half Marathon",
+      "url": "https://www.cambodia-events.org/",
+      "race_date": "2027-06-13",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Phnom Penh"
+      ],
+      "country": [
+        "Cambodia"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10059.html",
+    "evidence": "Phnom Penh International Half Marathon Cambodia | H,R | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 13 Phnom Penh Int’l Half Marathon Sun 13 June 2027",
+    "observed_at": "2026-10-06T09:59:47Z"
+  },
+  {
+    "data": {
+      "name": "Zugspitz Ultra Trail by UTMB",
+      "url": "https://zugspitz.utmb.world/",
+      "race_date": "2027-06-17",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 167,
+      "climb_m": 8205,
+      "city": [
+        "Garmisch-Partenkirchen"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://zugspitz.utmb.world/races/zut100",
+    "evidence": "Distance 167 KM Elevation Gain 8205 M+ Start Date Thursday 17th June 2027 Race Start Garmisch-Partenkirchen - 20:00",
+    "observed_at": "2026-10-06T10:04:22Z"
+  },
+  {
+    "data": {
+      "name": "Trail du Saint-Jacques by UTMB",
+      "url": "https://saint-jacques.utmb.world/",
+      "race_date": "2027-06-18",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 140,
+      "climb_m": 6000,
+      "city": [
+        "Saugues"
+      ],
+      "country": [
+        "France"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://saint-jacques.utmb.world/races/100M",
+    "evidence": "Distance 140 KM Elevation Gain 6000 M+ Start Date Friday 18th June 2027 Race Start Saugues - 19:00",
+    "observed_at": "2026-10-06T10:04:06Z"
+  },
+  {
+    "data": {
+      "name": "Kaga Spa Trail Endurance 100 by UTMB",
+      "url": "https://kagaspa.utmb.world/",
+      "race_date": "2027-06-19",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 97.4,
+      "climb_m": 5122,
+      "city": [
+        "Kaga"
+      ],
+      "country": [
+        "Japan"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://kagaspa.utmb.world/races/kagaspa100",
+    "evidence": "Distance 97.4 KM Elevation Gain 5122 M+ Start Date Saturday 19th June 2027 Race Start Yukemuri Kenkou Village, Yamanaka Onsen/山中温泉ゆけむり健康村 - 18:30",
+    "observed_at": "2026-10-06T10:03:43Z"
+  },
+  {
+    "data": {
+      "name": "Challenge Gdańsk",
+      "url": "https://challengefamily.com/races/challenge-gdansk/",
+      "race_date": "2027-06-20",
+      "sport": "triathlon",
+      "series": "challenge",
+      "distance_km": 100,
+      "city": [
+        "Gdańsk"
+      ],
+      "country": [
+        "Poland"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://challengefamily.com/races/challenge-gdansk/",
+    "evidence": "WHEN 20 June 2027 WHERE Gdańsk, Poland",
+    "observed_at": "2026-10-06T09:57:48Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Mont-Tremblant",
+      "url": "https://www.ironman.com/races/im703-mont-tremblant",
+      "race_date": "2027-06-20",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Mont-Tremblant"
+      ],
+      "country": [
+        "Canada"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-mont-tremblant",
+    "evidence": "June 20, 2027 IRONMAN 70.3 Mont-Tremblant Mont-Tremblant, QC, Canada",
+    "observed_at": "2026-10-06T09:57:47Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Westfriesland",
+      "url": "https://www.ironman.com/races/im703-westfriesland",
+      "race_date": "2027-06-20",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Hoorn"
+      ],
+      "country": [
+        "Netherlands"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-westfriesland",
+    "evidence": "June 20, 2027 IRONMAN 70.3 Westfriesland Hoorn, Netherlands",
+    "observed_at": "2026-10-06T09:59:45Z"
+  },
+  {
+    "data": {
+      "name": "Torrencial Chile by UTMB",
+      "url": "https://torrencial.utmb.world/",
+      "race_date": "2027-06-24",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 101,
+      "climb_m": 4100,
+      "city": [
+        "Valdivia"
+      ],
+      "country": [
+        "Chile"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://torrencial.utmb.world/races/PILOLCURA100K",
+    "evidence": "Distance 101 KM Elevation Gain 4100 M+ Start Date Thursday 24th June 2027 Race Start Punucapa - 22:00",
+    "observed_at": "2026-10-06T10:04:12Z"
+  },
+  {
+    "data": {
+      "name": "La Sportiva Lavaredo Ultra Trail by UTMB",
+      "url": "https://lavaredo.utmb.world/",
+      "race_date": "2027-06-25",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 120,
+      "climb_m": 5800,
+      "city": [
+        "Cortina d'Ampezzo"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://lavaredo.utmb.world/races/lavaredo120k",
+    "evidence": "Distance 120 KM Elevation Gain 5800 M+ Start Date Friday 25th June 2027 Race Start Cortina d'Ampezzo - 23:00",
+    "observed_at": "2026-10-06T10:03:49Z"
+  },
+  {
+    "data": {
+      "name": "Ultra Trail Whistler by UTMB",
+      "url": "https://whistler.utmb.world/",
+      "race_date": "2027-06-26",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 100,
+      "climb_m": 5100,
+      "city": [
+        "Whistler"
+      ],
+      "country": [
+        "Canada"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://whistler.utmb.world/races/100K",
+    "evidence": "Distance 100 KM Elevation Gain 5100 M+ Start Date Saturday 26th June 2027 Race Start Creekside Plaza at Whistler Blackcomb - 05:00",
+    "observed_at": "2026-10-06T10:04:19Z"
+  },
+  {
+    "data": {
+      "name": "Western States 100-Mile Endurance Run",
+      "url": "https://www.wser.org/",
+      "race_date": "2027-06-26",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 161.3,
+      "city": [
+        "Olympic Valley",
+        "Auburn"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas",
+      "registration_closes": "2026-11-21"
+    },
+    "source_url": "https://www.wser.org/",
+    "evidence": "2027 Lottery Application November 1-21 2027 Lottery Drawing December 5 Race Date: June 26-27, 2027 The Western States ® 100-Mile Endurance Run is the world’s oldest 100 mile trail race.",
+    "observed_at": "2026-10-06T10:06:58Z"
+  },
+  {
+    "data": {
+      "name": "Challenge Kaiserwinkl-Walchsee",
+      "url": "https://challengefamily.com/races/challenge-kaiserwinkl-walchsee/",
+      "race_date": "2027-06-27",
+      "sport": "triathlon",
+      "series": "challenge",
+      "distance_km": 100,
+      "city": [
+        "Walchsee"
+      ],
+      "country": [
+        "Austria"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://challengefamily.com/races/challenge-kaiserwinkl-walchsee/",
+    "evidence": "WHEN 27 June 2027 WHERE Walchsee, Austria",
+    "observed_at": "2026-10-06T09:57:52Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Coeur d'Alene",
+      "url": "https://www.ironman.com/races/im703-coeur-dalene",
+      "race_date": "2027-06-27",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Coeur d'Alene"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-coeur-dalene",
+    "evidence": "June 27, 2027 IRONMAN 70.3 Coeur d'Alene Coeur d'Alene, ID, United States",
+    "observed_at": "2026-10-06T09:56:26Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Elsinore",
+      "url": "https://www.ironman.com/races/im703-elsinore",
+      "race_date": "2027-06-27",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Elsinore"
+      ],
+      "country": [
+        "Denmark"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-elsinore",
+    "evidence": "June 27, 2027 IRONMAN 70.3 Elsinore Elsinore, Denmark",
+    "observed_at": "2026-10-06T09:56:56Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Frankfurt European Championship",
+      "url": "https://www.ironman.com/races/im-frankfurt",
+      "race_date": "2027-06-27",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Frankfurt"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im-frankfurt",
+    "evidence": "June 27, 2027 Mainova IRONMAN Frankfurt European Championship Frankfurt, Germany",
+    "observed_at": "2026-10-06T09:54:47Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Les Sables d'Olonne-Vendee",
+      "url": "https://www.ironman.com/races/im-les-sables-dolonne",
+      "race_date": "2027-06-27",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Les Sables d'Olonne"
+      ],
+      "country": [
+        "France"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im-les-sables-dolonne",
+    "evidence": "June 27, 2027 IRONMAN Les Sables d'Olonne-Vendee Les Sables d'Olonne, France",
+    "observed_at": "2026-10-06T09:54:58Z"
+  },
+  {
+    "data": {
+      "name": "DATEV Challenge Roth",
+      "url": "https://challengefamily.com/races/challenge-roth/",
+      "race_date": "2027-07-04",
+      "sport": "triathlon",
+      "series": "challenge",
+      "distance_km": 226,
+      "city": [
+        "Roth"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://challengefamily.com/races/challenge-roth/",
+    "evidence": "WHEN 4 July 2027 WHERE Roth, Germany",
+    "observed_at": "2026-10-06T09:57:57Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Switzerland Thun",
+      "url": "https://www.ironman.com/races/im-switzerland",
+      "race_date": "2027-07-04",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Thun"
+      ],
+      "country": [
+        "Switzerland"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im-switzerland",
+    "evidence": "July 4, 2027 IRONMAN Switzerland Thun Thun, Switzerland",
+    "observed_at": "2026-10-06T09:55:18Z"
+  },
+  {
+    "data": {
+      "name": "Restonica Trail by UTMB",
+      "url": "https://restonica.utmb.world/",
+      "race_date": "2027-07-08",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 110,
+      "climb_m": 7200,
+      "city": [
+        "Corte"
+      ],
+      "country": [
+        "France"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://restonica.utmb.world/races/UTC100M",
+    "evidence": "Distance 110 KM Elevation Gain 7200 M+ Start Date Thursday 8th July 2027 Race Start Cours Paoli, Corte, Corse - 23:00",
+    "observed_at": "2026-10-06T10:04:03Z"
+  },
+  {
+    "data": {
+      "name": "HOKA Val d'Aran by UTMB",
+      "url": "https://valdaran.utmb.world/",
+      "race_date": "2027-07-09",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 163,
+      "climb_m": 10000,
+      "city": [
+        "Vielha"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://valdaran.utmb.world/races/VDA",
+    "evidence": "Distance 163 KM Elevation Gain 10000 M+ Start Date Friday 9th July 2027 Race Start VIELHA - 16:00",
+    "observed_at": "2026-10-06T10:04:15Z"
+  },
+  {
+    "data": {
+      "name": "Trail Verbier St-Bernard by UTMB",
+      "url": "https://verbier.utmb.world/",
+      "race_date": "2027-07-09",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 140,
+      "climb_m": 9300,
+      "city": [
+        "Verbier"
+      ],
+      "country": [
+        "Switzerland"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://verbier.utmb.world/races/X-Alpine",
+    "evidence": "Distance 140 KM Elevation Gain 9300 M+ Start Date Friday 9th July 2027 Race Start Verbier - 22:00",
+    "observed_at": "2026-10-06T10:04:17Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Muncie",
+      "url": "https://www.ironman.com/races/im703-muncie",
+      "race_date": "2027-07-10",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Muncie"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-muncie",
+    "evidence": "July 10, 2027 IRONMAN 70.3 Muncie Muncie, IN, United States",
+    "observed_at": "2026-10-06T09:57:55Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Jonkoping",
+      "url": "https://www.ironman.com/races/im703-jonkoping",
+      "race_date": "2027-07-11",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Jönköping"
+      ],
+      "country": [
+        "Sweden"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-jonkoping",
+    "evidence": "July 11, 2027 IRONMAN 70.3 Jonkoping Jonkoping, Sweden",
+    "observed_at": "2026-10-06T09:57:15Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Luxembourg",
+      "url": "https://www.ironman.com/races/im703-luxembourg",
+      "race_date": "2027-07-11",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Remich"
+      ],
+      "country": [
+        "Luxembourg"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-luxembourg",
+    "evidence": "July 11, 2027 IRONMAN 70.3 Luxembourg Moselle, Luxembourg",
+    "observed_at": "2026-10-06T09:57:37Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Musselman",
+      "url": "https://www.ironman.com/races/im703-musselman",
+      "race_date": "2027-07-11",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Geneva"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-musselman",
+    "evidence": "July 11, 2027 IRONMAN 70.3 Musselman Geneva, NY, United States",
+    "observed_at": "2026-10-06T09:58:01Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Ruidoso New Mexico",
+      "url": "https://www.ironman.com/races/im703-ruidoso-new-mexico",
+      "race_date": "2027-07-11",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Ruidoso"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-ruidoso-new-mexico",
+    "evidence": "July 11, 2027 IRONMAN 70.3 Ruidoso New Mexico Ruidoso, NM, United States",
+    "observed_at": "2026-10-06T09:58:42Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Swansea",
+      "url": "https://www.ironman.com/races/im703-swansea",
+      "race_date": "2027-07-11",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Swansea"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-swansea",
+    "evidence": "July 11, 2027 IRONMAN 70.3 Swansea Swansea Bay, United Kingdom",
+    "observed_at": "2026-10-06T09:59:05Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Vitoria-Gasteiz",
+      "url": "https://www.ironman.com/races/im703-vitoria",
+      "race_date": "2027-07-11",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Vitoria-Gasteiz"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-vitoria",
+    "evidence": "July 11, 2027 IRONMAN 70.3 Vitoria-Gasteiz Vitoria-Gasteiz, Spain",
+    "observed_at": "2026-10-06T09:59:30Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Vitoria-Gasteiz",
+      "url": "https://www.ironman.com/races/im-vitoria",
+      "race_date": "2027-07-11",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Vitoria-Gasteiz"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im-vitoria",
+    "evidence": "July 11, 2027 IRONMAN Vitoria-Gasteiz Vitoria-Gasteiz, Spain",
+    "observed_at": "2026-10-06T09:55:29Z"
+  },
+  {
+    "data": {
+      "name": "Eiger Ultra Trail by UTMB",
+      "url": "https://eiger.utmb.world/",
+      "race_date": "2027-07-14",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 261,
+      "climb_m": 18000,
+      "city": [
+        "Grindelwald"
+      ],
+      "country": [
+        "Switzerland"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://eiger.utmb.world/races/E250",
+    "evidence": "Distance 261 KM Elevation Gain 18000 M+ Start Date Wednesday 14th July 2027 Race Start Grindelwald - 08:00",
+    "observed_at": "2026-10-06T10:03:35Z"
+  },
+  {
+    "data": {
+      "name": "Monterosa Walserwaeg by UTMB",
+      "url": "https://mrww.utmb.world/",
+      "race_date": "2027-07-16",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 120,
+      "climb_m": 8200,
+      "city": [
+        "Aosta"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://mrww.utmb.world/races/SDV",
+    "evidence": "Distance 120 KM Elevation Gain 8200 M+ Start Date Friday 16th July 2027 Race Start Aosta - 18:30",
+    "observed_at": "2026-10-06T10:03:53Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Muskoka",
+      "url": "https://www.ironman.com/races/im703-muskoka",
+      "race_date": "2027-07-18",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Huntsville"
+      ],
+      "country": [
+        "Canada"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-muskoka",
+    "evidence": "July 18, 2027 IRONMAN 70.3 Muskoka Huntsville, ON, Canada",
+    "observed_at": "2026-10-06T09:57:59Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Ohio",
+      "url": "https://www.ironman.com/races/im703-ohio",
+      "race_date": "2027-07-18",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Sandusky"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-ohio",
+    "evidence": "July 18, 2027 IRONMAN 70.3 Ohio Sandusky, OH, United States",
+    "observed_at": "2026-10-06T09:58:14Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Oregon",
+      "url": "https://www.ironman.com/races/im703-oregon",
+      "race_date": "2027-07-18",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Salem"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-oregon",
+    "evidence": "July 18, 2027 Salomon IRONMAN 70.3 Oregon Presented by ROC Orthopedics Salem, OR, United States",
+    "observed_at": "2026-10-06T09:58:18Z"
+  },
+  {
+    "data": {
+      "name": "Bucovina Ultra Rocks by UTMB",
+      "url": "https://bucovina.utmb.world/",
+      "race_date": "2027-07-23",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 114,
+      "climb_m": 7000,
+      "city": [
+        "Câmpulung Moldovenesc"
+      ],
+      "country": [
+        "Romania"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://bucovina.utmb.world/races/UR100M",
+    "evidence": "Distance 114 KM Elevation Gain 7000 M+ Start Date Friday 23rd July 2027 Race Start Câmpulung Moldovenesc - 23:00",
+    "observed_at": "2026-10-06T10:03:29Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Boise",
+      "url": "https://www.ironman.com/races/im703-boise",
+      "race_date": "2027-07-24",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Boise"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-boise",
+    "evidence": "July 24, 2027 IRONMAN 70.3 Boise Boise, ID, United States",
+    "observed_at": "2026-10-06T09:55:57Z"
+  },
+  {
+    "data": {
+      "name": "Speedgoat Mountain Races by UTMB",
+      "url": "https://speedgoat.utmb.world/",
+      "race_date": "2027-07-24",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 50,
+      "climb_m": 3450,
+      "city": [
+        "Snowbird"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://speedgoat.utmb.world/races/50K",
+    "evidence": "Distance 50 KM Elevation Gain 3450 M+ Start Date Saturday 24th July 2027 Race Start Snowbird Center Plaza Area - 06:30",
+    "observed_at": "2026-10-06T10:04:09Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Desaru Coast",
+      "url": "https://www.ironman.com/races/im703-desaru-coast",
+      "race_date": "2027-07-25",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Desaru"
+      ],
+      "country": [
+        "Malaysia"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im703-desaru-coast",
+    "evidence": "July 25, 2027 IRONMAN 70.3 Desaru Coast Desaru, Malaysia",
+    "observed_at": "2026-10-06T09:56:44Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Maine",
+      "url": "https://www.ironman.com/races/im703-maine",
+      "race_date": "2027-07-25",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Augusta"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-maine",
+    "evidence": "July 25, 2027 IRONMAN 70.3 Maine Augusta, ME, United States",
+    "observed_at": "2026-10-06T09:57:38Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Lake Placid",
+      "url": "https://www.ironman.com/races/im-lake-placid",
+      "race_date": "2027-07-25",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Lake Placid"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im-lake-placid",
+    "evidence": "July 25, 2027 Athletic Brewing IRONMAN Lake Placid Presented by Salomon Lake Placid, NY, United States",
+    "observed_at": "2026-10-06T09:54:54Z"
+  },
+  {
+    "data": {
+      "name": "Media Maratón de Bogotá",
+      "url": "https://www.mediamaratonbogota.com/",
+      "race_date": "2027-07-25",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Bogotá"
+      ],
+      "country": [
+        "Colombia"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/774.html",
+    "evidence": "media maratón de Bogotá Colombia | H | Full member of AIMS Race video Race information Forthcoming events Please consult race website for route map. 25 media maratón de Bogotá Sun 25 July 2027",
+    "observed_at": "2026-10-06T09:59:50Z"
+  },
+  {
+    "data": {
+      "name": "SAIL Challenge Québec",
+      "url": "https://challengefamily.com/races/challenge-quebec/",
+      "race_date": "2027-07-25",
+      "sport": "triathlon",
+      "series": "challenge",
+      "distance_km": 113,
+      "city": [
+        "Québec City"
+      ],
+      "country": [
+        "Canada"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://challengefamily.com/races/challenge-quebec/",
+    "evidence": "WHEN 25 July 2027 WHERE Québec, Canada",
+    "observed_at": "2026-10-06T09:57:56Z"
+  },
+  {
+    "data": {
+      "name": "Quito Trail by UTMB",
+      "url": "https://quito.utmb.world/",
+      "race_date": "2027-07-31",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 76,
+      "climb_m": 4400,
+      "city": [
+        "Mindo"
+      ],
+      "country": [
+        "Ecuador"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://quito.utmb.world/races/80k-Oso",
+    "evidence": "Distance 76 KM Elevation Gain 4400 M+ Start Date Saturday 31st July 2027 Race Start Mindo - 01:30",
+    "observed_at": "2026-10-06T10:04:02Z"
+  },
+  {
+    "data": {
+      "name": "KAT100 by UTMB",
+      "url": "https://kat.utmb.world/",
+      "race_date": "2027-08-05",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 169,
+      "climb_m": 9000,
+      "city": [
+        "Fieberbrunn"
+      ],
+      "country": [
+        "Austria"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://kat.utmb.world/races/100-miles",
+    "evidence": "Distance 169 KM Elevation Gain 9000 M+ Start Date Thursday 5th August 2027 Race Start Fieberbrunn - 18:00",
+    "observed_at": "2026-10-06T10:03:44Z"
+  },
+  {
+    "data": {
+      "name": "Gauja Trail by UTMB",
+      "url": "https://gauja.utmb.world/",
+      "race_date": "2027-08-07",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 91,
+      "climb_m": 2200,
+      "city": [
+        "Sigulda"
+      ],
+      "country": [
+        "Latvia"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://gauja.utmb.world/races/100K",
+    "evidence": "Distance 91 KM Elevation Gain 2200 M+ Start Date Saturday 7th August 2027 Race Start Sigulda - 07:30",
+    "observed_at": "2026-10-06T10:03:37Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Tallinn",
+      "url": "https://www.ironman.com/races/im-tallinn",
+      "race_date": "2027-08-07",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Tallinn"
+      ],
+      "country": [
+        "Estonia"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im-tallinn",
+    "evidence": "August 7, 2027 IRONMAN Tallinn Tallinn, Estonia",
+    "observed_at": "2026-10-06T09:55:19Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Leipzig",
+      "url": "https://www.ironman.com/races/im703-leipzig",
+      "race_date": "2027-08-08",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Leipzig"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-leipzig",
+    "evidence": "August 8, 2027 IRONMAN 70.3 Leipzig Leipzig, Germany",
+    "observed_at": "2026-10-06T09:57:27Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Rio de Janeiro",
+      "url": "https://www.ironman.com/races/im703-rio-de-janeiro",
+      "race_date": "2027-08-08",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Rio de Janeiro"
+      ],
+      "country": [
+        "Brazil"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-rio-de-janeiro",
+    "evidence": "August 8, 2027 IRONMAN 70.3 Rio de Janeiro Rio de Janeiro, RJ, Brazil",
+    "observed_at": "2026-10-06T09:58:40Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Tallinn",
+      "url": "https://www.ironman.com/races/im703-tallinn",
+      "race_date": "2027-08-08",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Tallinn"
+      ],
+      "country": [
+        "Estonia"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-tallinn",
+    "evidence": "August 8, 2027 IRONMAN 70.3 Tallinn Tallinn, Estonia",
+    "observed_at": "2026-10-06T09:59:07Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Canada-Ottawa",
+      "url": "https://www.ironman.com/races/im-canada-ottawa",
+      "race_date": "2027-08-08",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Ottawa"
+      ],
+      "country": [
+        "Canada"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im-canada-ottawa",
+    "evidence": "August 8, 2027 IRONMAN Canada-Ottawa Ottawa, ON, Canada",
+    "observed_at": "2026-10-06T09:54:38Z"
+  },
+  {
+    "data": {
+      "name": "Dadi Prakashmani Abu Half Marathon",
+      "url": "https://www.abumarathon.com/",
+      "race_date": "2027-08-10",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Mount Abu"
+      ],
+      "country": [
+        "India"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/10306.html",
+    "evidence": "Dadi Prakashmani Abu Half Marathon India | H | Full member of AIMS Race information Forthcoming events Mount Abu, Rajasthan, India Please consult race website for route map. 10 Dadi Prakashmani Abu Half Marathon Tue 10 August 2027",
+    "observed_at": "2026-10-06T09:59:52Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Leeds",
+      "url": "https://www.ironman.com/races/im-leeds",
+      "race_date": "2027-08-15",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Leeds"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im-leeds",
+    "evidence": "August 15, 2027 IRONMAN Leeds Leeds, United Kingdom",
+    "observed_at": "2026-10-06T09:54:57Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Kalmar-Sweden",
+      "url": "https://www.ironman.com/races/im-kalmar",
+      "race_date": "2027-08-21",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Kalmar"
+      ],
+      "country": [
+        "Sweden"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im-kalmar",
+    "evidence": "August 21, 2027 IRONMAN Kalmar-Sweden Kalmar, Sweden",
+    "observed_at": "2026-10-06T09:54:52Z"
+  },
+  {
+    "data": {
+      "name": "adidas Stockholm Half Marathon",
+      "url": "https://stockholmhalfmarathon.se/",
+      "race_date": "2027-08-21",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Stockholm"
+      ],
+      "country": [
+        "Sweden"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/808.html",
+    "evidence": "adidas Stockholm Half Marathon adidas Stockholm Halvmarathon | Sweden | H | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 21 adidas Stockholm Half Marathon Sat 21 August 2027",
+    "observed_at": "2026-10-06T09:59:55Z"
+  },
+  {
+    "data": {
+      "name": "Challenge Samarkand",
+      "url": "https://challengefamily.com/races/challenge-samarkand/",
+      "race_date": "2027-08-22",
+      "sport": "triathlon",
+      "series": "challenge",
+      "city": [
+        "Samarkand"
+      ],
+      "country": [
+        "Uzbekistan"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://challengefamily.com/races/challenge-samarkand/",
+    "evidence": "WHEN 22 August 2027 WHERE Samarkand, Uzbekistan",
+    "observed_at": "2026-10-06T09:58:00Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Colombo",
+      "url": "https://www.ironman.com/races/im703-colombo",
+      "race_date": "2027-08-22",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Colombo"
+      ],
+      "country": [
+        "Sri Lanka"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im703-colombo",
+    "evidence": "August 22, 2027 IRONMAN 70.3 Colombo Colombo, Sri Lanka",
+    "observed_at": "2026-10-06T09:56:31Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Vichy",
+      "url": "https://www.ironman.com/races/im703-vichy",
+      "race_date": "2027-08-22",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Vichy"
+      ],
+      "country": [
+        "France"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-vichy",
+    "evidence": "August 22, 2027 IRONMAN 70.3 Vichy Vichy, France",
+    "observed_at": "2026-10-06T09:59:23Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Copenhagen",
+      "url": "https://www.ironman.com/races/im-copenhagen",
+      "race_date": "2027-08-22",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Copenhagen"
+      ],
+      "country": [
+        "Denmark"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im-copenhagen",
+    "evidence": "August 22, 2027 IRONMAN Copenhagen Copenhagen, Denmark",
+    "observed_at": "2026-10-06T09:54:41Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Vichy",
+      "url": "https://www.ironman.com/races/im-vichy",
+      "race_date": "2027-08-22",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Vichy"
+      ],
+      "country": [
+        "France"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im-vichy",
+    "evidence": "August 22, 2027 IRONMAN Vichy Vichy, France",
+    "observed_at": "2026-10-06T09:55:27Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 World Championship",
+      "url": "https://www.ironman.com/races/im703-world-championship-2027",
+      "race_date": "2027-08-28",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Chattanooga"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-world-championship-2027",
+    "evidence": "August 28–29, 2027 Precision Fuel & Hydration IRONMAN 70.3 World Championship Chattanooga, TN, United States",
+    "observed_at": "2026-10-06T09:59:50Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Duisburg",
+      "url": "https://www.ironman.com/races/im703-duisburg",
+      "race_date": "2027-08-29",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Duisburg"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-duisburg",
+    "evidence": "August 29, 2027 IRONMAN 70.3 Duisburg Duisburg, Germany",
+    "observed_at": "2026-10-06T09:56:48Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Zell am See-Kaprun",
+      "url": "https://www.ironman.com/races/im703-zell-am-see",
+      "race_date": "2027-08-29",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Zell am See"
+      ],
+      "country": [
+        "Austria"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-zell-am-see",
+    "evidence": "August 29, 2027 IRONMAN 70.3 Zell am See-Kaprun Zell am See, Austria",
+    "observed_at": "2026-10-06T09:59:55Z"
+  },
+  {
+    "data": {
+      "name": "Malaysia Ultra-Trail by UTMB",
+      "url": "https://malaysia.utmb.world/",
+      "race_date": "2027-09-04",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 97.7,
+      "climb_m": 4802,
+      "city": [
+        "Taiping"
+      ],
+      "country": [
+        "Malaysia"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://malaysia.utmb.world/races/MY100",
+    "evidence": "Distance 97.7 KM Elevation Gain 4802 M+ Start Date Saturday 4th September 2027 Race Start Jalan Kota, Taiping - 03:00",
+    "observed_at": "2026-10-06T10:03:50Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Belgium Knokke-Heist",
+      "url": "https://www.ironman.com/races/im-knokke-heist",
+      "race_date": "2027-09-05",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Knokke-Heist"
+      ],
+      "country": [
+        "Belgium"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im-knokke-heist",
+    "evidence": "September 5, 2027 IRONMAN Belgium Knokke-Heist Knokke-Heist, Belgium",
+    "observed_at": "2026-10-06T09:54:53Z"
+  },
+  {
+    "data": {
+      "name": "Wizz Air Budapest Half Marathon",
+      "url": "https://halfmarathon.runinbudapest.com/",
+      "race_date": "2027-09-05",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Budapest"
+      ],
+      "country": [
+        "Hungary"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/802.html",
+    "evidence": "Wizz Air Budapest Half Marathon Wizz Air Budapest Félmaraton | Hungary | H | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 5 42nd Wizz Air Budapest Half Marathon Sun 5 September 2027",
+    "observed_at": "2026-10-06T09:59:58Z"
+  },
+  {
+    "data": {
+      "name": "Challenge Almere-Amsterdam",
+      "url": "https://challengefamily.com/races/challenge-almere-amsterdam/",
+      "race_date": "2027-09-11",
+      "sport": "triathlon",
+      "series": "challenge",
+      "distance_km": 226,
+      "city": [
+        "Almere"
+      ],
+      "country": [
+        "Netherlands"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://challengefamily.com/races/challenge-almere-amsterdam/",
+    "evidence": "WHEN 11 September 2027 WHERE Almere, The Netherlands",
+    "observed_at": "2026-10-06T09:57:36Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Wisconsin",
+      "url": "https://www.ironman.com/races/im703-wisconsin",
+      "race_date": "2027-09-11",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Madison"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-wisconsin",
+    "evidence": "September 11, 2027 IRONMAN 70.3 Wisconsin Madison, WI, United States",
+    "observed_at": "2026-10-06T09:59:47Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Belgrade",
+      "url": "https://www.ironman.com/races/im703-belgrade",
+      "race_date": "2027-09-12",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Belgrade"
+      ],
+      "country": [
+        "Serbia"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-belgrade",
+    "evidence": "September 12, 2027 IRONMAN 70.3 Belgrade Belgrade, Serbia",
+    "observed_at": "2026-10-06T09:55:56Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Erkner",
+      "url": "https://www.ironman.com/races/im703-erkner",
+      "race_date": "2027-09-12",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Erkner"
+      ],
+      "country": [
+        "Germany"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-erkner",
+    "evidence": "September 12, 2027 IRONMAN 70.3 Erkner Erkner, Germany",
+    "observed_at": "2026-10-06T09:57:00Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Nice",
+      "url": "https://www.ironman.com/races/im703-nice",
+      "race_date": "2027-09-12",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Nice"
+      ],
+      "country": [
+        "France"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-nice",
+    "evidence": "September 12, 2027 IRONMAN 70.3 Nice Nice, France",
+    "observed_at": "2026-10-06T09:58:08Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Santa Cruz",
+      "url": "https://www.ironman.com/races/im703-santa-cruz",
+      "race_date": "2027-09-12",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Santa Cruz"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-santa-cruz",
+    "evidence": "September 12, 2027 Sandstone IRONMAN 70.3 Santa Cruz Santa Cruz, CA, United States",
+    "observed_at": "2026-10-06T09:58:56Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Sunshine Coast",
+      "url": "https://www.ironman.com/races/im703-sunshine-coast",
+      "race_date": "2027-09-12",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Mooloolaba"
+      ],
+      "country": [
+        "Australia"
+      ],
+      "region": "asia-pacific"
+    },
+    "source_url": "https://www.ironman.com/races/im703-sunshine-coast",
+    "evidence": "September 12, 2027 IRONMAN 70.3 Sunshine Coast Mooloolaba, QLD, Australia",
+    "observed_at": "2026-10-06T09:59:03Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Weymouth",
+      "url": "https://www.ironman.com/races/im703-weymouth",
+      "race_date": "2027-09-12",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Weymouth"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-weymouth",
+    "evidence": "September 12, 2027 IRONMAN 70.3 Weymouth Weymouth, United Kingdom",
+    "observed_at": "2026-10-06T09:59:46Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN France",
+      "url": "https://www.ironman.com/races/im-france",
+      "race_date": "2027-09-12",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Nice"
+      ],
+      "country": [
+        "France"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im-france",
+    "evidence": "September 12, 2027 IRONMAN France Nice, France",
+    "observed_at": "2026-10-06T09:54:46Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Wisconsin",
+      "url": "https://www.ironman.com/races/im-wisconsin",
+      "race_date": "2027-09-12",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Madison"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im-wisconsin",
+    "evidence": "September 12, 2027 UKG IRONMAN Wisconsin Madison, WI, United States",
+    "observed_at": "2026-10-06T09:55:33Z"
+  },
+  {
+    "data": {
+      "name": "SAIL Challenge Montréal",
+      "url": "https://challengefamily.com/races/sail-challenge-esprit-montreal/",
+      "race_date": "2027-09-12",
+      "sport": "triathlon",
+      "series": "challenge",
+      "distance_km": 113,
+      "city": [
+        "Montréal"
+      ],
+      "country": [
+        "Canada"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://challengefamily.com/races/sail-challenge-esprit-montreal/",
+    "evidence": "WHEN 12 September 2027 WHERE Montréal, Canada",
+    "observed_at": "2026-10-06T09:58:16Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Italy Emilia Romagna",
+      "url": "https://www.ironman.com/races/im-emilia-romagna",
+      "race_date": "2027-09-18",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Cervia"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im-emilia-romagna",
+    "evidence": "September 18, 2027 IRONMAN Italy Emilia Romagna Cervia, Italy",
+    "observed_at": "2026-10-06T09:54:44Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Maryland",
+      "url": "https://www.ironman.com/races/im-maryland",
+      "race_date": "2027-09-18",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Cambridge"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im-maryland",
+    "evidence": "September 18, 2027 IRONMAN Maryland Cambridge, MD, United States",
+    "observed_at": "2026-10-06T09:55:00Z"
+  },
+  {
+    "data": {
+      "name": "Marbella T100 Triathlon",
+      "url": "https://t100triathlon.com/marbella/participate/",
+      "race_date": "2027-09-18",
+      "sport": "triathlon",
+      "series": "t100",
+      "distance_km": 100,
+      "city": [
+        "Marbella"
+      ],
+      "country": [
+        "Spain"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://t100triathlon.com/marbella/pro/",
+    "evidence": "Marbella T100 Triathlon Pro Race This Marbella T100 Triathlon pro race will pit the world’s best against one another over the stunning Marbella mountains and seafront. 18 September 2027 | 12:00 CEST",
+    "observed_at": "2026-10-06T10:08:42Z"
+  },
+  {
+    "data": {
+      "name": "Snowbasin by UTMB",
+      "url": "https://snowbasin.utmb.world/",
+      "race_date": "2027-09-18",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 59,
+      "climb_m": 1800,
+      "city": [
+        "Snowbasin"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://snowbasin.utmb.world/races/58K",
+    "evidence": "Distance 59 KM Elevation Gain 1800 M+ Start Date Saturday 18th September 2027 Race Start Snowbasin Resort - 07:00",
+    "observed_at": "2026-10-06T10:04:08Z"
+  },
+  {
+    "data": {
+      "name": "Copenhagen Half Marathon",
+      "url": "https://cphhalf.dk/en/",
+      "race_date": "2027-09-19",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Copenhagen"
+      ],
+      "country": [
+        "Denmark"
+      ],
+      "region": "europe",
+      "field_size": 45000
+    },
+    "source_url": "https://cphhalf.dk/en/",
+    "evidence": "Welcome to the Copenhagen Half Marathon. On Sunday, 19 September 2027, at 9:30, we do it all again. 45,000 runners. 21.0975 km. Copenhagen.",
+    "observed_at": "2026-10-06T10:15:42Z"
+  },
+  {
+    "data": {
+      "name": "Hyundai Porto Half Marathon",
+      "url": "https://www.meiamaratonadoporto.com/",
+      "race_date": "2027-09-19",
+      "sport": "half-marathon",
+      "series": "aims",
+      "distance_km": 21.1,
+      "city": [
+        "Porto"
+      ],
+      "country": [
+        "Portugal"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.aims-worldrunning.org/races/810.html",
+    "evidence": "Hyundai Porto Half Marathon Hyundai Meia Maratona do Porto | Portugal | H | Full member of AIMS Race information Forthcoming events Please consult race website for route map. 19 Porto Half Marathon Sun 19 September 2027",
+    "observed_at": "2026-10-06T10:00:09Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Emilia Romagna",
+      "url": "https://www.ironman.com/races/im703-emilia-romagna",
+      "race_date": "2027-09-19",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Cervia"
+      ],
+      "country": [
+        "Italy"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-emilia-romagna",
+    "evidence": "September 19, 2027 IRONMAN 70.3 Emilia Romagna Cervia, Italy",
+    "observed_at": "2026-10-06T09:56:57Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 São Paulo",
+      "url": "https://www.ironman.com/races/im703-sao-paulo",
+      "race_date": "2027-09-19",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "São Paulo"
+      ],
+      "country": [
+        "Brazil"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-sao-paulo",
+    "evidence": "September 19, 2027 IRONMAN 70.3 São Paulo SP, Brazil",
+    "observed_at": "2026-10-06T09:58:57Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Wales",
+      "url": "https://www.ironman.com/races/im-wales",
+      "race_date": "2027-09-19",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Tenby"
+      ],
+      "country": [
+        "United Kingdom"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im-wales",
+    "evidence": "September 19, 2027 IRONMAN Wales Pembrokeshire, United Kingdom",
+    "observed_at": "2026-10-06T09:55:30Z"
+  },
+  {
+    "data": {
+      "name": "Grindstone Running Festival by UTMB",
+      "url": "https://grindstone.utmb.world/",
+      "race_date": "2027-09-24",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 167.4,
+      "climb_m": 6400,
+      "city": [
+        "Natural Chimneys"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://grindstone.utmb.world/races/100M",
+    "evidence": "Distance 167.4 KM Elevation Gain 6400 M+ Start Date Friday 24th September 2027 Race Start Natural Chimneys Park - 18:00",
+    "observed_at": "2026-10-06T10:03:38Z"
+  },
+  {
+    "data": {
+      "name": "Paraty Brazil by UTMB",
+      "url": "https://paraty.utmb.world/",
+      "race_date": "2027-09-24",
+      "sport": "trail",
+      "series": "utmb",
+      "distance_km": 101,
+      "climb_m": 4850,
+      "city": [
+        "Paraty"
+      ],
+      "country": [
+        "Brazil"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://paraty.utmb.world/races/ptr108",
+    "evidence": "Distance 101 KM Elevation Gain 4850 M+ Start Date Friday 24th September 2027 Race Start Paraty - Centro Histórico - 19:00",
+    "observed_at": "2026-10-06T10:03:58Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Cozumel",
+      "url": "https://www.ironman.com/races/im703-cozumel",
+      "race_date": "2027-09-26",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Cozumel"
+      ],
+      "country": [
+        "Mexico"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im703-cozumel",
+    "evidence": "September 26, 2027 IRONMAN 70.3 Cozumel Cozumel, ROO, Mexico",
+    "observed_at": "2026-10-06T09:56:32Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN 70.3 Mamaia Constanta, Romania",
+      "url": "https://www.ironman.com/races/im703-mamaia",
+      "race_date": "2027-09-26",
+      "sport": "triathlon",
+      "series": "ironman-70-3",
+      "distance_km": 113,
+      "city": [
+        "Mamaia"
+      ],
+      "country": [
+        "Romania"
+      ],
+      "region": "europe"
+    },
+    "source_url": "https://www.ironman.com/races/im703-mamaia",
+    "evidence": "September 26, 2027 IRONMAN 70.3 Mamaia Constanta, Romania Mamaia, Romania",
+    "observed_at": "2026-10-06T09:57:42Z"
+  },
+  {
+    "data": {
+      "name": "IRONMAN Chattanooga",
+      "url": "https://www.ironman.com/races/im-chattanooga",
+      "race_date": "2027-09-26",
+      "sport": "triathlon",
+      "series": "ironman",
+      "distance_km": 226,
+      "city": [
+        "Chattanooga"
+      ],
+      "country": [
+        "United States"
+      ],
+      "region": "americas"
+    },
+    "source_url": "https://www.ironman.com/races/im-chattanooga",
+    "evidence": "September 26, 2027 IRONMAN Chattanooga Chattanooga, TN, United States",
+    "observed_at": "2026-10-06T09:54:40Z"
+  }
+]

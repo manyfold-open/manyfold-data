@@ -1,0 +1,273 @@
+[
+  {
+    "data": {
+      "name": "MMX (Martian Moons eXploration) launch on H3 F10",
+      "kind": "rocket-launch",
+      "date": "2026-10-19",
+      "time_utc": "19:41:03 UTC (04:41:03 JST on 20 October)",
+      "visible_in": [
+        "Tanegashima",
+        "Japan"
+      ],
+      "agency": "JAXA",
+      "location": "Yoshinobu Launch Complex, JAXA Tanegashima Space Center",
+      "url": "https://global.jaxa.jp/press/2026/08/20260820-1_e.html"
+    },
+    "source_url": "https://global.jaxa.jp/press/2026/08/20260820-1_e.html",
+    "evidence": "Launch date : October 20, 2026 Launch time : 4:41:03 (JST) *1 *2 Reserved launch period : October 21, 2026 - November 7, 2026 Launch site : Yoshinobu Launch Complex at the JAXA Tanegashima Space Center",
+    "observed_at": "2026-10-06T10:44:23Z"
+  },
+  {
+    "data": {
+      "name": "Orionids 2026",
+      "kind": "meteor-shower",
+      "date": "2026-10-21",
+      "visible_in": [
+        "Worldwide"
+      ],
+      "rate_per_hour": 15,
+      "url": "https://www.rmg.co.uk/stories/space-astronomy/orionid-meteor-shower-2026-when-where-see-it-uk"
+    },
+    "source_url": "https://www.rmg.co.uk/stories/space-astronomy/orionid-meteor-shower-2026-when-where-see-it-uk",
+    "evidence": "visible from across the globe. In 2026 the Orionid meteor shower is active from 2 October - 7 November and will peak on the night of 21 October between midnight and dawn.",
+    "observed_at": "2026-10-06T10:44:23Z"
+  },
+  {
+    "data": {
+      "name": "Mars-Jupiter conjunction 2026",
+      "kind": "planets",
+      "date": "2026-11-16",
+      "visible_in": [
+        "Milwaukee",
+        "Tokyo"
+      ],
+      "url": "https://www.nao.ac.jp/astro/sky/2026/11-topics03.html"
+    },
+    "source_url": "https://www.mpm.edu/theater-planetarium/2026-sky-space-calendar",
+    "evidence": "November 16: Jupiter and Mars close in morning sky",
+    "observed_at": "2026-10-06T10:44:23Z"
+  },
+  {
+    "data": {
+      "name": "Leonids 2026",
+      "kind": "meteor-shower",
+      "date": "2026-11-17",
+      "visible_in": [
+        "United Kingdom"
+      ],
+      "url": "https://www.rmg.co.uk/stories/space-astronomy/leonid-meteor-shower-when-and-where-see-it-uk"
+    },
+    "source_url": "https://www.rmg.co.uk/stories/space-astronomy/leonid-meteor-shower-when-and-where-see-it-uk",
+    "evidence": "In 2026 the Leonid meteor shower's maximum occurs on the evening of 17 into the early hours of 18 November, when the Moon will be waxing gibbous.",
+    "observed_at": "2026-10-06T10:44:23Z"
+  },
+  {
+    "data": {
+      "name": "Geminids 2026",
+      "kind": "meteor-shower",
+      "date": "2026-12-14",
+      "visible_in": [
+        "Worldwide"
+      ],
+      "rate_per_hour": 120,
+      "url": "https://science.nasa.gov/solar-system/meteors-meteorites/geminids/"
+    },
+    "source_url": "https://science.nasa.gov/solar-system/meteors-meteorites/geminids/",
+    "evidence": "Active Dec. 4 to Dec. 17, 2026 (Peak Dec. 13-14)",
+    "observed_at": "2026-10-06T10:44:23Z"
+  },
+  {
+    "data": {
+      "name": "Ursids 2026",
+      "kind": "meteor-shower",
+      "date": "2026-12-22",
+      "visible_in": [
+        "United Kingdom"
+      ],
+      "rate_per_hour": 10,
+      "url": "https://www.rmg.co.uk/stories/space-astronomy/ursid-meteor-shower-when-where-see-it-uk"
+    },
+    "source_url": "https://www.rmg.co.uk/stories/space-astronomy/ursid-meteor-shower-when-where-see-it-uk",
+    "evidence": "The Ursid meteor shower is usually sparse, producing around ten meteors per hour at its peak. In 2026, the Ursid meteor shower will be active between 17-26 December and peak on 22 December.",
+    "observed_at": "2026-10-06T10:44:23Z"
+  },
+  {
+    "data": {
+      "name": "Quadrantids 2027",
+      "kind": "meteor-shower",
+      "date": "2027-01-04",
+      "visible_in": [
+        "Northern Hemisphere"
+      ],
+      "rate_per_hour": 120,
+      "url": "https://www.rmg.co.uk/stories/space-astronomy/quadrantid-meteor-shower-when-where-see-it-uk"
+    },
+    "source_url": "https://www.rmg.co.uk/stories/space-astronomy/quadrantid-meteor-shower-when-where-see-it-uk",
+    "evidence": "The Quadrantid meteor shower will peak on 3-4 January 2027.",
+    "observed_at": "2026-10-06T10:44:23Z"
+  },
+  {
+    "data": {
+      "name": "Annular solar eclipse of 6 February 2027",
+      "kind": "solar-eclipse",
+      "date": "2027-02-06",
+      "time_utc": "16:00 UT (greatest eclipse)",
+      "visible_in": [
+        "Chile",
+        "Argentina",
+        "Uruguay",
+        "Brazil",
+        "Ivory Coast",
+        "Ghana",
+        "Togo",
+        "Benin",
+        "Nigeria"
+      ],
+      "url": "https://eclipse.gsfc.nasa.gov/OH/OH2027.html"
+    },
+    "source_url": "https://science.nasa.gov/eclipses/future-eclipses/",
+    "evidence": "Feb. 6, 2027 Annular An annular solar eclipse will be visible in parts of South America and Africa, including Chile, Argentina, Uruguay, Brazil, Ivory Coast, Ghana, Togo, Benin, and Nigeria.",
+    "observed_at": "2026-10-06T10:44:23Z"
+  },
+  {
+    "data": {
+      "name": "Jupiter at opposition 2027",
+      "kind": "planets",
+      "date": "2027-02-11",
+      "time_utc": "00:29 UT",
+      "visible_in": [
+        "Northern Hemisphere"
+      ],
+      "url": "https://promenade.imcce.fr/en/pages6/887.html"
+    },
+    "source_url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_en.cgi?year=2027&lst=0",
+    "evidence": "2027-02-11 00:29 Jupiter Opposition Sun",
+    "observed_at": "2026-10-06T10:44:23Z"
+  },
+  {
+    "data": {
+      "name": "Mars at opposition 2027",
+      "kind": "planets",
+      "date": "2027-02-19",
+      "time_utc": "15:51 UT",
+      "visible_in": [
+        "Northern Hemisphere"
+      ],
+      "url": "https://promenade.imcce.fr/en/pages6/887.html"
+    },
+    "source_url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_en.cgi?year=2027&lst=0",
+    "evidence": "2027-02-19 15:51 Mars Opposition Sun",
+    "observed_at": "2026-10-06T10:44:23Z"
+  },
+  {
+    "data": {
+      "name": "Penumbral lunar eclipse of 20 February 2027",
+      "kind": "lunar-eclipse",
+      "date": "2027-02-20",
+      "time_utc": "23:13 UT (greatest eclipse)",
+      "visible_in": [
+        "Americas",
+        "Europe",
+        "Africa",
+        "Asia",
+        "Australia",
+        "Antarctica"
+      ],
+      "url": "https://eclipse.gsfc.nasa.gov/OH/OH2027.html"
+    },
+    "source_url": "https://science.nasa.gov/eclipses/future-eclipses/",
+    "evidence": "Feb. 20-21, 2027 Penumbral Americas, Europe, Africa, Asia, Australia, Antarctica",
+    "observed_at": "2026-10-06T10:44:23Z"
+  },
+  {
+    "data": {
+      "name": "Lyrids 2027",
+      "kind": "meteor-shower",
+      "date": "2027-04-23",
+      "visible_in": [
+        "Northern Hemisphere"
+      ],
+      "url": "https://science.nasa.gov/solar-system/meteors-meteorites/lyrids/"
+    },
+    "source_url": "https://science.nasa.gov/solar-system/meteors-meteorites/lyrids/",
+    "evidence": "Active April 14 to April 30, 2027 (Peak night: April 22-23)",
+    "observed_at": "2026-10-06T10:44:23Z"
+  },
+  {
+    "data": {
+      "name": "Eta Aquariids 2027",
+      "kind": "meteor-shower",
+      "date": "2027-05-06",
+      "visible_in": [
+        "Southern Hemisphere",
+        "Northern Hemisphere"
+      ],
+      "rate_per_hour": 50,
+      "url": "https://science.nasa.gov/solar-system/meteors-meteorites/eta-aquarids/"
+    },
+    "source_url": "https://science.nasa.gov/solar-system/meteors-meteorites/eta-aquarids/",
+    "evidence": "Active April 19 to May 28, 2027 (Peak night: May 5-6)",
+    "observed_at": "2026-10-06T10:44:23Z"
+  },
+  {
+    "data": {
+      "name": "Total solar eclipse of 2 August 2027",
+      "kind": "solar-eclipse",
+      "date": "2027-08-02",
+      "time_utc": "10:07 UT (greatest eclipse)",
+      "visible_in": [
+        "Spain",
+        "Morocco",
+        "Algeria",
+        "Tunisia",
+        "Libya",
+        "Egypt",
+        "Saudi Arabia",
+        "Yemen"
+      ],
+      "url": "https://eclipse.gsfc.nasa.gov/OH/OH2027.html"
+    },
+    "source_url": "https://science.nasa.gov/eclipses/future-eclipses/",
+    "evidence": "Aug. 2, 2027 Total A total solar eclipse will be visible in southern Spain, North Africa (including Morocco, Algeria, Tunisia, Libya, and Egypt), Saudi Arabia, and Yemen.",
+    "observed_at": "2026-10-06T10:44:23Z"
+  },
+  {
+    "data": {
+      "name": "Penumbral lunar eclipse of 17 August 2027",
+      "kind": "lunar-eclipse",
+      "date": "2027-08-17",
+      "time_utc": "07:14 UT (greatest eclipse)",
+      "visible_in": [
+        "Americas",
+        "Antarctica",
+        "West Africa",
+        "New Zealand",
+        "Western Europe",
+        "Australia",
+        "Eastern Russia",
+        "Southeast Asia",
+        "Pacific Ocean",
+        "Atlantic Ocean"
+      ],
+      "url": "https://eclipse.gsfc.nasa.gov/OH/OH2027.html"
+    },
+    "source_url": "https://science.nasa.gov/eclipses/future-eclipses/",
+    "evidence": "Aug. 16-17, 2027 Penumbral Americas, Antarctica, West Africa, New Zealand, parts of Western Europe, Australia, Eastern Russia, Southeast Asia, Pacific and Atlantic Oceans",
+    "observed_at": "2026-10-06T10:44:23Z"
+  },
+  {
+    "data": {
+      "name": "Saturn at opposition 2027",
+      "kind": "planets",
+      "date": "2027-10-18",
+      "time_utc": "00:36 UT",
+      "visible_in": [
+        "Northern Hemisphere"
+      ],
+      "url": "https://promenade.imcce.fr/en/pages6/887.html"
+    },
+    "source_url": "https://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/phenomena_en.cgi?year=2027&lst=0",
+    "evidence": "2027-10-18 00:36 Saturn Opposition Sun",
+    "observed_at": "2026-10-06T10:44:23Z"
+  }
+]
