@@ -14,6 +14,7 @@ import aiScams from './ai-scams/config.ts';
 import enduranceRaces from './endurance-races/config.ts';
 import marathons from './marathons/config.ts';
 import newRules from './new-rules/config.ts';
+import oncologyDrugUpdates from './oncology-drug-updates/config.ts';
 import recalls from './recalls/config.ts';
 import robotLaunches from './robot-launches/config.ts';
 import robotaxis from './robotaxis/config.ts';
@@ -38,6 +39,7 @@ export const dataApps: readonly DataAppConfig[] = [
   marathons,
   enduranceRaces,
   skyEvents,
+  oncologyDrugUpdates,
 ];
 
 export const findDataApp = (slug: string): DataAppConfig | undefined =>
