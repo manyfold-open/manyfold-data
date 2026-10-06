@@ -516,6 +516,57 @@ describe('undoing a token', () => {
   });
 });
 
+describe('standings', () => {
+  it('stay equal to a count of the records through every kind of status change', async () => {
+    const author = await collector('scout');
+    const reviewer = await maintainer();
+    const counts = async () => {
+      const { results } = await sql('SELECT status, COUNT(*) AS n FROM records WHERE submitted_by = ? GROUP BY status', author.id).all<{ status: string; n: number }>();
+      const of = (status: string) => results.find((row) => row.status === status)?.n ?? 0;
+      return { verified: of('verified'), rejected: of('rejected'), merged: of('merged'), stale: of('stale') };
+    };
+    const stored = () => sql('SELECT verified, rejected, merged, stale FROM standings WHERE token_id = ?', author.id).first();
+    const decide = (id: string, payload: unknown) => asAdmin(`/api/admin/ai-hackathons/records/${id}/decide`, json('POST', payload));
+    const verdicts = (list: unknown[]) => as(reviewer.token, '/api/ai-hackathons/verdicts', json('POST', { verdicts: list }));
+
+    const [a, b, c, d, e] = await submit(author.token, record(1), record(2), record(3), record(4), record(5));
+    expect(await stored()).toEqual(await counts());
+
+    // A maintainer verifies, rejects and merges.
+    const { tasks } = await body(await as(reviewer.token, '/api/ai-hackathons/tasks?limit=3'));
+    const taskFor = (id: string) => tasks.find((task: any) => task.record.id === id).id;
+    await verdicts([
+      { task_id: taskFor(a!), verdict: 'verified', source_url: 'https://example.org/hack-1', evidence: 'Registration closes.' },
+      { task_id: taskFor(b!), verdict: 'rejected', reason: 'Not on the page.' },
+      { task_id: taskFor(c!), verdict: 'duplicate', duplicate_of: a },
+    ]);
+    expect(await stored()).toEqual({ verified: 1, rejected: 1, merged: 1, stale: 0 });
+
+    // The admin sets every status, from every status.
+    await decide(d!, { status: 'verified' });
+    await decide(d!, { status: 'stale', reason: 'Postponed.' });
+    await decide(e!, { status: 'merged', duplicate_of: a });
+    await decide(a!, { status: 'pending', reason: 'Check the prize again.' });
+    await decide(a!, { status: 'verified' });
+    await decide(b!, { status: 'rejected', reason: 'Still not on the page.' });
+    expect(await stored()).toEqual(await counts());
+
+    // A recheck marks a record stale.
+    await sql("UPDATE records SET verified_at = '2000-01-01T00:00:00.000Z' WHERE id = ?", a).run();
+    await cron();
+    const recheck = (await body(await as(reviewer.token, '/api/ai-hackathons/tasks'))).tasks.find((task: any) => task.kind === 'recheck');
+    await verdicts([{ task_id: recheck.id, verdict: 'stale', reason: 'The page now says it was cancelled.' }]);
+    expect(await stored()).toEqual({ verified: 0, rejected: 1, merged: 2, stale: 2 });
+
+    // Undoing the maintainer's work, then banning the collector.
+    await asAdmin(`/api/admin/tokens/${reviewer.id}/revert`, json('POST', { since: '2000-01-01' }));
+    expect(await stored()).toEqual(await counts());
+    await asAdmin(`/api/admin/tokens/${author.id}/ban`, { method: 'POST' });
+    expect(await stored()).toEqual(await counts());
+    expect(await counts()).toEqual({ verified: 0, rejected: 3, merged: 1, stale: 1 });
+  });
+});
+
 describe('overview and activity', () => {
   it('count records by status and list the latest changes', async () => {
     const [first] = await submit((await collector('scout')).token, record(1), record(2));

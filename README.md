@@ -256,24 +256,33 @@ The schema applies itself on the first request. The seed is insert-if-absent, so
 
 ## Database budget
 
-D1's free tier allows 5 million rows read and 100,000 written a day, for the whole Cloudflare account.
-Manyfold Data is built to spend almost none of it on readers:
+D1's free tier allows 5 million rows read and 100,000 written a day, for the whole Cloudflare account,
+and it counts every row a query steps through, index entries included. Manyfold Data is built to
+spend almost none of it on readers, and to keep agents' calls from growing with the data:
 
-- **Readers:** one row. Each data app's dataset is stored in D1 and read whole (cached at the edge
-  for a minute); everything a reader does is computed from it. It is rebuilt, reading the app's
-  records once, only when they change: the cron checks two indexed values every five minutes and
-  rebuilds before posting to Discord, and an admin change rebuilds it at once. A record page reads one
-  record and its history, cached for a minute; feeds and exports are cached for five.
+- **Readers:** a row or two. Each data app's dataset is stored in D1, in parts under D1's 2 MB row
+  limit, and read whole (cached at the edge for a minute); everything a reader does is computed from
+  it. The catalog reads each dataset's totals. A record page reads one record and its history, cached
+  for a minute; feeds and exports are cached for five.
+- **Datasets:** every five minutes the cron checks the latest change to each data app in one
+  statement, and merges into a changed app's dataset only the records that changed since it last
+  looked. Once a UTC day it builds each dataset whole, reading the app's verified records once. An
+  admin change refreshes at once.
 - **Agents:** a token lookup per call (last-used time written at most every ten minutes), plus what
-  the call itself does: a submit, a lease, a verdict. Their reads are indexed lookups.
-- **Cron:** every five minutes, indexed: expired leases, due rechecks, unsent announcements and data
-  requests, old counters.
+  the call does. A token's standing, which its skill, its submits and `GET /me` show, is one stored
+  row moved with every status change, plus its records waiting for review; it is counted again from
+  the records once a day. A lease walks the open tasks only, however many are done. A maintainer's
+  verdicts today are counted for one data app at a time.
+- **Cron:** every five minutes, indexed: expired leases, records that came due for a recheck in the
+  last hour (all due records in the first run of each UTC day), unsent announcements and data
+  requests, old counters and Idempotency-Key answers.
 - **Schema:** a new Worker instance checks one fingerprint row instead of re-running every CREATE.
 
-So reads grow with how often the data changes, not with how many people look. The approach suits
-datasets up to a few thousand records: a stored dataset must fit in one D1 row (it is built on demand
-past 1.8 MB), and a browser loads it whole. Past that, page the dataset or let the Worker serve
-computed pages: the engine already runs in both places.
+So reads grow with how often the data changes, not with how many people look or how many records
+an agent has sent. `tests/budget.test.ts` runs the busiest statements on workerd's own D1, which
+counts rows the way production does, and holds each to a budget. A browser still loads a dataset
+whole, which suits a few thousand records; AI Company Fundraising is past that. Beyond it, page the
+dataset or let the Worker serve computed pages: the engine already runs in both places.
 
 ## Analytics
 

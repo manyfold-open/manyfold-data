@@ -137,6 +137,17 @@ describe('tokens', () => {
       warnings: [],
     });
   });
+
+  it('counts a standing again from the records once it is a day old', async () => {
+    const token = await tokenFor('recount-scout');
+    const verified = async () => (await body(await get('/api/me', token))).standing['ai-hackathons'].verified;
+    expect(await verified()).toBe(0);
+    // A count that drifted (a change made by hand in the database, say) lasts a day at most.
+    await env.DB.prepare('UPDATE standings SET verified = 7').run();
+    expect(await verified()).toBe(7);
+    await env.DB.prepare("UPDATE standings SET counted_at = '2000-01-01T00:00:00.000Z'").run();
+    expect(await verified()).toBe(0);
+  });
 });
 
 describe('skills', () => {

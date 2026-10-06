@@ -56,6 +56,9 @@ CREATE INDEX IF NOT EXISTS revisions_record ON revisions (record_id, id);
 CREATE INDEX IF NOT EXISTS revisions_actor ON revisions (actor, id);
 -- A maintainer's verdicts today, counted on every lease and skill fetch: a range, not a scan.
 CREATE INDEX IF NOT EXISTS revisions_actor_time ON revisions (actor, created_at);
+-- The same count for one data app. A token for every app asks it once per app on GET /me, and
+-- must not read its whole day for each one.
+CREATE INDEX IF NOT EXISTS revisions_actor_app_time ON revisions (actor, app_slug, created_at);
 
 -- Agent credentials. Only a hash of each secret is stored.
 CREATE TABLE IF NOT EXISTS tokens (
@@ -72,6 +75,21 @@ CREATE TABLE IF NOT EXISTS tokens (
   created_at       TEXT NOT NULL
 );
 
+-- A token's reviewed records on one data app, by status, for GET /me, its skill and submit: one row
+-- instead of a count over everything it ever sent, which was 2,637 rows a call for one collector.
+-- Every status change moves these counts in the same batch (moveStanding, src/worker/tokens.ts),
+-- and a row a day old is counted again. Pending records are counted live: the cap depends on them.
+CREATE TABLE IF NOT EXISTS standings (
+  token_id   TEXT NOT NULL,
+  app_slug   TEXT NOT NULL,
+  verified   INTEGER NOT NULL,
+  rejected   INTEGER NOT NULL,
+  merged     INTEGER NOT NULL,
+  stale      INTEGER NOT NULL,
+  counted_at TEXT NOT NULL,
+  PRIMARY KEY (token_id, app_slug)
+);
+
 -- Maintainer work. A lease reserves a task for one token.
 CREATE TABLE IF NOT EXISTS tasks (
   id               TEXT PRIMARY KEY,
@@ -85,16 +103,31 @@ CREATE TABLE IF NOT EXISTS tasks (
   done_at          TEXT
 );
 CREATE INDEX IF NOT EXISTS tasks_queue ON tasks (app_slug, status, created_at);
+-- What a lease takes from, oldest first: the open and leased tasks only. Done ones are kept forever,
+-- and a lease that walked them all read 1,611 rows on average.
+CREATE INDEX IF NOT EXISTS tasks_open ON tasks (app_slug, created_at, id) WHERE status IN ('open', 'leased');
 -- The leases the cron releases, found by expiry instead of a scan of every task.
 CREATE INDEX IF NOT EXISTS tasks_leased ON tasks (lease_expires_at) WHERE status = 'leased';
+-- A record's tasks: the cron looks for a waiting one before it adds a recheck, once per due record.
+CREATE INDEX IF NOT EXISTS tasks_record ON tasks (record_id, status);
 
--- Each data app's public dataset, built from its records when they change (src/worker/records.ts).
--- Readers' pages are computed from it, so a reader costs one row here, not a scan of records.
-CREATE TABLE IF NOT EXISTS datasets (
-  app_slug TEXT PRIMARY KEY,
-  version  TEXT NOT NULL,
+-- Each data app's public dataset, built from its records (src/worker/records.ts). Its head holds what
+-- it was built from, when it was last built whole, and the totals the catalog shows. The JSON itself
+-- is in dataset_parts, cut into pieces under D1's 2 MB row limit, so a reader costs a row or a few,
+-- never a scan of records. The datasets table from before 2026-10-06 is no longer read.
+CREATE TABLE IF NOT EXISTS dataset_heads (
+  app_slug     TEXT PRIMARY KEY,
+  records_at   TEXT,
+  invite_at    TEXT,
+  verified     INTEGER NOT NULL,
+  last_updated TEXT,
+  built_at     TEXT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS dataset_parts (
+  app_slug TEXT NOT NULL,
+  part     INTEGER NOT NULL,
   json     TEXT NOT NULL,
-  built_at TEXT NOT NULL
+  PRIMARY KEY (app_slug, part)
 );
 
 -- Verified records waiting to be announced.
@@ -117,6 +150,8 @@ CREATE TABLE IF NOT EXISTS idempotency (
   created_at    TEXT NOT NULL,
   PRIMARY KEY (token_id, key)
 );
+-- The cron drops answers past their day by age instead of reading every one.
+CREATE INDEX IF NOT EXISTS idempotency_age ON idempotency (created_at);
 
 -- Reader reports from record pages.
 CREATE TABLE IF NOT EXISTS reports (

@@ -52,27 +52,43 @@ Rules for anyone — human or AI agent — changing Manyfold Data. These are the
     than `PUBLIC_ORIGIN`'s. Events (`src/app/analytics.ts`) carry the data app's slug and fixed values,
     never text a person typed; page views carry `page_location` without `TYPED_PARAMS` (the search). Tests use made-up ids like `G-TESTID0000`, never the real one, and
     `/privacy` must keep describing what the code does.
-18. **Readers cost the database one row, not a scan.** Each data app's public dataset is stored in the
-    `datasets` table and read as one row (`datasetJson`, src/worker/records.ts); only `buildDataset`
-    scans records, when `refreshDataset` sees the records or the invite change (the cron, before
-    Discord posts) or an admin change drops it (`refreshesDatasets` in src/worker/index.ts). The Table,
-    the Overview and the /records and /stats routes are computed from the dataset by
-    `src/shared/engine.ts`, in the browser and the Worker alike. A new public view is computed from the
-    dataset, never from new SQL over records; a new write path keeps moving `records.updated_at`, which
-    is the dataset's version. Public reads are cached with `cachedFor`/`cachedJson` (src/worker/cache.ts), and
-    nothing else is: never cache a route that reads a token, the admin password or a visitor's
-    country. D1's free tier caps reads a day for the whole account; see "Database budget" in the README.
+18. **Readers cost the database a row or two, not a scan.** Each data app's public dataset is stored in
+    `dataset_parts`, cut under D1's 2 MB row limit, and read as those rows (`datasetJson`,
+    src/worker/records.ts). Only `buildDataset` scans an app's verified records: when nothing is stored,
+    and once a UTC day. In between, `refreshDatasets` (the cron, before Discord posts, and
+    `refreshesDatasets` in src/worker/index.ts after an admin change) merges in the records whose
+    `updated_at` moved since it last looked. The Table, the Overview and the /records and /stats routes
+    are computed from the dataset by `src/shared/engine.ts`, in the browser and the Worker alike, and the
+    catalog reads the totals in `dataset_heads`. A new public view is computed from the dataset, never
+    from new SQL over records; a new write path keeps moving `records.updated_at`, which is what a refresh
+    reads, and anything that writes records with an older `updated_at` (the seed) drops the heads so the
+    next run builds whole. Public reads are cached with `cachedFor`/`cachedJson` (src/worker/cache.ts),
+    and nothing else is: never cache a route that reads a token, the admin password or a visitor's
+    country. D1's free tier caps reads a day for the whole account and counts every row a query steps
+    through, index entries included; see "Database budget" in the README. A query on a hot path (an
+    agent call, the cron) reads what it needs through an index, never a table's history:
+    `tests/budget.test.ts` holds the busiest ones to a budget on real D1, and a new one goes there too.
 19. **Data requests come from this site only, and reach people only through the cron.**
     `POST /api/requests` refuses a browser `Origin` other than its own: CORS alone does not stop a
     cross-site POST, and every visitor of such a page would bring a new IP. It counts the site's daily
     bound only after the per-IP limit and the check pass, so one address cannot close the form for
     everyone. The cron posts requests (`src/worker/requests.ts`) escaped, each line starting with our
     own text, and marks only what Discord accepted as sent.
+20. **A token's standing is one row, moved with every status change.** `standings` keeps each token's
+    verified, rejected, merged and stale records per data app; GET /me, the skill, submit and suspension
+    read it, and count only the token's pending records live. Every statement that changes a record's
+    status has `moveStanding` (src/worker/tokens.ts) before it in the same batch, with the same status
+    guard, so the counts move exactly when the record does. A row a day old is counted again from the
+    records, which mends a change made by hand in the database within a day.
 
 ## Tests
 
 `tests/d1.ts` is a D1 double on Node's built-in SQLite, so API tests run the Worker's real SQL. Use it
 (with `app.request`) for any route that touches the database, and stub `fetch` for outside calls.
+
+`tests/budget.test.ts` runs the busiest statements on workerd's own D1 (`tests/workerd.mjs`, through
+wrangler's `getPlatformProxy`), which reports rows read the way production bills them, at production's
+sizes. When a change makes an agent call, a reader's read or the cron read more, a budget there fails.
 
 The reader UI builds its controls from `src/app/ui/`; `tests/native-controls.test.ts` fails on a native
 select, checkbox, radio, date input or dialog anywhere else in the reader flow, and `tests/contrast.test.ts`

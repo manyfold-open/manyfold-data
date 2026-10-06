@@ -96,7 +96,7 @@ import { ensureSchema } from './db';
 import { maintain } from './maintenance';
 import { applyVerdicts, LEASE_MAX, leaseTasks, workOf } from './maintainer';
 import { enforce, HOUR, RULES, sweep } from './ratelimit';
-import { appSummaries, datasetJson, forgetDataset, getRecord, refreshDataset } from './records';
+import { appSummaries, datasetJson, getRecord, refreshDatasets } from './records';
 import { createRequest, deleteRequest, flushRequests, requestsAdmin, requestsTestMessage } from './requests';
 import { collectorSkill, maintainerSkill, publicSkill } from './skill';
 import { idempotencyKey, recall, remember, sourceExists, submitRecords } from './submit';
@@ -214,7 +214,7 @@ app.get('/api/health', (c) => c.json({ status: 'ok', service: SERVICE, time: new
 const API_CACHE = cachedFor(60);
 const FILE_CACHE = cachedFor(300);
 
-app.get('/api/apps', API_CACHE, async (c) => c.json({ apps: await appSummaries(c.env.DB, dataApps) }));
+app.get('/api/apps', API_CACHE, async (c) => c.json({ apps: await appSummaries(c.env.DB, dataApps, new Date()) }));
 
 // Whether this visitor is asked about analytics before anything is stored: only when the
 // site measures at all, and only where consent is owed (src/worker/analytics.ts).
@@ -313,7 +313,8 @@ app.get('/api/me', async (c) => {
   const slugs = (token.apps.includes('*') ? dataApps.map((config) => config.slug) : token.apps).filter((slug) =>
     findDataApp(slug),
   );
-  const entries = await Promise.all(slugs.map(async (slug) => [slug, await standing(c.env.DB, token, slug)] as const));
+  const now = new Date();
+  const entries = await Promise.all(slugs.map(async (slug) => [slug, await standing(c.env.DB, token, slug, now)] as const));
   const reply: MeResponse = {
     token_id: token.id,
     role: token.role,
@@ -324,7 +325,6 @@ app.get('/api/me', async (c) => {
     standing: Object.fromEntries(entries),
   };
   if (token.role === 'maintainer') {
-    const now = new Date();
     reply.work = Object.fromEntries(
       await Promise.all(slugs.map(async (slug) => [slug, await workOf(c.env.DB, dataAppFor(slug), token, now)] as const)),
     );
@@ -341,7 +341,7 @@ app.get('/api/:slug/skill', async (c) => {
     c,
     token.role === 'maintainer'
       ? maintainerSkill(config, originOf(c), token, await workOf(c.env.DB, config, token, now), now)
-      : collectorSkill(config, originOf(c), token, await standing(c.env.DB, token, config.slug), now),
+      : collectorSkill(config, originOf(c), token, await standing(c.env.DB, token, config.slug, now), now),
   );
 });
 
@@ -394,12 +394,13 @@ app.use('/api/admin/*', async (c, next) => {
 
 /**
  * Admin changes readers should see now rather than at the next cron run: once one succeeds, the
- * stored dataset of its data app (or of every app, for a token's work) is dropped and rebuilt on
- * the next read. Maintainers' verdicts wait for the cron, which rebuilds before announcing.
+ * stored dataset of its data app (or of every app, for a token's work) is brought up to date.
+ * Maintainers' verdicts wait for the cron, which refreshes before announcing.
  */
 const refreshesDatasets: MiddlewareHandler<{ Bindings: Env }> = async (c, next) => {
   await next();
-  if (c.res.ok) await forgetDataset(c.env.DB, c.req.param('slug'));
+  const slug = c.req.param('slug');
+  if (c.res.ok) await refreshDatasets(c.env.DB, slug ? [dataAppFor(slug)] : dataApps, new Date());
 };
 
 app.post('/api/admin/tokens', async (c) => {
@@ -548,18 +549,23 @@ app.post('/api/admin/:slug/spot-check/:recordId', async (c) =>
   ),
 );
 
-/** The cron's work, also run from POST /api/admin/maintenance. */
-async function runCron(env: Env, origin: string, now: Date) {
-  const housekeeping = await maintain(env.DB, dataApps, now);
-  // Rebuild changed datasets before announcing, so a record in Discord is already in the Table.
-  let datasets = 0;
-  for (const config of dataApps) if (await refreshDataset(env.DB, config, now)) datasets += 1;
+/**
+ * The cron's work, also run from POST /api/admin/maintenance. `everyDueRecord` looks at every record
+ * due for a recheck, not only the ones that came due in the last hour (src/worker/maintenance.ts).
+ */
+async function runCron(env: Env, origin: string, now: Date, everyDueRecord: boolean) {
+  const housekeeping = await maintain(env.DB, dataApps, now, { everyDueRecord });
+  // Refresh changed datasets before announcing, so a record in Discord is already in the Table.
+  const datasets = await refreshDatasets(env.DB, dataApps, now);
   const discord = await flushOutbox(env.DB, env, dataApps, origin, now);
   const requests = await flushRequests(env.DB, env, now);
   return { ...housekeeping, datasets, discord, requests };
 }
 
-app.post('/api/admin/maintenance', async (c) => c.json(await runCron(c.env, c.env.PUBLIC_ORIGIN ?? originOf(c), new Date())));
+/** The scheduled run at the top of each UTC day, which looks at every due record. */
+const firstRunOfDay = (now: Date) => now.getUTCHours() === 0 && now.getUTCMinutes() < 5;
+
+app.post('/api/admin/maintenance', async (c) => c.json(await runCron(c.env, c.env.PUBLIC_ORIGIN ?? originOf(c), new Date(), true)));
 
 app.all('/api/*', () => {
   throw new HttpError(404, 'not_found', 'No such API route.');
@@ -613,6 +619,7 @@ export { app };
 export default {
   fetch: app.fetch,
   async scheduled(_controller, env, ctx) {
-    ctx.waitUntil(ensureSchema(env.DB).then(() => runCron(env, env.PUBLIC_ORIGIN ?? DEFAULT_ORIGIN, new Date())));
+    const now = new Date();
+    ctx.waitUntil(ensureSchema(env.DB).then(() => runCron(env, env.PUBLIC_ORIGIN ?? DEFAULT_ORIGIN, now, firstRunOfDay(now))));
   },
 } satisfies ExportedHandler<Env>;

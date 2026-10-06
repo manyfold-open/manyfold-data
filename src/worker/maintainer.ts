@@ -4,7 +4,8 @@
  * A lease reserves a task for one token for 30 minutes; a verdict only counts for a task
  * leased to the token sending it, while the lease lasts, and never for a record the same
  * token submitted. Only this module changes a record's status, and every change writes a
- * revision with the record before and after — the trail revert-by-token replays.
+ * revision with the record before and after — the trail revert-by-token replays — and moves
+ * the record in its submitter's standing (moveStanding), in the same batch.
  *
  *   task     verdicts allowed               record
  *   verify   verified rejected duplicate    pending  -> verified | rejected | merged
@@ -29,7 +30,7 @@ import {
 } from '../shared/data-app';
 import type { LeaseResponse, LeasedTask, TaskKind, Verdict, VerdictResult, VerdictsResponse, Work } from '../shared/types';
 import { MINUTE } from './ratelimit';
-import { DAILY_TASK_LIMIT, VERDICT_ACTIONS, type Token } from './tokens';
+import { DAILY_TASK_LIMIT, moveStanding, tallyOf, VERDICT_ACTIONS, type Token } from './tokens';
 import { HttpError } from './types';
 
 export const LEASE_MS = 30 * MINUTE;
@@ -47,22 +48,24 @@ const VERDICTS: Record<TaskKind, readonly Verdict[]> = {
 
 const dayStart = (now: Date) => `${now.toISOString().slice(0, 10)}T00:00:00.000Z`;
 
-/** What a maintainer token holds and has done today on one data app. */
+/**
+ * What a maintainer token holds and has done today on one data app, in one statement: GET /me asks
+ * it for every data app the token works on. The day's verdicts are read through
+ * revisions_actor_app_time, this app's alone.
+ */
 export async function workOf(db: D1Database, config: DataAppConfig, token: Token, now: Date): Promise<Work> {
-  const [done, leased] = await db.batch<{ n: number }>([
-    db
-      .prepare(
-        `SELECT COUNT(*) AS n FROM revisions WHERE actor = ? AND app_slug = ? AND created_at >= ?
-         AND action IN (${VERDICT_ACTIONS.map(() => '?').join(', ')})`,
-      )
-      .bind(token.id, config.slug, dayStart(now), ...VERDICT_ACTIONS),
-    db
-      .prepare(`SELECT COUNT(*) AS n FROM tasks WHERE leased_to = ? AND app_slug = ? AND status = 'leased' AND lease_expires_at > ?`)
-      .bind(token.id, config.slug, now.toISOString()),
-  ]);
+  const row = await db
+    .prepare(
+      `SELECT (SELECT COUNT(*) FROM revisions WHERE actor = ?1 AND app_slug = ?2 AND created_at >= ?3
+                AND action IN (${VERDICT_ACTIONS.map((_, index) => `?${index + 5}`).join(', ')})) AS done,
+              (SELECT COUNT(*) FROM tasks WHERE leased_to = ?1 AND app_slug = ?2 AND status = 'leased'
+                AND lease_expires_at > ?4) AS leased`,
+    )
+    .bind(token.id, config.slug, dayStart(now), now.toISOString(), ...VERDICT_ACTIONS)
+    .first<{ done: number; leased: number }>();
   return {
-    leased: leased?.results[0]?.n ?? 0,
-    done_today: done?.results[0]?.n ?? 0,
+    leased: row?.leased ?? 0,
+    done_today: row?.done ?? 0,
     daily_task_limit: token.dailyTaskLimit ?? DAILY_TASK_LIMIT,
   };
 }
@@ -97,18 +100,21 @@ export async function leaseTasks(
   const work = await workOf(db, config, token, now);
   const room = Math.max(0, Math.min(limit - work.leased, work.daily_task_limit - work.done_today - work.leased));
   if (room > 0) {
-    // One statement, so two maintainers leasing at once can never get the same task.
+    // One statement, so two maintainers leasing at once can never get the same task. It walks the
+    // queue in order through tasks_open, which holds only open and leased tasks, and stops at `room`:
+    // done tasks are never deleted, and walking them cost every lease the app's whole history.
+    // `t.status IN (...)` must stay word for word the index's WHERE, or SQLite cannot use it.
     await db
       .prepare(
-        `UPDATE tasks SET status = 'leased', leased_to = ?, lease_expires_at = ?
+        `UPDATE tasks SET status = 'leased', leased_to = ?1, lease_expires_at = ?2
          WHERE id IN (
-           SELECT t.id FROM tasks t JOIN records r ON r.id = t.record_id
-           WHERE t.app_slug = ? AND r.submitted_by != ? AND r.flagged = 0
-             AND (t.status = 'open' OR (t.status = 'leased' AND t.lease_expires_at <= ?))
+           SELECT t.id FROM tasks t INDEXED BY tasks_open JOIN records r ON r.id = t.record_id
+           WHERE t.app_slug = ?3 AND t.status IN ('open', 'leased') AND (t.status = 'open' OR t.lease_expires_at <= ?4)
+             AND r.submitted_by != ?1 AND r.flagged = 0
            ORDER BY t.created_at, t.id
-           LIMIT ?)`,
+           LIMIT ?5)`,
       )
-      .bind(token.id, new Date(now.getTime() + LEASE_MS).toISOString(), config.slug, token.id, at, room)
+      .bind(token.id, new Date(now.getTime() + LEASE_MS).toISOString(), config.slug, at, room)
       .run();
   }
   const { results } = await db
@@ -273,6 +279,7 @@ async function prepareVerdict(
     }
     const { source_url, evidence, observed_at } = provenance.value;
     const statements = [
+      moveStanding(db, task.id, 'verified', task.status),
       db
         .prepare(
           `UPDATE records SET status = 'verified', data_json = ?, identity_key = ?, source_url = ?, evidence = ?,
@@ -304,6 +311,7 @@ async function prepareVerdict(
       verdict,
       recordStatus: 'merged',
       statements: [
+        moveStanding(db, task.id, 'merged', 'pending'),
         db
           .prepare(`UPDATE records SET status = 'merged', merged_into = ?, updated_at = ? WHERE id = ? AND status = 'pending'`)
           .bind(target.id, at, task.id),
@@ -343,6 +351,7 @@ async function prepareVerdict(
     verdict,
     recordStatus: status,
     statements: [
+      moveStanding(db, task.id, status, task.status),
       db
         .prepare('UPDATE records SET status = ?, updated_at = ? WHERE id = ? AND status = ?')
         .bind(status, at, task.id, task.status),
@@ -352,18 +361,14 @@ async function prepareVerdict(
   };
 }
 
-/** Suspends active collectors among `tokenIds` whose reviewed records are mostly rejected. */
-export async function suspendIfFailing(db: D1Database, tokenIds: Iterable<string>): Promise<void> {
+/**
+ * Suspends active collectors among `tokenIds` whose reviewed records are mostly rejected. A collector
+ * works on the one data app it joined, so its standing there is all of its records.
+ */
+export async function suspendIfFailing(db: D1Database, slug: string, tokenIds: Iterable<string>, now: Date): Promise<void> {
   for (const id of tokenIds) {
-    const row = await db
-      .prepare(
-        `SELECT SUM(status IN ('verified', 'stale')) AS good, SUM(status = 'rejected') AS bad
-         FROM records WHERE submitted_by = ?`,
-      )
-      .bind(id)
-      .first<{ good: number | null; bad: number | null }>();
-    const good = row?.good ?? 0;
-    const bad = row?.bad ?? 0;
+    const { verified, stale, rejected: bad } = await tallyOf(db, id, slug, now);
+    const good = verified + stale;
     if (good + bad >= SUSPEND_AFTER && bad / (good + bad) > 0.5) {
       await db.prepare(`UPDATE tokens SET status = 'suspended' WHERE id = ? AND role = 'collector' AND status = 'active'`).bind(id).run();
     }
@@ -406,10 +411,13 @@ export async function applyVerdicts(
       });
       continue;
     }
-    if (prepared.verdict === 'verified' || prepared.verdict === 'rejected') reviewed.add(prepared.task.submitted_by);
+    // Only the first review of a submission can count against its collector: a recheck never rejects.
+    if (prepared.task.kind === 'verify' && (prepared.verdict === 'verified' || prepared.verdict === 'rejected')) {
+      reviewed.add(prepared.task.submitted_by);
+    }
     results.push({ index, task_id: prepared.task.task_id, status: 'applied', record_status: prepared.recordStatus });
   }
 
-  await suspendIfFailing(db, reviewed);
+  await suspendIfFailing(db, config.slug, reviewed, now);
   return { ...(await workOf(db, config, token, now)), results };
 }

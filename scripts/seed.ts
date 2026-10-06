@@ -100,8 +100,9 @@ if (problems.length > 0) {
 }
 
 mkdirSync(dirname(out), { recursive: true });
-// Seeded rows carry the time they were checked, which can be older than the newest record, so
-// the stored datasets' versions would not see them: drop the datasets and let them rebuild.
-statements.push('DELETE FROM datasets');
+// Seeded rows carry the time they were checked, which can be older than the newest record, so a
+// refresh, which reads only what changed since it last looked, would not see them: drop the stored
+// datasets' heads, and the next cron run builds each dataset whole.
+statements.push('DELETE FROM dataset_heads');
 writeFileSync(out, `${statements.join(';\n\n')};\n`);
 console.log(`${count} seed record(s) from ${dataApps.length} data app(s) → ${out}`);

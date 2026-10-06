@@ -176,7 +176,7 @@ export async function submitRecords(
   const exists = new Map(await Promise.all(urls.map(async (url) => [url, await options.sourceExists(url)] as const)));
 
   // 4. Store in order until the cap is reached.
-  const before = await standing(db, token, config.slug);
+  const before = await standing(db, token, config.slug, now);
   let pending = before.pending;
   for (const candidate of candidates) {
     const { index } = candidate;

@@ -5,7 +5,8 @@
  * banning a collector, and the weekly spot-check.
  *
  * Every change to a record writes a revision with actor 'admin', so the admin is as
- * accountable in the history as any agent.
+ * accountable in the history as any agent, and every status change moves the record in its
+ * submitter's standing (moveStanding) in the same batch.
  */
 
 import {
@@ -29,6 +30,7 @@ import type {
 } from '../shared/types';
 import { newId, sha256Hex } from './ids';
 import { notifyStatus } from './notify';
+import { moveStanding } from './tokens';
 import { HttpError } from './types';
 
 const ADMIN = 'admin';
@@ -282,6 +284,7 @@ export async function decide(
 
   if (status === 'verified') {
     statements.push(
+      moveStanding(db, id, 'verified'),
       db.prepare(`UPDATE records SET status = 'verified', flagged = 0, merged_into = NULL, verified_at = ?, updated_at = ? WHERE id = ?`).bind(at, at, id),
       adminRevision(db, row, 'verify', { status: 'verified' }, reasonOf(body.reason, false), at),
       cancelTasks(db, id, at),
@@ -291,6 +294,7 @@ export async function decide(
     }
   } else if (status === 'rejected' || status === 'stale') {
     statements.push(
+      moveStanding(db, id, status),
       db.prepare('UPDATE records SET status = ?, updated_at = ? WHERE id = ?').bind(status, at, id),
       adminRevision(db, row, status === 'rejected' ? 'reject' : 'stale', { status }, reasonOf(body.reason, true), at),
       cancelTasks(db, id, at),
@@ -303,12 +307,14 @@ export async function decide(
       .first<{ id: string }>();
     if (!original) throw new HttpError(422, 'invalid_body', 'duplicate_of must be the id of another verified record.');
     statements.push(
+      moveStanding(db, id, 'merged'),
       db.prepare(`UPDATE records SET status = 'merged', merged_into = ?, updated_at = ? WHERE id = ?`).bind(original.id, at, id),
       adminRevision(db, row, 'merge', { status: 'merged', merged_into: original.id }, reasonOf(body.reason, false), at),
       cancelTasks(db, id, at),
     );
   } else if (status === 'pending') {
     statements.push(
+      moveStanding(db, id, 'pending'),
       db.prepare(`UPDATE records SET status = 'pending', flagged = 0, verified_at = NULL, updated_at = ? WHERE id = ?`).bind(at, id),
       adminRevision(db, row, 'reopen', { status: 'pending' }, reasonOf(body.reason, false), at),
       cancelTasks(db, id, at),
@@ -463,6 +469,7 @@ export async function revertToken(
       ? (JSON.parse(first.before_json) as { status: RecordStatus; data: RecordData; merged_into?: string })
       : { status: 'rejected' as RecordStatus, data: JSON.parse(row.data_json) as RecordData };
     const statements: D1PreparedStatement[] = [
+      moveStanding(db, record_id, target.status),
       db
         .prepare(
           `UPDATE records SET status = ?, data_json = ?, identity_key = ?, merged_into = ?,
@@ -502,6 +509,7 @@ export async function banCollector(db: D1Database, tokenId: string, now: Date): 
   await db.batch([
     db.prepare(`UPDATE tokens SET status = 'revoked' WHERE id = ?`).bind(tokenId),
     ...pending.flatMap((row) => [
+      moveStanding(db, row.id, 'rejected'),
       db.prepare(`UPDATE records SET status = 'rejected', updated_at = ? WHERE id = ?`).bind(at, row.id),
       adminRevision(db, row, 'reject', { status: 'rejected' }, `Banned ${token.label}`, at),
       cancelTasks(db, row.id, at),

@@ -5,7 +5,7 @@
  */
 
 import { cleanText } from '../shared/data-app';
-import type { AdminToken, Standing } from '../shared/types';
+import type { AdminToken, RecordStatus, Standing } from '../shared/types';
 import { newId, newSecret, SECRET, sha256Hex } from './ids';
 import { HttpError } from './types';
 
@@ -164,20 +164,93 @@ export function pendingCap(token: Token, verified: number): number {
   return Math.max(base, Math.min(PENDING_CAP_MAX, base + verified));
 }
 
-/** A token's records on one data app by status, its cap, and what it should change. */
-export async function standing(db: D1Database, token: Token, slug: string): Promise<Standing> {
-  const { results } = await db
-    .prepare('SELECT status, COUNT(*) AS n FROM records WHERE app_slug = ? AND submitted_by = ? GROUP BY status')
-    .bind(slug, token.id)
-    .all<{ status: string; n: number }>();
-  const count = (status: string) => results.find((row) => row.status === status)?.n ?? 0;
-  const counts = {
-    pending: count('pending'),
-    verified: count('verified'),
-    rejected: count('rejected'),
-    merged: count('merged'),
-    stale: count('stale'),
-  };
+/** A token's reviewed records on one data app, as the standings table keeps them. */
+export interface Tally {
+  verified: number;
+  rejected: number;
+  merged: number;
+  stale: number;
+}
+
+/** A standings row older than this is counted again from records, in case a change ever slipped past moveStanding. */
+const RECOUNT_AFTER_MS = 24 * 60 * 60 * 1000;
+
+/**
+ * Counts a token's reviewed records on one data app from scratch and stores the counts: one read of
+ * each record it submitted there, through records_submitter (left alone, SQLite may walk every record
+ * of the app instead). One statement, so a status change can never land between the count and the write.
+ */
+async function recount(db: D1Database, tokenId: string, slug: string, now: Date): Promise<Tally> {
+  const row = await db
+    .prepare(
+      `INSERT INTO standings (token_id, app_slug, verified, rejected, merged, stale, counted_at)
+       SELECT ?1, ?2, COUNT(*) FILTER (WHERE status = 'verified'), COUNT(*) FILTER (WHERE status = 'rejected'),
+         COUNT(*) FILTER (WHERE status = 'merged'), COUNT(*) FILTER (WHERE status = 'stale'), ?3
+       FROM records INDEXED BY records_submitter WHERE submitted_by = ?1 AND app_slug = ?2
+       ON CONFLICT (token_id, app_slug) DO UPDATE SET verified = excluded.verified, rejected = excluded.rejected,
+         merged = excluded.merged, stale = excluded.stale, counted_at = excluded.counted_at
+       RETURNING verified, rejected, merged, stale`,
+    )
+    .bind(tokenId, slug, now.toISOString())
+    .first<Tally>();
+  return row ?? { verified: 0, rejected: 0, merged: 0, stale: 0 };
+}
+
+type StoredTally = { [K in keyof Tally]: number | null } & { counted_at: string | null };
+
+/** The stored counts, or null when there is no row or it is due to be counted again. */
+const current = (row: StoredTally | null, now: Date): Tally | null =>
+  row?.counted_at && now.getTime() - Date.parse(row.counted_at) < RECOUNT_AFTER_MS
+    ? { verified: row.verified ?? 0, rejected: row.rejected ?? 0, merged: row.merged ?? 0, stale: row.stale ?? 0 }
+    : null;
+
+/** A token's reviewed records on one data app: its standings row, counted again when missing or a day old. */
+export async function tallyOf(db: D1Database, tokenId: string, slug: string, now: Date): Promise<Tally> {
+  const row = await db
+    .prepare('SELECT verified, rejected, merged, stale, counted_at FROM standings WHERE token_id = ? AND app_slug = ?')
+    .bind(tokenId, slug)
+    .first<StoredTally>();
+  return current(row, now) ?? recount(db, tokenId, slug, now);
+}
+
+/**
+ * The statement that moves one record in its submitter's standing from the status it has now to `to`.
+ * Put it in the batch that changes the record, before the UPDATE: it reads the status the UPDATE is
+ * about to replace. `from` repeats that UPDATE's own status guard, so the counts move exactly when the
+ * record does. A submitter with no standings row yet (the seed, a token never asked) is left alone.
+ */
+export function moveStanding(db: D1Database, recordId: string, to: RecordStatus, from: string | null = null): D1PreparedStatement {
+  return db
+    .prepare(
+      `UPDATE standings SET
+         verified = verified + (?2 = 'verified') - (r.status = 'verified'),
+         rejected = rejected + (?2 = 'rejected') - (r.status = 'rejected'),
+         merged = merged + (?2 = 'merged') - (r.status = 'merged'),
+         stale = stale + (?2 = 'stale') - (r.status = 'stale')
+       FROM (SELECT submitted_by, app_slug, status FROM records WHERE id = ?1 AND status = coalesce(?3, status)) AS r
+       WHERE standings.token_id = r.submitted_by AND standings.app_slug = r.app_slug`,
+    )
+    .bind(recordId, to, from);
+}
+
+/**
+ * A token's records on one data app by status, its cap, and what it should change. Agents ask on every
+ * skill fetch, submit and GET /me, so this reads the token's waiting records, which its cap keeps few
+ * (through records_submitter), and one standings row: never its whole history.
+ */
+export async function standing(db: D1Database, token: Token, slug: string, now: Date): Promise<Standing> {
+  // One statement: GET /me asks this for every data app a token works on.
+  const row = await db
+    .prepare(
+      `SELECT (SELECT COUNT(*) FROM records INDEXED BY records_submitter
+                WHERE submitted_by = ?1 AND status = 'pending' AND app_slug = ?2) AS pending,
+              s.verified, s.rejected, s.merged, s.stale, s.counted_at
+       FROM (SELECT 1) LEFT JOIN standings s ON s.token_id = ?1 AND s.app_slug = ?2`,
+    )
+    .bind(token.id, slug)
+    .first<StoredTally & { pending: number }>();
+  const tally = current(row, now) ?? (await recount(db, token.id, slug, now));
+  const counts = { pending: row?.pending ?? 0, ...tally };
   const cap = pendingCap(token, counts.verified);
   const warnings: string[] = [];
   if (counts.pending >= cap) {
