@@ -114,7 +114,7 @@ CREATE INDEX IF NOT EXISTS tasks_record ON tasks (record_id, status);
 -- Each data app's public dataset, built from its records (src/worker/records.ts). Its head holds what
 -- it was built from, when it was last built whole, and the totals the catalog shows. The JSON itself
 -- is in dataset_parts, cut into pieces under D1's 2 MB row limit, so a reader costs a row or a few,
--- never a scan of records. The datasets table from before 2026-10-06 is no longer read.
+-- never a scan of records.
 CREATE TABLE IF NOT EXISTS dataset_heads (
   app_slug     TEXT PRIMARY KEY,
   records_at   TEXT,
