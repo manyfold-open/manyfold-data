@@ -21,5 +21,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src/worker", "src/shared", "data-apps", "tests", "src/app/routes.ts", "src/app/format.ts", "src/app/model"]
+  "include": ["src/worker", "src/shared", "data-apps", "tests", "src/app/routes.ts", "src/app/format.ts", "src/app/site.ts", "src/app/model"]
 }
