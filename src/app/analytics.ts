@@ -10,9 +10,10 @@
  *   agent_instruction_copied   an owner copied the sentence that sets their agent to work
  *   skill_opened               someone opened a data app's SKILL.md
  *   data_exported              CSV, JSON or the RSS feed (format)
- *   discord_joined             someone opened a Discord invite: the site's, from the top bar
- *                              (placement 'header') or after sending a data request ('request'),
- *                              or a data app's channel (placement 'follow')
+ *   discord_joined             someone opened a Discord invite: from the top bar (placement
+ *                              'header'; a data app's channel inside one, the site's elsewhere),
+ *                              after sending a data request ('request', the site's), or from a
+ *                              data app's channel card (placement 'follow')
  *   record_reported            a reader sent a report (never its text)
  *   data_requested             a reader sent a data request from the front page (never its text)
  *

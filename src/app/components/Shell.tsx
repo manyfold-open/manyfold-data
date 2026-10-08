@@ -11,18 +11,19 @@ import { nounTitle } from '../format';
 import { tableHrefFor } from '../memory';
 import { Link } from '../router';
 import type { Route } from '../routes';
-import { DISCORD_URL } from '../site';
+import { useDataset } from '../dataset';
+import { discordHref } from '../site';
 import { useTheme } from '../theme';
 import { Icon, IconButton, Logo, Tooltip } from '../ui';
 
-/** Opens the Manyfold Discord in a new tab. Tracked with fixed values only. */
-export function DiscordButton({ slug }: { slug?: string }) {
+/** Opens Discord in a new tab. Tracked with fixed values only. */
+export function DiscordButton({ slug, invite }: { slug?: string; invite?: string | null }) {
   return (
     <Tooltip text="Join our Discord" repeatsLabel>
       {() => (
         <a
           className="icon-button"
-          href={DISCORD_URL}
+          href={discordHref(invite)}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Join our Discord"
@@ -33,6 +34,12 @@ export function DiscordButton({ slug }: { slug?: string }) {
       )}
     </Tooltip>
   );
+}
+
+/** Inside a data app the button opens that app's channel (its dataset is already loaded for the page). */
+function AppDiscordButton({ slug }: { slug: string }) {
+  const dataset = useDataset(slug);
+  return <DiscordButton slug={slug} invite={dataset.data?.discordInvite} />;
 }
 
 export function ThemeToggle() {
@@ -87,7 +94,7 @@ const Brand = () => (
 export function TopBar({ route, config, phone }: { route: Route; config: DataAppConfig | undefined; phone: boolean }) {
   const end = (
     <>
-      <DiscordButton slug={config?.slug} />
+      {config ? <AppDiscordButton slug={config.slug} /> : <DiscordButton />}
       <ThemeToggle />
     </>
   );

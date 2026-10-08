@@ -159,5 +159,6 @@ URL as today.
 - Load more keeps `page` in the URL as the number of pages shown, so a shared link opens the same rows.
 - Histogram drill-down ranges stop one below the next edge (`amount_usd_to=24999999`), because bins are
   half-open and the Table's ranges are inclusive.
-- The top bar also holds an icon-only Discord button (`DISCORD_URL` in `src/app/site.ts`), tracked as
-  `discord_joined` with `placement: 'header'`.
+- The top bar also holds an icon-only Discord button, tracked as `discord_joined` with `placement: 'header'`.
+  Inside a data app it opens that app's channel invite (`discordInvite` from its dataset); without one, and
+  outside a data app, it opens the community invite (`DISCORD_URL` in `src/app/site.ts`).
