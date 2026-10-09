@@ -15,6 +15,8 @@ const STATUSES: [RecordStatus, string][] = [
 interface CronReport {
   released: number;
   rechecks: number;
+  /** Tasks that waited a day for a maintainer with a browser, sent to the review queue. */
+  escalated: number;
   datasets: number;
   discord: { sent: number; failed: number };
   /** The requests channel's post: readers' data requests. */
@@ -26,6 +28,7 @@ const describe = (report: CronReport) => {
   const failed = report.discord.failed + report.requests.failed;
   return (
     `Released ${plural(report.released, 'expired lease')}, queued ${plural(report.rechecks, 'recheck')}, ` +
+    (report.escalated ? `sent ${plural(report.escalated, 'task')} no browser could open to review, ` : '') +
     `rebuilt ${plural(report.datasets, 'dataset')}, sent ${plural(sent, 'Discord post')}` +
     (report.requests.sent ? ', including data requests' : '') +
     (failed ? `; ${plural(failed, 'post')} failed.` : '.')
@@ -69,7 +72,20 @@ export default function OverviewSection() {
               <dt>Review queue</dt>
               <dd>{formatCount(app.review)}</dd>
             </div>
+            <div>
+              <dt>Need a browser</dt>
+              <dd>{formatCount(app.needs_browser)}</dd>
+            </div>
+            <div>
+              <dt>Parked duplicates</dt>
+              <dd>{formatCount(app.parked)}</dd>
+            </div>
           </dl>
+          {app.oldest_review_at ? (
+            <p className="muted small">
+              Oldest unsure verdict waiting since <When at={app.oldest_review_at} />
+            </p>
+          ) : null}
           <p className="muted small">
             Discord <Badge value={app.notify.state} />{' '}
             {app.notify.last_sent_at ? (

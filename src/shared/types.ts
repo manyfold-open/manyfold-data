@@ -58,6 +58,19 @@ export interface MeResponse {
 export type TaskKind = 'verify' | 'recheck';
 export type Verdict = 'verified' | 'rejected' | 'duplicate' | 'stale' | 'unsure';
 
+/**
+ * Why a maintainer cannot decide, which says who decides instead:
+ *   cannot_open        no page that would settle it opens: a maintainer with a browser, then the admin
+ *   duplicate_pending  it duplicates another record still waiting: decided when that one is
+ *   conflict           its sources disagree: a second maintainer, then the admin
+ *   policy             the rules do not say: the admin
+ */
+export type UnsureType = 'cannot_open' | 'duplicate_pending' | 'conflict' | 'policy';
+export const UNSURE_TYPES: readonly UnsureType[] = ['cannot_open', 'duplicate_pending', 'conflict', 'policy'];
+
+/** Where an unsure verdict sent its task: the admin, a maintainer with a browser, a second maintainer, or parked. */
+export type Routed = 'admin' | 'browser' | 'second-opinion' | 'parked';
+
 export interface LeasedTask {
   id: string;
   kind: TaskKind;
@@ -72,6 +85,8 @@ export interface LeasedTask {
     submitted_at: string;
     verified_at: string | null;
   };
+  /** What only some maintainers can do, such as open a page in a real browser; null for any maintainer. */
+  needs: string | null;
 }
 
 export interface LeaseResponse extends Work {
@@ -80,8 +95,13 @@ export interface LeaseResponse extends Work {
 }
 
 export type VerdictResult =
-  | { index: number; task_id: string; status: 'applied'; record_status: string }
+  | { index: number; task_id: string; status: 'applied'; record_status: string; routed?: Routed }
   | { index: number; task_id: string | null; status: 'error'; errors: FieldError[] };
+
+/** POST /api/<slug>/tasks/release: tasks given back to the queue. */
+export interface ReleaseResponse extends Work {
+  released: number;
+}
 
 export interface VerdictsResponse extends Work {
   results: VerdictResult[];
@@ -101,6 +121,24 @@ export interface AdminToken {
   created_at: string;
   records: { pending: number; verified: number; rejected: number };
   verdicts: { total: number; today: number };
+  /** What the token can do beyond its role, such as open pages in a browser. */
+  capabilities: string[];
+  /** A maintainer's record over the last 30 days; null for collectors and revoked tokens. */
+  quality: MaintainerQuality | null;
+}
+
+/**
+ * How a maintainer's verdicts held up over the last 30 days: how many the admin looked at again (its
+ * own later decisions on those records, and spot checks), how many of those it overturned, and how
+ * often the maintainer could not decide (unsure: sent to the admin, deferred: handed on).
+ */
+export interface MaintainerQuality {
+  verdicts: number;
+  unsure: number;
+  deferred: number;
+  checked: number;
+  overturned: number;
+  warnings: string[];
 }
 
 /** The one answer that carries a maintainer token's secret. */
@@ -288,6 +326,12 @@ export interface AppOverview {
   open_tasks: number;
   /** Items in the review queue: unsure verdicts, flagged records, open reports. */
   review: number;
+  /** Open tasks only a maintainer with a browser can do. */
+  needs_browser: number;
+  /** Tasks parked until the record they duplicate is decided. */
+  parked: number;
+  /** When the oldest unsure verdict still waiting for the admin was sent. */
+  oldest_review_at: string | null;
   notify: NotifyStatus;
 }
 
@@ -339,6 +383,8 @@ export interface ReviewItem {
   kind: 'unsure' | 'flagged' | 'report';
   record: AdminRecord;
   reason: string;
+  /** For an unsure verdict: why the maintainer could not decide. */
+  unsure_type: UnsureType | null;
   by: string | null;
   at: string;
   task_id: string | null;
@@ -354,6 +400,17 @@ export interface ActivityItem {
   actor: Actor;
   reason: string | null;
   created_at: string;
+}
+
+/** A decision of the admin's that states a rule, until the rule is written into the data app's config. */
+export interface Precedent {
+  id: number;
+  app_slug: string;
+  record_id: string;
+  decision: string;
+  rule: string;
+  created_at: string;
+  adopted_at: string | null;
 }
 
 export interface RevertReport {

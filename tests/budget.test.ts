@@ -79,7 +79,21 @@ afterAll(async () => {
   await close?.();
 });
 
-const TABLES = ['records', 'revisions', 'tokens', 'standings', 'tasks', 'dataset_heads', 'dataset_parts', 'outbox', 'idempotency', 'app_settings'];
+const TABLES = [
+  'records',
+  'revisions',
+  'tokens',
+  'standings',
+  'tasks',
+  'dataset_heads',
+  'dataset_parts',
+  'outbox',
+  'idempotency',
+  'app_settings',
+  'token_capabilities',
+  'task_needs',
+  'task_waits',
+];
 
 beforeEach(async () => {
   await raw.batch(TABLES.map((table) => raw.prepare(`DELETE FROM ${table}`)));
@@ -219,6 +233,38 @@ describe('agent calls', { timeout: 30_000 }, () => {
     expect(lease.value.tasks.map((task) => task.record.id)).toEqual(['rec_2670', 'rec_2671', 'rec_2672']);
     expect(lease.rows).toBeLessThanOrEqual(30); // the open tasks and their records, twice: to lease, then to list
   });
+
+  it('lease the tasks that need a browser first, through their own index, to a maintainer with one', async () => {
+    const author = 'tok_busy';
+    // The same queue, two of its open tasks waiting for a maintainer with a browser.
+    await seedRecords(many(2_673, (n) => ({ id: `rec_${n}`, app: 'ai-fundraising', status: n < 2_662 ? 'verified' : 'pending', by: author, at: ago(3_000 - n) })));
+    await seedTasks(
+      many(2_673, (n) => ({
+        id: `tsk_${String(n).padStart(5, '0')}`,
+        app: 'ai-fundraising',
+        record: `rec_${n}`,
+        kind: 'verify',
+        status: n < 2_662 ? 'done' : n < 2_670 ? 'review' : 'open',
+        at: ago(3_000 - n),
+      })),
+    );
+    await raw.batch([
+      raw.prepare("INSERT INTO task_needs (task_id, need, since) VALUES ('tsk_02671', 'browser', ?)").bind(ago(30)),
+      raw.prepare("INSERT INTO task_needs (task_id, need, since) VALUES ('tsk_02672', 'browser', ?)").bind(ago(20)),
+      raw.prepare("INSERT INTO token_capabilities (token_id, capability) VALUES ('tok_browser', 'browser')"),
+    ]);
+    const plain = await reads(() => leaseTasks(db, fundraising, token('tok_plain', 'maintainer', ['*']), 10, now));
+    expect(plain.value.tasks.map((task) => task.record.id)).toEqual(['rec_2670']);
+    expect(plain.rows).toBeLessThanOrEqual(30);
+    await raw.prepare("UPDATE tasks SET status = 'open', leased_to = NULL, lease_expires_at = NULL WHERE status = 'leased'").run();
+
+    const browser = await reads(() => leaseTasks(db, fundraising, token('tok_browser', 'maintainer', ['*']), 2, now));
+    expect(browser.value.tasks.map((task) => [task.record.id, task.needs])).toEqual([
+      ['rec_2671', 'browser'],
+      ['rec_2672', 'browser'],
+    ]);
+    expect(browser.rows).toBeLessThanOrEqual(30);
+  });
 });
 
 describe('the stored dataset', { timeout: 30_000 }, () => {
@@ -296,8 +342,10 @@ describe('the cron', { timeout: 30_000 }, () => {
     );
 
     const run = await reads(() => maintain(db, [hackathons], now));
-    expect(run.value).toEqual({ released: 0, rechecks: 0 });
-    expect(run.rows).toBeLessThanOrEqual(12);
+    expect(run.value).toEqual({ released: 0, rechecks: 0, escalated: 0 });
+    // A row or two more than before the routing tables (task_needs, task_waits), which the run walks
+    // whole: they hold only the tasks waiting for a browser or for a duplicate, never the history.
+    expect(run.rows).toBeLessThanOrEqual(14);
 
     // The day's first run looks at every due record: each one, and a lookup of its tasks for each
     // waiting status (open, leased, review), however many tasks the record has had.

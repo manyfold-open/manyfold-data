@@ -221,12 +221,18 @@ export async function datasetJson(db: D1Database, config: DataAppConfig, now: Da
 
 /** Who a revision's actor is, in words a reader understands. */
 const actorLabel = (actor: string, tokenLabel: string | null): string =>
-  actor === 'seed' ? 'Manyfold team (seed data)' : actor === 'admin' ? 'Admin' : (tokenLabel ?? 'An agent');
+  actor === 'seed'
+    ? 'Manyfold team (seed data)'
+    : actor === 'admin'
+      ? 'Admin'
+      : actor === 'system'
+        ? 'Manyfold Data (automatic)'
+        : (tokenLabel ?? 'An agent');
 
 /**
  * One record with its history. Null when it does not exist or is not public; a pointer
- * when it was merged into another record. `unsure` notes are working notes for the
- * admin, so the public history leaves them out.
+ * when it was merged into another record. `unsure` and `defer` notes are working notes
+ * for the admin and maintainers, so the public history leaves them out.
  */
 export async function getRecord(
   db: D1Database,
@@ -248,7 +254,7 @@ export async function getRecord(
     .prepare(
       `SELECT r.action, r.actor, r.reason, r.created_at, t.label
        FROM revisions r LEFT JOIN tokens t ON t.id = r.actor
-       WHERE r.record_id = ? AND r.action != 'unsure' ORDER BY r.id`,
+       WHERE r.record_id = ? AND r.action NOT IN ('unsure', 'defer') ORDER BY r.id`,
     )
     .bind(id)
     .all<{ action: string; actor: string; reason: string | null; created_at: string; label: string | null }>();

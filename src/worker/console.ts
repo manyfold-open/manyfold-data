@@ -2,18 +2,21 @@
  * What the /settings console reads and does, beyond tokens (tokens.ts) and Discord
  * (notify.ts): the overview, the review queue, any record with its full history, the
  * admin's own decisions and edits, reader reports, activity, undoing one token's work,
- * banning a collector, and the weekly spot-check.
+ * banning a collector, the weekly spot-check, and the precedents the admin's decisions set.
  *
  * Every change to a record writes a revision with actor 'admin', so the admin is as
  * accountable in the history as any agent, and every status change moves the record in its
- * submitter's standing (moveStanding) in the same batch.
+ * submitter's standing (moveStanding) in the same batch. A decision on a record a maintainer
+ * decided, and a spot check marked wrong, count for that maintainer's quality (tokens.ts).
  */
 
 import {
   cleanText,
   identityKey,
+  validateProvenance,
   validateRecordData,
   type DataAppConfig,
+  type Provenance,
   type RecordData,
 } from '../shared/data-app';
 import type {
@@ -22,16 +25,19 @@ import type {
   AdminRecordDetail,
   AdminRevision,
   AppOverview,
+  Precedent,
   RecordStatus,
   Report,
   RevertReport,
   ReviewItem,
   SpotCheck,
+  UnsureType,
 } from '../shared/types';
 import { newId, sha256Hex } from './ids';
 import { notifyStatus } from './notify';
-import { moveStanding } from './tokens';
+import { moveStanding, suspendMaintainerIfFailing } from './tokens';
 import { HttpError } from './types';
+import { resolveWaiting, SYSTEM } from './waits';
 
 const ADMIN = 'admin';
 const STATUSES: readonly RecordStatus[] = ['pending', 'verified', 'rejected', 'merged', 'stale'];
@@ -62,7 +68,7 @@ interface RecordRow {
 const RECORD_SELECT = `SELECT r.*, t.label AS submitter_label FROM records r LEFT JOIN tokens t ON t.id = r.submitted_by`;
 
 export const actorLabel = (id: string, label: string | null | undefined): string =>
-  id === 'seed' ? 'Manyfold team (seed data)' : id === ADMIN ? 'Admin' : (label ?? 'Unknown token');
+  id === 'seed' ? 'Manyfold team (seed data)' : id === ADMIN ? 'Admin' : id === SYSTEM ? 'Manyfold Data (automatic)' : (label ?? 'Unknown token');
 
 const titleOf = (config: DataAppConfig | undefined, data: RecordData) =>
   String(data[config?.table.columns[0] ?? 'name'] ?? 'Untitled');
@@ -151,7 +157,7 @@ export async function overview(db: D1Database, apps: readonly DataAppConfig[]): 
   const notify = await notifyStatus(db, apps);
   return Promise.all(
     apps.map(async (config, index) => {
-      const [counts, tasks, review] = await db.batch([
+      const [counts, tasks, review, waiting] = await db.batch([
         db.prepare('SELECT status, COUNT(*) AS n FROM records WHERE app_slug = ? GROUP BY status').bind(config.slug),
         db.prepare("SELECT COUNT(*) AS n FROM tasks WHERE app_slug = ? AND status IN ('open', 'leased')").bind(config.slug),
         db
@@ -162,7 +168,17 @@ export async function overview(db: D1Database, apps: readonly DataAppConfig[]): 
              + (SELECT COUNT(*) FROM reports p JOIN records r ON r.id = p.record_id WHERE r.app_slug = ?1 AND p.status = 'open') AS n`,
           )
           .bind(config.slug),
+        db
+          .prepare(
+            `SELECT
+               (SELECT COUNT(*) FROM task_needs n JOIN tasks t ON t.id = n.task_id
+                  WHERE n.need = 'browser' AND t.app_slug = ?1 AND t.status IN ('open', 'leased')) AS browser,
+               (SELECT COUNT(*) FROM tasks WHERE app_slug = ?1 AND status = 'blocked') AS parked,
+               (SELECT MIN(done_at) FROM tasks WHERE app_slug = ?1 AND status = 'review') AS oldest`,
+          )
+          .bind(config.slug),
       ]);
+      const wait = (waiting?.results[0] ?? {}) as { browser?: number; parked?: number; oldest?: string | null };
       const byStatus = Object.fromEntries(STATUSES.map((status) => [status, 0])) as Record<RecordStatus, number>;
       for (const row of (counts?.results ?? []) as { status: RecordStatus; n: number }[]) byStatus[row.status] = row.n;
       return {
@@ -171,6 +187,9 @@ export async function overview(db: D1Database, apps: readonly DataAppConfig[]): 
         counts: byStatus,
         open_tasks: (tasks?.results[0] as { n: number } | undefined)?.n ?? 0,
         review: (review?.results[0] as { n: number } | undefined)?.n ?? 0,
+        needs_browser: wait.browser ?? 0,
+        parked: wait.parked ?? 0,
+        oldest_review_at: wait.oldest ?? null,
         notify: notify[index]!,
       };
     }),
@@ -185,6 +204,7 @@ export async function reviewQueue(db: D1Database, config: DataAppConfig): Promis
         `${RECORD_SELECT.replace('SELECT r.*', `SELECT r.*, k.id AS task_id,
            (SELECT reason FROM revisions WHERE record_id = r.id AND action = 'unsure' ORDER BY id DESC LIMIT 1) AS note,
            (SELECT actor FROM revisions WHERE record_id = r.id AND action = 'unsure' ORDER BY id DESC LIMIT 1) AS note_by,
+           (SELECT after_json FROM revisions WHERE record_id = r.id AND action = 'unsure' ORDER BY id DESC LIMIT 1) AS note_after,
            k.done_at AS at`)}
          JOIN tasks k ON k.record_id = r.id WHERE r.app_slug = ? AND k.status = 'review'`,
       )
@@ -197,12 +217,13 @@ export async function reviewQueue(db: D1Database, config: DataAppConfig): Promis
       )
       .bind(config.slug),
   ]);
-  type Row = RecordRow & { task_id?: string; report_id?: number; note?: string; note_by?: string; at?: string };
+  type Row = RecordRow & { task_id?: string; report_id?: number; note?: string; note_by?: string; note_after?: string | null; at?: string };
   const items: ReviewItem[] = [
     ...((unsure?.results ?? []) as Row[]).map((row) => ({
       kind: 'unsure' as const,
       record: toAdminRecord(row, config),
       reason: row.note ?? '',
+      unsure_type: row.note_after ? ((JSON.parse(row.note_after) as { unsure_type?: UnsureType }).unsure_type ?? null) : null,
       by: row.note_by ?? null,
       at: row.at ?? row.updated_at,
       task_id: row.task_id ?? null,
@@ -212,6 +233,7 @@ export async function reviewQueue(db: D1Database, config: DataAppConfig): Promis
       kind: 'flagged' as const,
       record: toAdminRecord(row, config),
       reason: 'Text that looks aimed at AI agents',
+      unsure_type: null,
       by: row.submitted_by,
       at: row.created_at,
       task_id: null,
@@ -221,6 +243,7 @@ export async function reviewQueue(db: D1Database, config: DataAppConfig): Promis
       kind: 'report' as const,
       record: toAdminRecord(row, config),
       reason: row.note ?? '',
+      unsure_type: null,
       by: null,
       at: row.at ?? row.updated_at,
       task_id: null,
@@ -246,20 +269,52 @@ const adminRevision = (
   after: unknown,
   reason: string | null,
   at: string,
+  provenance: Provenance | null = null,
 ) =>
   db
     .prepare(
-      `INSERT INTO revisions (record_id, app_slug, actor, action, before_json, after_json, reason, created_at)
-       VALUES (?, ?, 'admin', ?, ?, ?, ?, ?)`,
+      `INSERT INTO revisions (record_id, app_slug, actor, action, before_json, after_json, reason, source_url, evidence, created_at)
+       VALUES (?, ?, 'admin', ?, ?, ?, ?, ?, ?, ?)`,
     )
     .bind(row.id, row.app_slug, action, JSON.stringify({ status: row.status, data: JSON.parse(row.data_json) }),
-      JSON.stringify(after), reason, at);
+      JSON.stringify(after), reason, provenance?.source_url ?? null, provenance?.evidence ?? null, at);
 
 /** Tasks waiting on a record stop waiting. */
 const cancelTasks = (db: D1Database, recordId: string, at: string) =>
   db
-    .prepare(`UPDATE tasks SET status = 'cancelled', done_at = ? WHERE record_id = ? AND status IN ('open', 'leased', 'review')`)
+    .prepare(`UPDATE tasks SET status = 'cancelled', done_at = ? WHERE record_id = ? AND status IN ('open', 'leased', 'review', 'blocked')`)
     .bind(at, recordId);
+
+/** The admin's own passage for a decision, checked like a maintainer's, or null when none was sent. */
+function provenanceOf(body: { source_url?: unknown; evidence?: unknown; observed_at?: unknown }, now: Date): Provenance | null {
+  if (body.source_url === undefined && body.evidence === undefined) return null;
+  const checked = validateProvenance({ source_url: body.source_url, evidence: body.evidence, observed_at: body.observed_at ?? now.toISOString() }, now);
+  if (!checked.ok) throw new HttpError(422, 'invalid_body', checked.errors.map((error) => `${error.field} ${error.message}`).join('; '));
+  return checked.value;
+}
+
+/** A precedent the admin wants written into the rules, checked for length. */
+function precedentOf(value: unknown): string | null {
+  if (value === undefined || value === null || value === '') return null;
+  const rule = typeof value === 'string' ? cleanText(value) : '';
+  if (rule.length < 10 || rule.length > 300) throw new HttpError(422, 'invalid_body', 'precedent must state the rule in 10 to 300 characters.');
+  return rule;
+}
+
+/**
+ * After the admin decides a record a maintainer had decided, or marks it wrong in a spot check, that
+ * maintainer's quality is read again: one whose checked verdicts are mostly overturned is suspended.
+ */
+async function checkMaintainerOf(db: D1Database, recordId: string, now: Date): Promise<void> {
+  const last = await db
+    .prepare(
+      `SELECT v.actor FROM revisions v INDEXED BY revisions_record JOIN tokens t ON t.id = v.actor
+       WHERE v.record_id = ? AND t.role = 'maintainer' AND v.action IN ('verify', 'reject', 'merge', 'stale') ORDER BY v.id DESC LIMIT 1`,
+    )
+    .bind(recordId)
+    .first<{ actor: string }>();
+  if (last) await suspendMaintainerIfFailing(db, last.actor, now);
+}
 
 const newVerifyTask = (db: D1Database, row: RecordRow, now: Date) =>
   db
@@ -268,26 +323,43 @@ const newVerifyTask = (db: D1Database, row: RecordRow, now: Date) =>
 
 /**
  * The admin sets a record's status: verified, rejected, stale, merged (with duplicate_of),
- * or pending, which sends it back to the maintainers. Open reports on it are resolved.
+ * or pending, which sends it back to the maintainers. Open reports on it are resolved, and
+ * records parked as its duplicates follow it (src/worker/waits.ts).
+ *
+ * The admin may send a passage of its own (source_url, evidence), checked like a maintainer's
+ * and kept with the revision; a record verified with one takes it as its source. A `precedent`
+ * states the rule the decision follows, until the rule is written into the data app's config.
  */
 export async function decide(
   db: D1Database,
   config: DataAppConfig,
   id: string,
-  body: { status?: unknown; reason?: unknown; duplicate_of?: unknown },
+  body: { status?: unknown; reason?: unknown; duplicate_of?: unknown; source_url?: unknown; evidence?: unknown; observed_at?: unknown; precedent?: unknown },
   now: Date,
 ): Promise<AdminRecordDetail> {
   const row = await recordRow(db, config, id);
   const at = now.toISOString();
   const status = body.status;
   const statements: D1PreparedStatement[] = [];
+  const provenance = provenanceOf(body, now);
+  const precedent = precedentOf(body.precedent);
+  const waiting = (to: RecordStatus, options: { mergedInto?: string } = {}) =>
+    row.status === 'pending' ? resolveWaiting(db, { id, app_slug: row.app_slug }, to, at, options) : Promise.resolve([]);
 
   if (status === 'verified') {
     statements.push(
       moveStanding(db, id, 'verified'),
-      db.prepare(`UPDATE records SET status = 'verified', flagged = 0, merged_into = NULL, verified_at = ?, updated_at = ? WHERE id = ?`).bind(at, at, id),
-      adminRevision(db, row, 'verify', { status: 'verified' }, reasonOf(body.reason, false), at),
+      provenance
+        ? db
+            .prepare(
+              `UPDATE records SET status = 'verified', flagged = 0, merged_into = NULL, source_url = ?, evidence = ?, observed_at = ?,
+                 verified_at = ?, updated_at = ? WHERE id = ?`,
+            )
+            .bind(provenance.source_url, provenance.evidence, provenance.observed_at, at, at, id)
+        : db.prepare(`UPDATE records SET status = 'verified', flagged = 0, merged_into = NULL, verified_at = ?, updated_at = ? WHERE id = ?`).bind(at, at, id),
+      adminRevision(db, row, 'verify', { status: 'verified' }, reasonOf(body.reason, false), at, provenance),
       cancelTasks(db, id, at),
+      ...(await waiting('verified')),
     );
     if (row.status !== 'verified') {
       statements.push(db.prepare('INSERT INTO outbox (app_slug, record_id, created_at) VALUES (?, ?, ?)').bind(row.app_slug, id, at));
@@ -296,8 +368,9 @@ export async function decide(
     statements.push(
       moveStanding(db, id, status),
       db.prepare('UPDATE records SET status = ?, updated_at = ? WHERE id = ?').bind(status, at, id),
-      adminRevision(db, row, status === 'rejected' ? 'reject' : 'stale', { status }, reasonOf(body.reason, true), at),
+      adminRevision(db, row, status === 'rejected' ? 'reject' : 'stale', { status }, reasonOf(body.reason, true), at, provenance),
       cancelTasks(db, id, at),
+      ...(await waiting(status)),
     );
   } else if (status === 'merged') {
     const target = typeof body.duplicate_of === 'string' ? body.duplicate_of : '';
@@ -311,6 +384,7 @@ export async function decide(
       db.prepare(`UPDATE records SET status = 'merged', merged_into = ?, updated_at = ? WHERE id = ?`).bind(original.id, at, id),
       adminRevision(db, row, 'merge', { status: 'merged', merged_into: original.id }, reasonOf(body.reason, false), at),
       cancelTasks(db, id, at),
+      ...(await waiting('merged', { mergedInto: original.id })),
     );
   } else if (status === 'pending') {
     statements.push(
@@ -324,12 +398,20 @@ export async function decide(
     throw new HttpError(422, 'invalid_body', 'status must be verified, rejected, stale, merged or pending.');
   }
   statements.push(db.prepare(`UPDATE reports SET status = 'resolved' WHERE record_id = ? AND status = 'open'`).bind(id));
+  if (precedent) {
+    statements.push(
+      db
+        .prepare('INSERT INTO precedents (app_slug, record_id, decision, rule, created_at) VALUES (?, ?, ?, ?, ?)')
+        .bind(row.app_slug, id, String(status), precedent, at),
+    );
+  }
   try {
     await db.batch(statements);
   } catch (error) {
     if (!/UNIQUE/i.test(String(error))) throw error;
     throw new HttpError(409, 'conflict', 'Another live record already has this identity. Merge this one into it instead.');
   }
+  await checkMaintainerOf(db, id, now);
   return recordDetail(db, config, id);
 }
 
@@ -427,7 +509,9 @@ export async function activity(
  * Undoes everything a token changed since `since`, newest state first: each record it
  * touched goes back to how it was before the token's first change in that window. A
  * record the token created is rejected. A record someone else has changed since is left
- * alone and listed in `skipped`, for the admin to settle by hand.
+ * alone and listed in `skipped`, for the admin to settle by hand. Unsure verdicts and tasks
+ * handed on changed no record and are passed over; records the server merged into a record
+ * this undoes (parked duplicates, src/worker/waits.ts) go back to waiting for review.
  */
 export async function revertToken(
   db: D1Database,
@@ -444,22 +528,24 @@ export async function revertToken(
   const at = now.toISOString();
 
   const { results: touched } = await db
-    .prepare(`SELECT DISTINCT record_id FROM revisions WHERE actor = ? AND created_at >= ? AND action != 'revert'`)
+    .prepare(`SELECT DISTINCT record_id FROM revisions WHERE actor = ? AND created_at >= ? AND action NOT IN ('revert', 'unsure', 'defer')`)
     .bind(tokenId, sinceIso)
     .all<{ record_id: string }>();
 
   const report: RevertReport = { reverted: 0, skipped: [] };
+  const noLongerLive = new Set<string>();
   for (const { record_id } of touched) {
     const { results: history } = await db
       .prepare('SELECT id, actor, action, before_json, created_at FROM revisions WHERE record_id = ? ORDER BY id')
       .bind(record_id)
       .all<{ id: number; actor: string; action: string; before_json: string | null; created_at: string }>();
-    const last = history.at(-1);
+    const changes = history.filter((revision) => revision.action !== 'unsure' && revision.action !== 'defer');
+    const last = changes.at(-1);
     if (!last || last.actor !== tokenId) {
       report.skipped.push({ record_id, reason: 'changed by someone else since; settle it by hand' });
       continue;
     }
-    const first = history.find((revision) => revision.actor === tokenId && revision.created_at >= sinceIso && revision.action !== 'revert')!;
+    const first = changes.find((revision) => revision.actor === tokenId && revision.created_at >= sinceIso && revision.action !== 'revert')!;
     const row = await db.prepare(`${RECORD_SELECT} WHERE r.id = ?`).bind(record_id).first<RecordRow>();
     if (!row) continue;
     const config = apps.find((app) => app.slug === row.app_slug);
@@ -488,12 +574,52 @@ export async function revertToken(
     try {
       await db.batch(statements);
       report.reverted += 1;
+      if (target.status !== 'verified' && target.status !== 'stale') noLongerLive.add(record_id);
     } catch (error) {
       if (!/UNIQUE/i.test(String(error))) throw error;
       report.skipped.push({ record_id, reason: 'its earlier version would duplicate another live record' });
     }
   }
+  if (noLongerLive.size > 0) await unmergeFollowers(db, noLongerLive, sinceIso, token.label, now, report);
   return report;
+}
+
+/**
+ * Records the server merged into one of `records` since `since`, because a maintainer had found
+ * them its duplicates and it was then verified, go back to waiting for review once that verdict
+ * is undone. Reads the server's own merges of that window, which are few.
+ */
+async function unmergeFollowers(db: D1Database, records: Set<string>, since: string, label: string, now: Date, report: RevertReport): Promise<void> {
+  const at = now.toISOString();
+  const { results } = await db
+    .prepare(`SELECT id, record_id, after_json FROM revisions INDEXED BY revisions_actor_time WHERE actor = ? AND created_at >= ? AND action = 'merge'`)
+    .bind(SYSTEM, since)
+    .all<{ id: number; record_id: string; after_json: string }>();
+  for (const merge of results) {
+    const cause = (JSON.parse(merge.after_json) as { caused_by?: string }).caused_by;
+    if (!cause || !records.has(cause)) continue;
+    const later = await db
+      .prepare('SELECT 1 AS yes FROM revisions INDEXED BY revisions_record WHERE record_id = ? AND id > ? LIMIT 1')
+      .bind(merge.record_id, merge.id)
+      .first<{ yes: number }>();
+    const row = await db.prepare(`${RECORD_SELECT} WHERE r.id = ?`).bind(merge.record_id).first<RecordRow>();
+    if (!row || row.status !== 'merged' || later) {
+      report.skipped.push({ record_id: merge.record_id, reason: 'merged by the server after an undone verdict, and changed since; settle it by hand' });
+      continue;
+    }
+    try {
+      await db.batch([
+        moveStanding(db, row.id, 'pending'),
+        db.prepare(`UPDATE records SET status = 'pending', merged_into = NULL, updated_at = ? WHERE id = ? AND status = 'merged'`).bind(at, row.id),
+        adminRevision(db, row, 'revert', { status: 'pending' }, `Undid the merge that followed ${cause}, whose verdict by ${label} was undone`, at),
+        newVerifyTask(db, row, now),
+      ]);
+      report.reverted += 1;
+    } catch (error) {
+      if (!/UNIQUE/i.test(String(error))) throw error;
+      report.skipped.push({ record_id: row.id, reason: 'its earlier version would duplicate another live record' });
+    }
+  }
 }
 
 /** Revokes a collector and rejects every record it has waiting for review. */
@@ -506,13 +632,15 @@ export async function banCollector(db: D1Database, tokenId: string, now: Date): 
     .prepare(`${RECORD_SELECT} WHERE r.submitted_by = ? AND r.status = 'pending'`)
     .bind(tokenId)
     .all<RecordRow>();
+  const followers = await Promise.all(pending.map((row) => resolveWaiting(db, { id: row.id, app_slug: row.app_slug }, 'rejected', at)));
   await db.batch([
     db.prepare(`UPDATE tokens SET status = 'revoked' WHERE id = ?`).bind(tokenId),
-    ...pending.flatMap((row) => [
+    ...pending.flatMap((row, index) => [
       moveStanding(db, row.id, 'rejected'),
       db.prepare(`UPDATE records SET status = 'rejected', updated_at = ? WHERE id = ?`).bind(at, row.id),
       adminRevision(db, row, 'reject', { status: 'rejected' }, `Banned ${token.label}`, at),
       cancelTasks(db, row.id, at),
+      ...followers[index]!,
     ]),
   ]);
   return { rejected: pending.length };
@@ -594,6 +722,28 @@ export async function markSpotCheck(
     )
     .bind(check.week, config.slug, recordId, body.correct ? 1 : 0, note || null, now.toISOString())
     .run();
+  if (!body.correct) await checkMaintainerOf(db, recordId, now);
   return spotCheck(db, config, now);
+}
+
+/* ───────── precedents ───────── */
+
+/** The admin's decisions that state a rule, newest first: the ones not yet in the rules, or all. */
+export async function listPrecedents(db: D1Database, all: boolean): Promise<Precedent[]> {
+  const { results } = await db
+    .prepare(
+      `SELECT id, app_slug, record_id, decision, rule, created_at, adopted_at FROM precedents
+       WHERE (? = 1 OR adopted_at IS NULL) ORDER BY id DESC LIMIT 200`,
+    )
+    .bind(all ? 1 : 0)
+    .all<Precedent>();
+  return results;
+}
+
+/** A precedent now written into its data app's config (scope, field help), so agents read it. */
+export async function adoptPrecedent(db: D1Database, id: number, now: Date): Promise<Precedent[]> {
+  const result = await db.prepare('UPDATE precedents SET adopted_at = ? WHERE id = ? AND adopted_at IS NULL').bind(now.toISOString(), id).run();
+  if (!Number(result.meta.changes ?? 0)) throw new HttpError(404, 'not_found', 'No open precedent has that id.');
+  return listPrecedents(db, false);
 }
 

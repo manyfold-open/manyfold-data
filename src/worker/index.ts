@@ -18,10 +18,12 @@
  * Agents (Authorization: Bearer mfd_...):
  *   POST /api/:slug/join             a collector token; no token needed, limited per IP
  *   GET  /api/me                     the token's role, status and standing
- *   GET  /api/:slug/skill            instructions for the token's role
+ *   GET  /api/:slug/skill            instructions for the token's role, and their version
+ *                                    (X-Skill-Version), which agents send back
  *   POST /api/:slug/records          submit up to 20 records (Idempotency-Key supported)
  *   GET  /api/:slug/tasks            maintainers: lease tasks (and list the ones held)
  *   POST /api/:slug/verdicts         maintainers: up to 20 verdicts on leased tasks
+ *   POST /api/:slug/tasks/release    maintainers: give held tasks back, untouched
  *
  * Admin (x-admin-password, closed until ADMIN_PASSWORD is set):
  *   POST  /api/admin/tokens          issue a maintainer token, shown once
@@ -42,6 +44,8 @@
  *                                    the requests channel: webhook, pause or resume, remove, test
  *   DELETE /api/admin/requests/:id   delete one data request
  *   GET   /api/admin/:slug/spot-check, POST .../spot-check/:recordId   the weekly accuracy check
+ *   GET   /api/admin/precedents, POST /api/admin/precedents/:id/adopt   the rules the admin's
+ *                                    decisions stated, until they are written into a config
  *   POST  /api/admin/maintenance     run the cron now: housekeeping, then the Discord posts
  *
  * Read routes answer any origin: the data is CC BY 4.0 and meant to be reused. Agents
@@ -66,10 +70,12 @@ import { listFrom, statsFrom } from '../shared/engine';
 import { consentRequiredFor, freshRequest, measurementIdFor, wantsTag, withAnalytics, type InjectionContext } from './analytics';
 import {
   activity,
+  adoptPrecedent,
   banCollector,
   createReport,
   decide,
   editRecord,
+  listPrecedents,
   listRecords as adminRecordList,
   markSpotCheck,
   overview,
@@ -94,15 +100,16 @@ import {
 } from './notify';
 import { ensureSchema } from './db';
 import { maintain } from './maintenance';
-import { applyVerdicts, LEASE_MAX, leaseTasks, workOf } from './maintainer';
+import { applyVerdicts, LEASE_MAX, leaseTasks, releaseTasks, workOf } from './maintainer';
 import { enforce, HOUR, RULES, sweep } from './ratelimit';
 import { appSummaries, datasetJson, getRecord, refreshDatasets } from './records';
 import { createRequest, deleteRequest, flushRequests, requestsAdmin, requestsTestMessage } from './requests';
-import { collectorSkill, maintainerSkill, publicSkill } from './skill';
+import { collectorSkill, maintainerSkill, publicSkill, skillVersion } from './skill';
 import { idempotencyKey, recall, remember, sourceExists, submitRecords } from './submit';
 import {
   adminTokens,
   authenticate,
+  capabilitiesOf,
   createCollectorToken,
   createMaintainerToken,
   PENDING_CAP_START,
@@ -195,8 +202,37 @@ function sameOriginOnly(c: AppContext): void {
 const DEFAULT_ORIGIN = 'https://data.manyfold.ai';
 const REPORTS_PER_HOUR = { limit: 10, windowMs: HOUR };
 
-const markdown = (c: AppContext, text: string) =>
-  c.body(text, 200, { 'content-type': 'text/markdown; charset=utf-8', 'cache-control': 'no-store' });
+const markdown = (c: AppContext, text: string, headers: Record<string, string> = {}) =>
+  c.body(text, 200, { 'content-type': 'text/markdown; charset=utf-8', 'cache-control': 'no-store', ...headers });
+
+/**
+ * The version of the instructions an agent follows, sent back on leases, verdicts and submits
+ * (X-Skill-Version): refused when missing for a maintainer's leases and verdicts, and for anyone when
+ * the rules changed since the agent read them. Its value is never told here: the agent gets it by
+ * reading them. A submit without one is taken, with a warning.
+ */
+async function requireSkillVersion(c: AppContext, config: DataAppConfig, token: Token, required: boolean): Promise<string | null> {
+  const skill = `GET ${originOf(c)}/api/${config.slug}/skill`;
+  const sent = c.req.header('x-skill-version');
+  if (!sent) {
+    if (!required) {
+      return `Send the header X-Skill-Version with the version of the instructions you follow (${skill} gives it): once the rules change, calls with an older version are refused until you read them again.`;
+    }
+    throw new HttpError(
+      428,
+      'skill_version_required',
+      `Send the header X-Skill-Version with the version of the instructions you follow: read ${skill} (its X-Skill-Version header, also named in the text) and follow them.`,
+    );
+  }
+  if (sent !== (await skillVersion(config, token.role))) {
+    throw new HttpError(
+      409,
+      'skill_changed',
+      `The instructions changed since you read them (you sent version ${sent}). Read ${skill} again, follow what changed, and send its version.`,
+    );
+  }
+  return null;
+}
 
 /** The token behind this request, counted against its per-minute limit. */
 async function agentToken(c: AppContext): Promise<Token> {
@@ -337,12 +373,13 @@ app.get('/api/:slug/skill', async (c) => {
   const token = await agentToken(c);
   requireApp(token, config.slug);
   const now = new Date();
-  return markdown(
-    c,
-    token.role === 'maintainer'
-      ? maintainerSkill(config, originOf(c), token, await workOf(c.env.DB, config, token, now), now)
-      : collectorSkill(config, originOf(c), token, await standing(c.env.DB, token, config.slug, now), now),
-  );
+  const version = await skillVersion(config, token.role);
+  const headers = { 'x-skill-version': version };
+  if (token.role === 'maintainer') {
+    const [work, capabilities] = await Promise.all([workOf(c.env.DB, config, token, now), capabilitiesOf(c.env.DB, token.id)]);
+    return markdown(c, maintainerSkill(config, originOf(c), token, work, now, { version, browser: capabilities.includes('browser') }), headers);
+  }
+  return markdown(c, collectorSkill(config, originOf(c), token, await standing(c.env.DB, token, config.slug, now), now, version), headers);
 });
 
 app.post('/api/:slug/records', async (c) => {
@@ -356,10 +393,12 @@ app.post('/api/:slug/records', async (c) => {
     const earlier = await recall(c.env.DB, token.id, key, now);
     if (earlier) return c.json(earlier);
   }
+  const versionWarning = await requireSkillVersion(c, config, token, false);
   const reply = await submitRecords(c.env.DB, config, token, await readJson(c), {
     now,
     sourceExists: (url) => sourceExists(url),
   });
+  if (versionWarning) reply.warnings.push(versionWarning);
   if (key) await remember(c.env.DB, token.id, key, reply, now);
   return c.json(reply);
 });
@@ -369,6 +408,7 @@ app.get('/api/:slug/tasks', async (c) => {
   const token = await agentToken(c);
   requireApp(token, config.slug);
   requireRole(token, ['maintainer']);
+  await requireSkillVersion(c, config, token, true);
   const raw = c.req.query('limit');
   const limit = raw === undefined ? LEASE_MAX : Number(raw);
   if (!Number.isInteger(limit) || limit < 1 || limit > LEASE_MAX) {
@@ -382,7 +422,17 @@ app.post('/api/:slug/verdicts', async (c) => {
   const token = await agentToken(c);
   requireApp(token, config.slug);
   requireRole(token, ['maintainer']);
+  await requireSkillVersion(c, config, token, true);
   return c.json(await applyVerdicts(c.env.DB, config, token, await readJson(c), new Date()));
+});
+
+/** Tasks a maintainer holds, given back untouched. Always open to it, whatever version it read. */
+app.post('/api/:slug/tasks/release', async (c) => {
+  const config = dataAppFor(c.req.param('slug'));
+  const token = await agentToken(c);
+  requireApp(token, config.slug);
+  requireRole(token, ['maintainer']);
+  return c.json(await releaseTasks(c.env.DB, config, token, await readJson(c), new Date()));
 });
 
 /* ───────── admin ───────── */
@@ -512,6 +562,12 @@ app.delete('/api/admin/requests/:id{[0-9]+}', async (c) => {
   await deleteRequest(c.env.DB, Number(c.req.param('id')));
   return c.json(await requestsAdmin(c.env.DB));
 });
+
+app.get('/api/admin/precedents', async (c) => c.json({ precedents: await listPrecedents(c.env.DB, c.req.query('all') === '1') }));
+
+app.post('/api/admin/precedents/:id{[0-9]+}/adopt', async (c) =>
+  c.json({ precedents: await adoptPrecedent(c.env.DB, Number(c.req.param('id')), new Date()) }),
+);
 
 app.get('/api/admin/:slug/review', async (c) => c.json({ items: await reviewQueue(c.env.DB, dataAppFor(c.req.param('slug'))) }));
 

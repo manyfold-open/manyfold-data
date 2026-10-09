@@ -16,43 +16,10 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { dataApps } from '../data-apps/index.ts';
 import { checkAccept, validateProvenance, validateRecordData, type DataAppConfig } from '../src/shared/data-app.ts';
+import { quoteOnPage } from '../src/shared/quote.ts';
 import type { SeedEntry } from './seed.ts';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-
-const ENTITIES: Record<string, string> = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ' };
-
-/**
- * Lowercase text with entities decoded and quotes, dashes and whitespace made uniform.
- * Whitespace before punctuation goes too: removing tags turns "5<sup>th</sup>," into "5th ,".
- */
-function normalize(value: string): string {
-  return value
-    .replace(/&#x([0-9a-f]+);/gi, (_, hex: string) => String.fromCodePoint(parseInt(hex, 16)))
-    .replace(/&#(\d+);/g, (_, dec: string) => String.fromCodePoint(Number(dec)))
-    .replace(/&([a-z]+);/gi, (match, name: string) => ENTITIES[name.toLowerCase()] ?? match)
-    .replace(/[‘’ʼ]/g, "'")
-    .replace(/[“”]/g, '"')
-    .replace(/[‐‑‒–—]/g, '-')
-    .replace(/\s+/g, ' ')
-    .replace(/ ([,.;:!?)])/g, '$1')
-    .trim()
-    .toLowerCase();
-}
-
-/** Visible text of a page: scripts and styles dropped, tags turned into spaces. */
-const visibleText = (html: string): string =>
-  html
-    .replace(/<(script|style|noscript)[\s\S]*?<\/\1>/gi, ' ')
-    .replace(/<[^>]+>/g, ' ');
-
-/** Raw page with JSON string escapes undone, for pages that ship their text inside JSON. */
-const unescapedHtml = (html: string): string =>
-  html
-    .replace(/\\u([0-9a-f]{4})/gi, (_, hex: string) => String.fromCharCode(parseInt(hex, 16)))
-    .replace(/\\n/g, ' ')
-    .replace(/\\"/g, '"')
-    .replace(/<[^>]+>/g, ' ');
 
 type Outcome = 'found' | 'missing' | `unreachable: ${string}`;
 
@@ -69,10 +36,7 @@ async function check(entry: SeedEntry): Promise<Outcome> {
   } catch (error) {
     return `unreachable: ${error instanceof Error ? error.message : String(error)}`;
   }
-  const quote = normalize(entry.evidence);
-  return normalize(visibleText(html)).includes(quote) || normalize(unescapedHtml(html)).includes(quote)
-    ? 'found'
-    : 'missing';
+  return quoteOnPage(html, entry.evidence) ? 'found' : 'missing';
 }
 
 /** A record's title, for the report: its first Table column. */

@@ -90,7 +90,8 @@ CREATE TABLE IF NOT EXISTS standings (
   PRIMARY KEY (token_id, app_slug)
 );
 
--- Maintainer work. A lease reserves a task for one token.
+-- Maintainer work. A lease reserves a task for one token. Status: open, leased, done, review (waits
+-- for the admin), blocked (parked as a duplicate of a record still waiting) or cancelled.
 CREATE TABLE IF NOT EXISTS tasks (
   id               TEXT PRIMARY KEY,
   app_slug         TEXT NOT NULL,
@@ -196,6 +197,48 @@ CREATE TABLE IF NOT EXISTS spot_checks (
   checked_at TEXT NOT NULL,
   PRIMARY KEY (week, record_id)
 );
+
+-- What a token can do beyond its role, such as open pages in a real browser.
+CREATE TABLE IF NOT EXISTS token_capabilities (
+  token_id   TEXT NOT NULL,
+  capability TEXT NOT NULL,
+  PRIMARY KEY (token_id, capability)
+);
+
+-- A task only some maintainers can do: one whose pages a maintainer could not open goes first to a
+-- maintainer with a browser, and to the admin after a day without one.
+CREATE TABLE IF NOT EXISTS task_needs (
+  task_id TEXT PRIMARY KEY,
+  need    TEXT NOT NULL,
+  since   TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS task_needs_need ON task_needs (need, since);
+
+-- A task parked (status 'blocked') until another record still waiting for review is decided: a
+-- maintainer found its record a duplicate of that one (src/worker/waits.ts).
+CREATE TABLE IF NOT EXISTS task_waits (
+  task_id    TEXT PRIMARY KEY,
+  record_id  TEXT NOT NULL,
+  waits_for  TEXT NOT NULL,
+  by_token   TEXT NOT NULL,
+  created_at TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS task_waits_for ON task_waits (waits_for);
+
+-- The admin's decisions that state a rule, kept until the rule is written into the data app's config.
+CREATE TABLE IF NOT EXISTS precedents (
+  id         INTEGER PRIMARY KEY AUTOINCREMENT,
+  app_slug   TEXT NOT NULL,
+  record_id  TEXT NOT NULL,
+  decision   TEXT NOT NULL,
+  rule       TEXT NOT NULL,
+  created_at TEXT NOT NULL,
+  adopted_at TEXT
+);
+CREATE INDEX IF NOT EXISTS precedents_open ON precedents (created_at) WHERE adopted_at IS NULL;
+
+-- A record's spot checks, read for the quality of the maintainer whose verdict they look at again.
+CREATE INDEX IF NOT EXISTS spot_checks_record ON spot_checks (record_id, checked_at);
 
 -- Fixed-window counters for rate limits, the same shape as tarot_rate.
 CREATE TABLE IF NOT EXISTS rate_counters (

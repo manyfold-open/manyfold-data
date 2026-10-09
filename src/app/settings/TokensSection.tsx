@@ -1,9 +1,9 @@
 import { Fragment, useState } from 'react';
 import { dataApps } from '../../../data-apps/index';
-import type { AdminToken, IssuedToken, RevertReport } from '../../shared/types';
+import type { AdminToken, IssuedToken, MaintainerQuality, RevertReport } from '../../shared/types';
 import { formatCount, formatTime } from '../format';
 import { send, useAdmin } from './adminApi';
-import { DateField, Select } from '../ui';
+import { CheckRow, DateField, Select } from '../ui';
 import { Action, Badge, Field, Notice, plural, share, When } from './ui';
 
 /** The token's name, with an inline rename: the new name shows in every history at once. */
@@ -158,6 +158,29 @@ function Cap({ token, onDone }: { token: AdminToken; onDone: (message: string) =
   );
 }
 
+/** How a maintainer's verdicts held up over 30 days: how often it could not decide, and what the admin overturned. */
+function Quality({ quality }: { quality: MaintainerQuality }) {
+  return (
+    <div className="muted small">
+      30 days: {plural(quality.verdicts, 'verdict')} · {formatCount(quality.unsure)} to you · {formatCount(quality.deferred)} handed on ·
+      overturned {formatCount(quality.overturned)} of {formatCount(quality.checked)} looked at again
+      {quality.warnings.length > 0 ? <p className="notice small">{quality.warnings[0]}</p> : null}
+    </div>
+  );
+}
+
+/** Whether a maintainer has a browser: it gets first the tasks whose pages others could not open. */
+function BrowserSwitch({ token, onDone }: { token: AdminToken; onDone: (message: string) => void }) {
+  const has = token.capabilities.includes('browser');
+  return (
+    <Action
+      label={has ? 'Take the browser away' : 'Has a browser'}
+      run={() => send('PATCH', `/tokens/${token.id}`, { capabilities: has ? [] : ['browser'] })}
+      onDone={() => onDone(has ? `${token.label} no longer gets tasks that need a browser.` : `${token.label} now gets the tasks that need a browser first.`)}
+    />
+  );
+}
+
 /** How many verdicts a maintainer may send a day (UTC). It applies from its next lease. */
 function DailyLimit({ token, onDone }: { token: AdminToken; onDone: (message: string) => void }) {
   const [limit, setLimit] = useState(String(token.daily_task_limit ?? 100));
@@ -186,6 +209,7 @@ function Issue({ onIssued }: { onIssued: () => void }) {
   const [apps, setApps] = useState('*');
   const [limit, setLimit] = useState('100');
   const [expires, setExpires] = useState('');
+  const [browser, setBrowser] = useState(false);
   const [issued, setIssued] = useState<IssuedToken | null>(null);
   const [copied, setCopied] = useState(false);
 
@@ -252,6 +276,12 @@ function Issue({ onIssued }: { onIssued: () => void }) {
       <Field label="Expires (optional)">
         <DateField label="Expires (optional)" value={expires} onChange={setExpires} />
       </Field>
+      <CheckRow
+        checked={browser}
+        label="Has a browser"
+        sub="Gets first the tasks whose pages other maintainers could not open."
+        onToggle={() => setBrowser(!browser)}
+      />
       <Action
         label="Issue maintainer token"
         run={() =>
@@ -260,6 +290,7 @@ function Issue({ onIssued }: { onIssued: () => void }) {
             apps: [apps],
             daily_task_limit: Number(limit),
             ...(expires ? { expires_at: `${expires}T23:59:59Z` } : {}),
+            ...(browser ? { capabilities: ['browser'] } : {}),
           })
         }
         onDone={(result) => {
@@ -313,7 +344,11 @@ export default function TokensSection() {
                 <tr className="has-actions">
                   <td className="wrap">
                     <Name token={token} onDone={done} />
-                    <div className="muted small">{token.apps.join(', ')}</div>
+                    <div className="muted small">
+                      {token.apps.join(', ')}
+                      {token.capabilities.includes('browser') ? ' · has a browser' : ''}
+                    </div>
+                    {token.quality ? <Quality quality={token.quality} /> : null}
                   </td>
                   <td>
                     <Badge value={token.status} />
@@ -332,6 +367,7 @@ export default function TokensSection() {
                     <div className="row-actions">
                       <StatusActions token={token} onDone={done} />
                       {token.status === 'revoked' ? null : <DailyLimit token={token} onDone={done} />}
+                      {token.status === 'revoked' ? null : <BrowserSwitch token={token} onDone={done} />}
                       <Undo token={token} onDone={done} />
                     </div>
                   </td>

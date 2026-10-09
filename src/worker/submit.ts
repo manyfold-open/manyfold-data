@@ -76,6 +76,35 @@ export async function sourceExists(url: string, fetcher: typeof fetch = fetch): 
   }
 }
 
+/** The most of a page the server reads to look for a passage. */
+const PAGE_MAX = 2_000_000;
+
+/**
+ * A page's text, as a plain request gets it, or null when it cannot be read that way (blocked,
+ * not text, too big, no answer). Before a maintainer's "cannot open" sends a task to someone with a
+ * browser, the server reads the page itself: if the passage is there, no browser is needed.
+ */
+export async function pageText(url: string, fetcher: typeof fetch = fetch): Promise<string | null> {
+  try {
+    const page = await fetcher(url, {
+      redirect: 'follow',
+      headers: {
+        'user-agent': 'Mozilla/5.0 (compatible; ManyfoldData/0.1; +https://data.manyfold.ai)',
+        accept: 'text/html,application/xhtml+xml,text/plain;q=0.9,*/*;q=0.5',
+      },
+      signal: AbortSignal.timeout(8000),
+    });
+    const type = page.headers.get('content-type') ?? '';
+    if (!page.ok || !/text|html|json/.test(type) || Number(page.headers.get('content-length') ?? 0) > PAGE_MAX) {
+      await page.body?.cancel();
+      return null;
+    }
+    return (await page.text()).slice(0, PAGE_MAX);
+  } catch {
+    return null;
+  }
+}
+
 interface Candidate {
   index: number;
   data: RecordData;

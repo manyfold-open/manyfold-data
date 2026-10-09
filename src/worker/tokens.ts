@@ -5,7 +5,7 @@
  */
 
 import { cleanText } from '../shared/data-app';
-import type { AdminToken, RecordStatus, Standing } from '../shared/types';
+import type { AdminToken, MaintainerQuality, RecordStatus, Standing } from '../shared/types';
 import { newId, newSecret, SECRET, sha256Hex } from './ids';
 import { HttpError } from './types';
 
@@ -137,6 +137,43 @@ export async function authenticate(db: D1Database, header: string | undefined, n
   return token;
 }
 
+/** What a token can do beyond its role. A maintainer with a browser opens pages others cannot. */
+export type Capability = 'browser';
+export const CAPABILITIES: readonly Capability[] = ['browser'];
+
+/** The capabilities the admin gave a token. */
+export async function capabilitiesOf(db: D1Database, tokenId: string): Promise<Capability[]> {
+  const { results } = await db.prepare('SELECT capability FROM token_capabilities WHERE token_id = ?').bind(tokenId).all<{ capability: Capability }>();
+  return results.map((row) => row.capability).filter((capability) => CAPABILITIES.includes(capability));
+}
+
+/** Whether an active maintainer of this data app has a capability, so work that needs it has someone to go to. */
+export async function someoneCan(db: D1Database, capability: Capability, slug: string): Promise<boolean> {
+  const { results } = await db
+    .prepare(
+      `SELECT t.apps_json FROM token_capabilities c JOIN tokens t ON t.id = c.token_id
+       WHERE c.capability = ? AND t.role = 'maintainer' AND t.status = 'active'`,
+    )
+    .bind(capability)
+    .all<{ apps_json: string }>();
+  return results.some((row) => {
+    const apps = JSON.parse(row.apps_json) as string[];
+    return apps.includes('*') || apps.includes(slug);
+  });
+}
+
+function parseCapabilities(value: unknown): Capability[] {
+  if (!Array.isArray(value) || !value.every((item) => typeof item === 'string' && (CAPABILITIES as readonly string[]).includes(item))) {
+    throw new HttpError(422, 'invalid_body', `capabilities must list some of ${CAPABILITIES.join(', ')}, or be [].`);
+  }
+  return [...new Set(value as Capability[])];
+}
+
+const setCapabilities = (db: D1Database, tokenId: string, capabilities: readonly Capability[]): D1PreparedStatement[] => [
+  db.prepare('DELETE FROM token_capabilities WHERE token_id = ?').bind(tokenId),
+  ...capabilities.map((capability) => db.prepare('INSERT INTO token_capabilities (token_id, capability) VALUES (?, ?)').bind(tokenId, capability)),
+];
+
 /** Refuses a token that was not issued for this data app. */
 export function requireApp(token: Token, slug: string): void {
   if (!token.apps.includes('*') && !token.apps.includes(slug)) {
@@ -236,14 +273,17 @@ export function moveStanding(db: D1Database, recordId: string, to: RecordStatus,
 /**
  * A token's records on one data app by status, its cap, and what it should change. Agents ask on every
  * skill fetch, submit and GET /me, so this reads the token's waiting records, which its cap keeps few
- * (through records_submitter), and one standings row: never its whole history.
+ * (through records_submitter), and one standings row: never its whole history. Records waiting for the
+ * admin do not count against the cap: a maintainer's doubt is not the collector's doing, and the cap
+ * is there to keep the maintainers' queue short.
  */
 export async function standing(db: D1Database, token: Token, slug: string, now: Date): Promise<Standing> {
   // One statement: GET /me asks this for every data app a token works on.
   const row = await db
     .prepare(
-      `SELECT (SELECT COUNT(*) FROM records INDEXED BY records_submitter
-                WHERE submitted_by = ?1 AND status = 'pending' AND app_slug = ?2) AS pending,
+      `SELECT (SELECT COUNT(*) FROM records r INDEXED BY records_submitter
+                WHERE r.submitted_by = ?1 AND r.status = 'pending' AND r.app_slug = ?2
+                  AND NOT EXISTS (SELECT 1 FROM tasks k INDEXED BY tasks_record WHERE k.record_id = r.id AND k.status = 'review')) AS pending,
               s.verified, s.rejected, s.merged, s.stale, s.counted_at
        FROM (SELECT 1) LEFT JOIN standings s ON s.token_id = ?1 AND s.app_slug = ?2`,
     )
@@ -269,8 +309,8 @@ export async function standing(db: D1Database, token: Token, slug: string, now: 
 
 /* ───────── admin ───────── */
 
-/** Revision actions that count as a maintainer's verdicts. */
-export const VERDICT_ACTIONS = ['verify', 'reject', 'merge', 'stale', 'unsure'] as const;
+/** Revision actions that count as a maintainer's verdicts: one per verdict ('defer' hands a task on). */
+export const VERDICT_ACTIONS = ['verify', 'reject', 'merge', 'stale', 'unsure', 'defer'] as const;
 const VERDICT_SQL = VERDICT_ACTIONS.map((action) => `'${action}'`).join(', ');
 
 /** Tasks a maintainer may take in one UTC day, unless the admin sets another number. */
@@ -301,7 +341,7 @@ function expiry(value: unknown, now: Date): string | null {
 /** A maintainer token, issued by the admin. Returns the secret, which is never stored. */
 export async function createMaintainerToken(
   db: D1Database,
-  input: { label?: unknown; apps?: unknown; daily_task_limit?: unknown; expires_at?: unknown },
+  input: { label?: unknown; apps?: unknown; daily_task_limit?: unknown; expires_at?: unknown; capabilities?: unknown },
   knownSlugs: readonly string[],
   now: Date,
 ): Promise<{ token: Token; secret: string }> {
@@ -319,6 +359,7 @@ export async function createMaintainerToken(
   }
   const dailyTaskLimit =
     input.daily_task_limit === undefined ? DAILY_TASK_LIMIT : wholeNumber(input.daily_task_limit, 'daily_task_limit', 10_000);
+  const capabilities = input.capabilities === undefined ? [] : parseCapabilities(input.capabilities);
   const secret = newSecret();
   const token: Token = {
     id: newId('tok', now.getTime()),
@@ -331,14 +372,16 @@ export async function createMaintainerToken(
     expiresAt: expiry(input.expires_at, now),
     createdAt: now.toISOString(),
   };
-  await db
-    .prepare(
-      `INSERT INTO tokens (id, secret_hash, role, label, apps_json, status, pending_cap, daily_task_limit, expires_at, created_at)
-       VALUES (?, ?, 'maintainer', ?, ?, 'active', ?, ?, ?, ?)`,
-    )
-    .bind(token.id, await sha256Hex(secret), label, JSON.stringify(token.apps), token.pendingCap, dailyTaskLimit,
-      token.expiresAt, token.createdAt)
-    .run();
+  await db.batch([
+    db
+      .prepare(
+        `INSERT INTO tokens (id, secret_hash, role, label, apps_json, status, pending_cap, daily_task_limit, expires_at, created_at)
+         VALUES (?, ?, 'maintainer', ?, ?, 'active', ?, ?, ?, ?)`,
+      )
+      .bind(token.id, await sha256Hex(secret), label, JSON.stringify(token.apps), token.pendingCap, dailyTaskLimit,
+        token.expiresAt, token.createdAt),
+    ...setCapabilities(db, token.id, capabilities),
+  ]);
   return { token, secret };
 }
 
@@ -349,6 +392,81 @@ interface AdminTokenRow extends TokenRow {
   rejected: number;
   verdicts_total: number;
   verdicts_today: number;
+  capabilities_json: string | null;
+}
+
+/** How far back a maintainer's record is read. */
+const QUALITY_DAYS = 30;
+
+/** A verdict's outcome, to compare with the admin's: what the record became. */
+const OUTCOME: Readonly<Record<string, string>> = {
+  verify: 'verified',
+  reject: 'rejected',
+  merge: 'merged',
+  stale: 'stale',
+  reopen: 'pending',
+};
+
+/**
+ * A maintainer's last 30 days: its verdicts, how often it could not decide, and how its decisions
+ * held up where the admin looked again — the admin deciding the same record later, or a spot check
+ * marking it. Reads the token's own revisions of those days through its index, and a row or two for
+ * each verdict: for the console and for the admin's decisions, never on an agent's call.
+ */
+export async function maintainerQuality(db: D1Database, tokenId: string, now: Date): Promise<MaintainerQuality> {
+  const since = new Date(now.getTime() - QUALITY_DAYS * 24 * 60 * 60 * 1000).toISOString();
+  const [counts, decided] = await db.batch([
+    db
+      .prepare(
+        `SELECT COUNT(*) AS verdicts, COUNT(*) FILTER (WHERE action = 'unsure') AS unsure, COUNT(*) FILTER (WHERE action = 'defer') AS deferred
+         FROM revisions INDEXED BY revisions_actor_time WHERE actor = ? AND created_at >= ? AND action IN (${VERDICT_SQL})`,
+      )
+      .bind(tokenId, since),
+    db
+      .prepare(
+        `SELECT v.action AS mine,
+           (SELECT a.action FROM revisions a INDEXED BY revisions_record WHERE a.record_id = v.record_id AND a.id > v.id AND a.actor = 'admin'
+              AND a.action IN ('verify', 'reject', 'merge', 'stale', 'reopen') ORDER BY a.id LIMIT 1) AS admin_action,
+           (SELECT s.correct FROM spot_checks s INDEXED BY spot_checks_record WHERE s.record_id = v.record_id AND s.checked_at >= v.created_at
+              ORDER BY s.checked_at DESC LIMIT 1) AS spot
+         FROM revisions v INDEXED BY revisions_actor_time
+         WHERE v.actor = ? AND v.created_at >= ? AND v.action IN ('verify', 'reject', 'merge', 'stale')`,
+      )
+      .bind(tokenId, since),
+  ]);
+  const count = (counts?.results[0] ?? {}) as { verdicts?: number; unsure?: number; deferred?: number };
+  let checked = 0;
+  let overturned = 0;
+  for (const row of (decided?.results ?? []) as { mine: string; admin_action: string | null; spot: number | null }[]) {
+    if (row.admin_action === null && row.spot === null) continue;
+    checked += 1;
+    if ((row.admin_action !== null && OUTCOME[row.admin_action] !== OUTCOME[row.mine]) || row.spot === 0) overturned += 1;
+  }
+  const verdicts = Number(count.verdicts ?? 0);
+  const unsure = Number(count.unsure ?? 0);
+  const warnings: string[] = [];
+  if (checked >= 5 && overturned / checked > 0.3) {
+    warnings.push(
+      `The admin overturned ${overturned} of the ${checked} verdicts of this token it looked at again in the last ${QUALITY_DAYS} days. A maintainer token is suspended once more than half of 10 or more are overturned.`,
+    );
+  }
+  if (verdicts >= 20 && unsure / verdicts > 0.15) {
+    warnings.push(`${unsure} of its ${verdicts} verdicts in the last ${QUALITY_DAYS} days went to the admin as unsure.`);
+  }
+  return { verdicts, unsure, deferred: Number(count.deferred ?? 0), checked, overturned, warnings };
+}
+
+/** Maintainer tokens are suspended once this many of their verdicts were looked at again and over half were overturned. */
+export const MAINTAINER_SUSPEND_AFTER = 10;
+
+/** Suspends an active maintainer whose checked verdicts were mostly overturned, handing back what it holds. */
+export async function suspendMaintainerIfFailing(db: D1Database, tokenId: string, now: Date): Promise<boolean> {
+  const quality = await maintainerQuality(db, tokenId, now);
+  if (quality.checked < MAINTAINER_SUSPEND_AFTER || quality.overturned / quality.checked <= 0.5) return false;
+  const result = await db.prepare(`UPDATE tokens SET status = 'suspended' WHERE id = ? AND role = 'maintainer' AND status = 'active'`).bind(tokenId).run();
+  if (!Number(result.meta.changes ?? 0)) return false;
+  await db.prepare(`UPDATE tasks SET status = 'open', leased_to = NULL, lease_expires_at = NULL WHERE leased_to = ? AND status = 'leased'`).bind(tokenId).run();
+  return true;
 }
 
 /** Tokens as the admin sees them, newest first: no secrets, with their records and verdicts. */
@@ -366,14 +484,15 @@ export async function adminTokens(
          (SELECT COUNT(*) FROM records r WHERE r.submitted_by = t.id AND r.status = 'rejected') AS rejected,
          (SELECT COUNT(*) FROM revisions v WHERE v.actor = t.id AND v.action IN (${VERDICT_SQL})) AS verdicts_total,
          (SELECT COUNT(*) FROM revisions v WHERE v.actor = t.id AND v.action IN (${VERDICT_SQL})
-            AND v.created_at >= ?) AS verdicts_today
+            AND v.created_at >= ?) AS verdicts_today,
+         (SELECT json_group_array(c.capability) FROM token_capabilities c WHERE c.token_id = t.id) AS capabilities_json
        FROM tokens t
        WHERE (? IS NULL OR t.role = ?) AND (? IS NULL OR t.id = ?)
        ORDER BY t.created_at DESC`,
     )
     .bind(dayStart(now), filter.role ?? null, filter.role ?? null, filter.id ?? null, filter.id ?? null)
     .all<AdminTokenRow>();
-  return results.map((row) => {
+  return Promise.all(results.map(async (row) => {
     const token = toToken(row);
     return {
       id: token.id,
@@ -388,8 +507,10 @@ export async function adminTokens(
       created_at: token.createdAt,
       records: { pending: row.pending, verified: row.verified, rejected: row.rejected },
       verdicts: { total: row.verdicts_total, today: row.verdicts_today },
+      capabilities: (JSON.parse(row.capabilities_json ?? '[]') as (string | null)[]).filter((value): value is string => Boolean(value)),
+      quality: token.role === 'maintainer' && token.status !== 'revoked' ? await maintainerQuality(db, token.id, now) : null,
     };
-  });
+  }));
 }
 
 /**
@@ -399,7 +520,7 @@ export async function adminTokens(
 export async function updateToken(
   db: D1Database,
   id: string,
-  patch: { label?: unknown; status?: unknown; pending_cap?: unknown; daily_task_limit?: unknown; expires_at?: unknown },
+  patch: { label?: unknown; status?: unknown; pending_cap?: unknown; daily_task_limit?: unknown; expires_at?: unknown; capabilities?: unknown },
   now: Date,
 ): Promise<AdminToken> {
   const [current] = await adminTokens(db, now, { id });
@@ -434,10 +555,13 @@ export async function updateToken(
     sets.push('expires_at = ?');
     values.push(expiry(patch.expires_at, now));
   }
-  if (sets.length === 0) {
-    throw new HttpError(422, 'invalid_body', 'Send at least one of label, status, pending_cap, daily_task_limit or expires_at.');
+  const capabilities = patch.capabilities === undefined ? null : parseCapabilities(patch.capabilities);
+  if (capabilities && current.role !== 'maintainer') throw new HttpError(422, 'invalid_body', 'Only maintainer tokens have capabilities.');
+  if (sets.length === 0 && !capabilities) {
+    throw new HttpError(422, 'invalid_body', 'Send at least one of label, status, pending_cap, daily_task_limit, expires_at or capabilities.');
   }
-  const statements = [db.prepare(`UPDATE tokens SET ${sets.join(', ')} WHERE id = ?`).bind(...values, id)];
+  const statements = sets.length > 0 ? [db.prepare(`UPDATE tokens SET ${sets.join(', ')} WHERE id = ?`).bind(...values, id)] : [];
+  if (capabilities) statements.push(...setCapabilities(db, id, capabilities));
   if (patch.status === 'suspended' || patch.status === 'revoked') {
     statements.push(
       db

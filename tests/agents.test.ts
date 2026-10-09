@@ -4,6 +4,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { app } from '../src/worker/index';
 import { newId, newSecret, SECRET, sha256Hex } from '../src/worker/ids';
 import { createD1 } from './d1';
+import { versionOf } from './versions';
 
 let env: { DB: D1Database; ASSETS: Fetcher };
 
@@ -63,10 +64,16 @@ const record = (n: number, overrides: Record<string, unknown> = {}) => ({
   ...overrides,
 });
 
-const submit = (token: string, records: unknown[], headers: Record<string, string> = {}) =>
+// A collector that read its instructions sends their version back.
+const submit = async (token: string, records: unknown[], headers: Record<string, string> = {}) =>
   call('/api/ai-hackathons/records', {
     method: 'POST',
-    headers: { authorization: `Bearer ${token}`, 'content-type': 'application/json', ...headers },
+    headers: {
+      authorization: `Bearer ${token}`,
+      'content-type': 'application/json',
+      ...('x-no-skill-version' in headers ? {} : { 'x-skill-version': await versionOf('ai-hackathons', 'collector') }),
+      ...headers,
+    },
     body: JSON.stringify({ records }),
   });
 

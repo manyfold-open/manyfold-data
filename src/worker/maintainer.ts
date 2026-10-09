@@ -1,5 +1,5 @@
 /**
- * Maintainers' work: leasing tasks and applying verdicts.
+ * Maintainers' work: leasing tasks, applying verdicts, and giving tasks back.
  *
  * A lease reserves a task for one token for 30 minutes; a verdict only counts for a task
  * leased to the token sending it, while the lease lasts, and never for a record the same
@@ -10,13 +10,24 @@
  *   task     verdicts allowed               record
  *   verify   verified rejected duplicate    pending  -> verified | rejected | merged
  *   recheck  verified stale                 verified -> verified (again) | stale
- *   either   unsure                         unchanged; the task waits for the admin
+ *   either   unsure                         unchanged; who decides depends on unsure_type
  *
- * A page the maintainer could not read is unsure, never grounds to reject or mark stale:
- * such verdicts are refused with an error that says so.
+ * An unsure verdict says why, and that says who decides instead (AGENTS.md, invariant 21):
+ *
+ *   cannot_open        a maintainer of the app with a browser, if one is active; otherwise the
+ *                      admin. Refused when the server reads the passage on the page itself.
+ *   duplicate_pending  nobody: the task is parked until the record it duplicates is decided,
+ *                      then merged into it, or opened again (src/worker/waits.ts)
+ *   conflict           a second maintainer; if that one finds a conflict too, the admin
+ *   policy             the admin
+ *
+ * Handing a task on is a 'defer' revision; sending it to the admin, 'unsure'. A token sends at
+ * most HUMAN_DAILY_MAX tasks a day to the admin, and never gets a task again for a record it
+ * could not decide. A page the maintainer could not read is never grounds to reject or mark
+ * stale: such verdicts are refused with an error that says so.
  *
  * Collectors whose records fail review often are suspended: 10 or more reviewed records
- * with more than half rejected.
+ * with more than half rejected. Maintainers answer for their verdicts too (tokens.ts).
  */
 
 import {
@@ -28,10 +39,25 @@ import {
   type FieldError,
   type RecordData,
 } from '../shared/data-app';
-import type { LeaseResponse, LeasedTask, TaskKind, Verdict, VerdictResult, VerdictsResponse, Work } from '../shared/types';
+import { quoteOnPage } from '../shared/quote';
+import { UNSURE_TYPES } from '../shared/types';
+import type {
+  LeaseResponse,
+  LeasedTask,
+  ReleaseResponse,
+  Routed,
+  TaskKind,
+  UnsureType,
+  Verdict,
+  VerdictResult,
+  VerdictsResponse,
+  Work,
+} from '../shared/types';
 import { MINUTE } from './ratelimit';
-import { DAILY_TASK_LIMIT, moveStanding, tallyOf, VERDICT_ACTIONS, type Token } from './tokens';
+import { pageText } from './submit';
+import { capabilitiesOf, DAILY_TASK_LIMIT, moveStanding, someoneCan, tallyOf, VERDICT_ACTIONS, type Token } from './tokens';
 import { HttpError } from './types';
+import { resolveWaiting } from './waits';
 
 export const LEASE_MS = 30 * MINUTE;
 export const LEASE_MAX = 10;
@@ -45,6 +71,17 @@ const VERDICTS: Record<TaskKind, readonly Verdict[]> = {
   verify: ['verified', 'rejected', 'duplicate', 'unsure'],
   recheck: ['verified', 'stale', 'unsure'],
 };
+
+/** The most tasks one maintainer token may send to the admin in a UTC day. */
+export const HUMAN_DAILY_MAX = 25;
+
+/** What each unsure_type means, for the error an agent gets without one. */
+const UNSURE_HELP =
+  'cannot_open (no page that would settle it opens, even with a browser User-Agent), duplicate_pending (it duplicates another record still waiting for review; give its id as duplicate_of), conflict (its sources disagree and you cannot tell which is right) or policy (the rules do not say how to decide it)';
+
+/** A record this token already could not decide is never leased to it again: someone else looks. */
+const NOT_MINE = `AND NOT EXISTS (SELECT 1 FROM revisions v INDEXED BY revisions_record
+  WHERE v.record_id = r.id AND v.actor = ?1 AND v.action IN ('unsure', 'defer'))`;
 
 const dayStart = (now: Date) => `${now.toISOString().slice(0, 10)}T00:00:00.000Z`;
 
@@ -74,6 +111,7 @@ interface HeldRow {
   task_id: string;
   kind: TaskKind;
   lease_expires_at: string;
+  need: string | null;
   id: string;
   status: 'pending' | 'verified';
   data_json: string;
@@ -86,8 +124,10 @@ interface HeldRow {
 
 /**
  * Leases open tasks — and tasks whose lease ran out — until the token holds `limit`,
- * within its daily limit, oldest first, skipping records it submitted itself. Returns
- * every task the token holds now, so an agent that lost its place picks up where it was.
+ * within its daily limit, oldest first, skipping records it submitted itself and records it
+ * could not decide before. A maintainer with a browser takes first the tasks that need one;
+ * others never get those. Returns every task the token holds now, so an agent that lost its
+ * place picks up where it was.
  */
 export async function leaseTasks(
   db: D1Database,
@@ -100,28 +140,48 @@ export async function leaseTasks(
   const work = await workOf(db, config, token, now);
   const room = Math.max(0, Math.min(limit - work.leased, work.daily_task_limit - work.done_today - work.leased));
   if (room > 0) {
+    const until = new Date(now.getTime() + LEASE_MS).toISOString();
+    let left = room;
+    // A maintainer with a browser takes first the tasks that need one, longest waiting first.
+    if ((await capabilitiesOf(db, token.id)).includes('browser')) {
+      const taken = await db
+        .prepare(
+          `UPDATE tasks SET status = 'leased', leased_to = ?1, lease_expires_at = ?2
+           WHERE id IN (
+             SELECT t.id FROM task_needs n INDEXED BY task_needs_need JOIN tasks t ON t.id = n.task_id JOIN records r ON r.id = t.record_id
+             WHERE n.need = 'browser' AND t.app_slug = ?3 AND t.status IN ('open', 'leased') AND (t.status = 'open' OR t.lease_expires_at <= ?4)
+               AND r.submitted_by != ?1 AND r.flagged = 0 ${NOT_MINE}
+             ORDER BY n.since LIMIT ?5)`,
+        )
+        .bind(token.id, until, config.slug, at, left)
+        .run();
+      left -= Number(taken.meta.changes ?? 0);
+    }
     // One statement, so two maintainers leasing at once can never get the same task. It walks the
     // queue in order through tasks_open, which holds only open and leased tasks, and stops at `room`:
     // done tasks are never deleted, and walking them cost every lease the app's whole history.
     // `t.status IN (...)` must stay word for word the index's WHERE, or SQLite cannot use it.
-    await db
-      .prepare(
-        `UPDATE tasks SET status = 'leased', leased_to = ?1, lease_expires_at = ?2
-         WHERE id IN (
-           SELECT t.id FROM tasks t INDEXED BY tasks_open JOIN records r ON r.id = t.record_id
-           WHERE t.app_slug = ?3 AND t.status IN ('open', 'leased') AND (t.status = 'open' OR t.lease_expires_at <= ?4)
-             AND r.submitted_by != ?1 AND r.flagged = 0
-           ORDER BY t.created_at, t.id
-           LIMIT ?5)`,
-      )
-      .bind(token.id, new Date(now.getTime() + LEASE_MS).toISOString(), config.slug, at, room)
-      .run();
+    if (left > 0) {
+      await db
+        .prepare(
+          `UPDATE tasks SET status = 'leased', leased_to = ?1, lease_expires_at = ?2
+           WHERE id IN (
+             SELECT t.id FROM tasks t INDEXED BY tasks_open JOIN records r ON r.id = t.record_id
+             WHERE t.app_slug = ?3 AND t.status IN ('open', 'leased') AND (t.status = 'open' OR t.lease_expires_at <= ?4)
+               AND r.submitted_by != ?1 AND r.flagged = 0
+               AND NOT EXISTS (SELECT 1 FROM task_needs n WHERE n.task_id = t.id) ${NOT_MINE}
+             ORDER BY t.created_at, t.id
+             LIMIT ?5)`,
+        )
+        .bind(token.id, until, config.slug, at, left)
+        .run();
+    }
   }
   const { results } = await db
     .prepare(
-      `SELECT t.id AS task_id, t.kind, t.lease_expires_at, r.id, r.status, r.data_json, r.source_url, r.evidence,
+      `SELECT t.id AS task_id, t.kind, t.lease_expires_at, n.need, r.id, r.status, r.data_json, r.source_url, r.evidence,
          r.observed_at, r.created_at, r.verified_at
-       FROM tasks t JOIN records r ON r.id = t.record_id
+       FROM tasks t JOIN records r ON r.id = t.record_id LEFT JOIN task_needs n ON n.task_id = t.id
        WHERE t.leased_to = ? AND t.app_slug = ? AND t.status = 'leased' AND t.lease_expires_at > ?
        ORDER BY t.created_at, t.id`,
     )
@@ -131,6 +191,7 @@ export async function leaseTasks(
     id: row.task_id,
     kind: row.kind,
     lease_expires_at: row.lease_expires_at,
+    needs: row.need,
     record: {
       id: row.id,
       status: row.status,
@@ -155,6 +216,8 @@ interface TaskRow {
   status: string;
   identity_key: string;
   data_json: string;
+  source_url: string;
+  evidence: string;
   submitted_by: string;
 }
 
@@ -193,6 +256,149 @@ const COULD_NOT_READ: readonly RegExp[] = [
 
 export const couldNotRead = (reason: string): boolean => COULD_NOT_READ.some((pattern) => pattern.test(reason));
 
+type Prepared =
+  | { task: TaskRow; verdict: Verdict; statements: D1PreparedStatement[]; recordStatus: string; routed?: Routed }
+  | { errors: FieldError[] };
+
+type RevisionOf = (action: string, after: unknown, extra?: { reason?: string; source_url?: string; evidence?: string }) => D1PreparedStatement;
+
+const isUnsureType = (value: unknown): value is UnsureType => typeof value === 'string' && (UNSURE_TYPES as readonly string[]).includes(value);
+
+/** Tasks this token sent to the admin since midnight UTC, read through its own day of revisions. */
+async function escalatedToday(db: D1Database, token: Token, now: Date): Promise<number> {
+  const row = await db
+    .prepare(`SELECT COUNT(*) AS n FROM revisions INDEXED BY revisions_actor_time WHERE actor = ? AND created_at >= ? AND action = 'unsure'`)
+    .bind(token.id, dayStart(now))
+    .first<{ n: number }>();
+  return Number(row?.n ?? 0);
+}
+
+/** Other maintainers who already found this record's sources in conflict. */
+async function conflictsBefore(db: D1Database, recordId: string, token: Token): Promise<number> {
+  const { results } = await db
+    .prepare(`SELECT actor, after_json FROM revisions INDEXED BY revisions_record WHERE record_id = ? AND action IN ('unsure', 'defer') AND actor != ?`)
+    .bind(recordId, token.id)
+    .all<{ actor: string; after_json: string }>();
+  return new Set(results.filter((row) => (JSON.parse(row.after_json) as { unsure_type?: string }).unsure_type === 'conflict').map((row) => row.actor)).size;
+}
+
+/**
+ * An unsure verdict, routed by its unsure_type: to a maintainer with a browser, to a second
+ * maintainer, parked behind the record it duplicates, or to the admin. Only the admin's share
+ * counts against HUMAN_DAILY_MAX.
+ */
+async function prepareUnsure(
+  db: D1Database,
+  config: DataAppConfig,
+  token: Token,
+  task: TaskRow,
+  item: Record<string, unknown>,
+  reason: string,
+  revision: RevisionOf,
+  closeTask: (status: 'done' | 'review') => D1PreparedStatement,
+  now: Date,
+  fetcher: typeof fetch,
+): Promise<Prepared> {
+  const type = item.unsure_type;
+  if (!isUnsureType(type)) return { errors: [{ field: 'unsure_type', message: `must say why you cannot decide: ${UNSURE_HELP}` }] };
+  const at = now.toISOString();
+  const after = (extra: Record<string, unknown> = {}) => ({ status: task.status, unsure_type: type, ...extra });
+  const toAdmin = async (): Promise<Prepared> => {
+    const sent = await escalatedToday(db, token, now);
+    if (sent >= HUMAN_DAILY_MAX) {
+      return {
+        errors: [{
+          field: 'verdict',
+          message: `you have sent ${sent} tasks to the Manyfold team today, the most one token may: decide this one if the rules settle it, or give it back with POST /api/${config.slug}/tasks/release for another maintainer`,
+        }],
+      };
+    }
+    return {
+      task,
+      verdict: 'unsure',
+      recordStatus: task.status,
+      routed: 'admin',
+      statements: [revision('unsure', after(), { reason }), closeTask('review'), db.prepare('DELETE FROM task_needs WHERE task_id = ?').bind(task.task_id)],
+    };
+  };
+  const handOn = (routed: Routed, statements: D1PreparedStatement[], extra: Record<string, unknown> = {}): Prepared => ({
+    task,
+    verdict: 'unsure',
+    recordStatus: task.status,
+    routed,
+    statements: [revision('defer', after({ routed, ...extra }), { reason }), ...statements],
+  });
+  const reopen = db.prepare(`UPDATE tasks SET status = 'open', leased_to = NULL, lease_expires_at = NULL WHERE id = ?`).bind(task.task_id);
+
+  switch (type) {
+    case 'policy':
+      return toAdmin();
+    case 'cannot_open': {
+      const page = await pageText(task.source_url, fetcher);
+      if (page !== null && quoteOnPage(page, task.evidence)) {
+        return {
+          errors: [{
+            field: 'unsure_type',
+            message: `the server just read ${task.source_url} and found the record's passage on it, so the page opens: check the record against it and send verified, rejected or stale`,
+          }],
+        };
+      }
+      // A maintainer with a browser who cannot open it either, or no one to hand it to: the admin.
+      if ((await capabilitiesOf(db, token.id)).includes('browser') || !(await someoneCan(db, 'browser', config.slug))) return toAdmin();
+      return handOn('browser', [
+        reopen,
+        db.prepare(`INSERT INTO task_needs (task_id, need, since) VALUES (?, 'browser', ?) ON CONFLICT (task_id) DO NOTHING`).bind(task.task_id, at),
+      ]);
+    }
+    case 'conflict':
+      if ((await conflictsBefore(db, task.id, token)) > 0) return toAdmin();
+      return handOn('second-opinion', [reopen]);
+    case 'duplicate_pending': {
+      if (task.kind !== 'verify') {
+        return { errors: [{ field: 'unsure_type', message: `only a new ${config.noun.one} can be a duplicate; decide this ${task.kind} task on its own` }] };
+      }
+      const twinId = typeof item.duplicate_of === 'string' ? item.duplicate_of : '';
+      const twin = await db
+        .prepare(`SELECT id, status FROM records WHERE id = ? AND app_slug = ? AND id != ?`)
+        .bind(twinId, config.slug, task.id)
+        .first<{ id: string; status: string }>();
+      if (!twin) return { errors: [{ field: 'duplicate_of', message: `must be the id of another ${config.noun.one} in ${config.slug} that waits for review` }] };
+      if (twin.status === 'verified' || twin.status === 'stale') {
+        return { errors: [{ field: 'duplicate_of', message: `${twin.id} is ${twin.status}: send verdict duplicate with duplicate_of ${twin.id}` }] };
+      }
+      if (twin.status !== 'pending') {
+        return { errors: [{ field: 'duplicate_of', message: `${twin.id} is ${twin.status}, not waiting for review: decide this ${config.noun.one} on its own` }] };
+      }
+      // Two records each parked on the other would wait for ever.
+      const loop = await db
+        .prepare(`SELECT 1 AS yes FROM task_waits w JOIN tasks t ON t.id = w.task_id WHERE w.record_id = ? AND w.waits_for = ? AND t.status = 'blocked'`)
+        .bind(twin.id, task.id)
+        .first<{ yes: number }>();
+      if (loop) {
+        return {
+          errors: [{
+            field: 'duplicate_of',
+            message: `${twin.id} already waits for this one as its duplicate: decide this one on its own (verified or rejected), and ${twin.id} follows it`,
+          }],
+        };
+      }
+      return handOn(
+        'parked',
+        [
+          db.prepare(`UPDATE tasks SET status = 'blocked', leased_to = NULL, lease_expires_at = NULL WHERE id = ?`).bind(task.task_id),
+          db
+            .prepare(
+              `INSERT INTO task_waits (task_id, record_id, waits_for, by_token, created_at) VALUES (?, ?, ?, ?, ?)
+               ON CONFLICT (task_id) DO UPDATE SET waits_for = excluded.waits_for, by_token = excluded.by_token, created_at = excluded.created_at`,
+            )
+            .bind(task.task_id, task.id, twin.id, token.id, at),
+        ],
+        { duplicate_of: twin.id },
+      );
+    }
+  }
+}
+
 /**
  * Checks one verdict and, when it holds, the statements that apply it. Errors name the
  * field and what to change, like submit errors do.
@@ -203,13 +409,14 @@ async function prepareVerdict(
   token: Token,
   item: Record<string, unknown>,
   now: Date,
-): Promise<{ task: TaskRow; verdict: Verdict; statements: D1PreparedStatement[]; recordStatus: string } | { errors: FieldError[] }> {
+  fetcher: typeof fetch,
+): Promise<Prepared> {
   const at = now.toISOString();
   const taskId = typeof item.task_id === 'string' ? item.task_id : '';
   const task = await db
     .prepare(
       `SELECT t.id AS task_id, t.kind, t.status AS task_status, t.leased_to, t.lease_expires_at,
-         r.id, r.status, r.identity_key, r.data_json, r.submitted_by
+         r.id, r.status, r.identity_key, r.data_json, r.source_url, r.evidence, r.submitted_by
        FROM tasks t JOIN records r ON r.id = t.record_id WHERE t.id = ? AND t.app_slug = ?`,
     )
     .bind(taskId, config.slug)
@@ -235,7 +442,7 @@ async function prepareVerdict(
 
   const data = JSON.parse(task.data_json) as RecordData;
   const before = JSON.stringify({ status: task.status, data });
-  const revision = (action: string, after: unknown, extra: { reason?: string; source_url?: string; evidence?: string } = {}) =>
+  const revision: RevisionOf = (action, after, extra = {}) =>
     db
       .prepare(
         `INSERT INTO revisions (record_id, app_slug, actor, action, before_json, after_json, reason, source_url, evidence, created_at)
@@ -294,6 +501,8 @@ async function prepareVerdict(
     if (task.kind === 'verify') {
       statements.push(db.prepare('INSERT INTO outbox (app_slug, record_id, created_at) VALUES (?, ?, ?)').bind(config.slug, task.id, at));
     }
+    // Records a maintainer found to duplicate this one, parked until now, are merged into it.
+    if (task.status === 'pending') statements.push(...(await resolveWaiting(db, { id: task.id, app_slug: config.slug }, 'verified', at)));
     return { task, verdict, statements, recordStatus: 'verified' };
   }
 
@@ -317,6 +526,7 @@ async function prepareVerdict(
           .bind(target.id, at, task.id),
         revision('merge', { status: 'merged', merged_into: target.id }),
         closeTask('done'),
+        ...(await resolveWaiting(db, { id: task.id, app_slug: config.slug }, 'merged', at, { mergedInto: target.id })),
       ],
     };
   }
@@ -326,21 +536,14 @@ async function prepareVerdict(
   if (!reason || reason.length > REASON_MAX) {
     return { errors: [{ field: 'reason', message: `must say why, in 1 to ${REASON_MAX} characters` }] };
   }
-  if (verdict === 'unsure') {
-    return {
-      task,
-      verdict,
-      recordStatus: task.status,
-      statements: [revision('unsure', { status: task.status }, { reason }), closeTask('review')],
-    };
-  }
+  if (verdict === 'unsure') return prepareUnsure(db, config, token, task, item, reason, revision, closeTask, now, fetcher);
   if (couldNotRead(reason)) {
     return {
       errors: [
         {
           field: 'verdict',
           message:
-            'the reason says you could not read the page, which says nothing about the record; send verdict unsure with this reason, and a person will check the page',
+            'the reason says you could not read the page, which says nothing about the record; send verdict unsure with unsure_type cannot_open and this reason',
         },
       ],
     };
@@ -357,6 +560,7 @@ async function prepareVerdict(
         .bind(status, at, task.id, task.status),
       revision(verdict === 'rejected' ? 'reject' : 'stale', { status }, { reason }),
       closeTask('done'),
+      ...(task.status === 'pending' ? await resolveWaiting(db, { id: task.id, app_slug: config.slug }, status, at) : []),
     ],
   };
 }
@@ -381,6 +585,7 @@ export async function applyVerdicts(
   token: Token,
   body: unknown,
   now: Date,
+  fetcher: typeof fetch = fetch,
 ): Promise<VerdictsResponse> {
   const items = (body as { verdicts?: unknown } | null)?.verdicts;
   if (!Array.isArray(items) || items.length === 0 || items.length > VERDICTS_MAX) {
@@ -394,7 +599,7 @@ export async function applyVerdicts(
   for (const [index, raw] of items.entries()) {
     const item = (typeof raw === 'object' && raw !== null ? raw : {}) as Record<string, unknown>;
     const taskId = typeof item.task_id === 'string' ? item.task_id : null;
-    const prepared = await prepareVerdict(db, config, token, item, now);
+    const prepared = await prepareVerdict(db, config, token, item, now, fetcher);
     if ('errors' in prepared) {
       results.push({ index, task_id: taskId, status: 'error', errors: prepared.errors });
       continue;
@@ -415,9 +620,34 @@ export async function applyVerdicts(
     if (prepared.task.kind === 'verify' && (prepared.verdict === 'verified' || prepared.verdict === 'rejected')) {
       reviewed.add(prepared.task.submitted_by);
     }
-    results.push({ index, task_id: prepared.task.task_id, status: 'applied', record_status: prepared.recordStatus });
+    results.push({
+      index,
+      task_id: prepared.task.task_id,
+      status: 'applied',
+      record_status: prepared.recordStatus,
+      ...(prepared.routed ? { routed: prepared.routed } : {}),
+    });
   }
 
   await suspendIfFailing(db, config.slug, reviewed, now);
   return { ...(await workOf(db, config, token, now)), results };
+}
+
+/**
+ * A maintainer gives tasks it holds back to the queue, untouched, for someone else: it ran out of
+ * time, or the task needs what it does not have. No verdict, and nothing counts against it.
+ */
+export async function releaseTasks(db: D1Database, config: DataAppConfig, token: Token, body: unknown, now: Date): Promise<ReleaseResponse> {
+  const ids = (body as { task_ids?: unknown } | null)?.task_ids;
+  if (!Array.isArray(ids) || ids.length === 0 || ids.length > LEASE_MAX || !ids.every((id) => typeof id === 'string')) {
+    throw new HttpError(422, 'invalid_body', `Send JSON like {"task_ids": ["tsk_..."]} with 1 to ${LEASE_MAX} tasks you hold.`);
+  }
+  const result = await db
+    .prepare(
+      `UPDATE tasks SET status = 'open', leased_to = NULL, lease_expires_at = NULL
+       WHERE id IN (SELECT value FROM json_each(?)) AND app_slug = ? AND status = 'leased' AND leased_to = ? AND lease_expires_at > ?`,
+    )
+    .bind(JSON.stringify(ids), config.slug, token.id, now.toISOString())
+    .run();
+  return { ...(await workOf(db, config, token, now)), released: Number(result.meta.changes ?? 0) };
 }

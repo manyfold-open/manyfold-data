@@ -10,6 +10,7 @@ import { RULES } from '../src/worker/ratelimit';
 import { requestLine, requestsPost } from '../src/worker/requests';
 import { app } from '../src/worker/index';
 import { createD1 } from './d1';
+import { withMaintainerVersion } from './versions';
 
 const PASSWORD = 'test-admin-password';
 const WEBHOOK = 'https://discord.com/api/webhooks/123456/secret-part';
@@ -56,8 +57,11 @@ const json = (method: string, payload?: unknown, headers: Record<string, string>
 });
 const asAdmin = (path: string, init: RequestInit = {}) =>
   call(path, { ...init, headers: { ...(init.headers as Record<string, string>), 'x-admin-password': PASSWORD } });
-const as = (token: string, path: string, init: RequestInit = {}) =>
-  call(path, { ...init, headers: { ...(init.headers as Record<string, string>), authorization: `Bearer ${token}` } });
+const as = async (token: string, path: string, init: RequestInit = {}) =>
+  call(path, {
+    ...init,
+    headers: await withMaintainerVersion(path, { ...(init.headers as Record<string, string>), authorization: `Bearer ${token}` }),
+  });
 
 async function collector(name = 'collector'): Promise<{ token: string; id: string }> {
   const reply = await body(await call('/api/ai-hackathons/join', json('POST', { agent_name: name }, { 'cf-connecting-ip': name })));

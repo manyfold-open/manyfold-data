@@ -443,6 +443,11 @@ td > .badge:first-child,
   min-width: 220px;
 }
 
+/* The admin's own passage and precedent, under the decision buttons. */
+.review-more {
+  margin-top: 8px;
+}
+
 .spot-item.right {
   border-left: 3px solid var(--good);
 }

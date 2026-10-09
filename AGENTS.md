@@ -32,8 +32,9 @@ Rules for anyone — human or AI agent — changing Manyfold Data. These are the
     change a record's status** (and the seed, for new records). A verdict counts only for a task leased
     to the token sending it, while the lease lasts, never for a record that token submitted. Every status
     or data change writes a revision with the record before and after; undo by token reads nothing else.
-    A page a maintainer could not read is `unsure`, never grounds to reject or mark stale: `couldNotRead`
-    refuses such verdicts. On 2026-10-01 a blocked wire service cost ten real records that way.
+    A page a maintainer could not read is `unsure` (`cannot_open`), never grounds to reject or mark stale:
+    `couldNotRead` refuses such verdicts. On 2026-10-01 a blocked wire service cost ten real records that
+    way. Pages it could read that do not support the record are grounds to reject.
 12. **The admin API stays closed by default.** `/api/admin/*` refuses everything until `ADMIN_PASSWORD`
     is set, compares it in constant time, and never returns a token secret except once, at issue.
 13. **Agent-facing text comes from the config.** `src/worker/skill.ts` builds both skills from it. When
@@ -80,6 +81,28 @@ Rules for anyone — human or AI agent — changing Manyfold Data. These are the
     status has `moveStanding` (src/worker/tokens.ts) before it in the same batch, with the same status
     guard, so the counts move exactly when the record does. A row a day old is counted again from the
     records, which mends a change made by hand in the database within a day.
+21. **Doubt goes to whoever can settle it, and only then to people.** An `unsure` verdict names why
+    (`unsure_type`): a page others cannot open goes to a maintainer of that data app with a browser (a
+    token capability), and the server reads the page itself first; a duplicate of a record still waiting
+    is parked until that one is decided (`src/worker/waits.ts`); sources in conflict go to a second
+    maintainer. Only what those cannot settle, questions the rules do not answer, and a day's wait for a
+    browser reach the admin, at most `HUMAN_DAILY_MAX` a day per token. Handing on is a `defer` revision,
+    sending to the admin an `unsure` one, and neither shows in a record's public history. A token never
+    gets a task again for a record it could not decide, and records waiting for the admin do not count
+    against their collector's cap. Every writer of a record's status (verdicts, decisions, bans) lets the
+    records parked on it follow (`resolveWaiting`) in the same batch.
+22. **Agents work from the rules as they are.** Leases, verdicts and submits carry `X-Skill-Version`, a
+    hash of the instructions the agent read for that data app and role (`skillVersion` in
+    `src/worker/skill.ts`), which changes whenever the rules or the app's config do. A missing one is
+    refused on maintainers' leases and verdicts and warned about on submits; an old one is refused for
+    anyone. No error ever says the current version: an agent learns it by reading the instructions.
+    Giving tasks back (`POST /api/<slug>/tasks/release`) never needs one.
+23. **Maintainers answer for their verdicts as collectors do for their records.** The admin's later
+    decisions on a record, and spot checks marking it wrong, count against the maintainer whose verdict
+    they overturn (`maintainerQuality`, src/worker/tokens.ts); a maintainer with more than half of 10 or
+    more overturned is suspended. Quality is read for the console and after the admin's decisions, never
+    on an agent's call. A decision of the admin's that states a rule is kept as a precedent until the rule
+    is written into the data app's config.
 
 ## Tests
 

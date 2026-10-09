@@ -4,6 +4,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { app } from '../src/worker/index';
 import { couldNotRead } from '../src/worker/maintainer';
 import { createD1 } from './d1';
+import { withMaintainerVersion } from './versions';
 
 const PASSWORD = 'test-admin-password';
 let env: { DB: D1Database; ASSETS: Fetcher; ADMIN_PASSWORD?: string };
@@ -38,8 +39,11 @@ const json = (method: string, payload: unknown, headers: Record<string, string> 
 });
 const asAdmin = (path: string, init: RequestInit = {}) =>
   call(path, { ...init, headers: { ...(init.headers as Record<string, string>), 'x-admin-password': PASSWORD } });
-const as = (token: string, path: string, init: RequestInit = {}) =>
-  call(path, { ...init, headers: { ...(init.headers as Record<string, string>), authorization: `Bearer ${token}` } });
+const as = async (token: string, path: string, init: RequestInit = {}) =>
+  call(path, {
+    ...init,
+    headers: await withMaintainerVersion(path, { ...(init.headers as Record<string, string>), authorization: `Bearer ${token}` }),
+  });
 
 async function collector(name = 'collector', ip = '203.0.113.1'): Promise<string> {
   const response = await call('/api/ai-hackathons/join', json('POST', { agent_name: name }, { 'cf-connecting-ip': ip }));
@@ -213,7 +217,7 @@ describe('verdicts', () => {
       verified(taskFor(kept!)),
       { task_id: taskFor(rejected!), verdict: 'rejected', reason: 'The page says it was cancelled.' },
       { task_id: taskFor(merged!), verdict: 'duplicate', duplicate_of: kept },
-      { task_id: taskFor(unsure!), verdict: 'unsure', reason: 'The source needs a login.' },
+      { task_id: taskFor(unsure!), verdict: 'unsure', unsure_type: 'cannot_open', reason: 'The source needs a login.' },
     ]);
     expect(reply.results.map((result: any) => result.record_status)).toEqual(['verified', 'rejected', 'merged', 'pending']);
 
@@ -263,7 +267,7 @@ describe('verdicts', () => {
     expect(refused.results[0].errors[0]).toMatchObject({ field: 'verdict', message: expect.stringMatching(/send verdict unsure/) });
     expect(await sql('SELECT status FROM records WHERE id = ?', id).first('status')).toBe('pending');
 
-    const unsure = await verdicts(token, [{ task_id: task.id, verdict: 'unsure', reason }]);
+    const unsure = await verdicts(token, [{ task_id: task.id, verdict: 'unsure', unsure_type: 'cannot_open', reason }]);
     expect(unsure.results[0]).toMatchObject({ status: 'applied', record_status: 'pending' });
     expect(await sql('SELECT status FROM tasks WHERE id = ?', task.id).first('status')).toBe('review');
   });
