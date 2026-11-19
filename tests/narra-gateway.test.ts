@@ -21,6 +21,7 @@ import workerDefault, {
 } from '../src/worker/index';
 import {
   createMfdGatewayConfig,
+  extractSearchTerms,
   fastRespondMfd,
   fetchMfdUpdates,
   HIGH_SIGNAL_SLUGS,
@@ -1125,5 +1126,47 @@ describe('Manyfold Data Narra gateway integration', () => {
     const explicitReply = await fastRespondMfd(env, explicitHackEv, explicitHackDecision, EMPTY_MEM);
     expect(explicitReply).toContain('London AI Agents Hackathon 2099');
     expect(explicitReply).toContain('https://data.manyfold.ai/ai-hackathons/r/hack_london_2099');
+  });
+
+  it('extracts London rather than "in" and prefers London hackathons over non-London records in D1', async () => {
+    const query = 'Are there any AI hackathons in London next month I can register for?';
+    const terms = extractSearchTerms(query);
+    expect(terms).toContain('London');
+    expect(terms).not.toContain('in');
+    expect(terms).toEqual(['London']);
+
+    const db = createD1();
+    await seedVerifiedRecord(db, 'ai-hackathons', 'hack_sf_early', {
+      ...findDataApp('ai-hackathons')!.example.data,
+      name: 'San Francisco Agents Hackathon 2099',
+      url: 'https://example.org/sf-agents-hack',
+      deadline: '2099-11-05',
+      starts_on: '2099-11-10',
+      ends_on: '2099-11-12',
+      format: 'in-person',
+      city: ['San Francisco'],
+      region: 'americas',
+    });
+    await seedVerifiedRecord(db, 'ai-hackathons', 'hack_london_later', {
+      ...findDataApp('ai-hackathons')!.example.data,
+      name: 'London AI Agents Hackathon 2099',
+      url: 'https://example.org/london-agents-hack',
+      deadline: '2099-11-20',
+      starts_on: '2099-11-25',
+      ends_on: '2099-11-27',
+      format: 'in-person',
+      city: ['London'],
+      region: 'europe',
+    });
+
+    const env = makeEnv({ DB: db });
+    const ev = makeInboundEvent({ text: query });
+    const decision = await routeEvent(ev, DEFAULT_ROOM_CTX, MFD_AGENT_SPEC);
+    expect(decision.shouldReply).toBe(true);
+    const reply = await fastRespondMfd(env, ev, decision, EMPTY_MEM);
+    expect(reply).toBeTruthy();
+    expect(reply).toContain('London AI Agents Hackathon 2099');
+    expect(reply).toContain('https://data.manyfold.ai/ai-hackathons/r/hack_london_later');
+    expect(reply).not.toContain('San Francisco Agents Hackathon 2099');
   });
 });
