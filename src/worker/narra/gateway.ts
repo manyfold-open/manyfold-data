@@ -79,7 +79,8 @@ export const MFD_AGENT_SPEC: AgentSpec = {
     // 2. ai-accelerators
     'accelerator',
     'accelerators',
-    'grant',
+    'ai grant',
+    'research grant',
     'grants',
     'fellowship',
     'residency',
@@ -109,7 +110,8 @@ export const MFD_AGENT_SPEC: AgentSpec = {
     'series a',
     'series b',
     'seed round',
-    'raised',
+    'raised million',
+    'funding raised',
     '融資',
     '融资',
     '募資',
@@ -174,7 +176,10 @@ export const MFD_AGENT_SPEC: AgentSpec = {
     'visa policy',
     'e-visa',
     'travel authorisation',
-    'eta',
+    'uk eta',
+    'travel eta',
+    /\beta\b.{0,12}(?:uk|visa|travel|entry|英國|英国|簽證|签证)/i,
+    /(?:入境|旅遊簽證|旅游签证).{0,12}(?:規定|规定|手續|手续|變嚴|变严|變化|变化)/,
     'etias',
     '簽證',
     '签证',
@@ -202,6 +207,13 @@ export const MFD_AGENT_SPEC: AgentSpec = {
     'safety recall',
     'product recall',
     '召回',
+    '食品下架',
+    '問題食品',
+    '问题食品',
+    '車子下架',
+    '车子下架',
+    '安全下架',
+    /(?:食品|產品|产品|車子|车子).{0,6}下架/,
     // 13. scholarships
     'scholarship',
     'scholarships',
@@ -219,7 +231,8 @@ export const MFD_AGENT_SPEC: AgentSpec = {
     'half marathon',
     'half-marathon',
     'trail race',
-    'ultra',
+    'ultra marathon',
+    'ultramarathon',
     'triathlon',
     'ironman',
     'utmb',
@@ -406,11 +419,11 @@ const MFD_FOLLOWUP_RE =
 
 /* ───────── dataset inference & trilingual labels ───────── */
 
-const DATASET_TRIGGERS: ReadonlyArray<{ slug: string; patterns: string[] }> = [
+const DATASET_TRIGGERS: ReadonlyArray<{ slug: string; patterns: ReadonlyArray<string | RegExp> }> = [
   { slug: 'ai-hackathons', patterns: ['hackathon', 'hackathons', '黑客松', '駭客松'] },
   {
     slug: 'ai-accelerators',
-    patterns: ['accelerator', 'accelerators', 'grant', 'grants', 'fellowship', 'residency', 'compute credits', '加速器', '創業補助', '创业补助', '算力補貼', '算力补贴'],
+    patterns: ['accelerator', 'accelerators', 'ai grant', 'research grant', 'grants', 'fellowship', 'residency', 'compute credits', '加速器', '創業補助', '创业补助', '算力補貼', '算力补贴'],
   },
   {
     slug: 'ai-conferences',
@@ -418,7 +431,7 @@ const DATASET_TRIGGERS: ReadonlyArray<{ slug: string; patterns: string[] }> = [
   },
   {
     slug: 'ai-fundraising',
-    patterns: ['fundraising', 'funding', 'raised', 'series a', 'series b', 'seed round', '融資', '融资', '募資', '募资'],
+    patterns: ['fundraising', 'funding', 'raised million', 'funding raised', 'series a', 'series b', 'seed round', '融資', '融资', '募資', '募资'],
   },
   {
     slug: 'ai-acquisitions',
@@ -442,13 +455,43 @@ const DATASET_TRIGGERS: ReadonlyArray<{ slug: string; patterns: string[] }> = [
   },
   {
     slug: 'visa-changes',
-    patterns: ['visa', 'visas', 'visa-free', 'e-visa', 'eta', 'etias', '簽證', '签证', '免簽', '免签', '過境免簽', '过境免签', '電子簽', '电子签'],
+    patterns: [
+      'visa',
+      'visas',
+      'visa-free',
+      'e-visa',
+      'uk eta',
+      'travel eta',
+      /\beta\b.{0,12}(?:uk|visa|travel|entry|英國|英国|簽證|签证)/i,
+      'etias',
+      '簽證',
+      '签证',
+      '免簽',
+      '免签',
+      '過境免簽',
+      '过境免签',
+      '電子簽',
+      '电子签',
+      '旅遊簽證',
+      '旅游签证',
+      '入境規定',
+      '入境规定',
+      '入境手續',
+      '入境手续',
+      '辦什麼手續',
+      '办什么手续',
+      '簽證規定',
+      '签证规定',
+    ],
   },
   {
     slug: 'new-rules',
     patterns: ['new rule', 'new rules', 'regulation', 'takes effect', 'effective on', '新規', '新规', '新法規', '新法规', '法規生效', '法规生效'],
   },
-  { slug: 'recalls', patterns: ['recall', 'recalls', '召回'] },
+  {
+    slug: 'recalls',
+    patterns: ['recall', 'recalls', '召回', '下架', '食品下架', '問題食品', '问题食品', '車子下架', '车子下架', '安全下架'],
+  },
   {
     slug: 'scholarships',
     patterns: ['scholarship', 'scholarships', 'chevening', 'erasmus', 'daad', '獎學金', '奖学金'],
@@ -456,7 +499,7 @@ const DATASET_TRIGGERS: ReadonlyArray<{ slug: string; patterns: string[] }> = [
   { slug: 'marathons', patterns: ['marathon', 'marathons', '馬拉松', '马拉松'] },
   {
     slug: 'endurance-races',
-    patterns: ['half marathon', 'half-marathon', 'trail race', 'ultra', 'triathlon', 'ironman', 'utmb', '半程馬拉松', '半程马拉松', '半馬', '半马', '越野跑', '鐵人三項', '铁人三项'],
+    patterns: ['half marathon', 'half-marathon', 'trail race', 'ultra marathon', 'ultramarathon', 'triathlon', 'ironman', 'utmb', '半程馬拉松', '半程马拉松', '半馬', '半马', '越野跑', '鐵人三項', '铁人三项'],
   },
   {
     slug: 'sky-events',
@@ -603,7 +646,8 @@ const SEARCH_STOPWORDS = new Set([
   'cancer',
 ]);
 
-function matchToken(lowerText: string, needle: string): boolean {
+function matchToken(lowerText: string, needle: string | RegExp, rawText?: string): boolean {
+  if (needle instanceof RegExp) return needle.test(rawText ?? lowerText);
   const clean = needle.trim().toLowerCase();
   if (!clean) return false;
   if (/[\u3400-\u9FFF]/.test(clean)) return lowerText.includes(clean);
@@ -613,11 +657,11 @@ function matchToken(lowerText: string, needle: string): boolean {
   );
 }
 
-function inferDatasetSlugs(text: string): string[] {
+export function inferDatasetSlugs(text: string): string[] {
   const lower = text.toLowerCase();
   const slugs: string[] = [];
   for (const item of DATASET_TRIGGERS) {
-    if (item.patterns.some((p) => matchToken(lower, p))) {
+    if (item.patterns.some((p) => matchToken(lower, p, text))) {
       slugs.push(item.slug);
     }
   }
@@ -1085,6 +1129,11 @@ export async function fastRespondMfd(
         return formatRecordResults(env, config, res.records, res.total, res.today, lang, res.usedDefaultFilter);
       }
     }
+  }
+
+  // Unmentioned group turns with zero matching D1 records stay silent instead of triggering A2A or generic prompts.
+  if (isUnmentionedGroup) {
+    return '[NO_REPLY]';
   }
 
   // 5. Fallback to Manyfold A2A if credential is available
