@@ -764,4 +764,109 @@ describe('Manyfold Data Narra gateway integration', () => {
     );
     expect(bareReply).toContain('Manyfold Data 小幫手');
   });
+
+  it('returns fast D1 ai-hackathons even with A2A set and silences unmentioned active_session chatter/off-topic', async () => {
+    const db = createD1();
+    await seedVerifiedRecord(db, 'ai-hackathons', 'hack_builder_2099', {
+      ...findDataApp('ai-hackathons')!.example.data,
+      name: 'Global Open Builder Hack 2099',
+      deadline: '2099-11-15',
+      starts_on: '2099-11-20',
+      ends_on: '2099-11-22',
+    });
+
+    const envNoA2a = makeEnv({ DB: db });
+    const envWithA2a = makeEnv({
+      DB: db,
+      MANYFOLD_A2A_URL: 'https://a2a.mfd.test/rpc',
+      MANYFOLD_A2A_TOKEN: 'a2a_secret_mfd',
+    });
+
+    const hackathonQuery = makeInboundEvent({ text: '@mfd-guide 最近有哪些 AI 黑客松可以報名？' });
+    const hackathonDecision = await routeEvent(hackathonQuery, DEFAULT_ROOM_CTX, MFD_AGENT_SPEC);
+    expect(hackathonDecision.reason).toBe('explicit_mention');
+
+    // Both without and with A2A credentials, D1 records are returned fast (never null)
+    const replyNoA2a = await fastRespondMfd(envNoA2a, hackathonQuery, hackathonDecision, EMPTY_MEM);
+    expect(replyNoA2a).toContain('Global Open Builder Hack 2099');
+    expect(replyNoA2a).toContain('https://data.manyfold.ai/ai-hackathons/r/hack_builder_2099');
+
+    const replyWithA2a = await fastRespondMfd(envWithA2a, hackathonQuery, hackathonDecision, EMPTY_MEM);
+    expect(replyWithA2a).toContain('Global Open Builder Hack 2099');
+    expect(replyWithA2a).toContain('https://data.manyfold.ai/ai-hackathons/r/hack_builder_2099');
+
+    // Even when a non-stopword term narrows to 0 rows, broader dataset fallback returns D1 records instead of A2A null
+    const narrowQuery = makeInboundEvent({ text: '@mfd-guide 最近有哪些 AI 黑客松 in London?' });
+    const narrowDecision = await routeEvent(narrowQuery, DEFAULT_ROOM_CTX, MFD_AGENT_SPEC);
+    const narrowReply = await fastRespondMfd(envWithA2a, narrowQuery, narrowDecision, EMPTY_MEM);
+    expect(narrowReply).toContain('Global Open Builder Hack 2099');
+
+    // Unmentioned group active_session guards
+    const activeDecision: TriageDecision = {
+      shouldReply: true,
+      tier: 0,
+      reason: 'active_session',
+      confidence: 0.95,
+      detectedLang: 'zh-Hant',
+      shouldQuote: true,
+    };
+    const roomMemWithWatch: RecallTurnResult = {
+      userMemories: [],
+      roomMemories: [
+        {
+          id: 'mem_mfd_1',
+          scope: 'room',
+          agentId: MFD_AGENT_ID,
+          roomId: '!mfd-room:matrix.netmind.chat',
+          kind: 'fact',
+          key: 'watch_datasets',
+          value: 'ai-hackathons',
+          createdAt: '2026-11-19T12:00:00Z',
+          updatedAt: '2026-11-19T12:00:00Z',
+        },
+      ],
+      promptSafeLines: [],
+    };
+
+    expect(
+      await fastRespondMfd(
+        envWithA2a,
+        makeInboundEvent({ text: '今天天氣真不錯，晚上想早點休息' }),
+        activeDecision,
+        roomMemWithWatch,
+      ),
+    ).toBe('[NO_REPLY]');
+
+    expect(
+      await fastRespondMfd(
+        envWithA2a,
+        makeInboundEvent({ text: '這週末有什麼川菜推薦？' }),
+        activeDecision,
+        EMPTY_MEM,
+      ),
+    ).toBe('[NO_REPLY]');
+
+    expect(await fastRespondMfd(envWithA2a, makeInboundEvent({ text: '謝謝' }), activeDecision, EMPTY_MEM)).toBe(
+      '[NO_REPLY]',
+    );
+    expect(await fastRespondMfd(envWithA2a, makeInboundEvent({ text: '晚安' }), activeDecision, EMPTY_MEM)).toBe(
+      '[NO_REPLY]',
+    );
+
+    const explicitThanks = await fastRespondMfd(
+      envWithA2a,
+      makeInboundEvent({ text: '@mfd-guide 謝謝' }),
+      { ...activeDecision, reason: 'explicit_mention' },
+      EMPTY_MEM,
+    );
+    expect(explicitThanks).toContain('Manyfold Data 小幫手');
+
+    const followUpReply = await fastRespondMfd(
+      envWithA2a,
+      makeInboundEvent({ text: '還有更多嗎？' }),
+      activeDecision,
+      roomMemWithWatch,
+    );
+    expect(followUpReply).toContain('Global Open Builder Hack 2099');
+  });
 });

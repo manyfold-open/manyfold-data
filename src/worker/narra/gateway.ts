@@ -401,6 +401,9 @@ const LIST_APPS_RE =
 const WHATS_NEW_RE =
   /(?:最近有什麼新|最近有什么新|最新數據|最新数据|新驗證|新验证|what(?:'s| is)\s+new|latest\s+(?:updates|records)|high[- ]signal)/i;
 
+const MFD_FOLLOWUP_RE =
+  /(?:還有|还有|更多|詳情|详情|截止|日期|來源|来源|哪[個一]?|那[筆條個]|\b(?:more|details?|deadline|source|link|which|another)\b)/i;
+
 /* ───────── dataset inference & trilingual labels ───────── */
 
 const DATASET_TRIGGERS: ReadonlyArray<{ slug: string; patterns: string[] }> = [
@@ -566,6 +569,7 @@ const SEARCH_STOPWORDS = new Set([
   'still',
   'now',
   // Domain words already used to select the dataset slug:
+  'ai',
   'hackathon',
   'hackathons',
   'accelerator',
@@ -963,11 +967,16 @@ export async function fastRespondMfd(
 ): Promise<string | null> {
   const lang = decision.detectedLang;
   const cleanedText = stripMentions(event.text);
+  const isUnmentionedGroup =
+    event.chatType === 'group' && decision.reason !== 'explicit_mention' && decision.reason !== 'reply_to_self';
 
   if (event.kind === 'image' || event.kind === 'compound' || COMPOUND_RE.test(event.text)) {
     return compoundReply(lang);
   }
   if (!cleanedText || GREETING_RE.test(cleanedText)) {
+    if (isUnmentionedGroup && decision.reason === 'active_session') {
+      return '[NO_REPLY]';
+    }
     return greetingReply(lang);
   }
 
@@ -979,7 +988,7 @@ export async function fastRespondMfd(
   });
 
   if (hasAntiHit && inferredSlugs.length === 0) {
-    return isMultiMention ? '[NO_REPLY]' : offTopicRedirect(lang);
+    return isMultiMention || isUnmentionedGroup ? '[NO_REPLY]' : offTopicRedirect(lang);
   }
 
   const limit = event.isVoice ? 2 : event.chatType === 'group' ? 3 : 5;
@@ -1021,6 +1030,20 @@ export async function fastRespondMfd(
 
   // 3. Targeted dataset query (or remembered watched datasets)
   const terms = extractSearchTerms(cleanedText);
+
+  // Unmentioned active-session turns with zero dataset signals and no follow-up cue stay silent.
+  if (
+    isUnmentionedGroup &&
+    decision.reason === 'active_session' &&
+    inferredSlugs.length === 0 &&
+    terms.length === 0 &&
+    !LIST_APPS_RE.test(cleanedText) &&
+    !WHATS_NEW_RE.test(cleanedText) &&
+    !MFD_FOLLOWUP_RE.test(cleanedText)
+  ) {
+    return '[NO_REPLY]';
+  }
+
   const candidateSlugs = inferredSlugs.length > 0 ? inferredSlugs : resolveMemorySlugs(memories);
 
   if (candidateSlugs.length > 0) {
@@ -1032,8 +1055,8 @@ export async function fastRespondMfd(
         return formatRecordResults(env, config, res.records, res.total, res.today, lang, res.usedDefaultFilter);
       }
     }
-    // If terms narrowed too strictly on an inferred dataset, show recent verified rows of that dataset when no A2A.
-    if (terms.length > 0 && !hasA2ACredential(env)) {
+    // If terms narrowed too strictly on an inferred dataset, fall back to recent verified rows from D1.
+    if (terms.length > 0) {
       const primary = findDataApp(candidateSlugs[0]!);
       if (primary) {
         const broader = await queryDatasetRecords(env.DB, primary, [], limit, now);
