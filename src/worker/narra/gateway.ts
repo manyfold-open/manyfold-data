@@ -640,6 +640,40 @@ const SEARCH_STOPWORDS = new Set([
   'here',
   'still',
   'now',
+  'in',
+  'on',
+  'at',
+  'to',
+  'of',
+  'by',
+  'or',
+  'as',
+  'it',
+  'be',
+  'do',
+  'me',
+  'my',
+  'we',
+  'us',
+  'you',
+  'your',
+  'this',
+  'that',
+  'these',
+  'those',
+  'next',
+  'last',
+  'month',
+  'week',
+  'year',
+  'today',
+  'tomorrow',
+  'register',
+  'apply',
+  'join',
+  'attend',
+  'happening',
+  'going',
   // Domain words already used to select the dataset slug:
   'ai',
   'hackathon',
@@ -697,7 +731,7 @@ export function inferDatasetSlugs(text: string): string[] {
   return slugs;
 }
 
-function extractSearchTerms(text: string): string[] {
+export function extractSearchTerms(text: string): string[] {
   const terms: string[] = [];
   for (const [zh, en] of CJK_ENTITY_MAP) {
     if (text.includes(zh)) terms.push(en);
