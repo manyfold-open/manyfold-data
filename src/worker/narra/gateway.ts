@@ -942,7 +942,7 @@ function formatRecordResults(
   return lines.join('\n');
 }
 
-function resolveMemorySlugs(memories: RecallTurnResult): string[] {
+export function resolveMemorySlugs(memories: RecallTurnResult): string[] {
   const slugs: string[] = [];
   for (const m of [...memories.userMemories, ...memories.roomMemories]) {
     if (m.key === 'watch_datasets' || m.key === 'dataset') {
@@ -950,9 +950,11 @@ function resolveMemorySlugs(memories: RecallTurnResult): string[] {
         const clean = part.trim();
         if (findDataApp(clean)) slugs.push(clean);
       }
+    } else if (m.key === 'note' || m.key.startsWith('note_')) {
+      slugs.push(...inferDatasetSlugs(m.value));
     }
   }
-  return slugs;
+  return [...new Set(slugs)];
 }
 
 /**

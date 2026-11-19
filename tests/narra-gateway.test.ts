@@ -27,6 +27,7 @@ import {
   MFD_MANYFOLD_AGENT_ID,
   MFD_MATRIX_ID,
   queryHighSignalUpdates,
+  resolveMemorySlugs,
 } from '../src/worker/narra/gateway';
 import type { Env } from '../src/worker/types';
 import { createD1 } from './d1';
@@ -868,5 +869,71 @@ describe('Manyfold Data Narra gateway integration', () => {
       roomMemWithWatch,
     );
     expect(followUpReply).toContain('Global Open Builder Hack 2099');
+  });
+
+  it('resolves dataset slugs from note / note_* memories with deduplication and recalls matching D1 records', async () => {
+    const db = createD1();
+    await seedVerifiedRecord(db, 'ai-hackathons', 'hack_note_2099', {
+      ...findDataApp('ai-hackathons')!.example.data,
+      name: 'London Note Recall AI Hackathon 2099',
+      deadline: '2099-11-15',
+      starts_on: '2099-11-20',
+      ends_on: '2099-11-22',
+    });
+    await seedVerifiedRecord(db, 'visa-changes', 'visa_note_2026', {
+      ...findDataApp('visa-changes')!.example.data,
+      title: 'UK Graduate Route digital e-visa update',
+      effective_on: todayUtc(),
+    });
+
+    const noteMem: RecallTurnResult = {
+      userMemories: [
+        {
+          id: 'mem_mfd_note_1',
+          scope: 'user',
+          agentId: MFD_AGENT_ID,
+          userId: '@alice:matrix.netmind.chat',
+          originChatType: 'dm',
+          kind: 'preference',
+          key: 'note_abcd1234',
+          value: '我平常最關注 AI 黑客松和簽證變化',
+          createdAt: '2026-11-19T12:00:00Z',
+          updatedAt: '2026-11-19T12:00:00Z',
+        },
+        {
+          id: 'mem_mfd_note_dup',
+          scope: 'user',
+          agentId: MFD_AGENT_ID,
+          userId: '@alice:matrix.netmind.chat',
+          originChatType: 'dm',
+          kind: 'preference',
+          key: 'note',
+          value: '也想持續追蹤 hackathon',
+          createdAt: '2026-11-19T11:55:00Z',
+          updatedAt: '2026-11-19T11:55:00Z',
+        },
+      ],
+      roomMemories: [],
+      promptSafeLines: [],
+    };
+
+    expect(resolveMemorySlugs(noteMem)).toEqual(['ai-hackathons', 'visa-changes']);
+
+    const env = makeEnv({ DB: db });
+    const reply = await fastRespondMfd(
+      env,
+      makeInboundEvent({ chatType: 'dm', text: '還有更多嗎？' }),
+      {
+        shouldReply: true,
+        tier: 0,
+        reason: 'dm',
+        confidence: 1,
+        detectedLang: 'zh-Hant',
+        shouldQuote: false,
+      },
+      noteMem,
+    );
+    expect(reply).toContain('London Note Recall AI Hackathon 2099');
+    expect(reply).toContain('https://data.manyfold.ai/ai-hackathons/r/hack_note_2099');
   });
 });
