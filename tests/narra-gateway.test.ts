@@ -22,6 +22,7 @@ import {
   fastRespondMfd,
   fetchMfdUpdates,
   HIGH_SIGNAL_SLUGS,
+  inferDatasetSlugs,
   MFD_AGENT_ID,
   MFD_AGENT_SPEC,
   MFD_MANYFOLD_AGENT_ID,
@@ -935,5 +936,114 @@ describe('Manyfold Data Narra gateway integration', () => {
     );
     expect(reply).toContain('London Note Recall AI Hackathon 2099');
     expect(reply).toContain('https://data.manyfold.ai/ai-hackathons/r/hack_note_2099');
+  });
+
+  it('prevents bare eta/raised/grant/ultra false positives, infers natural visa/recall phrasing, and silences unmentioned fallback', async () => {
+    // 1. Bare eta / raised / grant / ultra must NOT false-trigger MFD_AGENT_SPEC or inferDatasetSlugs
+    for (const falsePositive of [
+      'What is our eta for arriving at the restaurant?',
+      'eta?',
+      'He raised a good point about that movie',
+      'Should we grant access to the new repo?',
+      'This phone has an ultra bright screen',
+    ]) {
+      const dec = await routeEvent(makeInboundEvent({ text: falsePositive }), DEFAULT_ROOM_CTX, MFD_AGENT_SPEC);
+      expect(dec.shouldReply, `Expected silence for bare token in: ${falsePositive}`).toBe(false);
+    }
+    expect(inferDatasetSlugs('What is our eta?')).toEqual([]);
+    expect(inferDatasetSlugs('He raised a valid point')).toEqual([]);
+    expect(inferDatasetSlugs('Please grant permission')).toEqual([]);
+    expect(inferDatasetSlugs('An ultra thin laptop')).toEqual([]);
+
+    // Specific multi-word phrases still route positively
+    for (const truePositive of [
+      'Any update on the UK ETA requirement?',
+      'Which AI startup funding raised $50M?',
+      'Any AI grant deadlines coming up?',
+      'Are there any upcoming ultramarathon races?',
+    ]) {
+      const dec = await routeEvent(makeInboundEvent({ text: truePositive }), DEFAULT_ROOM_CTX, MFD_AGENT_SPEC);
+      expect(dec.shouldReply, `Expected match for specific phrase in: ${truePositive}`).toBe(true);
+    }
+
+    // 2. Natural phrasing infers 'visa-changes' and 'recalls' and answers from D1
+    expect(inferDatasetSlugs('最近去英國旅遊簽證規定有沒有變嚴啊？')).toContain('visa-changes');
+    expect(inferDatasetSlugs('去倫敦入境手續要辦什麼手續？')).toContain('visa-changes');
+    expect(inferDatasetSlugs('問題食品被下架')).toContain('recalls');
+    expect(inferDatasetSlugs('最近有沒有車子下架或安全下架的消息？')).toContain('recalls');
+
+    const db = createD1();
+    const today = todayUtc();
+    await seedVerifiedRecord(db, 'visa-changes', 'visa_uk_eta', {
+      ...findDataApp('visa-changes')!.example.data,
+      title: 'UK ETA travel authorisation expands to all visa-exempt visitors',
+      destination: ['United Kingdom'],
+      effective_on: today,
+    });
+    await seedVerifiedRecord(db, 'recalls', 'recall_food_1', {
+      ...findDataApp('recalls')!.example.data,
+      product: 'Organic Sesame Snack Batch 42',
+      announced_on: today,
+    });
+
+    const env = makeEnv({ DB: db });
+    const visaPrompt = '最近去英國旅遊簽證規定有沒有變嚴啊？';
+    const visaDecision = await routeEvent(makeInboundEvent({ text: visaPrompt }), DEFAULT_ROOM_CTX, MFD_AGENT_SPEC);
+    expect(visaDecision.shouldReply).toBe(true);
+    const visaReply = await fastRespondMfd(env, makeInboundEvent({ text: visaPrompt }), visaDecision, EMPTY_MEM);
+    expect(visaReply).toContain('UK ETA travel authorisation');
+    expect(visaReply).toContain('https://data.manyfold.ai/visa-changes/r/visa_uk_eta');
+
+    const recallPrompt = '最近有沒有問題食品被下架？';
+    const recallDecision = await routeEvent(makeInboundEvent({ text: recallPrompt }), DEFAULT_ROOM_CTX, MFD_AGENT_SPEC);
+    expect(recallDecision.shouldReply).toBe(true);
+    const recallReply = await fastRespondMfd(env, makeInboundEvent({ text: recallPrompt }), recallDecision, EMPTY_MEM);
+    expect(recallReply).toContain('Organic Sesame Snack Batch 42');
+    expect(recallReply).toContain('https://data.manyfold.ai/recalls/r/recall_food_1');
+
+    // 3. Unmentioned group bottom fallback returns [NO_REPLY] when zero D1 records match (without or with A2A)
+    const emptyDb = createD1();
+    await ensureSchema(emptyDb);
+    const emptyEnvNoA2a = makeEnv({ DB: emptyDb });
+    const emptyEnvWithA2a = makeEnv({
+      DB: emptyDb,
+      MANYFOLD_A2A_URL: 'https://a2a.mfd.test/rpc',
+      MANYFOLD_A2A_TOKEN: 'a2a_secret_mfd',
+    });
+    const unmentionedDecision: TriageDecision = {
+      shouldReply: true,
+      tier: 1,
+      reason: 'domain_match',
+      confidence: 0.75,
+      detectedLang: 'zh-Hant',
+      shouldQuote: true,
+    };
+
+    expect(
+      await fastRespondMfd(emptyEnvNoA2a, makeInboundEvent({ text: visaPrompt }), unmentionedDecision, EMPTY_MEM),
+    ).toBe('[NO_REPLY]');
+    expect(
+      await fastRespondMfd(emptyEnvNoA2a, makeInboundEvent({ text: '想查資料' }), unmentionedDecision, EMPTY_MEM),
+    ).toBe('[NO_REPLY]');
+    expect(
+      await fastRespondMfd(emptyEnvWithA2a, makeInboundEvent({ text: visaPrompt }), unmentionedDecision, EMPTY_MEM),
+    ).toBe('[NO_REPLY]');
+
+    // Explicit mention on the same empty DB still falls back to dataset prompt (or null for A2A)
+    const explicitEmptyReply = await fastRespondMfd(
+      emptyEnvNoA2a,
+      makeInboundEvent({ text: '@mfd-guide 想查資料' }),
+      { ...unmentionedDecision, tier: 0, reason: 'explicit_mention' },
+      EMPTY_MEM,
+    );
+    expect(explicitEmptyReply).toContain('想查詢哪一個資料集');
+    expect(
+      await fastRespondMfd(
+        emptyEnvWithA2a,
+        makeInboundEvent({ text: `@mfd-guide ${visaPrompt}` }),
+        { ...unmentionedDecision, tier: 0, reason: 'explicit_mention' },
+        EMPTY_MEM,
+      ),
+    ).toBeNull();
   });
 });

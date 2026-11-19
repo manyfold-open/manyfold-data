@@ -4,6 +4,6 @@
 import { getPlatformProxy } from 'wrangler';
 
 export async function openWorkerdD1() {
-  const platform = await getPlatformProxy({ persist: false });
+  const platform = await getPlatformProxy({ persist: false, remoteBindings: false });
   return { db: platform.env.DB, close: () => platform.dispose() };
 }

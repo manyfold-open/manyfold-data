@@ -42,6 +42,9 @@
     "NARRA_AGENT_ID": "agt_agq66cw5uzyudifa4fuhcnaddu",
     "NARRA_MATRIX_ID": "@agent-37b08ab6:matrix.netmind.chat"
   },
+  "ai": {
+    "binding": "AI"
+  },
   "durable_objects": {
     "bindings": [
       { "name": "NARRA_SYNC_DO", "class_name": "NarraMatrixSync" },
