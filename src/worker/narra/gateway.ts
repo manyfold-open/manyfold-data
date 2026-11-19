@@ -69,7 +69,7 @@ export const MFD_AGENT_SPEC: AgentSpec = {
     '数据小助手',
   ],
   domainDescription:
-    'Searches Manyfold Data’s 17 verified open datasets: AI hackathons, AI accelerators and grants, AI conferences and CFPs, AI fundraising, AI acquisitions, AI data centers, robotaxi cities, robot launches, AI scam alerts, visa policy changes, new rules taking effect, product recalls, international scholarships, marathons, endurance races, sky events, and cancer drug updates.',
+    'Strictly scoped to searching Manyfold Data’s 17 verified structured datasets (AI hackathons, AI accelerators/grants, AI conferences/CFPs, AI fundraising, AI acquisitions, AI data centers, robotaxi cities, robot launches, AI scam alerts, visa policy changes, new rules taking effect, product recalls, international scholarships, marathons, endurance races, sky events, and cancer drug updates). NEVER answer general tourism, weekend sightseeing, hangout ideas, shopping, or restaurant queries.',
   domainKeywords: [
     // 1. ai-hackathons
     'hackathon',
@@ -309,6 +309,27 @@ export const MFD_AGENT_SPEC: AgentSpec = {
     '中国城',
     '吃什麼',
     '吃什么',
+    '好餓',
+    '好饿',
+    '推薦吃的',
+    '推荐吃的',
+    // Casual sightseeing, weekend outings & shopping (spotted-guide / general chat)
+    '逛逛',
+    '逛街',
+    '好去處',
+    '好去处',
+    '哪裡好玩',
+    '哪里好玩',
+    '有什麼好玩',
+    '有什么好玩',
+    '帶朋友去',
+    '带朋友去',
+    '市集',
+    '特賣',
+    '特卖',
+    'sample sale',
+    'things to do',
+    'sightseeing',
     // Tarot (tarot-master-2)
     'tarot',
     '塔羅',
@@ -564,6 +585,14 @@ const CJK_ENTITY_MAP: ReadonlyArray<[string, string]> = [
   ['線上', 'online'],
   ['线上', 'online'],
 ];
+
+const GENERIC_LOCATION_TERMS = new Set<string>([
+  ...CJK_ENTITY_MAP.map(([, en]) => en.toLowerCase()),
+  'uk',
+  'us',
+  'usa',
+  'eu',
+]);
 
 const SEARCH_STOPWORDS = new Set([
   'the',
@@ -1090,7 +1119,12 @@ export async function fastRespondMfd(
     return '[NO_REPLY]';
   }
 
-  const candidateSlugs = inferredSlugs.length > 0 ? inferredSlugs : resolveMemorySlugs(memories);
+  const candidateSlugs =
+    inferredSlugs.length > 0
+      ? inferredSlugs
+      : isUnmentionedGroup && decision.reason !== 'active_session'
+        ? []
+        : resolveMemorySlugs(memories);
 
   if (candidateSlugs.length > 0) {
     for (const slug of candidateSlugs) {
@@ -1121,8 +1155,12 @@ export async function fastRespondMfd(
     }
   }
 
-  // 4. Cross-dataset text search when specific search terms exist
-  if (terms.length > 0) {
+  // 4. Cross-dataset text search when specific non-location search terms exist
+  const canCrossSearch =
+    terms.length > 0 &&
+    (!(isUnmentionedGroup && inferredSlugs.length === 0) ||
+      terms.some((t) => !GENERIC_LOCATION_TERMS.has(t.toLowerCase())));
+  if (canCrossSearch) {
     for (const config of dataApps) {
       const res = await queryDatasetRecords(env.DB, config, terms, limit, now);
       if (res.records.length > 0) {
