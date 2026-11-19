@@ -683,4 +683,42 @@ describe('Manyfold Data Narra gateway integration', () => {
     expect(sentTexts[0]).not.toMatch(/\[[^\]]+\]\(https?:\/\//);
     expect(sentTexts[0]).toContain('https://data.manyfold.ai/ai-accelerators');
   });
+
+  it('strips multi-word and sibling @mentions cleanly and converts Simplified summary text in zh-Hant', async () => {
+    const db = createD1();
+
+    await seedVerifiedRecord(db, 'ai-hackathons', 'hack_hant_check', {
+      ...findDataApp('ai-hackathons')!.example.data,
+      name: '伦敦开源黑客营 2099',
+      deadline: '2099-11-15',
+      starts_on: '2099-11-20',
+      ends_on: '2099-11-22',
+    });
+
+    const env = makeEnv({ DB: db });
+
+    // Multi-word mention + sibling mentions stripped cleanly without polluting search terms
+    const ev = makeInboundEvent({
+      text: '@Manyfold Data @London Chinese Food @AI in 5 @問一籤 最近有哪些黑客松？',
+    });
+    const decision = await routeEvent(ev, DEFAULT_ROOM_CTX, MFD_AGENT_SPEC);
+    expect(decision.detectedLang).toBe('zh-Hant');
+
+    const reply = await fastRespondMfd(env, ev, decision, EMPTY_MEM);
+    expect(reply).toBeTruthy();
+    expect(reply).toContain('倫敦開源黑客營 2099');
+    expect(reply).not.toContain('伦敦开源');
+
+    // Mention-only message falls back to greeting instead of treating "Data" as query
+    const mentionOnlyEv = makeInboundEvent({
+      text: '@Manyfold Data @Spotted London @Penny @Quidpaw',
+    });
+    const mentionOnlyReply = await fastRespondMfd(
+      env,
+      mentionOnlyEv,
+      { shouldReply: true, tier: 0, reason: 'mention', confidence: 1, detectedLang: 'zh-Hant', shouldQuote: true },
+      EMPTY_MEM,
+    );
+    expect(mentionOnlyReply).toContain('Manyfold Data 小幫手');
+  });
 });

@@ -13,13 +13,15 @@
  * - Zero external calls when `NARRA_GATEWAY_ENABLED` is not `'on'`.
  */
 
-import type {
-  AgentSpec,
-  AgentUpdateItem,
-  InboundEvent,
-  LangCode,
-  RecallTurnResult,
-  TriageDecision,
+import {
+  stripAgentMentions,
+  toZhHant,
+  type AgentSpec,
+  type AgentUpdateItem,
+  type InboundEvent,
+  type LangCode,
+  type RecallTurnResult,
+  type TriageDecision,
 } from '@manyfold/narra-agent-kit';
 import {
   isNarraGatewayEnabled,
@@ -358,13 +360,27 @@ export const recordUrl = (env: Pick<Env, 'PUBLIC_ORIGIN'>, slug: string, id: str
 export const appUrl = (env: Pick<Env, 'PUBLIC_ORIGIN'>, slug: string): string =>
   `${originOfEnv(env)}/${slug}`;
 
-const stripMentions = (text: string): string =>
-  (text ?? '')
-    .replace(/\[@[^\]\n]{1,80}\]\(@[^)\s]+\)/g, ' ')
-    .replace(/@[A-Za-z0-9._=\-/+]+:[A-Za-z0-9.-]+(?::\d{1,5})?/g, ' ')
-    .replace(/(?:^|\s)@[A-Za-z0-9._\-\u3400-\u9FFF]+/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
+const MENTION_NAMES: readonly string[] = [
+  MFD_AGENT_SPEC.name,
+  ...(MFD_AGENT_SPEC.aliases ?? []),
+  'London Chinese Food',
+  '倫敦中餐地圖',
+  '伦敦中餐地图',
+  '問一籤',
+  '問一簽',
+  '问一签',
+  '塔羅大師',
+  '塔罗大师',
+  'AI in 5',
+  'Spotted London',
+  'Manyfold Data',
+  'Penny',
+  'Quidpaw',
+];
+
+const stripMentions = (text: string): string => stripAgentMentions(text, MENTION_NAMES);
+
+const localizeZh = (text: string, lang: LangCode): string => (lang === 'zh-Hant' ? toZhHant(text) : text);
 
 const GREETING_RE =
   /^(?:你好|妳好|您好|嗨|哈囉|哈喽|早安|早|午安|晚安|你是誰|你是谁|謝謝|谢谢|感謝|感谢|hi|hello|hey|good\s*(?:morning|afternoon|evening)|thanks|thank\s+you|who\s+are\s+you)[!！。.?？~～\s]*$/i;
@@ -779,8 +795,8 @@ export function formatMfdUpdatesMessage(
 
   const lines = [header];
   for (const u of updates.slice(0, 3)) {
-    const title = DATASET_TITLES[u.slug]?.[lang] ?? u.datasetTitle;
-    lines.push(`- [${title}] ${u.summary}`);
+    const title = DATASET_TITLES[u.slug]?.[lang] ?? localizeZh(u.datasetTitle, lang);
+    lines.push(`- [${title}] ${localizeZh(u.summary, lang)}`);
     lines.push(recordUrl(env, u.slug, u.id));
   }
   return lines.join('\n');
@@ -908,7 +924,7 @@ function formatRecordResults(
 
   const lines = [header];
   for (const rec of records) {
-    lines.push(`- ${fillLine(config, rec.data)}`);
+    lines.push(`- ${localizeZh(fillLine(config, rec.data), lang)}`);
     lines.push(recordUrl(env, config.slug, rec.id));
   }
   return lines.join('\n');
