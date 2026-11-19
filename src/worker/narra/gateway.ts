@@ -38,7 +38,7 @@ import type { Env } from '../types';
 
 export const MFD_AGENT_ID = 'mfd-guide';
 export const MFD_MANYFOLD_AGENT_ID = 'agt_agq66cw5uzyudifa4fuhcnaddu';
-export const MFD_MATRIX_ID = '@agent-6cd6f767:matrix.netmind.chat';
+export const MFD_MATRIX_ID = '@agent-37b08ab6:matrix.netmind.chat';
 const DEFAULT_PUBLIC_ORIGIN = 'https://data.manyfold.ai';
 const DEFAULT_NARRA_API = 'https://api.netmind.chat';
 
