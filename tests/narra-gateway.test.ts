@@ -1,5 +1,7 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import {
+  createWorkersAiTriageModel,
+  heuristicDomainScore,
   routeEvent,
   sanitizeMobileLinks,
   staggerWindowMinute,
@@ -1045,5 +1047,83 @@ describe('Manyfold Data Narra gateway integration', () => {
         EMPTY_MEM,
       ),
     ).toBeNull();
+  });
+
+  it('silences casual London sightseeing/hanging-out questions even with verified London AI hackathons in D1', async () => {
+    const db = createD1();
+    await seedVerifiedRecord(db, 'ai-hackathons', 'hack_london_2099', {
+      ...findDataApp('ai-hackathons')!.example.data,
+      name: 'London AI Agents Hackathon 2099',
+      deadline: '2099-11-15',
+      starts_on: '2099-11-20',
+      ends_on: '2099-11-22',
+      format: 'in-person',
+      city: ['London'],
+      region: 'europe',
+    });
+
+    const env = makeEnv({ DB: db });
+    const sightseeingPrompt = '這週末不知道帶朋友去倫敦哪裡逛逛比較特別';
+    const sightseeingEv = makeInboundEvent({ text: sightseeingPrompt });
+
+    // Scores < 0.55 on MFD_AGENT_SPEC across heuristic, Workers AI pre-filter, and routeEvent
+    expect(heuristicDomainScore(sightseeingEv, MFD_AGENT_SPEC, DEFAULT_ROOM_CTX)).toBeLessThan(0.55);
+    const triageRes = await createWorkersAiTriageModel(null).score({
+      event: sightseeingEv,
+      context: DEFAULT_ROOM_CTX,
+      spec: MFD_AGENT_SPEC,
+      detectedLang: 'zh-Hant',
+    });
+    expect(triageRes.score).toBeLessThan(0.55);
+
+    const routeDecision = await routeEvent(sightseeingEv, DEFAULT_ROOM_CTX, MFD_AGENT_SPEC);
+    expect(routeDecision.shouldReply).toBe(false);
+    expect(routeDecision.confidence).toBeLessThan(0.55);
+
+    // Unmentioned group turn stays silent even with London AI hackathons in D1 and room memory watching ai-hackathons
+    const roomMemWithHackathonWatch: RecallTurnResult = {
+      userMemories: [],
+      roomMemories: [
+        {
+          id: 'mem_mfd_watch_hack',
+          scope: 'room',
+          agentId: MFD_AGENT_ID,
+          roomId: '!mfd-room:matrix.netmind.chat',
+          kind: 'fact',
+          key: 'watch_datasets',
+          value: 'ai-hackathons',
+          createdAt: '2026-11-19T12:00:00Z',
+          updatedAt: '2026-11-19T12:00:00Z',
+        },
+      ],
+      promptSafeLines: [],
+    };
+    const unmentionedDecision: TriageDecision = {
+      shouldReply: true,
+      tier: 1,
+      reason: 'domain_match',
+      confidence: 0.75,
+      detectedLang: 'zh-Hant',
+      shouldQuote: true,
+    };
+
+    expect(await fastRespondMfd(env, sightseeingEv, unmentionedDecision, EMPTY_MEM)).toBe('[NO_REPLY]');
+    expect(await fastRespondMfd(env, sightseeingEv, unmentionedDecision, roomMemWithHackathonWatch)).toBe(
+      '[NO_REPLY]',
+    );
+
+    // Even a bare location mention without antiKeywords (e.g. "倫敦" -> ["London"]) does not trigger Step 4 dump
+    const bareLocationEv = makeInboundEvent({ text: '這週末想去倫敦看看' });
+    expect(await fastRespondMfd(env, bareLocationEv, unmentionedDecision, roomMemWithHackathonWatch)).toBe(
+      '[NO_REPLY]',
+    );
+
+    // Explicit dataset query for London AI hackathons still returns the verified record
+    const explicitHackEv = makeInboundEvent({ text: '@mfd-guide 最近倫敦有哪些 AI 黑客松？' });
+    const explicitHackDecision = await routeEvent(explicitHackEv, DEFAULT_ROOM_CTX, MFD_AGENT_SPEC);
+    expect(explicitHackDecision.shouldReply).toBe(true);
+    const explicitReply = await fastRespondMfd(env, explicitHackEv, explicitHackDecision, EMPTY_MEM);
+    expect(explicitReply).toContain('London AI Agents Hackathon 2099');
+    expect(explicitReply).toContain('https://data.manyfold.ai/ai-hackathons/r/hack_london_2099');
   });
 });
