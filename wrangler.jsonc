@@ -36,11 +36,11 @@
     // GA4 measurement id (stream "Manyfold Data"). Empty serves no analytics at all; a
     // deployment of your own should put its own id here or leave it empty.
     "GA_MEASUREMENT_ID": "G-EP3B87GSTL",
-    // Narra Messenger gateway runtime (staged rollout: disabled until secrets & rollout are enabled).
-    "NARRA_GATEWAY_ENABLED": "off",
-    "NARRA_SYNC": "off",
+    // Narra Messenger gateway runtime (enabled with bound Direct Matrix identity).
+    "NARRA_GATEWAY_ENABLED": "on",
+    "NARRA_SYNC": "on",
     "NARRA_AGENT_ID": "agt_agq66cw5uzyudifa4fuhcnaddu",
-    "NARRA_MATRIX_ID": "@agent-6cd6f767:matrix.netmind.chat"
+    "NARRA_MATRIX_ID": "@agent-37b08ab6:matrix.netmind.chat"
   },
   "durable_objects": {
     "bindings": [
