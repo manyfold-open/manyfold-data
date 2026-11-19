@@ -1,9 +1,11 @@
+import type { NarraGatewayEnv } from '@manyfold/narra-agent-kit/worker';
+
 /**
  * Worker-side types. `Env` mirrors the bindings in wrangler.jsonc — add a binding
  * there, add it here too.
  */
 
-export interface Env {
+export interface Env extends NarraGatewayEnv {
   /** Static build output in dist/client. Non-/api/ requests are served from here. */
   ASSETS: Fetcher;
   DB: D1Database;
@@ -15,6 +17,10 @@ export interface Env {
   PUBLIC_ORIGIN?: string;
   /** GA4 measurement id. Empty or unset: no analytics is served at all. */
   GA_MEASUREMENT_ID?: string;
+  /** Manyfold agent ID (`agt_...`) for metadata & A2A routing. */
+  NARRA_AGENT_ID?: string;
+  /** Matrix user ID (`@agent-...:matrix.netmind.chat`) for the Narra gateway. */
+  NARRA_MATRIX_ID?: string;
 }
 
 /** Errors that already know their HTTP shape. Thrown anywhere, mapped in index.ts. */

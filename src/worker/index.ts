@@ -63,8 +63,15 @@ import type { DataAppConfig } from '../shared/data-app';
 import { checkDataRequest } from '../shared/data-request';
 import { parseQuery } from '../shared/query';
 import type { DatasetResponse, IssuedToken, JoinResponse, MeResponse } from '../shared/types';
+import {
+  BaseNarraMatrixSync,
+  BaseNarraRoomCoordinator,
+  getNarraGatewayStatus,
+  kickNarraGateway,
+} from '@manyfold/narra-agent-kit/worker';
 import { HttpError, type Env } from './types';
 import { requireAdmin } from './admin';
+import { mfdGatewayConfig } from './narra/gateway';
 import { cachedFor, cachedJson, isDailyLimit, secondsToMidnightUtc } from './cache';
 import { listFrom, statsFrom } from '../shared/engine';
 import { consentRequiredFor, freshRequest, measurementIdFor, wantsTag, withAnalytics, type InjectionContext } from './analytics';
@@ -623,6 +630,8 @@ const firstRunOfDay = (now: Date) => now.getUTCHours() === 0 && now.getUTCMinute
 
 app.post('/api/admin/maintenance', async (c) => c.json(await runCron(c.env, c.env.PUBLIC_ORIGIN ?? originOf(c), new Date(), true)));
 
+app.get('/api/admin/gateway/status', async (c) => c.json(await getNarraGatewayStatus(c.env, mfdGatewayConfig)));
+
 app.all('/api/*', () => {
   throw new HttpError(404, 'not_found', 'No such API route.');
 });
@@ -670,12 +679,31 @@ app.all('*', async (c) => {
   return withAnalytics(response, context);
 });
 
+export class NarraMatrixSync extends BaseNarraMatrixSync<Env> {
+  constructor(ctx: DurableObjectState, env: Env) {
+    super(ctx, env, mfdGatewayConfig);
+  }
+}
+
+export class NarraRoomCoordinator extends BaseNarraRoomCoordinator<Env> {
+  constructor(ctx: DurableObjectState, env: Env) {
+    super(ctx, env, mfdGatewayConfig);
+  }
+}
+
 export { app };
 
 export default {
   fetch: app.fetch,
   async scheduled(_controller, env, ctx) {
     const now = new Date();
-    ctx.waitUntil(ensureSchema(env.DB).then(() => runCron(env, env.PUBLIC_ORIGIN ?? DEFAULT_ORIGIN, now, firstRunOfDay(now))));
+    ctx.waitUntil(
+      Promise.all([
+        ensureSchema(env.DB).then(() => runCron(env, env.PUBLIC_ORIGIN ?? DEFAULT_ORIGIN, now, firstRunOfDay(now))),
+        kickNarraGateway(env, mfdGatewayConfig).catch((err) => {
+          console.error('[narra-gateway] scheduled kick failed:', err instanceof Error ? err.message : String(err));
+        }),
+      ]),
+    );
   },
 } satisfies ExportedHandler<Env>;

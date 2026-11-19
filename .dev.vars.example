@@ -17,3 +17,10 @@ PUBLIC_ORIGIN=http://localhost:5173
 # pages served on any host but PUBLIC_ORIGIN's are never tagged anyway. To see the tag in
 # development, use a fake id such as G-TESTLOCAL0, never the real one.
 GA_MEASUREMENT_ID=
+
+# Narra Messenger Gateway (keep off locally unless testing gateway sync/rooms)
+NARRA_GATEWAY_ENABLED=off
+NARRA_SYNC=off
+NARRA_AGENT_TOKEN=
+MANYFOLD_A2A_URL=
+MANYFOLD_A2A_TOKEN=
