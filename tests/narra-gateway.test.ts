@@ -721,4 +721,47 @@ describe('Manyfold Data Narra gateway integration', () => {
     );
     expect(mentionOnlyReply).toContain('Manyfold Data 小幫手');
   });
+
+  it('routes multi-@ dataset queries like LGRP-12 and strips @AI Fortune Stick / @AI Tarot mentions', async () => {
+    const db = createD1();
+    const env = makeEnv({ DB: db });
+    const lgrpCtx: RoomContext = {
+      roomId: '!lgrp12:matrix.netmind.chat',
+      chatType: 'group',
+      members: [
+        { matrixId: '@alice:matrix.netmind.chat', isAgent: false },
+        { matrixId: MFD_MATRIX_ID, displayName: 'Manyfold Data', isAgent: true },
+        { matrixId: '@agent-fortune:matrix.netmind.chat', displayName: 'AI Fortune Stick', isAgent: true },
+        { matrixId: '@agent-tarot:matrix.netmind.chat', displayName: 'AI Tarot', isAgent: true },
+      ],
+      recentHistory: [],
+    };
+
+    const ev = makeInboundEvent({
+      roomId: lgrpCtx.roomId,
+      text: '@AI Fortune Stick @Manyfold Data 有哪些數據集',
+    });
+    const decision = await routeEvent(ev, lgrpCtx, MFD_AGENT_SPEC);
+    expect(decision.shouldReply).toBe(true);
+    expect(decision.reason).toBe('multi_mention_domain_match');
+    expect(decision.detectedLang).toBe('zh-Hant');
+
+    const reply = await fastRespondMfd(env, ev, decision, EMPTY_MEM);
+    expect(reply).toBeTruthy();
+    expect(reply).toContain('17 個已驗證開放資料集');
+    expect(reply).toContain('https://data.manyfold.ai/');
+
+    // @AI Tarot + @AI Fortune Stick bare mentions strip cleanly to greeting
+    const bareEv = makeInboundEvent({
+      roomId: lgrpCtx.roomId,
+      text: '@AI Tarot @AI Fortune Stick @Manyfold Data',
+    });
+    const bareReply = await fastRespondMfd(
+      env,
+      bareEv,
+      { shouldReply: true, tier: 0, reason: 'mention', confidence: 1, detectedLang: 'zh-Hant', shouldQuote: true },
+      EMPTY_MEM,
+    );
+    expect(bareReply).toContain('Manyfold Data 小幫手');
+  });
 });

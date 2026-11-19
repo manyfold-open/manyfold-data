@@ -261,6 +261,12 @@ export const MFD_AGENT_SPEC: AgentSpec = {
     'datasets',
     '資料集',
     '数据集',
+    '數據集',
+    '有哪些數據集',
+    '有哪些資料集',
+    '有哪些数据集',
+    '什麼數據集',
+    '什么数据集',
   ],
   antiKeywords: [
     // Restaurants & food (lcf-guide)
@@ -369,8 +375,10 @@ const MENTION_NAMES: readonly string[] = [
   '問一籤',
   '問一簽',
   '问一签',
+  'AI Fortune Stick',
   '塔羅大師',
   '塔罗大师',
+  'AI Tarot',
   'AI in 5',
   'Spotted London',
   'Manyfold Data',

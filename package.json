@@ -21,7 +21,7 @@
     "node": ">=22.18"
   },
   "dependencies": {
-    "@manyfold/narra-agent-kit": "github:manyfold-open/narra-agent-kit#a6feaa7758b074b7a70c09e0ea4378e68a48f4c4",
+    "@manyfold/narra-agent-kit": "github:manyfold-open/narra-agent-kit#59a83b9fad0a18d0368ec4b2cc44f07bc02b745c",
     "hono": "^4.13.12",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
