@@ -35,8 +35,25 @@
     "PUBLIC_ORIGIN": "https://data.manyfold.ai",
     // GA4 measurement id (stream "Manyfold Data"). Empty serves no analytics at all; a
     // deployment of your own should put its own id here or leave it empty.
-    "GA_MEASUREMENT_ID": "G-EP3B87GSTL"
+    "GA_MEASUREMENT_ID": "G-EP3B87GSTL",
+    // Narra Messenger gateway runtime (staged rollout: disabled until secrets & rollout are enabled).
+    "NARRA_GATEWAY_ENABLED": "off",
+    "NARRA_SYNC": "off",
+    "NARRA_AGENT_ID": "agt_agq66cw5uzyudifa4fuhcnaddu",
+    "NARRA_MATRIX_ID": "@agent-6cd6f767:matrix.netmind.chat"
   },
+  "durable_objects": {
+    "bindings": [
+      { "name": "NARRA_SYNC_DO", "class_name": "NarraMatrixSync" },
+      { "name": "NARRA_ROOM_DO", "class_name": "NarraRoomCoordinator" }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1-narra-gateway",
+      "new_sqlite_classes": ["NarraMatrixSync", "NarraRoomCoordinator"]
+    }
+  ],
   // Secrets, set with `npx wrangler secret put <NAME>`:
   //   ADMIN_PASSWORD          opens /api/admin/* and /settings
   //   CONFIG_ENCRYPTION_KEY   32+ characters; encrypts stored Discord webhooks. Never rotate it casually.
