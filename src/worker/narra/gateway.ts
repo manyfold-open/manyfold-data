@@ -426,12 +426,18 @@ const stripMentions = (text: string): string => stripAgentMentions(text, MENTION
 const localizeZh = (text: string, lang: LangCode): string => (lang === 'zh-Hant' ? toZhHant(text) : text);
 
 const GREETING_RE =
-  /^(?:你好|妳好|您好|嗨|哈囉|哈喽|早安|早|午安|晚安|你是誰|你是谁|謝謝|谢谢|感謝|感谢|hi|hello|hey|good\s*(?:morning|afternoon|evening)|thanks|thank\s+you|who\s+are\s+you)[!！。.?？~～\s]*$/i;
+  /^(?:你好|妳好|您好|嗨|哈囉|哈喽|早安|早|午安|晚安|你是誰|你是谁|hi|hello|hey|good\s*(?:morning|afternoon|evening)|who\s+are\s+you)[!！。.?？~～\s]*$/i;
+
+const THANKS_RE =
+  /(?:謝謝|谢谢|感謝|感谢|多謝|多谢|謝啦|谢啦|\b(?:thanks|thank\s+you|thx|tysm|cheers)\b)/i;
 
 const COMPOUND_RE = /^\[internal hint\]\s*process compound\b/i;
 
 const LIST_APPS_RE =
-  /(?:有哪些數據集|有哪些数据集|什麼數據集|什么数据集|涵蓋哪些|涵盖哪些|what\s+datasets|which\s+datasets|list\s+(?:datasets|apps))/i;
+  /(?:有哪些數據集|有哪些資料集|有哪些数据集|什麼數據集|什麼資料集|什么数据集|涵蓋哪些|涵盖哪些|你能(?:幫我|帮我)?(?:查|做)(?:什麼|什么|哪些)|你可以(?:幫我|帮我)?(?:查|做)(?:什麼|什么|哪些)|你會(?:幫我|帮我)?(?:查|做)(?:什麼|什么|哪些)|你会(?:帮我)?(?:查|做)(?:什么|哪些)|你能查啥|what\s+datasets|which\s+datasets|list\s+(?:datasets|apps)|what\s+can\s+you\s+(?:do|help(?:\s+with)?|search|check|look\s+up))/i;
+
+const DM_OFF_TOPIC_RE =
+  /會下雨|会下雨|下雨|天氣|天气|rain\s+today|weather\s+forecast|forecast|\bweather\b|比特幣|比特币|bitcoin|btc|股價|股价|匯率|汇率|唐人街|拉麵|拉面|麵館|面馆|好吃的/i;
 
 const WHATS_NEW_RE =
   /(?:最近有什麼新|最近有什么新|最新數據|最新数据|新驗證|新验证|what(?:'s| is)\s+new|latest\s+(?:updates|records)|high[- ]signal)/i;
@@ -957,6 +963,16 @@ function greetingReply(lang: LangCode): string {
   return "Hi! I'm the Manyfold Data guide — ask me about upcoming AI hackathons, funding rounds, visa changes, new rules, recalls, or scholarships.";
 }
 
+function thanksReply(lang: LangCode): string {
+  if (lang === 'zh-Hant') {
+    return '不客氣！之後想查 AI 黑客松、融資、簽證變化、新法規、產品召回或獎學金等開放資料，隨時問我 📊';
+  }
+  if (lang === 'zh-Hans') {
+    return '不客气！之后想查 AI 黑客松、融资、签证变化、新法规、产品召回或奖学金等开放数据，随时问我 📊';
+  }
+  return "You're welcome! Ask anytime when you want to check AI hackathons, funding, visa changes, new rules, recalls, or scholarships 📊";
+}
+
 function compoundReply(lang: LangCode): string {
   if (lang === 'zh-Hant') {
     return '這則訊息是圖片或檔案我暫時看不到喔，直接用文字告訴我想查哪個資料集或關鍵詞就可以！';
@@ -1103,10 +1119,34 @@ export async function fastRespondMfd(
 
   const isMultiMention = decision.reason === 'multi_mention_domain_match';
   const inferredSlugs = inferDatasetSlugs(cleanedText);
-  const hasAntiHit = (MFD_AGENT_SPEC.antiKeywords ?? []).some((kw) => {
+  const hasAntiHit =
+    (MFD_AGENT_SPEC.antiKeywords ?? []).some((kw) => {
+      if (kw instanceof RegExp) return kw.test(cleanedText);
+      return matchToken(cleanedText.toLowerCase(), kw);
+    }) || DM_OFF_TOPIC_RE.test(cleanedText);
+  const hasDomainHit = (MFD_AGENT_SPEC.domainKeywords ?? []).some((kw) => {
     if (kw instanceof RegExp) return kw.test(cleanedText);
     return matchToken(cleanedText.toLowerCase(), kw);
   });
+
+  if (
+    THANKS_RE.test(cleanedText) &&
+    !/[?？]\s*$/.test(cleanedText) &&
+    !hasAntiHit &&
+    inferredSlugs.length === 0 &&
+    !hasDomainHit &&
+    !LIST_APPS_RE.test(cleanedText) &&
+    !WHATS_NEW_RE.test(cleanedText) &&
+    !MFD_FOLLOWUP_RE.test(cleanedText) &&
+    !/(?:嗎|吗|什麼|什么|怎麼|怎么|請問|请问|幫我|帮我|查一下|告訴我|告诉我|\b(?:can\s+you|could\s+you|tell\s+me|show\s+me|what|which|how|why|when|where)\b)/i.test(
+      cleanedText,
+    )
+  ) {
+    if (isUnmentionedGroup) {
+      return '[NO_REPLY]';
+    }
+    return thanksReply(lang);
+  }
 
   if (hasAntiHit && inferredSlugs.length === 0) {
     return isMultiMention || isUnmentionedGroup ? '[NO_REPLY]' : offTopicRedirect(lang);
@@ -1114,15 +1154,25 @@ export async function fastRespondMfd(
 
   const limit = event.isVoice ? 2 : event.chatType === 'group' ? 3 : 5;
   const now = new Date();
+  const terms = extractSearchTerms(cleanedText);
+  const hasSearchOrFollowupSignal =
+    inferredSlugs.length > 0 ||
+    terms.some((t) => !GENERIC_LOCATION_TERMS.has(t.toLowerCase())) ||
+    MFD_FOLLOWUP_RE.test(cleanedText) ||
+    WHATS_NEW_RE.test(cleanedText) ||
+    hasDomainHit;
 
   if (!env.DB) {
-    return hasA2ACredential(env) ? null : offTopicRedirect(lang);
+    return hasA2ACredential(env) && hasSearchOrFollowupSignal ? null : offTopicRedirect(lang);
   }
 
   await ensureSchema(env.DB);
 
-  // 1. "What datasets exist?"
-  if (LIST_APPS_RE.test(cleanedText)) {
+  // 1. "What datasets exist?" or capability question
+  if (
+    LIST_APPS_RE.test(cleanedText) &&
+    (inferredSlugs.length === 0 || /(?:datasets?|apps?|數據集|資料集|数据集)/i.test(cleanedText))
+  ) {
     const summaries = await appSummaries(env.DB, dataApps, now);
     const nonEmpty = summaries.filter((s) => s.verified > 0);
     const shown = (nonEmpty.length > 0 ? nonEmpty : summaries).slice(0, limit === 2 ? 3 : 6);
@@ -1150,7 +1200,6 @@ export async function fastRespondMfd(
   }
 
   // 3. Targeted dataset query (or remembered watched datasets)
-  const terms = extractSearchTerms(cleanedText);
 
   // Unmentioned active-session turns with zero dataset signals and no follow-up cue stay silent.
   if (
@@ -1220,14 +1269,14 @@ export async function fastRespondMfd(
     return '[NO_REPLY]';
   }
 
-  // 5. Fallback to Manyfold A2A if credential is available
-  if (hasA2ACredential(env)) {
+  // 5. Fallback to Manyfold A2A only when the turn carries dataset/search/follow-up signals
+  if (hasA2ACredential(env) && hasSearchOrFollowupSignal) {
     return null;
   }
 
-  // Graceful response when A2A is not configured
+  // Graceful response when A2A is not configured or turn has no dataset/search signal
   const root = originOfEnv(env);
-  if (inferredSlugs.length > 0 || terms.length > 0) {
+  if (inferredSlugs.length > 0 || terms.some((t) => !GENERIC_LOCATION_TERMS.has(t.toLowerCase()))) {
     if (lang === 'zh-Hant') {
       return `Manyfold Data 目前還沒有查到符合的已驗證紀錄，可在首頁查看全部 17 個資料集或提交「Request a data app」：\n${root}`;
     }

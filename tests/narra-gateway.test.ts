@@ -865,7 +865,9 @@ describe('Manyfold Data Narra gateway integration', () => {
       { ...activeDecision, reason: 'explicit_mention' },
       EMPTY_MEM,
     );
-    expect(explicitThanks).toContain('Manyfold Data 小幫手');
+    expect(explicitThanks).toBe(
+      '不客氣！之後想查 AI 黑客松、融資、簽證變化、新法規、產品召回或獎學金等開放資料，隨時問我 📊',
+    );
 
     const followUpReply = await fastRespondMfd(
       envWithA2a,
@@ -1251,5 +1253,102 @@ describe('Manyfold Data Narra gateway integration', () => {
     expect(bareDecision.reason).toBe('explicit_mention');
     const bareReply = await fastRespondMfd(env, bareMentionEv, bareDecision, EMPTY_MEM);
     expect(bareReply).toContain("Manyfold Data guide");
+  });
+
+  it('handles 1v1 DM capability questions, thanks replies, off-topic redirects, and unmentioned active_session silence', async () => {
+    const db = createD1();
+    await seedVerifiedRecord(db, 'ai-hackathons', 'hack_dm_cap_2099', {
+      ...findDataApp('ai-hackathons')!.example.data,
+      name: 'DM Capability Hack 2099',
+      deadline: '2099-11-15',
+      starts_on: '2099-11-20',
+      ends_on: '2099-11-22',
+    });
+
+    const envWithA2a = makeEnv({
+      DB: db,
+      MANYFOLD_A2A_URL: 'https://a2a.mfd.test/rpc',
+      MANYFOLD_A2A_TOKEN: 'a2a_secret_mfd',
+    });
+
+    const dmCtx: RoomContext = {
+      roomId: '!dm_mfd_1v1:matrix.netmind.chat',
+      chatType: 'dm',
+      members: [{ matrixId: '@alice:matrix.netmind.chat', isAgent: false }],
+      recentHistory: [],
+    };
+
+    // 1. DM "你能幫我查什麼？" returns D1 dataset summary list locally
+    const capEv = makeInboundEvent({ roomId: dmCtx.roomId, chatType: 'dm', text: '你能幫我查什麼？' });
+    const capDecision = await routeEvent(capEv, dmCtx, MFD_AGENT_SPEC);
+    expect(capDecision.detectedLang).toBe('zh-Hant');
+    const capReply = await fastRespondMfd(envWithA2a, capEv, capDecision, EMPTY_MEM);
+    expect(capReply).toContain('Manyfold Data 目前收錄 17 個已驗證開放資料集');
+    expect(capReply).toContain('https://data.manyfold.ai/');
+
+    const capEnEv = makeInboundEvent({ roomId: dmCtx.roomId, chatType: 'dm', text: 'what can you do?' });
+    const capEnDecision = await routeEvent(capEnEv, dmCtx, MFD_AGENT_SPEC);
+    expect(capEnDecision.detectedLang).toBe('en');
+    const capEnReply = await fastRespondMfd(envWithA2a, capEnEv, capEnDecision, EMPTY_MEM);
+    expect(capEnReply).toContain('17 verified open datasets');
+
+    // 2. DM "謝謝！" returns thanksReply('zh-Hant') (and zh-Hans / en variants)
+    const thxHantEv = makeInboundEvent({ roomId: dmCtx.roomId, chatType: 'dm', text: '謝謝！' });
+    const thxHantDecision = await routeEvent(thxHantEv, dmCtx, MFD_AGENT_SPEC);
+    expect(thxHantDecision.detectedLang).toBe('zh-Hant');
+    expect(await fastRespondMfd(envWithA2a, thxHantEv, thxHantDecision, EMPTY_MEM)).toBe(
+      '不客氣！之後想查 AI 黑客松、融資、簽證變化、新法規、產品召回或獎學金等開放資料，隨時問我 📊',
+    );
+
+    const thxHansEv = makeInboundEvent({ roomId: dmCtx.roomId, chatType: 'dm', text: '谢谢' });
+    const thxHansDecision = await routeEvent(thxHansEv, dmCtx, MFD_AGENT_SPEC);
+    expect(thxHansDecision.detectedLang).toBe('zh-Hans');
+    expect(await fastRespondMfd(envWithA2a, thxHansEv, thxHansDecision, EMPTY_MEM)).toBe(
+      '不客气！之后想查 AI 黑客松、融资、签证变化、新法规、产品召回或奖学金等开放数据，随时问我 📊',
+    );
+
+    const thxEnEv = makeInboundEvent({ roomId: dmCtx.roomId, chatType: 'dm', text: 'thanks!' });
+    const thxEnDecision = await routeEvent(thxEnEv, dmCtx, MFD_AGENT_SPEC);
+    expect(thxEnDecision.detectedLang).toBe('en');
+    expect(await fastRespondMfd(envWithA2a, thxEnEv, thxEnDecision, EMPTY_MEM)).toBe(
+      "You're welcome! Ask anytime when you want to check AI hackathons, funding, visa changes, new rules, recalls, or scholarships 📊",
+    );
+
+    // 3. DM "幫我推薦唐人街好吃的火鍋" & weather queries return offTopicRedirect('zh-Hant') locally
+    const hotpotEv = makeInboundEvent({ roomId: dmCtx.roomId, chatType: 'dm', text: '幫我推薦唐人街好吃的火鍋' });
+    const hotpotDecision = await routeEvent(hotpotEv, dmCtx, MFD_AGENT_SPEC);
+    expect(hotpotDecision.detectedLang).toBe('zh-Hant');
+    expect(await fastRespondMfd(envWithA2a, hotpotEv, hotpotDecision, EMPTY_MEM)).toBe(
+      '這題不在我的資料集裡，我只查 Manyfold Data（黑客松、融資、簽證變化、新法規、召回、獎學金等），想找哪一類？',
+    );
+
+    const weatherEv = makeInboundEvent({ roomId: dmCtx.roomId, chatType: 'dm', text: '倫敦今天會下雨嗎？' });
+    const weatherDecision = await routeEvent(weatherEv, dmCtx, MFD_AGENT_SPEC);
+    expect(weatherDecision.detectedLang).toBe('zh-Hant');
+    expect(await fastRespondMfd(envWithA2a, weatherEv, weatherDecision, EMPTY_MEM)).toBe(
+      '這題不在我的資料集裡，我只查 Manyfold Data（黑客松、融資、簽證變化、新法規、召回、獎學金等），想找哪一類？',
+    );
+
+    // 4. Unrecognized non-dataset DM chit-chat does not stall on A2A; follow-up preserves null
+    const chatterEv = makeInboundEvent({ roomId: dmCtx.roomId, chatType: 'dm', text: '好無聊啊，聊點別的' });
+    const chatterDecision = await routeEvent(chatterEv, dmCtx, MFD_AGENT_SPEC);
+    expect(await fastRespondMfd(envWithA2a, chatterEv, chatterDecision, EMPTY_MEM)).toContain('想查詢哪一個資料集');
+
+    const followUpEv = makeInboundEvent({ roomId: dmCtx.roomId, chatType: 'dm', text: '還有更多嗎？' });
+    const followUpDecision = await routeEvent(followUpEv, dmCtx, MFD_AGENT_SPEC);
+    expect(await fastRespondMfd(envWithA2a, followUpEv, followUpDecision, EMPTY_MEM)).toBeNull();
+
+    // 5. Unmentioned group active_session "謝謝" stays [NO_REPLY]
+    const activeDecision: TriageDecision = {
+      shouldReply: true,
+      tier: 0,
+      reason: 'active_session',
+      confidence: 0.95,
+      detectedLang: 'zh-Hant',
+      shouldQuote: true,
+    };
+    expect(await fastRespondMfd(envWithA2a, makeInboundEvent({ text: '謝謝' }), activeDecision, EMPTY_MEM)).toBe(
+      '[NO_REPLY]',
+    );
   });
 });
