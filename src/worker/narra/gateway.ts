@@ -1496,13 +1496,17 @@ function extractRecentRecordRefs(
     .join('|');
   const urlRe = new RegExp(`(?:${escapedHosts})\\/([a-z0-9-]+)\\/r\\/(rec_[a-z0-9_]+)`, 'gi');
 
-  for (const text of candidateTexts) {
+  const hasReplyTargetText = Boolean(context.replyToTarget?.text);
+  for (let idx = 0; idx < candidateTexts.length; idx++) {
+    const text = candidateTexts[idx]!;
     urlRe.lastIndex = 0;
+    let foundInThisText = false;
     let match: RegExpExecArray | null;
     while ((match = urlRe.exec(text)) !== null) {
       const slug = match[1]!.toLowerCase();
       const id = match[2]!;
       if (!findDataApp(slug)) continue;
+      foundInThisText = true;
 
       if (!seenSlugs.has(slug)) {
         seenSlugs.add(slug);
@@ -1517,6 +1521,11 @@ function extractRecentRecordRefs(
         else recordIdsBySlug.set(slug, [id]);
       }
     }
+    // Once we have extracted verified record URLs from the most recent self reply in `recentHistory`,
+    // stop scanning older self turns so pronoun follow-ups ("这几个里...") never mix in stale lists
+    // from earlier topics. (If `replyToTarget` is idx 0, still allow the latest history turn at idx >= 1.)
+    const isHistoryTurn = !hasReplyTargetText || idx > 0;
+    if (isHistoryTurn && foundInThisText) break;
   }
 
   return { slugs, recordIdsBySlug, orderedRefs };
