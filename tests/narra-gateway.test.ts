@@ -21,6 +21,7 @@ import workerDefault, {
   NarraRoomCoordinator,
 } from '../src/worker/index';
 import {
+  buildMfdExtraEnvelopeFields,
   createMfdGatewayConfig,
   extractSearchTerms,
   fastRespondMfd,
@@ -31,6 +32,7 @@ import {
   MFD_AGENT_SPEC,
   MFD_MANYFOLD_AGENT_ID,
   MFD_MATRIX_ID,
+  mfdGatewayConfig,
   queryHighSignalUpdates,
   resolveMemorySlugs,
 } from '../src/worker/narra/gateway';
@@ -1350,5 +1352,202 @@ describe('Manyfold Data Narra gateway integration', () => {
     expect(await fastRespondMfd(envWithA2a, makeInboundEvent({ text: '謝謝' }), activeDecision, EMPTY_MEM)).toBe(
       '[NO_REPLY]',
     );
+  });
+
+  it('caches ensureSchema per D1Database handle and executes candidate & cross-dataset queries in parallel preserving priority', async () => {
+    const rawDb = createD1();
+    const today = todayUtc();
+    await seedVerifiedRecord(rawDb, 'ai-fundraising', 'fund_aurora_1', {
+      ...findDataApp('ai-fundraising')!.example.data,
+      company: 'AuroraPhotonics',
+      announced_on: today,
+    });
+    await seedVerifiedRecord(rawDb, 'oncology-drug-updates', 'onc_aurora_1', {
+      ...findDataApp('oncology-drug-updates')!.example.data,
+      drug: 'AuroraPhotonics-RX',
+      announced_on: today,
+    });
+    await seedVerifiedRecord(rawDb, 'sky-events', 'sky_zephyr_1', {
+      ...findDataApp('sky-events')!.example.data,
+      name: 'ZephyrComet 2099 Passage',
+      date: '2099-08-12',
+    });
+
+    let inFlight = 0;
+    let maxInFlight = 0;
+    let schemaCheckCalls = 0;
+    const wrapStmt = (s: D1PreparedStatement): D1PreparedStatement =>
+      new Proxy(s, {
+        get(target, prop, receiver) {
+          if (prop === 'bind') {
+            return (...args: unknown[]) => wrapStmt(target.bind(...args));
+          }
+          if (prop === 'first' || prop === 'all') {
+            return async (...args: unknown[]) => {
+              inFlight++;
+              maxInFlight = Math.max(maxInFlight, inFlight);
+              await new Promise((r) => setTimeout(r, 5));
+              try {
+                return await (target[prop] as (...a: unknown[]) => Promise<unknown>)(...args);
+              } finally {
+                inFlight--;
+              }
+            };
+          }
+          return Reflect.get(target, prop, receiver);
+        },
+      });
+    const instrumentedDb = {
+      prepare: (sql: string) => {
+        if (/CREATE\s+TABLE|key\s*=\s*'schema'/i.test(sql)) schemaCheckCalls++;
+        return wrapStmt(rawDb.prepare(sql));
+      },
+      exec: async (sql: string) => {
+        if (/CREATE\s+TABLE/i.test(sql)) schemaCheckCalls++;
+        return rawDb.exec(sql);
+      },
+      batch: async (stmts: D1PreparedStatement[]) => rawDb.batch(stmts),
+      dump: async () => rawDb.dump(),
+    } as unknown as D1Database;
+
+    const env = makeEnv({ DB: instrumentedDb });
+    const dmDecision: TriageDecision = {
+      shouldReply: true,
+      tier: 0,
+      reason: 'dm',
+      confidence: 1,
+      detectedLang: 'en',
+      shouldQuote: false,
+    };
+
+    // 1. Cross-dataset query matches both ai-fundraising (earlier in dataApps) and oncology-drug-updates (later):
+    //    executes in parallel (maxInFlight > 1) and returns ai-fundraising first in dataApps priority order!
+    const crossReply = await fastRespondMfd(
+      env,
+      makeInboundEvent({ chatType: 'dm', text: 'Any verified records on AuroraPhotonics?' }),
+      dmDecision,
+      EMPTY_MEM,
+    );
+    expect(crossReply).toContain('AuroraPhotonics');
+    expect(crossReply).toContain('https://data.manyfold.ai/ai-fundraising/r/fund_aurora_1');
+    expect(crossReply).not.toContain('onc_aurora_1');
+    expect(maxInFlight).toBeGreaterThan(1);
+
+    // 2. Second query on the SAME DB handle hits a late dataset (sky-events) without re-running ensureSchema
+    const schemaCallsAfterFirst = schemaCheckCalls;
+    expect(schemaCallsAfterFirst).toBe(1);
+
+    const skyReply = await fastRespondMfd(
+      env,
+      makeInboundEvent({ chatType: 'dm', text: 'Tell me about ZephyrComet' }),
+      dmDecision,
+      EMPTY_MEM,
+    );
+    expect(skyReply).toContain('ZephyrComet 2099 Passage');
+    expect(skyReply).toContain('https://data.manyfold.ai/sky-events/r/sky_zephyr_1');
+    expect(schemaCheckCalls).toBe(schemaCallsAfterFirst);
+  });
+
+  it('wires enableA2AFailureReply, trilingual thinkingMessage, and parallel <=1500 char D1 prefetch in mfdGatewayConfig', async () => {
+    expect(mfdGatewayConfig.enableA2AFailureReply).toBe(true);
+    expect(createMfdGatewayConfig().enableA2AFailureReply).toBe(true);
+    expect(typeof mfdGatewayConfig.thinkingMessage).toBe('function');
+    expect(typeof mfdGatewayConfig.buildExtraEnvelopeFields).toBe('function');
+
+    const dummyEv = makeInboundEvent({ chatType: 'dm', text: 'Compare London AI hackathons and UK visa changes' });
+    const baseDecision: TriageDecision = {
+      shouldReply: true,
+      tier: 0,
+      reason: 'dm',
+      confidence: 1,
+      detectedLang: 'zh-Hant',
+      shouldQuote: false,
+    };
+
+    expect(mfdGatewayConfig.thinkingMessage!('zh-Hant', dummyEv, baseDecision)).toBe(
+      '📊 正在並行查詢 Manyfold Data 開放資料集，稍等一下…',
+    );
+    expect(mfdGatewayConfig.thinkingMessage!('zh-Hans', dummyEv, { ...baseDecision, detectedLang: 'zh-Hans' })).toBe(
+      '📊 正在并行查询 Manyfold Data 开放数据集，稍等一下…',
+    );
+    expect(mfdGatewayConfig.thinkingMessage!('en', dummyEv, { ...baseDecision, detectedLang: 'en' })).toBe(
+      '📊 Querying Manyfold Data verified datasets in parallel, one moment…',
+    );
+
+    const db = createD1();
+    const today = todayUtc();
+    await seedVerifiedRecord(db, 'ai-hackathons', 'hack_pref_1', {
+      ...findDataApp('ai-hackathons')!.example.data,
+      name: 'London AI Builders Hack 2099',
+      deadline: '2099-11-10',
+      starts_on: '2099-11-15',
+      ends_on: '2099-11-17',
+      city: ['London'],
+    });
+    await seedVerifiedRecord(db, 'visa-changes', 'visa_pref_1', {
+      ...findDataApp('visa-changes')!.example.data,
+      title: 'UK ETA travel authorisation update for European visitors',
+      destination: ['United Kingdom'],
+      effective_on: today,
+    });
+    await seedVerifiedRecord(db, 'scholarships', 'schol_pref_1', {
+      ...findDataApp('scholarships')!.example.data,
+      name: 'Chevening AI Policy Scholarship 2099',
+      deadline: '2099-11-01',
+    });
+
+    const env = makeEnv({ DB: db });
+
+    // Multi-dataset comparison prefetches records from BOTH inferred datasets
+    const cmpPrefetch = await buildMfdExtraEnvelopeFields(
+      env,
+      dummyEv,
+      { ...baseDecision, detectedLang: 'en' },
+      EMPTY_MEM,
+    );
+    expect(cmpPrefetch).not.toBeNull();
+    expect(cmpPrefetch!.d1_prefetched_records).toContain('London AI Builders Hack 2099');
+    expect(cmpPrefetch!.d1_prefetched_records).toContain('UK ETA travel authorisation update');
+    expect(cmpPrefetch!.d1_prefetched_records).toContain('https://data.manyfold.ai/ai-hackathons/r/hack_pref_1');
+    expect(cmpPrefetch!.d1_prefetched_records).toContain('https://data.manyfold.ai/visa-changes/r/visa_pref_1');
+    expect(cmpPrefetch!.d1_prefetched_records.length).toBeLessThanOrEqual(1500);
+
+    // Follow-up message with user memories prefetches from remembered datasets in zh-Hant
+    const memWithWatch: RecallTurnResult = {
+      userMemories: [
+        {
+          id: 'mem_pref_1',
+          scope: 'user',
+          agentId: MFD_AGENT_ID,
+          userId: '@alice:matrix.netmind.chat',
+          originChatType: 'dm',
+          kind: 'preference',
+          key: 'watch_datasets',
+          value: 'scholarships,ai-hackathons',
+          createdAt: '2026-11-19T12:00:00Z',
+          updatedAt: '2026-11-19T12:00:00Z',
+        },
+      ],
+      roomMemories: [],
+      promptSafeLines: [],
+    };
+    const memPrefetch = await buildMfdExtraEnvelopeFields(
+      env,
+      makeInboundEvent({ chatType: 'dm', text: '還有更多嗎？' }),
+      baseDecision,
+      memWithWatch,
+    );
+    expect(memPrefetch).not.toBeNull();
+    expect(memPrefetch!.d1_prefetched_records).toContain('Chevening AI Policy Scholarship 2099');
+    expect(memPrefetch!.d1_prefetched_records).toContain('London AI Builders Hack 2099');
+    expect(memPrefetch!.d1_prefetched_records).toContain('國際獎學金');
+    expect(memPrefetch!.d1_prefetched_records.length).toBeLessThanOrEqual(1500);
+
+    // Empty DB returns null cleanly
+    const emptyDb = createD1();
+    await ensureSchema(emptyDb);
+    expect(
+      await buildMfdExtraEnvelopeFields(makeEnv({ DB: emptyDb }), dummyEv, baseDecision, EMPTY_MEM),
+    ).toBeNull();
   });
 });

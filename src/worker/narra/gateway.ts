@@ -756,6 +756,14 @@ export function extractSearchTerms(text: string): string[] {
 
 /* ───────── D1 queries & high-signal updates ───────── */
 
+const schemaReadyDbs = new WeakSet<D1Database>();
+
+async function ensureSchemaOnce(db: D1Database): Promise<void> {
+  if (schemaReadyDbs.has(db)) return;
+  await ensureSchema(db);
+  schemaReadyDbs.add(db);
+}
+
 export interface HighSignalUpdate {
   id: string;
   slug: string;
@@ -779,7 +787,7 @@ export async function queryHighSignalUpdates(
   limit = 3,
 ): Promise<HighSignalUpdate[]> {
   if (!env.DB) return [];
-  await ensureSchema(env.DB);
+  await ensureSchemaOnce(env.DB);
   const cutoff = (sinceIso ?? '').trim();
   const sql = cutoff
     ? `SELECT id, app_slug, data_json, verified_at FROM records
@@ -1166,7 +1174,7 @@ export async function fastRespondMfd(
     return hasA2ACredential(env) && hasSearchOrFollowupSignal ? null : offTopicRedirect(lang);
   }
 
-  await ensureSchema(env.DB);
+  await ensureSchemaOnce(env.DB);
 
   // 1. "What datasets exist?" or capability question
   if (
@@ -1222,17 +1230,21 @@ export async function fastRespondMfd(
         : resolveMemorySlugs(memories);
 
   if (candidateSlugs.length > 0) {
-    for (const slug of candidateSlugs) {
-      const config = findDataApp(slug);
-      if (!config) continue;
-      const res = await queryDatasetRecords(env.DB, config, terms, limit, now);
-      if (res.records.length > 0) {
-        return formatRecordResults(env, config, res.records, res.total, res.today, lang, res.usedDefaultFilter);
-      }
+    const candidateConfigs = candidateSlugs
+      .map((slug) => findDataApp(slug))
+      .filter((cfg): cfg is DataAppConfig => cfg !== undefined);
+    const candidateResults = await Promise.all(
+      candidateConfigs.map((config) => queryDatasetRecords(env.DB, config, terms, limit, now)),
+    );
+    const firstCandidateHitIdx = candidateResults.findIndex((res) => res.records.length > 0);
+    if (firstCandidateHitIdx >= 0) {
+      const config = candidateConfigs[firstCandidateHitIdx]!;
+      const res = candidateResults[firstCandidateHitIdx]!;
+      return formatRecordResults(env, config, res.records, res.total, res.today, lang, res.usedDefaultFilter);
     }
     // If terms narrowed too strictly on an inferred dataset, fall back to recent verified rows from D1.
     if (terms.length > 0) {
-      const primary = findDataApp(candidateSlugs[0]!);
+      const primary = candidateConfigs[0];
       if (primary) {
         const broader = await queryDatasetRecords(env.DB, primary, [], limit, now);
         if (broader.records.length > 0) {
@@ -1250,17 +1262,20 @@ export async function fastRespondMfd(
     }
   }
 
-  // 4. Cross-dataset text search when specific non-location search terms exist
+  // 4. Cross-dataset text search in parallel when specific non-location search terms exist
   const canCrossSearch =
     terms.length > 0 &&
     (!(isUnmentionedGroup && inferredSlugs.length === 0) ||
       terms.some((t) => !GENERIC_LOCATION_TERMS.has(t.toLowerCase())));
   if (canCrossSearch) {
-    for (const config of dataApps) {
-      const res = await queryDatasetRecords(env.DB, config, terms, limit, now);
-      if (res.records.length > 0) {
-        return formatRecordResults(env, config, res.records, res.total, res.today, lang, res.usedDefaultFilter);
-      }
+    const crossResults = await Promise.all(
+      dataApps.map((config) => queryDatasetRecords(env.DB, config, terms, limit, now)),
+    );
+    const firstCrossHitIdx = crossResults.findIndex((res) => res.records.length > 0);
+    if (firstCrossHitIdx >= 0) {
+      const config = dataApps[firstCrossHitIdx]!;
+      const res = crossResults[firstCrossHitIdx]!;
+      return formatRecordResults(env, config, res.records, res.total, res.today, lang, res.usedDefaultFilter);
     }
   }
 
@@ -1295,6 +1310,101 @@ export async function fastRespondMfd(
   return 'Which Manyfold Data dataset would you like to search (e.g., AI hackathons, fundraising, visa changes, new rules, recalls, or scholarships)?';
 }
 
+const MAX_MFD_PREFETCH_DATASETS = 3;
+const MAX_MFD_PREFETCH_RECORDS = 6;
+const MAX_MFD_PREFETCH_CHARS = 1500;
+
+export async function buildMfdExtraEnvelopeFields(
+  env: Env,
+  event: InboundEvent,
+  decision: TriageDecision,
+  memories: RecallTurnResult,
+): Promise<Record<string, string> | null> {
+  if (!env.DB) return null;
+
+  try {
+    await ensureSchemaOnce(env.DB);
+    const lang = decision.detectedLang;
+    const cleanedText = stripMentions(event.text);
+    const terms = extractSearchTerms(cleanedText);
+    const inferred = inferDatasetSlugs(cleanedText);
+    const remembered = resolveMemorySlugs(memories);
+    const mergedSlugs = [...new Set([...inferred, ...remembered])];
+    const targetSlugs = (mergedSlugs.length > 0 ? mergedSlugs : [...HIGH_SIGNAL_SLUGS]).slice(
+      0,
+      MAX_MFD_PREFETCH_DATASETS,
+    );
+    const targetConfigs = targetSlugs
+      .map((slug) => findDataApp(slug))
+      .filter((cfg): cfg is DataAppConfig => cfg !== undefined);
+    if (targetConfigs.length === 0) return null;
+
+    const now = new Date();
+    const initialResults = await Promise.all(
+      targetConfigs.map((config) => queryDatasetRecords(env.DB, config, terms, 3, now)),
+    );
+
+    const resolvedResults =
+      terms.length > 0
+        ? await Promise.all(
+            targetConfigs.map(async (config, idx) => {
+              const first = initialResults[idx]!;
+              if (first.records.length > 0) return first;
+              return queryDatasetRecords(env.DB, config, [], 3, now);
+            }),
+          )
+        : initialResults;
+
+    // Collect up to 6 verified records round-robin across queried datasets for balanced comparison context.
+    const selected: Array<{ config: DataAppConfig; record: PublicRecord }> = [];
+    const seenIds = new Set<string>();
+    const maxPerDataset = Math.max(0, ...resolvedResults.map((r) => r.records.length));
+    for (let slot = 0; slot < maxPerDataset && selected.length < MAX_MFD_PREFETCH_RECORDS; slot++) {
+      for (let i = 0; i < targetConfigs.length && selected.length < MAX_MFD_PREFETCH_RECORDS; i++) {
+        const rec = resolvedResults[i]!.records[slot];
+        if (!rec) continue;
+        const key = `${targetConfigs[i]!.slug}:${rec.id}`;
+        if (seenIds.has(key)) continue;
+        seenIds.add(key);
+        selected.push({ config: targetConfigs[i]!, record: rec });
+      }
+    }
+
+    if (selected.length === 0) return null;
+
+    const today = todayUtc(now);
+    const header = `Manyfold Data verified records (today ${today}):`;
+    const lines: string[] = [header];
+    let totalLen = header.length;
+
+    for (const { config, record } of selected) {
+      const title = DATASET_TITLES[config.slug]?.[lang] ?? config.title;
+      const summaryRaw = localizeZh(fillLine(config, record.data), lang);
+      const summary = summaryRaw.length > 160 ? `${summaryRaw.slice(0, 159)}…` : summaryRaw;
+      const line = `- [${title}] ${summary} | ${recordUrl(env, config.slug, record.id)}`;
+      const candidateLen = totalLen + 1 + line.length;
+      if (candidateLen <= MAX_MFD_PREFETCH_CHARS) {
+        lines.push(line);
+        totalLen = candidateLen;
+      } else {
+        const remaining = MAX_MFD_PREFETCH_CHARS - totalLen - 2;
+        if (remaining >= 24) {
+          lines.push(`${line.slice(0, remaining)}…`);
+          totalLen = MAX_MFD_PREFETCH_CHARS;
+        }
+        break;
+      }
+    }
+
+    if (lines.length <= 1) return null;
+    return {
+      d1_prefetched_records: lines.join('\n').slice(0, MAX_MFD_PREFETCH_CHARS),
+    };
+  } catch {
+    return null;
+  }
+}
+
 export async function resolveMfdA2ACredential(env: Env): Promise<NarraA2ACredentialResult | null> {
   const url = (env.MANYFOLD_A2A_URL ?? '').trim();
   const token = (env.MANYFOLD_A2A_TOKEN ?? '').trim();
@@ -1312,6 +1422,14 @@ export function createMfdGatewayConfig(
     fetchUpdates: (env, sinceIso) => fetchMfdUpdates(env, sinceIso, overrides.fetchImpl),
     fastRespond: fastRespondMfd,
     resolveA2ACredential: resolveMfdA2ACredential,
+    enableA2AFailureReply: true,
+    thinkingMessage: (lang) =>
+      lang === 'zh-Hant'
+        ? '📊 正在並行查詢 Manyfold Data 開放資料集，稍等一下…'
+        : lang === 'zh-Hans'
+          ? '📊 正在并行查询 Manyfold Data 开放数据集，稍等一下…'
+          : '📊 Querying Manyfold Data verified datasets in parallel, one moment…',
+    buildExtraEnvelopeFields: buildMfdExtraEnvelopeFields,
     ...overrides,
   };
 }
