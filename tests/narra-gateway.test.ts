@@ -1782,4 +1782,41 @@ describe('Manyfold Data Narra gateway integration', () => {
     expect(inferDatasetSlugs('最近有哪些產品召回？')).toContain('recalls');
     expect(inferDatasetSlugs('最近有哪些癌症新藥或抗癌新藥進展？')).toContain('oncology-drug-updates');
   });
+
+  it('hands off Simplified Chinese comparative follow-up during group active_session to A2A instead of [NO_REPLY]', async () => {
+    const db = createD1();
+    const envWithA2a = makeEnv({
+      DB: db,
+      MANYFOLD_A2A_URL: 'https://a2a.mfd.test/rpc',
+      MANYFOLD_A2A_TOKEN: 'a2a_secret_mfd',
+    });
+    const zhHansCompareText = '这几条里哪一条对来英国工作的工程师影响最大？';
+    const activeSessionDecision: TriageDecision = {
+      shouldReply: true,
+      tier: 1,
+      reason: 'active_session',
+      confidence: 0.9,
+      detectedLang: 'zh-Hans',
+      shouldQuote: true,
+    };
+
+    expect(
+      await fastRespondMfd(
+        envWithA2a,
+        makeInboundEvent({ chatType: 'group', text: zhHansCompareText }),
+        activeSessionDecision,
+        EMPTY_MEM,
+      ),
+    ).toBeNull();
+
+    // Non-active-session unmentioned group turn still stays silent
+    expect(
+      await fastRespondMfd(
+        envWithA2a,
+        makeInboundEvent({ chatType: 'group', text: zhHansCompareText }),
+        { ...activeSessionDecision, reason: 'domain_match' },
+        EMPTY_MEM,
+      ),
+    ).toBe('[NO_REPLY]');
+  });
 });
