@@ -477,10 +477,10 @@ const WHATS_NEW_RE =
   /(?:最近有什麼新|最近有什么新|最新數據|最新数据|新驗證|新验证|what(?:'s| is)\s+new|latest\s+(?:updates|records)|high[- ]signal)/i;
 
 const MFD_FOLLOWUP_RE =
-  /(?:還有|还有|更多|詳情|详情|截止|日期|來源|来源|哪[個一]?|那[筆條個]|\b(?:more|details?|deadline|source|link|which|another)\b)/i;
+  /(?:還有|还有|更多|詳情|详情|截止|日期|來源|来源|哪一?[個个筆笔條条]?|[這那这][幾几]?[筆笔條条個个]|\b(?:more|details?|deadline|source|link|which|another)\b)/i;
 
 const COMPARATIVE_ADVICE_RE =
-  /(?:比較這|比较这|幫我比較|帮我比较|哪[個筆條个笔条].{0,12}(?:影響|影响|最適合|最适合|重要|關鍵|关键|值得|比較好|比较好)|這[幾几][筆條個笔条个].{0,12}(?:影響|影响|比較|比较|差別|差别|分析)|對.{0,14}(?:影響|影响)(?:最大|比較大|比较大|如何|是什麼|是什么)|\b(?:compare\s+(?:these|those|them)|which\s+one\s+(?:affects?|impacts?|is\s+best|matters\s+most)|most\s+impact\s+on|explain\s+(?:these|those))\b)/i;
+  /(?:比較這|比较这|幫我比較|帮我比较|哪一?[個筆條个笔条].{0,12}(?:影響|影响|最適合|最适合|重要|關鍵|关键|值得|比較好|比较好)|[這这][幾几][筆條個笔条个].{0,12}(?:影響|影响|比較|比较|差別|差别|分析)|[對对].{0,14}(?:影響|影响)(?:最大|比較大|比较大|如何|是什麼|是什么)|\b(?:compare\s+(?:these|those|them)|which\s+one\s+(?:affects?|impacts?|is\s+best|matters\s+most)|most\s+impact\s+on|explain\s+(?:these|those))\b)/i;
 
 /* ───────── dataset inference & trilingual labels ───────── */
 
