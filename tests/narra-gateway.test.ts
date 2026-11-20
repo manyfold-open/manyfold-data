@@ -1550,4 +1550,189 @@ describe('Manyfold Data Narra gateway integration', () => {
       await buildMfdExtraEnvelopeFields(makeEnv({ DB: emptyDb }), dummyEv, baseDecision, EMPTY_MEM),
     ).toBeNull();
   });
+
+  it('hands off comparative follow-up advice to A2A instead of cross-searching UK and prioritizes recent self/replyToTarget record URLs in prefetch', async () => {
+    const db = createD1();
+    const today = todayUtc();
+
+    await seedVerifiedRecord(db, 'ai-hackathons', 'rec_ukhack1', {
+      ...findDataApp('ai-hackathons')!.example.data,
+      name: 'United Kingdom AI Builders Hackathon 2099',
+      deadline: '2099-11-15',
+      starts_on: '2099-11-20',
+      ends_on: '2099-11-22',
+      city: ['London'],
+      region: 'europe',
+    });
+    await seedVerifiedRecord(db, 'visa-changes', 'rec_ukvisa1', {
+      ...findDataApp('visa-changes')!.example.data,
+      title: 'UK Skilled Worker salary threshold rises to GBP 38,700',
+      destination: ['United Kingdom'],
+      effective_on: today,
+    });
+    await seedVerifiedRecord(db, 'visa-changes', 'rec_ukvisa2', {
+      ...findDataApp('visa-changes')!.example.data,
+      title: 'UK ETA travel authorisation expands to European visitors',
+      destination: ['United Kingdom'],
+      effective_on: today,
+    });
+    await seedVerifiedRecord(db, 'visa-changes', 'rec_ukvisa3', {
+      ...findDataApp('visa-changes')!.example.data,
+      title: 'UK Global Talent endorsement update for software engineers',
+      destination: ['United Kingdom'],
+      effective_on: today,
+    });
+
+    const envWithA2a = makeEnv({
+      DB: db,
+      MANYFOLD_A2A_URL: 'https://a2a.mfd.test/rpc',
+      MANYFOLD_A2A_TOKEN: 'a2a_secret_mfd',
+    });
+
+    const compareText = '可以幫我比較這幾筆哪個對來英國工作的工程師影響最大？';
+    const dmDecision: TriageDecision = {
+      shouldReply: true,
+      tier: 0,
+      reason: 'dm',
+      confidence: 1,
+      detectedLang: 'zh-Hant',
+      shouldQuote: false,
+    };
+    const watchHackMem: RecallTurnResult = {
+      userMemories: [
+        {
+          id: 'mem_watch_hack',
+          scope: 'user',
+          agentId: MFD_AGENT_ID,
+          userId: '@alice:matrix.netmind.chat',
+          originChatType: 'dm',
+          kind: 'preference',
+          key: 'watch_datasets',
+          value: 'ai-hackathons',
+          createdAt: '2026-11-19T12:00:00Z',
+          updatedAt: '2026-11-19T12:00:00Z',
+        },
+      ],
+      roomMemories: [],
+      promptSafeLines: [],
+    };
+
+    // 1. Comparative follow-up in DM & explicit group mention returns null for A2A (does not cross-search "英國" into ai-hackathons)
+    const dmCompareEv = makeInboundEvent({ chatType: 'dm', text: compareText });
+    expect(await fastRespondMfd(envWithA2a, dmCompareEv, dmDecision, watchHackMem)).toBeNull();
+
+    const groupMentionEv = makeInboundEvent({ chatType: 'group', text: `@mfd-guide ${compareText}` });
+    expect(
+      await fastRespondMfd(
+        envWithA2a,
+        groupMentionEv,
+        { ...dmDecision, reason: 'explicit_mention', shouldQuote: true },
+        watchHackMem,
+      ),
+    ).toBeNull();
+
+    const enCompareEv = makeInboundEvent({
+      chatType: 'dm',
+      text: 'Can you compare these and tell me which one has the most impact on UK engineers?',
+    });
+    expect(await fastRespondMfd(envWithA2a, enCompareEv, { ...dmDecision, detectedLang: 'en' }, EMPTY_MEM)).toBeNull();
+
+    // Unmentioned group turn does not bypass the unmentioned guard
+    expect(
+      await fastRespondMfd(
+        envWithA2a,
+        makeInboundEvent({ chatType: 'group', text: compareText }),
+        { ...dmDecision, reason: 'active_session', shouldQuote: true },
+        EMPTY_MEM,
+      ),
+    ).toBe('[NO_REPLY]');
+
+    // 2. buildMfdExtraEnvelopeFields prioritizes exact visa-changes slug + record IDs from recent self history FIRST
+    const nowMs = Date.now();
+    const ctxWithRecentSelf: RoomContext = {
+      roomId: '!dm_compare:matrix.netmind.chat',
+      chatType: 'dm',
+      members: [
+        { matrixId: '@alice:matrix.netmind.chat', isAgent: false },
+        { matrixId: MFD_MATRIX_ID, displayName: 'Manyfold Data', isAgent: true },
+      ],
+      recentHistory: [
+        {
+          eventId: '$evt_user_1',
+          senderId: '@alice:matrix.netmind.chat',
+          isAgent: false,
+          text: '最近英國簽證有什麼變化？',
+          timestampMs: nowMs - 20_000,
+        },
+        {
+          eventId: '$evt_self_visa',
+          senderId: MFD_MATRIX_ID,
+          isAgent: true,
+          isSelf: true,
+          text: [
+            '📊 Manyfold Data「簽證政策變化」共找到 2 筆已驗證資料：',
+            '- UK Skilled Worker salary threshold rises to GBP 38,700',
+            'https://data.manyfold.ai/visa-changes/r/rec_ukvisa1',
+            '- UK ETA travel authorisation expands to European visitors',
+            'https://data.manyfold.ai/visa-changes/r/rec_ukvisa2',
+          ].join('\n'),
+          timestampMs: nowMs - 15_000,
+        },
+      ],
+    };
+
+    const prefetchFromHistory = await buildMfdExtraEnvelopeFields(
+      envWithA2a,
+      dmCompareEv,
+      dmDecision,
+      watchHackMem,
+      ctxWithRecentSelf,
+    );
+    expect(prefetchFromHistory).not.toBeNull();
+    const prefText = prefetchFromHistory!.d1_prefetched_records;
+    expect(prefText).toContain('https://data.manyfold.ai/visa-changes/r/rec_ukvisa1');
+    expect(prefText).toContain('https://data.manyfold.ai/visa-changes/r/rec_ukvisa2');
+    const idxVisa1 = prefText.indexOf('rec_ukvisa1');
+    const idxVisa2 = prefText.indexOf('rec_ukvisa2');
+    const idxHack1 = prefText.indexOf('rec_ukhack1');
+    expect(idxVisa1).toBeGreaterThan(-1);
+    expect(idxVisa2).toBeGreaterThan(idxVisa1);
+    if (idxHack1 !== -1) {
+      expect(idxVisa2).toBeLessThan(idxHack1);
+    }
+
+    // 3. replyToTarget record URL takes priority even ahead of newer self history turns
+    const ctxWithReplyTarget: RoomContext = {
+      ...ctxWithRecentSelf,
+      replyToTarget: {
+        eventId: '$evt_reply_visa3',
+        senderId: MFD_MATRIX_ID,
+        isSelf: true,
+        isAgent: true,
+        text: 'UK Global Talent update: https://data.manyfold.ai/visa-changes/r/rec_ukvisa3',
+      },
+      recentHistory: [
+        {
+          eventId: '$evt_self_hack',
+          senderId: MFD_MATRIX_ID,
+          isAgent: true,
+          isSelf: true,
+          text: 'Hackathon: https://data.manyfold.ai/ai-hackathons/r/rec_ukhack1',
+          timestampMs: nowMs - 5_000,
+        },
+      ],
+    };
+
+    const prefetchFromReply = await buildMfdExtraEnvelopeFields(
+      envWithA2a,
+      dmCompareEv,
+      dmDecision,
+      EMPTY_MEM,
+      ctxWithReplyTarget,
+    );
+    expect(prefetchFromReply).not.toBeNull();
+    const replyPrefText = prefetchFromReply!.d1_prefetched_records;
+    expect(replyPrefText).toContain('https://data.manyfold.ai/visa-changes/r/rec_ukvisa3');
+    expect(replyPrefText.indexOf('rec_ukvisa3')).toBeLessThan(replyPrefText.indexOf('rec_ukhack1'));
+  });
 });

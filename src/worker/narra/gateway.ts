@@ -22,6 +22,7 @@ import {
   type InboundEvent,
   type LangCode,
   type RecallTurnResult,
+  type RoomContext,
   type TriageDecision,
 } from '@manyfold/narra-agent-kit';
 import {
@@ -444,6 +445,9 @@ const WHATS_NEW_RE =
 
 const MFD_FOLLOWUP_RE =
   /(?:還有|还有|更多|詳情|详情|截止|日期|來源|来源|哪[個一]?|那[筆條個]|\b(?:more|details?|deadline|source|link|which|another)\b)/i;
+
+const COMPARATIVE_ADVICE_RE =
+  /(?:比較這|比较这|幫我比較|帮我比较|哪[個筆條个笔条].{0,12}(?:影響|影响|最適合|最适合|重要|關鍵|关键|值得|比較好|比较好)|這[幾几][筆條個笔条个].{0,12}(?:影響|影响|比較|比较|差別|差别|分析)|對.{0,14}(?:影響|影响)(?:最大|比較大|比较大|如何|是什麼|是什么)|\b(?:compare\s+(?:these|those|them)|which\s+one\s+(?:affects?|impacts?|is\s+best|matters\s+most)|most\s+impact\s+on|explain\s+(?:these|those))\b)/i;
 
 /* ───────── dataset inference & trilingual labels ───────── */
 
@@ -1160,6 +1164,15 @@ export async function fastRespondMfd(
     return isMultiMention || isUnmentionedGroup ? '[NO_REPLY]' : offTopicRedirect(lang);
   }
 
+  if (
+    !isUnmentionedGroup &&
+    COMPARATIVE_ADVICE_RE.test(cleanedText) &&
+    inferredSlugs.length === 0 &&
+    hasA2ACredential(env)
+  ) {
+    return null;
+  }
+
   const limit = event.isVoice ? 2 : event.chatType === 'group' ? 3 : 5;
   const now = new Date();
   const terms = extractSearchTerms(cleanedText);
@@ -1313,12 +1326,153 @@ export async function fastRespondMfd(
 const MAX_MFD_PREFETCH_DATASETS = 3;
 const MAX_MFD_PREFETCH_RECORDS = 6;
 const MAX_MFD_PREFETCH_CHARS = 1500;
+const MAX_RECENT_SELF_TURNS_TO_SCAN = 6;
+
+function extractRecentRecordRefs(
+  env: Pick<Env, 'PUBLIC_ORIGIN' | 'NARRA_MATRIX_ID'>,
+  context?: RoomContext,
+): {
+  slugs: string[];
+  recordIdsBySlug: Map<string, string[]>;
+  orderedRefs: Array<{ slug: string; id: string }>;
+} {
+  const slugs: string[] = [];
+  const seenSlugs = new Set<string>();
+  const recordIdsBySlug = new Map<string, string[]>();
+  const orderedRefs: Array<{ slug: string; id: string }> = [];
+  const seenPairs = new Set<string>();
+
+  if (!context) {
+    return { slugs, recordIdsBySlug, orderedRefs };
+  }
+
+  const candidateTexts: string[] = [];
+  if (context.replyToTarget?.text) {
+    candidateTexts.push(context.replyToTarget.text);
+  }
+  const selfMatrixId = (env.NARRA_MATRIX_ID ?? MFD_MATRIX_ID).trim();
+  const history = context.recentHistory ?? [];
+  let scannedSelfTurns = 0;
+  for (let i = history.length - 1; i >= 0 && scannedSelfTurns < MAX_RECENT_SELF_TURNS_TO_SCAN; i--) {
+    const turn = history[i]!;
+    const isSelfTurn =
+      turn.isSelf === true || turn.senderId === selfMatrixId || turn.senderId === MFD_MATRIX_ID;
+    if (!isSelfTurn) continue;
+    scannedSelfTurns++;
+    if (turn.text) {
+      candidateTexts.push(turn.text);
+    }
+  }
+
+  if (candidateTexts.length === 0) {
+    return { slugs, recordIdsBySlug, orderedRefs };
+  }
+
+  const hosts = new Set<string>(['data.manyfold.ai']);
+  try {
+    const originHost = new URL(originOfEnv(env)).host;
+    if (originHost) hosts.add(originHost.toLowerCase());
+  } catch {
+    // Ignore invalid PUBLIC_ORIGIN URL.
+  }
+  const escapedHosts = [...hosts]
+    .map((h) => h.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+    .join('|');
+  const urlRe = new RegExp(`(?:${escapedHosts})\\/([a-z0-9-]+)\\/r\\/(rec_[a-z0-9_]+)`, 'gi');
+
+  for (const text of candidateTexts) {
+    urlRe.lastIndex = 0;
+    let match: RegExpExecArray | null;
+    while ((match = urlRe.exec(text)) !== null) {
+      const slug = match[1]!.toLowerCase();
+      const id = match[2]!;
+      if (!findDataApp(slug)) continue;
+
+      if (!seenSlugs.has(slug)) {
+        seenSlugs.add(slug);
+        slugs.push(slug);
+      }
+      const pairKey = `${slug}:${id}`;
+      if (!seenPairs.has(pairKey)) {
+        seenPairs.add(pairKey);
+        orderedRefs.push({ slug, id });
+        const list = recordIdsBySlug.get(slug);
+        if (list) list.push(id);
+        else recordIdsBySlug.set(slug, [id]);
+      }
+    }
+  }
+
+  return { slugs, recordIdsBySlug, orderedRefs };
+}
+
+async function prefetchDatasetRecords(
+  db: D1Database,
+  config: DataAppConfig,
+  terms: readonly string[],
+  prioritizedIds: readonly string[],
+  limit: number,
+  now: Date,
+): Promise<{ pinned: PublicRecord[]; general: PublicRecord[] }> {
+  const dataset = JSON.parse(await datasetJson(db, config, now)) as DatasetResponse;
+  const pinned: PublicRecord[] = [];
+  if (prioritizedIds.length > 0) {
+    const byId = new Map<string, PublicRecord>();
+    for (const rec of dataset.records) {
+      byId.set(rec.id, rec);
+    }
+    for (const id of prioritizedIds) {
+      const rec = byId.get(id);
+      if (rec) pinned.push(rec);
+    }
+  }
+
+  const baseDefault = defaultQuery(config);
+  const runSearch = (useDefault: boolean, qTerm: string) => {
+    const state: QueryState = {
+      q: qTerm,
+      filters: useDefault ? baseDefault.filters : {},
+      sort: baseDefault.sort,
+      page: 1,
+    };
+    return listFrom(config, dataset, state, limit, { facets: false }).records;
+  };
+
+  let general: PublicRecord[] = [];
+  if (terms.length > 0) {
+    for (const term of terms) {
+      const hits = runSearch(true, term);
+      if (hits.length > 0) {
+        general = hits;
+        break;
+      }
+    }
+    if (general.length === 0) {
+      for (const term of terms) {
+        const hits = runSearch(false, term);
+        if (hits.length > 0) {
+          general = hits;
+          break;
+        }
+      }
+    }
+  }
+  if (general.length === 0) {
+    general = runSearch(true, '');
+    if (general.length === 0 && Object.keys(baseDefault.filters).length > 0) {
+      general = runSearch(false, '');
+    }
+  }
+
+  return { pinned, general };
+}
 
 export async function buildMfdExtraEnvelopeFields(
   env: Env,
   event: InboundEvent,
   decision: TriageDecision,
   memories: RecallTurnResult,
+  context?: RoomContext,
 ): Promise<Record<string, string> | null> {
   if (!env.DB) return null;
 
@@ -1327,9 +1481,10 @@ export async function buildMfdExtraEnvelopeFields(
     const lang = decision.detectedLang;
     const cleanedText = stripMentions(event.text);
     const terms = extractSearchTerms(cleanedText);
+    const recentRefs = extractRecentRecordRefs(env, context);
     const inferred = inferDatasetSlugs(cleanedText);
     const remembered = resolveMemorySlugs(memories);
-    const mergedSlugs = [...new Set([...inferred, ...remembered])];
+    const mergedSlugs = [...new Set([...recentRefs.slugs, ...inferred, ...remembered])];
     const targetSlugs = (mergedSlugs.length > 0 ? mergedSlugs : [...HIGH_SIGNAL_SLUGS]).slice(
       0,
       MAX_MFD_PREFETCH_DATASETS,
@@ -1340,28 +1495,46 @@ export async function buildMfdExtraEnvelopeFields(
     if (targetConfigs.length === 0) return null;
 
     const now = new Date();
-    const initialResults = await Promise.all(
-      targetConfigs.map((config) => queryDatasetRecords(env.DB, config, terms, 3, now)),
+    const prefetched = await Promise.all(
+      targetConfigs.map((config) =>
+        prefetchDatasetRecords(
+          env.DB,
+          config,
+          terms,
+          recentRefs.recordIdsBySlug.get(config.slug) ?? [],
+          3,
+          now,
+        ),
+      ),
     );
 
-    const resolvedResults =
-      terms.length > 0
-        ? await Promise.all(
-            targetConfigs.map(async (config, idx) => {
-              const first = initialResults[idx]!;
-              if (first.records.length > 0) return first;
-              return queryDatasetRecords(env.DB, config, [], 3, now);
-            }),
-          )
-        : initialResults;
-
-    // Collect up to 6 verified records round-robin across queried datasets for balanced comparison context.
     const selected: Array<{ config: DataAppConfig; record: PublicRecord }> = [];
     const seenIds = new Set<string>();
-    const maxPerDataset = Math.max(0, ...resolvedResults.map((r) => r.records.length));
+
+    // 1. Prioritize exact recently shown records from replyToTarget / recent self turns FIRST.
+    if (recentRefs.orderedRefs.length > 0) {
+      const pinnedByKey = new Map<string, { config: DataAppConfig; record: PublicRecord }>();
+      for (let i = 0; i < targetConfigs.length; i++) {
+        const config = targetConfigs[i]!;
+        for (const rec of prefetched[i]!.pinned) {
+          pinnedByKey.set(`${config.slug}:${rec.id}`, { config, record: rec });
+        }
+      }
+      for (const ref of recentRefs.orderedRefs) {
+        if (selected.length >= MAX_MFD_PREFETCH_RECORDS) break;
+        const key = `${ref.slug}:${ref.id}`;
+        const hit = pinnedByKey.get(key);
+        if (!hit || seenIds.has(key)) continue;
+        seenIds.add(key);
+        selected.push(hit);
+      }
+    }
+
+    // 2. Fill remaining slots up to 6 verified records round-robin across queried datasets.
+    const maxPerDataset = Math.max(0, ...prefetched.map((r) => r.general.length));
     for (let slot = 0; slot < maxPerDataset && selected.length < MAX_MFD_PREFETCH_RECORDS; slot++) {
       for (let i = 0; i < targetConfigs.length && selected.length < MAX_MFD_PREFETCH_RECORDS; i++) {
-        const rec = resolvedResults[i]!.records[slot];
+        const rec = prefetched[i]!.general[slot];
         if (!rec) continue;
         const key = `${targetConfigs[i]!.slug}:${rec.id}`;
         if (seenIds.has(key)) continue;
