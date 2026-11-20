@@ -1637,12 +1637,22 @@ describe('Manyfold Data Narra gateway integration', () => {
     });
     expect(await fastRespondMfd(envWithA2a, enCompareEv, { ...dmDecision, detectedLang: 'en' }, EMPTY_MEM)).toBeNull();
 
-    // Unmentioned group turn does not bypass the unmentioned guard
+    // Unmentioned comparative follow-up during an active_session hands off to A2A instead of returning [NO_REPLY]
     expect(
       await fastRespondMfd(
         envWithA2a,
         makeInboundEvent({ chatType: 'group', text: compareText }),
         { ...dmDecision, reason: 'active_session', shouldQuote: true },
+        EMPTY_MEM,
+      ),
+    ).toBeNull();
+
+    // Non-active-session unmentioned group turn still respects the unmentioned guard
+    expect(
+      await fastRespondMfd(
+        envWithA2a,
+        makeInboundEvent({ chatType: 'group', text: compareText }),
+        { ...dmDecision, reason: 'domain_match', shouldQuote: true },
         EMPTY_MEM,
       ),
     ).toBe('[NO_REPLY]');
@@ -1734,5 +1744,42 @@ describe('Manyfold Data Narra gateway integration', () => {
     const replyPrefText = prefetchFromReply!.d1_prefetched_records;
     expect(replyPrefText).toContain('https://data.manyfold.ai/visa-changes/r/rec_ukvisa3');
     expect(replyPrefText.indexOf('rec_ukvisa3')).toBeLessThan(replyPrefText.indexOf('rec_ukhack1'));
+  });
+
+  it('infers ai-conferences and matches domainKeywords for Traditional and Simplified Chinese conference/submission queries', async () => {
+    const queries = [
+      {
+        text: '今年還有哪些英國或歐洲的 AI 研討會可以報名或投稿？',
+        lang: 'zh-Hant' as const,
+      },
+      {
+        text: '今年还有哪些英国或欧洲的 AI 研讨会可以报名或投稿？',
+        lang: 'zh-Hans' as const,
+      },
+    ];
+
+    for (const { text, lang } of queries) {
+      expect(inferDatasetSlugs(text)).toContain('ai-conferences');
+      const lower = text.toLowerCase();
+      const matchedDomainKeyword = (MFD_AGENT_SPEC.domainKeywords ?? []).some((kw) =>
+        kw instanceof RegExp ? kw.test(text) : lower.includes(kw.toLowerCase()),
+      );
+      expect(matchedDomainKeyword, `Expected domainKeywords hit for: ${text}`).toBe(true);
+
+      const ev = makeInboundEvent({ text });
+      expect(heuristicDomainScore(ev, MFD_AGENT_SPEC, DEFAULT_ROOM_CTX)).toBeGreaterThanOrEqual(0.55);
+
+      const decision = await routeEvent(ev, DEFAULT_ROOM_CTX, MFD_AGENT_SPEC);
+      expect(decision.shouldReply, `Expected routeEvent match for: ${text}`).toBe(true);
+      expect(decision.detectedLang).toBe(lang);
+    }
+
+    // Everyday Chinese synonyms across other datasets
+    expect(inferDatasetSlugs('英國工簽和學生簽證有什麼最新變化？')).toContain('visa-changes');
+    expect(inferDatasetSlugs('英国工作签证最新政策')).toContain('visa-changes');
+    expect(inferDatasetSlugs('伦敦有哪些 AI 孵化器？')).toContain('ai-accelerators');
+    expect(inferDatasetSlugs('最近有哪些食品召回或汽車召回？')).toContain('recalls');
+    expect(inferDatasetSlugs('最近有哪些產品召回？')).toContain('recalls');
+    expect(inferDatasetSlugs('最近有哪些癌症新藥或抗癌新藥進展？')).toContain('oncology-drug-updates');
   });
 });
