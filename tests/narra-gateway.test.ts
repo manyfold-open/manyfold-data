@@ -1819,4 +1819,109 @@ describe('Manyfold Data Narra gateway integration', () => {
       ),
     ).toBe('[NO_REPLY]');
   });
+
+  it('silences general AI news / LLM model chatter and blocks blind unmentioned substring hijacks ("Meta" -> "Hashmeta") while preserving real dataset queries ("OpenAI 融资")', async () => {
+    const db = createD1();
+    const today = todayUtc();
+
+    await seedVerifiedRecord(db, 'ai-fundraising', 'fund_hashmeta', {
+      ...findDataApp('ai-fundraising')!.example.data,
+      company: 'Hashmeta',
+      round: 'Series A',
+      announced_on: today,
+    });
+    await seedVerifiedRecord(db, 'ai-fundraising', 'fund_openai', {
+      ...findDataApp('ai-fundraising')!.example.data,
+      company: 'OpenAI',
+      round: 'Series C',
+      announced_on: today,
+    });
+    await seedVerifiedRecord(db, 'ai-data-centers', 'dc_google', {
+      ...findDataApp('ai-data-centers')!.example.data,
+      name: 'Google UK AI Data Center',
+      operator: 'Google',
+    });
+
+    const env = makeEnv({ DB: db });
+    const unmentionedDecision: TriageDecision = {
+      shouldReply: true,
+      tier: 1,
+      reason: 'domain_match',
+      confidence: 0.72,
+      detectedLang: 'zh-Hans',
+      shouldQuote: true,
+    };
+
+    // 1. Live QA Bug #3 prompt: "Meta Llama 或 Google AI 这周有什么新消息？" stays silent
+    const bug3Text = 'Meta Llama 或 Google AI 这周有什么新消息？';
+    const bug3Ev = makeInboundEvent({ chatType: 'group', text: bug3Text });
+    expect(inferDatasetSlugs(bug3Text)).toEqual([]);
+    expect(heuristicDomainScore(bug3Ev, MFD_AGENT_SPEC, DEFAULT_ROOM_CTX)).toBeLessThan(0.55);
+
+    const bug3Route = await routeEvent(bug3Ev, DEFAULT_ROOM_CTX, MFD_AGENT_SPEC);
+    expect(bug3Route.shouldReply).toBe(false);
+    expect(bug3Route.reason).toBe('below_threshold');
+
+    const bug3Triage = await createWorkersAiTriageModel(null).score({
+      event: bug3Ev,
+      context: DEFAULT_ROOM_CTX,
+      spec: MFD_AGENT_SPEC,
+      detectedLang: 'zh-Hans',
+    });
+    expect(bug3Triage.score).toBeLessThan(0.55);
+    expect(bug3Triage.reason).toBe('triage_other_domain');
+
+    expect(await fastRespondMfd(env, bug3Ev, unmentionedDecision, EMPTY_MEM)).toBe('[NO_REPLY]');
+    expect(
+      await fastRespondMfd(env, bug3Ev, { ...unmentionedDecision, reason: 'active_session' }, EMPTY_MEM),
+    ).toBe('[NO_REPLY]');
+
+    // 2. Other AI news / LLM model chatter stays silent in unmentioned group chat
+    for (const aiNewsPrompt of [
+      'OpenAI 这周发布了什么新模型？',
+      'Anthropic 和 Claude 最近有什么更新？',
+      'Gemini、DeepSeek、Qwen 哪个大模型更好用？',
+      'Meta AI 和 xAI Grok 最近在 AI圈有什么动态？',
+      'ai 圈这周讨论最多的是什么？',
+    ]) {
+      const ev = makeInboundEvent({ chatType: 'group', text: aiNewsPrompt });
+      const route = await routeEvent(ev, DEFAULT_ROOM_CTX, MFD_AGENT_SPEC);
+      expect(route.shouldReply, `Expected silent route for: ${aiNewsPrompt}`).toBe(false);
+      expect(route.reason, `Expected below_threshold for: ${aiNewsPrompt}`).toBe('below_threshold');
+      expect(await fastRespondMfd(env, ev, unmentionedDecision, EMPTY_MEM)).toBe('[NO_REPLY]');
+    }
+
+    // 3. Step 4 guard: even WITHOUT any antiKeywords, unmentioned group message with zero dataset
+    //    keywords ("Meta 这周在做什么？") never runs blind cross-dataset search ("Meta" -> "Hashmeta")
+    const bareMetaEv = makeInboundEvent({ chatType: 'group', text: 'Meta 这周在做什么？' });
+    expect(await fastRespondMfd(env, bareMetaEv, unmentionedDecision, EMPTY_MEM)).toBe('[NO_REPLY]');
+
+    // Explicit mention searching Hashmeta still works
+    const explicitHashmetaEv = makeInboundEvent({ chatType: 'group', text: '@mfd-guide Hashmeta' });
+    const explicitHashmetaRoute = await routeEvent(explicitHashmetaEv, DEFAULT_ROOM_CTX, MFD_AGENT_SPEC);
+    expect(explicitHashmetaRoute.shouldReply).toBe(true);
+    const explicitHashmetaReply = await fastRespondMfd(env, explicitHashmetaEv, explicitHashmetaRoute, EMPTY_MEM);
+    expect(explicitHashmetaReply).toContain('Hashmeta');
+    expect(explicitHashmetaReply).toContain('https://data.manyfold.ai/ai-fundraising/r/fund_hashmeta');
+
+    // 4. Genuine dataset queries mentioning AI labs STILL trigger MFD cleanly
+    const openaiFundText = 'OpenAI 最近完成了什么融资？';
+    const openaiFundEv = makeInboundEvent({ chatType: 'group', text: openaiFundText });
+    expect(inferDatasetSlugs(openaiFundText)).toEqual(['ai-fundraising']);
+    expect(heuristicDomainScore(openaiFundEv, MFD_AGENT_SPEC, DEFAULT_ROOM_CTX)).toBeGreaterThanOrEqual(0.55);
+    const openaiFundRoute = await routeEvent(openaiFundEv, DEFAULT_ROOM_CTX, MFD_AGENT_SPEC);
+    expect(openaiFundRoute.shouldReply).toBe(true);
+    const openaiFundReply = await fastRespondMfd(env, openaiFundEv, openaiFundRoute, EMPTY_MEM);
+    expect(openaiFundReply).toContain('OpenAI');
+    expect(openaiFundReply).toContain('https://data.manyfold.ai/ai-fundraising/r/fund_openai');
+
+    const googleDcText = 'Google AI 数据中心有哪些新项目？';
+    const googleDcEv = makeInboundEvent({ chatType: 'group', text: googleDcText });
+    expect(inferDatasetSlugs(googleDcText)).toEqual(['ai-data-centers']);
+    const googleDcRoute = await routeEvent(googleDcEv, DEFAULT_ROOM_CTX, MFD_AGENT_SPEC);
+    expect(googleDcRoute.shouldReply).toBe(true);
+    const googleDcReply = await fastRespondMfd(env, googleDcEv, googleDcRoute, EMPTY_MEM);
+    expect(googleDcReply).toContain('Google UK AI Data Center');
+    expect(googleDcReply).toContain('https://data.manyfold.ai/ai-data-centers/r/dc_google');
+  });
 });
