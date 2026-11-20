@@ -14,6 +14,7 @@
  */
 
 import {
+  isNonConversationalDevOrUrlNoise,
   stripAgentMentions,
   toZhHant,
   type AgentSpec,
@@ -732,11 +733,12 @@ export function inferDatasetSlugs(text: string): string[] {
 }
 
 export function extractSearchTerms(text: string): string[] {
+  const stripped = (text ?? '').replace(/https?:\/\/\S+/gi, ' ');
   const terms: string[] = [];
   for (const [zh, en] of CJK_ENTITY_MAP) {
-    if (text.includes(zh)) terms.push(en);
+    if (stripped.includes(zh)) terms.push(en);
   }
-  const ascii = text.match(/[A-Za-z0-9][A-Za-z0-9.-]{1,}/g) ?? [];
+  const ascii = stripped.match(/[A-Za-z0-9][A-Za-z0-9.-]{1,}/g) ?? [];
   for (const tok of ascii) {
     const low = tok.toLowerCase();
     if (!SEARCH_STOPWORDS.has(low) && low.length >= 2) {
@@ -1087,6 +1089,16 @@ export async function fastRespondMfd(
       return '[NO_REPLY]';
     }
     return greetingReply(lang);
+  }
+  if (
+    /\b(?:ignore\s+(?:all\s+)?previous\s+instructions|print\s+(?:your\s+)?system\s+prompt|d1\s+database\s+schema|narra_agent_token)\b/i.test(
+      cleanedText,
+    )
+  ) {
+    return isUnmentionedGroup ? '[NO_REPLY]' : offTopicRedirect(lang);
+  }
+  if (isUnmentionedGroup && isNonConversationalDevOrUrlNoise(cleanedText)) {
+    return '[NO_REPLY]';
   }
 
   const isMultiMention = decision.reason === 'multi_mention_domain_match';
