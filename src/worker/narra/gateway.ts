@@ -225,6 +225,9 @@ const AI_NEWS_ANTI_KEYWORD_RE = new RegExp(
   'i',
 );
 
+const WEEKEND_REFINEMENT_RE =
+  /^(?:(?:那|只要|只看|只找)?\s*(?:這?週末|这?周末)(?:的)?(?:呢|嗎|吗)?|(?:what about|how about|only|just)\s+(?:this\s+|the\s+)?weekend(?:\s+ones?)?)[？?。.!！]*$/i;
+
 export const MFD_AGENT_SPEC: AgentSpec = {
   id: MFD_AGENT_ID,
   matrixId: MFD_MATRIX_ID,
@@ -242,6 +245,7 @@ export const MFD_AGENT_SPEC: AgentSpec = {
   domainDescription:
     'Strictly scoped to searching Manyfold Data’s 17 verified structured datasets (AI hackathons, AI accelerators/grants, AI conferences/CFPs, AI fundraising, AI acquisitions, AI data centers, robotaxi cities, robot launches, AI scam alerts, visa policy changes, new rules taking effect, product recalls, international scholarships, marathons, endurance races, sky events, and cancer drug updates). NEVER answer general tourism, weekend sightseeing, hangout ideas, shopping, or restaurant queries.',
   domainKeywords: [
+    WEEKEND_REFINEMENT_RE,
     // 1. ai-hackathons
     'hackathon',
     'hackathons',
@@ -1384,11 +1388,67 @@ export function resolveMemorySlugs(memories: RecallTurnResult): string[] {
  * Fast D1-backed responder for Manyfold Data (`mfd-guide`).
  * Returns `null` when Manyfold A2A should handle the turn.
  */
+async function respondToWeekendRefinement(
+  env: Env,
+  event: InboundEvent,
+  context: RoomContext | undefined,
+  lang: LangCode,
+): Promise<string> {
+  const prior = (context?.recentHistory ?? [])
+    .filter((turn) => turn.eventId !== event.eventId && turn.timestampMs <= event.timestampMs)
+    .sort((a, b) => b.timestampMs - a.timestampMs);
+  const last = prior[0];
+  const question = prior.slice(1).find((turn) => !turn.isAgent);
+  if (
+    !last || !(last.isSelf || last.senderId === MFD_MATRIX_ID) ||
+    !question || question.senderId !== event.senderId ||
+    !inferDatasetSlugs(question.text).includes('ai-hackathons') ||
+    !/倫敦|伦敦|\bLondon\b/i.test(question.text)
+  ) {
+    return '[NO_REPLY]';
+  }
+
+  const now = new Date(event.timestampMs);
+  const londonDate = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Europe/London', year: 'numeric', month: '2-digit', day: '2-digit',
+  }).format(now);
+  const first = new Date(`${londonDate}T00:00:00Z`);
+  const day = first.getUTCDay();
+  first.setUTCDate(first.getUTCDate() + (day === 0 ? -1 : 6 - day));
+  const lastDay = new Date(first);
+  lastDay.setUTCDate(lastDay.getUTCDate() + 1);
+  const start = todayUtc(first);
+  const end = todayUtc(lastDay);
+
+  const config = findDataApp('ai-hackathons')!;
+  const { records } = JSON.parse(await datasetJson(env.DB, config, now)) as DatasetResponse;
+  const matches = records.filter(({ data }) => {
+    const cities = Array.isArray(data.city) ? data.city : [data.city];
+    const starts = typeof data.starts_on === 'string' ? data.starts_on : '';
+    const ends = typeof data.ends_on === 'string' && data.ends_on ? data.ends_on : starts;
+    return cities.some((city) => typeof city === 'string' && /\bLondon\b|倫敦|伦敦/i.test(city)) &&
+      starts >= start && starts <= end && ends >= londonDate;
+  });
+  const header = lang === 'zh-Hant' ? `倫敦這週末（${start} 至 ${end}）的 AI 黑客松`
+    : lang === 'zh-Hans' ? `伦敦这周末（${start} 至 ${end}）的 AI 黑客松`
+      : `London AI hackathons this weekend (${start} to ${end})`;
+  if (matches.length === 0) {
+    return lang === 'zh-Hant' ? `${header}：目前沒有查到符合日期的已驗證活動。`
+      : lang === 'zh-Hans' ? `${header}：目前没有查到符合日期的已验证活动。`
+        : `${header}: I found no verified events matching those dates.`;
+  }
+  return [header, ...matches.slice(0, event.isVoice ? 2 : 3).flatMap(({ id, data }) => [
+    `- ${localizeZh(String(data.name), lang)} · ${data.starts_on}`,
+    recordUrl(env, config.slug, id),
+  ])].join('\n');
+}
+
 export async function fastRespondMfd(
   env: Env,
   event: InboundEvent,
   decision: TriageDecision,
   memories: RecallTurnResult,
+  context?: RoomContext,
 ): Promise<string | null> {
   const lang = decision.detectedLang;
   const cleanedText = stripMentions(event.text);
@@ -1474,6 +1534,9 @@ export async function fastRespondMfd(
   }
 
   await ensureSchemaOnce(env.DB);
+  if (isUnmentionedGroup && WEEKEND_REFINEMENT_RE.test(cleanedText.trim())) {
+    return respondToWeekendRefinement(env, event, context, lang);
+  }
 
   // 1. "What datasets exist?" or capability question
   if (
