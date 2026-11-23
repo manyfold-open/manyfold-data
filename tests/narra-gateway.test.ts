@@ -1133,6 +1133,40 @@ describe('Manyfold Data Narra gateway integration', () => {
     expect(explicitReply).toContain('https://data.manyfold.ai/ai-hackathons/r/hack_london_2099');
   });
 
+  it('answers the deadline of the second record in its latest group list', async () => {
+    const db = createD1();
+    const config = findDataApp('ai-hackathons')!;
+    for (const [id, name, deadline] of [
+      ['rec_first_deadline', 'First London Hackathon', '2026-11-24'],
+      ['rec_second_deadline', 'Second London Hackathon', '2026-11-25'],
+    ]) {
+      await seedVerifiedRecord(db, config.slug, id, {
+        ...config.example.data, name, url: `https://example.org/${id}`, deadline,
+      });
+    }
+    const event = makeInboundEvent({ text: '第二個報名到哪天？只要那個就好。' });
+    const context: RoomContext = {
+      ...DEFAULT_ROOM_CTX,
+      activeSession: { active: true },
+      recentHistory: [{
+        eventId: '$deadline-list', senderId: MFD_AGENT_SPEC.matrixId!, isAgent: true, isSelf: true,
+        text: [
+          'https://data.manyfold.ai/ai-hackathons/r/rec_first_deadline',
+          'https://data.manyfold.ai/ai-hackathons/r/rec_second_deadline',
+        ].join('\n'),
+        timestampMs: event.timestampMs - 1000,
+      }],
+    };
+    const decision = await routeEvent(event, context, MFD_AGENT_SPEC);
+    expect(decision.reason).toBe('active_session');
+    const reply = await fastRespondMfd(makeEnv({ DB: db }), event, decision, EMPTY_MEM, context);
+    expect(reply).toContain('Second London Hackathon');
+    expect(reply).toContain('報名截止日是 2026-11-25');
+    expect(reply).not.toContain('First London Hackathon');
+    expect(await fastRespondMfd(makeEnv({ DB: db }), event, decision, EMPTY_MEM, { ...context, recentHistory: [] }))
+      .toBe('[NO_REPLY]');
+  });
+
   it('keeps a weekend refinement scoped to the immediately preceding London hackathon query', async () => {
     const db = createD1();
     const config = findDataApp('ai-hackathons')!;
