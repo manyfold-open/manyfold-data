@@ -37,7 +37,7 @@ import { defaultQuery, type QueryState } from '../../shared/query';
 import type { DatasetResponse, PublicRecord } from '../../shared/types';
 import { ensureSchema } from '../db';
 import { fillLine } from '../notify';
-import { appSummaries, datasetJson } from '../records';
+import { appSummaries, datasetJson, getRecord } from '../records';
 import type { Env } from '../types';
 
 export const MFD_AGENT_ID = 'mfd-guide';
@@ -653,6 +653,9 @@ const DM_OFF_TOPIC_RE =
 
 const WHATS_NEW_RE =
   /(?:最近有什麼新|最近有什么新|最新數據|最新数据|新驗證|新验证|what(?:'s| is)\s+new|latest\s+(?:updates|records)|high[- ]signal)/i;
+
+const DEADLINE_FOLLOWUP_RE = /截止|(?:報名|报名|申請|申请)\s*(?:到|至|限到)|\b(?:deadline|last day to (?:register|apply)|when does registration close)\b/i;
+const RECORD_ORDINAL_RE = /第\s*([一二三四五1-5])\s*[個个筆笔項项條条場场]|\b(first|second|third|fourth|fifth)\s+(?:one|record|event|option)\b/i;
 
 const MFD_FOLLOWUP_RE =
   /(?:還有|还有|更多|詳情|详情|截止|日期|來源|来源|哪一?[個个筆笔條条]?|[這那这][幾几]?[筆笔條条個个]|\b(?:more|details?|deadline|source|link|which|another)\b)/i;
@@ -1458,6 +1461,43 @@ async function respondWithLondonWeekendHackathons(
   ])].join('\n');
 }
 
+async function respondToRecordDeadline(
+  env: Env,
+  event: InboundEvent,
+  context: RoomContext | undefined,
+  lang: LangCode,
+  ordinal: number,
+): Promise<string> {
+  const prior = (context?.recentHistory ?? [])
+    .filter((turn) => turn.isAgent && turn.timestampMs <= event.timestampMs)
+    .sort((a, b) => b.timestampMs - a.timestampMs)[0];
+  if (!prior || !(prior.isSelf || prior.senderId === MFD_MATRIX_ID)) return '[NO_REPLY]';
+
+  const origin = originOfEnv(env) + '/';
+  const refs = [...new Set(prior.text.match(/https:\/\/[^\s<>]+/g) ?? [])]
+    .filter((url) => url.startsWith(origin))
+    .flatMap((url) => {
+      const match = /^([a-z0-9-]+)\/r\/(rec_[a-z0-9_]+)$/i.exec(url.slice(origin.length));
+      return match ? [{ slug: match[1]!, id: match[2]!, url }] : [];
+    });
+  const ref = refs[ordinal];
+  const config = ref && findDataApp(ref.slug);
+  if (!ref || !config) return '[NO_REPLY]';
+  const result = await getRecord(env.DB, config, ref.id);
+  if (!result || !('record' in result) || result.record.status !== 'verified') return '[NO_REPLY]';
+
+  const { data } = result.record;
+  const label = typeof data.name === 'string' ? data.name : config.title;
+  const deadline = typeof data.deadline === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(data.deadline)
+    ? data.deadline : null;
+  const answer = lang === 'zh-Hant'
+    ? (deadline ? `報名截止日是 ${deadline}。` : '這筆資料沒有列出截止日。')
+    : lang === 'zh-Hans'
+      ? (deadline ? `报名截止日是 ${deadline}。` : '这笔资料没有列出截止日。')
+      : (deadline ? `The listed deadline is ${deadline}.` : 'This record does not list a deadline.');
+  return [localizeZh(label, lang), answer, ref.url].join('\n');
+}
+
 export async function fastRespondMfd(
   env: Env,
   event: InboundEvent,
@@ -1556,6 +1596,14 @@ export async function fastRespondMfd(
   if (inferredSlugs.length === 1 && inferredSlugs[0] === 'ai-hackathons' &&
       LONDON_RE.test(cleanedText) && THIS_WEEKEND_RE.test(cleanedText)) {
     return respondWithLondonWeekendHackathons(env, event, lang, IN_PERSON_RE.test(cleanedText));
+  }
+
+  const ordinal = RECORD_ORDINAL_RE.exec(cleanedText);
+  if (decision.reason === 'active_session' && ordinal && DEADLINE_FOLLOWUP_RE.test(cleanedText)) {
+    const number = ordinal[1]
+      ? (Number(ordinal[1]) || '一二三四五'.indexOf(ordinal[1]) + 1)
+      : ['first', 'second', 'third', 'fourth', 'fifth'].indexOf(ordinal[2]!.toLowerCase()) + 1;
+    return respondToRecordDeadline(env, event, context, lang, number - 1);
   }
 
   // 1. "What datasets exist?" or capability question
