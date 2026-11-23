@@ -1133,6 +1133,43 @@ describe('Manyfold Data Narra gateway integration', () => {
     expect(explicitReply).toContain('https://data.manyfold.ai/ai-hackathons/r/hack_london_2099');
   });
 
+  it('keeps a weekend refinement scoped to the immediately preceding London hackathon query', async () => {
+    const db = createD1();
+    const config = findDataApp('ai-hackathons')!;
+    for (const [id, name, city, date] of [
+      ['weekend_london', 'London Weekend Hackathon', 'London', '2026-11-28'],
+      ['weekday_london', 'London Weekday Hackathon', 'London', '2026-11-26'],
+      ['weekend_other', 'Manchester Weekend Hackathon', 'Manchester', '2026-11-28'],
+    ]) {
+      await seedVerifiedRecord(db, config.slug, id, {
+        ...config.example.data, name, url: `https://example.org/${id}`, city: [city],
+        starts_on: date, ends_on: date, deadline: '2026-11-25', format: 'in-person',
+      });
+    }
+    const nowMs = Date.parse('2026-11-23T11:30:00Z');
+    const event = makeInboundEvent({ text: '只要週末的呢？', timestampMs: nowMs });
+    const context: RoomContext = {
+      ...DEFAULT_ROOM_CTX,
+      activeSession: { active: true },
+      recentHistory: [
+        { eventId: '$request', senderId: event.senderId, isAgent: false,
+          text: '倫敦接下來有哪些 AI hackathon？', timestampMs: nowMs - 2000 },
+        { eventId: '$results', senderId: MFD_AGENT_SPEC.matrixId!, isAgent: true, isSelf: true,
+          text: '已查到倫敦 AI 黑客松。', timestampMs: nowMs - 1000 },
+      ],
+    };
+    const decision = await routeEvent(event, context, MFD_AGENT_SPEC, { nowMs });
+    expect(decision.shouldReply).toBe(true);
+    const env = makeEnv({ DB: db });
+    const reply = await fastRespondMfd(env, event, decision, EMPTY_MEM, context);
+    expect(reply).toContain('London Weekend Hackathon');
+    expect(reply).toContain('2026-11-28 至 2026-11-29');
+    expect(reply).not.toContain('London Weekday Hackathon');
+    expect(reply).not.toContain('Manchester Weekend Hackathon');
+    expect(await fastRespondMfd(env, event, decision, EMPTY_MEM, { ...context, recentHistory: [] }))
+      .toBe('[NO_REPLY]');
+  });
+
   it('extracts London rather than "in" and prefers London hackathons over non-London records in D1', async () => {
     const query = 'Are there any AI hackathons in London next month I can register for?';
     const terms = extractSearchTerms(query);
@@ -1924,4 +1961,32 @@ describe('Manyfold Data Narra gateway integration', () => {
     expect(googleDcReply).toContain('Google UK AI Data Center');
     expect(googleDcReply).toContain('https://data.manyfold.ai/ai-data-centers/r/dc_google');
   });
+});
+
+it('speaks only on its own topic in mixed group chatter', async () => {
+  const cases = [
+    '晚上能吃啥',
+    '我先去開個會',
+    '今晚倫敦有什麼市集',
+    '今天 AI 圈有啥新消息',
+    '能抽張塔羅看看工作嗎',
+    '幫我求一支籤',
+    '有英國簽證資料可以查嗎',
+    '晚餐 £80 我付的，四個人怎麼分',
+    'Boots 有折扣碼嗎',
+    '昨天吃火鍋超爽',
+  ];
+  const nowMs = Date.now();
+  const replies: string[] = [];
+  for (const text of cases) {
+    const event = makeInboundEvent({ text, timestampMs: nowMs, chatType: 'group', mentions: [] });
+    const context = { roomId: event.roomId, chatType: 'group' as const, members: [], recentHistory: [] };
+    if ((await routeEvent(event, context, MFD_AGENT_SPEC, { nowMs })).shouldReply) replies.push(text);
+  }
+  expect(replies).toEqual(["有英國簽證資料可以查嗎"]);
+
+  const text = '有英國簽證資料可以查嗎';
+  const directedEvent = makeInboundEvent({ text: `@Ken ${text}`, timestampMs: nowMs, chatType: 'group', mentions: ['@ken:example.com'] });
+  const directedContext = { roomId: directedEvent.roomId, chatType: 'group' as const, members: [], recentHistory: [] };
+  expect((await routeEvent(directedEvent, directedContext, MFD_AGENT_SPEC, { nowMs })).shouldReply).toBe(false);
 });
