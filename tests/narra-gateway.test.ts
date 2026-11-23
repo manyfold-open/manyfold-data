@@ -1136,14 +1136,15 @@ describe('Manyfold Data Narra gateway integration', () => {
   it('keeps a weekend refinement scoped to the immediately preceding London hackathon query', async () => {
     const db = createD1();
     const config = findDataApp('ai-hackathons')!;
-    for (const [id, name, city, date] of [
+    for (const [id, name, city, date, format = 'in-person'] of [
       ['weekend_london', 'London Weekend Hackathon', 'London', '2026-11-28'],
+      ['weekend_online', 'London Online Hackathon', 'London', '2026-11-28', 'online'],
       ['weekday_london', 'London Weekday Hackathon', 'London', '2026-11-26'],
       ['weekend_other', 'Manchester Weekend Hackathon', 'Manchester', '2026-11-28'],
     ]) {
       await seedVerifiedRecord(db, config.slug, id, {
         ...config.example.data, name, url: `https://example.org/${id}`, city: [city],
-        starts_on: date, ends_on: date, deadline: '2026-11-25', format: 'in-person',
+        starts_on: date, ends_on: date, deadline: '2026-11-25', format,
       });
     }
     const nowMs = Date.parse('2026-11-23T11:30:00Z');
@@ -1166,6 +1167,18 @@ describe('Manyfold Data Narra gateway integration', () => {
     expect(reply).toContain('2026-11-28 至 2026-11-29');
     expect(reply).not.toContain('London Weekday Hackathon');
     expect(reply).not.toContain('Manchester Weekend Hackathon');
+    const direct = makeInboundEvent({
+      text: '新聞先放著，這週末倫敦有可以到現場參加的 AI hackathon 嗎？',
+      timestampMs: nowMs,
+    });
+    const directDecision = await routeEvent(direct, DEFAULT_ROOM_CTX, MFD_AGENT_SPEC, { nowMs });
+    expect(directDecision.shouldReply).toBe(true);
+    const directReply = await fastRespondMfd(env, direct, directDecision, EMPTY_MEM, DEFAULT_ROOM_CTX);
+    expect(directReply).toContain('London Weekend Hackathon');
+    expect(directReply).toContain('2026-11-28');
+    expect(directReply).not.toContain('London Online Hackathon');
+    expect(directReply).not.toContain('London Weekday Hackathon');
+    expect(directReply).not.toContain('Manchester Weekend Hackathon');
     expect(await fastRespondMfd(env, event, decision, EMPTY_MEM, { ...context, recentHistory: [] }))
       .toBe('[NO_REPLY]');
   });
