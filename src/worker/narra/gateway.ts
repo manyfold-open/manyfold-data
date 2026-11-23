@@ -225,6 +225,10 @@ const AI_NEWS_ANTI_KEYWORD_RE = new RegExp(
   'i',
 );
 
+const THIS_WEEKEND_RE = /這週末|这周末|本[週周]末|\bthis weekend\b/i;
+const LONDON_RE = /倫敦|伦敦|\bLondon\b/i;
+const IN_PERSON_RE = /(?:到|去)?[現现][場场](?:參加|参加)|(?:實體|实体|線下|线下)|\bin[ -]person\b/i;
+
 const WEEKEND_REFINEMENT_RE =
   /^(?:(?:那|只要|只看|只找)?\s*(?:這?週末|这?周末)(?:的)?(?:呢|嗎|吗)?|(?:what about|how about|only|just)\s+(?:this\s+|the\s+)?weekend(?:\s+ones?)?)[？?。.!！]*$/i;
 
@@ -1403,11 +1407,20 @@ async function respondToWeekendRefinement(
     !last || !(last.isSelf || last.senderId === MFD_MATRIX_ID) ||
     !question || question.senderId !== event.senderId ||
     !inferDatasetSlugs(question.text).includes('ai-hackathons') ||
-    !/倫敦|伦敦|\bLondon\b/i.test(question.text)
+    !LONDON_RE.test(question.text)
   ) {
     return '[NO_REPLY]';
   }
 
+  return respondWithLondonWeekendHackathons(env, event, lang, IN_PERSON_RE.test(question.text));
+}
+
+async function respondWithLondonWeekendHackathons(
+  env: Env,
+  event: InboundEvent,
+  lang: LangCode,
+  inPersonOnly: boolean,
+): Promise<string> {
   const now = new Date(event.timestampMs);
   const londonDate = new Intl.DateTimeFormat('en-CA', {
     timeZone: 'Europe/London', year: 'numeric', month: '2-digit', day: '2-digit',
@@ -1426,7 +1439,9 @@ async function respondToWeekendRefinement(
     const cities = Array.isArray(data.city) ? data.city : [data.city];
     const starts = typeof data.starts_on === 'string' ? data.starts_on : '';
     const ends = typeof data.ends_on === 'string' && data.ends_on ? data.ends_on : starts;
-    return cities.some((city) => typeof city === 'string' && /\bLondon\b|倫敦|伦敦/i.test(city)) &&
+    const hasInPersonOption = data.format === 'in-person' || data.format === 'hybrid';
+    return (!inPersonOnly || hasInPersonOption) &&
+      cities.some((city) => typeof city === 'string' && LONDON_RE.test(city)) &&
       starts >= start && starts <= end && ends >= londonDate;
   });
   const header = lang === 'zh-Hant' ? `倫敦這週末（${start} 至 ${end}）的 AI 黑客松`
@@ -1536,6 +1551,11 @@ export async function fastRespondMfd(
   await ensureSchemaOnce(env.DB);
   if (isUnmentionedGroup && WEEKEND_REFINEMENT_RE.test(cleanedText.trim())) {
     return respondToWeekendRefinement(env, event, context, lang);
+  }
+
+  if (inferredSlugs.length === 1 && inferredSlugs[0] === 'ai-hackathons' &&
+      LONDON_RE.test(cleanedText) && THIS_WEEKEND_RE.test(cleanedText)) {
+    return respondWithLondonWeekendHackathons(env, event, lang, IN_PERSON_RE.test(cleanedText));
   }
 
   // 1. "What datasets exist?" or capability question
