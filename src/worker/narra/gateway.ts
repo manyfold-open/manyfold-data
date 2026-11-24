@@ -229,10 +229,17 @@ const THIS_WEEKEND_RE = /這週末|这周末|本[週周]末|\bthis weekend\b/i;
 const LONDON_RE = /倫敦|伦敦|\bLondon\b/i;
 const IN_PERSON_RE = /(?:到|去)?[現现][場场](?:參加|参加)|(?:實體|实体|線下|线下)|\bin[ -]person\b/i;
 
+const ANY_HACKATHON_LOCATION_RE =
+  /^(?:這週末|这周末|本[週周]末)\s*有(?:什麼|什么|沒有|没有)?\s*(?:ai\s*)?(?:hackathons?|黑客松|駭客松)\s*(?:嗎|吗)?[？?。!！\s]*(?:(?:線上|线上)或[現现][場场]都(?:行|可以)[。.!！\s]*)?$/i;
+const LONDON_IN_PERSON_REFINEMENT_RE =
+  /^(?:那[就只]?\s*)?(?:只要|只看|只找|要)?\s*(?:倫敦|伦敦)\s*(?:[現现][場场]|[實实][體体]|[線线]下)(?:的)?(?:[，,\s]*(?:線上|线上)(?:的)?先不用)?[？?。.!！\s]*$/i;
+
 const WEEKEND_REFINEMENT_RE =
   /^(?:(?:那|只要|只看|只找)?\s*(?:這?週末|这?周末)(?:的)?(?:呢|嗎|吗)?|(?:what about|how about|only|just)\s+(?:this\s+|the\s+)?weekend(?:\s+ones?)?)[？?。.!！]*$/i;
 
 export const MFD_AGENT_SPEC: AgentSpec = {
+  matchesIndependentGroupRequest: (text, context) =>
+    LONDON_IN_PERSON_REFINEMENT_RE.test(text) && Boolean(recentWeekendHackathonQuestion(context, Date.now())),
   id: MFD_AGENT_ID,
   matrixId: MFD_MATRIX_ID,
   name: 'Manyfold Data',
@@ -1395,6 +1402,19 @@ export function resolveMemorySlugs(memories: RecallTurnResult): string[] {
  * Fast D1-backed responder for Manyfold Data (`mfd-guide`).
  * Returns `null` when Manyfold A2A should handle the turn.
  */
+function recentWeekendHackathonQuestion(context: RoomContext | undefined, now: number) {
+  const turns = [...(context?.recentHistory ?? [])]
+    .filter((turn) => turn.timestampMs <= now)
+    .sort((a, b) => b.timestampMs - a.timestampMs);
+  const agentIndex = turns.findIndex((turn) => turn.isAgent || turn.isSelf);
+  if (agentIndex < 0) return undefined;
+  const answer = turns[agentIndex]!;
+  if (!(answer.isSelf || answer.senderId === MFD_MATRIX_ID) || now - answer.timestampMs > 180_000) return undefined;
+  const question = turns.slice(agentIndex + 1).find((turn) => !turn.isAgent && !turn.isSelf);
+  return question && THIS_WEEKEND_RE.test(question.text) && inferDatasetSlugs(question.text).includes('ai-hackathons')
+    ? question : undefined;
+}
+
 async function respondToWeekendRefinement(
   env: Env,
   event: InboundEvent,
@@ -1415,13 +1435,14 @@ async function respondToWeekendRefinement(
     return '[NO_REPLY]';
   }
 
-  return respondWithLondonWeekendHackathons(env, event, lang, IN_PERSON_RE.test(question.text));
+  return respondWithWeekendHackathons(env, event, lang, true, IN_PERSON_RE.test(question.text));
 }
 
-async function respondWithLondonWeekendHackathons(
+async function respondWithWeekendHackathons(
   env: Env,
   event: InboundEvent,
   lang: LangCode,
+  londonOnly: boolean,
   inPersonOnly: boolean,
 ): Promise<string> {
   const now = new Date(event.timestampMs);
@@ -1444,21 +1465,30 @@ async function respondWithLondonWeekendHackathons(
     const ends = typeof data.ends_on === 'string' && data.ends_on ? data.ends_on : starts;
     const hasInPersonOption = data.format === 'in-person' || data.format === 'hybrid';
     return (!inPersonOnly || hasInPersonOption) &&
-      cities.some((city) => typeof city === 'string' && LONDON_RE.test(city)) &&
+      (!londonOnly || cities.some((city) => typeof city === 'string' && LONDON_RE.test(city))) &&
       starts >= start && starts <= end && ends >= londonDate;
   });
-  const header = lang === 'zh-Hant' ? `倫敦這週末（${start} 至 ${end}）的 AI 黑客松`
-    : lang === 'zh-Hans' ? `伦敦这周末（${start} 至 ${end}）的 AI 黑客松`
-      : `London AI hackathons this weekend (${start} to ${end})`;
+  const header = lang === 'zh-Hant' ? `${londonOnly ? '倫敦' : ''}這週末（${start} 至 ${end}）的${inPersonOnly ? '現場 ' : ' '}AI 黑客松`
+    : lang === 'zh-Hans' ? `${londonOnly ? '伦敦' : ''}这周末（${start} 至 ${end}）的${inPersonOnly ? '现场 ' : ' '}AI 黑客松`
+      : `${londonOnly ? 'London ' : ''}${inPersonOnly ? 'in-person ' : ''}AI hackathons this weekend (${start} to ${end})`;
   if (matches.length === 0) {
     return lang === 'zh-Hant' ? `${header}：目前沒有查到符合日期的已驗證活動。`
       : lang === 'zh-Hans' ? `${header}：目前没有查到符合日期的已验证活动。`
         : `${header}: I found no verified events matching those dates.`;
   }
-  return [header, ...matches.slice(0, event.isVoice ? 2 : 3).flatMap(({ id, data }) => [
-    `- ${localizeZh(String(data.name), lang)} · ${data.starts_on}`,
-    recordUrl(env, config.slug, id),
-  ])].join('\n');
+  const formats = {
+    'in-person': { en: 'In person', 'zh-Hant': '現場', 'zh-Hans': '现场' },
+    online: { en: 'Online', 'zh-Hant': '線上', 'zh-Hans': '线上' },
+    hybrid: { en: 'Hybrid', 'zh-Hant': '混合', 'zh-Hans': '混合' },
+  } as const;
+  return [header, ...matches.slice(0, event.isVoice ? 2 : 3).flatMap(({ id, data }) => {
+    const format = formats[data.format as keyof typeof formats]?.[lang];
+    const cities = Array.isArray(data.city) ? data.city.join(', ') : data.city;
+    return [
+      `- ${[localizeZh(String(data.name), lang), data.starts_on, format, cities].filter(Boolean).join(' · ')}`,
+      recordUrl(env, config.slug, id),
+    ];
+  })].join('\n');
 }
 
 async function respondToRecordDeadline(
@@ -1593,9 +1623,18 @@ export async function fastRespondMfd(
     return respondToWeekendRefinement(env, event, context, lang);
   }
 
+  if (LONDON_IN_PERSON_REFINEMENT_RE.test(cleanedText)) {
+    const question = recentWeekendHackathonQuestion(context, event.timestampMs);
+    if (question?.senderId === event.senderId) {
+      return respondWithWeekendHackathons(env, event, lang, true, true);
+    }
+    if (isUnmentionedGroup) return '[NO_REPLY]';
+  }
+
+  const londonWeekend = LONDON_RE.test(cleanedText) && THIS_WEEKEND_RE.test(cleanedText);
   if (inferredSlugs.length === 1 && inferredSlugs[0] === 'ai-hackathons' &&
-      LONDON_RE.test(cleanedText) && THIS_WEEKEND_RE.test(cleanedText)) {
-    return respondWithLondonWeekendHackathons(env, event, lang, IN_PERSON_RE.test(cleanedText));
+      (londonWeekend || ANY_HACKATHON_LOCATION_RE.test(cleanedText.trim()))) {
+    return respondWithWeekendHackathons(env, event, lang, londonWeekend, IN_PERSON_RE.test(cleanedText));
   }
 
   const ordinal = RECORD_ORDINAL_RE.exec(cleanedText);

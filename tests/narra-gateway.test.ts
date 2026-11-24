@@ -1201,6 +1201,39 @@ describe('Manyfold Data Narra gateway integration', () => {
     expect(reply).toContain('2026-11-28 至 2026-11-29');
     expect(reply).not.toContain('London Weekday Hackathon');
     expect(reply).not.toContain('Manchester Weekend Hackathon');
+    const openQuestion = makeInboundEvent({
+      text: '這週末有 AI hackathon 嗎？線上或現場都行。', timestampMs: nowMs - 2000,
+    });
+    const openDecision = await routeEvent(openQuestion, DEFAULT_ROOM_CTX, MFD_AGENT_SPEC, { nowMs });
+    expect(openDecision.shouldReply).toBe(true);
+    const openReply = await fastRespondMfd(env, openQuestion, openDecision, EMPTY_MEM, DEFAULT_ROOM_CTX);
+    expect(openReply).toContain('2026-11-28 至 2026-11-29');
+    expect(openReply).toContain('London Online Hackathon');
+    expect(openReply).toContain('Manchester Weekend Hackathon');
+    expect(openReply).not.toContain('London Weekday Hackathon');
+
+    const narrow = makeInboundEvent({ text: '那只要倫敦現場的，線上的先不用。', timestampMs: nowMs });
+    const narrowContext: RoomContext = {
+      ...context,
+      activeSession: { active: false },
+      peers: [{ matrixId: '@agent-other:matrix.netmind.chat', displayName: 'Other agent' }],
+      recentHistory: [
+        { ...context.recentHistory[0]!, text: openQuestion.text },
+        context.recentHistory[1]!,
+      ],
+    };
+    const clock = vi.spyOn(Date, 'now').mockReturnValue(nowMs);
+    try {
+      const narrowDecision = await routeEvent(narrow, narrowContext, MFD_AGENT_SPEC, { nowMs });
+      expect(narrowDecision.independentGroupReply).toBe(true);
+      const narrowed = await fastRespondMfd(env, narrow, narrowDecision, EMPTY_MEM, narrowContext);
+      expect(narrowed).toContain('2026-11-28 至 2026-11-29');
+      expect(narrowed).toContain('London Weekend Hackathon');
+      expect(narrowed).not.toMatch(/London Online|Manchester Weekend|London Weekday/);
+    } finally {
+      clock.mockRestore();
+    }
+
     const direct = makeInboundEvent({
       text: '新聞先放著，這週末倫敦有可以到現場參加的 AI hackathon 嗎？',
       timestampMs: nowMs,
