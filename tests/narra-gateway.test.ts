@@ -1163,6 +1163,13 @@ describe('Manyfold Data Narra gateway integration', () => {
     expect(reply).toContain('Second London Hackathon');
     expect(reply).toContain('報名截止日是 2026-11-25');
     expect(reply).not.toContain('First London Hackathon');
+    expect(reply).not.toContain('沒有列出幾點');
+    const asksForTime = { ...event, text: '第二個報名到幾點？' };
+    const timedReply = await fastRespondMfd(makeEnv({ DB: db }), asksForTime, decision, EMPTY_MEM, context);
+    expect(timedReply).toContain('Second London Hackathon');
+    expect(timedReply).toContain('2026-11-25');
+    expect(timedReply).toContain('沒有列出幾點截止或時區');
+    expect(timedReply).toContain('/rec_second_deadline');
     expect(await fastRespondMfd(makeEnv({ DB: db }), event, decision, EMPTY_MEM, { ...context, recentHistory: [] }))
       .toBe('[NO_REPLY]');
   });

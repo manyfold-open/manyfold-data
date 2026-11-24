@@ -661,7 +661,8 @@ const DM_OFF_TOPIC_RE =
 const WHATS_NEW_RE =
   /(?:最近有什麼新|最近有什么新|最新數據|最新数据|新驗證|新验证|what(?:'s| is)\s+new|latest\s+(?:updates|records)|high[- ]signal)/i;
 
-const DEADLINE_FOLLOWUP_RE = /截止|(?:報名|报名|申請|申请)\s*(?:到|至|限到)|\b(?:deadline|last day to (?:register|apply)|when does registration close)\b/i;
+const DEADLINE_FOLLOWUP_RE = /截止|(?:報名|报名|申請|申请)\s*(?:到|至|限到)|\b(?:deadline|last day to (?:register|apply)|(?:when|what time) does registration close)\b/i;
+const DEADLINE_CLOCK_RE = /[幾几][點点]|(?:什麼|什么)時間|(?:什麼|什么)时间|\b(?:what time|time of day|exact time|time zone)\b/i;
 const RECORD_ORDINAL_RE = /第\s*([一二三四五1-5])\s*[個个筆笔項项條条場场]|\b(first|second|third|fourth|fifth)\s+(?:one|record|event|option)\b/i;
 
 const MFD_FOLLOWUP_RE =
@@ -1525,7 +1526,12 @@ async function respondToRecordDeadline(
     : lang === 'zh-Hans'
       ? (deadline ? `报名截止日是 ${deadline}。` : '这笔资料没有列出截止日。')
       : (deadline ? `The listed deadline is ${deadline}.` : 'This record does not list a deadline.');
-  return [localizeZh(label, lang), answer, ref.url].join('\n');
+  const timeNote = deadline && DEADLINE_CLOCK_RE.test(event.text)
+    ? (lang === 'zh-Hant' ? '資料只列日期，沒有列出幾點截止或時區。'
+      : lang === 'zh-Hans' ? '资料只列日期，没有列出几点截止或时区。'
+        : 'The record gives a date only, with no cutoff time or time zone.')
+    : null;
+  return [localizeZh(label, lang), answer, timeNote, ref.url].filter(Boolean).join('\n');
 }
 
 export async function fastRespondMfd(
