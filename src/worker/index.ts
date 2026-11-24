@@ -68,6 +68,7 @@ import {
   BaseNarraRoomCoordinator,
   getNarraGatewayStatus,
   kickNarraGateway,
+  handleNarraPushRequest,
 } from '@manyfold/narra-agent-kit/worker';
 import { HttpError, type Env } from './types';
 import { requireAdmin } from './admin';
@@ -694,7 +695,8 @@ export class NarraRoomCoordinator extends BaseNarraRoomCoordinator<Env> {
 export { app };
 
 export default {
-  fetch: app.fetch,
+  // Synapse wakes the Narra sync Durable Object at /_matrix/push/v1/notify (push mode).
+  fetch: async (request, env, ctx) => (await handleNarraPushRequest(request, env)) ?? app.fetch(request, env, ctx),
   async scheduled(_controller, env, ctx) {
     const now = new Date();
     ctx.waitUntil(
