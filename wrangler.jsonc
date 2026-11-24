@@ -39,6 +39,13 @@
     // Narra Messenger gateway runtime (enabled with bound Direct Matrix identity).
     "NARRA_GATEWAY_ENABLED": "on",
     "NARRA_SYNC": "on",
+    // Push mode: Synapse wakes the sync Durable Object for each new event instead of it
+    // long-polling /sync around the clock (billed as DO duration). Synapse only accepts a
+    // pusher at exactly /_matrix/push/v1/notify, so this must be a hostname whose root this
+    // Worker serves. Needs the NARRA_PUSH_SECRET secret (>= 16 chars, e.g. `openssl rand -hex 24`
+    // | npx wrangler secret put NARRA_PUSH_SECRET); without it the kit keeps long-polling.
+    "NARRA_SYNC_MODE": "push",
+    "NARRA_PUSH_URL": "https://data.manyfold.ai",
     "NARRA_AGENT_ID": "agt_agq66cw5uzyudifa4fuhcnaddu",
     "NARRA_MATRIX_ID": "@agent-37b08ab6:matrix.netmind.chat"
   },
