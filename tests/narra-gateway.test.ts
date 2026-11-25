@@ -1678,6 +1678,7 @@ describe('Manyfold Data Narra gateway integration', () => {
 
   it('gives the v2 brain what fastRespond answered directly: weekend events, numbered earlier records, cross-dataset hits, and an unmatched what-is-new block', async () => {
     expect(mfdGatewayConfig.v2?.wakeExamples?.length).toBeGreaterThanOrEqual(10);
+    expect(mfdGatewayConfig.v2?.notExamples?.length).toBeGreaterThanOrEqual(8);
 
     const db = createD1();
     const today = todayUtc();
