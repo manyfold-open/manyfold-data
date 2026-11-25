@@ -595,6 +595,7 @@ export const MFD_AGENT_SPEC: AgentSpec = {
     '分账',
     'aa制',
     // General AI news & LLM model updates (ai5-chat)
+    /\bnoticias?\s+(?:de|sobre)\s+(?:la\s+)?(?:ia|inteligencia\s+artificial)\b/i,
     'ai news',
     'ai in 5',
     'ai5',

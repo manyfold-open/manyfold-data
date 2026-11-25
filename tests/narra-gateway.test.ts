@@ -316,6 +316,7 @@ describe('Manyfold Data Narra gateway integration', () => {
       '哪家倫敦中餐館的點心和奶茶比較好喝？',
       'Draw me a tarot card or a fortune stick for love',
       'Any pop-up events with student vouchers in Soho?',
+      '¿Hay alguna noticia de IA hoy?',
     ]) {
       const ev = makeInboundEvent({ text: offTopic });
       const decision = await routeEvent(ev, DEFAULT_ROOM_CTX, MFD_AGENT_SPEC);
