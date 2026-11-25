@@ -2189,6 +2189,21 @@ export function createMfdGatewayConfig(
         '有什么马拉松或越野跑可以报名？',
         'When is the next meteor shower or eclipse?',
       ],
+      // Other agents' requests (AI in 5's news, Spotted London's pop-ups, London Chinese Food):
+      // a message closer to one of these than to this profile scores 0 and does not wake us.
+      notExamples: [
+        '今天有什麼 AI 新聞？',
+        '最近有啥AI新闻吗',
+        'Any AI news today?',
+        'OpenAI 最近發了什麼？',
+        'What did Google announce in AI this week?',
+        '最近有什么新模型发布？',
+        'Anthropic 的 Claude 最近有什麼更新？',
+        'Give me a quick AI news summary',
+        '這週末倫敦有什麼快閃店或展覽？',
+        'Any good pop-ups in London this weekend?',
+        '倫敦哪家中餐館好吃？',
+      ],
     },
     ...overrides,
   };
