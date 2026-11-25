@@ -253,8 +253,11 @@ export const MFD_AGENT_SPEC: AgentSpec = {
     '數據小助手',
     '数据小助手',
   ],
+  // Also the v2 relevance profile (embedded next to v2.wakeExamples): describe only what the
+  // datasets hold. Off-topic exclusions live in antiKeywords; naming them here would pull
+  // those topics closer in embedding space.
   domainDescription:
-    'Strictly scoped to searching Manyfold Data’s 17 verified structured datasets (AI hackathons, AI accelerators/grants, AI conferences/CFPs, AI fundraising, AI acquisitions, AI data centers, robotaxi cities, robot launches, AI scam alerts, visa policy changes, new rules taking effect, product recalls, international scholarships, marathons, endurance races, sky events, and cancer drug updates). NEVER answer general tourism, weekend sightseeing, hangout ideas, shopping, or restaurant queries.',
+    'Looks up records in Manyfold Data’s 17 verified datasets: AI hackathons; AI accelerators, grants and fellowships; AI conferences and paper deadlines (CFPs); AI startup funding rounds; AI company acquisitions; AI data center projects; robotaxi cities; robot product launches; AI scam alerts; visa policy changes; new rules taking effect; product recalls; international scholarships; marathons; endurance races; sky events; and cancer drug updates. Answers are dated, sourced records with links.',
   domainKeywords: [
     WEEKEND_REFINEMENT_RE,
     // 1. ai-hackathons
@@ -1440,14 +1443,8 @@ async function respondToWeekendRefinement(
   return respondWithWeekendHackathons(env, event, lang, true, IN_PERSON_RE.test(question.text));
 }
 
-async function respondWithWeekendHackathons(
-  env: Env,
-  event: InboundEvent,
-  lang: LangCode,
-  londonOnly: boolean,
-  inPersonOnly: boolean,
-): Promise<string> {
-  const now = new Date(event.timestampMs);
+/** Today in London and the Saturday–Sunday of this weekend (today's, when it is already the weekend). */
+function weekendInLondon(now: Date): { londonDate: string; start: string; end: string } {
   const londonDate = new Intl.DateTimeFormat('en-CA', {
     timeZone: 'Europe/London', year: 'numeric', month: '2-digit', day: '2-digit',
   }).format(now);
@@ -1456,8 +1453,18 @@ async function respondWithWeekendHackathons(
   first.setUTCDate(first.getUTCDate() + (day === 0 ? -1 : 6 - day));
   const lastDay = new Date(first);
   lastDay.setUTCDate(lastDay.getUTCDate() + 1);
-  const start = todayUtc(first);
-  const end = todayUtc(lastDay);
+  return { londonDate, start: todayUtc(first), end: todayUtc(lastDay) };
+}
+
+async function respondWithWeekendHackathons(
+  env: Env,
+  event: InboundEvent,
+  lang: LangCode,
+  londonOnly: boolean,
+  inPersonOnly: boolean,
+): Promise<string> {
+  const now = new Date(event.timestampMs);
+  const { londonDate, start, end } = weekendInLondon(now);
 
   const config = findDataApp('ai-hackathons')!;
   const { records } = JSON.parse(await datasetJson(env.DB, config, now)) as DatasetResponse;
@@ -1881,6 +1888,31 @@ function extractRecentRecordRefs(
   return { slugs, recordIdsBySlug, orderedRefs };
 }
 
+/** Records of a dataset with a `starts_on` date happening within this many days are always offered. */
+const MFD_PREFETCH_SOON_DAYS = 9;
+const MAX_MFD_PREFETCH_SOON_PER_DATASET = 2;
+const MAX_MFD_PREFETCH_LINE_CHARS = 200;
+
+const addDaysIso = (iso: string, days: number): string => {
+  const d = new Date(`${iso}T00:00:00Z`);
+  d.setUTCDate(d.getUTCDate() + days);
+  return todayUtc(d);
+};
+
+/**
+ * One record as a line: the dataset's notify line plus the dates it leaves out (a hackathon's
+ * line has its deadline but not when it starts), so the brain can answer date questions.
+ */
+function recordSummary(config: DataAppConfig, data: RecordData): string {
+  const extra = Object.entries(config.fields)
+    .filter(([name, def]) => def.type === 'date' && !config.notify.line.includes(`{${name}}`))
+    .flatMap(([name]) => {
+      const value = data[name];
+      return typeof value === 'string' && value ? [`${name} ${value}`] : [];
+    });
+  return [fillLine(config, data), ...extra].join(' · ');
+}
+
 async function prefetchDatasetRecords(
   db: D1Database,
   config: DataAppConfig,
@@ -1888,7 +1920,8 @@ async function prefetchDatasetRecords(
   prioritizedIds: readonly string[],
   limit: number,
   now: Date,
-): Promise<{ pinned: PublicRecord[]; general: PublicRecord[] }> {
+  today: string,
+): Promise<{ pinned: PublicRecord[]; soon: PublicRecord[]; general: PublicRecord[] }> {
   const dataset = JSON.parse(await datasetJson(db, config, now)) as DatasetResponse;
   const pinned: PublicRecord[] = [];
   if (prioritizedIds.length > 0) {
@@ -1900,6 +1933,28 @@ async function prefetchDatasetRecords(
       const rec = byId.get(id);
       if (rec) pinned.push(rec);
     }
+  }
+
+  // Events starting in the next few days, whatever the dataset's default filter: a hackathon on
+  // this weekend has usually closed registration already, so a deadline-sorted list misses it.
+  let soon: PublicRecord[] = [];
+  if (config.fields.starts_on?.type === 'date') {
+    const horizon = addDaysIso(today, MFD_PREFETCH_SOON_DAYS);
+    const lowered = terms.map((t) => t.toLowerCase());
+    const mentionsTerm = (rec: PublicRecord) =>
+      lowered.length > 0 && lowered.some((t) => JSON.stringify(rec.data).toLowerCase().includes(t));
+    soon = dataset.records
+      .filter(({ data }) => {
+        const starts = typeof data.starts_on === 'string' ? data.starts_on : '';
+        const ends = typeof data.ends_on === 'string' && data.ends_on ? data.ends_on : starts;
+        return Boolean(starts) && starts <= horizon && ends >= today;
+      })
+      .sort(
+        (a, b) =>
+          Number(mentionsTerm(b)) - Number(mentionsTerm(a)) ||
+          String(a.data.starts_on).localeCompare(String(b.data.starts_on)),
+      )
+      .slice(0, MAX_MFD_PREFETCH_SOON_PER_DATASET);
   }
 
   const baseDefault = defaultQuery(config);
@@ -1939,9 +1994,17 @@ async function prefetchDatasetRecords(
     }
   }
 
-  return { pinned, general };
+  return { pinned, soon, general };
 }
 
+/**
+ * D1 records handed to the Manyfold brain with each turn (v1 A2A fallback and every v2 turn).
+ * In v2 this is what replaces fastRespond's direct answers, so it carries everything those used:
+ * records the agent showed earlier (numbered, for "the second one" follow-ups), events starting
+ * soon with today's and this weekend's dates in London, records matching the message's dataset or
+ * search terms (across all datasets when none is named), and otherwise the newest high-signal
+ * records, marked as not matched to the message.
+ */
 export async function buildMfdExtraEnvelopeFields(
   env: Env,
   event: InboundEvent,
@@ -1960,93 +2023,123 @@ export async function buildMfdExtraEnvelopeFields(
     const inferred = inferDatasetSlugs(cleanedText);
     const remembered = resolveMemorySlugs(memories);
     const mergedSlugs = [...new Set([...recentRefs.slugs, ...inferred, ...remembered])];
-    const targetSlugs = (mergedSlugs.length > 0 ? mergedSlugs : [...HIGH_SIGNAL_SLUGS]).slice(
-      0,
-      MAX_MFD_PREFETCH_DATASETS,
-    );
-    const targetConfigs = targetSlugs
-      .map((slug) => findDataApp(slug))
-      .filter((cfg): cfg is DataAppConfig => cfg !== undefined);
-    if (targetConfigs.length === 0) return null;
-
     const now = new Date();
-    const prefetched = await Promise.all(
-      targetConfigs.map((config) =>
-        prefetchDatasetRecords(
-          env.DB,
-          config,
-          terms,
-          recentRefs.recordIdsBySlug.get(config.slug) ?? [],
-          3,
-          now,
-        ),
-      ),
-    );
+    const { londonDate, start, end } = weekendInLondon(now);
+    const header = `Manyfold Data verified records (today ${londonDate} in London; this weekend is ${start} to ${end}):`;
 
-    const selected: Array<{ config: DataAppConfig; record: PublicRecord }> = [];
+    const selected: Array<{ config: DataAppConfig; record: PublicRecord; tag?: string }> = [];
     const seenIds = new Set<string>();
+    const take = (config: DataAppConfig, record: PublicRecord, tag?: string): void => {
+      const key = `${config.slug}:${record.id}`;
+      if (selected.length >= MAX_MFD_PREFETCH_RECORDS || seenIds.has(key)) return;
+      seenIds.add(key);
+      selected.push({ config, record, ...(tag ? { tag } : {}) });
+    };
 
-    // 1. Prioritize exact recently shown records from replyToTarget / recent self turns FIRST.
-    if (recentRefs.orderedRefs.length > 0) {
+    if (mergedSlugs.length > 0) {
+      const targetConfigs = mergedSlugs
+        .slice(0, MAX_MFD_PREFETCH_DATASETS)
+        .map((slug) => findDataApp(slug))
+        .filter((cfg): cfg is DataAppConfig => cfg !== undefined);
+      const prefetched = await Promise.all(
+        targetConfigs.map((config) =>
+          prefetchDatasetRecords(
+            env.DB,
+            config,
+            terms,
+            recentRefs.recordIdsBySlug.get(config.slug) ?? [],
+            3,
+            now,
+            londonDate,
+          ),
+        ),
+      );
+
+      // 1. Records this agent showed most recently, in the order shown.
       const pinnedByKey = new Map<string, { config: DataAppConfig; record: PublicRecord }>();
-      for (let i = 0; i < targetConfigs.length; i++) {
-        const config = targetConfigs[i]!;
-        for (const rec of prefetched[i]!.pinned) {
-          pinnedByKey.set(`${config.slug}:${rec.id}`, { config, record: rec });
+      targetConfigs.forEach((config, i) => {
+        for (const rec of prefetched[i]!.pinned) pinnedByKey.set(`${config.slug}:${rec.id}`, { config, record: rec });
+      });
+      recentRefs.orderedRefs.forEach((ref, i) => {
+        const hit = pinnedByKey.get(`${ref.slug}:${ref.id}`);
+        if (hit) take(hit.config, hit.record, `#${i + 1} shown earlier`);
+      });
+
+      // 2. Events starting in the next few days.
+      targetConfigs.forEach((config, i) => {
+        for (const rec of prefetched[i]!.soon) take(config, rec, 'starting soon');
+      });
+
+      // 3. Matching records, round-robin across the datasets.
+      const maxPerDataset = Math.max(0, ...prefetched.map((r) => r.general.length));
+      for (let slot = 0; slot < maxPerDataset; slot++) {
+        targetConfigs.forEach((config, i) => {
+          const rec = prefetched[i]!.general[slot];
+          if (rec) take(config, rec);
+        });
+      }
+    } else if (terms.length > 0) {
+      // No dataset named: search every dataset for the message's terms (e.g. a company name).
+      const results = await Promise.all(
+        dataApps.map((config) => queryDatasetRecords(env.DB, config, terms, 2, now)),
+      );
+      const hits = dataApps
+        .map((config, i) => ({ config, records: results[i]!.records }))
+        .filter((r) => r.records.length > 0)
+        .slice(0, MAX_MFD_PREFETCH_DATASETS);
+      for (let slot = 0; slot < 2; slot++) {
+        for (const { config, records } of hits) {
+          const rec = records[slot];
+          if (rec) take(config, rec);
         }
       }
-      for (const ref of recentRefs.orderedRefs) {
-        if (selected.length >= MAX_MFD_PREFETCH_RECORDS) break;
-        const key = `${ref.slug}:${ref.id}`;
-        const hit = pinnedByKey.get(key);
-        if (!hit || seenIds.has(key)) continue;
-        seenIds.add(key);
-        selected.push(hit);
-      }
     }
 
-    // 2. Fill remaining slots up to 6 verified records round-robin across queried datasets.
-    const maxPerDataset = Math.max(0, ...prefetched.map((r) => r.general.length));
-    for (let slot = 0; slot < maxPerDataset && selected.length < MAX_MFD_PREFETCH_RECORDS; slot++) {
-      for (let i = 0; i < targetConfigs.length && selected.length < MAX_MFD_PREFETCH_RECORDS; i++) {
-        const rec = prefetched[i]!.general[slot];
-        if (!rec) continue;
-        const key = `${targetConfigs[i]!.slug}:${rec.id}`;
-        if (seenIds.has(key)) continue;
-        seenIds.add(key);
-        selected.push({ config: targetConfigs[i]!, record: rec });
+    const lines: string[] = [];
+    if (selected.length > 0) {
+      lines.push(header);
+      for (const { config, record, tag } of selected) {
+        const title = DATASET_TITLES[config.slug]?.[lang] ?? config.title;
+        const summaryRaw = localizeZh(recordSummary(config, record.data), lang);
+        const summary =
+          summaryRaw.length > MAX_MFD_PREFETCH_LINE_CHARS
+            ? `${summaryRaw.slice(0, MAX_MFD_PREFETCH_LINE_CHARS - 1)}…`
+            : summaryRaw;
+        lines.push(`- [${title}]${tag ? ` (${tag})` : ''} ${summary} | ${recordUrl(env, config.slug, record.id)}`);
       }
-    }
-
-    if (selected.length === 0) return null;
-
-    const today = todayUtc(now);
-    const header = `Manyfold Data verified records (today ${today}):`;
-    const lines: string[] = [header];
-    let totalLen = header.length;
-
-    for (const { config, record } of selected) {
-      const title = DATASET_TITLES[config.slug]?.[lang] ?? config.title;
-      const summaryRaw = localizeZh(fillLine(config, record.data), lang);
-      const summary = summaryRaw.length > 160 ? `${summaryRaw.slice(0, 159)}…` : summaryRaw;
-      const line = `- [${title}] ${summary} | ${recordUrl(env, config.slug, record.id)}`;
-      const candidateLen = totalLen + 1 + line.length;
-      if (candidateLen <= MAX_MFD_PREFETCH_CHARS) {
-        lines.push(line);
-        totalLen = candidateLen;
-      } else {
-        const remaining = MAX_MFD_PREFETCH_CHARS - totalLen - 2;
-        if (remaining >= 24) {
-          lines.push(`${line.slice(0, remaining)}…`);
-          totalLen = MAX_MFD_PREFETCH_CHARS;
+    } else if (mergedSlugs.length === 0) {
+      // Nothing in the message points at a dataset or record. Offer the newest high-signal
+      // records for "what's new?" asks, labelled so they are not mistaken for an answer to
+      // something else (such as general AI news, which no dataset holds).
+      const updates = await queryHighSignalUpdates(env, '', 4);
+      if (updates.length > 0) {
+        lines.push(
+          `Newest verified high-signal records on Manyfold Data (today ${londonDate}; the message named no dataset, so use these only if it asks what is new on Manyfold Data):`,
+        );
+        for (const u of updates) {
+          const title = DATASET_TITLES[u.slug]?.[lang] ?? localizeZh(u.datasetTitle, lang);
+          lines.push(`- [${title}] ${localizeZh(u.summary, lang)} | ${recordUrl(env, u.slug, u.id)}`);
         }
-        break;
       }
     }
-
     if (lines.length <= 1) return null;
+
+    const out: string[] = [];
+    let totalLen = 0;
+    for (const line of lines) {
+      const candidateLen = totalLen + (out.length > 0 ? 1 : 0) + line.length;
+      if (candidateLen <= MAX_MFD_PREFETCH_CHARS) {
+        out.push(line);
+        totalLen = candidateLen;
+        continue;
+      }
+      const remaining = MAX_MFD_PREFETCH_CHARS - totalLen - 2;
+      if (remaining >= 24) out.push(`${line.slice(0, remaining)}…`);
+      break;
+    }
+    if (out.length <= 1) return null;
     return {
-      d1_prefetched_records: lines.join('\n').slice(0, MAX_MFD_PREFETCH_CHARS),
+      d1_prefetched_records: out.join('\n').slice(0, MAX_MFD_PREFETCH_CHARS),
     };
   } catch {
     return null;
@@ -2078,6 +2171,25 @@ export function createMfdGatewayConfig(
           ? '📊 正在并行查询 Manyfold Data 开放数据集，稍等一下…'
           : '📊 Querying Manyfold Data verified datasets in parallel, one moment…',
     buildExtraEnvelopeFields: buildMfdExtraEnvelopeFields,
+    // Chat-native pipeline (rooms in NARRA_PIPELINE_ROOMS): example asks the relevance scorer
+    // compares unaddressed group messages with. Each names a dataset, so a general AI-news
+    // question ("最近有啥AI新聞嗎") stays closer to AI in 5 than to this agent.
+    v2: {
+      wakeExamples: [
+        '這週末倫敦有什麼 AI 黑客松可以參加？',
+        '这周末伦敦有什么 AI 黑客松？',
+        'Any AI hackathons in London this weekend?',
+        '哪些 AI 新創拿到了 A 輪融資？',
+        '有哪些 AI 公司被收购了？',
+        'Which AI startups raised a Series B this month?',
+        '英國簽證政策最近有什麼變化？',
+        '下个月有哪些新规生效？有产品召回吗？',
+        '還有哪些 AI 加速器、獎學金或研究補助可以申請？',
+        'When is the next AI conference paper deadline (CFP)?',
+        '有什么马拉松或越野跑可以报名？',
+        'When is the next meteor shower or eclipse?',
+      ],
+    },
     ...overrides,
   };
 }
