@@ -1676,6 +1676,111 @@ describe('Manyfold Data Narra gateway integration', () => {
     ).toBeNull();
   });
 
+  it('gives the v2 brain what fastRespond answered directly: weekend events, numbered earlier records, cross-dataset hits, and an unmatched what-is-new block', async () => {
+    expect(mfdGatewayConfig.v2?.wakeExamples?.length).toBeGreaterThanOrEqual(10);
+
+    const db = createD1();
+    const today = todayUtc();
+    const inDays = (days: number) => {
+      const d = new Date(`${today}T00:00:00Z`);
+      d.setUTCDate(d.getUTCDate() + days);
+      return todayUtc(d);
+    };
+    await seedVerifiedRecord(db, 'ai-hackathons', 'rec_soon_hack', {
+      ...findDataApp('ai-hackathons')!.example.data,
+      name: 'Closed-Registration Weekend Hack',
+      deadline: inDays(-3),
+      starts_on: inDays(2),
+      ends_on: inDays(3),
+      city: ['London'],
+      format: 'in-person',
+    });
+    await seedVerifiedRecord(db, 'ai-hackathons', 'rec_later_hack', {
+      ...findDataApp('ai-hackathons')!.example.data,
+      name: 'Far Future Hack 2099',
+      deadline: '2099-01-01',
+      starts_on: '2099-01-10',
+      ends_on: '2099-01-11',
+      url: 'https://example.org/far-future-hack',
+    });
+    await seedVerifiedRecord(db, 'ai-fundraising', 'rec_zephyr_round', {
+      ...findDataApp('ai-fundraising')!.example.data,
+      company: 'Zephyrion Labs',
+    });
+    const env = makeEnv({ DB: db });
+    const decision: TriageDecision = {
+      shouldReply: true,
+      tier: 1,
+      reason: 'v2_relevant',
+      confidence: 0.8,
+      detectedLang: 'zh-Hant',
+      shouldQuote: false,
+    };
+
+    // A hackathon this weekend whose registration already closed is still offered, with its start date.
+    const weekend = await buildMfdExtraEnvelopeFields(
+      env,
+      makeInboundEvent({ text: '這週末倫敦有什麼 AI 黑客松？' }),
+      decision,
+      EMPTY_MEM,
+    );
+    const weekendText = weekend!.d1_prefetched_records;
+    expect(weekendText).toMatch(/this weekend is \d{4}-\d{2}-\d{2} to \d{4}-\d{2}-\d{2}/);
+    expect(weekendText).toContain('(starting soon)');
+    expect(weekendText).toContain(`starts_on ${inDays(2)}`);
+    expect(weekendText).toContain('https://data.manyfold.ai/ai-hackathons/r/rec_soon_hack');
+
+    // Records shown earlier are numbered in the order shown, for "the second one" follow-ups.
+    const nowMs = Date.now();
+    const followUp = await buildMfdExtraEnvelopeFields(
+      env,
+      makeInboundEvent({ text: '第二個幾點截止？' }),
+      decision,
+      EMPTY_MEM,
+      {
+        roomId: '!mfd-room:matrix.netmind.chat',
+        chatType: 'group',
+        members: [],
+        recentHistory: [
+          {
+            eventId: '$self_list',
+            senderId: MFD_MATRIX_ID,
+            isAgent: true,
+            isSelf: true,
+            text: [
+              'https://data.manyfold.ai/ai-hackathons/r/rec_soon_hack',
+              'https://data.manyfold.ai/ai-hackathons/r/rec_later_hack',
+            ].join('\n'),
+            timestampMs: nowMs - 10_000,
+          },
+        ],
+      },
+    );
+    const followText = followUp!.d1_prefetched_records;
+    expect(followText).toContain('(#1 shown earlier) Closed-Registration Weekend Hack');
+    expect(followText).toContain('(#2 shown earlier) Far Future Hack 2099');
+    expect(followText).toContain('deadline 2099-01-01');
+
+    // No dataset named, but a term that only one dataset holds: search across datasets.
+    const company = await buildMfdExtraEnvelopeFields(
+      env,
+      makeInboundEvent({ text: 'Zephyrion Labs 怎麼樣？' }),
+      decision,
+      EMPTY_MEM,
+    );
+    expect(company!.d1_prefetched_records).toContain('https://data.manyfold.ai/ai-fundraising/r/rec_zephyr_round');
+
+    // A general AI-news question names no dataset: only the labelled newest-records block.
+    const news = await buildMfdExtraEnvelopeFields(
+      env,
+      makeInboundEvent({ text: '最近有啥AI新聞嗎' }),
+      decision,
+      EMPTY_MEM,
+    );
+    expect(news!.d1_prefetched_records).toMatch(/^Newest verified high-signal records on Manyfold Data .*use these only if it asks what is new/);
+    expect(news!.d1_prefetched_records.length).toBeLessThanOrEqual(1500);
+  });
+
   it('hands off comparative follow-up advice to A2A instead of cross-searching UK and prioritizes recent self/replyToTarget record URLs in prefetch', async () => {
     const db = createD1();
     const today = todayUtc();
