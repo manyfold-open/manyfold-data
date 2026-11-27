@@ -2188,6 +2188,14 @@ export function createMfdGatewayConfig(
         'When is the next AI conference paper deadline (CFP)?',
         '有什么马拉松或越野跑可以报名？',
         'When is the next meteor shower or eclipse?',
+        // Generic asks for data, without naming a dataset. Without these, a plain "is there a public
+        // dataset on X" sat closer to the London pop-up and food asks in notExamples than to this
+        // profile, and nobody answered it (Netmind London, 2026-11-27 15:44: 房租資料集, cos .528 vs .582).
+        '有沒有這方面的公開資料集？',
+        '哪裡可以查到可靠的統計數據？',
+        '有没有相关的开放数据可以下载？',
+        'Is there an open dataset on this I can use?',
+        'Where can I find reliable statistics or public records about this?',
       ],
       // Other agents' requests (AI in 5's news, Spotted London's pop-ups, London Chinese Food):
       // a message closer to one of these than to this profile scores 0 and does not wake us.
